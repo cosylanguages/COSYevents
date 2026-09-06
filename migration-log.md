@@ -108,14 +108,15 @@ In addition to the initial 180+ standalone session pages migrated from `COSYlang
   - **If You Were:** 5 session HTML pages (`sessions/if-you-were/`)
 
 - **Pinned Case Study Batches Curation Migration:**
-  - Extracted and integrated hand-curated "Pinned Case Study Batches" into `data/events/speaking-clubs.json` across 6 themes:
-    - **Mind Matters:** 1 batch (e.g. *The "Washing" & Public Manipulation Series*)
-    - **I Couldn't Help But Wonder:** 3 batches
-    - **Debatable & Relatable:** 3 batches
-    - **Let's Celebrate:** 3 batches
-    - **My Life With/Without:** 3 batches
-    - **The Greatest Quotes:** 3 batches
-  - Updated `speaking-clubs/index.html` to dynamically render pinned case study cards when selecting any theme with `pinnedBatches`.
+  - Extracted and integrated hand-curated "Pinned Case Study Batches" into `data/events/speaking-clubs.json` across 6 themes (populated May 2024 / August 2026 update):
+    - **Mind Matters:** 4 batches (*The "Washing" & Public Manipulation Series*, *Mental Laws of Life & Decision Making*, *The "Effect" & Subconscious Conditioning Series*, *The "Bias" & Cognitive Shortcuts Series*)
+    - **I Couldn't Help But Wonder:** 2 batches (*The Poetic Meteorology Series*, *Pop Culture, Fame & Media Grief*)
+    - **Debatable & Relatable:** 2 batches (*The Future of Education & Pedagogy*, *Ethical Dilemmas & Creative Tech*)
+    - **Let's Celebrate:** 2 batches (*Mindful Living & Balance Celebrations*, *Ecosystem & Space Awareness Days*)
+    - **My Life With/Without:** 2 batches (*Mobility & Tech Lifestyles*, *Urban Living & Comforts*)
+    - **The Greatest Quotes:** 3 batches (*Richard Feynman: The Art of Knowing*, *Socrates: The Examined Life*, *Dostoevsky: Light & Darkness*)
+    - **Keeping Up with Science** and **If You Were:** 0 batches (confirmed no pinned sections in source).
+  - Updated `speaking-clubs/index.html` and `data/events/speaking-clubs.json` to dynamically render pinned case study cards when selecting any theme with `pinnedBatches`. All 65 referenced session links were verified to resolve to existing files under `sessions/`.
 
 - **Karaoke Club (120 new session HTML pages):**
   - **Core Karaoke Sessions:** 13 session HTML pages (`sessions/karaoke-club/`)

@@ -134,6 +134,53 @@
           "category": "Since When Is Information Consumption Considered Rest?",
           "text": "Session Topic: Since When Is Information Consumption Considered Rest? — Discuss core concepts, personal reflections, and practical applications."
         }
+      ],
+      "pinnedBatches": [
+        {
+          "title": "⛈️ The Poetic Meteorology Series",
+          "description": "Apply meteorological phenomena as metaphors to human behavior, relationship sheltering, and fate matching gravity.",
+          "levels": [
+            "B1",
+            "B2",
+            "C1"
+          ],
+          "sessions": [
+            {
+              "title": "Raindrops Match (B2)",
+              "href": "../sessions/i-couldnt-help-but-wonder/whether-raindrops-select-where-to-fall.html"
+            },
+            {
+              "title": "Insects Shelter (B1)",
+              "href": "../sessions/i-couldnt-help-but-wonder/do-insects-hide-when-it-rains.html"
+            },
+            {
+              "title": "Bad Weather (C1)",
+              "href": "../sessions/i-couldnt-help-but-wonder/is-bad-weather-gods-anger.html"
+            }
+          ]
+        },
+        {
+          "title": "🎵 Pop Culture, Fame & Media Grief",
+          "description": "Reflect on full-length musical narratives, parasocial mourning, and living-room solitude when series end.",
+          "levels": [
+            "B1",
+            "C1"
+          ],
+          "sessions": [
+            {
+              "title": "Death of the Album (B1)",
+              "href": "../sessions/i-couldnt-help-but-wonder/death-of-the-album.html"
+            },
+            {
+              "title": "Series Ending Emptiness (B1)",
+              "href": "../sessions/i-couldnt-help-but-wonder/feeling-empty-after-series.html"
+            },
+            {
+              "title": "Amy Winehouse Tragedy (C1)",
+              "href": "../sessions/i-couldnt-help-but-wonder/appreciating-amy-winehouse-after-death.html"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4690,6 +4737,139 @@
           "category": "Why Some Friends Always Try to Correct You",
           "text": "Session Topic: Why Some Friends Always Try to Correct You — Discuss core concepts, personal reflections, and practical applications."
         }
+      ],
+      "pinnedBatches": [
+        {
+          "title": "🧼 The \"Washing\" & Public Manipulation Series",
+          "description": "Deconstruct performative morality, tokenism, rainbow capitalism, and corporate marketing distraction shields.",
+          "levels": [
+            "B1",
+            "B2"
+          ],
+          "sessions": [
+            {
+              "title": "Bluewashing (B1)",
+              "href": "../sessions/mind-matters/bluewashing-intermediate.html"
+            },
+            {
+              "title": "Bluewashing (B2)",
+              "href": "../sessions/mind-matters/bluewashing-upper-intermediate.html"
+            },
+            {
+              "title": "Redwashing (B1)",
+              "href": "../sessions/mind-matters/redwashing-intermediate.html"
+            },
+            {
+              "title": "Redwashing (B2)",
+              "href": "../sessions/mind-matters/redwashing-upper-intermediate.html"
+            },
+            {
+              "title": "Sportswashing (B1)",
+              "href": "../sessions/mind-matters/sportswashing-intermediate.html"
+            },
+            {
+              "title": "Sportswashing (B2)",
+              "href": "../sessions/mind-matters/sportswashing-upper-intermediate.html"
+            },
+            {
+              "title": "Purple Washing (B1)",
+              "href": "../sessions/mind-matters/purple-washing-intermediate.html"
+            },
+            {
+              "title": "Purple Washing (B2)",
+              "href": "../sessions/mind-matters/purple-washing-upper-intermediate.html"
+            },
+            {
+              "title": "Whitewashing (B1)",
+              "href": "../sessions/mind-matters/whitewashing-intermediate.html"
+            },
+            {
+              "title": "Whitewashing (B2)",
+              "href": "../sessions/mind-matters/whitewashing-upper-intermediate.html"
+            },
+            {
+              "title": "Pinkwashing (B1)",
+              "href": "../sessions/mind-matters/pinkwashing-intermediate.html"
+            },
+            {
+              "title": "Pinkwashing (B2)",
+              "href": "../sessions/mind-matters/pinkwashing-upper-intermediate.html"
+            },
+            {
+              "title": "Brainwashing (B1)",
+              "href": "../sessions/mind-matters/brainwashing-intermediate.html"
+            },
+            {
+              "title": "Brainwashing (B2)",
+              "href": "../sessions/mind-matters/brainwashing-upper-intermediate.html"
+            }
+          ]
+        },
+        {
+          "title": "📜 Mental Laws of Life & Decision Making",
+          "description": "Learn about standard heuristics, cognitive structures, problem definitions, and autonomy expectation laws.",
+          "levels": [
+            "B1"
+          ],
+          "sessions": [
+            {
+              "title": "Kidlin's Law (B1)",
+              "href": "../sessions/mind-matters/kidlins-law.html"
+            },
+            {
+              "title": "Murphy's Law (B1)",
+              "href": "../sessions/mind-matters/murphys-law.html"
+            },
+            {
+              "title": "Wilson's Law (B1)",
+              "href": "../sessions/mind-matters/wilsons-law.html"
+            },
+            {
+              "title": "Gilbert's Law (B1)",
+              "href": "../sessions/mind-matters/gilberts-law.html"
+            }
+          ]
+        },
+        {
+          "title": "🔮 The \"Effect\" & Subconscious Conditioning Series",
+          "description": "Deconstruct homophones, semantic priming, behavioral economics, and cognitive dissonance resolution in relationships.",
+          "levels": [
+            "B1",
+            "B2"
+          ],
+          "sessions": [
+            {
+              "title": "The Bye-Now Effect (B1)",
+              "href": "../sessions/mind-matters/the-bye-now-effect-intermediate.html"
+            },
+            {
+              "title": "The Bye-Now Effect (B2)",
+              "href": "../sessions/mind-matters/the-bye-now-effect-upper-intermediate.html"
+            },
+            {
+              "title": "The Benjamin Franklin Effect (B1)",
+              "href": "../sessions/mind-matters/benjamin-franklin-effect.html"
+            }
+          ]
+        },
+        {
+          "title": "🧭 The \"Bias\" & Cognitive Shortcuts Series",
+          "description": "Analyze confirmation bias, availability heuristics, status quo bias, halo effect, and the psychological impulse of action bias.",
+          "levels": [
+            "B1",
+            "C1"
+          ],
+          "sessions": [
+            {
+              "title": "The Maze of Biases (C1)",
+              "href": "../sessions/mind-matters/maze-of-biases.html"
+            },
+            {
+              "title": "The Psychology of Action Bias (B1)",
+              "href": "../sessions/mind-matters/psychology-of-action-bias.html"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4802,6 +4982,71 @@
           "level": "intermediate",
           "category": "Chatting with AI vs Chatting with a Human (B1-B2)",
           "text": "Session Topic: Chatting with AI vs Chatting with a Human (B1-B2) — Discuss core concepts, personal reflections, and practical applications."
+        }
+      ],
+      "pinnedBatches": [
+        {
+          "title": "🏫 The Future of Education & Pedagogy",
+          "description": "Evaluate the rise of digital classroom integrations, structured out-of-school homework, and keyboarding vs manual ink writing.",
+          "levels": [
+            "A2",
+            "B1",
+            "B2",
+            "C1"
+          ],
+          "sessions": [
+            {
+              "title": "Future Educator (C1)",
+              "href": "../sessions/debatable-relatable/the-future-proof-educator.html"
+            },
+            {
+              "title": "Homework Ban (B1)",
+              "href": "../sessions/debatable-relatable/homework-ban.html"
+            },
+            {
+              "title": "Pedagogy & Practice (C1)",
+              "href": "../sessions/debatable-relatable/pedagogy-and-practice.html"
+            },
+            {
+              "title": "Typing/Writing (A2)",
+              "href": "../sessions/debatable-relatable/typing-vs-handwriting-elementary.html"
+            },
+            {
+              "title": "Typing/Writing (B1)",
+              "href": "../sessions/debatable-relatable/typing-vs-handwriting-intermediate.html"
+            },
+            {
+              "title": "Typing/Writing (B2)",
+              "href": "../sessions/debatable-relatable/typing-vs-handwriting-upper-intermediate.html"
+            }
+          ]
+        },
+        {
+          "title": "🔬 Ethical Dilemmas & Creative Tech",
+          "description": "Debate the biological ethics of life ending, human replication, and the threat of generative neural networks on human arts.",
+          "levels": [
+            "B1",
+            "B2",
+            "C1"
+          ],
+          "sessions": [
+            {
+              "title": "Assisted Dying (C1)",
+              "href": "../sessions/debatable-relatable/assisted-dying.html"
+            },
+            {
+              "title": "Human Cloning (B1)",
+              "href": "../sessions/debatable-relatable/human-cloning-intermediate.html"
+            },
+            {
+              "title": "Human Cloning (B2)",
+              "href": "../sessions/debatable-relatable/human-cloning-upper-intermediate.html"
+            },
+            {
+              "title": "AI & Art (C1)",
+              "href": "../sessions/debatable-relatable/ai-and-art.html"
+            }
+          ]
         }
       ]
     },
@@ -4921,6 +5166,63 @@
           "category": "Kiss and Make Up Day",
           "text": "Session Topic: Kiss and Make Up Day — Discuss core concepts, personal reflections, and practical applications."
         }
+      ],
+      "pinnedBatches": [
+        {
+          "title": "🧘‍♂️ Mindful Living & Balance Celebrations",
+          "description": "Reflect on balance, simplify schedules, and celebrate work-free spaces.",
+          "levels": [
+            "A1",
+            "B1",
+            "B2"
+          ],
+          "sessions": [
+            {
+              "title": "National Simplicity Day (A1)",
+              "href": "../sessions/lets-celebrate/national-simplicity-day.html"
+            },
+            {
+              "title": "National Workaholics Day (A1)",
+              "href": "../sessions/lets-celebrate/national-workaholics-day.html"
+            },
+            {
+              "title": "Peace & Love (B1)",
+              "href": "../sessions/lets-celebrate/international-peace-love-day-intermediate.html"
+            },
+            {
+              "title": "Peace & Love (B2)",
+              "href": "../sessions/lets-celebrate/international-peace-love-day-upper-intermediate.html"
+            }
+          ]
+        },
+        {
+          "title": "🐝 Ecosystem & Space Awareness Days",
+          "description": "Explore the delicate balance of planetary biosystems, space monitor systems, and urban green apiary support.",
+          "levels": [
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "sessions": [
+            {
+              "title": "Urban Beekeeping (A1)",
+              "href": "../sessions/lets-celebrate/urban-beekeeping-day-starter.html"
+            },
+            {
+              "title": "Urban Beekeeping (A2)",
+              "href": "../sessions/lets-celebrate/urban-beekeeping-day-elementary.html"
+            },
+            {
+              "title": "Asteroid Day (B1)",
+              "href": "../sessions/lets-celebrate/international-asteroid-day-intermediate.html"
+            },
+            {
+              "title": "Asteroid Day (B2)",
+              "href": "../sessions/lets-celebrate/international-asteroid-day-upper-intermediate.html"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5028,6 +5330,65 @@
           "level": "intermediate",
           "category": "My Life With & My Life Without Hearing Abilities",
           "text": "Session Topic: My Life With & My Life Without Hearing Abilities — Discuss core concepts, personal reflections, and practical applications."
+        }
+      ],
+      "pinnedBatches": [
+        {
+          "title": "🚗 Mobility & Tech Lifestyles",
+          "description": "Contrast vehicular independence with public transit, and evaluate high digital hyper-connection against offline living.",
+          "levels": [
+            "B1",
+            "B2"
+          ],
+          "sessions": [
+            {
+              "title": "Private Cars (B1)",
+              "href": "../sessions/my-life-with-without/private-cars-intermediate.html"
+            },
+            {
+              "title": "Private Cars (B2)",
+              "href": "../sessions/my-life-with-without/private-cars-upper-intermediate.html"
+            },
+            {
+              "title": "Car Life (B1)",
+              "href": "../sessions/my-life-with-without/car-life.html"
+            },
+            {
+              "title": "Social Media (B1)",
+              "href": "../sessions/my-life-with-without/social-media-life.html"
+            }
+          ]
+        },
+        {
+          "title": "🏙️ Urban Living & Comforts",
+          "description": "Examine horizontal vs vertical block architectures, industrial professional automation, and cold storage technologies.",
+          "levels": [
+            "B1",
+            "B2",
+            "C1"
+          ],
+          "sessions": [
+            {
+              "title": "Skyscrapers (B1)",
+              "href": "../sessions/my-life-with-without/high-rise-skyscrapers-intermediate.html"
+            },
+            {
+              "title": "Skyscrapers (B2)",
+              "href": "../sessions/my-life-with-without/high-rise-skyscrapers-upper-intermediate.html"
+            },
+            {
+              "title": "Obsolete Jobs (B1)",
+              "href": "../sessions/my-life-with-without/obsolete-jobs-intermediate.html"
+            },
+            {
+              "title": "Obsolete Jobs (C1)",
+              "href": "../sessions/my-life-with-without/obsolete-jobs-advanced.html"
+            },
+            {
+              "title": "Fridge Life (B1)",
+              "href": "../sessions/my-life-with-without/fridge-life.html"
+            }
+          ]
         }
       ]
     },
@@ -5291,6 +5652,76 @@
           "level": "intermediate",
           "category": "Dalai Lama: Happier Minds (B1)",
           "text": "Session Topic: Dalai Lama: Happier Minds (B1) — Discuss core concepts, personal reflections, and practical applications."
+        }
+      ],
+      "pinnedBatches": [
+        {
+          "title": "Richard Feynman: The Art of Knowing",
+          "description": "Unify the brilliant mind of Richard Feynman. Master vocabulary of curiosity, mental discipline, and absolute honesty across 4 deep-dive sessions: Study Hard, Education vs Intelligence, Knowledge Isn't Free, and No Shame in Not Knowing.",
+          "levels": [
+            "A2",
+            "B1",
+            "B2",
+            "C1"
+          ],
+          "sessions": [
+            {
+              "title": "Part 1: No Shame",
+              "href": "../sessions/the-greatest-quotes/feynman-no-shame-knowing-quote.html"
+            },
+            {
+              "title": "Part 2: Knowledge (B1)",
+              "href": "../sessions/the-greatest-quotes/feynman-knowledge-isnt-free-intermediate.html"
+            },
+            {
+              "title": "Part 2: Knowledge (B2)",
+              "href": "../sessions/the-greatest-quotes/feynman-knowledge-isnt-free-upper-intermediate.html"
+            },
+            {
+              "title": "Part 3: Study Hard (A2)",
+              "href": "../sessions/the-greatest-quotes/feynman-study-hard.html"
+            },
+            {
+              "title": "Part 3: Study Hard (B1)",
+              "href": "../sessions/the-greatest-quotes/feynman-study-hard-intermediate.html"
+            },
+            {
+              "title": "Part 4: Education",
+              "href": "../sessions/the-greatest-quotes/feynman-education-quote.html"
+            }
+          ]
+        },
+        {
+          "title": "Socrates: The Examined Life",
+          "description": "Master socratic irony and questioning techniques. Grouping The Wisdom of Socrates and our upcoming seminar The Dialogues on Consciousness.",
+          "levels": [
+            "B1",
+            "B2"
+          ],
+          "sessions": [
+            {
+              "title": "Part 1: Wisdom",
+              "href": "../sessions/the-greatest-quotes/wisdom-of-socrates.html"
+            }
+          ]
+        },
+        {
+          "title": "Dostoevsky: Light & Darkness",
+          "description": "Explore Russian psychological depth. Grouping Dostoevsky's timeless explorations on passion, morality, and social struggles: Loving Means Power and Politics & Religion.",
+          "levels": [
+            "B2",
+            "C2"
+          ],
+          "sessions": [
+            {
+              "title": "Part 1: Loving Power",
+              "href": "../sessions/the-greatest-quotes/dostoevsky-loving-power-quote.html"
+            },
+            {
+              "title": "Part 2: Politics & Religion",
+              "href": "../sessions/the-greatest-quotes/dostoevsky-politics-religion-quote.html"
+            }
+          ]
         }
       ]
     },
