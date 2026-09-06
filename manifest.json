@@ -1,7 +1,7 @@
 {
   "name": "COSYlanguages Premium Events",
   "short_name": "COSY Events",
-  "description": "Interactive speaking clubs, cinema nights, karaoke challenges, game evenings, long reads, and prompt decks.",
+  "description": "Interactive speaking clubs (including 'If You Were' themes), cinema nights, karaoke challenges, game evenings, and long reads.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#fdfcf8",
