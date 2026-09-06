@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clubs de conversation 🎙️ : COSYlanguages</title>
+<link href="../../images/logos/cosylanguages.png" rel="icon"/>
+<link href="../../apps/premium-events/manifest.json" rel="manifest"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&amp;family=DM+Sans:wght@400;500;700&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="../../css/tokens.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/components.css" rel="stylesheet"/>
+<link href="../../css/layout.css" rel="stylesheet"/>
+<link href="../../css/events.css" rel="stylesheet"/>
+<style>
+      .view-btn {
+        display: inline-block;
+        background: var(--teal);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-align: center;
+        transition: opacity 0.2s;
+      }
+      .view-btn:hover { opacity: 0.9; }
+
+      /* Club Specifics */
+      .club-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .club-card {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform .3s, box-shadow .3s;
+      }
+      .club-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(61,43,31,.12); }
+      .club-card-inner { padding: 1.5rem; text-align: left; display: flex; flex-direction: column; flex-grow: 1; }
+      .club-emoji { font-size: 1.8rem; margin-bottom: 0.8rem; display: block; }
+      .club-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; font-family: var(--font-serif); }
+      .club-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+      .club-tag { font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 700; border: 1px solid; text-transform: uppercase; letter-spacing: 0.03em; }
+      .club-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
+      .club-link {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--teal);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .club-link:hover { color: var(--sage-deep); }
+</style>
+</head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="hero">
+<div class="hero-inner">
+<div class="hero-left">
+<div class="hero-tag">🎙️ Clubs de conversation</div>
+<h1>Clubs de conversation thématiques</h1>
+<p class="hero-sub">Sessions en petits groupes (4–6 personnes) sur des thèmes du monde réel. Des échanges calibrés par niveau, animés par des enseignants natifs COSYlanguages.</p>
+<div class="hero-ctas">
+<a class="btn-primary" href="https://wa.me/330766784195">Rejoindre une session</a>
+<a class="btn-secondary" href="#clubs">Explorer les clubs ↓</a>
+</div>
+</div>
+<div class="hero-right">
+<!-- Decoration -->
+</div>
+</div>
+</header>
+
+<main class="page">
+<nav class="cosy-breadcrumbs" style="margin-bottom: 2rem;">
+<a href="../../">Accueil</a> <span class="sep">/</span>
+<a href="index.html">Événements</a> <span class="sep">/</span>
+<span class="current">Clubs de conversation</span>
+</nav>
+
+<!-- Guide de démarrage rapide -->
+<section id="onboarding-guide" style="background: var(--cream-dark); border: 1.5px dashed var(--border); border-radius: var(--r-xl); padding: 2rem; margin-bottom: 2.5rem; box-sizing: border-box;">
+<div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+<span style="font-size: 2.5rem; line-height: 1;">🧭</span>
+<div style="flex: 1; min-width: 280px;">
+<h3 style="margin: 0 0 0.5rem 0; font-family: var(--font-serif); font-size: 1.35rem; color: var(--sage-deep);">Guide de démarrage rapide des clubs</h3>
+<p style="margin: 0 0 1rem 0; font-size: 0.92rem; line-height: 1.6; color: var(--ink-soft);">
+          Nouveau dans nos clubs de conversation ? Suivez notre parcours calibré par niveau pour gagner en confiance, enrichir votre vocabulaire et vous exprimer avec fluidité avec nos enseignants natifs.
+        </p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;">
+<div style="background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+<strong style="color: #BA7517; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">🌱 Adapté aux Débutants (A1–A2)</strong>
+<p style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--muted);">Commencez par <strong>Let's Celebrate</strong> ou <strong>The Greatest Quotes</strong>. Les sujets sont centrés sur la vie quotidienne, les traditions et le vocabulaire essentiel.</p>
+</div>
+<div style="background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+<strong style="color: #993556; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">🚀 Niveau Intermédiaire (B1–B2)</strong>
+<p style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--muted);">Rejoignez <strong>My Life With &amp; Without</strong> ou <strong>Debatable &amp; Relatable</strong>. Exprimez vos choix personnels, vos regrets et débattez de légères controverses.</p>
+</div>
+<div style="background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+<strong style="color: #0F6E56; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">🧠 Niveau Avancé (B2–C2)</strong>
+<p style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--muted);">Relevez le défi avec <strong>Keeping Up with Science</strong>, <strong>Mind Matters</strong> ou <strong>I Couldn't Help But Wonder</strong>. Échangez sur la biologie, la psychologie et la philosophie abstraite.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 3: Browse Clubs -->
+<section id="clubs">
+<span class="sec-tag">🎙️ Parcourez nos clubs</span>
+<h2 class="sec-h2">Trouvez votre sujet préféré</h2>
+<p class="sec-p">De la science à la philosophie, nos clubs couvrent les sujets qui comptent pour les adultes.</p>
+<div class="club-filters">
+<button class="filter-btn active" data-level="all">Tous les niveaux</button>
+<button class="filter-btn" data-level="beginner">Débutant (A1-A2)</button>
+<button class="filter-btn" data-level="intermediate">Intermédiaire (B1-B2)</button>
+<button class="filter-btn" data-level="advanced">Avancé (C1-C2)</button>
+</div>
+<div class="club-grid" style="margin-bottom: 3.5rem; margin-top: 1.5rem;">
+<!-- 1. KEEPING UP WITH SCIENCE -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #0F6E56, #073b2d); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Science logo" src="../../images/keepingupwithscience.png" style="height: 50px;"/></span>
+<h3 style="color: white;">Keeping Up with Science</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Science</span>
+</div>
+<p class="club-desc" style="color: rgba(255,255,255,0.85);">L'actualité scientifique réelle, rendue discutable. Chaque session décortique une découverte ou une tendance récente.</p>
+<a class="club-link" href="../../apps/premium-events/clubs/kus/fr/keeping-up-with-science.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 2. LET'S CELEBRATE -->
+<article class="club-card" data-levels="beginner intermediate advanced" style="background: linear-gradient(135deg, #BA7517, #5c390b); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Celebrate logo" src="../../images/letscelebrate.png" style="height: 50px;"/></span>
+<h3 style="color: white;">Let's Celebrate</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">A1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Culture</span>
+</div>
+<p class="club-desc" style="color: rgba(255,255,255,0.85);">Festivals, traditions et les rituels qui rassemblent les gens.</p>
+<a class="club-link" href="../../apps/premium-events/clubs/celebrate/fr/lets-celebrate.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 3. THE GREATEST QUOTES -->
+<article class="club-card" data-levels="beginner intermediate advanced" style="background: linear-gradient(135deg, #534AB7, #2a255c); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Quotes logo" src="../../images/thegreatestquotes.png" style="height: 50px;"/></span>
+<h3 style="color: white;">The Greatest Quotes</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">A1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Philosophie</span>
+</div>
+<p class="club-desc" style="color: rgba(255,255,255,0.85);">Une citation. Une analyse profonde. Qu'est-ce qu'ils voulaient dire : et qu'est-ce que cela signifie pour vous ?</p>
+<a class="club-link" href="../../apps/premium-events/clubs/quotes/fr/the-greatest-quotes.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 4. MIND MATTERS -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #993556, #4d1a2b); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Mind logo" src="../../images/mindmatters.png" style="height: 50px;"/></span>
+<h3 style="color: white;">Mind Matters</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Psychologie</span>
+</div>
+<p class="club-desc" style="color: rgba(255,255,255,0.85);">Psychologie, émotions, habitudes et comportement humain. Nous explorons ce qui se passe dans les coulisses.</p>
+<a class="club-link" href="mind-matters.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 5. MY LIFE WITH & MY LIFE WITHOUT -->
+<article class="club-card" data-levels="beginner intermediate advanced" style="background: linear-gradient(135deg, #3B6D11, #1d3608); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Life logo" src="../../images/lifewithlifewithout.png" style="height: 50px;"/></span>
+<h3 style="color: white;">My Life With &amp; Without</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">A1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Personnel</span>
+</div>
+<p class="club-desc" style="color: rgba(255,255,255,0.85);">Chaque session explore la vie avant et après une chose : une habitude, une personne, une ville, une décision.</p>
+<a class="club-link" href="../../apps/premium-events/clubs/life/fr/my-life-with-without.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 6. DEBATABLE & RELATABLE -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #993C1D, #4d1e0f); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Debate logo" src="../../images/debatabeandrelatable.png" style="height: 50px;"/></span>
+<h3 style="color: white;">Debatable &amp; Relatable</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Débat</span>
+</div>
+<p class="club-desc" style="color: rgba(255,255,255,0.85);">Opinions tranchées et dilemmes authentiques. Chaque session présente une affirmation avec laquelle vous serez passionnément d'accord.</p>
+<a class="club-link" href="../../apps/premium-events/clubs/debate/fr/debatable-relatable.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 7. I COULDN'T HELP BUT WONDER -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #3F2B96, #1F104D); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Wonder logo" src="../../images/icouldnthelpbutwonder.png" style="height: 50px;"/></span>
+<h3 style="color: white;">I Couldn't Help But Wonder</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Philosophie</span>
+</div>
+<p class="club-desc" style="color: rgba(255,255,255,0.85);">Des idées aléatoires où nous spéculons sur diverses choses, posons des questions poétiques et développons une réflexion philosophique profonde.</p>
+<a class="club-link" href="../../apps/premium-events/clubs/wonder/fr/i-couldnt-help-but-wonder.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 8. IF YOU WERE -->
+<article class="club-card" data-levels="beginner intermediate advanced" style="background: linear-gradient(135deg, #4F46E5, #1e1b4b); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="If You Were logo" src="../../images/ifyouwere.png" style="height: 50px;"/></span>
+<h3 style="color: white;">If You Were</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">A2–C1</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Hypothèse</span>
+</div>
+<p class="club-desc" style="color: rgba(255,255,255,0.85);">Glissez-vous dans une autre peau, un autre rôle ou une autre réalité. Des hypothèses spéculatives et de l'empathie radicale pour restructurer votre esprit.</p>
+<a class="club-link" href="../../apps/premium-events/clubs/if-you-were/if-you-were.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 9. LONG READS -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #7A1C1C, #3E0F0F); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji" style="font-size: 1.8rem; margin-bottom: 0.8rem; display: block;">📚</span>
+<h3 style="color: white;">Long Reads</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B2–C1</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Littérature</span>
+</div>
+<p class="club-desc" style="color: rgba(255,255,255,0.85);">Micro-discussions sur des livres, des livres audio et des podcasts d'exception. Transportez des idées et des réflexions de chapitre en chapitre.</p>
+<a class="club-link" href="../../apps/premium-events/nights/long-reads/long-reads.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+</div>
+</section>
+
+<!-- Section 5: CTA -->
+<section id="join">
+<div class="cta-section">
+<h2>Contactez-nous pour rejoindre le prochain événement</h2>
+<p>Prêt à vous lancer ? Connectez-vous avec nous sur votre plateforme préférée et nous vous aiderons à trouver la bonne session.</p>
+<div class="cta-btns">
+<a class="cta-wa" href="https://wa.me/330766784195">💬 WhatsApp</a>
+<a class="cta-tg" href="https://t.me/cosylanguagesproject">✈️ Telegram</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../images/logos/cosylanguages.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p>Votre coin chaleureux pour maîtriser de nouvelles langues et vous connecter au monde. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5>Cours</h5>
+<a href="../../apps/premium-courses/general/">Cours général 📖</a>
+<a href="../../apps/premium-courses/spoken/">Cours d'expression orale 🗣️</a>
+<a href="../../apps/premium-courses/exam/">Préparation aux examens 📝</a>
+<a href="../../apps/premium-courses/travelling/">Cours de voyage ✈️</a>
+<a href="../../apps/premium-courses/professional/">Cours professionnel 💼</a>
+<a href="../../apps/premium-courses/relocation/">Cours de réinstallation 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5>Explorer</h5>
+<a href="../../#languages">Langues 🌍</a>
+<a href="../../practice/index.html">Pratique libre 💡</a>
+<a href="../../events/index.html">Événements 🎉</a>
+<a href="../../games/index.html">Jeux 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Projet</h5>
+<a href="../../privacy.html">Confidentialité &amp; Sécurité 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5>Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom">© 2026 COSYlanguages : Tous droits réservés</div>
+</footer>
+
+<script src="../../js/data/languages.js"></script>
+<script src="../../js/core/engine.js"></script>
+<script src="../../js/core/i18n.js"></script>
+<script src="../../js/core/ui.js"></script>
+<script src="../../js/data/pricing.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.club-grid .club-card');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const level = btn.getAttribute('data-level');
+
+      cards.forEach(card => {
+        const levels = card.getAttribute('data-levels') || '';
+        if (level === 'all' || levels.includes(level)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

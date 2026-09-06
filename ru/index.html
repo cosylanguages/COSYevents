@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мероприятия в прямом эфире 🎉 : COSYlanguages</title>
+    <link rel="icon" href="../../images/logos/cosylanguages.png">
+    <link rel="manifest" href="../../apps/premium-events/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+<link rel="stylesheet" href="../shared/css/hub.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/events.css">
+
+    <style>
+      .event-type-card {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: var(--r-xl);
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        transition: all .2s;
+        text-align: left;
+      }
+      .event-type-card:hover { transform: translateY(-4px); border-color: var(--border-hover); }
+      .etc-icon { font-size: 2.5rem; margin-bottom: 1.2rem; }
+      .etc-title { font-size: 1.5rem; margin-bottom: 1rem; font-family: var(--font-serif); }
+      .etc-info { font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--ink-muted); flex-grow: 1; }
+      .etc-meta { list-style: none; padding: 0; margin: 0 0 1.5rem; font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+      .etc-meta li { margin-bottom: 0.4rem; display: flex; justify-content: space-between; gap: 1rem; }
+      .etc-meta li span:first-child { font-weight: 700; color: var(--ink-faint); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; flex-shrink: 0; }
+      .etc-meta li span:last-child { text-align: right; }
+
+      .upcoming-section { background: var(--sage-mist); border-radius: var(--r-xl); padding: 3rem 2rem; margin-top: 2rem; }
+      .events-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; background: white; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+      .events-table th { background: var(--sage-pale); color: var(--sage-deep); text-align: left; padding: 1rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+      .events-table td { padding: 1rem; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+      .events-table tr:last-child td { border-bottom: none; }
+      .event-tbc { color: var(--muted); font-style: italic; }
+
+      .upcoming-note { text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--muted); }
+
+      .view-btn {
+        display: inline-block;
+        background: var(--teal);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-align: center;
+        transition: opacity 0.2s;
+      }
+      .view-btn:hover { opacity: 0.9; }
+
+      /* Club Specifics */
+      .club-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .club-card {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform .3s, box-shadow .3s;
+      }
+      .club-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(61,43,31,.12); }
+      .club-card-accent { height: 5px; }
+      .club-card-inner { padding: 1.5rem; text-align: left; display: flex; flex-direction: column; flex-grow: 1; }
+      .club-emoji { font-size: 1.8rem; margin-bottom: 0.8rem; display: block; }
+      .club-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; font-family: var(--font-serif); }
+      .club-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+      .club-tag { font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 700; border: 1px solid; text-transform: uppercase; letter-spacing: 0.03em; }
+      .club-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
+      .club-link {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--teal);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .club-link:hover { color: var(--sage-deep); }
+    </style>
+</head>
+<body>
+
+<nav id="cosy-nav"></nav>
+
+<!-- Sticky Top Navigation Header -->
+<header class="sd-sticky-header">
+  <div class="sd-header-inner">
+    <div class="sd-breadcrumbs">
+      <a href="../../">Главная</a>
+      <span class="sep">/</span>
+      <span class="current">Мероприятия</span>
+    </div>
+    <nav class="sd-jump-links" aria-label="Page jump links">
+      <a href="#onboarding-guide" class="sd-jump-link">Гид</a>
+      <a href="#upcoming" class="sd-jump-link">Новинки</a>
+      <a href="#types" class="sd-jump-link">Виды встреч</a>
+      <a href="#join" class="sd-jump-link">Присоединиться</a>
+    </nav>
+  </div>
+</header>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">🎉 Сообщество</div>
+      <h1>Мероприятия в прямом эфире</h1>
+      <p class="hero-sub">Организованные сессии с преподавателем COSYlanguages. Разговорные клубы на реальные темы и киновечера на языке оригинала. Бесплатно для всех.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/330766784195" class="btn-primary">Присоединиться</a>
+        <a href="#types" class="btn-secondary">Виды встреч ↓</a>
+      </div>
+    </div>
+    <div class="hero-right">
+       <!-- Decoration -->
+    </div>
+  </div>
+</header>
+
+</div>
+
+<main class="page">
+
+  <!-- Краткое руководство для новых студентов разговорных клубов -->
+  <section id="onboarding-guide" style="background: var(--cream-dark); border: 1.5px dashed var(--border); border-radius: var(--r-xl); padding: 2rem; margin-bottom: 2.5rem; box-sizing: border-box;">
+    <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+      <span style="font-size: 2.5rem; line-height: 1;">🧭</span>
+      <div style="flex: 1; min-width: 280px;">
+        <h3 style="margin: 0 0 0.5rem 0; font-family: var(--font-serif); font-size: 1.35rem; color: var(--sage-deep);">Гид по разговорным клубам</h3>
+        <p style="margin: 0 0 1rem 0; font-size: 0.92rem; line-height: 1.6; color: var(--ink-soft);">
+          Впервые в наших разговорных клубах? Следуйте нашему гиду по уровням, чтобы преодолеть языковой барьер, расширить словарный запас и начать говорить бегло с профессиональными преподавателями.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <div style="background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+            <strong style="color: #BA7517; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">🌱 Для начинающих (A1–A2)</strong>
+            <p style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--muted);">Начните с клубов <strong>Let's Celebrate</strong> или <strong>The Greatest Quotes</strong>. Темы посвящены повседневной жизни, традициям и базовой лексике.</p>
+          </div>
+          <div style="background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+            <strong style="color: #993556; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">🚀 Средний уровень (B1–B2)</strong>
+            <p style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--muted);">Присоединяйтесь к <strong>My Life With & Without</strong> или <strong>Debatable & Relatable</strong>. Делитесь личным опытом, выражайте сожаления и участвуйте в дискуссиях.</p>
+          </div>
+          <div style="background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+            <strong style="color: #0F6E56; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">🧠 Продвинутый уровень (B2–C2)</strong>
+            <p style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--muted);">Испытайте себя в <strong>Keeping Up with Science</strong>, <strong>Mind Matters</strong> или <strong>I Couldn't Help But Wonder</strong>. Обсуждайте биологию, психологию и абстрактную философию.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Upcoming Events -->
+  <section id="upcoming">
+    <div class="upcoming-section">
+      <span class="sec-tag">🆕 Новинки</span>
+      <h2 class="sec-h2">Новые сессии на этой неделе</h2>
+
+      <div style="overflow-x: auto;">
+        <table class="events-table">
+          <thead>
+            <tr>
+              <th>Название события</th>
+              <th>Язык</th>
+              <th>Тип</th>
+              <th>Действие</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Does Inclusive Language Make Us Equal?</td>
+              <td>Английский</td>
+              <td>Разговорный клуб (Wonder)</td>
+              <td><a href="../../apps/premium-events/clubs/wonder/ru/sessions/i-couldnt-help-but-wonder/does-inclusive-language-make-us-equal.html" class="view-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Открыть сессию ➔</a></td>
+            </tr>
+            <tr>
+              <td>Why Do I Spend More When I Earn More?</td>
+              <td>Английский</td>
+              <td>Разговорный клуб (Wonder)</td>
+              <td><a href="../../apps/premium-events/clubs/wonder/ru/sessions/i-couldnt-help-but-wonder/why-do-i-spend-more-when-i-earn-more.html" class="view-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Открыть сессию ➔</a></td>
+            </tr>
+            <tr>
+              <td>Do We Have "No Time" or Just No Desire?</td>
+              <td>Английский</td>
+              <td>Разговорный клуб (Wonder)</td>
+              <td><a href="../../apps/premium-events/clubs/wonder/ru/sessions/i-couldnt-help-but-wonder/i-have-no-time-for-it.html" class="view-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Открыть сессию ➔</a></td>
+            </tr>
+            <tr>
+              <td>Do We Carry a Collective Self-Guilt for the Planet?</td>
+              <td>Английский</td>
+              <td>Разговорный клуб (Wonder)</td>
+              <td><a href="../../apps/premium-events/clubs/wonder/ru/sessions/i-couldnt-help-but-wonder/collective-guilt-global-crisis.html" class="view-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Открыть сессию ➔</a></td>
+            </tr>
+            <tr>
+              <td>Are Traditions a Hidden Monogamy?</td>
+              <td>Английский</td>
+              <td>Разговорный клуб (Wonder)</td>
+              <td><a href="../../apps/premium-events/clubs/wonder/ru/sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy.html" class="view-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Открыть сессию ➔</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="upcoming-note">Новые сессии обновляются еженедельно. Напишите нам в WhatsApp, чтобы предложить тему или принять участие в следующем живом обсуждении!</p>
+    </div>
+  </section>
+
+  <!-- Section 2: Event Types -->
+  <section id="types">
+    <span class="sec-tag">💡 Чем мы занимаемся</span>
+    <h2 class="sec-h2">Три способа общения</h2>
+    <p class="sec-p">Хотите ли вы обсудить глубокие темы, насладиться фильмом или поиграть в интерактивные игры, у нас найдутся интересные сессии.</p>
+
+    <div class="tools-grid">
+      <!-- Card A -->
+      <article class="event-type-card" style="background: linear-gradient(135deg, #fdfcf8, #f0f5f1);">
+        <div class="etc-icon">
+          <img src="../../images/speakingclubs.png" alt="Speaking Club logo" style="height: 60px; width: auto; margin-bottom: 1rem;">
+        </div>
+        <h3 class="etc-title">Разговорный клуб</h3>
+        <p class="etc-info">Сессия в небольшой группе (4–6 человек) на заранее выбранную актуальную тему. Преподаватель направляет беседу, мягко исправляет ошибки и вовлекает всех в разговор.</p>
+        <ul class="etc-meta">
+          <li><span>Языки</span> <span>Английский, французский, итальянский, русский, греческий</span></li>
+          <li><span>Длительность</span> <span>60 мин</span></li>
+          <li><span>Частота</span> <span>Еженедельно</span></li>
+        </ul>
+        <a href="speaking-clubs.html" class="view-btn">🎙️ Разговорные Клубы</a>
+      </article>
+
+      <!-- Card B -->
+      <article class="event-type-card">
+        <div class="etc-icon">🎬</div>
+        <h3 class="etc-title">Киновечер</h3>
+        <p class="etc-info">Смотрим короткометражный фильм или сцену на изучаемом языке, а затем обсуждаем их в группе с преподавателем. Акцент на понимании на слух и естественной лексике для выражения реакций.</p>
+        <ul class="etc-meta">
+          <li><span>Языки</span> <span>Английский, французский, итальянский</span></li>
+          <li><span>Длительность</span> <span>90 мин</span></li>
+          <li><span>Частота</span> <span>Ежемесячно</span></li>
+        </ul>
+        <a href="../cinema-club.html" class="view-btn">🍿 Киноклуб</a>
+      </article>
+
+      <!-- Card C -->
+      <article class="event-type-card">
+        <div class="etc-icon">🎤</div>
+        <h3 class="etc-title">Караоке Вечер</h3>
+        <p class="etc-info">Изучайте языки через музыку! Пойте любимые песни, разбирайте лексику, тренируйте произношение и обсуждайте культурный контекст с носителями языка.</p>
+        <ul class="etc-meta">
+          <li><span>Языки</span> <span>Английский, французский, русский, греческий</span></li>
+          <li><span>Длительность</span> <span>60 мин</span></li>
+          <li><span>Частота</span> <span>Каждые две недели</span></li>
+        </ul>
+        <a href="../../apps/premium-events/nights/karaoke/karaoke-club.html" class="view-btn" style="background:#4A154B;">🎶 Караоке Клуб</a>
+      </article>
+
+      <!-- Card D -->
+      <article class="event-type-card">
+        <div class="etc-icon">🎮</div>
+        <h3 class="etc-title">Игровой Вечер</h3>
+        <p class="etc-info">Общайтесь, соревнуйтесь и говорите! Играйте в интерактивные командные игры на расширение словарного запаса, дебаты, шарады и восприятие на слух : в классе или онлайн.</p>
+        <ul class="etc-meta">
+          <li><span>Языки</span> <span>Английский, французский, русский, испанский, немецкий, греческий, итальянский</span></li>
+          <li><span>Длительность</span> <span>60 - 90 мин</span></li>
+          <li><span>Частота</span> <span>Каждые две недели</span></li>
+        </ul>
+        <a href="../game-evenings.html" class="view-btn" style="background:#1b263b;">🎮 Войти в Игровой Клуб</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Section 5: CTA -->
+  <section id="join">
+    <div class="cta-section">
+      <h2>Напишите нам, чтобы присоединиться к событию</h2>
+      <p>Готовы начать? Свяжитесь с нами на удобной платформе, и мы поможем вам подобрать подходящую сессию.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/330766784195" class="cta-wa">💬 WhatsApp</a>
+        <a href="https://t.me/cosylanguagesproject" class="cta-tg">✈️ Telegram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="fb-logo">
+        <img src="../../images/logos/cosylanguages.png" alt="COSYlanguages logo">
+        <span class="fb-name">COSYlanguages</span>
+      </div>
+      <p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+    </div>
+    <div class="footer-links-col">
+      <h5 data-translate-key="footer_h5_courses">Courses</h5>
+      <a href="../../apps/premium-courses/general/" data-translate-key="course_general">General Course 📖</a>
+      <a href="../../apps/premium-courses/spoken/" data-translate-key="course_spoken">Spoken Course 🗣️</a>
+      <a href="../../apps/premium-courses/exam/" data-translate-key="course_exam">Exam Preparation 📝</a>
+      <a href="../../apps/premium-courses/travelling/" data-translate-key="course_travelling">Travelling Course ✈️</a>
+      <a href="../../apps/premium-courses/professional/" data-translate-key="course_professional">Professional Course 💼</a>
+      <a href="../../apps/premium-courses/relocation/" data-translate-key="course_relocation">Relocation Course 🏡</a>
+    </div>
+    <div class="footer-links-col">
+      <h5 data-translate-key="footer_h5_explore">Explore</h5>
+      <a href="../../#languages" data-translate-key="nav_languages">Languages 🌍</a>
+      <a href="../../practice/index.html" data-translate-key="nav_practice">Free Practice 💡</a>
+      <a href="../../events/index.html" data-translate-key="nav_events">Events 🎉</a>
+      <a href="../../games/index.html" data-translate-key="nav_games">Games 🎮</a>
+    </div>
+    <div class="footer-links-col">
+      <h5>Project</h5>
+      <a href="../../privacy.html">Privacy &amp; Safety 🛡️</a>
+    </div>
+    <div class="footer-links-col">
+      <h5 data-translate-key="footer_h5_contact">Contact</h5>
+      <a href="https://wa.me/330766784195">WhatsApp 📱</a>
+      <a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+      <a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+    </div>
+  </div>
+  <div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : Все права защищены</div>
+
+</footer>
+
+<script src="../../js/data/languages.js"></script>
+<script src="../../js/core/engine.js"></script>
+<script src="../../js/core/i18n.js"></script>
+<script src="../../js/core/ui.js"></script>
+<script src="../../js/data/pricing.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.club-grid .club-card');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const level = btn.getAttribute('data-level');
+
+      cards.forEach(card => {
+        const levels = card.getAttribute('data-levels') || '';
+        if (level === 'all' || levels.includes(level)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

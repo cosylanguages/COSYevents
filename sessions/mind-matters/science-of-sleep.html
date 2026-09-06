@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   The Science of Sleep : COSYlanguages
+  </title>
+<link href="../../../images/logos/cosylanguages.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="../../../css/tokens.css" rel="stylesheet"/>
+<link href="../../../css/base.css" rel="stylesheet"/>
+<link href="../../../css/components.css" rel="stylesheet"/>
+<link href="../../../css/layout.css" rel="stylesheet"/>
+<link href="../../../css/events.css" rel="stylesheet"/>
+</head>
+<body class="theme-mind-sleep">
+<nav id="cosy-nav">
+</nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #993556, #4d1a2b);">
+<div class="club-tag">
+    Mind Matters
+   </div>
+<div class="session-decorator-icon">🔬</div>
+<h1>
+    The Science of Sleep : Recalibrating the Mind
+   </h1>
+<p class="session-date">
+    05 August 2025
+   </p>
+</header>
+<main class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="../../../">
+     Home
+    </a>
+<span class="sep">
+     /
+    </span>
+<a href="../../">
+     Events
+    </a>
+<span class="sep">
+     /
+    </span>
+<a href="../../mind-matters.html">
+     Mind Matters
+    </a>
+<span class="sep">
+     /
+    </span>
+<span class="current">
+     Science of Sleep
+    </span>
+</nav>
+<a class="back-link" href="../../mind-matters.html">
+    ← Back to Club
+   </a>
+<div class="session-meta-grid">
+<div class="meta-item">
+<h4>
+      Duration
+     </h4>
+<p>
+      60 minutes
+     </p>
+</div>
+<div class="meta-item">
+<h4>
+      Languages
+     </h4>
+<p>
+      🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺
+     </p>
+</div>
+<div class="meta-item">
+<h4>
+      Level
+     </h4>
+<p>
+      Advanced (C1)
+     </p>
+</div>
+
+</div>
+<div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+<p>
+     This session explores the clinical and cognitive science of sleep-analyzing sleep architecture, circadian rhythms, and memory consolidation. We will discuss the psychological toll of chronic sleep deprivation, how the sleeping brain cleanses itself of metabolic waste, and investigate strategies to optimize our sleep hygiene for enhanced emotional resilience and cognitive processing.
+    </p>
+</div>
+<div class="mind-profile-box">
+<h3>
+     🧠 Subconscious Mind Profile
+    </h3>
+<div class="mind-profile-grid">
+<div class="mind-profile-item">
+<strong>
+       Core Human Tendency
+      </strong>
+<span>
+       Desire for High Cognitive Performance &amp; Energy
+      </span>
+</div>
+<div class="mind-profile-item">
+<strong>
+       Subconscious Trigger
+      </strong>
+<span>
+       Insomnia, Stress, or High Workspace Demand
+      </span>
+</div>
+<div class="mind-profile-item">
+<strong>
+       Psychological Phenomenon
+      </strong>
+<span>
+       Glymphatic Cleansing &amp; Memory Consolidation
+      </span>
+</div>
+<div class="mind-profile-item">
+<strong>
+       Self-Reflection Anchor
+      </strong>
+<span>
+       Prioritizing Rest as a Strategic Choice
+      </span>
+</div>
+</div>
+</div>
+<section id="vocabulary">
+<h2 class="section-title">
+     📖 Session Vocabulary
+    </h2>
+<div class="vocab-grid-10">
+<div class="vocab-card">
+<div class="vocab-word">
+       Circadian rhythm
+      </div>
+<div class="vocab-def">
+       the natural, internal process that regulates the sleep-wake cycle, repeating roughly every 24 hours.
+      </div>
+<div class="vocab-example">
+       Artificial blue light from screens disrupts your circadian rhythm, delaying melatonin production.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Circadian rhythm', definition:'the natural, internal process that regulates the sleep-wake cycle, repeating roughly every 24 hours.', example:'Artificial blue light from screens disrupts your circadian rhythm, delaying melatonin production.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+<div class="vocab-card">
+<div class="vocab-word">
+       Consolidation
+      </div>
+<div class="vocab-def">
+       the cognitive process where the brain stabilizes and organizes temporary memories into long-term storage.
+      </div>
+<div class="vocab-example">
+       Deep sleep is absolutely critical for the consolidation of vocabulary words learned during the day.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Consolidation', definition:'the cognitive process where the brain stabilizes and organizes temporary memories into long-term storage.', example:'Deep sleep is absolutely critical for the consolidation of vocabulary words learned during the day.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+<div class="vocab-card">
+<div class="vocab-word">
+       Insomnia
+      </div>
+<div class="vocab-def">
+       habitual sleeplessness or the persistent inability to fall asleep and stay asleep.
+      </div>
+<div class="vocab-example">
+       High professional stress and digital overstimulation are the primary triggers of modern insomnia.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Insomnia', definition:'habitual sleeplessness or the persistent inability to fall asleep and stay asleep.', example:'High professional stress and digital overstimulation are the primary triggers of modern insomnia.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+<div class="vocab-card">
+<div class="vocab-word">
+       Glymphatic system
+      </div>
+<div class="vocab-def">
+       the functional waste clearance system that cleanses the brain of metabolic waste during deep sleep.
+      </div>
+<div class="vocab-example">
+       During deep sleep, the glymphatic system becomes highly active, flushing out toxic proteins.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Glymphatic system', definition:'the functional waste clearance system that cleanses the brain of metabolic waste during deep sleep.', example:'During deep sleep, the glymphatic system becomes highly active, flushing out toxic proteins.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+<div class="vocab-card">
+<div class="vocab-word">
+       Cognitive deficit
+      </div>
+<div class="vocab-def">
+       a reduction or impairment in mental capabilities, including focus, memory, and decision speed.
+      </div>
+<div class="vocab-example">
+       Just one night of poor sleep introduces a severe cognitive deficit equivalent to mild intoxication.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Cognitive deficit', definition:'a reduction or impairment in mental capabilities, including focus, memory, and decision speed.', example:'Just one night of poor sleep introduces a severe cognitive deficit equivalent to mild intoxication.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+<div class="vocab-card">
+<div class="vocab-word">
+       Deprivation
+      </div>
+<div class="vocab-def">
+       the state of lacking a basic necessity or biological requirement, such as sleep or food.
+      </div>
+<div class="vocab-example">
+       Chronic sleep deprivation destroys emotional regulation, making individuals hyper-reactive to stress.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Deprivation', definition:'the state of lacking a basic necessity or biological requirement, such as sleep or food.', example:'Chronic sleep deprivation destroys emotional regulation, making individuals hyper-reactive to stress.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+<div class="vocab-card">
+<div class="vocab-word">
+       Somatic
+      </div>
+<div class="vocab-def">
+       relating to the body as distinct from the mind; physical manifestations of physiological stress.
+      </div>
+<div class="vocab-example">
+       Chronic fatigue is a somatic manifestation of underlying neurological exhaustion.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Somatic', definition:'relating to the body as distinct from the mind; physical manifestations of physiological stress.', example:'Chronic fatigue is a somatic manifestation of underlying neurological exhaustion.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+<div class="vocab-card">
+<div class="vocab-word">
+       Restoration
+      </div>
+<div class="vocab-def">
+       the process of returning a system to its original, healthy, and fully functioning state.
+      </div>
+<div class="vocab-example">
+       The primary purpose of slow-wave sleep is physical restoration and immune system repair.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Restoration', definition:'the process of returning a system to its original, healthy, and fully functioning state.', example:'The primary purpose of slow-wave sleep is physical restoration and immune system repair.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+<div class="vocab-card">
+<div class="vocab-word">
+       Stimulus
+      </div>
+<div class="vocab-def">
+       an environmental or sensory input that activates a physiological response or keeps the brain awake.
+      </div>
+<div class="vocab-example">
+       Consuming caffeine in the late afternoon acts as a strong chemical stimulus that blocks sleep signals.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Stimulus', definition:'an environmental or sensory input that activates a physiological response or keeps the brain awake.', example:'Consuming caffeine in the late afternoon acts as a strong chemical stimulus that blocks sleep signals.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+<div class="vocab-card">
+<div class="vocab-word">
+       Habituate
+      </div>
+<div class="vocab-def">
+       to adapt, adjust, or become accustomed to a specific sleep schedule or routine over time.
+      </div>
+<div class="vocab-example">
+       Once you habituate to waking up at dawn, your body will naturally align its hormone cycles.
+      </div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Habituate', definition:'to adapt, adjust, or become accustomed to a specific sleep schedule or routine over time.', example:'Once you habituate to waking up at dawn, your body will naturally align its hormone cycles.'}, this)">
+       Add to Dictionary
+      </button>
+</div>
+</div>
+</section>
+<section id="structure">
+<h2 class="section-title">
+     🎙️ Discussion Structure
+    </h2>
+<div class="rounds-container">
+<div class="round-block warm-up open" id="s-warm">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8;">
+<span>
+        🟠 Warm-up
+       </span>
+<span class="round-toggle">
+        ▲
+       </span>
+</div>
+<div class="round-body" style="display:block;">
+<div class="vim-instruction">
+        The Sleeping Brain
+       </div>
+<ul class="round-questions">
+<li>
+         Why do we treat sleep deprivation as a badge of honor in modern corporate and academic cultures?
+        </li>
+<li>
+         How does your overall emotional stability, patience, and humor change after a night of poor sleep?
+        </li>
+</ul>
+</div>
+</div>
+<div class="round-block round-1 open" id="s-r1">
+<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
+<span>
+        🔵 Round 1 : Deep Discussion
+       </span>
+<span class="round-toggle">
+        ▲
+       </span>
+</div>
+<div class="round-body" style="display:block;">
+<div class="round-type-badge">
+        Questions
+       </div>
+<div class="vim-instruction">
+        10 items required. Use .round-item-main and .round-item-personal.
+       </div>
+<div class="round-item">
+<div class="round-item-main">
+         How does traveling across multiple time zones disrupt our biological
+         <strong>
+          Circadian rhythm
+         </strong>
+         ?
+        </div>
+<div class="round-item-personal">
+         ★ How sensitive is your personal sleep schedule to minor changes in your daily routine?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         Why is deep, uninterrupted sleep essential for the
+         <strong>
+          Consolidation
+         </strong>
+         of newly acquired language skills?
+        </div>
+<div class="round-item-personal">
+         ★ What is your primary strategy for remembering complex information before a major exam or meeting?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         How can we break the anxious psychological cycle of lying awake worrying about
+         <strong>
+          Insomnia
+         </strong>
+         ?
+        </div>
+<div class="round-item-personal">
+         ★ Have you ever suffered from temporary insomnia, and what was the root cause of your sleeplessness?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         How does understanding the
+         <strong>
+          Glymphatic system
+         </strong>
+         change our view of sleep from a passive luxury to an active necessity?
+        </div>
+<div class="round-item-personal">
+         ★ Do you view sleeping eight hours as a strategic choice or a waste of productive time?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         What is the most noticeable
+         <strong>
+          Cognitive deficit
+         </strong>
+         you experience when operating on less than six hours of sleep?
+        </div>
+<div class="round-item-personal">
+         ★ Have you ever made a major professional error due to simple fatigue and lack of focus?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         What are the long-term psychological consequences of chronic sleep
+         <strong>
+          Deprivation
+         </strong>
+         on our emotional resilience?
+        </div>
+<div class="round-item-personal">
+         ★ How do you manage your mood and communication style when you are completely exhausted?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         In what ways does a lack of deep rest translate into chronic, painful
+         <strong>
+          Somatic
+         </strong>
+         tension in the body?
+        </div>
+<div class="round-item-personal">
+         ★ Where in your body do you physically experience the effects of a poor night's sleep?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         Why is psychological
+         <strong>
+          Restoration
+         </strong>
+         during dreaming sleep critical for processing traumatic emotional events?
+        </div>
+<div class="round-item-personal">
+         ★ Can you recall a vivid dream that seemed to help you process a real-life anxiety?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         How can we remove sleep-disrupting
+         <strong>
+          Stimulus
+         </strong>
+         inputs from our bedrooms to optimize our hygiene?
+        </div>
+<div class="round-item-personal">
+         ★ What is your current evening routine, and how do you prepare your mind for restful sleep?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         How long does it take for a person to
+         <strong>
+          Habituate
+         </strong>
+         to a non-traditional night-shift work schedule?
+        </div>
+<div class="round-item-personal">
+         ★ What is the ideal sleep schedule that makes you feel most energized and creative?
+        </div>
+</div>
+</div>
+</div>
+<div class="round-block lst open" id="s-lst">
+<div class="round-header" onclick="COSY.toggleRound('s-lst')" style="background:#EEEDFE;">
+<span>
+        🟣 Let's Speak Together
+       </span>
+<span class="round-toggle">
+        ▲
+       </span>
+</div>
+<div class="round-body" style="display:block;">
+<p class="round-note">
+        The Sleep Manifesto: Imagine you are addressing a corporate board that expects employees to answer emails at midnight. Present your case for sleep optimization, using at least one second conditional, one third conditional, and one mixed conditional.
+       </p>
+</div>
+</div>
+<div class="round-block round-2 open" id="s-r2">
+<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
+<span>
+        🟢 Round 2 : Conditional Scenarios
+       </span>
+<span class="round-toggle">
+        ▲
+       </span>
+</div>
+<div class="round-body" style="display:block;">
+<div class="round-type-badge">
+        Dilemmas &amp; Projections
+       </div>
+<div class="vim-instruction">
+        10 items required. Speculate, brainstorm, and share your personal opinions and ideas.
+       </div>
+<div class="round-item">
+<div class="round-item-main">
+         If you synchronized your lifestyle with your natural
+         <strong>
+          Circadian rhythm
+         </strong>
+         tomorrow, would your productivity double?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         If you prioritized sleep consolidation, would you find learning a foreign language far easier today?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         If you suffered from chronic
+         <strong>
+          Insomnia
+         </strong>
+         tomorrow, would you refuse to take sleep medication?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         If the
+         <strong>
+          Glymphatic system
+         </strong>
+         stopped functioning during sleep, would our brains age rapidly today?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         If you did not have a severe
+         <strong>
+          Cognitive deficit
+         </strong>
+         today, would you complete your tasks in half the time?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         If we had not normalized chronic sleep
+         <strong>
+          Deprivation
+         </strong>
+         , would modern office cultures be less toxic today?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         If your
+         <strong>
+          Somatic
+         </strong>
+         fatigue had been addressed years ago, would you now have more physical energy today?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         If you had experienced deep psychological
+         <strong>
+          Restoration
+         </strong>
+         last night, would you feel less anxious today?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         If we removed every digital
+         <strong>
+          Stimulus
+         </strong>
+         from our bedroom, would our sleep quality improve tonight?
+        </div>
+</div>
+<div class="round-item">
+<div class="round-item-main">
+         If you managed to
+         <strong>
+          Habituate
+         </strong>
+         to waking up at dawn, would your overall lifestyle be healthier today?
+        </div>
+</div>
+</div>
+</div>
+<div class="mistake-block open" id="s-mistakes">
+<div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+<span>
+        ✏️ Teacher's Note (Linguistic Corrections)
+       </span>
+<span class="round-toggle">
+        ▲
+       </span>
+</div>
+<div class="mistake-body" style="display:block;">
+<div class="mistake-item">
+<span class="mistake-wrong">
+         I am sleeping very bad
+        </span>
+<span class="mistake-arrow">
+         →
+        </span>
+<span class="mistake-right">
+         I sleep very poorly / I have been sleeping very poorly
+        </span>
+<span class="mistake-note-text">
+         (Grammar: use the adverb 'poorly' to modify the verb 'sleep' instead of the adjective 'bad')
+        </span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">
+         It is important to have a good sleep
+        </span>
+<span class="mistake-arrow">
+         →
+        </span>
+<span class="mistake-right">
+         It is important to get good sleep / It is important to sleep well
+        </span>
+<span class="mistake-note-text">
+         (Collocation error: we 'get good sleep' or 'sleep well', rather than 'having a good sleep')
+        </span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">
+         We discussed about our sleep habits
+        </span>
+<span class="mistake-arrow">
+         →
+        </span>
+<span class="mistake-right">
+         We discussed our sleep habits / had a discussion about our sleep habits
+        </span>
+<span class="mistake-note-text">
+         (Verb transitivity: 'discuss' is transitive and does not take 'about' directly)
+        </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../../images/logos/cosylanguages.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="../../../apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="../../../apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="../../../apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="../../../apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="../../../apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="../../../apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../../events/index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="../../../js/core/engine.js">
+</script>
+<script src="../../../js/core/ui.js">
+</script>
+</body>
+</html>
