@@ -79,6 +79,62 @@
           "pronunciation_prompt": "Practice rapid cadence, rhythmic timing, and cheerful storytelling tone."
         }
       ]
+    },
+    {
+      "id": "pop-and-disco-iconic",
+      "title": "Pop & Disco Icons",
+      "level_range": "A2–B2",
+      "songs": [
+        {
+          "title": "Me and I",
+          "artist": "ABBA",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=ABBA+Me+and+I+karaoke",
+          "pronunciation_prompt": "Focus on rhythmic staccato delivery and clear enunciation of dual-personality themes."
+        },
+        {
+          "title": "Make Your Own Kind of Music",
+          "artist": "Cass Elliot",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=Cass+Elliot+Make+Your+Own+Kind+of+Music+karaoke",
+          "pronunciation_prompt": "Practice open vowel resonance and confident pitch projection on optimistic chorus refrains."
+        },
+        {
+          "title": "Oui ou non",
+          "artist": "Angèle",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Angele+Oui+ou+non+karaoke",
+          "pronunciation_prompt": "Focus on modern conversational French cadence, liaisons, and rapid spoken syncopation."
+        }
+      ]
+    },
+    {
+      "id": "stage-screen-satire",
+      "title": "Stage, Screen & Musical Satire",
+      "level_range": "B1–B2",
+      "songs": [
+        {
+          "title": "Seventeen",
+          "artist": "Heathers The Musical",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Heathers+Seventeen+karaoke",
+          "pronunciation_prompt": "Focus on expressive vocal dynamics and clear diction across fast-paced musical theater dialogue."
+        },
+        {
+          "title": "Dont Be a Lawyer",
+          "artist": "Crazy Ex-Girlfriend",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Crazy+Ex-Girlfriend+Dont+Be+a+Lawyer+karaoke",
+          "pronunciation_prompt": "Master rapid-fire satirical speech delivery, imperatives, and comedic timing."
+        },
+        {
+          "title": "Army Dreamers",
+          "artist": "Kate Bush",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Kate+Bush+Army+Dreamers+karaoke",
+          "pronunciation_prompt": "Practice delicate vocal articulation, triple meter waltz phrasing, and gentle breath control."
+        }
+      ]
     }
   ]
 }
