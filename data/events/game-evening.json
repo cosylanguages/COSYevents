@@ -4,7 +4,11 @@
   "description": "Curated session lineups wrapping existing COSYgames titles into structured party night formats with seamless URL handoff.",
   "handoff_convention": {
     "base_url": "https://cosylanguages.github.io/COSYgames/",
-    "params": ["lang", "level", "topic"]
+    "params": [
+      "lang",
+      "level",
+      "topic"
+    ]
   },
   "lineups": [
     {
@@ -27,7 +31,7 @@
           "name": "Action Hero",
           "folder": "action_hero",
           "icon": "🎭",
-          "description": "Hold up a word and guess the action or verb described by teammates without gestures.",
+          "description": "Hold your smartphone or word card up. Teammates describe secret target terms in the language while you guess as many as possible before time expires.",
           "suggested_level": "A2–B2",
           "estimated_minutes": 15,
           "default_topic": "actions_verbs"
@@ -62,8 +66,8 @@
         {
           "name": "Battle of Wits",
           "folder": "battle_of_wits",
-          "icon": "🧠",
-          "description": "Fast-paced vocabulary trivia and category classification drill.",
+          "icon": "⚖️",
+          "description": "Two hot topics, two contrasting sides. Players are split into opposing camps to draft arguments, formulate debate strategies, and win the final ballot.",
           "suggested_level": "B1–B2",
           "estimated_minutes": 20,
           "default_topic": "general_knowledge"
@@ -108,7 +112,7 @@
           "name": "Identity Mystery",
           "folder": "identity_mystery",
           "icon": "👤",
-          "description": "Deduce secret character identities using targeted yes/no questioning.",
+          "description": "The host or player is secretly assigned a hidden persona or figure. Others take turns asking yes/no questions to decode the hidden identity in under 20 questions.",
           "suggested_level": "B1–B2",
           "estimated_minutes": 15,
           "default_topic": "famous_figures"
@@ -116,8 +120,8 @@
         {
           "name": "Story Chain",
           "folder": "story_chain",
-          "icon": "🔗",
-          "description": "Collaborative sequential storytelling adding one sentences per turn with strict word constraints.",
+          "icon": "🃏",
+          "description": "Build an unpredictable story together, one sentence at a time. Each player must secretly draw a target vocabulary word and weave it naturally into their turn.",
           "suggested_level": "B1–C1",
           "estimated_minutes": 20,
           "default_topic": "mystery_adventure"
@@ -162,7 +166,7 @@
           "name": "Word Linker",
           "folder": "word_linker",
           "icon": "🔗",
-          "description": "Identify word connections, collocations, or find the odd word out in context.",
+          "description": "Test your vocabulary depth! Examine target words on screen, work together to spot the odd one out, and establish semantic connections.",
           "suggested_level": "A2–B1",
           "estimated_minutes": 15,
           "default_topic": "word_associations"
@@ -179,8 +183,8 @@
         {
           "name": "Lucky Numbers",
           "folder": "lucky_numbers",
-          "icon": "🎰",
-          "description": "Interactive number bingo challenge for listening comprehension and rapid number recall.",
+          "icon": "🔢",
+          "description": "Practice number recognition and spelling. The Caller synthesizes and speaks numbers/letters aloud in the target language while players complete their cards.",
           "suggested_level": "A1–B1",
           "estimated_minutes": 15,
           "default_topic": "numbers_and_time"

@@ -79,6 +79,797 @@
           "pronunciation_prompt": "Practice rapid cadence, rhythmic timing, and cheerful storytelling tone."
         }
       ]
+    },
+    {
+      "id": "pop-and-disco-iconic",
+      "title": "Pop & Disco Icons",
+      "level_range": "A2–B2",
+      "songs": [
+        {
+          "title": "Me and I",
+          "artist": "ABBA",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=ABBA+Me+and+I+karaoke",
+          "pronunciation_prompt": "Focus on rhythmic staccato delivery and clear enunciation of dual-personality themes."
+        },
+        {
+          "title": "Make Your Own Kind of Music",
+          "artist": "Cass Elliot",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=Cass+Elliot+Make+Your+Own+Kind+of+Music+karaoke",
+          "pronunciation_prompt": "Practice open vowel resonance and confident pitch projection on optimistic chorus refrains."
+        },
+        {
+          "title": "Oui ou non",
+          "artist": "Angèle",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Angele+Oui+ou+non+karaoke",
+          "pronunciation_prompt": "Focus on modern conversational French cadence, liaisons, and rapid spoken syncopation."
+        }
+      ]
+    },
+    {
+      "id": "stage-screen-satire",
+      "title": "Stage, Screen & Musical Satire",
+      "level_range": "B1–B2",
+      "songs": [
+        {
+          "title": "Seventeen",
+          "artist": "Heathers The Musical",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Heathers+Seventeen+karaoke",
+          "pronunciation_prompt": "Focus on expressive vocal dynamics and clear diction across fast-paced musical theater dialogue."
+        },
+        {
+          "title": "Dont Be a Lawyer",
+          "artist": "Crazy Ex-Girlfriend",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Crazy+Ex-Girlfriend+Dont+Be+a+Lawyer+karaoke",
+          "pronunciation_prompt": "Master rapid-fire satirical speech delivery, imperatives, and comedic timing."
+        },
+        {
+          "title": "Army Dreamers",
+          "artist": "Kate Bush",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Kate+Bush+Army+Dreamers+karaoke",
+          "pronunciation_prompt": "Practice delicate vocal articulation, triple meter waltz phrasing, and gentle breath control."
+        }
+      ]
+    },
+    {
+      "id": "global-karaoke-catalog",
+      "title": "Global Karaoke Catalog",
+      "level_range": "A1–C1",
+      "songs": [
+        {
+          "title": "A Diagnosis",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=A+Diagnosis+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "ABBA Challenge",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=ABBA+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "After Everything I've Done for You",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=After+Everything+I've+Done+for+You+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "amor libre",
+          "artist": "Featured Artist (Spanish)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=amor+libre+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Spanish."
+        },
+        {
+          "title": "angeleyes",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=angeleyes+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Angelina Wismes Challenge",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Angelina+Wismes+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Angèle Challenge",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Angèle+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Antidepressants Are So Not a Big Deal",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Antidepressants+Are+So+Not+a+Big+Deal+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Arletta Challenge",
+          "artist": "Featured Artist (Greek)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Arletta+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Greek."
+        },
+        {
+          "title": "as it was",
+          "artist": "Featured Artist (English)",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=as+it+was+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "balance ton quoi",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=balance+ton+quoi+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "bien plus fort",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=bien+plus+fort+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "California dreaming",
+          "artist": "Featured Artist (English)",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=California+dreaming+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Cass Elliot Challenge",
+          "artist": "Featured Artist (English)",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=Cass+Elliot+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "casualties of war",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=casualties+of+war+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "chi sarà con te",
+          "artist": "Featured Artist (Italian)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=chi+sarà+con+te+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Italian."
+        },
+        {
+          "title": "Coming Around Again",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Coming+Around+Again+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Couleur",
+          "artist": "Featured Artist (French)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Couleur+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Crazy Ex-Girlfriend Challenge",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Crazy+Ex-Girlfriend+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Diva",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Diva+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Don't Be a Lawyer",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Don't+Be+a+Lawyer+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "due grosse lacrime bianche",
+          "artist": "Featured Artist (Italian)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=due+grosse+lacrime+bianche+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Italian."
+        },
+        {
+          "title": "Eleven O'Clock",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Eleven+O'Clock+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Esteman Challenge",
+          "artist": "Featured Artist (Spanish)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Esteman+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Spanish."
+        },
+        {
+          "title": "Fabienne Thibeault Challenge",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Fabienne+Thibeault+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Face Your Fears",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Face+Your+Fears+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Fit Hot Guys Have Problems Too",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Fit+Hot+Guys+Have+Problems+Too+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Group Hang",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Group+Hang+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Heathers Challenge",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Heathers+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "I Hate Everything But You",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=I+Hate+Everything+But+You+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "I'm a Good Person",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=I'm+a+Good+Person+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "I'm Afraid of Americans",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=I'm+Afraid+of+Americans+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "I'm the Villain in My Own Story",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=I'm+the+Villain+in+My+Own+Story+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "immobile",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=immobile+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "It's Getting Better",
+          "artist": "Featured Artist (English)",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=It's+Getting+Better+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Je suis un homme",
+          "artist": "Featured Artist (French)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Je+suis+un+homme+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "je t'aime comme je t'aime",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=je+t'aime+comme+je+t'aime+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Jim Beam",
+          "artist": "Featured Artist (Russian)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Jim+Beam+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Russian."
+        },
+        {
+          "title": "Kate Bush Challenge",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Kate+Bush+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "l'amore è un attimo",
+          "artist": "Featured Artist (Italian)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=l'amore+è+un+attimo+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Italian."
+        },
+        {
+          "title": "l'aziza",
+          "artist": "Featured Artist (French)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=l'aziza+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "L'effet de masse",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=L'effet+de+masse+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "l'uomo che amava le donne",
+          "artist": "Featured Artist (Italian)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=l'uomo+che+amava+le+donne+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Italian."
+        },
+        {
+          "title": "La complainte de la serveuse automate",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=La+complainte+de+la+serveuse+automate+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "la nuit n'en finit plus",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=la+nuit+n'en+finit+plus+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "la tour eiffel est pour moi",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=la+tour+eiffel+est+pour+moi+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "La Zarra Challenge",
+          "artist": "Featured Artist (French)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=La+Zarra+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Le monde est stone",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Le+monde+est+stone+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "le soleil noir",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=le+soleil+noir+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "left outside alone",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=left+outside+alone+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Les uns contre les autres",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Les+uns+contre+les+autres+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Let's Generalize About Men",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Let's+Generalize+About+Men+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Lifeboat",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Lifeboat+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Love Kernels",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Love+Kernels+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Ma Philosophie",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Ma+Philosophie+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Massimo Ranieri Challenge",
+          "artist": "Featured Artist (Italian)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Massimo+Ranieri+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Italian."
+        },
+        {
+          "title": "Maëlle Challenge",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Maëlle+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "me & I",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=me+&+I+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "mixed up world",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=mixed+up+world+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Mple Challenge",
+          "artist": "Featured Artist (Greek)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Mple+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Greek."
+        },
+        {
+          "title": "nos âmes sont",
+          "artist": "Featured Artist (French)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=nos+âmes+sont+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "nuevo verano",
+          "artist": "Featured Artist (Spanish)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=nuevo+verano+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Spanish."
+        },
+        {
+          "title": "Oh My God I Think I Like You",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Oh+My+God+I+Think+I+Like+You+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Oh To Be in Love",
+          "artist": "Featured Artist (English)",
+          "level": "C1",
+          "external_link": "https://www.youtube.com/results?search_query=Oh+To+Be+in+Love+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "one of the greats",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=one+of+the+greats+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Ouvrir les yeux",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Ouvrir+les+yeux+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Overprotected",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Overprotected+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "salut",
+          "artist": "Featured Artist (French)",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=salut+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Second Hand Rose",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Second+Hand+Rose+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Settle for Me",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Settle+for+Me+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Sex with a Stranger",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Sex+with+a+Stranger+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Sexy French Depression",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Sexy+French+Depression+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Sexy Getting Ready Song",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Sexy+Getting+Ready+Song+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Slow Motion",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Slow+Motion+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "So Maternal",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=So+Maternal+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Speed",
+          "artist": "Featured Artist (French)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Speed+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "te alejas mas de mi",
+          "artist": "Featured Artist (Spanish)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=te+alejas+mas+de+mi+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Spanish."
+        },
+        {
+          "title": "The Greatest",
+          "artist": "Featured Artist (English)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=The+Greatest+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "toi mon amour",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=toi+mon+amour+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Toutes les machines ont le cœur",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Toutes+les+machines+ont+le+cœur+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Tu t'en iras",
+          "artist": "Featured Artist (French)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Tu+t'en+iras+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Un garçon pas comme les autres",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Un+garçon+pas+comme+les+autres+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "un premier amour",
+          "artist": "Featured Artist (French)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=un+premier+amour+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "un raggio di sole",
+          "artist": "Featured Artist (Italian)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=un+raggio+di+sole+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Italian."
+        },
+        {
+          "title": "un'altra estate",
+          "artist": "Featured Artist (Italian)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=un'altra+estate+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Italian."
+        },
+        {
+          "title": "Unlikely Lovers",
+          "artist": "Featured Artist (English)",
+          "level": "C1",
+          "external_link": "https://www.youtube.com/results?search_query=Unlikely+Lovers+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "voila",
+          "artist": "Featured Artist (French)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=voila+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "What'll It Be",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=What'll+It+Be+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Where Is My Husband?",
+          "artist": "Featured Artist (English)",
+          "level": "C1",
+          "external_link": "https://www.youtube.com/results?search_query=Where+Is+My+Husband?+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Where's the Bathroom",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Where's+the+Bathroom+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Who's the New Guy",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Who's+the+New+Guy+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Without Love You Can Save the World",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Without+Love+You+Can+Save+the+World+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Women Gotta Stick Together",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Women+Gotta+Stick+Together+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "You Stupid Bitch",
+          "artist": "Featured Artist (English)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=You+Stupid+Bitch+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in English."
+        },
+        {
+          "title": "Zazie Challenge",
+          "artist": "Featured Artist (French)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Zazie+Challenge+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in French."
+        },
+        {
+          "title": "Αν είναι η αγάπη αμαρτία",
+          "artist": "Featured Artist (Greek)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Αν+είναι+η+αγάπη+αμαρτία+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Greek."
+        },
+        {
+          "title": "Κάποιες Νύχτες",
+          "artist": "Featured Artist (Greek)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Κάποιες+Νύχτες+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Greek."
+        },
+        {
+          "title": "Να η αγάπη να",
+          "artist": "Featured Artist (Greek)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Να+η+αγάπη+να+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Greek."
+        },
+        {
+          "title": "Ο Γάτος",
+          "artist": "Featured Artist (Greek)",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=Ο+Γάτος+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Greek."
+        },
+        {
+          "title": "Τον ίδιο το Θεό",
+          "artist": "Featured Artist (Greek)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Τον+ίδιο+το+Θεό+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Greek."
+        },
+        {
+          "title": "Φάρος",
+          "artist": "Featured Artist (Greek)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Φάρος+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Greek."
+        },
+        {
+          "title": "Φοβάμαι",
+          "artist": "Featured Artist (Greek)",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Φοβάμαι+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Greek."
+        },
+        {
+          "title": "выше домов",
+          "artist": "Featured Artist (Russian)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=выше+домов+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Russian."
+        },
+        {
+          "title": "у мамы есть секрет",
+          "artist": "Featured Artist (Russian)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=у+мамы+есть+секрет+karaoke",
+          "pronunciation_prompt": "Focus on rhythm, connected speech, and vocal expression in Russian."
+        }
+      ]
     }
   ]
 }

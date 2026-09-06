@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Long Reads - COSYevents Catalog</title>
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+  <link rel="stylesheet" href="../shared/css/hub.css">
+  <style>
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .vocab-card {
+      background: var(--cosy-bg);
+      border: 1px solid var(--cosy-border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .vocab-term {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cosy-primary-dark);
+    }
+    .vocab-def {
+      font-size: 0.9rem;
+      color: var(--cosy-text);
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <span class="hub-brand"><a href="../index.html" style="color: inherit; text-decoration: none;">← COSYevents Catalog</a></span>
+      <h1 class="hub-title">Long Reads</h1>
+      <p class="hub-subtitle">
+        In-depth article and passage analysis with calibrated reading comprehension, key vocabulary, and debate prompts.
+      </p>
+    </div>
+  </header>
+
+  <main class="hub-main">
+    <section class="hub-section-header">
+      <h2 class="hub-section-title">Select an Article Topic</h2>
+      <p class="hub-section-desc">Choose a long read article topic below to load vocabulary primers and comprehension prompt decks.</p>
+    </section>
+
+    <!-- Article Selector Grid -->
+    <div class="events-grid" id="article-selector">
+      <button class="event-card article-select-btn" data-article-id="attention-economy" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">📲</span>
+          <span class="event-badge">B2–C1</span>
+        </div>
+        <h3 class="event-name">The Attention Economy</h3>
+        <p class="event-description">Exploring social tricks, infinite feeds, and user monetization loops.</p>
+      </button>
+
+      <button class="event-card article-select-btn" data-article-id="designed-to-addict" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">🧠</span>
+          <span class="event-badge">B2–C1</span>
+        </div>
+        <h3 class="event-name">Designed to Addict</h3>
+        <p class="event-description">Dopamine feedback loops, variable rewards, and digital boundaries.</p>
+      </button>
+
+      <button class="event-card article-select-btn" data-article-id="changing-our-brains" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">⚡</span>
+          <span class="event-badge">B2–C1</span>
+        </div>
+        <h3 class="event-name">Changing Our Brains</h3>
+        <p class="event-description">Neuroplasticity, deep work, and reclaiming solitude in noisy worlds.</p>
+      </button>
+
+      <button class="event-card article-select-btn" data-article-id="the-30-day-breakup" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">📱</span>
+          <span class="event-badge">B1–B2</span>
+        </div>
+        <h3 class="event-name">30-Day Phone Breakup</h3>
+        <p class="event-description">Actionable boundary setting and finding analog life alternatives.</p>
+      </button>
+    </div>
+
+    <!-- Reading Vocabulary Primer Section -->
+    <section style="margin-top: 3rem; background: var(--cosy-surface); padding: 2rem; border-radius: var(--cosy-radius); border: 1px solid var(--cosy-border);">
+      <h2 style="color: var(--cosy-primary-dark); margin-bottom: 0.5rem;" id="vocab-primer-title">📖 Reading Vocabulary Primer</h2>
+      <p style="color: var(--cosy-text-muted); margin-bottom: 1rem;">Key lexical terms and concepts for this article session.</p>
+      <div class="vocab-grid" id="vocab-primer-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- Discussion Prompt Deck Viewer Container -->
+    <section style="margin-top: 3rem;">
+      <div id="deck-viewer-container"></div>
+    </section>
+
+    <!-- Session Format Structure -->
+    <section style="margin-top: 3rem; background: var(--cosy-surface); padding: 2rem; border-radius: var(--cosy-radius); border: 1px solid var(--cosy-border);">
+      <h2 style="color: var(--cosy-primary-dark); margin-bottom: 1rem;">📖 Long Reads Session Framework</h2>
+      <p style="margin-bottom: 1rem;">Follow this structured approach for in-depth article discussions:</p>
+      <ol style="padding-left: 1.5rem; line-height: 1.8; color: var(--cosy-text);">
+        <li><strong>Pre-Reading Vocabulary Focus (10 mins):</strong> Review key concepts and terms above to prepare for passage comprehension.</li>
+        <li><strong>Passage Analysis (20 mins):</strong> Read and dissect the article text collaboratively or independently.</li>
+        <li><strong>Comprehension & Debate Deck (30 mins):</strong> Rotate through prompt cards to debate article arguments, evaluate author evidence, and apply insights to real life.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="../shared/js/prompt-deck-loader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      let data = null;
+      try {
+        const response = await fetch('../data/events/long-reads.json');
+        data = await response.json();
+      } catch (e) {
+        console.error('Could not load long-reads.json', e);
+      }
+
+      function loadArticle(articleId) {
+        if (!data || !data.articles) return;
+        const article = data.articles.find(a => a.id === articleId);
+        if (!article) return;
+
+        const vocabGrid = document.getElementById('vocab-primer-grid');
+        const vocabTitle = document.getElementById('vocab-primer-title');
+        vocabTitle.textContent = `📖 Reading Vocabulary Primer: ${article.title}`;
+
+        if (article.reading_vocabulary && article.reading_vocabulary.length > 0) {
+          vocabGrid.innerHTML = article.reading_vocabulary.map(item => `
+            <div class="vocab-card">
+              <div class="vocab-term">${escapeHtml(item.term)}</div>
+              <p class="vocab-def">${escapeHtml(item.definition)}</p>
+            </div>
+          `).join('');
+        } else {
+          vocabGrid.innerHTML = '<p>No vocabulary primer terms available for this article.</p>';
+        }
+
+        new PromptDeckLoader({
+          containerId: 'deck-viewer-container',
+          title: `${article.title} — Comprehension Deck`,
+          cards: article.prompts
+        });
+      }
+
+      function escapeHtml(str) {
+        if (typeof str !== 'string') return str;
+        return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      // Default load first article
+      loadArticle('attention-economy');
+
+      document.querySelectorAll('.article-select-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const articleId = btn.getAttribute('data-article-id');
+          loadArticle(articleId);
+          document.getElementById('vocab-primer-title').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
