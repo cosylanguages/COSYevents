@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flash : COSYlanguages</title>
+<link href="../../../../../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+<link rel="stylesheet" href="../../../../../shared/css/hub.css">
+</head>
+<body class="theme-karaoke">
+<nav id="cosy-nav"></nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #4A154B, #2A0A35);">
+<div class="club-tag">Karaoke Club</div>
+<h1>Flash</h1>
+<p class="session-date">Maëlle • B1</p>
+</header>
+<main class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="../../../../../../../../../">Accueil</a> <span class="sep">/</span>
+<a href="../../../../../index.html">Événements</a> <span class="sep">/</span>
+<a href="../../../../../karaoke-club.html">Karaoke Club</a> <span class="sep">/</span>
+<a href="./index.html">Maëlle Challenge</a> <span class="sep">/</span> <span class="current">Flash</span>
+</nav>
+<a class="back-link" href="./index.html">← Retour au défi</a>
+<div class="session-meta-grid">
+<div class="meta-item"><h4>Durée</h4><p>90–120 minutes</p></div>
+<div class="meta-item"><h4>Langue</h4><p>Français</p></div>
+<div class="meta-item"><h4>Niveau</h4><p>Intermédiaire (B1)</p></div>
+<div class="meta-item"><h4>Thème</h4><p>Souvenirs éphémères &amp; Flashbacks</p></div>
+<div class="meta-item"><h4>Resources</h4><p>
+<a href="https://www.youtube.com/watch?v=hcaj2MlYHFI" style="color:var(--teal); margin-right: 12px;" target="_blank">Music Video 🎥</a>
+<a href="https://www.youtube.com/watch?v=hcaj2MlYHFI" style="color:var(--teal);" target="_blank">Song Link (Backup) 🎵</a>
+</p></div>
+<div class="meta-item"><h4>Offline Access</h4><p><button class="btn-print" onclick="window.print()" style="background: var(--indigo); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: background 0.2s;"><span style="font-size: 1rem;">📄</span> Download PDF</button></p></div>
+</div>
+<div class="cosy-video-wrapper">
+<div class="cosy-video-container">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/hcaj2MlYHFI"></iframe>
+</div>
+<div class="cosy-video-disclaimer">
+<span>ℹ️ Source : YouTube. Ce matériel est utilisé uniquement à des fins éducatives.</span>
+</div>
+</div>
+<div class="theme-box" style="background: var(--cream); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem; border: 1px dashed var(--border);">
+<h3 style="margin-top:0; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">❤️ Thème: Souvenirs éphémères &amp; Flashbacks</h3>
+<p style="margin-bottom:0.5rem; font-size:0.9rem; color:var(--ink-soft);">Nous allons discuter de:</p>
+<ul style="margin:0; padding-left:1.2rem; font-size:0.9rem; color:var(--ink-soft);">
+<li>Souvenirs</li>
+<li>Sirènes</li>
+<li>Vagues</li>
+<li>Personal reflection</li>
+</ul>
+</div>
+<div class="speaking-time-gauge" style="background: var(--warm-white); border-radius: 12px; padding: 1rem; margin-bottom: 3rem; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.5rem;">
+<div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: bold; color: var(--muted);">
+<span>🗣️ Speaking Time Gauge</span>
+<span>90-120 min Session</span>
+</div>
+<div class="gauge-bar" style="display: flex; height: 12px; border-radius: 6px; overflow: hidden;">
+<div style="width: 10%; background: #E67E22;" title="Warm-up (10%)"></div>
+<div style="width: 15%; background: #3498DB;" title="Vocabulary (15%)"></div>
+<div style="width: 15%; background: #9B59B6;" title="Listening (15%)"></div>
+<div style="width: 45%; background: #2ECC71;" title="Discussion (45%)"></div>
+<div style="width: 10%; background: #F1C40F;" title="Language Focus (10%)"></div>
+<div style="width: 5%; background: #E74C3C;" title="Final Challenge (5%)"></div>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); flex-wrap: wrap; gap: 0.5rem;">
+<span>🎵 Warm-up (10%)</span>
+<span>📚 Vocabulary (15%)</span>
+<span>🎧 Listening (15%)</span>
+<span>💬 Discussion (45%)</span>
+<span>✨ Language Focus (10%)</span>
+<span>🎭 Final Challenge (5%)</span>
+</div>
+</div>
+<div class="rounds-container">
+<div class="round-block warm-up open" id="s-warm">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8; cursor:pointer;">
+<span>🎵 Étape 1 : Échauffement</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<ul class="round-questions">
+<li>Quelle est l'importance de ce thème de discussion dans votre vie quotidienne ?</li>
+<li>Regardez le titre 'Flash' et l'artiste 'Maëlle'. Selon vous, de quoi parle cette chanson ? (Question de prédiction)</li>
+<li>Quelles émotions ou quels sentiments ce style de musique vous inspire-t-il ?</li>
+</ul>
+</div>
+</div>
+<div class="round-block open" id="vocabulary">
+<div class="round-header" onclick="COSY.toggleRound('vocabulary')" style="background:#E1F5EE; cursor:pointer;">
+<span>📚 Étape 2 : Vocabulaire</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div class="vocab-grid-10">
+<h3 style="grid-column: 1 / -1; margin-top: 1rem; margin-bottom: 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">❤️ Concepts clés &amp; Émotions</h3>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Les souvenirs</div>
+<div class="vocab-def">Images et impressions du passé conservées dans la mémoire.</div>
+<div class="vocab-example">Les précieux souvenirs d'enfance illuminent souvent les jours sombres.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">oubli</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Les souvenirs', definition:'Images et impressions du passé conservées dans la mémoire.', example:'Les précieux souvenirs d\'enfance illuminent souvent les jours sombres.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Les sirènes</div>
+<div class="vocab-def">Avertisseurs sonores de la ville ou voix troublantes du passé.</div>
+<div class="vocab-example">Résister aux chants des sirènes de la facilité demande une grande discipline.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">silence</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Les sirènes', definition:'Avertisseurs sonores de la ville ou voix troublantes du passé.', example:'Résister aux chants des sirènes de la facilité demande une grande discipline.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Les vagues</div>
+<div class="vocab-def">Ondulations de la mer ou mouvements d'émotion imprévisibles.</div>
+<div class="vocab-example">Les vagues de nostalgie vont et viennent au gré des chansons d'autrefois.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">calme</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Les vagues', definition:'Ondulations de la mer ou mouvements d\'émotion imprévisibles.', example:'Les vagues de nostalgie vont et viennent au gré des chansons d\'autrefois.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Le désabonné</div>
+<div class="vocab-def">Personne qui a rompu le contact ou interrompu un suivi.</div>
+<div class="vocab-example">Se déclarer désabonné de la négativité ambiante permet de préserver sa paix.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">suivi</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Le désabonné', definition:'Personne qui a rompu le contact ou interrompu un suivi.', example:'Se déclarer désabonné de la négativité ambiante permet de préserver sa paix.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Les regrets</div>
+<div class="vocab-def">Nostalgie ou chagrin causé par ce qui a disparu ou ce qui aurait pu être.</div>
+<div class="vocab-example">Vivre sans regrets exige d'agir toujours en accord avec ses valeurs.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">satisfaction</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Les regrets', definition:'Nostalgie ou chagrin causé par ce qui a disparu ou ce qui aurait pu être.', example:'Vivre sans regrets exige d\'agir toujours en accord avec ses valeurs.'}, this)">+ Dictionary</button>
+</div>
+<h3 style="grid-column: 1 / -1; margin-top: 1rem; margin-bottom: 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">🗣️ Vie, Actions &amp; Connexion</h3>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Les flashs</div>
+<div class="vocab-def">Souvenirs soudains et involontaires qui repassent à l'esprit.</div>
+<div class="vocab-example">Ces flashs du passé surviennent souvent sans prévenir au détour d'une rue.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">oubli</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Les flashs', definition:'Souvenirs soudains et involontaires qui repassent à l\'esprit.', example:'Ces flashs du passé surviennent souvent sans prévenir au détour d\'une rue.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">L'espace (m.)</div>
+<div class="vocab-def">Place mentale ou liberté d'esprit disponible pour penser à autre chose.</div>
+<div class="vocab-example">Retrouver de l'espace mental est essentiel après une rupture douloureuse.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">saturation</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'espace (m.)', definition:'Place mentale ou liberté d\'esprit disponible pour penser à autre chose.', example:'Retrouver de l\'espace mental est essentiel après une rupture douloureuse.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Les blessures</div>
+<div class="vocab-def">Peines de cœur et marques morales laissées par une séparation.</div>
+<div class="vocab-example">Elle sourit doucement pour masquer ses blessures intérieures.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">guérison</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Les blessures', definition:'Peines de cœur et marques morales laissées par une séparation.', example:'Elle sourit doucement pour masquer ses blessures intérieures.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">L'éclat (m.)</div>
+<div class="vocab-def">Lumière vive ou intensité chaleureuse qui s'est éteinte avec le temps.</div>
+<div class="vocab-example">Ce soleil sans éclat reflète la tristesse des jours de nostalgie.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">rayonnement</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'éclat (m.)', definition:'Lumière vive ou intensité chaleureuse qui s\'est éteinte avec le temps.', example:'Ce soleil sans éclat reflète la tristesse des jours de nostalgie.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">masquer</div>
+<div class="vocab-def">Cacher ses vraies émotions sous une apparence calme ou un sourire.</div>
+<div class="vocab-example">Masquer sa peine demande parfois une grande énergie au quotidien.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">révéler</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'masquer', definition:'Cacher ses vraies émotions sous une apparence calme ou un sourire.', example:'Masquer sa peine demande parfois une grande énergie au quotidien.'}, this)">+ Dictionary</button>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block open" id="listening-exercise">
+<div class="round-header" onclick="COSY.toggleRound('listening-exercise')" style="background:#FAF0E6; cursor:pointer;">
+<span>🎧 Étape 3 : Écoute</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 2rem;">
+<h3 style="font-size: 1rem; margin-top: 0; margin-bottom: 0.75rem;">Banque de mots / Aide :</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; font-family: 'Nunito', sans-serif;">
+<span class="club-tag" style="background: white; border-color: var(--border);">souvenirs</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">sirènes</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">vagues</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">désabonné</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">regrets</span>
+</div>
+</div>
+<div class="lyrics-container" style="background: #fafafa; border: 1px solid var(--border); border-radius: 24px; padding: 2rem; font-family: 'DM Sans', sans-serif; line-height: 1.8; color: var(--ink-soft);">
+<p style="font-style: italic; margin-bottom: 1rem;">🎵 <strong>Lyric Practice Prompt:</strong> Perform or listen to this track via official streaming links above. Focus on enunciation, rhythm, and target vocabulary in the discussion rounds below.</p>
+<p style="font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.75rem;">🔒 <strong>Copyright Compliance Note:</strong> Per COSYevents copyright policy, song lyrics are excluded. Please access full lyrics via official licensed external streaming providers.</p>
+</div>
+</div>
+</div>
+<div class="round-block open" id="discussion">
+<div class="round-header" onclick="COSY.toggleRound('discussion')" style="background:#EEEDFE; cursor:pointer;">
+<span>💬 Étape 4 : Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div class="round-1" style="margin-bottom: 2rem;">
+<h3 style="font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo); margin-bottom: 1rem;">🔵 Round 1: Lyric Analysis &amp; Discussion</h3>
+<div class="round-item"><div class="round-item-main">Dans la chanson, Maëlle répète que ses <strong>souvenirs</strong> sont toujours là au fond d'elle. Comment de simples détails du quotidien déclenchent-ils soudainement des images d'une personne disparue ?</div>
+<div class="round-item-personal">★ Quel objet ou quelle chanson d'autrefois fait ressurgir instantanément des <strong>souvenirs</strong> précis chez vous ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">La chanteuse entend « comme des <strong>sirènes</strong> qui se battent entre elles » au milieu du bruit de la ville. En quoi le tumulte urbain accentue-t-il le sentiment de solitude après une séparation ?</div>
+<div class="round-item-personal">★ Quand la ville devient trop bruyante, recherchez-vous le calme pour échapper au bruit des <strong>sirènes</strong> ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Maëlle décrit « le bruit des <strong>vagues</strong> qui m'emporte et me revient ». Pourquoi la nostalgie amoureuse ressemble-t-elle au mouvement incessant de la mer ?</div>
+<div class="round-item-personal">★ Avez-vous déjà éprouvé cette sensation où les émotions arrivent par <strong>vagues</strong> sans que vous puissiez les contrôler ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Les paroles constatent tristement « j'voulais juste lui parler, mais on s'est <strong>désabonné</strong> ». Comment la rupture sur les réseaux sociaux symbolise-t-elle la fin brutale d'une intimité ?</div>
+<div class="round-item-personal">★ Pensez-vous que se déclarer <strong>désabonné</strong> de la vie d'un ex-partenaire est indispensable pour tourner la page ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Le texte évoque la nuit où l'on retrouve « ses secrets noyés au milieu des <strong>regrets</strong> ». Pourquoi les heures nocturnes favorisent-elles les ruminations sur le passé ?</div>
+<div class="round-item-personal">★ Comment faites-vous pour chasser les <strong>regrets</strong> lorsque des pensées mélancoliques vous empêchent de dormir ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Le refrain scande « t'es toujours dans mes <strong>flashs</strong>, comme si j'n'avais plus d'espace ». Pourquoi est-il si difficile de stopper ces images involontaires d'une ancienne relation ?</div>
+<div class="round-item-personal">★ Avez-vous déjà eu l'impression que votre esprit manquait d'espace à cause de <strong>flashs</strong> récurrents du passé ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">En chantant qu'elle n'a « plus d'<strong>espace</strong> », Maëlle exprime la saturation mentale causée par le souvenir de l'autre. Comment réussir à libérer sa pensée pour réapprendre à vivre au présent ?</div>
+<div class="round-item-personal">★ Que faites-vous pour retrouver de l'<strong>espace</strong> mental quand une préoccupation passée devient trop envahissante ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">La chanteuse confie : « je souris pour <strong>masquer</strong> mes <strong>blessures</strong>, jamais surprise, souvent déçue ». Pourquoi montre-t-on parfois un visage serein alors qu'on souffre intérieurement ?</div>
+<div class="round-item-personal">★ Est-il préférable selon vous d'exprimer ouvertement ses <strong>blessures</strong> ou de garder une attitude réservée devant ses collègues ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Maëlle contemple un « soleil sans <strong>éclat</strong> qui me parle tout bas ». En quoi la perte d'un amour transforme-t-elle la perception du monde extérieur en le rendant terne et froid ?</div>
+<div class="round-item-personal">★ Avez-vous déjà remarqué que votre humeur mélancolique peut enlever tout <strong>éclat</strong> à une belle journée d'été ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Le texte illustre le comportement qui consiste à <strong>masquer</strong> sa peine derrière un sourire de façade. Quel effort cela demande-t-il au quotidien ?</div>
+<div class="round-item-personal">★ Vous arrive-t-il de <strong>masquer</strong> votre fatigue ou votre tristesse pour protéger votre entourage de votre désarroi ?</div>
+</div>
+</div>
+<div class="round-2" style="margin-top: 2rem;">
+<h3 style="font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo); margin-bottom: 1rem;">🟢 Round 2: Broad Themes &amp; Philosophy Debate</h3>
+<div class="round-item"><div class="round-item-main">Les souvenirs involontaires et les <strong>flashs</strong> du passé prouvent que l'on ne peut jamais vraiment oublier une personne qu'on a profondément aimée. Débattons-en.</div>
+</div>
+<div class="round-item"><div class="round-item-main">Pour guérir d'un chagrin d'amour, il faut couper tous les ponts numériques et se déclarer totalement <strong>désabonné</strong> de la vie de l'autre. Qu'en pensez-vous ?</div>
+</div>
+<div class="round-item"><div class="round-item-main"><strong>Masquer</strong> ses sentiments nostalgiques sous un sourire est une marque de retenue élégante plutôt qu'un manque de sincérité. Partagez votre avis.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block open" id="lang-focus">
+<div class="round-header" onclick="COSY.toggleRound('lang-focus')" style="background:#FFF9E6; cursor:pointer;">
+<span>✨ Étape 5 : Point de langue</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); border-left: 4px solid var(--indigo); padding: 1.5rem; border-radius: 0 16px 16px 0; margin-bottom: 1.5rem;">
+<h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--indigo);">L'expression du souvenir (Présent et Imparfait)</h3>
+<p style="font-size: 0.92rem; line-height: 1.6; color: var(--ink-soft); margin-bottom: 1rem;">Pour exprimer des souvenirs ou des flashs du passé, le français associe souvent le présent d'énonciation ('je revois') à l'imparfait de description ('où tout était encore là').</p>
+<strong style="font-size: 0.85rem; text-transform: uppercase; color: var(--muted); letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Let's Practise : Three Examples:</strong>
+<ul style="margin: 0; padding-left: 1.2rem; color: var(--indigo);">
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Je revois le fond de notre histoire d'amour.</li>
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Quand j'étais enfant, je redoutais le bruit de la mer.</li>
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Tu es toujours présent dans mes flashs quotidiens.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="round-block open" id="final-challenge">
+<div class="round-header" onclick="COSY.toggleRound('final-challenge')" style="background:#FEEAEA; cursor:pointer;">
+<span>🎭 Étape 6 : Défi final</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); border: 2px dashed var(--indigo); padding: 1.5rem; border-radius: 16px; display: flex; align-items: flex-start; gap: 1rem;">
+<span style="font-size: 2rem;">🎭</span>
+<div>
+<p style="margin-top: 0; font-size: 1rem; line-height: 1.6; color: var(--ink); font-weight: 500;">Le fil du souvenir : En binôme, décrivez un souvenir vif (un premier jour d'école, un concert ou un voyage) en utilisant des verbes de perception (je vois, j'entends, je ressens).</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sources Section -->
+<section class="sources-section" style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--muted); line-height: 1.6;">
+<h4 style="margin-bottom: 0.5rem; color: var(--ink);">Sources &amp; Citations</h4>
+<ul style="list-style-type: none; padding-left: 0; margin-bottom: 1rem;">
+<li style="margin-bottom: 0.4rem;">Genius. « Maëlle – Flash (Paroles) » <em>Genius</em>, <a href="" style="color: var(--teal);" target="_blank"></a>. Consulté en juillet 2026.</li>
+<li>« Flash » <em>YouTube</em>, téléchargé par Maëlle, <a href="https://www.youtube.com/watch?v=hcaj2MlYHFI" style="color: var(--teal);" target="_blank">https://www.youtube.com/watch?v=hcaj2MlYHFI</a>.</li>
+</ul>
+<p style="font-style: italic; margin-top: 0.5rem; border-top: 1px dashed var(--border); padding-top: 0.5rem;">
+    Lyrics excerpted here for educational purposes only. All rights to the lyrics and recording belong to the original songwriter(s), performer(s), and rights holder(s).
+  </p>
+</section>
+<div class="mistake-block open" id="s-mistakes">
+<div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+<span>✏️ Notes du Professeur (Corrections Linguistiques)</span><span class="round-toggle">▲</span>
+</div>
+<div class="mistake-body" style="display:block;">
+<div class="mistake-item">
+<span class="mistake-wrong">Je suis d'accord <span class="mistake-highlight">pour</span> ta philosophie</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Je suis d'accord avec ta philosophie</span>
+<span class="mistake-note-text">(Utilisez la préposition 'avec' après 'être d'accord'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">Il a fait beaucoup <span class="mistake-highlight">des</span> sacrifices</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Il a fait beaucoup de sacrifices</span>
+<span class="mistake-note-text">(Utilisez 'de' après l'adverbe de quantité 'beaucoup'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">Ses paroles m'ont blessé <span class="mistake-highlight">beaucoup</span></span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Ses paroles m'ont beaucoup blessé</span>
+<span class="mistake-note-text">(En français, l'adverbe se place avant le participe passé.)</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../../../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="../../../../../../../../../apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="../../../../../../../../../apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="../../../../../../../../../apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="../../../../../../../../../apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="../../../../../../../../../apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="../../../../../../../../../apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../../../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../../../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../../../../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../../../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../../../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+</body>
+</html>

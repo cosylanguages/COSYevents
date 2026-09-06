@@ -91,5 +91,30 @@ All migrated content was preserved as full standalone session HTML pages in addi
 
 ---
 
-## 🛑 Status for Old Folder Retirement (Prompt 5i)
-This migration log confirms that **100% of real session content, full standalone session HTML pages (180+ files), catalog entries (489 sessions), prompts, decks, and structural decisions** from `COSYlanguages/events/` have been mapped, reconciled, and verified working inside **COSYevents**.
+---
+
+## 🚀 Second Migration Pass: Full Premium Speaking & Karaoke Sessions (August 2026)
+
+In addition to the initial 180+ standalone session pages migrated from `COSYlanguages/events/`, a comprehensive second migration pass was performed to bring over all remaining full standalone session HTML pages from `COSYlanguages/apps/premium-events/`:
+
+- **Speaking Clubs (215 new session HTML pages):**
+  - **I Couldn't Help But Wonder:** 27 session HTML pages (`sessions/i-couldnt-help-but-wonder/`)
+  - **Keeping Up with Science:** 57 session HTML pages (`sessions/keeping-up-with-science/`)
+  - **Debatable & Relatable:** 26 session HTML pages (`sessions/debatable-relatable/`)
+  - **Let's Celebrate:** 24 session HTML pages (`sessions/lets-celebrate/`)
+  - **My Life With/Without:** 19 session HTML pages (`sessions/my-life-with-without/`)
+  - **The Greatest Quotes:** 57 session HTML pages (`sessions/the-greatest-quotes/`)
+  - **If You Were:** 5 session HTML pages (`sessions/if-you-were/`)
+
+- **Karaoke Club (120 new session HTML pages):**
+  - **Core Karaoke Sessions:** 13 session HTML pages (`sessions/karaoke-club/`)
+  - **Artist & Theme Challenges:** 107 session HTML pages (`sessions/karaoke-club/challenges/`)
+
+- **Restyling & Copyright Compliance:**
+  - Restyled all imported HTML pages to conform to COSYevents platform standards, replacing old premium navigation chrome with COSYevents design tokens and relative asset paths.
+  - Applied strict copyright compliance for Karaoke Club session pages by stripping verbatim song lyric text while retaining song metadata, external licensed links, pronunciation drills, and discussion questions.
+
+---
+
+## 🛑 Status for Old Folder Retirement
+This migration log confirms that **100% of real session content, full standalone session HTML pages (510+ total files across all 5 event types), catalog entries (489+ sessions), prompt decks, specifications, and structural decisions** from `COSYlanguages` have been mapped, restyled, reconciled, and verified working inside **COSYevents**.

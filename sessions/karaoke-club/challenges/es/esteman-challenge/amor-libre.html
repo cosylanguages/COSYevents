@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>amor libre : COSYlanguages</title>
+<link href="../../../../../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+<link rel="stylesheet" href="../../../../../shared/css/hub.css">
+</head>
+<body class="theme-karaoke">
+<nav id="cosy-nav"></nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #4A154B, #2A0A35);">
+<div class="club-tag">Karaoke Club</div>
+<h1>amor libre</h1>
+<p class="session-date">Esteman • B1</p>
+</header>
+<main class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="../../../../../../../../../">Inicio</a> <span class="sep">/</span>
+<a href="../../../../../index.html">Eventos</a> <span class="sep">/</span>
+<a href="../../../../../karaoke-club.html">Karaoke Club</a> <span class="sep">/</span>
+<a href="./index.html">Esteman Challenge</a> <span class="sep">/</span> <span class="current">amor libre</span>
+</nav>
+<a class="back-link" href="./index.html">← Volver al desafío</a>
+<div class="session-meta-grid">
+<div class="meta-item"><h4>Duración</h4><p>90–120 minutos</p></div>
+<div class="meta-item"><h4>Idioma</h4><p>Español</p></div>
+<div class="meta-item"><h4>Nivel</h4><p>Intermedio (B1)</p></div>
+<div class="meta-item"><h4>Tema</h4><p>Amor sin etiquetas</p></div>
+<div class="meta-item"><h4>Resources</h4><p>
+<a href="https://www.youtube.com/watch?v=1Hc9ekRxs0g" style="color:var(--teal); margin-right: 12px;" target="_blank">Music Video 🎥</a>
+<a href="https://www.youtube.com/watch?v=1Hc9ekRxs0g" style="color:var(--teal);" target="_blank">Song Link (Backup) 🎵</a>
+</p></div>
+<div class="meta-item"><h4>Offline Access</h4><p><button class="btn-print" onclick="window.print()" style="background: var(--indigo); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: background 0.2s;"><span style="font-size: 1rem;">📄</span> Download PDF</button></p></div>
+</div>
+<div class="cosy-video-wrapper">
+<div class="cosy-video-container">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/1Hc9ekRxs0g"></iframe>
+</div>
+<div class="cosy-video-disclaimer">
+<span>ℹ️ Fuente: YouTube. Este material se utiliza únicamente con fines educativos.</span>
+</div>
+</div>
+<div class="theme-box" style="background: var(--cream); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem; border: 1px dashed var(--border);">
+<h3 style="margin-top:0; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">❤️ Tema: Amor sin etiquetas</h3>
+<p style="margin-bottom:0.5rem; font-size:0.9rem; color:var(--ink-soft);">Discutiremos sobre:</p>
+<ul style="margin:0; padding-left:1.2rem; font-size:0.9rem; color:var(--ink-soft);">
+<li>Libertad</li>
+<li>El amor libre</li>
+<li>Lo normal</li>
+<li>Personal reflection</li>
+</ul>
+</div>
+<div class="speaking-time-gauge" style="background: var(--warm-white); border-radius: 12px; padding: 1rem; margin-bottom: 3rem; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.5rem;">
+<div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: bold; color: var(--muted);">
+<span>🗣️ Speaking Time Gauge</span>
+<span>90-120 min Session</span>
+</div>
+<div class="gauge-bar" style="display: flex; height: 12px; border-radius: 6px; overflow: hidden;">
+<div style="width: 10%; background: #E67E22;" title="Warm-up (10%)"></div>
+<div style="width: 15%; background: #3498DB;" title="Vocabulary (15%)"></div>
+<div style="width: 15%; background: #9B59B6;" title="Listening (15%)"></div>
+<div style="width: 45%; background: #2ECC71;" title="Discussion (45%)"></div>
+<div style="width: 10%; background: #F1C40F;" title="Language Focus (10%)"></div>
+<div style="width: 5%; background: #E74C3C;" title="Final Challenge (5%)"></div>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); flex-wrap: wrap; gap: 0.5rem;">
+<span>🎵 Warm-up (10%)</span>
+<span>📚 Vocabulary (15%)</span>
+<span>🎧 Listening (15%)</span>
+<span>💬 Discussion (45%)</span>
+<span>✨ Language Focus (10%)</span>
+<span>🎭 Final Challenge (5%)</span>
+</div>
+</div>
+<div class="rounds-container">
+<div class="round-block warm-up open" id="s-warm">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8; cursor:pointer;">
+<span>🎵 Etapa 1: Calentamiento</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<ul class="round-questions">
+<li>¿Qué tan importante es este tema de discusión en tu vida diaria?</li>
+<li>Mira el título 'amor libre' y el artista 'Esteman'. En tu opinión, ¿de qué tratará esta canción? (Pregunta de predicción)</li>
+<li>¿Qué tipo de sensaciones te transmite este estilo de música?</li>
+</ul>
+</div>
+</div>
+<div class="round-block open" id="vocabulary">
+<div class="round-header" onclick="COSY.toggleRound('vocabulary')" style="background:#E1F5EE; cursor:pointer;">
+<span>📚 Etapa 2: Vocabulario</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div class="vocab-grid-10">
+<h3 style="grid-column: 1 / -1; margin-top: 1rem; margin-bottom: 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">❤️ Conceptos clave &amp; Emociones</h3>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">La libertad</div>
+<div class="vocab-def">estado o facultad del que es libre y no está sometido.</div>
+<div class="vocab-example">La libertad es el valor más preciado de la humanidad.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La libertad', definition:'estado o facultad del que es libre y no está sometido.', example:'La libertad es el valor más preciado de la humanidad.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">El amor libre</div>
+<div class="vocab-def">Modelo de relaciones afectivas basadas en la libertad mutua y sin ataduras tradicionales.</div>
+<div class="vocab-example">Defender el amor libre implica respetar las elecciones sentimentales de cada persona.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'El amor libre', definition:'Modelo de relaciones afectivas basadas en la libertad mutua y sin ataduras tradicionales.', example:'Defender el amor libre implica respetar las elecciones sentimentales de cada persona.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Lo normal</div>
+<div class="vocab-def">Lo que se ajusta a las normas habituales o expectativas sociales comunes.</div>
+<div class="vocab-example">Cuestionar lo normal permite descubrir nuevas formas de ser y sentir.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Lo normal', definition:'Lo que se ajusta a las normas habituales o expectativas sociales comunes.', example:'Cuestionar lo normal permite descubrir nuevas formas de ser y sentir.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">La condición</div>
+<div class="vocab-def">Naturaleza, estado o requisito necesario para que algo suceda.</div>
+<div class="vocab-example">Aceptar a alguien sin ninguna condición previa es la clave del amor sincero.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La condición', definition:'Naturaleza, estado o requisito necesario para que algo suceda.', example:'Aceptar a alguien sin ninguna condición previa es la clave del amor sincero.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Un mundo robotizado</div>
+<div class="vocab-def">Sociedad automatizada e impersonal donde falta la empatía humana.</div>
+<div class="vocab-example">En un mundo robotizado, los gestos de cariño sincero son más valiosos que nunca.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Un mundo robotizado', definition:'Sociedad automatizada e impersonal donde falta la empatía humana.', example:'En un mundo robotizado, los gestos de cariño sincero son más valiosos que nunca.'}, this)">+ Dictionary</button>
+</div>
+<h3 style="grid-column: 1 / -1; margin-top: 1rem; margin-bottom: 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">🗣️ Vida, Acciones &amp; Conexión</h3>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Fluir</div>
+<div class="vocab-def">correr un líquido o dejarse llevar por las circunstancias.</div>
+<div class="vocab-example">A veces lo mejor es simplement fluir con los cambios de la vida.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Fluir', definition:'correr un líquido o dejarse llevar por las circunstancias.', example:'A veces lo mejor es simplement fluir con los cambios de la vida.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">La lluvia de fuego</div>
+<div class="vocab-def">Metáfora de una tormenta emocional intensa o pasión desbordante.</div>
+<div class="vocab-example">Atravesar la lluvia de fuego juntos fortaleció la confianza en la pareja.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La lluvia de fuego', definition:'Metáfora de una tormenta emocional intensa o pasión desbordante.', example:'Atravesar la lluvia de fuego juntos fortaleció la confianza en la pareja.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Los rebeldes</div>
+<div class="vocab-def">Personas que se oponen a las reglas establecidas o al orden tradicional.</div>
+<div class="vocab-example">Los rebeldes de la música urbana transformaron el panorama cultural de su época.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Los rebeldes', definition:'Personas que se oponen a las reglas establecidas o al orden tradicional.', example:'Los rebeldes de la música urbana transformaron el panorama cultural de su época.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Improvisar</div>
+<div class="vocab-def">Hacer algo de pronto, sin preparación ni guion previo.</div>
+<div class="vocab-example">En momentos de incertidumbre, saber improvisar ayuda a superar cualquier imprevisto.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Improvisar', definition:'Hacer algo de pronto, sin preparación ni guion previo.', example:'En momentos de incertidumbre, saber improvisar ayuda a superar cualquier imprevisto.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">El qué dirán</div>
+<div class="vocab-def">Preocupación por la opinión o los juicios negativos de la sociedad.</div>
+<div class="vocab-example">Aprender a ignorar el qué dirán es esencial para vivir con auténtica libertad.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'El qué dirán', definition:'Preocupación por la opinión o los juicios negativos de la sociedad.', example:'Aprender a ignorar el qué dirán es esencial para vivir con auténtica libertad.'}, this)">+ Dictionary</button>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block open" id="listening-exercise">
+<div class="round-header" onclick="COSY.toggleRound('listening-exercise')" style="background:#FAF0E6; cursor:pointer;">
+<span>🎧 Etapa 3: Escucha</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 2rem;">
+<h3 style="font-size: 1rem; margin-top: 0; margin-bottom: 0.75rem;">Banco de palabras:</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; font-family: 'Nunito', sans-serif;">
+<span class="club-tag" style="background: white; border-color: var(--border);">libertad</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">amor</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">orgullo</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">aceptación</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">respeto</span>
+</div>
+</div>
+<div class="lyrics-container" style="background: #fafafa; border: 1px solid var(--border); border-radius: 24px; padding: 2rem; font-family: 'DM Sans', sans-serif; line-height: 1.8; color: var(--ink-soft);">
+<p style="font-style: italic; margin-bottom: 1rem;">🎵 <strong>Lyric Practice Prompt:</strong> Perform or listen to this track via official streaming links above. Focus on enunciation, rhythm, and target vocabulary in the discussion rounds below.</p>
+<p style="font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.75rem;">🔒 <strong>Copyright Compliance Note:</strong> Per COSYevents copyright policy, song lyrics are excluded. Please access full lyrics via official licensed external streaming providers.</p>
+</div>
+</div>
+</div>
+<div class="round-block open" id="discussion">
+<div class="round-header" onclick="COSY.toggleRound('discussion')" style="background:#EEEDFE; cursor:pointer;">
+<span>💬 Etapa 4: Discusión</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div class="round-1" style="margin-bottom: 2rem;">
+<h3 style="font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo); margin-bottom: 1rem;">🔵 Round 1: Lyric Analysis &amp; Discussion</h3>
+<div class="round-item"><div class="round-item-main">¿Cómo explora 'amor libre' de Esteman el significado profundo de <strong>la libertad</strong> en nuestra vida diaria (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ ¿Cuándo fue la última vez que sintió una fuerte sensación de <strong>la libertad</strong> en su propia vida (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">En 'amor libre', ¿se presenta <strong>el amor libre</strong> como una fuente de fortaleza o como una fuente de duda (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ ¿Le resulta fácil o difícil compartir sus sentimientos de <strong>el amor libre</strong> con los demás (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Analizando la letra de Esteman, ¿cómo da forma <strong>lo normal</strong> al mensaje general de la canción (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ ¿Cómo ha cambiado su comprensión personal de <strong>lo normal</strong> en los últimos años (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">¿De qué manera muestra 'amor libre' que <strong>la condición</strong> es esencial para el crecimiento personal (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ En su rutina diaria, ¿qué le ayuda a mantener su enfoque en <strong>la condición</strong> (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">¿Cómo mejora el estilo musical de 'amor libre' el impacto emocional de <strong>un mundo robotizado</strong> (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ ¿Cuál es la lección más importante que ha aprendido sobre <strong>un mundo robotizado</strong> (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Cuando Esteman canta sobre sus sentimientos, ¿se siente <strong>fluir</strong> como un estado natural o como un desafío (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ ¿Cree que la sociedad moderna valora <strong>fluir</strong>, o a menudo se pasa por alto (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">¿Sugiere 'amor libre' que debemos trabajar para lograr <strong>la lluvia de fuego</strong>, o sucede de forma natural (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ ¿Quién es la persona en su vida que mejor representa la idea de <strong>la lluvia de fuego</strong> (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">¿Cómo ayuda la imaginería visual de 'amor libre' a visualizar el concepto de <strong>los rebeldes</strong> (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ Si pudiera regalar más <strong>los rebeldes</strong> a alguien que le importa, ¿quién sería (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">En su opinión, ¿encuentra paz el protagonista de 'amor libre' a través de <strong>improvisar</strong>, o se queda con preguntas (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ ¿Cree que <strong>improvisar</strong> se trata más de la paz personal o de las experiencias compartidas (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">¿Cómo podemos aplicar las lecciones de <strong>el qué dirán</strong> de 'amor libre' para mejorar nuestra vida moderna (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+<div class="round-item-personal">★ ¿Qué pequeña práctica o hábito le ayuda a cultivar <strong>el qué dirán</strong> en sus relaciones (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)?</div>
+</div>
+</div>
+<div class="round-2" style="margin-top: 2rem;">
+<h3 style="font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo); margin-bottom: 1rem;">🟢 Round 2: Broad Themes &amp; Philosophy Debate</h3>
+<div class="round-item"><div class="round-item-main">La representación central de <strong>la libertad</strong> en 'amor libre' es un hermoso reflejo de las luchas humanas modernas. Debatamos esto. (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)</div>
+</div>
+<div class="round-item"><div class="round-item-main">Sin una comprensión profunda de <strong>el amor libre</strong>, nunca podremos lograr un éxito y una felicidad duraderos. Comparta sus pensamientos. (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)</div>
+</div>
+<div class="round-item"><div class="round-item-main">La obra de Esteman muestra que nuestra obsesión colectiva con <strong>lo normal</strong> a veces puede llevarnos a la duda. Defienda o rechace. (por ejemplo, elecciones de vida audaces, giros inesperados o sacrificios personales)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block open" id="lang-focus">
+<div class="round-header" onclick="COSY.toggleRound('lang-focus')" style="background:#FFF9E6; cursor:pointer;">
+<span>✨ Etapa 5: Enfoque de idioma</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); border-left: 4px solid var(--indigo); padding: 1.5rem; border-radius: 0 16px 16px 0; margin-bottom: 1.5rem;">
+<h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--indigo);">Enfoque lingüístico: Infinitive after Verbs of Desire (*Querer*)</h3>
+<p style="font-size: 0.92rem; line-height: 1.6; color: var(--ink-soft); margin-bottom: 1rem;">En la canción <strong>Amor Libre</strong>, el fragmento repetido <em>"Quiero amar libre, sin..."</em> resalta el uso de <strong>Infinitive after Verbs of Desire (*Querer*)</strong>. Esta estructura facilita: Formulating love boundaries without labels.</p>
+<strong style="font-size: 0.85rem; text-transform: uppercase; color: var(--muted); letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Let's Practise : Three Examples:</strong>
+<ul style="margin: 0; padding-left: 1.2rem; color: var(--indigo);">
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Utiliza activamente la expresión "Quiero amar libre, sin..." durante el debate de esta sesión.</li>
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Observa cómo la repetición de "Quiero amar libre, sin..." refuerza el mensaje de la letra.</li>
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Aplica la estructura gramatical de "Quiero amar libre, sin..." en tu desafío de Stage 6.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="round-block open" id="final-challenge">
+<div class="round-header" onclick="COSY.toggleRound('final-challenge')" style="background:#FEEAEA; cursor:pointer;">
+<span>🎭 Etapa 6: Desafío final</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); border: 2px dashed var(--indigo); padding: 1.5rem; border-radius: 16px; display: flex; align-items: flex-start; gap: 1rem;">
+<span style="font-size: 2rem;">🎭</span>
+<div>
+<p style="margin-top: 0; font-size: 1rem; line-height: 1.6; color: var(--ink); font-weight: 500;">Imagina la secuela de esta canción: haz un juego de rol de una conversación entre los personajes principales 5 años después.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sources Section -->
+<section class="sources-section" style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--muted); line-height: 1.6;">
+<h4 style="margin-bottom: 0.5rem; color: var(--ink);">Sources &amp; Citations</h4>
+<ul style="list-style-type: none; padding-left: 0; margin-bottom: 1rem;">
+<li style="margin-bottom: 0.4rem;">Genius. « Esteman – amor libre (Paroles) » <em>Genius</em>, <a href="" style="color: var(--teal);" target="_blank"></a>. Consulté en juillet 2026.</li>
+<li>« amor libre » <em>YouTube</em>, téléchargé par Esteman, <a href="https://www.youtube.com/watch?v=1Hc9ekRxs0g" style="color: var(--teal);" target="_blank">https://www.youtube.com/watch?v=1Hc9ekRxs0g</a>.</li>
+</ul>
+<p style="font-style: italic; margin-top: 0.5rem; border-top: 1px dashed var(--border); padding-top: 0.5rem;">
+    Lyrics excerpted here for educational purposes only. All rights to the lyrics and recording belong to the original songwriter(s), performer(s), and rights holder(s).
+  </p>
+</section>
+<div class="mistake-block open" id="s-mistakes">
+<div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+<span>✏️ Nota del Profesor (Correcciones Lingüísticas)</span><span class="round-toggle">▲</span>
+</div>
+<div class="mistake-body" style="display:block;">
+<div class="mistake-item">
+<span class="mistake-wrong">Estoy de acuerdo <span class="mistake-highlight">de</span> tu opinión</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Estoy de acuerdo con tu opinión</span>
+<span class="mistake-note-text">(Usa la preposición 'con' para expresar acuerdo con algo.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">He caminado <span class="mistake-highlight">por</span> tres horas</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">He caminado durante tres horas</span>
+<span class="mistake-note-text">(Usa 'durante' para indicar duración de tiempo.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">El sol brilla <span class="mistake-highlight">muy</span> fuerte</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">El sol brilla con mucha fuerza</span>
+<span class="mistake-note-text">(Es más natural decir 'con mucha fuerza' para describir el brillo.)</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../../../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="../../../../../../../../../apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="../../../../../../../../../apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="../../../../../../../../../apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="../../../../../../../../../apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="../../../../../../../../../apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="../../../../../../../../../apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../../../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../../../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../../../../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../../../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../../../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+</body>
+</html>

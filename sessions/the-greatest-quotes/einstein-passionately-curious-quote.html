@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Passionately Curious : COSYlanguages</title>
+<link href="../../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+<link rel="stylesheet" href="../../shared/css/hub.css">
+</head>
+<body class="theme-quotes-intellect">
+<nav id="cosy-nav"></nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+<div class="club-tag">The Greatest Quotes</div>
+<div class="session-decorator-icon">💬</div>
+<h1>"I have no special talents, I am only passionately curious.": Albert Einstein</h1>
+<p class="session-date">05 November 2026</p>
+</header>
+<main class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="../../../../../../index.html">Home</a> <span class="sep">/</span>
+<a href="../../index.html">Events</a> <span class="sep">/</span>
+<a href="../../the-greatest-quotes.html">The Greatest Quotes</a> <span class="sep">/</span>
+<span class="current">Passionately Curious</span>
+</nav>
+<a class="back-link" href="../../the-greatest-quotes.html">← Back to Club</a>
+<div class="session-meta-grid">
+<div class="meta-item"><h4>Duration</h4><p>60 minutes</p></div>
+<div class="meta-item"><h4>Languages</h4><p>🇬🇧 English</p></div>
+<div class="meta-item"><h4>Level</h4><p>Elementary (A2)</p></div>
+<div class="meta-item"><h4>Theme</h4><p>Learning &amp; Passion</p></div>
+</div>
+<div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+<p>Albert Einstein is the person who reconfigured our entire understanding of the cosmos while holding onto a childlike sense of wonder, and in this session they focus on the following quote: "I have no special talents, I am only passionately curious." Why does formal education so often put out the very fire of curiosity it is meant to feed? If special talent is a myth, how do we keep our passion for learning alive in a world obsessed with quick answers? Let us rediscover the beauty of the passionately curious mind.</p>
+</div>
+<!-- PHILOSOPHERS' LEDGER INTERACTIVE CARD -->
+<div class="philosophers-ledger" style="background: #FFFDF9; border: 2px solid #5D4037; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm); font-family: 'Playfair Display', serif; font-style: italic; color: #3E2723;"><div class="quotes-theme-stamp">📖</div>
+<h4 style="margin: 0 0 0.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #5D4037; font-style: normal; font-weight: 700;">☕ The Philosophers' Ledger: Café Debates</h4>
+<p id="ledger-quote" style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem;">"Let us see how many interpretations exist! There is never only one correct answer to any profound human question." : Oscar Wilde</p>
+<button class="btn-primary" id="ledger-next-btn" style="background: #5D4037; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-style: normal; cursor: pointer; font-weight: 700; transition: background 0.2s;">Next Page in Ledger 📖</button>
+</div>
+<section id="vocabulary">
+<h2 class="section-title">📖 Session Vocabulary</h2>
+<div class="vocab-grid-10">
+<div class="vocab-card"><div class="vocab-word">Talent</div>
+<div class="vocab-def">a natural ability to do something well.</div>
+<div class="vocab-example">She has a great talent for learning languages.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Talent', definition:'a natural ability to do something well.', example:'She has a great talent for learning languages.'}, this)">Add to Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Passion</div>
+<div class="vocab-def">a strong feeling of excitement or interest in something.</div>
+<div class="vocab-example">He has a deep passion for science and nature.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Passion', definition:'a strong feeling of excitement or interest in something.', example:'He has a deep passion for science and nature.'}, this)">Add to Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Special</div>
+<div class="vocab-def">different from what is normal or usual.</div>
+<div class="vocab-example">You do not need special skills to begin your learning journey.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Special', definition:'different from what is normal or usual.', example:'You do not need special skills to begin your learning journey.'}, this)">Add to Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Curious</div>
+<div class="vocab-def">wanting to know or learn about something.</div>
+<div class="vocab-example">Young children are always curious about the world.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Curious', definition:'wanting to know or learn about something.', example:'Young children are always curious about the world.'}, this)">Add to Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Skill</div>
+<div class="vocab-def">an ability to do something well because you practiced it.</div>
+<div class="vocab-example">Speaking another language is an important skill today.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Skill', definition:'an ability to do something well because you practiced it.', example:'Speaking another language is an important skill today.'}, this)">Add to Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Ordinary</div>
+<div class="vocab-def">normal or usual; not special.</div>
+<div class="vocab-example">He was an ordinary boy who worked very hard every day.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Ordinary', definition:'normal or usual; not special.', example:'He was an ordinary boy who worked very hard every day.'}, this)">Add to Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Knowledge</div>
+<div class="vocab-def">information and understanding that you get from study.</div>
+<div class="vocab-example">Reading books is a great way to get knowledge.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Knowledge', definition:'information and understanding that you get from study.', example:'Reading books is a great way to get knowledge.'}, this)">Add to Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Simple</div>
+<div class="vocab-def">easy to understand or do; not complex.</div>
+<div class="vocab-example">The teacher gave a simple explanation of the grammar rule.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Simple', definition:'easy to understand or do; not complex.', example:'The teacher gave a simple explanation of the grammar rule.'}, this)">Add to Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Focus</div>
+<div class="vocab-def">to give all your attention to one activity.</div>
+<div class="vocab-example">It is important to focus on your personal goals.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Focus', definition:'to give all your attention to one activity.', example:'It is important to focus on your personal goals.'}, this)">Add to Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Humble</div>
+<div class="vocab-def">not proud; not thinking you are better than others.</div>
+<div class="vocab-example">Despite his great success, the scientist remained very humble.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Humble', definition:'not proud; not thinking you are better than others.', example:'Despite his great success, the scientist remained very humble.'}, this)">Add to Dictionary</button>
+</div>
+</div>
+</section>
+<section id="structure">
+<h2 class="section-title">🎙️ Discussion Structure</h2>
+<div class="rounds-container">
+<div class="round-block warm-up open" id="s-warm">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8;">
+<span>🟠 Warm-up</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<ul class="round-questions">
+<li>What is something you are very curious about right now?</li>
+<li>Do you believe that anyone can learn anything with enough curiosity?</li>
+</ul>
+</div>
+</div><div class="round-block grammar open" id="s-grammar">
+<div class="round-header" onclick="COSY.toggleRound('s-grammar')" style="background:#EFEBE9; border-left: 5px solid #5D4037;">
+<span>⚡ Grammar Practice : Adverbs of Manner</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<div class="grammar-interactive-game" style="position:relative; z-index:2;">
+<h3>⚡ Grammar Explanation (Elementary (A2))</h3>
+<p style="margin-bottom: 1.5rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Use <strong>adverbs of manner</strong> (usually ending in <em>-ly</em>, like <em>passionately, curiously, easily, patiently</em>) to describe how someone performs an action.
+</p>
+<div style="background: rgba(93, 64, 55, 0.03); border: 1px dashed rgba(93, 64, 55, 0.3); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🧩 Interactive Word Bank:</strong>
+<p style="font-size:0.82rem; color:var(--muted); margin:0 0 0.75rem 0;">Tap a word chip below, then tap any empty bracket <code>[_____]</code> to place it!</p>
+<div class="grammar-word-bank" style="display:flex; flex-wrap:wrap; gap:8px;">
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">passionately</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">curiously</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">easily</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">patiently</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">humbly</span>
+</div>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Task 1 : Part A: Rule Formulation:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.8;">
+Complete the rule: We make adverbs of manner by adding <em>-ly</em> to adjectives (e.g. <em>passionate</em> becomes <span class="grammar-gap" data-answer="passionately" onclick="COSY.placeGrammarChip(this)">_____</span>, and <em>humble</em> becomes <span class="grammar-gap" data-answer="humbly" onclick="COSY.placeGrammarChip(this)">_____</span>).
+</p>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Task 1 : Part B: Structured Practice:</strong>
+<ol style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink); line-height: 2.0;">
+<li>He worked <span class="grammar-gap" data-answer="passionately" onclick="COSY.placeGrammarChip(this)">_____</span> to discover the laws of physics.</li>
+<li>The child stared <span class="grammar-gap" data-answer="curiously" onclick="COSY.placeGrammarChip(this)">_____</span> at the stars in the night sky.</li>
+<li>The scientist explained his very complex theory <span class="grammar-gap" data-answer="easily" onclick="COSY.placeGrammarChip(this)">_____</span>.</li>
+<li>She waited <span class="grammar-gap" data-answer="patiently" onclick="COSY.placeGrammarChip(this)">_____</span> for her experiment to finish.</li>
+<li>Albert Einstein <span class="grammar-gap" data-answer="humbly" onclick="COSY.placeGrammarChip(this)">_____</span> said that he was only passionate.</li></ol>
+</div>
+<div style="display:flex; gap:10px; margin-bottom:1.5rem;">
+<button class="btn-verify" onclick="COSY.verifyGrammarGame(this)" style="background:#5D4037; color:white; border:none; padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Check Answers</button>
+<button class="btn-reset" onclick="COSY.resetGrammarGame(this)" style="background:transparent; border:1px solid var(--border); color:var(--muted); padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Reset Board</button>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm);">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🗣️ Task 2 : Interactive Speaking:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+How do you learn best? Do you learn languages easily, or do you have to study patiently?
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block round-1 open" id="s-r1">
+<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
+<span>🔵 Round 1 : Analysis</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<div class="round-item"><div class="round-item-main">Do you believe that having a natural <strong>talent</strong> is more important than practicing hard?</div>
+<div class="round-item-personal">★ Do you have a special <strong>talent</strong> that you are proud of?</div>
+</div>
+<div class="round-item"><div class="round-item-main">How does a deep <strong>passion</strong> help you when your studies become difficult?</div>
+<div class="round-item-personal">★ What is your biggest <strong>passion</strong> in life right now?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Why do we often think that famous scientists have a <strong>special</strong> brain?</div>
+<div class="round-item-personal">★ Is there a <strong>special</strong> hobby you would like to start this year?</div>
+</div>
+<div class="round-item"><div class="round-item-main">In what ways does being <strong>curious</strong> make your daily life more exciting?</div>
+<div class="round-item-personal">★ What is something you are very <strong>curious</strong> about today?</div>
+</div>
+<div class="round-item"><div class="round-item-main">What is the most useful <strong>skill</strong> you have learned outside of school?</div>
+<div class="round-item-personal">★ What is a <strong>skill</strong> you would like to learn in the future?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Can an <strong>ordinary</strong> person achieve great success with only curiosity?</div>
+<div class="round-item-personal">★ Do you prefer a quiet, <strong>ordinary</strong> day or an exciting one?</div>
+</div>
+<div class="round-item"><div class="round-item-main">How does getting new <strong>knowledge</strong> change the way we see the world?</div>
+<div class="round-item-personal">★ What kind of <strong>knowledge</strong> do you enjoy sharing with others?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Why is it sometimes difficult to find a <strong>simple</strong> answer to a question?</div>
+<div class="round-item-personal">★ What is a <strong>simple</strong> thing that always makes you happy?</div>
+</div>
+<div class="round-item"><div class="round-item-main">How do you stay and maintain your <strong>focus</strong> when there are many distractions around you?</div>
+<div class="round-item-personal">★ Where do you go when you need to <strong>focus</strong> on your work?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Why is it important for very successful people to remain <strong>humble</strong>?</div>
+<div class="round-item-personal">★ Who is the most <strong>humble</strong> person you know, and what did they teach you?</div>
+</div>
+</div>
+</div>
+<div class="round-block lst open" id="s-lst">
+<div class="round-header" onclick="COSY.toggleRound('s-lst')" style="background:#EEEDFE;">
+<span>🟣 Let's Speak Together : Talent vs. Curiosity 📊</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem;">
+<p class="round-note" style="margin-bottom:1.5rem; font-weight:600; color:#3F2B96;">Discuss with your partner: Which quality is most important for achieving great success in these different fields? Rank them:</p>
+<div class="lst-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-bottom:1.5rem;">
+<div class="lst-item" onclick="this.style.background='#EEEDFE';" style="border: 1px solid #EEEDFE; padding: 1.25rem; border-radius: 12px; background: rgba(238, 237, 254, 0.2); transition: transform 0.2s; cursor: pointer;">
+<span style="font-size:2rem; display:block; margin-bottom:0.5rem;">🎨 Fields of Art &amp; Music</span>
+<div style="font-size:0.9rem; line-height:1.5;">Does a great artist need natural talent, or do they just need to practice patiently?</div>
+</div>
+<div class="lst-item" onclick="this.style.background='#EEEDFE';" style="border: 1px solid #EEEDFE; padding: 1.25rem; border-radius: 12px; background: rgba(238, 237, 254, 0.2); transition: transform 0.2s; cursor: pointer;">
+<span style="font-size:2rem; display:block; margin-bottom:0.5rem;">🔬 Fields of Science &amp; Logic</span>
+<div style="font-size:0.9rem; line-height:1.5;">Is deep curiosity the most important skill for a scientist, or do they need a special brain?</div>
+</div>
+<div class="lst-item" onclick="this.style.background='#EEEDFE';" style="border: 1px solid #EEEDFE; padding: 1.25rem; border-radius: 12px; background: rgba(238, 237, 254, 0.2); transition: transform 0.2s; cursor: pointer;">
+<span style="font-size:2rem; display:block; margin-bottom:0.5rem;">🗣️ Learning Foreign Languages</span>
+<div style="font-size:0.9rem; line-height:1.5;">Do you need a special talent for grammar, or do you just need to focus passionately?</div>
+</div>
+<div class="lst-item" onclick="this.style.background='#EEEDFE';" style="border: 1px solid #EEEDFE; padding: 1.25rem; border-radius: 12px; background: rgba(238, 237, 254, 0.2); transition: transform 0.2s; cursor: pointer;">
+<span style="font-size:2rem; display:block; margin-bottom:0.5rem;">💼 Building a Successful Business</span>
+<div style="font-size:0.9rem; line-height:1.5;">Is focus and passion more important, or do you need special wealth and connections?</div>
+</div>
+</div>
+<p style="text-align:center; font-style:italic; font-size:0.95rem; color:#3F2B96;">Use adverbs of manner (<strong>passionately</strong>, <strong>easily</strong>, <strong>patiently</strong>) to explain your views!</p>
+</div>
+</div>
+<div class="round-block round-2 open" id="s-r2">
+<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
+<span>🟢 Round 2 : Speculating on the Future</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<div class="round-item"><div class="round-item-main">In the future, technology will allow us to measure a child's natural <strong>talent</strong> at birth. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ How would you feel if your future career was decided by your early <strong>special</strong> talents?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Modern digital screens will eventually destroy our collective capacity for deep <strong>passion</strong> and focus. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ Would you use smart apps to help you stay <strong>focus</strong> on your personal projects?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Future schools will completely ban exams, letting children learn purely based on their <strong>curious</strong> interests. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ Do you think future kids will be more <strong>curious</strong> than today's children?</div>
+</div>
+<div class="round-item"><div class="round-item-main">As artificial intelligence advances, humans will not need to learn any complex <strong>skill</strong>. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ What is one simple <strong>skill</strong> you hope humans never lose?</div>
+</div>
+<div class="round-item"><div class="round-item-main">The survival of human civilization will depend on our willingness to live <strong>ordinary</strong>, simple lives. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ How do you personally prepare for a future where <strong>ordinary</strong> lives are seen as boring?</div>
+</div>
+<div class="round-item"><div class="round-item-main">In the coming decades, human <strong>knowledge</strong> will double every single week. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ If you could send one piece of <strong>knowledge</strong> to people 100 years in the future, what would it be?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Global digital connectivity will make true <strong>simple</strong> living incredibly difficult to maintain. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ Would you choose to live in a futuristic city that guarantees a <strong>simple</strong> lifestyle at the cost of your freedom?</div>
+</div>
+<div class="round-item"><div class="round-item-main">In the future, social status will be determined by a person's capacity for <strong>focus</strong> rather than wealth. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ What role do you hope <strong>focus</strong> will play in your own personal future over the next decade?</div>
+</div>
+<div class="round-item"><div class="round-item-main">A future world governed fully by smart technology will leave no space left for the quiet beauty of being <strong>humble</strong>. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ If an app could make you very successful, would you still remain <strong>humble</strong>?</div>
+</div>
+<div class="round-item"><div class="round-item-main">One day, being passionately <strong>curious</strong> will be seen as the single most valuable trait of any worker. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ In what area of your life do you want to show greater <strong>passion</strong> right now?</div>
+</div>
+</div>
+</div>
+<div class="round-block closing open" id="s-close">
+<div class="round-header" onclick="COSY.toggleRound('s-close')" style="background:#FFF9C4; border-left: 5px solid #FBC02D;">
+<span>🏁 Closing Circle: Complete the Sentence</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem;">
+<p style="margin-bottom:1rem; font-weight:600; font-size:1.05rem; color:#5D4037;">Finish the session by going in a circle. Each student must complete the following sentence with exactly one adjective or short phrase using the vocabulary learned:</p>
+<div style="background:#FFFDE9; border:2px dashed #FBC02D; padding:1.5rem; border-radius:12px; text-align:center; font-family: 'Playfair Display', serif; font-size:1.5rem; font-style:italic; color:#5D4037; margin-bottom:1rem;">
+"Curiosity is..."
+</div>
+<p style="font-size:0.9rem; color:var(--muted); text-align:center;">Examples: special, a passion, a key skill, a simple joy, a focus, humble, greater than talent.</p>
+</div>
+</div>
+<div class="mistake-block open" id="s-mistakes">
+<div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+<span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>
+</div>
+<div class="mistake-body" style="display:block;">
+<div class="mistake-item">
+<span class="mistake-wrong">He <u>have</u> went to Paris</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">He has gone to Paris</span>
+<span class="mistake-note-text">(Present perfect third-person singular 'has' + past participle 'gone'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">We discussed <u>about the problem</u></span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">We discussed the problem / had a discussion <strong>about</strong> the problem</span>
+<span class="mistake-note-text">('Discuss' is transitive and takes no preposition, or use 'have a discussion about'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">I am <u>agree</u> with you</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">I agree with you</span>
+<span class="mistake-note-text">(Use 'agree' directly as a verb rather than using it with the auxiliary 'am'.)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="../../../../../../apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="../../../../../../apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="../../../../../../apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="../../../../../../apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="../../../../../../apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="../../../../../../apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script>document.addEventListener("DOMContentLoaded", () => { const quotes = ["\"I have no special talents, I am only passionately curious.\" : Albert Einstein"]; let index = 0; const quoteText = document.getElementById("ledger-quote"); if (quoteText) quoteText.innerText = quotes[0]; });</script>
+</body>
+</html>

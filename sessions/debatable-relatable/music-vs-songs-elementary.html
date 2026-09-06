@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music vs Songs (Elementary) : COSYlanguages</title>
+<link class="icon" rel="icon" href="../../shared/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+<link rel="stylesheet" href="../../shared/css/hub.css">
+</head>
+<body class="theme-debate-music-songs">
+<nav id="cosy-nav"></nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #993C1D, #4d1e0f);">
+  <div class="club-tag">Debatable &amp; Relatable</div>
+  <div class="session-decorator-icon">🎙️</div>
+  <h1>Instrumental Music vs Songs with Lyrics</h1>
+  <p class="session-date">10 March 2027</p>
+</header>
+<main class="content-container">
+  <nav class="cosy-breadcrumbs">
+    <a href="../../../../../../">Home</a> <span class="sep">/</span>
+    <a href="../../index.html">Events</a> <span class="sep">/</span>
+    <a href="../../debatable-relatable.html">Debatable &amp; Relatable</a> <span class="sep">/</span>
+    <span class="current">Music vs Songs (Elementary)</span>
+  </nav>
+  <a href="../../debatable-relatable.html" class="back-link">← Back to Club</a>
+
+  <div class="session-meta-grid">
+    <div class="meta-item"><h4>Duration</h4><p>60 minutes</p></div>
+    <div class="meta-item"><h4>Languages</h4><p>🇬🇧 English</p></div>
+    <div class="meta-item"><h4>Level</h4><p>Elementary (A2)</p></div>
+    <div class="meta-item"><h4>Topic</h4><p>Music Preferences</p></div>
+  </div>
+
+  <div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+    <p>This session is an exciting debate about how we listen to music. We compare instrumental music (without words) to popular songs with singing and lyrics. We will talk about which one helps us study better, which one makes us feel happier, and share our favorite musicians.</p>
+  </div>
+
+  <section id="vocabulary">
+    <h2 class="section-title">📖 Session Vocabulary</h2>
+    <div class="vocab-grid-10">
+      <div class="vocab-card">
+        <div class="vocab-word">Instrument</div>
+        <div class="vocab-def">a tool used to make music sounds (like a piano or guitar).</div>
+        <div class="vocab-example">Playing a physical instrument is a highly rewarding hobby.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Instrument', definition:'a tool used to make music sounds (like a piano or guitar).', example:'Playing a physical instrument is a highly rewarding hobby.'}, this)">Add to Dictionary</button>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-word">Lyrics</div>
+        <div class="vocab-def">the words of a song.</div>
+        <div class="vocab-example">I love reading the lyrics of a song to understand the meaning.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Lyrics', definition:'the words of a song.', example:'I love reading the lyrics of a song to understand the meaning.'}, this)">Add to Dictionary</button>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-word">Voice</div>
+        <div class="vocab-def">the sound made by a person singing.</div>
+        <div class="vocab-example">The opera singer had a very strong and beautiful voice.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Voice', definition:'the sound made by a person singing.', example:'The opera singer had a very strong and beautiful voice.'}, this)">Add to Dictionary</button>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-word">Melody</div>
+        <div class="vocab-def">the main tune or musical line of a song.</div>
+        <div class="vocab-example">The piano melody was simple but exceptionally peaceful and relaxing.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Melody', definition:'the main tune or musical line of a song.', example:'The piano melody was simple but exceptionally peaceful and relaxing.'}, this)">Add to Dictionary</button>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-word">Relax</div>
+        <div class="vocab-def">to rest, calm down, and feel quiet.</div>
+        <div class="vocab-example">Listening to soft ambient music helps me relax after a busy workday.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Relax', definition:'to rest, calm down, and feel quiet.', example:'Listening to soft ambient music helps me relax after a busy workday.'}, this)">Add to Dictionary</button>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-word">Song</div>
+        <div class="vocab-def">a piece of music with words that a person sings.</div>
+        <div class="vocab-example">My favorite song always makes me want to dance.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Song', definition:'a piece of music with words that a person sings.', example:'My favorite song always makes me want to dance.'}, this)">Add to Dictionary</button>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-word">Background</div>
+        <div class="vocab-def">quiet music played while you do other activities.</div>
+        <div class="vocab-example">Soft background music is perfect when you study for an exam.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Background', definition:'quiet music played while you do other activities.', example:'Soft background music is perfect when you study for an exam.'}, this)">Add to Dictionary</button>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-word">Singer</div>
+        <div class="vocab-def">a person who sings songs.</div>
+        <div class="vocab-example">The lead singer of the band talked to the fans after the concert.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Singer', definition:'a person who sings songs.', example:'The lead singer of the band talked to the fans after the concert.'}, this)">Add to Dictionary</button>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-word">Beautiful</div>
+        <div class="vocab-def">very pretty or exceptionally nice to hear.</div>
+        <div class="vocab-example">The classical violin concert was incredibly beautiful.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Beautiful', definition:'very pretty or exceptionally nice to hear.', example:'The classical violin concert was incredibly beautiful.'}, this)">Add to Dictionary</button>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-word">Favorite</div>
+        <div class="vocab-def">liked more than all other similar things.</div>
+        <div class="vocab-example">Jazz is my absolute favorite music genre to listen to at home.</div>
+        <button class="btn-add-dict" onclick="COSY.addToDict({word:'Favorite', definition:'liked more than all other similar things.', example:'Jazz is my absolute favorite music genre to listen to at home.'}, this)">Add to Dictionary</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="structure">
+    <h2 class="section-title">🎙| Discussion Structure</h2>
+    <div class="rounds-container">
+      <div class="round-block warm-up open" id="s-warm">
+        <div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8;">
+          <span>🟠 Warm-up</span><span class="round-toggle">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+          <ul class="round-questions">
+            <li>What instrument do you like the sound of most (piano, violin, or guitar)?</li>
+            <li>Do you sing when you are alone in the shower or car?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="round-block round-1 open" id="s-r1">
+        <div class="round-header" style="background:#E1F5EE;" onclick="COSY.toggleRound('s-r1')">
+          <span>🔵 Round 1 : Personal Opinions</span><span class="round-toggle">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+          <div class="round-item">
+            <div class="round-item-main">Do you think a physical <strong>instrument</strong> can express sadness better than a human voice?</div>
+            <div class="round-item-personal">★ What instrument did you try to play when you were a child?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Why are the <strong>lyrics</strong> of old songs often more romantic and poetic than modern ones?</div>
+            <div class="round-item-personal">★ Do you try to memorize the lyrics of your favorite songs?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Does a singer need a perfect <strong>voice</strong> to make a great emotional recording?</div>
+            <div class="round-item-personal">★ Who is a singer with a unique voice that you enjoy listening to?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Why is a simple <strong>melody</strong> easier to remember than a complex classical concert?</div>
+            <div class="round-item-personal">★ What melody is stuck in your head today?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Does classical piano music help you <strong>relax</strong> better than modern pop songs?</div>
+            <div class="round-item-personal">★ How do you usually relax after a very noisy or busy day?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">What makes a pop <strong>song</strong> popular on the radio for many years?</div>
+            <div class="round-item-personal">★ What pop song makes you smile or want to dance immediately?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Should cafes play loud music, or is quiet <strong>background</strong> music better?</div>
+            <div class="round-item-personal">★ Do you study better with background music or in absolute quiet?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Why do we often remember the <strong>singer</strong> of a band but forget the guitar players?</div>
+            <div class="round-item-personal">★ Have you ever met a professional singer or musician in real life?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Why does a <strong>beautiful</strong> violin solo make some people feel like crying?</div>
+            <div class="round-item-personal">★ What is the most beautiful place you have ever visited during a holiday?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Why do people's <strong>favorite</strong> music styles change as they grow older?</div>
+            <div class="round-item-personal">★ What was your favorite music genre when you were fifteen?</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="round-block lst open" id="s-lst">
+        <div class="round-header" onclick="COSY.toggleRound('s-lst')" style="background:#EEEDFE;">
+          <span>🟣 Let's Speak Together : The Study Playlist</span><span class="round-toggle">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+          <p class="round-note"><strong>The Playlist Task:</strong> Imagine you are designing a 5-song study playlist for an intensive language school. Work with your partner to choose the perfect tracks. Will you include songs with English lyrics or purely instrumental piano music? Present your perfect study playlist!</p>
+        </div>
+      </div>
+
+      <div class="round-block round-2 open" id="s-r2">
+        <div class="round-header" style="background:#EAF3DE;" onclick="COSY.toggleRound('s-r2')">
+          <span>🟢 Round 2 : Agree or Disagree: The Future</span><span class="round-toggle">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+          <div class="round-item">
+            <div class="round-item-main">In the future, physical <strong>instruments</strong> will disappear because computers will make all sounds. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Do you prefer the sound of a real acoustic piano to a digital keyboard?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Computers will write better song <strong>lyrics</strong> than human poets in the coming years. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Would you buy a book of poetry written entirely by an artificial intelligence?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">An AI <strong>voice</strong> will soon sound more emotional than any human singer. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Do you think an AI singer can have real soul or feeling?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">A song with no repeating <strong>melody</strong> is not real music. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Do you enjoy listening to chaotic or unusual jazz melodies?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">Future cities will be so noisy that humans will be unable to <strong>relax</strong> without headphones. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Do you wear headphones when you walk on busy city streets?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">A <strong>song</strong> with words is always more interesting than a piece of instrumental music. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Do you listen to classical music when you are doing chores at home?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">In the future, smart offices will automatically play personalized <strong>background</strong> music to make us work faster. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Would you like your boss to choose your study music?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">A virtual, holographic <strong>singer</strong> will host the most popular concerts of the future. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Would you pay for a ticket to see a holographic concert of a dead singer?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">A <strong>beautiful</strong> song is the fastest way to learn the culture of another country. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Has listening to songs helped you learn foreign language pronunciation?</div>
+          </div>
+          <div class="round-item">
+            <div class="round-item-main">We should only share our <strong>favorite</strong> songs with our closest friends. : Do you agree or disagree?</div>
+            <div class="round-item-personal">★ Do you feel embarrassed when someone looks at your music playlist?</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mistake-block open" id="s-mistakes">
+        <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+          <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>
+        </div>
+        <div class="mistake-body" style="display:block;">
+          <div class="mistake-item">
+            <span class="mistake-wrong">I listen <u>the music</u> every day.</span>
+            <span class="mistake-arrow">→</span>
+            <span class="mistake-right">I listen <strong>to music</strong> every day.</span>
+            <span class="mistake-note-text">(Underlined error: 'listen' is followed by the preposition 'to', and do not use 'the' for general concepts)</span>
+          </div>
+          <div class="mistake-item">
+            <span class="mistake-wrong">The song is <u>very beautifully</u>.</span>
+            <span class="mistake-arrow">→</span>
+            <span class="mistake-right">The song is <strong>very beautiful</strong>.</span>
+            <span class="mistake-note-text">(Underlined error: use the adjective 'beautiful' after the linking verb 'is' rather than the adverb 'beautifully')</span>
+          </div>
+          <div class="mistake-item">
+            <span class="mistake-wrong">He plays <u>very good</u> on the piano.</span>
+            <span class="mistake-arrow">→</span>
+            <span class="mistake-right">He plays <strong>very well</strong> on the piano.</span>
+            <span class="mistake-note-text">(Underlined error: use the adverb 'well' to modify the action verb 'plays' rather than the adjective 'good')</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="../../../../../../apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="../../../../../../apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="../../../../../../apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="../../../../../../apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="../../../../../../apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="../../../../../../apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+</body>
+</html>
