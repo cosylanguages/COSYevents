@@ -1,0 +1,78 @@
+{
+  "id": "needs-review",
+  "title": "Sessions Needing Review",
+  "description": "Karaoke Club sessions flagged for review or missing from data/events/karaoke-club.json during migration reconciliation.",
+  "sessions": [
+    {
+      "file": "angelina-wismes-challenge.html",
+      "status": "needs_review",
+      "title": "Angelina Wismes Challenge",
+      "artist": "Featured Artist (French)"
+    },
+    {
+      "file": "angele-challenge.html",
+      "status": "needs_review",
+      "title": "Angèle Challenge",
+      "artist": "Featured Artist (French)"
+    },
+    {
+      "file": "arletta-challenge.html",
+      "status": "needs_review",
+      "title": "Arletta Challenge",
+      "artist": "Featured Artist (Greek)"
+    },
+    {
+      "file": "esteman-challenge.html",
+      "status": "needs_review",
+      "title": "Esteman Challenge",
+      "artist": "Featured Artist (Spanish)"
+    },
+    {
+      "file": "fabienne-thibeault-challenge.html",
+      "status": "needs_review",
+      "title": "Fabienne Thibeault Challenge",
+      "artist": "Featured Artist (French)"
+    },
+    {
+      "file": "la-zarra-challenge.html",
+      "status": "needs_review",
+      "title": "La Zarra Challenge",
+      "artist": "Featured Artist (French)"
+    },
+    {
+      "file": "massimo-ranieri-challenge.html",
+      "status": "needs_review",
+      "title": "Massimo Ranieri Challenge",
+      "artist": "Featured Artist (Italian)"
+    },
+    {
+      "file": "maelle-challenge.html",
+      "status": "needs_review",
+      "title": "Maëlle Challenge",
+      "artist": "Featured Artist (French)"
+    },
+    {
+      "file": "mple-challenge.html",
+      "status": "needs_review",
+      "title": "Mple Challenge",
+      "artist": "Featured Artist (Greek)"
+    },
+    {
+      "file": "quelquun-pour-toi.html",
+      "status": "needs_review",
+      "title": "Quelqu'un pour toi",
+      "artist": "Featured Artist (French)"
+    },
+    {
+      "file": "template-karaoke.html",
+      "status": "missing",
+      "title": "Template Karaoke"
+    },
+    {
+      "file": "zazie-challenge.html",
+      "status": "needs_review",
+      "title": "Zazie Challenge",
+      "artist": "Featured Artist (French)"
+    }
+  ]
+}

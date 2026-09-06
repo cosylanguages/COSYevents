@@ -33,6 +33,16 @@ The catalog (`index.html`) hosts five core event formats:
 
 ---
 
+## 📚 Reference Docs
+
+Key specifications, content style guides, and templates imported during the COSYlanguages migration:
+- 🎬 **[Cinema Club Content Style Guide](docs/cinema-content-style-guide.md)** — Pedagogical and content quality standards for film sessions.
+- 📋 **[Cinema Inventory](docs/cinema-inventory.md)** — Audit report and problem inventory for Cinema Club sessions.
+- 📐 **[Rules Template](docs/rules-template.md)** — Master template and visual rules for Speaking Clubs.
+- 🗣️ **[Speaking Clubs Specification](docs/speaking-clubs-spec.md)** — Structural specification, round templates, and HTML patterns for Speaking Clubs.
+
+---
+
 ## 🚀 Usage & Local Development
 
 1. **Running Locally:**
