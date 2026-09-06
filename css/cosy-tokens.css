@@ -1,0 +1,127 @@
+/* ==========================================================================
+   COSYlanguages Design Tokens
+   File: css/cosy-tokens.css
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. Premium Track Color Tokens
+     ------------------------------------------------------------------------ */
+  /* Forest Green / Sage Track */
+  --cosy-color-forest-green: #416b49;
+  --cosy-color-forest-green-dark: #375742;
+  --cosy-color-forest-green-light: #e8f0e9;
+  --cosy-color-forest-green-soft: #6b9474;
+
+  --cosy-color-sage: #416b49;
+  --cosy-color-sage-dark: #375742;
+  --cosy-color-sage-light: #e8f0e9;
+  --cosy-color-sage-soft: #6b9474;
+
+  /* Terracotta / Coral Track */
+  --cosy-color-terracotta: #c85a32;
+  --cosy-color-terracotta-dark: #a14322;
+  --cosy-color-terracotta-light: #fbeee8;
+  --cosy-color-coral: #e06d53;
+
+  /* Credible Navy Track */
+  --cosy-color-credible-navy: #1b2a4a;
+  --cosy-color-navy-dark: #121c33;
+  --cosy-color-navy-light: #e8edf5;
+
+  /* Practical Fresh Green Track */
+  --cosy-color-practical-fresh-green: #2e7d32;
+  --cosy-color-fresh-green-dark: #1b5e20;
+  --cosy-color-fresh-green-light: #e8f5e9;
+
+  /* Warm Rust / Amber Track */
+  --cosy-color-warm-rust: #b7410e;
+  --cosy-color-amber: #d97706;
+  --cosy-color-amber-light: #fef3c7;
+
+  /* Scholarly Plum Track */
+  --cosy-color-scholarly-plum: #582c4d;
+  --cosy-color-plum-dark: #3d1e36;
+  --cosy-color-plum-light: #f5ebf2;
+
+  /* ------------------------------------------------------------------------
+     2. Neutral & Base UI Color Tokens
+     ------------------------------------------------------------------------ */
+  --cosy-color-bg: #fdfcf8;
+  --cosy-color-surface: #ffffff;
+  --cosy-color-text: #2a2a2a;
+  --cosy-color-text-muted: #5c5957;
+  --cosy-color-border: #e8e2d5;
+
+  /* Legacy / Short-name Fallback Color Tokens */
+  --cream: #fdfcf8;
+  --cream-dark: #e8e2d5;
+  --warm-white: #ffffff;
+  --ink: #2a2a2a;
+  --ink-muted: #5c5957;
+  --sage: #416b49;
+  --sage-dark: #375742;
+  --sage-light: #e8f0e9;
+  --sage-soft: #6b9474;
+
+  /* ------------------------------------------------------------------------
+     3. Typography Scale Tokens
+     ------------------------------------------------------------------------ */
+  --cosy-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --cosy-font-family-base: var(--cosy-font-family);
+
+  --cosy-font-size-xs: 0.75rem;     /* 12px */
+  --cosy-font-size-sm: 0.85rem;     /* 13.6px */
+  --cosy-font-size-md: 0.875rem;    /* 14px */
+  --cosy-font-size-base: 0.95rem;   /* 15.2px */
+  --cosy-font-size-lg: 1.1rem;      /* 17.6px */
+  --cosy-font-size-xl: 1.2rem;      /* 19.2px */
+  --cosy-font-size-2xl: 1.35rem;    /* 21.6px */
+  --cosy-font-size-3xl: 1.5rem;     /* 24px */
+  --cosy-font-size-4xl: 2.25rem;    /* 36px */
+
+  --cosy-font-weight-normal: 400;
+  --cosy-font-weight-medium: 500;
+  --cosy-font-weight-semibold: 600;
+  --cosy-font-weight-bold: 700;
+
+  --cosy-line-height-tight: 1.2;
+  --cosy-line-height-snug: 1.3;
+  --cosy-line-height-base: 1.5;
+  --cosy-line-height-relaxed: 1.6;
+
+  /* ------------------------------------------------------------------------
+     4. Spacing Scale Tokens
+     ------------------------------------------------------------------------ */
+  --cosy-spacing-2xs: 0.2rem;
+  --cosy-spacing-xs: 0.25rem;
+  --cosy-spacing-sm: 0.5rem;
+  --cosy-spacing-md: 0.75rem;
+  --cosy-spacing-base: 1rem;
+  --cosy-spacing-lg: 1.25rem;
+  --cosy-spacing-xl: 1.5rem;
+  --cosy-spacing-2xl: 2rem;
+  --cosy-spacing-3xl: 2.5rem;
+  --cosy-spacing-4xl: 3rem;
+
+  /* ------------------------------------------------------------------------
+     5. Border Radius Tokens
+     ------------------------------------------------------------------------ */
+  --cosy-radius-xs: 4px;
+  --cosy-radius-sm: 6px;
+  --cosy-radius-md: 8px;
+  --cosy-radius-lg: 10px;
+  --cosy-radius-xl: 12px;
+  --cosy-radius-pill: 20px;
+  --cosy-radius-full: 9999px;
+  --cosy-radius: 12px;
+
+  /* ------------------------------------------------------------------------
+     6. Elevation & Shadow Tokens
+     ------------------------------------------------------------------------ */
+  --cosy-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --cosy-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --cosy-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --cosy-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --cosy-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+}

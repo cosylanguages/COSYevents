@@ -4,19 +4,19 @@
 
 /* Base Typography & Color Fallbacks (utilizing CSS tokens when loaded) */
 :root {
-  --cosy-bg: var(--cream, #fdfcf8);
-  --cosy-surface: var(--warm-white, #ffffff);
-  --cosy-primary: var(--sage, #416b49);
-  --cosy-primary-dark: var(--sage-dark, #375742);
-  --cosy-primary-light: var(--sage-light, #e8f0e9);
-  --cosy-primary-soft: var(--sage-soft, #6b9474);
-  --cosy-text: var(--ink, #2a2a2a);
-  --cosy-text-muted: var(--ink-muted, #5c5957);
-  --cosy-border: var(--cream-dark, #e8e2d5);
-  --cosy-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  --cosy-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --cosy-radius: 12px;
-  --cosy-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --cosy-bg: var(--cosy-color-bg, var(--cream, #fdfcf8));
+  --cosy-surface: var(--cosy-color-surface, var(--warm-white, #ffffff));
+  --cosy-primary: var(--cosy-color-forest-green, var(--sage, #416b49));
+  --cosy-primary-dark: var(--cosy-color-forest-green-dark, var(--sage-dark, #375742));
+  --cosy-primary-light: var(--cosy-color-forest-green-light, var(--sage-light, #e8f0e9));
+  --cosy-primary-soft: var(--cosy-color-forest-green-soft, var(--sage-soft, #6b9474));
+  --cosy-text: var(--cosy-color-text, var(--ink, #2a2a2a));
+  --cosy-text-muted: var(--cosy-color-text-muted, var(--ink-muted, #5c5957));
+  --cosy-border: var(--cosy-color-border, var(--cream-dark, #e8e2d5));
+  --cosy-shadow: var(--cosy-shadow-md, 0 4px 12px rgba(0, 0, 0, 0.05));
+  --cosy-shadow-hover: var(--cosy-shadow-lg, 0 8px 24px rgba(0, 0, 0, 0.08));
+  --cosy-radius: var(--cosy-radius-xl, 12px);
+  --cosy-font-family: var(--cosy-font-family-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
 }
 
 * {
