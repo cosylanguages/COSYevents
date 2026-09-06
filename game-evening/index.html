@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Evening - COSYevents Catalog</title>
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+  <link rel="stylesheet" href="../shared/css/hub.css">
+  <style>
+    .controls-panel {
+      background: var(--cosy-surface);
+      border: 1px solid var(--cosy-border);
+      border-radius: var(--cosy-radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .control-group label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--cosy-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .control-group select, .control-group input {
+      padding: 0.5rem 0.8rem;
+      border: 1px solid var(--cosy-border);
+      border-radius: 6px;
+      background: var(--cosy-bg);
+      color: var(--cosy-text);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .lineup-card {
+      background: var(--cosy-surface);
+      border: 1px solid var(--cosy-border);
+      border-radius: var(--cosy-radius);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .lineup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--cosy-border);
+      padding-bottom: 1rem;
+    }
+    .lineup-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--cosy-primary-dark);
+      margin: 0 0 0.4rem 0;
+    }
+    .lineup-desc {
+      font-size: 0.95rem;
+      color: var(--cosy-text-muted);
+      margin: 0;
+      line-height: 1.4;
+    }
+    .lineup-meta {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .game-item {
+      background: var(--cosy-bg);
+      border: 1px solid var(--cosy-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .game-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .game-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    .game-icon-title {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .game-item-icon {
+      font-size: 1.5rem;
+    }
+    .game-item-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cosy-primary-dark);
+      margin: 0;
+    }
+    .game-item-desc {
+      font-size: 0.88rem;
+      color: var(--cosy-text);
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+    .game-item-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--cosy-text-muted);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .launch-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.6rem 1rem;
+      background: var(--cosy-primary);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+    .launch-btn:hover {
+      background: var(--cosy-primary-dark);
+    }
+    .session-template {
+      background: var(--cosy-surface);
+      border: 1px solid var(--cosy-border);
+      border-radius: var(--cosy-radius);
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <span class="hub-brand"><a href="../index.html" style="color: inherit; text-decoration: none;">← COSYevents Catalog</a></span>
+      <h1 class="hub-title">Game Evening</h1>
+      <p class="hub-subtitle">
+        Curated session lineups wrapping existing COSYgames titles into structured party night formats with seamless URL handoff.
+      </p>
+    </div>
+  </header>
+
+  <main class="hub-main">
+
+    <!-- Session Parameter Selector -->
+    <section class="controls-panel">
+      <div class="control-group">
+        <label for="select-lang">Target Language (`lang`):</label>
+        <select id="select-lang">
+          <option value="en" selected>English (en)</option>
+          <option value="es">Spanish (es)</option>
+          <option value="fr">French (fr)</option>
+          <option value="de">German (de)</option>
+          <option value="it">Italian (it)</option>
+          <option value="ru">Russian (ru)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="select-level">CEFR Level (`level`):</label>
+        <select id="select-level">
+          <option value="A1">A1 — Beginner</option>
+          <option value="A2">A2 — Elementary</option>
+          <option value="B1" selected>B1 — Intermediate</option>
+          <option value="B2">B2 — Upper Intermediate</option>
+          <option value="C1">C1 — Advanced</option>
+        </select>
+      </div>
+
+      <div class="control-group" style="flex: 1; min-width: 200px;">
+        <label for="input-topic">Topic Override (`topic`):</label>
+        <input type="text" id="input-topic" placeholder="e.g. travel, general, movies (Optional)">
+      </div>
+    </section>
+
+    <!-- Evening Lineups Grid -->
+    <section id="lineups-container">
+      <!-- Rendered dynamically from data/events/game-evening.json -->
+    </section>
+
+    <!-- Live Facilitator Session Template -->
+    <section class="session-template">
+      <h2 style="color: var(--cosy-primary-dark); margin-bottom: 1rem;">🎲 Live Facilitator Session Guide</h2>
+      <p style="margin-bottom: 1.25rem;">Host a seamless 60–75 minute Game Evening using this structured party framework:</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+        <div style="background: var(--cosy-bg); padding: 1rem; border-radius: 6px; border: 1px solid var(--cosy-border);">
+          <div style="font-weight: 700; color: var(--cosy-primary-dark); margin-bottom: 0.25rem;">⏱️ Phase 1: Icebreaker (15 mins)</div>
+          <p style="font-size: 0.88rem; color: var(--cosy-text-muted); margin: 0;">Launch Game 1 (e.g. Hot Seat) to warm up vocabulary and build low-pressure group energy.</p>
+        </div>
+        <div style="background: var(--cosy-bg); padding: 1rem; border-radius: 6px; border: 1px solid var(--cosy-border);">
+          <div style="font-weight: 700; color: var(--cosy-primary-dark); margin-bottom: 0.25rem;">🔥 Phase 2: Main Event (30 mins)</div>
+          <p style="font-size: 0.88rem; color: var(--cosy-text-muted); margin: 0;">Play Games 2 & 3 (e.g. Battle of Wits / Story Chain) in rounds with small teams or pairs.</p>
+        </div>
+        <div style="background: var(--cosy-bg); padding: 1rem; border-radius: 6px; border: 1px solid var(--cosy-border);">
+          <div style="font-weight: 700; color: var(--cosy-primary-dark); margin-bottom: 0.25rem;">☕ Phase 3: Break Point (10 mins)</div>
+          <p style="font-size: 0.88rem; color: var(--cosy-text-muted); margin: 0;">Informal open chatter and score recap before the final celebratory round.</p>
+        </div>
+        <div style="background: var(--cosy-bg); padding: 1rem; border-radius: 6px; border: 1px solid var(--cosy-border);">
+          <div style="font-weight: 700; color: var(--cosy-primary-dark); margin-bottom: 0.25rem;">🏆 Phase 4: Finale (15 mins)</div>
+          <p style="font-size: 0.88rem; color: var(--cosy-text-muted); margin: 0;">Conclude with Game 4 (e.g. Lucky Numbers or 100 Questions) and award fun non-competitive prizes.</p>
+        </div>
+      </div>
+
+      <div style="padding: 1rem; background: var(--cosy-primary-light); border-left: 4px solid var(--cosy-primary); border-radius: 4px;">
+        <p style="font-size: 0.88rem; color: var(--cosy-primary-dark); margin: 0;">
+          💡 <strong>Facilitator Tip:</strong> Clicking any "Launch Game" button automatically opens the standalone COSYgames engine with pre-configured language, level, and topic parameters. Game Evening does not host or reimplement game mechanics.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const container = document.getElementById('lineups-container');
+      const langSelect = document.getElementById('select-lang');
+      const levelSelect = document.getElementById('select-level');
+      const topicInput = document.getElementById('input-topic');
+
+      let gameData = null;
+
+      try {
+        const res = await fetch('../data/events/game-evening.json');
+        gameData = await res.json();
+      } catch (e) {
+        console.error('Failed to load game-evening.json', e);
+      }
+
+      function buildGameUrl(folder, defaultTopic) {
+        const baseUrl = 'https://cosylanguages.github.io/COSYgames/' + folder + '/';
+        const lang = langSelect.value || 'en';
+        const level = levelSelect.value || 'B1';
+        const topic = (topicInput.value.trim() || defaultTopic || 'general');
+
+        const params = new URLSearchParams({
+          lang: lang,
+          level: level,
+          topic: topic
+        });
+
+        return baseUrl + '?' + params.toString();
+      }
+
+      function renderLineups() {
+        if (!gameData || !gameData.lineups) return;
+
+        container.innerHTML = gameData.lineups.map(lineup => `
+          <div class="lineup-card">
+            <div class="lineup-header">
+              <div>
+                <h2 class="lineup-title">${escapeHtml(lineup.title)}</h2>
+                <p class="lineup-desc">${escapeHtml(lineup.description)}</p>
+              </div>
+              <div class="lineup-meta">
+                <span class="event-badge">${escapeHtml(lineup.target_level)}</span>
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--cosy-text-muted);">⏱️ ${lineup.total_duration_minutes} min session</span>
+              </div>
+            </div>
+
+            <div class="game-grid">
+              ${lineup.games.map(game => {
+                const gameUrl = buildGameUrl(game.folder, game.default_topic);
+                return `
+                  <div class="game-item">
+                    <div>
+                      <div class="game-item-header">
+                        <div class="game-icon-title">
+                          <span class="game-item-icon">${game.icon}</span>
+                          <h3 class="game-item-name">${escapeHtml(game.name)}</h3>
+                        </div>
+                        <span style="font-size: 0.75rem; background: var(--cosy-primary-light); color: var(--cosy-primary-dark); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">${escapeHtml(game.suggested_level)}</span>
+                      </div>
+                      <p class="game-item-desc">${escapeHtml(game.description)}</p>
+                    </div>
+                    <div>
+                      <div class="game-item-meta">
+                        <span>⏱️ ${game.estimated_minutes} mins</span>
+                        <span>🏷️ ${escapeHtml(game.default_topic)}</span>
+                      </div>
+                      <a href="${escapeHtml(gameUrl)}" target="_blank" rel="noopener noreferrer" class="launch-btn">
+                        <span>Launch Game Engine</span> ↗
+                      </a>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `).join('');
+      }
+
+      function escapeHtml(str) {
+        if (typeof str !== 'string') return str;
+        return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      // Initial render
+      renderLineups();
+
+      // Re-render links on control parameter changes
+      langSelect.addEventListener('change', renderLineups);
+      levelSelect.addEventListener('change', renderLineups);
+      topicInput.addEventListener('input', renderLineups);
+    });
+  </script>
+</body>
+</html>

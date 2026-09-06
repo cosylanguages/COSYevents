@@ -1,0 +1,191 @@
+{
+  "event_type": "game_evening",
+  "title": "Game Evening",
+  "description": "Curated session lineups wrapping existing COSYgames titles into structured party night formats with seamless URL handoff.",
+  "handoff_convention": {
+    "base_url": "https://cosylanguages.github.io/COSYgames/",
+    "params": ["lang", "level", "topic"]
+  },
+  "lineups": [
+    {
+      "id": "quick-warmup-icebreakers",
+      "title": "⚡ Quick Warm-Up & Icebreakers",
+      "description": "High-energy, fast-paced games designed to break the ice and build confidence in conversational speaking.",
+      "target_level": "A2–B2",
+      "total_duration_minutes": 60,
+      "games": [
+        {
+          "name": "Hot Seat",
+          "folder": "hot_seat",
+          "icon": "🎯",
+          "description": "Rapid-fire vocabulary clues against the clock while sitting in the hot seat.",
+          "suggested_level": "A2–B1",
+          "estimated_minutes": 15,
+          "default_topic": "daily_life"
+        },
+        {
+          "name": "Action Hero",
+          "folder": "action_hero",
+          "icon": "🎭",
+          "description": "Hold up a word and guess the action or verb described by teammates without gestures.",
+          "suggested_level": "A2–B2",
+          "estimated_minutes": 15,
+          "default_topic": "actions_verbs"
+        },
+        {
+          "name": "Emoji Odyssey",
+          "folder": "emoji_odyssey",
+          "icon": "📖",
+          "description": "Decipher visual emoji sequences into idiomatic phrases and vocabulary.",
+          "suggested_level": "A2–B1",
+          "estimated_minutes": 15,
+          "default_topic": "common_phrases"
+        },
+        {
+          "name": "100 Questions",
+          "folder": "hundred_questions",
+          "icon": "❓",
+          "description": "Speed-round conversation questions to get everyone talking freely.",
+          "suggested_level": "A2–B2",
+          "estimated_minutes": 15,
+          "default_topic": "getting_to_know_you"
+        }
+      ]
+    },
+    {
+      "id": "trivia-and-brain-teasers",
+      "title": "🧠 Trivia & Brain Teasers Night",
+      "description": "Intellectual challenges, knowledge battles, and deduction puzzles for curious minds.",
+      "target_level": "B1–C1",
+      "total_duration_minutes": 75,
+      "games": [
+        {
+          "name": "Battle of Wits",
+          "folder": "battle_of_wits",
+          "icon": "🧠",
+          "description": "Fast-paced vocabulary trivia and category classification drill.",
+          "suggested_level": "B1–B2",
+          "estimated_minutes": 20,
+          "default_topic": "general_knowledge"
+        },
+        {
+          "name": "COSY Crossword",
+          "folder": "cosy_crossword",
+          "icon": "🧩",
+          "description": "Collaborative crossword puzzle solving with clues in the target language.",
+          "suggested_level": "B1–C1",
+          "estimated_minutes": 20,
+          "default_topic": "culture_and_arts"
+        },
+        {
+          "name": "Etymology Explorer",
+          "folder": "etymology_explorer",
+          "icon": "📜",
+          "description": "Trace word roots, cognates, and historical origins across languages.",
+          "suggested_level": "B2–C1",
+          "estimated_minutes": 15,
+          "default_topic": "word_origins"
+        },
+        {
+          "name": "Critics Corner",
+          "folder": "critics_corner",
+          "icon": "🧐",
+          "description": "Spot subtle grammar errors and polish sentence structure as language critics.",
+          "suggested_level": "B2–C1",
+          "estimated_minutes": 20,
+          "default_topic": "common_mistakes"
+        }
+      ]
+    },
+    {
+      "id": "storytelling-and-improv",
+      "title": "🎭 Improv & Storytelling Night",
+      "description": "Creative narrative games that stretch imagination, roleplay skills, and fluent expression.",
+      "target_level": "B1–C2",
+      "total_duration_minutes": 75,
+      "games": [
+        {
+          "name": "Identity Mystery",
+          "folder": "identity_mystery",
+          "icon": "👤",
+          "description": "Deduce secret character identities using targeted yes/no questioning.",
+          "suggested_level": "B1–B2",
+          "estimated_minutes": 15,
+          "default_topic": "famous_figures"
+        },
+        {
+          "name": "Story Chain",
+          "folder": "story_chain",
+          "icon": "🔗",
+          "description": "Collaborative sequential storytelling adding one sentences per turn with strict word constraints.",
+          "suggested_level": "B1–C1",
+          "estimated_minutes": 20,
+          "default_topic": "mystery_adventure"
+        },
+        {
+          "name": "Storytelling",
+          "folder": "storytelling",
+          "icon": "📚",
+          "description": "Interactive narrative generator using plot twists, setting cards, and character motives.",
+          "suggested_level": "B2–C2",
+          "estimated_minutes": 20,
+          "default_topic": "unexpected_journeys"
+        },
+        {
+          "name": "Opinion Arena",
+          "folder": "opinion_arena",
+          "icon": "⚖️",
+          "description": "Friendly debates and opinion sharing on controversial lighthearted topics.",
+          "suggested_level": "B2–C1",
+          "estimated_minutes": 20,
+          "default_topic": "modern_dilemmas"
+        }
+      ]
+    },
+    {
+      "id": "vocab-and-wordplay-party",
+      "title": "🎉 Vocab & Wordplay Party",
+      "description": "Fun, accessible vocabulary games suitable for mixed-level groups and casual social gatherings.",
+      "target_level": "A1–B2",
+      "total_duration_minutes": 60,
+      "games": [
+        {
+          "name": "Scene Match",
+          "folder": "scene_match",
+          "icon": "🖼️",
+          "description": "Explore illustrated scenes and match target vocabulary terms to visual hotspots.",
+          "suggested_level": "A1–A2",
+          "estimated_minutes": 15,
+          "default_topic": "city_and_travel"
+        },
+        {
+          "name": "Word Linker",
+          "folder": "word_linker",
+          "icon": "🔗",
+          "description": "Identify word connections, collocations, or find the odd word out in context.",
+          "suggested_level": "A2–B1",
+          "estimated_minutes": 15,
+          "default_topic": "word_associations"
+        },
+        {
+          "name": "Last Letter",
+          "folder": "last_letter",
+          "icon": "🔤",
+          "description": "Classic rapid word chain where each new word must begin with the final letter of the previous.",
+          "suggested_level": "A2–B2",
+          "estimated_minutes": 15,
+          "default_topic": "general_vocab"
+        },
+        {
+          "name": "Lucky Numbers",
+          "folder": "lucky_numbers",
+          "icon": "🎰",
+          "description": "Interactive number bingo challenge for listening comprehension and rapid number recall.",
+          "suggested_level": "A1–B1",
+          "estimated_minutes": 15,
+          "default_topic": "numbers_and_time"
+        }
+      ]
+    }
+  ]
+}
