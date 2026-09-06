@@ -2,7 +2,7 @@
   "id": "needs-review",
   "title": "Sessions Needing Review",
   "description": "Karaoke Club sessions flagged for review or missing from data/events/karaoke-club.json during migration reconciliation.",
-  "items": [
+  "sessions": [
     {
       "file": "angelina-wismes-challenge.html",
       "status": "needs_review",
@@ -59,8 +59,9 @@
     },
     {
       "file": "quelquun-pour-toi.html",
-      "status": "missing",
-      "title": "Quelqu'un pour toi"
+      "status": "needs_review",
+      "title": "Quelqu'un pour toi",
+      "artist": "Featured Artist (French)"
     },
     {
       "file": "template-karaoke.html",
