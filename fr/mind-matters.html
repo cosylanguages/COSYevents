@@ -1,0 +1,237 @@
+<!-- DEVELOPER ALERT: Refer to templates/events/mind-session-template.html (or corresponding active templates in events/sessions/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mind Matters 🧠 : COSYlanguages</title>
+<link href="../../images/logos/cosylanguages.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="../../css/tokens.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/components.css" rel="stylesheet"/>
+<link href="../../css/layout.css" rel="stylesheet"/>
+<link href="../../css/events.css" rel="stylesheet"/>
+<link href="../../css/mind-matters.css" rel="stylesheet"/>
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #993556, #4d1a2b); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+</style>
+<style>
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    background: var(--border);
+  }
+  .filter-btn.active {
+    background: #993556;
+    color: white;
+    border-color: #993556;
+  }
+</style></head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<img alt="Mind logo" src="../../images/mindmatters.png" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
+<h1>Mind Matters</h1>
+<p>Psychologie, émotions, habitudes et comportement humain. Nous explorons ce qui se passe dans les coulisses de l'esprit.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← Tous les clubs de conversation</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<div>
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Sessions à venir</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Article</td><td>Le pouvoir des habitudes : Comment les changer ?</td></tr>
+<tr><td>Description</td><td>Exploration de la psychologie derrière nos routines quotidiennes.</td></tr>
+<tr><td>Lien</td><td><a href="https://www.psychologies.com/" style="color:var(--cosy-green);" target="_blank">Lire l'article 📖</a></td></tr>
+<tr><td>Calendrier</td><td>Planifié : À confirmer</td></tr>
+<tr><td>Durée</td><td>60 min</td></tr>
+<tr><td>Langues</td><td>🇫🇷</td></tr>
+</table></div>
+<a class="join-btn" href="https://wa.me/330766784195?text=Bonjour!%20Je%20souhaite%20rejoindre%20le%20club%20Mind%20Matters.">💬 S'inscrire</a>
+<!-- HISTORY -->
+<div class="history-block" id="mm-hist" style="margin-top: 2rem;">
+<div class="section-header" style="margin-bottom: 1rem;">
+<h2 style="font-size: 1.5rem;">🕒 Sessions passées</h2>
+</div><div class="club-filters" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;"><button class="filter-btn active" data-level="all">Tous les niveaux</button><button class="filter-btn" data-level="a1">A1</button><button class="filter-btn" data-level="a2">A2</button><button class="filter-btn" data-level="b1">B1</button><button class="filter-btn" data-level="b2">B2</button><button class="filter-btn" data-level="c1">C1</button><button class="filter-btn" data-level="c2">C2</button></div>
+<div class="history-body" style="display: block; padding: 0; border: none;">
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Limérence</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/limerence.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Deuil anticipé</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/anticipatory-grief.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Dépersonnalisation</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/depersonalization.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Loi de Kidlin</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/kidlins-law.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span></div>
+<h4 style="margin:0;font-size:1rem;">Usurpation d'identité</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/impersonation.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Tant d'enfants brisés...</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/broken-children-grown-bodies.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Ils craignent l'amour car il crée...</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/fear-of-love-control.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Loi de Gilbert</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/gilberts-law.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Loi de Wilson</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/wilsons-law.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Loi de Murphy</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/murphys-law.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Loi de l'attraction</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/law-of-attraction.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+<div class="history-session" data-level="b1 b2 c1 c2" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#FAF7F2;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+<div><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0;font-size:1rem;">Trouver une personne avec qui discuter...</h4>
+<span class="history-date" style="font-size:.8rem;color:var(--muted);">01 January 2025</span>
+</div>
+<a class="view-btn" href="sessions/mind-matters/finding-the-right-person.html" style="background:var(--indigo);">Voir la session complète →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem;">Pourquoi la psychologie ?</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Comprendre l'esprit humain permet non seulement de mieux se connaître, mais aussi de développer un vocabulaire émotionnel nuancé.</p>
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../images/logos/cosylanguages.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="../../apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="../../apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="../../apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="../../apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="../../apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="../../apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../events/index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="../../js/data/languages.js"></script>
+<script src="../../js/core/engine.js"></script>
+<script src="../../js/core/i18n.js"></script>
+<script src="../../js/core/ui.js"></script>
+<script src="../../js/data/pricing.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const sessions = document.querySelectorAll('.history-session');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedLevel = btn.getAttribute('data-level');
+
+      sessions.forEach(sess => {
+        const levels = (sess.getAttribute('data-level') || '').split(' ');
+        if (selectedLevel === 'all' || levels.includes(selectedLevel)) {
+          sess.style.display = 'flex';
+        } else {
+          sess.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script></body>
+</html>
