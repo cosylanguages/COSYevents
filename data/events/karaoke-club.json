@@ -1,0 +1,363 @@
+{
+  "id": "karaoke-club",
+  "title": "Karaoke Club",
+  "description": "Active vocal performance combined with pronunciation warm-ups, level-calibrated song suggestions, and external links to licensed lyric platforms.",
+  "themes": [
+    {
+      "id": "80s-hits",
+      "title": "80s Hits",
+      "description": "High-energy synth-pop, iconic rock anthems, and timeless dance tracks from the 1980s.",
+      "cefr_suitability": "A2–C1",
+      "songs": [
+        {
+          "id": "80s-take-on-me",
+          "title": "Take On Me",
+          "artist": "A-ha",
+          "cefr_level": "A2",
+          "external_links": {
+            "lyrics": "https://genius.com/A-ha-take-on-me-lyrics",
+            "audio": "https://open.spotify.com/track/2R1L3XgR33r4W4a1yJ5O13"
+          },
+          "pronunciation_prompt": "Practice singing smoothly connected vowel sounds on rising pitch contours: 'Step into the light and welcome a bright new morning.'"
+        },
+        {
+          "id": "80s-sweet-dreams",
+          "title": "Sweet Dreams (Are Made of This)",
+          "artist": "Eurythmics",
+          "cefr_level": "B1",
+          "external_links": {
+            "lyrics": "https://genius.com/Eurythmics-sweet-dreams-are-made-of-this-lyrics",
+            "audio": "https://open.spotify.com/track/1TfqL2mO3z2R38S3C3R3C3"
+          },
+          "pronunciation_prompt": "Practice sustained vowel tones and steady rhythm control: 'Traveling around the globe requires courage and curiosity.'"
+        },
+        {
+          "id": "80s-every-breath",
+          "title": "Every Breath You Take",
+          "artist": "The Police",
+          "cefr_level": "B2",
+          "external_links": {
+            "lyrics": "https://genius.com/The-police-every-breath-you-take-lyrics",
+            "audio": "https://open.spotify.com/track/1TfqL2mO3z2R38S3C3R3C4"
+          },
+          "pronunciation_prompt": "Emphasize precise articulation of quiet consonant pairs /p/, /t/, and /k/: 'Keep a steady eye on every minor detail in the plan.'"
+        },
+        {
+          "id": "80s-africa",
+          "title": "Africa",
+          "artist": "Toto",
+          "cefr_level": "C1",
+          "external_links": {
+            "lyrics": "https://genius.com/Toto-africa-lyrics",
+            "audio": "https://open.spotify.com/track/23743ChTrS232323232323"
+          },
+          "pronunciation_prompt": "Drill rapid conversational speed and multi-syllabic stress patterns: 'Wild adventures across distant continents inspire endless curiosity.'"
+        }
+      ],
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "80s Hits Warm-Up",
+          "text": "Song Focus: 'Take On Me' (A-ha)\n\nPronunciation Drill: Step into the light and welcome a bright new morning.",
+          "note": "Focus on smooth vocal connection and rising pitch contours."
+        },
+        {
+          "level": "B1",
+          "category": "80s Hits Warm-Up",
+          "text": "Song Focus: 'Sweet Dreams (Are Made of This)' (Eurythmics)\n\nPronunciation Drill: Traveling around the globe requires courage and curiosity.",
+          "note": "Maintain steady rhythmic cadence and clear vowel hold."
+        },
+        {
+          "level": "B2",
+          "category": "80s Hits Warm-Up",
+          "text": "Song Focus: 'Every Breath You Take' (The Police)\n\nPronunciation Drill: Keep a steady eye on every minor detail in the plan.",
+          "note": "Work on soft plosive consonants and staccato clarity."
+        },
+        {
+          "level": "C1",
+          "category": "80s Hits Warm-Up",
+          "text": "Song Focus: 'Africa' (Toto)\n\nPronunciation Drill: Wild adventures across distant continents inspire endless curiosity.",
+          "note": "Practice multi-syllabic stress, speed, and breath control."
+        }
+      ]
+    },
+    {
+      "id": "love-songs",
+      "title": "Love Songs",
+      "description": "Expressive ballads and romantic melodies focused on vocal emotion, smooth phrasing, and intonation.",
+      "cefr_suitability": "A1–B2",
+      "songs": [
+        {
+          "id": "love-stand-by-me",
+          "title": "Stand by Me",
+          "artist": "Ben E. King",
+          "cefr_level": "A1",
+          "external_links": {
+            "lyrics": "https://genius.com/Ben-e-king-stand-by-me-lyrics",
+            "audio": "https://open.spotify.com/track/383838383838383838"
+          },
+          "pronunciation_prompt": "Practice calm cadence and soft vocal linking: 'Whenever night falls, true friends will remain by your side.'"
+        },
+        {
+          "id": "love-cant-help-falling",
+          "title": "Can't Help Falling in Love",
+          "artist": "Elvis Presley",
+          "cefr_level": "A2",
+          "external_links": {
+            "lyrics": "https://genius.com/Elvis-presley-cant-help-falling-in-love-lyrics",
+            "audio": "https://open.spotify.com/track/494949494949494949"
+          },
+          "pronunciation_prompt": "Focus on gentle pitch modulation and smooth open vowels: 'Wise decisions come slowly when emotion guides the heart.'"
+        },
+        {
+          "id": "love-just-the-way-you-are",
+          "title": "Just the Way You Are",
+          "artist": "Bruno Mars",
+          "cefr_level": "B1",
+          "external_links": {
+            "lyrics": "https://genius.com/Bruno-mars-just-the-way-you-are-lyrics",
+            "audio": "https://open.spotify.com/track/505050505050505050"
+          },
+          "pronunciation_prompt": "Drill energetic stress patterns and clear upbeat delivery: 'Your genuine smile brightens up the entire room instantly.'"
+        },
+        {
+          "id": "love-shallow",
+          "title": "Shallow",
+          "artist": "Lady Gaga & Bradley Cooper",
+          "cefr_level": "B2",
+          "external_links": {
+            "lyrics": "https://genius.com/Lady-gaga-and-bradley-cooper-shallow-lyrics",
+            "audio": "https://open.spotify.com/track/616161616161616161"
+          },
+          "pronunciation_prompt": "Work on vocal resonance, dynamic contrasts, and emotional emphasis: 'Stepping into deeper waters requires faith and total commitment.'"
+        }
+      ],
+      "prompts": [
+        {
+          "level": "A1",
+          "category": "Love Songs Warm-Up",
+          "text": "Song Focus: 'Stand by Me' (Ben E. King)\n\nPronunciation Drill: Whenever night falls, true friends will remain by your side.",
+          "note": "Practice clear, slow dental sounds and soft voice placement."
+        },
+        {
+          "level": "A2",
+          "category": "Love Songs Warm-Up",
+          "text": "Song Focus: 'Can't Help Falling in Love' (Elvis Presley)\n\nPronunciation Drill: Wise decisions come slowly when emotion guides the heart.",
+          "note": "Focus on legato phrasing and open vowel sounds."
+        },
+        {
+          "level": "B1",
+          "category": "Love Songs Warm-Up",
+          "text": "Song Focus: 'Just the Way You Are' (Bruno Mars)\n\nPronunciation Drill: Your genuine smile brightens up the entire room instantly.",
+          "note": "Work on brisk syllable stress and lively intonation."
+        },
+        {
+          "level": "B2",
+          "category": "Love Songs Warm-Up",
+          "text": "Song Focus: 'Shallow' (Lady Gaga & Bradley Cooper)\n\nPronunciation Drill: Stepping into deeper waters requires faith and total commitment.",
+          "note": "Drill chest-to-head voice shifts and controlled volume dynamics."
+        }
+      ]
+    },
+    {
+      "id": "kids-songs",
+      "title": "Kids' Songs",
+      "description": "Clear, playful, and repetitive song selections ideal for beginner vocal practice and fundamental pronunciation.",
+      "cefr_suitability": "A1–A2",
+      "songs": [
+        {
+          "id": "kids-youve-got-a-friend",
+          "title": "You've Got a Friend in Me",
+          "artist": "Randy Newman",
+          "cefr_level": "A1",
+          "external_links": {
+            "lyrics": "https://genius.com/Randy-newman-youve-got-a-friend-in-me-lyrics",
+            "audio": "https://open.spotify.com/track/727272727272727272"
+          },
+          "pronunciation_prompt": "Practice playful intonation and clear dental consonants: 'Good companions stick together through every adventure.'"
+        },
+        {
+          "id": "kids-let-it-go",
+          "title": "Let It Go",
+          "artist": "Idina Menzel",
+          "cefr_level": "A1",
+          "external_links": {
+            "lyrics": "https://genius.com/Idina-menzel-let-it-go-lyrics",
+            "audio": "https://open.spotify.com/track/838383838383838383"
+          },
+          "pronunciation_prompt": "Focus on strong vowel projection and releasing tension: 'Leave yesterday behind and welcome the chilly winter wind.'"
+        },
+        {
+          "id": "kids-how-far-ill-go",
+          "title": "How Far I'll Go",
+          "artist": "Auli'i Cravalho",
+          "cefr_level": "A2",
+          "external_links": {
+            "lyrics": "https://genius.com/Aulii-cravalho-how-far-ill-go-lyrics",
+            "audio": "https://open.spotify.com/track/949494949494949494"
+          },
+          "pronunciation_prompt": "Practice forward vocal placement and clear sentence cadence: 'Looking out over the horizon fills my mind with wonder.'"
+        },
+        {
+          "id": "kids-a-whole-new-world",
+          "title": "A Whole New World",
+          "artist": "Brad Kane & Lea Salonga",
+          "cefr_level": "A2",
+          "external_links": {
+            "lyrics": "https://genius.com/Brad-kane-and-lea-salonga-a-whole-new-world-lyrics",
+            "audio": "https://open.spotify.com/track/101010101010101010"
+          },
+          "pronunciation_prompt": "Drill smooth legato phrasing and warm tone balance: 'Flying high above the city lights reveals a dazzling perspective.'"
+        }
+      ],
+      "prompts": [
+        {
+          "level": "A1",
+          "category": "Kids' Songs Warm-Up",
+          "text": "Song Focus: 'You've Got a Friend in Me' (Randy Newman)\n\nPronunciation Drill: Good companions stick together through every adventure.",
+          "note": "Emphasize playful rhythm and distinct consonant endings."
+        },
+        {
+          "level": "A1",
+          "category": "Kids' Songs Warm-Up",
+          "text": "Song Focus: 'Let It Go' (Idina Menzel)\n\nPronunciation Drill: Leave yesterday behind and welcome the chilly winter wind.",
+          "note": "Project long open vowels confidently."
+        },
+        {
+          "level": "A2",
+          "category": "Kids' Songs Warm-Up",
+          "text": "Song Focus: 'How Far I'll Go' (Auli'i Cravalho)\n\nPronunciation Drill: Looking out over the horizon fills my mind with wonder.",
+          "note": "Focus on forward vocal resonance and continuous airflow."
+        },
+        {
+          "level": "A2",
+          "category": "Kids' Songs Warm-Up",
+          "text": "Song Focus: 'A Whole New World' (Brad Kane & Lea Salonga)\n\nPronunciation Drill: Flying high above the city lights reveals a dazzling perspective.",
+          "note": "Practice smooth duet-style phrasing and tone connection."
+        }
+      ]
+    },
+    {
+      "id": "rock-classics",
+      "title": "Rock Classics",
+      "description": "High-energy rock standards highlighting strong consonant projection, rhythmic drive, and vocal power.",
+      "cefr_suitability": "B1–C1",
+      "songs": [
+        {
+          "id": "rock-we-will-rock-you",
+          "title": "We Will Rock You",
+          "artist": "Queen",
+          "cefr_level": "B1",
+          "external_links": {
+            "lyrics": "https://genius.com/Queen-we-will-rock-you-lyrics",
+            "audio": "https://open.spotify.com/track/111111111111111111"
+          },
+          "pronunciation_prompt": "Focus on rhythmic emphasis, chest voice resonance, and clear plosive consonants: 'Stomp your feet and clap your hands to the steady beat.'"
+        },
+        {
+          "id": "rock-hotel-california",
+          "title": "Hotel California",
+          "artist": "Eagles",
+          "cefr_level": "B2",
+          "external_links": {
+            "lyrics": "https://genius.com/Eagles-hotel-california-lyrics",
+            "audio": "https://open.spotify.com/track/121212121212121212"
+          },
+          "pronunciation_prompt": "Practice descriptive storytelling cadence and distinct /s/ and /z/ sibilant sounds: 'Cool evening breezes blow softly across the quiet desert highway.'"
+        },
+        {
+          "id": "rock-bohemian-rhapsody",
+          "title": "Bohemian Rhapsody",
+          "artist": "Queen",
+          "cefr_level": "C1",
+          "external_links": {
+            "lyrics": "https://genius.com/Queen-bohemian-rhapsody-lyrics",
+            "audio": "https://open.spotify.com/track/131313131313131313"
+          },
+          "pronunciation_prompt": "Master dramatic shifts in pace, theatrical articulation, and vocal agility: 'Dramatic choices shape the trajectory of a complex destiny.'"
+        }
+      ],
+      "prompts": [
+        {
+          "level": "B1",
+          "category": "Rock Classics Warm-Up",
+          "text": "Song Focus: 'We Will Rock You' (Queen)\n\nPronunciation Drill: Stomp your feet and clap your hands to the steady beat.",
+          "note": "Rhythmic percussive diction with strong chest placement."
+        },
+        {
+          "level": "B2",
+          "category": "Rock Classics Warm-Up",
+          "text": "Song Focus: 'Hotel California' (Eagles)\n\nPronunciation Drill: Cool evening breezes blow softly across the quiet desert highway.",
+          "note": "Focus on narrative phrasing and crisp sibilant sounds."
+        },
+        {
+          "level": "C1",
+          "category": "Rock Classics Warm-Up",
+          "text": "Song Focus: 'Bohemian Rhapsody' (Queen)\n\nPronunciation Drill: Dramatic choices shape the trajectory of a complex destiny.",
+          "note": "Practice theatrical dynamics, speed changes, and diction."
+        }
+      ]
+    },
+    {
+      "id": "pop-anthems",
+      "title": "Pop Anthems",
+      "description": "Catchy modern hits perfect for lively group chorus singing, fast phrasing, and rhythm synchronization.",
+      "cefr_suitability": "A2–B2",
+      "songs": [
+        {
+          "id": "pop-roar",
+          "title": "Roar",
+          "artist": "Katy Perry",
+          "cefr_level": "A2",
+          "external_links": {
+            "lyrics": "https://genius.com/Katy-perry-roar-lyrics",
+            "audio": "https://open.spotify.com/track/141414141414141414"
+          },
+          "pronunciation_prompt": "Practice strong projection, clear final consonants, and confident rhythm: 'Speak up bravely so your voice carries across the entire room.'"
+        },
+        {
+          "id": "pop-counting-stars",
+          "title": "Counting Stars",
+          "artist": "OneRepublic",
+          "cefr_level": "B1",
+          "external_links": {
+            "lyrics": "https://genius.com/Onerepublic-counting-stars-lyrics",
+            "audio": "https://open.spotify.com/track/151515151515151515"
+          },
+          "pronunciation_prompt": "Drill fast tempo articulation and connected speech patterns: 'Late at night we count possibilities instead of counting worries.'"
+        },
+        {
+          "id": "pop-rolling-in-the-deep",
+          "title": "Rolling in the Deep",
+          "artist": "Adele",
+          "cefr_level": "B2",
+          "external_links": {
+            "lyrics": "https://genius.com/Adele-rolling-in-the-deep-lyrics",
+            "audio": "https://open.spotify.com/track/161616161616161616"
+          },
+          "pronunciation_prompt": "Focus on powerful breath support, open throat vowels, and soul vocal dynamics: 'A deep passion kindles an unstoppable fire within the heart.'"
+        }
+      ],
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Pop Anthems Warm-Up",
+          "text": "Song Focus: 'Roar' (Katy Perry)\n\nPronunciation Drill: Speak up bravely so your voice carries across the entire room.",
+          "note": "Focus on strong breath support and bold consonant ends."
+        },
+        {
+          "level": "B1",
+          "category": "Pop Anthems Warm-Up",
+          "text": "Song Focus: 'Counting Stars' (OneRepublic)\n\nPronunciation Drill: Late at night we count possibilities instead of counting worries.",
+          "note": "Practice fast-tempo syllable linking."
+        },
+        {
+          "level": "B2",
+          "category": "Pop Anthems Warm-Up",
+          "text": "Song Focus: 'Rolling in the Deep' (Adele)\n\nPronunciation Drill: A deep passion kindles an unstoppable fire within the heart.",
+          "note": "Work on resonant open vowels and chest voice projection."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karaoke Club - COSYevents Catalog</title>
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+  <link rel="stylesheet" href="../shared/css/hub.css">
+  <style>
+    .song-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .song-card {
+      background: var(--cosy-surface);
+      border: 1px solid var(--cosy-border);
+      border-radius: var(--cosy-radius);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .song-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
+    .song-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cosy-text);
+      margin: 0;
+    }
+    .song-artist {
+      font-size: 0.9rem;
+      color: var(--cosy-text-muted, #666);
+      margin-top: 0.2rem;
+    }
+    .external-links {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .ext-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.65rem;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--cosy-bg-alt, #f0f4f8);
+      color: var(--cosy-primary-dark, #1e3a8a);
+      border: 1px solid var(--cosy-border);
+      transition: background 0.2s ease;
+    }
+    .ext-link-btn:hover {
+      background: var(--cosy-primary-light, #dbeafe);
+    }
+    .pronunciation-box {
+      margin-top: 0.8rem;
+      padding: 0.75rem;
+      background: #f8fafc;
+      border-left: 3px solid var(--cosy-primary, #2563eb);
+      border-radius: 0 4px 4px 0;
+      font-size: 0.85rem;
+    }
+    .pronunciation-label {
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--cosy-primary-dark, #1e3a8a);
+      margin-bottom: 0.25rem;
+    }
+    .copyright-disclaimer {
+      margin-top: 2rem;
+      padding: 1rem 1.25rem;
+      background: #fffbe2;
+      border: 1px solid #fef08a;
+      border-radius: var(--cosy-radius);
+      font-size: 0.85rem;
+      color: #713f12;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <span class="hub-brand"><a href="../index.html" style="color: inherit; text-decoration: none;">← COSYevents Catalog</a></span>
+      <h1 class="hub-title">Karaoke Club</h1>
+      <p class="hub-subtitle">
+        Active vocal performance combined with original pronunciation warm-ups, level-calibrated song selections, and external links to licensed lyric platforms.
+      </p>
+    </div>
+  </header>
+
+  <main class="hub-main">
+    <!-- Theme Selector Section -->
+    <section class="hub-section-header">
+      <h2 class="hub-section-title">Select a Karaoke Theme</h2>
+      <p class="hub-section-desc">Choose a session theme below to explore level-calibrated song suggestions, external licensed links, and warm-up pronunciation decks.</p>
+    </section>
+
+    <div class="events-grid" id="theme-selector">
+      <button class="event-card theme-select-btn" data-theme-id="80s-hits" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">📻</span>
+          <span class="event-badge">A2–C1</span>
+        </div>
+        <h3 class="event-name">80s Hits</h3>
+        <p class="event-description">High-energy synth-pop, iconic rock anthems, and timeless dance tracks from the 1980s.</p>
+      </button>
+
+      <button class="event-card theme-select-btn" data-theme-id="love-songs" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">💖</span>
+          <span class="event-badge">A1–B2</span>
+        </div>
+        <h3 class="event-name">Love Songs</h3>
+        <p class="event-description">Expressive ballads and romantic melodies focused on vocal emotion, smooth phrasing, and intonation.</p>
+      </button>
+
+      <button class="event-card theme-select-btn" data-theme-id="kids-songs" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">🎈</span>
+          <span class="event-badge">A1–A2</span>
+        </div>
+        <h3 class="event-name">Kids' Songs</h3>
+        <p class="event-description">Clear, playful, and repetitive song selections ideal for beginner vocal practice and fundamental pronunciation.</p>
+      </button>
+
+      <button class="event-card theme-select-btn" data-theme-id="rock-classics" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">🎸</span>
+          <span class="event-badge">B1–C1</span>
+        </div>
+        <h3 class="event-name">Rock Classics</h3>
+        <p class="event-description">High-energy rock standards highlighting strong consonant projection, rhythmic drive, and vocal power.</p>
+      </button>
+
+      <button class="event-card theme-select-btn" data-theme-id="pop-anthems" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">🌟</span>
+          <span class="event-badge">A2–B2</span>
+        </div>
+        <h3 class="event-name">Pop Anthems</h3>
+        <p class="event-description">Catchy modern hits perfect for lively group chorus singing, fast phrasing, and rhythm synchronization.</p>
+      </button>
+    </div>
+
+    <!-- Active Theme Song List Container -->
+    <section style="margin-top: 3rem;" id="songs-section">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--cosy-border); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+        <h2 id="active-theme-title" style="color: var(--cosy-primary-dark); margin: 0;">Suggested Songs</h2>
+        <span id="active-theme-level" class="event-badge">A1–C1</span>
+      </div>
+      <p id="active-theme-desc" style="color: var(--cosy-text-muted, #555); margin-bottom: 1.5rem;"></p>
+
+      <div class="song-card-grid" id="song-cards-container"></div>
+
+      <div class="copyright-disclaimer">
+        <strong>🔒 Copyright & Licensing Notice:</strong> COSYevents does not store, host, or reproduce song lyrics. All lyrics links redirect externally to officially licensed platforms (Genius, Spotify, etc.) marked with ↗.
+      </div>
+    </section>
+
+    <!-- Warm-Up Pronunciation Prompts Deck Viewer -->
+    <section style="margin-top: 3rem;">
+      <h2 style="color: var(--cosy-primary-dark); margin-bottom: 1rem;">🎤 Pronunciation Warm-Up Prompts Deck</h2>
+      <p style="margin-bottom: 1rem; color: var(--cosy-text);">Use these original practice prompt cards for vocal warming up before singing along to external backing tracks:</p>
+      <div id="deck-viewer-container"></div>
+    </section>
+
+    <!-- Live Event Session Template / Facilitation Framework -->
+    <section style="margin-top: 3rem; background: var(--cosy-surface); padding: 2rem; border-radius: var(--cosy-radius); border: 1px solid var(--cosy-border);">
+      <h2 style="color: var(--cosy-primary-dark); margin-bottom: 1rem;">🎵 Karaoke Club Live Session Framework</h2>
+      <p style="margin-bottom: 1rem;">Structure your live group event or guided studio session using this step-by-step facilitation framework:</p>
+
+      <ol style="padding-left: 1.5rem; line-height: 1.8; color: var(--cosy-text);">
+        <li>
+          <strong>Warm-Up Pronunciation Drills (10 mins):</strong>
+          Before putting on music, go through the interactive Pronunciation Prompt Deck above as a group. Each participant takes a turn reading/chanting the original practice phrases out loud, focusing on vowel connections, consonant clarity, and rhythmic cadence.
+        </li>
+        <li>
+          <strong>Song Selection & Level Matching (5 mins):</strong>
+          Participants select a song suited to their CEFR level from the curated theme list. Learners review the official lyrics externally via the provided licensed external links (e.g. Genius / Spotify).
+        </li>
+        <li>
+          <strong>Vocal & Rhythm Practice Rounds (20 mins):</strong>
+          Participants perform individually or in pairs. Encourage focus on target phonetic elements highlighted during the warm-up (e.g., linked vowels, plosive consonants, pitch contours).
+        </li>
+        <li>
+          <strong>Group Chorus & Peer Feedback (15 mins):</strong>
+          Conclude with a collective group chorus song where everyone sings along. Provide constructive, encouraging feedback on pronunciation and rhythm.
+        </li>
+      </ol>
+
+      <div style="margin-top: 1.5rem; padding: 1rem; background: var(--cosy-primary-light); border-left: 4px solid var(--cosy-primary); border-radius: 4px;">
+        <p style="font-size: 0.9rem; color: var(--cosy-primary-dark); margin: 0;">
+          💡 <strong>Host Tip:</strong> Encourage participants to pay attention to syllable stress and connected speech (liaison) while performing. The practice prompts are designed to build confidence in these exact phonetic patterns prior to singing full tracks.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../shared/js/prompt-deck-loader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      let data = null;
+      let promptDeckInstance = null;
+
+      try {
+        const response = await fetch('../data/events/karaoke-club.json');
+        data = await response.json();
+      } catch (e) {
+        console.error('Could not load karaoke-club.json', e);
+      }
+
+      function escapeHtml(str) {
+        if (typeof str !== 'string') return str;
+        return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      function renderTheme(themeId) {
+        if (!data || !data.themes) return;
+        const theme = data.themes.find(t => t.id === themeId) || data.themes[0];
+
+        // Update Theme Header
+        document.getElementById('active-theme-title').textContent = `${theme.title} — Suggested Songs`;
+        document.getElementById('active-theme-level').textContent = theme.cefr_suitability;
+        document.getElementById('active-theme-desc').textContent = theme.description;
+
+        // Render Song Cards
+        const songContainer = document.getElementById('song-cards-container');
+        songContainer.innerHTML = theme.songs.map(song => `
+          <div class="song-card">
+            <div>
+              <div class="song-header">
+                <span class="prompt-badge level-badge">${escapeHtml(song.cefr_level)}</span>
+              </div>
+              <h3 class="song-title">${escapeHtml(song.title)}</h3>
+              <div class="song-artist">by ${escapeHtml(song.artist)}</div>
+
+              <div class="pronunciation-box">
+                <div class="pronunciation-label">Pronunciation Practice Drill</div>
+                <div>${escapeHtml(song.pronunciation_prompt)}</div>
+              </div>
+            </div>
+
+            <div class="external-links">
+              ${song.external_links && song.external_links.lyrics ? `
+                <a href="${escapeHtml(song.external_links.lyrics)}" class="ext-link-btn" target="_blank" rel="noopener noreferrer">
+                  📜 Official Lyrics ↗
+                </a>
+              ` : ''}
+              ${song.external_links && song.external_links.audio ? `
+                <a href="${escapeHtml(song.external_links.audio)}" class="ext-link-btn" target="_blank" rel="noopener noreferrer">
+                  🎵 Official Audio ↗
+                </a>
+              ` : ''}
+            </div>
+          </div>
+        `).join('');
+
+        // Load Prompt Deck Viewer
+        new PromptDeckLoader({
+          containerId: 'deck-viewer-container',
+          title: `${theme.title} Warm-Up Deck`,
+          cards: theme.prompts || []
+        });
+      }
+
+      // Initial load: 80s Hits
+      renderTheme('80s-hits');
+
+      // Add click listeners to theme selector buttons
+      document.querySelectorAll('.theme-select-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const themeId = btn.getAttribute('data-theme-id');
+          renderTheme(themeId);
+          document.getElementById('songs-section').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
