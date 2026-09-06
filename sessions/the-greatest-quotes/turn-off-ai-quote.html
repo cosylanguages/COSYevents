@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Turn Off AI : COSYlanguages</title>
+<link href="../../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+<link rel="stylesheet" href="../../shared/css/hub.css">
+</head>
+<body class="theme-quotes-critical">
+<nav id="cosy-nav"></nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+<div class="club-tag">The Greatest Quotes</div>
+<div class="session-decorator-icon">🤖</div>
+<h1>"We should turn off AI for a week to see if people's brains still work.": Anonymous</h1>
+<p class="session-date">12 December 2026</p>
+</header>
+<main class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="../../../../../../index.html">Home</a> <span class="sep">/</span>
+<a href="../../index.html">Events</a> <span class="sep">/</span>
+<a href="../../the-greatest-quotes.html">The Greatest Quotes</a> <span class="sep">/</span>
+<span class="current">Turn Off AI</span>
+</nav>
+<a class="back-link" href="../../the-greatest-quotes.html">← Back to Club</a>
+<div class="session-meta-grid">
+<div class="meta-item"><h4>Duration</h4><p>60 minutes</p></div>
+<div class="meta-item"><h4>Languages</h4><p>🇬🇧 English</p></div>
+<div class="meta-item"><h4>Level</h4><p>Intermediate (B1)</p></div>
+<div class="meta-item"><h4>Theme</h4><p>Technology &amp; Cognitive Independence</p></div>
+</div>
+<div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+<p>Anonymous is the person who represents the collective, quiet wisdom of observers who find deep meaning in the fabric of everyday life, and in this session they focus on the following quote: "We should turn off AI for a week to see if people's brains still work." How do we find a sense of place and belonging in a fast-paced, shifting world? Is home a geographic space, or is it a specific time frozen in our memory? Let us explore how we perceive time, direction, and the lives of those around us.</p>
+</div>
+<!-- PHILOSOPHERS' LEDGER INTERACTIVE CARD -->
+<div class="philosophers-ledger" style="background: #FFFDF9; border: 2px solid #5D4037; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm); font-family: 'Playfair Display', serif; font-style: italic; color: #3E2723;"><div class="quotes-theme-stamp">🧠</div>
+<h4 style="margin: 0 0 0.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #5D4037; font-style: normal; font-weight: 700;">☕ The Philosophers' Ledger: Café Debates</h4>
+<p id="ledger-quote" style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem;">"Let us see how many interpretations exist! There is never only one correct answer to any profound human question." : Oscar Wilde</p>
+<button class="btn-primary" id="ledger-next-btn" style="background: #5D4037; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-style: normal; cursor: pointer; font-weight: 700; transition: background 0.2s;">Next Page in Ledger 📖</button>
+</div>
+<!-- SENSITIVE TOPIC / 18+ NOTE -->
+</div>
+<section id="vocabulary">
+<h2 class="section-title">📖 Session Vocabulary</h2>
+<div class="vocab-grid-10"><div class="vocab-card"><div class="vocab-word">Artificial</div>
+<div class="vocab-def">made or produced by human beings rather than occurring naturally.</div>
+<div class="vocab-example">Relying on artificial intelligence might weaken our natural critical thinking.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Artificial', definition:'made or produced by human beings rather than occurring naturally.', example:'Relying on artificial intelligence might weaken our natural critical thinking.'}, this)">Add to Dictionary</button>
+</div><div class="vocab-card"><div class="vocab-word">Automation</div>
+<div class="vocab-def">the use of automatic equipment or systems to do work.</div>
+<div class="vocab-example">The complete automation of writing could make students forget how to compose essays.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Automation', definition:'the use of automatic equipment or systems to do work.', example:'The complete automation of writing could make students forget how to compose essays.'}, this)">Add to Dictionary</button>
+</div><div class="vocab-card"><div class="vocab-word">Reliance</div>
+<div class="vocab-def">dependency on or trust in someone or something.</div>
+<div class="vocab-example">Our heavy reliance on digital navigators has ruined our ability to read physical maps.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Reliance', definition:'dependency on or trust in someone or something.', example:'Our heavy reliance on digital navigators has ruined our ability to read physical maps.'}, this)">Add to Dictionary</button>
+</div><div class="vocab-card"><div class="vocab-word">Cognitive</div>
+<div class="vocab-def">relating to the mental processes of perception, memory, and judgment.</div>
+<div class="vocab-example">Outsourcing simple calculations to apps can affect our cognitive abilities.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Cognitive', definition:'relating to the mental processes of perception, memory, and judgment.', example:'Outsourcing simple calculations to apps can affect our cognitive abilities.'}, this)">Add to Dictionary</button>
+</div><div class="vocab-card"><div class="vocab-word">Brain</div>
+<div class="vocab-def">the organ of the body in the head that controls thought and feeling.</div>
+<div class="vocab-example">The brain is like a muscle that needs regular exercise to stay strong and healthy.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Brain', definition:'the organ of the body in the head that controls thought and feeling.', example:'The brain is like a muscle that needs regular exercise to stay strong and healthy.'}, this)">Add to Dictionary</button>
+</div><div class="vocab-card"><div class="vocab-word">Detachment</div>
+<div class="vocab-def">the state of being objective, distant, or disconnected.</div>
+<div class="vocab-example">Taking a week of digital detachment helps us regain mental clarity.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Detachment', definition:'the state of being objective, distant, or disconnected.', example:'Taking a week of digital detachment helps us regain mental clarity.'}, this)">Add to Dictionary</button>
+</div><div class="vocab-card"><div class="vocab-word">Habits</div>
+<div class="vocab-def">settled or regular tendencies or practices that are hard to give up.</div>
+<div class="vocab-example">Checking our phones immediately upon waking is one of the most common habits.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Habits', definition:'settled or regular tendencies or practices that are hard to give up.', example:'Checking our phones immediately upon waking is one of the most common habits.'}, this)">Add to Dictionary</button>
+</div><div class="vocab-card"><div class="vocab-word">Algorithm</div>
+<div class="vocab-def">a process or set of rules followed by a computer in calculations.</div>
+<div class="vocab-example">The search engine algorithm decides what information we see first.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Algorithm', definition:'a process or set of rules followed by a computer in calculations.', example:'The search engine algorithm decides what information we see first.'}, this)">Add to Dictionary</button>
+</div><div class="vocab-card"><div class="vocab-word">Outsourcing</div>
+<div class="vocab-def">the practice of obtaining services or solving tasks from an external source.</div>
+<div class="vocab-example">The outsourcing of simple decisions to software makes life effortless but passive.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Outsourcing', definition:'the practice of obtaining services or solving tasks from an external source.', example:'The outsourcing of simple decisions to software makes life effortless but passive.'}, this)">Add to Dictionary</button>
+</div><div class="vocab-card"><div class="vocab-word">Process</div>
+<div class="vocab-def">a series of actions or steps taken in order to achieve a particular end.</div>
+<div class="vocab-example">Learning is a slow process that cannot be bypassed by automated summaries.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Process', definition:'a series of actions or steps taken in order to achieve a particular end.', example:'Learning is a slow process that cannot be bypassed by automated summaries.'}, this)">Add to Dictionary</button>
+</div></div>
+</section>
+<section id="structure">
+<h2 class="section-title">🎙️ Discussion Structure</h2>
+<div class="rounds-container">
+<div class="round-block warm-up open" id="s-warm">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8;">
+<span>🟠 Warm-up</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<ul class="round-questions">
+<li>What is the last thing you asked an AI to write or solve for you?</li>
+<li>Could you survive a full week without using any internet search engines?</li>
+</ul>
+</div>
+</div><div class="round-block grammar open" id="s-grammar">
+<div class="round-header" onclick="COSY.toggleRound('s-grammar')" style="background:#EFEBE9; border-left: 5px solid #5D4037;">
+<span>⚡ Grammar Practice : Passive Voice with Reporting Verbs</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<div class="grammar-interactive-game" style="position:relative; z-index:2;">
+<h3>⚡ Grammar Explanation (Intermediate (B1))</h3>
+<p style="margin-bottom: 1.5rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Use <strong>passive voice with reporting verbs</strong> (<em>it is said, is believed to be, is thought that</em>) to discuss public opinions, social conditioning, and rumors objectively.
+</p>
+<div style="background: rgba(93, 64, 55, 0.03); border: 1px dashed rgba(93, 64, 55, 0.3); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🧩 Interactive Word Bank:</strong>
+<p style="font-size:0.82rem; color:var(--muted); margin:0 0 0.75rem 0;">Tap a word chip below, then tap any empty bracket <code>[_____]</code> to place it!</p>
+<div class="grammar-word-bank" style="display:flex; flex-wrap:wrap; gap:8px;">
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">to-infinitive</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">known</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">reported</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">believed</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">said</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">past participle</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">thought</span>
+</div>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Task 1 : Part A: Rule Formulation:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.8;">
+Complete the rule: When using reporting verbs in the passive, we can use 'It is + <span class="grammar-gap" data-answer="past participle" onclick="COSY.placeGrammarChip(this)">_____</span> + that clause' or 'Subject + is/are + past participle + <span class="grammar-gap" data-answer="to-infinitive" onclick="COSY.placeGrammarChip(this)">_____</span>'.
+</p>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Task 1 : Part B: Structured Practice:</strong>
+<ol style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink); line-height: 2.0;">
+<li>It is <span class="grammar-gap" data-answer="believed" onclick="COSY.placeGrammarChip(this)">_____</span> that propaganda can easily alter public perception.</li>
+<li>The media is often <span class="grammar-gap" data-answer="said" onclick="COSY.placeGrammarChip(this)">_____</span> to manipulate societal values.</li>
+<li>Many people are <span class="grammar-gap" data-answer="thought" onclick="COSY.placeGrammarChip(this)">_____</span> to accept opinions without questioning them.</li>
+<li>It is <span class="grammar-gap" data-answer="reported" onclick="COSY.placeGrammarChip(this)">_____</span> that social media algorithms reinforce biases.</li>
+<li>Human cognitive biases are <span class="grammar-gap" data-answer="known" onclick="COSY.placeGrammarChip(this)">_____</span> to hinder independent logic.</li></ol>
+</div>
+<div style="display:flex; gap:10px; margin-bottom:1.5rem;">
+<button class="btn-verify" onclick="COSY.verifyGrammarGame(this)" style="background:#5D4037; color:white; border:none; padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Check Answers</button>
+<button class="btn-reset" onclick="COSY.resetGrammarGame(this)" style="background:transparent; border:1px solid var(--border); color:var(--muted); padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Reset Board</button>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm);">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🗣️ Task 2 : Interactive Speaking:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Is most of what we believe to be true just reported to us by others? How can we separate facts from beliefs?
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block round-1 open" id="s-r1">
+<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
+<span>🔵 Round 1 : Analysis</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">What are the risks of using <strong>artificial</strong> assistance for creative writing or drawing?</div>
+<div class="round-item-personal">★ How often do you use artificial intelligence in your daily work or study?</div>
+</div><div class="round-item"><div class="round-item-main">Will the complete <strong>automation</strong> of daily tasks make humans more creative or more passive?</div>
+<div class="round-item-personal">★ Which automated task are you most grateful for in your life?</div>
+</div><div class="round-item"><div class="round-item-main">How does our constant <strong>reliance</strong> on smartphones affect our long-term memory?</div>
+<div class="round-item-personal">★ Can you navigate your city without using a digital map?</div>
+</div><div class="round-item"><div class="round-item-main">In what ways does typing instead of writing by hand affect our <strong>cognitive</strong> development?</div>
+<div class="round-item-personal">★ Do you find it easier to remember things when you write them down on paper?</div>
+</div><div class="round-item"><div class="round-item-main">Do you agree that the human <strong>brain</strong> is slowly losing its ability to concentrate?</div>
+<div class="round-item-personal">★ What do you do to keep your brain active and sharp?</div>
+</div><div class="round-item"><div class="round-item-main">What benefits can a person experience from a week of complete digital <strong>detachment</strong>?</div>
+<div class="round-item-personal">★ Have you ever tried a digital detox weekend?</div>
+</div><div class="round-item"><div class="round-item-main">How can we build healthy digital <strong>habits</strong> in a world designed to keep us distracted?</div>
+<div class="round-item-personal">★ What is one bad digital habit you <strong>would</strong> like to break?</div>
+</div><div class="round-item"><div class="round-item-main">To what extent do you feel your personal interests are controlled by a social media <strong>algorithm</strong>?</div>
+<div class="round-item-personal">★ Have you ever bought something just because an algorithm recommended it?</div>
+</div><div class="round-item"><div class="round-item-main">Is <strong>outsourcing</strong> our thinking processes to technology a real threat to human intelligence?</div>
+<div class="round-item-personal">★ What mental task do you happily outsource to computers?</div>
+</div><div class="round-item"><div class="round-item-main">Why is the slow <strong>process</strong> of struggling with a problem vital for genuine learning?</div>
+<div class="round-item-personal">★ Tell us about a complex process you recently <strong>had</strong> to learn.</div>
+</div></div>
+</div>
+<div class="round-block lst open" id="s-lst">
+<div class="round-header" onclick="COSY.toggleRound('s-lst')" style="background:#EEEDFE;">
+<span>🟣 Let's Speak Together</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<p class="round-note">A comparative reflection on our habits and self-perceptions.</p>
+</div>
+</div>
+<div class="round-block round-2 open" id="s-r2">
+<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
+<span>🟢 Round 2 : Philosophical Application</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">In a future world fully governed by <strong>artificial</strong> agents, human intuition will be completely ignored. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ How <strong>would</strong> you adapt if artificial systems became entirely obsolete in tomorrow's world?</div>
+</div><div class="round-item"><div class="round-item-main">The rapid speed of modern society will eventually make manual labor and the refusal of <strong>automation</strong> highly respected practices. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ <strong>Would</strong> you use technology to artificially automate your personal creative hobbies?</div>
+</div><div class="round-item"><div class="round-item-main">Future schools will prioritize personal independence over digital <strong>reliance</strong>. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ How do you want future generations of your family to remember your relationship with digital reliance?</div>
+</div><div class="round-item"><div class="round-item-main">As artificial intelligence advances, machines will exhibit a superior capacity for <strong>cognitive</strong> analysis compared to humans. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ If you <strong>could</strong> design a futuristic school, how <strong>would</strong> you teach cognitive skills to children?</div>
+</div><div class="round-item"><div class="round-item-main">In the coming decades, direct neural links to the <strong>brain</strong> will become a highly commercialized luxury commodity. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ Do you fear a future where brain activity is fully managed or monitored by digital algorithms?</div>
+</div><div class="round-item"><div class="round-item-main">The survival of human civilization will depend on our collective ability to practice digital <strong>detachment</strong>. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ How do you personally prepare for a future where detachment is increasingly rare?</div>
+</div><div class="round-item"><div class="round-item-main">Future generations will look back at our current online <strong>habits</strong> with deep skepticism. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ If you <strong>could</strong> send a single message about habits to people living 100 years in the future, what <strong>would</strong> it be?</div>
+</div><div class="round-item"><div class="round-item-main">Global digital connectivity will make escaping any corporate <strong>algorithm</strong> incredibly difficult to maintain. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ <strong>Would</strong> you choose to live in a futuristic utopia that completely guarantees comfort at the cost of your freedom?</div>
+</div><div class="round-item"><div class="round-item-main">In the future, social status will be determined by a person's refusal of digital <strong>outsourcing</strong> rather than wealth. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ What role do you hope outsourcing will play in your own personal future over the next decade?</div>
+</div><div class="round-item"><div class="round-item-main">A future world governed entirely by logic will have no space left for the slow mystery of the creative <strong>process</strong>. : Do you agree or disagree?</div>
+<div class="round-item-personal">★ If a machine <strong>could</strong> perfectly replicate your creative process, <strong>would</strong> you still value it?</div>
+</div></div>
+</div>
+<div class="mistake-block open" id="s-mistakes">
+<div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+<span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>
+</div>
+<div class="mistake-body" style="display:block;">
+<div class="mistake-item">
+<span class="mistake-wrong">He <u>have</u> went to Paris</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">He has gone to Paris</span>
+<span class="mistake-note-text">(Present perfect third-person singular 'has' + past participle 'gone'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">We discussed <u>about the problem</u></span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">We discussed the problem / had a discussion <strong>about</strong> the problem</span>
+<span class="mistake-note-text">('Discuss' is transitive and takes no preposition, or use 'have a discussion about'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">I am <u>agree</u> with you</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">I agree with you</span>
+<span class="mistake-note-text">(Use 'agree' directly as a verb rather than using it with the auxiliary 'am'.)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="../../../../../../apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="../../../../../../apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="../../../../../../apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="../../../../../../apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="../../../../../../apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="../../../../../../apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script>document.addEventListener("DOMContentLoaded", () => { const quotes = ["\"We should turn off AI for a week to see if people's brains still work.\" : Anonymous"]; let index = 0; const quoteText = document.getElementById("ledger-quote"); if (quoteText) quoteText.innerText = quotes[0]; });</script>
+</body>
+</html>
