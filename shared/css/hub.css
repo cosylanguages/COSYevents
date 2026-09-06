@@ -1,4 +1,508 @@
 /* ==========================================================================
+   COSY Design Tokens (Imported & Consolidated)
+   ========================================================================== */
+
+/**
+ * COSYlanguages Master Design Tokens
+ * Location: css/cosy-tokens.css
+ *
+ * Central design tokens (colors, typography scale, spacing, border-radius, shadows)
+ * for COSYlanguages and ecosystem consumer applications.
+ *
+ * Consumer Repositories Policy:
+ * Consumer repos (e.g., COSYtools, COSYgames, COSYevents, COSYworld) MUST link
+ * this file via a raw.githubusercontent.com URL pinned to a specific commit or tag,
+ * and NEVER reference "main".
+ */
+
+:root {
+    /* ── 1. Premium Track Colors ────────────────────────────────────────── */
+    /* Track 1: General Course — Forest Green / Sage */
+    --cosy-track-general:                #416b49;
+    --cosy-track-general-light:          #e8f0e9;
+    --cosy-track-general-deep:           #233827;
+    --cosy-color-forest-green:           #416b49;
+    --cosy-color-sage:                   #416b49;
+    --cosy-color-sage-dark:              #375742;
+    --cosy-color-sage-deep:              #233827;
+    --cosy-color-sage-soft:              #6b9474;
+    --cosy-color-sage-mist:              #f0f5f1;
+    --cosy-color-sage-pale:              #e8f0e9;
+    --cosy-color-sage-light:             #e8f0e9;
+
+    /* Track 2: Spoken Course — Terracotta / Coral */
+    --cosy-track-spoken:                 #B84318;
+    --cosy-track-spoken-light:           #faeee8;
+    --cosy-color-terracotta:             #B84318;
+    --cosy-color-coral:                  #B84318;
+    --cosy-color-coral-light:            #faeee8;
+
+    /* Track 3: Professional Course — Credible Navy */
+    --cosy-track-professional:           #1e2f6b;
+    --cosy-track-professional-light:     #e8ecf5;
+    --cosy-color-credible-navy:          #1e2f6b;
+    --cosy-color-navy:                   #1e2f6b;
+    --cosy-color-navy-light:             #e8ecf5;
+
+    /* Track 4: Travelling Course — Practical Fresh Green */
+    --cosy-track-travelling:             #4a6b50;
+    --cosy-track-travelling-light:       #e5f4ec;
+    --cosy-color-practical-fresh-green:  #4a6b50;
+    --cosy-color-fresh-green:            #4a6b50;
+    --cosy-color-green:                  #4a6b50;
+    --cosy-color-green-light:            #e5f4ec;
+
+    /* Track 5: Relocation Course — Warm Rust / Amber */
+    --cosy-track-relocation:             #d66161;
+    --cosy-track-relocation-light:       #fcebeb;
+    --cosy-color-warm-rust:              #d66161;
+    --cosy-color-amber:                  #945e05;
+    --cosy-color-amber-dark:             #7d4d03;
+    --cosy-color-amber-pale:             #fff8e7;
+
+    /* Track 6: Exam Preparation — Scholarly Plum */
+    --cosy-track-exam:                   #7a5c3a;
+    --cosy-track-exam-light:             #f5ede0;
+    --cosy-color-scholarly-plum:         #7a5c3a;
+    --cosy-color-plum:                   #7a5c3a;
+    --cosy-color-plum-light:             #f5ede0;
+
+    /* ── 2. Neutral & Surface Palette ────────────────────────────────────── */
+    --cosy-color-cream:                  #fdfcf8;
+    --cosy-color-cream-dark:             #f5ede0;
+    --cosy-color-warm-white:             #FFFEFB;
+    --cosy-color-surface:                #FFFFFF;
+
+    --cosy-color-ink:                    #2a2a2a;
+    --cosy-color-ink-soft:               #4a4a4a;
+    --cosy-color-ink-muted:              #4a4a4a;
+    --cosy-color-ink-faint:              #5c5957;
+    --cosy-color-muted:                  #5c5957;
+
+    --cosy-color-border:                 rgba(74, 107, 80, 0.12);
+    --cosy-color-border-hover:           rgba(74, 107, 80, 0.25);
+
+    /* Auxiliary UI Colors */
+    --cosy-color-honey:                  #945e05;
+    --cosy-color-honey-dark:             #7d4d03;
+    --cosy-color-honey-pale:             #fff8e7;
+    --cosy-color-honey-mid:              #fef0c7;
+
+    --cosy-color-blue:                   #3a5298;
+    --cosy-color-blue-light:             #eef1fb;
+
+    --cosy-color-rose:                   #a32d2d;
+    --cosy-color-rose-light:             #fcebeb;
+
+    --cosy-color-accent:                 #d66161;
+
+    /* Accessibility Tag Colors */
+    --cosy-tag-a2-bg:                    #FAF0E6;
+    --cosy-tag-a2-color:                 #8A5200;
+    --cosy-tag-sensitive-bg:             #FFF5F5;
+    --cosy-tag-sensitive-color:          #B91C1C;
+
+    /* ── 3. Typography Scale ────────────────────────────────────────────── */
+    --cosy-font-sans:                    'Nunito', 'DM Sans', sans-serif;
+    --cosy-font-serif:                   'Fraunces', 'Lora', serif;
+    --cosy-font-mono:                    'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+    --cosy-font-size-xs:                 0.75rem;   /* 12px */
+    --cosy-font-size-sm:                 0.875rem;  /* 14px */
+    --cosy-font-size-base:               1rem;      /* 16px */
+    --cosy-font-size-lg:                 1.125rem;  /* 18px */
+    --cosy-font-size-xl:                 1.25rem;   /* 20px */
+    --cosy-font-size-2xl:                1.5rem;    /* 24px */
+    --cosy-font-size-3xl:                2rem;      /* 32px */
+    --cosy-font-size-4xl:                2.5rem;    /* 40px */
+
+    --cosy-font-weight-normal:           400;
+    --cosy-font-weight-medium:           500;
+    --cosy-font-weight-semibold:         600;
+    --cosy-font-weight-bold:             700;
+    --cosy-font-weight-extrabold:         800;
+
+    --cosy-line-height-tight:            1.2;
+    --cosy-line-height-snug:             1.375;
+    --cosy-line-height-normal:           1.5;
+    --cosy-line-height-relaxed:          1.625;
+    --cosy-line-height-loose:            1.7;
+
+    /* ── 4. Spacing Scale ────────────────────────────────────────────────── */
+    --cosy-space-xs:                     4px;
+    --cosy-space-sm:                     8px;
+    --cosy-space-md:                     16px;
+    --cosy-space-lg:                     24px;
+    --cosy-space-xl:                     32px;
+    --cosy-space-xxl:                    48px;
+
+    /* ── 5. Border Radius Scale ─────────────────────────────────────────── */
+    --cosy-radius-xs:                    4px;
+    --cosy-radius-sm:                    8px;
+    --cosy-radius-smm:                   10px;
+    --cosy-radius-md:                    14px;
+    --cosy-radius-base:                  18px;
+    --cosy-radius-lg:                    22px;
+    --cosy-radius-xl:                    32px;
+    --cosy-radius-full:                  100px;
+
+    /* Standard alias tokens for radius */
+    --cosy-r-sm:                         var(--cosy-radius-sm);
+    --cosy-r-md:                         var(--cosy-radius-md);
+    --cosy-r-lg:                         var(--cosy-radius-lg);
+    --cosy-r-xl:                         var(--cosy-radius-xl);
+
+    /* ── 6. Elevation & Shadows ────────────────────────────────────────── */
+    --cosy-shadow-sm:                    0 2px 12px rgba(46, 74, 51, 0.07);
+    --cosy-shadow-base:                  0 6px 28px rgba(46, 74, 51, 0.10);
+    --cosy-shadow-md:                    0 4px 14px rgba(46, 74, 51, 0.15);
+    --cosy-shadow-lg:                    0 6px 20px rgba(46, 74, 51, 0.25);
+
+    /* ── 7. Direct Alias Mappings for System Compatibility ───────────────── */
+    --sage:                              var(--cosy-color-sage);
+    --sage-dark:                         var(--cosy-color-sage-dark);
+    --sage-deep:                         var(--cosy-color-sage-deep);
+    --sage-soft:                         var(--cosy-color-sage-soft);
+    --sage-mist:                         var(--cosy-color-sage-mist);
+    --sage-pale:                         var(--cosy-color-sage-pale);
+    --sage-light:                        var(--cosy-color-sage-light);
+
+    --cream:                             var(--cosy-color-cream);
+    --cream-dark:                        var(--cosy-color-cream-dark);
+    --warm-white:                        var(--cosy-color-warm-white);
+
+    --ink:                               var(--cosy-color-ink);
+    --ink-soft:                          var(--cosy-color-ink-soft);
+    --ink-muted:                         var(--cosy-color-ink-muted);
+    --ink-faint:                         var(--cosy-color-ink-faint);
+    --muted:                             var(--cosy-color-muted);
+
+    --honey:                             var(--cosy-color-honey);
+    --honey-dark:                        var(--cosy-color-honey-dark);
+    --honey-pale:                        var(--cosy-color-honey-pale);
+    --honey-mid:                         var(--cosy-color-honey-mid);
+
+    --coral:                             var(--cosy-color-coral);
+    --coral-light:                       var(--cosy-color-coral-light);
+
+    --navy:                              var(--cosy-color-navy);
+    --navy-light:                        var(--cosy-color-navy-light);
+
+    --green:                             var(--cosy-color-green);
+    --green-light:                       var(--cosy-color-green-light);
+
+    --plum:                              var(--cosy-color-plum);
+    --plum-light:                        var(--cosy-color-plum-light);
+
+    --blue:                              var(--cosy-color-blue);
+    --blue-light:                        var(--cosy-color-blue-light);
+
+    --rose:                              var(--cosy-color-rose);
+    --rose-light:                        var(--cosy-color-rose-light);
+
+    --accent-color:                      var(--cosy-color-accent);
+
+    --font-sans:                         var(--cosy-font-sans);
+    --font-serif:                        var(--cosy-font-serif);
+    --font-mono:                         var(--cosy-font-mono);
+
+    --space-xs:                          var(--cosy-space-xs);
+    --space-sm:                          var(--cosy-space-sm);
+    --space-md:                          var(--cosy-space-md);
+    --space-lg:                          var(--cosy-space-lg);
+    --space-xl:                          var(--cosy-space-xl);
+    --space-xxl:                         var(--cosy-space-xxl);
+
+    --r-sm:                              var(--cosy-r-sm);
+    --r-md:                              var(--cosy-r-md);
+    --r-lg:                              var(--cosy-r-lg);
+    --r-xl:                              var(--cosy-r-xl);
+    --radius:                            var(--cosy-radius-base);
+    --radius-sm:                         var(--cosy-radius-smm);
+    --border-radius:                     var(--cosy-radius-base);
+
+    --shadow-sm:                          var(--cosy-shadow-sm);
+    --shadow:                            var(--cosy-shadow-base);
+    --box-shadow:                        var(--cosy-shadow-base);
+    --border:                            var(--cosy-color-border);
+    --border-hover:                      var(--cosy-color-border-hover);
+}
+
+/* ── 8. Dark Mode Theme Overrides ────────────────────────────────────────── */
+html[data-theme="dark"], body.theme-dark {
+    --cosy-color-cream:                  #1a1f1a;
+    --cosy-color-cream-dark:             #141914;
+    --cosy-color-warm-white:             #222b22;
+    --cosy-color-surface:                #222b22;
+
+    --cosy-color-ink:                    #e8f0e9;
+    --cosy-color-ink-soft:               #c8d8c9;
+    --cosy-color-ink-muted:              #c8d8c9;
+    --cosy-color-ink-faint:              #8a9e8b;
+    --cosy-color-muted:                  #8a9e8b;
+
+    --cosy-color-border:                 rgba(107, 143, 113, 0.2);
+    --cosy-color-border-hover:           rgba(107, 143, 113, 0.35);
+
+    --cosy-color-sage:                   #5a7a5f;
+    --cosy-color-sage-dark:              #8a9e8b;
+    --cosy-color-sage-deep:              #e8f0e9;
+    --cosy-color-sage-pale:              #222c23;
+    --cosy-color-sage-mist:              #1f2720;
+    --cosy-color-sage-light:             #222c23;
+
+    --cosy-color-honey-pale:             #2d2417;
+    --cosy-color-honey-mid:              #35291b;
+    --cosy-color-coral-light:            #2d1a15;
+    --cosy-color-plum-light:             #26201a;
+    --cosy-color-blue-light:             #1a202d;
+    --cosy-color-green-light:            #15241b;
+    --cosy-color-rose-light:             #2d1515;
+    --cosy-color-navy-light:             #141a29;
+}
+
+
+
+
+:root {
+    /* ── Core Colors ───────────────────────────────────── */
+    --sage:       var(--cosy-color-sage, #416b49);
+    --sage-dark:  var(--cosy-color-sage-dark, #375742);
+    --sage-deep:  var(--cosy-color-sage-deep, #233827);
+    --sage-soft:  var(--cosy-color-sage-soft, #6b9474);
+    --sage-mist:  var(--cosy-color-sage-mist, #f0f5f1);
+    --sage-pale:  var(--cosy-color-sage-pale, #e8f0e9);
+    --sage-light: var(--cosy-color-sage-light, #e8f0e9);
+
+    --cream:      var(--cosy-color-cream, #fdfcf8);
+    --cream-dark: var(--cosy-color-cream-dark, #f5ede0);
+    --warm-white: var(--cosy-color-warm-white, #FFFEFB);
+
+    --ink:        var(--cosy-color-ink, #2a2a2a);
+    --ink-soft:   var(--cosy-color-ink-soft, #4a4a4a);
+    --ink-muted:  var(--cosy-color-ink-muted, #4a4a4a);
+    --ink-faint:  var(--cosy-color-ink-faint, #5c5957);
+    --muted:      var(--cosy-color-muted, #5c5957);
+
+    /* ── Tag Colors for accessibility ── */
+    --a2-tag-bg: var(--cosy-tag-a2-bg, #FAF0E6);
+    --a2-tag-color: var(--cosy-tag-a2-color, #8A5200);
+    --sensitive-tag-bg: var(--cosy-tag-sensitive-bg, #FFF5F5);
+    --sensitive-tag-color: var(--cosy-tag-sensitive-color, #B91C1C);
+
+    /* ── UI Palette ────────────────────────────────────── */
+    --teal:       var(--sage);
+    --teal-light: var(--sage-light);
+
+    --honey:      var(--cosy-color-honey, #945e05);
+    --honey-dark: var(--cosy-color-honey-dark, #7d4d03);
+    --honey-pale: var(--cosy-color-honey-pale, #fff8e7);
+    --honey-mid:  var(--cosy-color-honey-mid, #fef0c7);
+
+    --coral:      var(--cosy-color-coral, #B84318);
+    --coral-light: var(--cosy-color-coral-light, #faeee8);
+
+    --gold:       var(--cosy-color-honey, #945e05);
+    --gold-light: var(--cosy-color-honey-pale, #fff8e7);
+
+    --plum:       var(--cosy-color-plum, #7a5c3a);
+    --plum-light: var(--cosy-color-plum-light, #f5ede0);
+
+    --blue:       var(--cosy-color-blue, #3a5298);
+    --blue-light: var(--cosy-color-blue-light, #eef1fb);
+
+    --green:      var(--cosy-color-green, #4a6b50);
+    --green-light: var(--cosy-color-green-light, #e5f4ec);
+
+    --rose:       var(--cosy-color-rose, #a32d2d);
+    --rose-light: var(--cosy-color-rose-light, #fcebeb);
+
+    --navy:       var(--cosy-color-navy, #1e2f6b);
+    --navy-light: var(--cosy-color-navy-light, #e8ecf5);
+
+    --accent-color: var(--cosy-color-accent, #d66161);
+
+    /* ── Mistake block variables ── */
+    --mistake-bg:          #FFFDF5;
+    --mistake-header-bg:   #FFF8F0;
+    --mistake-header-text: #8c2e2e;
+    --mistake-wrong-color: #C0392B;
+    --mistake-right-color: #1A7A4A;
+    --mistake-null-color:  #9CA3AF;
+    --mistake-subj-color:  #2B6CB0;
+    --mistake-verb-color:  #0F766E;
+    --mistake-obj-color:   #7C3AED;
+    --mistake-mod-color:   #C05621;
+    --mistake-other-color: #B45309;
+
+    /* ── Dictionary Panel variables ── */
+    --dict-panel-bg:       rgba(255, 255, 255, 0.95);
+    --harvest-card-bg:     rgba(255, 255, 255, 0.98);
+
+    /* ── Homepage Note variables ── */
+    --group-note-bg:       var(--cosy-color-honey-pale, #fff8e7);
+
+    /* ── Cosy Button System ────────────────────────────── */
+    --btn-font-sans: var(--font-sans);
+    --btn-primary-bg: var(--sage);
+    --btn-primary-color: #ffffff;
+    --btn-primary-hover-bg: var(--sage-dark);
+    --btn-primary-hover-color: #ffffff;
+    --btn-primary-radius: var(--cosy-radius-full, 100px);
+    --btn-primary-padding: 14px 32px;
+    --btn-primary-weight: var(--cosy-font-weight-extrabold, 800);
+    --btn-primary-shadow: 0 4px 14px rgba(46,74,51,0.15);
+    --btn-primary-hover-shadow: 0 6px 20px rgba(46,74,51,0.25);
+
+    --btn-secondary-bg: transparent;
+    --btn-secondary-border: 1.5px solid var(--sage-soft);
+    --btn-secondary-color: var(--sage-dark);
+    --btn-secondary-hover-bg: var(--sage-light);
+    --btn-secondary-hover-color: var(--sage-deep);
+    --btn-secondary-radius: var(--cosy-radius-full, 100px);
+    --btn-secondary-padding: 13px 28px;
+    --btn-secondary-weight: var(--cosy-font-weight-semibold, 600);
+
+    --btn-tertiary-color: var(--sage-dark);
+    --btn-tertiary-hover-color: var(--sage-deep);
+    --btn-tertiary-weight: var(--cosy-font-weight-bold, 700);
+
+    /* ── Borders & Shadows ──────────────────────────────── */
+    --border:        var(--cosy-color-border, rgba(74,107,80,.12));
+    --border-hover:  var(--cosy-color-border-hover, rgba(74,107,80,.25));
+    --shadow-sm:     var(--cosy-shadow-sm, 0 2px 12px rgba(46,74,51,.07));
+    --shadow:        var(--cosy-shadow-base, 0 6px 28px rgba(46,74,51,.10));
+    --box-shadow:    var(--shadow);
+
+    /* ── Spacing Scale ─────────────────────────────────── */
+    --space-xs:  var(--cosy-space-xs, 4px);
+    --space-sm:  var(--cosy-space-sm, 8px);
+    --space-md:  var(--cosy-space-md, 16px);
+    --space-lg:  var(--cosy-space-lg, 24px);
+    --space-xl:  var(--cosy-space-xl, 32px);
+    --space-xxl: var(--cosy-space-xxl, 48px);
+
+    /* ── Border Radius ─────────────────────────────────── */
+    --r-sm:   var(--cosy-r-sm, 8px);
+    --r-md:   var(--cosy-r-md, 14px);
+    --r-lg:   var(--cosy-r-lg, 22px);
+    --r-xl:   var(--cosy-r-xl, 32px);
+    --radius: var(--cosy-radius-base, 18px);
+    --radius-sm: var(--cosy-radius-smm, 10px);
+    --border-radius: var(--radius);
+
+    /* ── Theme Logic ───────────────────────────────────── */
+    --paper-bg:      #FDF8F0;
+    --paper-txt:     #1C1008;
+    --contrast-bg:   #111111;
+    --contrast-txt:  #FFFFFF;
+    --contrast-border: #444444;
+
+    --primary-color:   var(--sage);
+    --secondary-color: var(--honey);
+    --vocab-color:     var(--sage);
+    --grammar-color:   var(--honey);
+    --speaking-color:  var(--honey);
+
+    --background-color: var(--cream);
+    --surface-color:    #FFFFFF;
+    --text-color:       var(--ink);
+    --light-gray:       var(--cream-dark);
+    --transition-speed: 0.3s;
+
+    /* ── Typography ────────────────────────────────────── */
+    --font-sans: var(--cosy-font-sans, 'Nunito', 'DM Sans', sans-serif);
+    --font-serif: var(--cosy-font-serif, 'Fraunces', 'Lora', serif);
+
+    /* ── Legacy Support ────────────────────────────────── */
+    --are-col: var(--blue, #3a5298);
+    --ere-col: var(--coral, #B84318);
+    --ire-col: #9B59B6;
+}
+
+html[data-theme="dark"], body.theme-dark {
+    --cream:      var(--cosy-color-cream, #1a1f1a);
+    --cream-dark: var(--cosy-color-cream-dark, #141914);
+    --warm-white: var(--cosy-color-warm-white, #222b22);
+    --ink:        var(--cosy-color-ink, #e8f0e9);
+    --ink-soft:   var(--cosy-color-ink-soft, #c8d8c9);
+    --ink-muted:  var(--cosy-color-ink-muted, #c8d8c9);
+    --ink-faint:  var(--cosy-color-ink-faint, #8a9e8b);
+    --muted:      var(--cosy-color-muted, #8a9e8b);
+    --border:     var(--cosy-color-border, rgba(107,143,113,.2));
+    --border-hover: var(--cosy-color-border-hover, rgba(107,143,113,.35));
+
+    /* Sage Theme dark variations */
+    --sage:       var(--cosy-color-sage, #5a7a5f);
+    --sage-dark:  var(--cosy-color-sage-dark, #8a9e8b);
+    --sage-deep:  var(--cosy-color-sage-deep, #e8f0e9);
+    --sage-pale:  var(--cosy-color-sage-pale, #222c23);
+    --sage-mist:  var(--cosy-color-sage-mist, #1f2720);
+    --sage-light: var(--cosy-color-sage-light, #222c23);
+
+    --paper-bg:   #1a1f1a;
+    --paper-txt:  #e8f0e9;
+
+    --background-color: var(--cream);
+    --surface-color:    #222b22;
+    --text-color:       var(--ink);
+    --light-gray:       var(--cream-dark);
+
+    /* ── Dark overrides for light color tints ── */
+    --honey-pale:  var(--cosy-color-honey-pale, #2d2417);
+    --honey-mid:   var(--cosy-color-honey-mid, #35291b);
+    --coral-light: var(--cosy-color-coral-light, #2d1a15);
+    --gold-light:  var(--cosy-color-honey-pale, #2d2417);
+    --plum-light:  var(--cosy-color-plum-light, #26201a);
+    --blue-light:  var(--cosy-color-blue-light, #1a202d);
+    --green-light: var(--cosy-color-green-light, #15241b);
+    --rose-light:  var(--cosy-color-rose-light, #2d1515);
+    --navy-light:  var(--cosy-color-navy-light, #141a29);
+
+    /* ── Mistake block variables ── */
+    --mistake-bg:          #241a15;
+    --mistake-header-bg:   #2e211a;
+    --mistake-header-text: #fca5a5;
+    --mistake-wrong-color: #f87171;
+    --mistake-right-color: #4ade80;
+    --mistake-null-color:  #C1C7D0;
+    --mistake-subj-color:  #63B3ED;
+    --mistake-verb-color:  #2DD4BF;
+    --mistake-obj-color:   #A78BFA;
+    --mistake-mod-color:   #F6AD55;
+    --mistake-other-color: #FBBF24;
+
+    /* ── Dictionary Panel variables ── */
+    --dict-panel-bg:       rgba(34, 43, 34, 0.95);
+    --harvest-card-bg:     rgba(34, 43, 34, 0.98);
+
+    /* ── Homepage Note variables ── */
+    --group-note-bg:       #2d261a;
+
+    /* ── Cosy Button System Dark Overrides ──────────────── */
+    --btn-primary-bg: var(--sage);
+    --btn-primary-hover-bg: var(--sage-dark);
+    --btn-secondary-border: 1.5px solid var(--sage-soft);
+    --btn-secondary-color: var(--sage-light);
+    --btn-secondary-hover-bg: rgba(107,143,113,0.15);
+    --btn-secondary-hover-color: #ffffff;
+    --btn-tertiary-color: var(--sage-light);
+    --btn-tertiary-hover-color: #ffffff;
+}
+
+
+/* Additional Fallbacks for Bare Variables */
+:root {
+  --surface: var(--cosy-color-surface, #FFFFFF);
+  --ink-deep: var(--cosy-color-sage-deep, #1a2a1c);
+  --shadow-md: var(--cosy-shadow-md, 0 4px 14px rgba(46, 74, 51, 0.15));
+  --indigo: #4f46e5;
+  --indigo-light: #e0e7ff;
+  --orange: #ea580c;
+  --orange-light: #ffedd5;
+}
+
+/* ==========================================================================
    COSYevents Hub Stylesheet
    ========================================================================== */
 

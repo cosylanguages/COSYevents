@@ -116,6 +116,14 @@ In addition to the initial 180+ standalone session pages migrated from `COSYlang
     - **My Life With/Without:** 2 batches (*Mobility & Tech Lifestyles*, *Urban Living & Comforts*)
     - **The Greatest Quotes:** 3 batches (*Richard Feynman: The Art of Knowing*, *Socrates: The Examined Life*, *Dostoevsky: Light & Darkness*)
     - **Keeping Up with Science** and **If You Were:** 0 batches (confirmed no pinned sections in source).
+  - **Dated Note (May 2024 / Current Session):** Populated `pinnedBatches` array in `data/events/speaking-clubs.json` for 6 themes (15 total batches, 65 verified session links):
+    - `mind-matters`: 4 batches
+    - `i-couldnt-help-but-wonder`: 2 batches
+    - `debatable-and-relatable`: 2 batches
+    - `lets-celebrate`: 2 batches
+    - `my-life-with-without`: 2 batches
+    - `the-greatest-quotes`: 3 batches
+    - `keeping-up-with-science` & `if-you-were`: 0 batches (verified absent from source)
   - Updated `speaking-clubs/index.html` and `data/events/speaking-clubs.json` to dynamically render pinned case study cards when selecting any theme with `pinnedBatches`. All 65 referenced session links were verified to resolve to existing files under `sessions/`.
 
 - **Karaoke Club (120 new session HTML pages):**
