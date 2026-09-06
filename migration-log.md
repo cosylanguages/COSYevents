@@ -97,7 +97,8 @@ All migrated content was preserved as full standalone session HTML pages in addi
 
 In addition to the initial 180+ standalone session pages migrated from `COSYlanguages/events/`, a comprehensive second migration pass was performed to bring over all remaining full standalone session HTML pages from `COSYlanguages/apps/premium-events/`:
 
-- **Speaking Clubs (215 new session HTML pages):**
+- **Speaking Clubs (218 new session HTML pages):**
+  - **Mind Matters:** 3 missing session HTML pages added (`disappearance-of-literary-men.html`, `technofeudalism-attention.html`, `why-friends-correct-your-story-intermediate.html`), bringing Mind Matters total to 58 session HTML pages in `sessions/mind-matters/`.
   - **I Couldn't Help But Wonder:** 27 session HTML pages (`sessions/i-couldnt-help-but-wonder/`)
   - **Keeping Up with Science:** 57 session HTML pages (`sessions/keeping-up-with-science/`)
   - **Debatable & Relatable:** 26 session HTML pages (`sessions/debatable-relatable/`)
@@ -105,6 +106,16 @@ In addition to the initial 180+ standalone session pages migrated from `COSYlang
   - **My Life With/Without:** 19 session HTML pages (`sessions/my-life-with-without/`)
   - **The Greatest Quotes:** 57 session HTML pages (`sessions/the-greatest-quotes/`)
   - **If You Were:** 5 session HTML pages (`sessions/if-you-were/`)
+
+- **Pinned Case Study Batches Curation Migration:**
+  - Extracted and integrated hand-curated "Pinned Case Study Batches" into `data/events/speaking-clubs.json` across 6 themes:
+    - **Mind Matters:** 1 batch (e.g. *The "Washing" & Public Manipulation Series*)
+    - **I Couldn't Help But Wonder:** 3 batches
+    - **Debatable & Relatable:** 3 batches
+    - **Let's Celebrate:** 3 batches
+    - **My Life With/Without:** 3 batches
+    - **The Greatest Quotes:** 3 batches
+  - Updated `speaking-clubs/index.html` to dynamically render pinned case study cards when selecting any theme with `pinnedBatches`.
 
 - **Karaoke Club (120 new session HTML pages):**
   - **Core Karaoke Sessions:** 13 session HTML pages (`sessions/karaoke-club/`)
@@ -117,4 +128,4 @@ In addition to the initial 180+ standalone session pages migrated from `COSYlang
 ---
 
 ## 🛑 Status for Old Folder Retirement
-This migration log confirms that **100% of real session content, full standalone session HTML pages (510+ total files across all 5 event types), catalog entries (489+ sessions), prompt decks, specifications, and structural decisions** from `COSYlanguages` have been mapped, restyled, reconciled, and verified working inside **COSYevents**.
+This migration log confirms that **100% of real session content, full standalone session HTML pages (513+ total files across all 5 event types), catalog entries (489+ sessions), pinned curation batches (16 batches), prompt decks, specifications, and structural decisions** from `COSYlanguages` have been mapped, restyled, reconciled, and verified working inside **COSYevents**.
