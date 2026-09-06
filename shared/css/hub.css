@@ -1,0 +1,332 @@
+/* ==========================================================================
+   COSYevents Hub Stylesheet
+   ========================================================================== */
+
+/* Base Typography & Color Fallbacks (utilizing CSS tokens when loaded) */
+:root {
+  --cosy-bg: var(--cream, #fdfcf8);
+  --cosy-surface: var(--warm-white, #ffffff);
+  --cosy-primary: var(--sage, #416b49);
+  --cosy-primary-dark: var(--sage-dark, #375742);
+  --cosy-primary-light: var(--sage-light, #e8f0e9);
+  --cosy-primary-soft: var(--sage-soft, #6b9474);
+  --cosy-text: var(--ink, #2a2a2a);
+  --cosy-text-muted: var(--ink-muted, #5c5957);
+  --cosy-border: var(--cream-dark, #e8e2d5);
+  --cosy-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --cosy-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --cosy-radius: 12px;
+  --cosy-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cosy-bg);
+  color: var(--cosy-text);
+  font-family: var(--cosy-font-family);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header & Banner */
+.hub-header {
+  background: linear-gradient(135deg, var(--cosy-primary-dark) 0%, var(--cosy-primary) 100%);
+  color: #ffffff;
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.hub-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hub-brand {
+  display: inline-block;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--cosy-primary-light);
+  margin-bottom: 0.5rem;
+}
+
+.hub-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.hub-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+}
+
+.hub-nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hub-nav-link {
+  color: var(--cosy-primary-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.hub-nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* Main Container & Grid */
+.hub-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.hub-section-header {
+  margin-bottom: 2rem;
+}
+
+.hub-section-title {
+  font-size: 1.5rem;
+  color: var(--cosy-primary-dark);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.hub-section-desc {
+  color: var(--cosy-text-muted);
+  font-size: 0.95rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Event Cards */
+.event-card {
+  background: var(--cosy-surface);
+  border: 1px solid var(--cosy-border);
+  border-radius: var(--cosy-radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--cosy-text);
+  box-shadow: var(--cosy-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--cosy-shadow-hover);
+  border-color: var(--cosy-primary-soft);
+}
+
+.event-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.event-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.event-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  background-color: var(--cosy-primary-light);
+  color: var(--cosy-primary-dark);
+}
+
+.event-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--cosy-primary-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.event-description {
+  font-size: 0.95rem;
+  color: var(--cosy-text-muted);
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+}
+
+.event-card-footer {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cosy-primary);
+}
+
+.event-card-footer .arrow {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover .event-card-footer .arrow {
+  transform: translateX(4px);
+}
+
+/* Footer */
+.hub-footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border-top: 1px solid var(--cosy-border);
+  color: var(--cosy-text-muted);
+  font-size: 0.875rem;
+  background-color: var(--cosy-surface);
+}
+
+.hub-footer a {
+  color: var(--cosy-primary);
+  text-decoration: none;
+}
+
+.hub-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Prompt Deck Viewer Widget Styles */
+.prompt-viewer {
+  background: var(--cosy-surface);
+  border: 1px solid var(--cosy-border);
+  border-radius: var(--cosy-radius);
+  padding: 1.5rem;
+  box-shadow: var(--cosy-shadow);
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+.prompt-viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--cosy-border);
+}
+
+.prompt-viewer-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cosy-primary-dark);
+}
+
+.prompt-viewer-counter {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cosy-text-muted);
+  background: var(--cosy-primary-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+}
+
+.prompt-card {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--cosy-bg);
+  border-radius: 8px;
+  border: 1px dashed var(--cosy-border);
+  text-align: center;
+}
+
+.prompt-card-meta {
+  margin-bottom: 0.75rem;
+}
+
+.prompt-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: var(--cosy-primary-light);
+  color: var(--cosy-primary-dark);
+  font-weight: 600;
+}
+
+.prompt-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--cosy-text);
+}
+
+.prompt-note {
+  font-size: 0.85rem;
+  color: var(--cosy-text-muted);
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+.prompt-viewer-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  gap: 1rem;
+}
+
+.prompt-btn {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--cosy-primary);
+  background-color: var(--cosy-surface);
+  color: var(--cosy-primary);
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prompt-btn:hover:not(:disabled) {
+  background-color: var(--cosy-primary);
+  color: #ffffff;
+}
+
+.prompt-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: var(--cosy-border);
+  color: var(--cosy-text-muted);
+}
+
+@media (max-width: 600px) {
+  .hub-title {
+    font-size: 1.75rem;
+  }
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}

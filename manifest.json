@@ -1,0 +1,29 @@
+{
+  "name": "COSYlanguages Premium Events",
+  "short_name": "COSY Events",
+  "description": "Interactive speaking clubs, cinema nights, karaoke challenges, game evenings, long reads, and prompt decks.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fdfcf8",
+  "theme_color": "#416b49",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "shared/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "shared/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "entertainment"
+  ],
+  "lang": "en"
+}
