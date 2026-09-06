@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speaking Clubs - COSYevents Catalog</title>
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/tokens.css">
+  <link rel="stylesheet" href="../shared/css/hub.css">
+</head>
+<body>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <span class="hub-brand"><a href="../index.html" style="color: inherit; text-decoration: none;">← COSYevents Catalog</a></span>
+      <h1 class="hub-title">Speaking Clubs</h1>
+      <p class="hub-subtitle">
+        Topic-driven discussion sessions with handcrafted vocabulary, level calibration (A2–C1), and structured speaking rounds.
+      </p>
+    </div>
+  </header>
+
+  <main class="hub-main">
+    <section class="hub-section-header">
+      <h2 class="hub-section-title">Select a Discussion Theme</h2>
+      <p class="hub-section-desc">Choose from our 8 curated Speaking Club themes below to load prompt cards and session materials.</p>
+    </section>
+
+    <!-- Club Theme Selector Grid -->
+    <div class="events-grid" id="club-selector">
+      <!-- Generated or static cards for 8 themes -->
+      <button class="event-card club-select-btn" data-theme-id="i-couldnt-help-but-wonder" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">🤔</span>
+          <span class="event-badge">Reflections</span>
+        </div>
+        <h3 class="event-name">I Couldn't Help But Wonder</h3>
+        <p class="event-description">Curious reflections and personal dilemmas inspired by modern life.</p>
+      </button>
+
+      <button class="event-card club-select-btn" data-theme-id="keeping-up-with-science" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">🔬</span>
+          <span class="event-badge">Science & Tech</span>
+        </div>
+        <h3 class="event-name">Keeping Up with Science</h3>
+        <p class="event-description">Debates and explorations around discovery and innovation.</p>
+      </button>
+
+      <button class="event-card club-select-btn" data-theme-id="mind-matters" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">🧠</span>
+          <span class="event-badge">Psychology</span>
+        </div>
+        <h3 class="event-name">Mind Matters</h3>
+        <p class="event-description">Psychology, habits, emotional intelligence, and well-being.</p>
+      </button>
+
+      <button class="event-card club-select-btn" data-theme-id="debatable-and-relatable" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">⚖️</span>
+          <span class="event-badge">Debate</span>
+        </div>
+        <h3 class="event-name">Debatable & Relatable</h3>
+        <p class="event-description">Lighthearted yet thought-provoking debates on everyday dilemmas.</p>
+      </button>
+
+      <button class="event-card club-select-btn" data-theme-id="lets-celebrate" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">🎉</span>
+          <span class="event-badge">Culture</span>
+        </div>
+        <h3 class="event-name">Let's Celebrate</h3>
+        <p class="event-description">Traditions, festivities, and shared cultural celebrations.</p>
+      </button>
+
+      <button class="event-card club-select-btn" data-theme-id="my-life-with-without" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">🔄</span>
+          <span class="event-badge">Lifestyle</span>
+        </div>
+        <h3 class="event-name">My Life With/Without</h3>
+        <p class="event-description">Personal storytelling on living with or without specific items or habits.</p>
+      </button>
+
+      <button class="event-card club-select-btn" data-theme-id="the-greatest-quotes" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">💬</span>
+          <span class="event-badge">Wisdom</span>
+        </div>
+        <h3 class="event-name">The Greatest Quotes</h3>
+        <p class="event-description">Inspiring quotes and philosophical proverbs evaluated and debated.</p>
+      </button>
+
+      <button class="event-card club-select-btn" data-theme-id="if-you-were" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
+        <div class="event-card-header">
+          <span class="event-icon">✨</span>
+          <span class="event-badge">Hypotheticals</span>
+        </div>
+        <h3 class="event-name">If You Were</h3>
+        <p class="event-description">Hypothetical role-play scenarios and speculative prompt decks.</p>
+      </button>
+    </div>
+
+    <!-- Prompt Deck Viewer Container -->
+    <section style="margin-top: 3rem;">
+      <div id="deck-viewer-container"></div>
+    </section>
+
+    <!-- Session Template / Turn-Taking Structure Section -->
+    <section style="margin-top: 3rem; background: var(--cosy-surface); padding: 2rem; border-radius: var(--cosy-radius); border: 1px solid var(--cosy-border);">
+      <h2 style="color: var(--cosy-primary-dark); margin-bottom: 1rem;">🗣️ Speaking Club Session Framework</h2>
+      <p style="margin-bottom: 1rem;">Use this structured turn-taking framework for live group discussion or solo practice:</p>
+      <ol style="padding-left: 1.5rem; line-height: 1.8; color: var(--cosy-text);">
+        <li><strong>Warm-up Round (5 mins):</strong> Each participant introduces themselves and gives a 1-sentence quick response to the first card.</li>
+        <li><strong>Deep Dive Rounds (25 mins):</strong> Rotate turn-taking for each prompt card. One speaker shares their main answer (60-90s), followed by follow-up questions from peers.</li>
+        <li><strong>Synthesis & Debrief (10 mins):</strong> Review key vocabulary and insights gathered during the discussion.</li>
+      </ol>
+
+      <div style="margin-top: 1.5rem; padding: 1rem; background: var(--cosy-primary-light); border-left: 4px solid var(--cosy-primary); border-radius: 4px;">
+        <p style="font-size: 0.9rem; color: var(--cosy-primary-dark); margin: 0;">
+          💡 <strong>Framing Note for Hypothetical Prompts (e.g., "If You Were"):</strong> While designed for live group turn-taking and role-play, hypothetical prompts can also serve solo learners as creative journaling or writing prompts. Reflect in writing for 5–10 minutes per prompt to practice target grammar structures (conditionals, speculative phrasing).
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../shared/js/prompt-deck-loader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      let data = null;
+      try {
+        const response = await fetch('../data/events/speaking-clubs.json');
+        data = await response.json();
+      } catch (e) {
+        console.error('Could not load speaking-clubs.json', e);
+      }
+
+      function loadThemeDeck(themeId) {
+        let themeCards = [];
+        let themeTitle = 'Speaking Clubs Prompt Deck';
+
+        if (data && data.clubs) {
+          const club = data.clubs.find(c => c.id === themeId);
+          if (club) {
+            themeTitle = `${club.title} Deck`;
+            themeCards = club.prompts;
+          }
+        }
+
+        new PromptDeckLoader({
+          containerId: 'deck-viewer-container',
+          title: themeTitle,
+          cards: themeCards
+        });
+      }
+
+      // Default load 'If You Were' or first theme
+      loadThemeDeck('if-you-were');
+
+      // Add click listeners to selector buttons
+      document.querySelectorAll('.club-select-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const themeId = btn.getAttribute('data-theme-id');
+          loadThemeDeck(themeId);
+          document.getElementById('deck-viewer-container').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -16,7 +16,7 @@ You are welcome to submit pull requests directly for:
 
 ### 🛑 Contributions Requiring Maintainer Approval
 Please open an issue to discuss with maintainers **before** submitting pull requests for:
-* **New Event Types / Formats:** Adding a new event category directory (e.g. creating a 7th event format beyond the core six).
+* **New Event Types / Formats:** Adding a new event category directory (e.g. creating a 6th event format beyond the core five).
 * **Schema & Architectural Changes:** Modifying `manifest.json`, changing dataset schemas (`SCHEMA.md`), or altering `shared/js/prompt-deck-loader.js`.
 * **Design & CSS Token Updates:** Changing hub layout structures or core color tokens in `shared/css/`.
 

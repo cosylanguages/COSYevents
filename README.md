@@ -24,13 +24,12 @@ In the COSYlanguages ecosystem, **COSYevents** serves as the primary content rep
 
 ## 🎪 Included Event Formats
 
-The catalog (`index.html`) hosts six core event formats:
-1. **Speaking Clubs** (`speaking-clubs/`) — Topic-driven discussion sessions with handcrafted vocabulary, level calibration (A2–C1), and structured speaking rounds.
+The catalog (`index.html`) hosts five core event formats:
+1. **Speaking Clubs** (`speaking-clubs/`) — Topic-driven discussion sessions and themes (such as "If You Were" hypothetical scenarios) with handcrafted vocabulary, level calibration (A2–C1), and structured speaking rounds.
 2. **Cinema Club** (`cinema-club/`) — Film-based language immersion with scene breakdowns, key vocabulary, and guided debate questions.
 3. **Karaoke Club** (`karaoke-club/`) — Active vocal performance combined with lyric analysis, targeted grammar spotlights, and communicative role-play challenges.
 4. **Game Evening** (`game-evening/`) — Interactive multiplayer linguistic games and communicative group challenges.
 5. **Long Reads** (`long-reads/`) — In-depth article and passage analysis with calibrated reading comprehension and debate prompts.
-6. **If You Were** (`if-you-were/`) — Hypothetical role-play scenarios and imaginative prompt decks to unlock fluid expression.
 
 ---
 
