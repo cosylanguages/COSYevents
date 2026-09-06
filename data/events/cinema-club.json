@@ -1,0 +1,216 @@
+{
+  "id": "cinema-club",
+  "title": "Cinema Club",
+  "description": "Authentic film-based language immersion with scene breakdowns, vocabulary lists, and discussion guides.",
+  "sessions": [
+    {
+      "id": "sci-fi-and-future-visions",
+      "title": "Sci-Fi & Future Visions",
+      "suggested_genre": "Science Fiction / Speculative Cinema",
+      "level_range": "B1–C1",
+      "vocabulary_primer": [
+        {
+          "term": "Plot twist",
+          "part_of_speech": "noun",
+          "definition": "An unexpected turn of events in a story or film.",
+          "example": "The final scene contained a brilliant plot twist that nobody saw coming."
+        },
+        {
+          "term": "Protagonist",
+          "part_of_speech": "noun",
+          "definition": "The main character or leading figure in a narrative.",
+          "example": "The protagonist must make a difficult decision to save her city."
+        },
+        {
+          "term": "Dystopian",
+          "part_of_speech": "adjective",
+          "definition": "Relating to an imagined state or society in which there is great suffering or injustice.",
+          "example": "The film paints a dystopian picture of a world governed by algorithms."
+        },
+        {
+          "term": "Foreshadowing",
+          "part_of_speech": "noun",
+          "definition": "A warning or indication of a future event in a story.",
+          "example": "Eerie ambient music was used as foreshadowing before the danger appeared."
+        }
+      ],
+      "prompts": [
+        {
+          "level": "B1",
+          "category": "Scene Analysis",
+          "text": "Describe a visual scene or piece of technology from the film that surprised or impressed you most."
+        },
+        {
+          "level": "B2",
+          "category": "Character Choice",
+          "text": "What would you have done differently if you were faced with the main character's core dilemma?"
+        },
+        {
+          "level": "C1",
+          "category": "Thematic Reflection",
+          "text": "What warning or philosophical message does this film offer about humanity's reliance on technology?"
+        }
+      ]
+    },
+    {
+      "id": "drama-and-human-connections",
+      "title": "Drama & Human Connections",
+      "description": "Character-driven storytelling focusing on personal relationships, conflicts, and emotional journeys.",
+      "suggested_genre": "Human Interest Drama / Character Study",
+      "level_range": "A2–C1",
+      "vocabulary_primer": [
+        {
+          "term": "Empathy",
+          "part_of_speech": "noun",
+          "definition": "The ability to understand and share the feelings of another person.",
+          "example": "The director builds strong empathy between the audience and the struggling lead character."
+        },
+        {
+          "term": "Climax",
+          "part_of_speech": "noun",
+          "definition": "The most intense, exciting, or important point of something.",
+          "example": "Their emotional argument at dinner served as the emotional climax of the story."
+        },
+        {
+          "term": "Bittersweet",
+          "part_of_speech": "adjective",
+          "definition": "Arousing pleasure tinged with sadness or regret.",
+          "example": "The movie concluded with a bittersweet farewell between the two lifelong friends."
+        },
+        {
+          "term": "Subtext",
+          "part_of_speech": "noun",
+          "definition": "An underlying and often distinct theme in a piece of writing or conversation.",
+          "example": "Although they spoke politely, the subtext of their dialogue revealed deep resentment."
+        }
+      ],
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Character",
+          "text": "Which character in the film did you find most relatable or likeable, and why?"
+        },
+        {
+          "level": "B1",
+          "category": "Relationships",
+          "text": "How did the main relationship between the central characters change from the beginning to the end?"
+        },
+        {
+          "level": "B2",
+          "category": "Conflict",
+          "text": "Was the central conflict caused more by external circumstances or personal misunderstandings?"
+        },
+        {
+          "level": "C1",
+          "category": "Resolution",
+          "text": "Do you feel the ending was realistic and earned, or did it feel overly idealized?"
+        }
+      ]
+    },
+    {
+      "id": "mystery-and-suspense",
+      "title": "Mystery & Suspense",
+      "description": "Tense narratives driven by secrets, investigations, and psychological suspense.",
+      "suggested_genre": "Thriller / Detective Mystery",
+      "level_range": "B1–C1",
+      "vocabulary_primer": [
+        {
+          "term": "Red herring",
+          "part_of_speech": "noun",
+          "definition": "Something that misleads or distracts from a relevant or important question.",
+          "example": "The suspicious neighbor turned out to be a red herring designed to fool the audience."
+        },
+        {
+          "term": "Cliffhanger",
+          "part_of_speech": "noun",
+          "definition": "A dramatic and exciting ending of a story that leaves the audience in suspense.",
+          "example": "The episode ended on a nail-biting cliffhanger."
+        },
+        {
+          "term": "Pacing",
+          "part_of_speech": "noun",
+          "definition": "The speed at which a story or scene unfolds.",
+          "example": "The film's relentless pacing kept viewers on the edge of their seats throughout."
+        },
+        {
+          "term": "Motive",
+          "part_of_speech": "noun",
+          "definition": "A reason for doing something, especially one that is hidden or not obvious.",
+          "example": "The detective spent the entire second act trying to discover the suspect's true motive."
+        }
+      ],
+      "prompts": [
+        {
+          "level": "B1",
+          "category": "Suspense",
+          "text": "At what point in the film did you feel the most suspense, and how did the director create that feeling?"
+        },
+        {
+          "level": "B2",
+          "category": "Deduction",
+          "text": "Did you figure out the secret or mystery before the characters revealed it? What clues gave it away?"
+        },
+        {
+          "level": "C1",
+          "category": "Atmosphere",
+          "text": "How did sound design, lighting, or camera placement contribute to the sense of mystery?"
+        }
+      ]
+    },
+    {
+      "id": "comedy-and-social-satire",
+      "title": "Comedy & Social Satire",
+      "description": "Witty, humorous, or satirical films exploring cultural norms and human eccentricities.",
+      "suggested_genre": "Satirical Comedy / Social Farce",
+      "level_range": "A2–C1",
+      "vocabulary_primer": [
+        {
+          "term": "Irony",
+          "part_of_speech": "noun",
+          "definition": "The expression of one's meaning by using language that normally signifies the opposite.",
+          "example": "There was rich irony in a tech mogul getting locked out of his own smart house."
+        },
+        {
+          "term": "Satire",
+          "part_of_speech": "noun",
+          "definition": "The use of humor, irony, exaggeration, or ridicule to expose and criticize people's stupidity or vices.",
+          "example": "The comedy was a sharp satire of corporate workplace culture."
+        },
+        {
+          "term": "Misunderstanding",
+          "part_of_speech": "noun",
+          "definition": "A failure to understand something correctly.",
+          "example": "The entire comedic plot escalated from a simple linguistic misunderstanding."
+        },
+        {
+          "term": "Sarcasm",
+          "part_of_speech": "noun",
+          "definition": "The use of irony to mock or convey contempt.",
+          "example": "The character's dry sarcasm provided constant comedic relief during intense moments."
+        }
+      ],
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Humor",
+          "text": "Which moment in the movie made you laugh or smile the most?"
+        },
+        {
+          "level": "B1",
+          "category": "Culture",
+          "text": "Do you think humor in this film translates easily across different cultures and languages?"
+        },
+        {
+          "level": "B2",
+          "category": "Satire",
+          "text": "What real-world social issue or human weakness was the film making fun of?"
+        },
+        {
+          "level": "C1",
+          "category": "Cultural Nuance",
+          "text": "How much of the comedy relied on subtle wordplay or body language versus situational absurdity?"
+        }
+      ]
+    }
+  ]
+}

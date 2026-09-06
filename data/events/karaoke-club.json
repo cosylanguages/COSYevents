@@ -1,0 +1,84 @@
+{
+  "id": "karaoke-club",
+  "title": "Karaoke Club",
+  "description": "Active vocal performance combined with lyric analysis, targeted pronunciation spotlights, and communicative challenges.",
+  "themes": [
+    {
+      "id": "80s-pop-classics",
+      "title": "80s Pop Classics",
+      "level_range": "A2–B2",
+      "songs": [
+        {
+          "title": "Take On Me",
+          "artist": "a-ha",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=a-ha+Take+On+Me+karaoke",
+          "pronunciation_prompt": "Practice singing or speaking smooth vowel transitions and high pitch slides on phrases like 'shining away' and 'coming for your love'."
+        },
+        {
+          "title": "Sweet Child O' Mine",
+          "artist": "Guns N' Roses",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Guns+N+Roses+Sweet+Child+O+Mine+karaoke",
+          "pronunciation_prompt": "Focus on crisp rhythm and sustained vocal resonance on open vowel sounds during high melody lines."
+        },
+        {
+          "title": "Billie Jean",
+          "artist": "Michael Jackson",
+          "level": "B2",
+          "external_link": "https://www.youtube.com/results?search_query=Michael+Jackson+Billie+Jean+karaoke",
+          "pronunciation_prompt": "Emphasize staccato consonants (p, t, k) and rhythmic syncopation across fast-paced vocal lines."
+        }
+      ]
+    },
+    {
+      "id": "love-and-ballads",
+      "title": "Love & Ballads",
+      "level_range": "A2–C1",
+      "songs": [
+        {
+          "title": "Count On Me",
+          "artist": "Bruno Mars",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=Bruno+Mars+Count+On+Me+karaoke",
+          "pronunciation_prompt": "Focus on clear enunciation of final consonants and friendly, conversational intonation."
+        },
+        {
+          "title": "Someone Like You",
+          "artist": "Adele",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Adele+Someone+Like+You+karaoke",
+          "pronunciation_prompt": "Practice connected speech and breath support across long melodic phrases."
+        },
+        {
+          "title": "Shallow",
+          "artist": "Lady Gaga & Bradley Cooper",
+          "level": "C1",
+          "external_link": "https://www.youtube.com/results?search_query=Lady+Gaga+Bradley+Cooper+Shallow+karaoke",
+          "pronunciation_prompt": "Master dynamic contrast between quiet conversational verses and powerful belt choruses."
+        }
+      ]
+    },
+    {
+      "id": "kids-and-animation",
+      "title": "Kids & Animation Hits",
+      "level_range": "A1–B1",
+      "songs": [
+        {
+          "title": "Let It Go",
+          "artist": "Idina Menzel (Frozen)",
+          "level": "A2",
+          "external_link": "https://www.youtube.com/results?search_query=Idina+Menzel+Let+It+Go+karaoke",
+          "pronunciation_prompt": "Focus on expressive vocal projection and distinct pronunciation of 's' and 't' ending sounds."
+        },
+        {
+          "title": "You're Welcome",
+          "artist": "Dwayne Johnson (Moana)",
+          "level": "B1",
+          "external_link": "https://www.youtube.com/results?search_query=Dwayne+Johnson+Youre+Welcome+karaoke",
+          "pronunciation_prompt": "Practice rapid cadence, rhythmic timing, and cheerful storytelling tone."
+        }
+      ]
+    }
+  ]
+}
