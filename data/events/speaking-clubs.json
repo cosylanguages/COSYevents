@@ -1,0 +1,231 @@
+{
+  "id": "speaking-clubs",
+  "title": "Speaking Clubs",
+  "description": "Topic-driven discussion sessions with handcrafted vocabulary, level calibration (A2–C1), and structured speaking rounds.",
+  "clubs": [
+    {
+      "id": "i-couldnt-help-but-wonder",
+      "title": "I Couldn't Help But Wonder",
+      "description": "Curious reflections, personal dilemmas, and observational discussion topics inspired by modern life.",
+      "level_range": "A2–C1",
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Daily Life",
+          "text": "What is a small habit you noticed in others that you find interesting or strange?"
+        },
+        {
+          "level": "B1",
+          "category": "Social Dynamics",
+          "text": "Have you ever wondered why people find it hard to say 'no' to invitations?"
+        },
+        {
+          "level": "B2",
+          "category": "Relationships",
+          "text": "How do digital communication tools change the way we maintain long-term friendships?"
+        },
+        {
+          "level": "C1",
+          "category": "Philosophy",
+          "text": "To what extent does social expectation shape our personal definitions of success?"
+        }
+      ]
+    },
+    {
+      "id": "keeping-up-with-science",
+      "title": "Keeping Up with Science",
+      "description": "Debates and explorations around modern scientific discoveries, technology, and environmental issues.",
+      "level_range": "A2–C1",
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Technology",
+          "text": "What piece of technology do you use every day that you couldn't live without?"
+        },
+        {
+          "level": "B1",
+          "category": "Innovation",
+          "text": "How will artificial intelligence change everyday jobs in the next ten years?"
+        },
+        {
+          "level": "B2",
+          "category": "Environment",
+          "text": "What measures should cities prioritize to combat urban pollution and climate change?"
+        },
+        {
+          "level": "C1",
+          "category": "Ethics in Tech",
+          "text": "Should genetic engineering in medicine be strictly regulated by international law?"
+        }
+      ]
+    },
+    {
+      "id": "mind-matters",
+      "title": "Mind Matters",
+      "description": "Engaging conversations on psychology, emotional intelligence, habits, and mental well-being.",
+      "level_range": "A2–C1",
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Habits",
+          "text": "What is one healthy habit you would like to develop this year?"
+        },
+        {
+          "level": "B1",
+          "category": "Stress Management",
+          "text": "How do you usually relax after a very stressful day or week?"
+        },
+        {
+          "level": "B2",
+          "category": "Psychology",
+          "text": "In what ways does cognitive bias influence our daily decision-making processes?"
+        },
+        {
+          "level": "C1",
+          "category": "Mindfulness",
+          "text": "How can modern society balance productivity demands with mental health preservation?"
+        }
+      ]
+    },
+    {
+      "id": "debatable-and-relatable",
+      "title": "Debatable & Relatable",
+      "description": "Lighthearted yet thought-provoking debates on common daily dilemmas and light controversial topics.",
+      "level_range": "A2–C1",
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Preferences",
+          "text": "Is it better to live in a quiet countryside town or a bustling big city?"
+        },
+        {
+          "level": "B1",
+          "category": "Work-Life",
+          "text": "Should companies mandate a four-day work week for all full-time employees?"
+        },
+        {
+          "level": "B2",
+          "category": "Social Norms",
+          "text": "Is remote working overall more beneficial or detrimental to team culture and collaboration?"
+        },
+        {
+          "level": "C1",
+          "category": "Ethics",
+          "text": "Does public shaming on social media ever serve a legitimate moral purpose?"
+        }
+      ]
+    },
+    {
+      "id": "lets-celebrate",
+      "title": "Let's Celebrate",
+      "description": "Cultural traditions, festivities, milestones, and shared cultural celebrations across the world.",
+      "level_range": "A2–C1",
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Traditions",
+          "text": "What is your favorite holiday or annual celebration, and how do you celebrate it?"
+        },
+        {
+          "level": "B1",
+          "category": "Culture",
+          "text": "How have traditional family celebrations evolved in your country over the past decade?"
+        },
+        {
+          "level": "B2",
+          "category": "Global Festivities",
+          "text": "Why do humans across all cultures feel a strong need to mark seasonal milestones with festivals?"
+        },
+        {
+          "level": "C1",
+          "category": "Commercialization",
+          "text": "Has the commercialization of global holidays weakened their underlying cultural significance?"
+        }
+      ]
+    },
+    {
+      "id": "my-life-with-without",
+      "title": "My Life With/Without",
+      "description": "Personal storytelling and reflection on living with or without specific items, habits, or circumstances.",
+      "level_range": "A2–C1",
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Lifestyle",
+          "text": "How would your weekend change if you spent it completely without smartphone or internet access?"
+        },
+        {
+          "level": "B1",
+          "category": "Minimalism",
+          "text": "Could you comfortably live in a minimal home with only 100 personal possessions?"
+        },
+        {
+          "level": "B2",
+          "category": "Reflections",
+          "text": "How has living with or without pets/hobbies shaped your personal growth?"
+        },
+        {
+          "level": "C1",
+          "category": "Perspective",
+          "text": "To what extent do physical possessions contribute to long-term psychological fulfillment?"
+        }
+      ]
+    },
+    {
+      "id": "the-greatest-quotes",
+      "title": "The Greatest Quotes",
+      "description": "Inspiring quotes, proverbs, and philosophical sayings evaluated and debated by participants.",
+      "level_range": "A2–C1",
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Proverbs",
+          "text": "What does 'Practice makes perfect' mean to you in your language learning journey?"
+        },
+        {
+          "level": "B1",
+          "category": "Inspiration",
+          "text": "Discuss the quote: 'The journey of a thousand miles begins with a single step.'"
+        },
+        {
+          "level": "B2",
+          "category": "Wisdom",
+          "text": "Debate the famous statement: 'Fortune favors the bold.' Is caution sometimes wiser?"
+        },
+        {
+          "level": "C1",
+          "category": "Philosophy",
+          "text": "Analyze Nietzsche's assertion: 'He who has a why to live can bear almost any how.'"
+        }
+      ]
+    },
+    {
+      "id": "if-you-were",
+      "title": "If You Were",
+      "description": "Hypothetical role-play scenarios and imaginative prompt decks to unlock fluid expression across speculative situations.",
+      "level_range": "A2–C1",
+      "prompts": [
+        {
+          "level": "A2",
+          "category": "Power & Leadership",
+          "text": "If you were the mayor of your city for one day, what single rule or law would you create?"
+        },
+        {
+          "level": "B1",
+          "category": "Another Life",
+          "text": "If you were a world-renowned artist, musician, or writer, what kind of work would you produce?"
+        },
+        {
+          "level": "B2",
+          "category": "Another Era",
+          "text": "If you were transported to live in any historical century, which era would you choose and why?"
+        },
+        {
+          "level": "C1",
+          "category": "Another Place",
+          "text": "If you were appointed leader of an interplanetary human colony, how would you structure its initial government?"
+        }
+      ]
+    }
+  ]
+}
