@@ -6432,3 +6432,51 @@ body.theme-dark .session-jump-link.active {
   .ce-session-nav .ce-nav-links a { padding: 0.7rem 0.5rem; border-radius: 8px; min-height: 44px; }
   .ce-nav-right { margin-left: 0; }
 }
+
+/* ─── Session visual refinements ─── */
+
+/* Vocab grid: reduce orphan cards on desktop (10 cards -> 5+5 instead of 4+4+2) */
+.vocab-grid-10 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+/* Cinema theme: light-background content sections inherit near-white --ink from the
+   dark theme, making text invisible on white/cream cards. Scope dark tokens inside
+   any inline light-background container so text becomes readable. */
+.theme-cinema [style*="background: white"],
+.theme-cinema [style*="background:white"],
+.theme-cinema [style*="background: #FFF"],
+.theme-cinema [style*="background:#FFF"],
+.theme-cinema [style*="background: #FFFDF5"],
+.theme-cinema [style*="background:#FFFDF5"],
+.theme-cinema [style*="background: #FFF9E6"],
+.theme-cinema [style*="background:#FFF9E6"],
+.theme-cinema [style*="background: #FFF8E1"],
+.theme-cinema [style*="background:#FFF8E1"],
+.theme-cinema [style*="background: #FFF9F0"],
+.theme-cinema [style*="background:#FFF9F0"],
+.theme-cinema [style*="background: #FAFAFA"],
+.theme-cinema [style*="background:#FAFAFA"],
+.theme-cinema [style*="background: #F5F5F5"],
+.theme-cinema [style*="background:#F5F5F5"],
+.theme-cinema [style*="background: #FFFFF0"],
+.theme-cinema [style*="background:#FFFFF0"] {
+  --ink: #28251d;
+  --ink-soft: #3a3631;
+  --ink-muted: #5f5e58;
+  --muted: #5f5e58;
+  color: #28251d;
+}
+
+/* Cinema theme: elevate vocab cards above the near-black page surface */
+.theme-cinema .vocab-card {
+  background: #241912;
+  border-color: #4A3526;
+}
+.theme-cinema .vocab-card:hover { background: #2C2017; border-color: var(--teal-light, #4db6ac); }
+/* Keep mistake table readable on its light surface */
+.theme-cinema .mistake-wrong { color: #A12C7B !important; }
+.theme-cinema .mistake-right { color: #437A22 !important; }
+.theme-cinema .mistake-note-text { color: #5f5e58 !important; }
+
+/* Standardize round-header tints to a cohesive warm palette (less patchy pastels) */
+.round-header { background: var(--surface-alt, #FBFBF9); }
+.round-block.warm-up::before { background: #C77D3A; }
