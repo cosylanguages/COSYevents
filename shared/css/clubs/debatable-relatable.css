@@ -1,0 +1,369 @@
+
+/* ─── DEBATABLE & RELATABLE: THEMATIC ATMOSPHERIC STYLE OVERRIDES ─── */
+
+body[class*="theme-debate-"] {
+  background-color: var(--debate-theme-bg, #FFFDF9) !important;
+  color: var(--debate-theme-text, #372F2F) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[class*="theme-debate-"]::after {
+  content: var(--debate-theme-watermark, "⚖️") !important;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 8rem;
+  opacity: 0.04 !important;
+  pointer-events: none;
+  z-index: -1;
+  transition: content 0.3s ease;
+}
+
+html[data-theme="dark"] body[class*="theme-debate-"]::after {
+  opacity: 0.025 !important;
+}
+
+/* Breadcrumbs & links color synchronization */
+body[class*="theme-debate-"] .back-link,
+body[class*="theme-debate-"] .cosy-breadcrumbs a {
+  color: var(--debate-theme-accent) !important;
+}
+
+/* Main Box container styling to ensure beautiful persistent cozy contrast */
+body[class*="theme-debate-"] .vocab-card,
+body[class*="theme-debate-"] .round-block,
+body[class*="theme-debate-"] .debate-duel-box,
+body[class*="theme-debate-"] .mistake-block {
+  background-color: var(--debate-theme-card-bg) !important;
+  border-color: var(--debate-theme-border) !important;
+  color: var(--debate-theme-text) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body[class*="theme-debate-"] .vocab-word {
+  color: var(--debate-theme-accent) !important;
+  font-weight: 700;
+}
+
+body[class*="theme-debate-"] .round-header,
+body[class*="theme-debate-"] .mistake-header {
+  border-bottom: 1px solid var(--debate-theme-border) !important;
+  color: var(--debate-theme-text) !important;
+}
+
+body[class*="theme-debate-"] .btn-primary,
+body[class*="theme-debate-"] .btn-add-dict,
+body[class*="theme-debate-"] .btn-verify {
+  background-color: var(--debate-theme-accent) !important;
+  border-color: var(--debate-theme-accent) !important;
+  color: #FFFFFF !important;
+}
+
+body[class*="theme-debate-"] .session-hero {
+  background: var(--debate-theme-hero) !important;
+}
+
+body[class*="theme-debate-"] .debate-duel-box h3 {
+  color: var(--debate-theme-accent) !important;
+}
+body[class*="theme-debate-"] .debate-duel-item span {
+  color: var(--debate-theme-text) !important;
+}
+
+body[class*="theme-debate-"] .round-header {
+  background-color: var(--debate-theme-round-header-bg, #FAEEE8) !important;
+}
+
+body[class*="theme-debate-"] .vim-instruction,
+body[class*="theme-debate-"] .grammar-word-bank {
+  background-color: var(--debate-theme-card-bg) !important;
+  border-color: var(--debate-theme-accent) !important;
+  color: var(--debate-theme-text) !important;
+}
+
+html[data-theme="dark"] body[class*="theme-debate-"] .vim-instruction,
+html[data-theme="dark"] body[class*="theme-debate-"] .grammar-word-bank {
+  background-color: var(--debate-theme-card-bg-dark) !important;
+  border-color: var(--debate-theme-accent) !important;
+  color: var(--debate-theme-text-dark) !important;
+}
+
+body[class*="theme-debate-"] .grammar-task-item {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+  border-left: 4px solid var(--debate-theme-accent) !important;
+  color: var(--debate-theme-text) !important;
+}
+html[data-theme="dark"] body[class*="theme-debate-"] .grammar-task-item {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border-left: 4px solid var(--debate-theme-accent) !important;
+  color: var(--debate-theme-text-dark) !important;
+}
+body[class*="theme-debate-"] .grammar-task-item strong {
+  color: var(--debate-theme-accent) !important;
+}
+
+body[class*="theme-debate-"] .grammar-tap-chip {
+  background-color: var(--debate-theme-card-bg) !important;
+  border: 1px solid var(--debate-theme-accent) !important;
+  color: var(--debate-theme-accent) !important;
+}
+html[data-theme="dark"] body[class*="theme-debate-"] .grammar-tap-chip {
+  background-color: var(--debate-theme-card-bg-dark) !important;
+  border: 1px solid var(--debate-theme-accent) !important;
+  color: var(--debate-theme-accent) !important;
+}
+
+body[class*="theme-debate-"] .btn-verify {
+  background-color: var(--debate-theme-accent) !important;
+  color: #FFFFFF !important;
+}
+body[class*="theme-debate-"] .btn-reset {
+  border: 1px solid var(--debate-theme-border) !important;
+  color: var(--debate-theme-text) !important;
+}
+html[data-theme="dark"] body[class*="theme-debate-"] .btn-reset {
+  border: 1px solid var(--debate-theme-border-dark) !important;
+  color: var(--debate-theme-text-dark) !important;
+}
+
+/* ─── Light Mode Definitions ─── */
+body.theme-debate-work-week {
+  --debate-theme-bg: #F9FBF9;
+  --debate-theme-text: #1E351E;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #2E7D32;
+  --debate-theme-border: #C8E6C9;
+  --debate-theme-watermark: "📆";
+  --debate-theme-hero: linear-gradient(135deg, #2E7D32, #1B5E20);
+  --debate-theme-round-header-bg: #E8F5E9;
+}
+body.theme-debate-ai-art {
+  --debate-theme-bg: #FFFDF2;
+  --debate-theme-text: #3E2723;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #D84315;
+  --debate-theme-border: #FFCCBC;
+  --debate-theme-watermark: "🎨";
+  --debate-theme-hero: linear-gradient(135deg, #D84315, #5D4037);
+  --debate-theme-round-header-bg: #FBE9E7;
+}
+body.theme-debate-assisted-dying {
+  --debate-theme-bg: #F3F7F9;
+  --debate-theme-text: #1C2D37;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #00838F;
+  --debate-theme-border: #B2EBF2;
+  --debate-theme-watermark: "🕊️";
+  --debate-theme-hero: linear-gradient(135deg, #00838F, #004D40);
+  --debate-theme-round-header-bg: #E0F7FA;
+}
+body.theme-debate-homework-ban {
+  --debate-theme-bg: #FFF9E6;
+  --debate-theme-text: #4E342E;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #EF6C00;
+  --debate-theme-border: #FFE082;
+  --debate-theme-watermark: "🎒";
+  --debate-theme-hero: linear-gradient(135deg, #EF6C00, #4E342E);
+  --debate-theme-round-header-bg: #FFF8E1;
+}
+body.theme-debate-human-cloning {
+  --debate-theme-bg: #F4F9F4;
+  --debate-theme-text: #1B301F;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #2E7D32;
+  --debate-theme-border: #A5D6A7;
+  --debate-theme-watermark: "🧬";
+  --debate-theme-hero: linear-gradient(135deg, #2E7D32, #0D5325);
+  --debate-theme-round-header-bg: #E8F5E9;
+}
+body.theme-debate-meta-subscriptions {
+  --debate-theme-bg: #F6F8FC;
+  --debate-theme-text: #1E293B;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #1E3A8A;
+  --debate-theme-border: #CBD5E1;
+  --debate-theme-watermark: "💳";
+  --debate-theme-hero: linear-gradient(135deg, #1E3A8A, #0F172A);
+  --debate-theme-round-header-bg: #EFF6FF;
+}
+body.theme-debate-money-time {
+  --debate-theme-bg: #FAF7F2;
+  --debate-theme-text: #2B1D0C;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #B25E00;
+  --debate-theme-border: #F5DDA9;
+  --debate-theme-watermark: "💰";
+  --debate-theme-hero: linear-gradient(135deg, #B25E00, #3E2400);
+  --debate-theme-round-header-bg: #FFFDF9;
+}
+body.theme-debate-music-songs {
+  --debate-theme-bg: #FBF8F9;
+  --debate-theme-text: #3A1F2D;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #9C27B0;
+  --debate-theme-border: #E1BEE7;
+  --debate-theme-watermark: "🎵";
+  --debate-theme-hero: linear-gradient(135deg, #9C27B0, #4A148C);
+  --debate-theme-round-header-bg: #F3E5F5;
+}
+body.theme-debate-education {
+  --debate-theme-bg: #F4F6F9;
+  --debate-theme-text: #1A2D3D;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #1565C0;
+  --debate-theme-border: #BBDEFB;
+  --debate-theme-watermark: "🎓";
+  --debate-theme-hero: linear-gradient(135deg, #1565C0, #0D47A1);
+  --debate-theme-round-header-bg: #E3F2FD;
+}
+body.theme-debate-holidays {
+  --debate-theme-bg: #EFF8FB;
+  --debate-theme-text: #004D40;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #00897B;
+  --debate-theme-border: #B2DFDB;
+  --debate-theme-watermark: "🌴";
+  --debate-theme-hero: linear-gradient(135deg, #00897B, #004D40);
+  --debate-theme-round-header-bg: #E0F2F1;
+}
+body.theme-debate-typing-writing {
+  --debate-theme-bg: #FAF5F0;
+  --debate-theme-text: #3E2723;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #8D6E63;
+  --debate-theme-border: #D7CCC8;
+  --debate-theme-watermark: "✍️";
+  --debate-theme-hero: linear-gradient(135deg, #8D6E63, #4E342E);
+  --debate-theme-round-header-bg: #EFEBE9;
+}
+body.theme-debate-upbringing {
+  --debate-theme-bg: #FEF9F5;
+  --debate-theme-text: #4E2314;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-accent: #D84315;
+  --debate-theme-border: #FFDCC8;
+  --debate-theme-watermark: "🧒";
+  --debate-theme-hero: linear-gradient(135deg, #D84315, #4E2314);
+  --debate-theme-round-header-bg: #FDF2EB;
+}
+
+/* ─── Dark Mode Definitions ─── */
+html[data-theme="dark"] body[class*="theme-debate-"] {
+  background-color: var(--debate-theme-bg-dark, #121212) !important;
+  color: var(--debate-theme-text-dark, #ECECEC) !important;
+}
+
+html[data-theme="dark"] body[class*="theme-debate-"] .vocab-card,
+html[data-theme="dark"] body[class*="theme-debate-"] .round-block,
+html[data-theme="dark"] body[class*="theme-debate-"] .debate-duel-box,
+html[data-theme="dark"] body[class*="theme-debate-"] .mistake-block {
+  background-color: var(--debate-theme-card-bg-dark, #1E1E1E) !important;
+  border-color: var(--debate-theme-border-dark, #333333) !important;
+  color: var(--debate-theme-text-dark, #ECECEC) !important;
+}
+
+html[data-theme="dark"] body[class*="theme-debate-"] .round-header,
+html[data-theme="dark"] body[class*="theme-debate-"] .mistake-header {
+  border-bottom: 1px solid var(--debate-theme-border-dark) !important;
+  color: var(--debate-theme-text-dark) !important;
+  background-color: var(--debate-theme-round-header-bg-dark, #252525) !important;
+}
+
+html[data-theme="dark"] body.theme-debate-work-week {
+  --debate-theme-bg-dark: #0E1710;
+  --debate-theme-text-dark: #E2EDE4;
+  --debate-theme-card-bg-dark: #162319;
+  --debate-theme-border-dark: #233D29;
+  --debate-theme-accent: #4CAF50;
+  --debate-theme-round-header-bg-dark: #1E3322;
+}
+html[data-theme="dark"] body.theme-debate-ai-art {
+  --debate-theme-bg-dark: #1A1512;
+  --debate-theme-text-dark: #EDE6E2;
+  --debate-theme-card-bg-dark: #2A201A;
+  --debate-theme-border-dark: #423229;
+  --debate-theme-accent: #FF7043;
+  --debate-theme-round-header-bg-dark: #352821;
+}
+html[data-theme="dark"] body.theme-debate-assisted-dying {
+  --debate-theme-bg-dark: #0F161A;
+  --debate-theme-text-dark: #E6ECEF;
+  --debate-theme-card-bg-dark: #1B242C;
+  --debate-theme-border-dark: #2A3A47;
+  --debate-theme-accent: #26A69A;
+  --debate-theme-round-header-bg-dark: #22323D;
+}
+html[data-theme="dark"] body.theme-debate-homework-ban {
+  --debate-theme-bg-dark: #1A1710;
+  --debate-theme-text-dark: #ECE8DF;
+  --debate-theme-card-bg-dark: #2B251B;
+  --debate-theme-border-dark: #4A402E;
+  --debate-theme-accent: #FFB300;
+  --debate-theme-round-header-bg-dark: #372F21;
+}
+html[data-theme="dark"] body.theme-debate-human-cloning {
+  --debate-theme-bg-dark: #0D1610;
+  --debate-theme-text-dark: #E3ECE5;
+  --debate-theme-card-bg-dark: #16241B;
+  --debate-theme-border-dark: #283F2F;
+  --debate-theme-accent: #4CAF50;
+  --debate-theme-round-header-bg-dark: #1D3224;
+}
+html[data-theme="dark"] body.theme-debate-meta-subscriptions {
+  --debate-theme-bg-dark: #0B0F19;
+  --debate-theme-text-dark: #E2E8F0;
+  --debate-theme-card-bg-dark: #172033;
+  --debate-theme-border-dark: #2E3F5E;
+  --debate-theme-accent: #60A5FA;
+  --debate-theme-round-header-bg-dark: #1F2D47;
+}
+html[data-theme="dark"] body.theme-debate-money-time {
+  --debate-theme-bg-dark: #1A1510;
+  --debate-theme-text-dark: #EDE5DC;
+  --debate-theme-card-bg-dark: #2B221A;
+  --debate-theme-border-dark: #4E3E2F;
+  --debate-theme-accent: #FF9800;
+  --debate-theme-round-header-bg-dark: #392D21;
+}
+html[data-theme="dark"] body.theme-debate-music-songs {
+  --debate-theme-bg-dark: #171116;
+  --debate-theme-text-dark: #ECE4EB;
+  --debate-theme-card-bg-dark: #291E27;
+  --debate-theme-border-dark: #473244;
+  --debate-theme-accent: #BA68C8;
+  --debate-theme-round-header-bg-dark: #372534;
+}
+html[data-theme="dark"] body.theme-debate-education {
+  --debate-theme-bg-dark: #0E141B;
+  --debate-theme-text-dark: #E2EAF0;
+  --debate-theme-card-bg-dark: #1B2533;
+  --debate-theme-border-dark: #2A3A4F;
+  --debate-theme-accent: #42A5F5;
+  --debate-theme-round-header-bg-dark: #233245;
+}
+html[data-theme="dark"] body.theme-debate-holidays {
+  --debate-theme-bg-dark: #0D1616;
+  --debate-theme-text-dark: #E2EFEB;
+  --debate-theme-card-bg-dark: #162525;
+  --debate-theme-border-dark: #2A3E3E;
+  --debate-theme-accent: #26A69A;
+  --debate-theme-round-header-bg-dark: #1E3333;
+}
+html[data-theme="dark"] body.theme-debate-typing-writing {
+  --debate-theme-bg-dark: #1A1513;
+  --debate-theme-text-dark: #ECE5E1;
+  --debate-theme-card-bg-dark: #2B211E;
+  --debate-theme-border-dark: #463631;
+  --debate-theme-accent: #A1887F;
+  --debate-theme-round-header-bg-dark: #3A2C29;
+}
+html[data-theme="dark"] body.theme-debate-upbringing {
+  --debate-theme-bg-dark: #1B1310;
+  --debate-theme-text-dark: #EDE2DE;
+  --debate-theme-card-bg-dark: #2F201B;
+  --debate-theme-border-dark: #4E342B;
+  --debate-theme-accent: #FF7043;
+  --debate-theme-round-header-bg-dark: #3F2922;
+}

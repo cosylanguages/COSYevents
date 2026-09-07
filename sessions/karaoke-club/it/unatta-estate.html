@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>un'altra estate : COSYlanguages</title>
+<link href="../../../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../../shared/css/sessions.css">
+<link rel="stylesheet" href="../../../shared/css/clubs/karaoke-club.css">
+</head>
+<body class="theme-karaoke">
+<nav id="cosy-nav"></nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #4A154B, #2A0A35);">
+<div class="club-tag">Karaoke Club</div>
+<h1>un'altra estate</h1>
+<p class="session-date">Diodato • B1</p>
+</header>
+<main class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="../../../index.html">Home</a> <span class="sep">/</span>
+<a href="https://cosylanguages.github.io/COSYlanguages/events/index.html">Eventi</a> <span class="sep">/</span>
+<a href="../../../karaoke-club.html">Karaoke Club</a> <span class="sep">/</span>
+<span class="current">un'altra estate</span>
+</nav>
+<a class="back-link" href="../../../karaoke-club.html">← Torna al club</a>
+<div class="session-meta-grid">
+<div class="meta-item"><h4>Durata</h4><p>90–120 minuti</p></div>
+<div class="meta-item"><h4>Lingua</h4><p>Italiano</p></div>
+<div class="meta-item"><h4>Livello</h4><p>Intermedio (B1)</p></div>
+<div class="meta-item"><h4>Tema</h4><p>Libertà estiva</p></div>
+<div class="meta-item"><h4>Resources</h4><p>
+<a href="https://www.youtube.com/watch?v=D6TvAskGBx4" style="color:var(--teal); margin-right: 12px;" target="_blank">Music Video 🎥</a>
+<a href="https://www.youtube.com/watch?v=D6TvAskGBx4" style="color:var(--teal);" target="_blank">Song Link (Backup) 🎵</a>
+</p></div>
+<div class="meta-item"><h4>Offline Access</h4><p><button class="btn-print" onclick="window.print()" style="background: var(--indigo); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: background 0.2s;"><span style="font-size: 1rem;">📄</span> Download PDF</button></p></div>
+</div>
+<div class="cosy-video-wrapper">
+<div class="cosy-video-container">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/D6TvAskGBx4"></iframe>
+</div>
+<div class="cosy-video-disclaimer">
+<span>ℹ️ Fonte: YouTube. Questo materiale viene utilizzato esclusivamente a scopo didattico.</span>
+</div>
+</div>
+<div class="theme-box" style="background: var(--cream); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem; border: 1px dashed var(--border);">
+<h3 style="margin-top:0; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">❤️ Thème: Estate che cambia &amp; Nostalgia dei ricordi</h3>
+<p style="margin-bottom:0.5rem; font-size:0.9rem; color:var(--ink-soft);">Discuteremo di:</p>
+<ul style="margin:0; padding-left:1.2rem; font-size:0.9rem; color:var(--ink-soft);">
+<li>La fine della bella stagione</li>
+<li>La malinconia del mare</li>
+<li>La metamorfosi del tempo</li>
+<li>La ricerca di stabilità</li>
+</ul>
+</div>
+<div class="speaking-time-gauge" style="background: var(--warm-white); border-radius: 12px; padding: 1rem; margin-bottom: 3rem; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.5rem;">
+<div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: bold; color: var(--muted);">
+<span>🗣️ Speaking Time Gauge</span>
+<span>90-120 min Session</span>
+</div>
+<div class="gauge-bar" style="display: flex; height: 12px; border-radius: 6px; overflow: hidden;">
+<div style="width: 10%; background: #E67E22;" title="Warm-up (10%)"></div>
+<div style="width: 15%; background: #3498DB;" title="Vocabulary (15%)"></div>
+<div style="width: 15%; background: #9B59B6;" title="Listening (15%)"></div>
+<div style="width: 45%; background: #2ECC71;" title="Discussion (45%)"></div>
+<div style="width: 10%; background: #F1C40F;" title="Language Focus (10%)"></div>
+<div style="width: 5%; background: #E74C3C;" title="Final Challenge (5%)"></div>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); flex-wrap: wrap; gap: 0.5rem;">
+<span>🎵 Warm-up (10%)</span>
+<span>📚 Vocabulary (15%)</span>
+<span>🎧 Listening (15%)</span>
+<span>💬 Discussion (45%)</span>
+<span>✨ Language Focus (10%)</span>
+<span>🎭 Final Challenge (5%)</span>
+</div>
+</div>
+<div class="rounds-container">
+<div class="round-block warm-up open" id="s-warm">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8; cursor:pointer;">
+<span>🎵 Fase 1: Riscaldamento</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<ul class="round-questions">
+<li>Quanto ritieni importante questo tema di discussione nella tua vita quotidiana?</li>
+<li>Guarda il titolo 'un'altra estate' e l'artista 'Diodato'. Secondo te, di cosa parlerà questa canzone? (Domanda di predizione)</li>
+<li>Quali emozioni ti trasmette questo stile di musica?</li>
+</ul>
+</div>
+</div>
+<div class="round-block open" id="vocabulary">
+<div class="round-header" onclick="COSY.toggleRound('vocabulary')" style="background:#E1F5EE; cursor:pointer;">
+<span>📚 Fase 2: Vocabolario</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div class="vocab-grid-10">
+<h3 style="grid-column: 1 / -1; margin-top: 1rem; margin-bottom: 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">❤️ Concetti chiave ed emozioni</h3>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">L'estate (f.)</div>
+<div class="vocab-def">Stagione calda caratterizzata da luce, mare e vacanze.</div>
+<div class="vocab-example">Diodato canta un'altra estate che se ne va lasciando ricordi vividi.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">L'inverno</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'estate (f.)', definition:'Stagione calda caratterizzata da luce, mare e vacanze.', example:'Diodato canta un\'altra estate che se ne va lasciando ricordi vividi.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">La malinconia</div>
+<div class="vocab-def">Dolce tristezza legata al ricordo di cose passate.</div>
+<div class="vocab-example">Camminare sulla spiaggia vuota a settembre suscita una profonda malinconia.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">L'allegria</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La malinconia', definition:'Dolce tristezza legata al ricordo di cose passate.', example:'Camminare sulla spiaggia vuota a settembre suscita una profonda malinconia.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Lo scoglio</div>
+<div class="vocab-def">Roccia affiorante dal mare, simbolo di solidità.</div>
+<div class="vocab-example">Restare seduti sullo scoglio a guardare le onde aiuta a pensare.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">L'abisso</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Lo scoglio', definition:'Roccia affiorante dal mare, simbolo di solidità.', example:'Restare seduti sullo scoglio a guardare le onde aiuta a pensare.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Svanire</div>
+<div class="vocab-def">Dissiparsi lentamente fino a scomparire del tutto.</div>
+<div class="vocab-example">Il calore dei giorni estivi inizia a svanire con le prime piogge.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">Apparire</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Svanire', definition:'Dissiparsi lentamente fino a scomparire del tutto.', example:'Il calore dei giorni estivi inizia a svanire con le prime piogge.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">La spiaggia</div>
+<div class="vocab-def">Litorale sabbioso lungo il mare dove ci si ritrova.</div>
+<div class="vocab-example">La spiaggia ombreggiata di fine stagione ha un fascino unico.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">La città</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La spiaggia', definition:'Litorale sabbioso lungo il mare dove ci si ritrova.', example:'La spiaggia ombreggiata di fine stagione ha un fascino unico.'}, this)">+ Dictionary</button>
+</div>
+<h3 style="grid-column: 1 / -1; margin-top: 1rem; margin-bottom: 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">🗣️ Vita, azioni e connessioni</h3>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Riflettere</div>
+<div class="vocab-def">Meditare a fondo su di sé e sulle proprie scelte.</div>
+<div class="vocab-example">La fine delle vacanze è il momento ideale per riflettere sul futuro.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">Agire d'impulso</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Riflettere', definition:'Meditare a fondo su di sé e sulle proprie scelte.', example:'La fine delle vacanze è il momento ideale per riflettere sul futuro.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Il vento</div>
+<div class="vocab-def">Spostamento d'aria che porta ristoro e aria di cambiamento.</div>
+<div class="vocab-example">Un vento fresco di settembre annuncia che l'autunno è vicino.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">La bonaccia</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Il vento', definition:'Spostamento d\'aria che porta ristoro e aria di cambiamento.', example:'Un vento fresco di settembre annuncia che l\'autunno è vicino.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">La metamorfosi</div>
+<div class="vocab-def">Trasformazione profonda di un luogo o di una persona.</div>
+<div class="vocab-example">La città vive una vera metamorfosi quando finiscono le ferie.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">La stasi</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La metamorfosi', definition:'Trasformazione profonda di un luogo o di una persona.', example:'La città vive una vera metamorfosi quando finiscono le ferie.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Sospeso</div>
+<div class="vocab-def">Incertezza o attesa in un tempo che sembra essersi fermato.</div>
+<div class="vocab-example">Quel pomeriggio di fine agosto sembrava vivere in un tempo sospeso.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">Definito</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Sospeso', definition:'Incertezza o attesa in un tempo che sembra essersi fermato.', example:'Quel pomeriggio di fine agosto sembrava vivere in un tempo sospeso.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Il saluto</div>
+<div class="vocab-def">Gesto o parola di commiato da luoghi e persone care.</div>
+<div class="vocab-example">Un ultimo sguardo al mare è il nostro sincero saluto all'estate.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contrario :</strong> <span class="vocab-opp-word" style="font-weight: 600;">L'accoglienza</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Il saluto', definition:'Gesto o parola di commiato da luoghi e persone care.', example:'Un ultimo sguardo al mare è il nostro sincero saluto all\'estate.'}, this)">+ Dictionary</button>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block open" id="listening-exercise">
+<div class="round-header" onclick="COSY.toggleRound('listening-exercise')" style="background:#FAF0E6; cursor:pointer;">
+<span>🎧 Fase 3: Ascolto</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 2rem;">
+<h3 style="font-size: 1rem; margin-top: 0; margin-bottom: 0.75rem;">Banca delle parole:</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; font-family: 'Nunito', sans-serif;">
+<span class="club-tag" style="background: white; border-color: var(--border);">estate</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">spiaggia</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">mare</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">sole</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">libertà</span>
+</div>
+</div>
+<div class="lyrics-container" style="background: #fafafa; border: 1px solid var(--border); border-radius: 24px; padding: 2rem; font-family: 'DM Sans', sans-serif; line-height: 1.8; color: var(--ink-soft); max-height: 500px; overflow-y: auto;">
+<p style="white-space: pre-wrap; font-style: italic; margin-bottom: 0;">[Strofa 1]<br/>Lo vedi? Arriva un'altra <input class="lyrics-gap-input" data-answer="estate" oninput="COSY.checkGap(this)" placeholder="..." style="border: none; border-bottom: 2px dashed var(--border); background: transparent; width: 66px; text-align: center; font-weight: bold; color: var(--indigo); outline: none; padding: 0 4px; font-family: inherit; font-size: inherit; transition: all 0.2s ease;" type="text"/> (Ah)<br/>Lo so, non ci credevi più (Ah)<br/>Che è stato buio l’inverno, troppo duro, un inferno (Ah)<br/>E così immobile la primavera (Ah)<br/><br/>[Pre-Ritornello 1]<br/>Ma tu ora dove sei? (Ah, ah, ah, ah)<br/>Dimmi dove sei (Ah, ah)<br/>Che oggi ti porto via<br/><br/>[Ritornello]<br/>E ce ne andiamo al <input class="lyrics-gap-input" data-answer="mare" oninput="COSY.checkGap(this)" placeholder="..." style="border: none; border-bottom: 2px dashed var(--border); background: transparent; width: 60px; text-align: center; font-weight: bold; color: var(--indigo); outline: none; padding: 0 4px; font-family: inherit; font-size: inherit; transition: all 0.2s ease;" type="text"/> (Oh)<br/>Chissà che effetto fa (Chissà che effetto fa) (Oh)<br/>Vediamo se questo tempo ci rincuora (Ah, oh)<br/>Se questa <input class="lyrics-gap-input" data-answer="estate" oninput="COSY.checkGap(this)" placeholder="..." style="border: none; border-bottom: 2px dashed var(--border); background: transparent; width: 66px; text-align: center; font-weight: bold; color: var(--indigo); outline: none; padding: 0 4px; font-family: inherit; font-size: inherit; transition: all 0.2s ease;" type="text"/> ci consola (Ah, oh)<br/><br/>[Strofa 2]<br/>Lo vedi, amico? Arriva un'altra <input class="lyrics-gap-input" data-answer="estate" oninput="COSY.checkGap(this)" placeholder="..." style="border: none; border-bottom: 2px dashed var(--border); background: transparent; width: 66px; text-align: center; font-weight: bold; color: var(--indigo); outline: none; padding: 0 4px; font-family: inherit; font-size: inherit; transition: all 0.2s ease;" type="text"/> (Ah)<br/>E ormai chi ci credeva più (Ah)<br/>Che è stato duro l'inferno, ma non scaldava l'inverno (Ah)<br/>Hai pianto troppo questa primavera (Ah)<br/><br/>[Pre-Ritornello 2]<br/>Ma tu ora dove sei? (Ah, ah, ah, ah)<br/>Dimmi dove sei (Ah, ah)<br/>Che oggi, se vuoi, ti porto via<br/><br/>[Ritornello]<br/>E ce ne andiamo al <input class="lyrics-gap-input" data-answer="mare" oninput="COSY.checkGap(this)" placeholder="..." style="border: none; border-bottom: 2px dashed var(--border); background: transparent; width: 60px; text-align: center; font-weight: bold; color: var(--indigo); outline: none; padding: 0 4px; font-family: inherit; font-size: inherit; transition: all 0.2s ease;" type="text"/> (Oh)<br/>Chissà che effetto fa (Chissà che effetto fa) (Oh)<br/>Vediamo se questo tempo ci rincuora (Ah, oh)<br/>Se questa <input class="lyrics-gap-input" data-answer="estate" oninput="COSY.checkGap(this)" placeholder="..." style="border: none; border-bottom: 2px dashed var(--border); background: transparent; width: 66px; text-align: center; font-weight: bold; color: var(--indigo); outline: none; padding: 0 4px; font-family: inherit; font-size: inherit; transition: all 0.2s ease;" type="text"/> ci consola (Ah, oh)<br/><br/>[Bridge]<br/>E nuoteremo con il cuore in gola fino all'orizzonte<br/>Perché in fondo noi, in quell'orizzonte, ci crediamo ancora<br/>Ci crediamo ancora<br/>Tu ci credi? (Tu ci credi? Tu ci credi? Tu ci credi?)<br/>Io ci credo ancora (Oh, oh, oh, oh, ah, oh, oh)<br/><br/>[Outro]<br/>E ce ne andiamo al <input class="lyrics-gap-input" data-answer="mare" oninput="COSY.checkGap(this)" placeholder="..." style="border: none; border-bottom: 2px dashed var(--border); background: transparent; width: 60px; text-align: center; font-weight: bold; color: var(--indigo); outline: none; padding: 0 4px; font-family: inherit; font-size: inherit; transition: all 0.2s ease;" type="text"/> (Ah, ah, ah)<br/>Chissà che effetto fa (Lo vedi? Arriva una tempesta) (Ah, ah, ah, ah)<br/>E ce ne andiamo al <input class="lyrics-gap-input" data-answer="mare" oninput="COSY.checkGap(this)" placeholder="..." style="border: none; border-bottom: 2px dashed var(--border); background: transparent; width: 60px; text-align: center; font-weight: bold; color: var(--indigo); outline: none; padding: 0 4px; font-family: inherit; font-size: inherit; transition: all 0.2s ease;" type="text"/> (Ah, ah, ah)<br/>Chissà que effetto fa (Che poi magari ci consola) (Oh, oh)<br/><span class="lyrics-disclaimer" style="display: block; margin-top: 1.5rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.75rem; font-family: 'Nunito', sans-serif; font-style: normal;">Lyrics extracted from <strong>Genius platform</strong> and used only for educational purposes.</span></p>
+</div>
+</div>
+</div>
+<div class="round-block open" id="discussion">
+<div class="round-header" onclick="COSY.toggleRound('discussion')" style="background:#EEEDFE; cursor:pointer;">
+<span>💬 Fase 4: Discussione</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div class="round-1" style="margin-bottom: 2rem;">
+<h3 style="font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo); margin-bottom: 1rem;">🔵 Round 1: Lyric Analysis &amp; Discussion</h3>
+<div class="round-item"><div class="round-item-main">In 'Un'altra estate', Diodato riflette sul momento in cui la bella stagione giunge al termine. Perché il mare di fine estate suscita una <strong>malinconia</strong> così poetica e profonda (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+<div class="round-item-personal">★ Quali sensazioni ti trasmette la fine delle vacanze e il ritorno alla routine quotidiana (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">La canzone descrive il contrasto tra l'affollamento di luglio e la solitudine di settembre sulla <strong>spiaggia</strong>. Preferisci i luoghi turistici nel pieno della stagione o quando sono tranquilli (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+<div class="round-item-personal">★ Hai un luogo del cuore legato ai ricordi estivi dove ami tornare per ricaricarti (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Il cantante osserva il tempo che passa mentre il caldo inizia a <strong>svanire</strong>. Come i cambi di stagione influenzano il tuo umore e le tue decisioni (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+<div class="round-item-personal">★ Qual è la stagione dell'anno in cui ti senti più propenso a fare progetti importanti (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Diodato parla di 'cercare un punto fermo' come uno <strong>scoglio</strong> in mezzo alle onde. Quali sono i punti fermi nella tua vita quando avverti che tutto sta cambiando (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+<div class="round-item-personal">★ A chi o a cosa ti aggrappi quando senti il bisogno di stabilità emotiva (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">La melodia intensa e intima accompagna un bilancio interiore prima di ripartire. Come una pausa estiva ci aiuta a <strong>riflettere</strong> e a rinnovarci (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+<div class="round-item-personal">★ Qual è la lezione o il ricordo più bello che ti ha lasciato l'ultima estate (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+</div>
+</div>
+<div class="round-2" style="margin-top: 2rem;">
+<h3 style="font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo); margin-bottom: 1rem;">🟢 Round 2: Broad Themes &amp; Philosophy Debate</h3>
+<div class="round-item"><div class="round-item-main">La nostalgia per l'estate passata è soltanto un'illusione: l'autunno offre molte più opportunità di crescita e concentrazione. Dibattiamone. (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)</div>
+</div>
+<div class="round-item"><div class="round-item-main">I luoghi di mare svuotati dai turisti rivelano la loro vera anima e bellezza al di là delle mode estive. Cosa ne pensi (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Accettare che tutto cambi e <strong>svanisca</strong> è il segreto per godersi appieno ogni singolo momento presente. Condividi il tuo parere. (ad es. scelte di vita audaci, cambiamenti improvvisi o sacrifici personali)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block open" id="lang-focus">
+<div class="round-header" onclick="COSY.toggleRound('lang-focus')" style="background:#FFF9E6; cursor:pointer;">
+<span>✨ Fase 5: Focus linguistico</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); border-left: 4px solid var(--indigo); padding: 1.5rem; border-radius: 0 16px 16px 0; margin-bottom: 1.5rem;">
+<h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--indigo);">L'uso del futuro semplice per fare previsioni ed esprimere incertezza</h3>
+<p style="font-size: 0.92rem; line-height: 1.6; color: var(--ink-soft); margin-bottom: 1rem;">Il futuro semplice si usa non solo per azioni future ma anche per esprimere un'ipotesi nel presente (es: 'Sarà l'estate che finisce', 'Arriverà l'autunno').</p>
+<strong style="font-size: 0.85rem; text-transform: uppercase; color: var(--muted); letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Esempi pratici:</strong>
+<ul style="margin: 0; padding-left: 1.2rem; color: var(--indigo);">
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Un'altra estate se ne andrà lasciando un dolce ricordo nel cuore.</li>
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Torneremo presto su questa spiaggia quando il vento rinfrescherà l'aria.</li>
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Chissà come sarà la nostra vita quando la prossima estate comincerà.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="round-block open" id="final-challenge">
+<div class="round-header" onclick="COSY.toggleRound('final-challenge')" style="background:#FEEAEA; cursor:pointer;">
+<span>🎭 Fase 6: Sfida finale</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); border: 2px dashed var(--indigo); padding: 1.5rem; border-radius: 16px; display: flex; align-items: flex-start; gap: 1rem;">
+<span style="font-size: 2rem;">🎭</span>
+<div>
+<p style="margin-top: 0; font-size: 1rem; line-height: 1.6; color: var(--ink); font-weight: 500;">Riscrivi o racconta sotto forma di pagina di diario le tue riflessioni personali nell'ultimo giorno di una vacanza speciale prima di ripartire.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="mistake-block open" id="s-mistakes">
+<div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+<span>✏️ Note dell'Insegnante (Correzioni Linguistiche)</span><span class="round-toggle">▲</span>
+</div>
+<div class="mistake-body" style="display:block;">
+<div class="mistake-item">
+<span class="mistake-wrong">L'estate se <span class="mistake-highlight">va via</span> lentamente.</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">L'estate se <span class="mistake-highlight">ne va</span> lentamente.</span>
+<span class="mistake-note-text">(Usa la forma pronominale corretta 'andarsene' -&gt; 'se ne va'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">Penso <span class="mistake-highlight">su i</span> miei ricordi estivi.</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Rifletto <span class="mistake-highlight">sui</span> miei ricordi estivi.</span>
+<span class="mistake-note-text">(Fondi la preposizione 'su + i' nella preposizione articolata 'sui'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">Sulla spiaggia <span class="mistake-highlight">non c'è nessuno uomo</span>.</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Sulla spiaggia <span class="mistake-highlight">non c'è nessuno</span>.</span>
+<span class="mistake-note-text">(In italiano 'nessuno' si usa da solo senza aggiungere 'uomo'.)</span>
+</div>
+</div>
+</div>
+
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="https://cosylanguages.github.io/COSYlanguages/#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="https://cosylanguages.github.io/COSYlanguages/practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="https://cosylanguages.github.io/COSYlanguages/games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="../../../shared/js/cosyevents-session.js"></script>
+</body>
+</html>

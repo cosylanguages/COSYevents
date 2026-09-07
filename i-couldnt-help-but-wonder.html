@@ -1,0 +1,1025 @@
+<!-- DEVELOPER ALERT: Refer to templates/events/wonder-session-template.html (or corresponding active templates in events/sessions/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>I Couldn't Help But Wonder 🌌 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<link rel="stylesheet" href="shared/css/clubs/i-couldnt-help-but-wonder.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #3F2B96, #1F104D); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+
+  /* Carrie's Laptop Widget Styles */
+  .carrie-laptop {
+    background: #110d26;
+    border: 4px solid #3F2B96;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 8px 32px rgba(63, 43, 150, 0.25);
+    color: #a9a6e2;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+  }
+  .laptop-header {
+    border-bottom: 1px solid #3F2B96;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .screen-glowing {
+    background: #090614;
+    border-radius: 6px;
+    padding: 1rem;
+    min-height: 140px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
+    overflow-y: auto;
+  }
+  .carrie-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.2rem;
+    background: #8b5cf6;
+    margin-left: 2px;
+    animation: carrie-blink 1s step-end infinite;
+    vertical-align: middle;
+  }
+  @keyframes carrie-blink {
+    from, to { background-color: transparent }
+    50% { background-color: #8b5cf6 }
+  }
+  .laptop-input-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+  }
+  .laptop-input {
+    flex-grow: 1;
+    background: #090614;
+    border: 1px solid #3F2B96;
+    border-radius: 6px;
+    color: #FFFEFB;
+    padding: 0.6rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+  }
+  .laptop-input:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.4);
+  }
+  .laptop-btn {
+    background: #3F2B96;
+    color: #FFFEFB;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .laptop-btn:hover {
+    background: #8b5cf6;
+    transform: translateY(-1px);
+  }
+  .keyboard-hint {
+    font-size: 0.72rem;
+    color: #55508c;
+    margin-top: 0.5rem;
+    text-align: right;
+  }
+</style>
+<style>
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    background: var(--border);
+  }
+  .filter-btn.active {
+    background: #3F2B96;
+    color: white;
+    border-color: #3F2B96;
+  }
+</style>  </head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<img alt="Wonder logo" src="../../../../images/icouldnthelpbutwonder.png" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
+<h1>I Couldn't Help But Wonder</h1>
+<p>Inspired by the iconic, introspective relationship-column style of Carrie Bradshaw, we take the urban, speculative mindset to the natural world and social psychology. Random ideas, poetic metaphors, and deep philosophical speculation. A creative space for curious, quirky minds.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="../../../../events/speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<!-- CARRIE'S LAPTOP INTERACTIVE WIDGET -->
+<div class="carrie-laptop" id="laptop-widget">
+<div class="laptop-header">
+<span>💾 James's Laptop v1.0 : Column Draft</span>
+<span>File: wonder_draft.txt</span>
+</div>
+<div class="screen-glowing" id="laptop-screen">
+<span id="typewriter-text">As I sat at my window looking at the city, I couldn't help but wonder... What are you thinking about tonight? Type a question below to spec-wonder.</span><span class="carrie-cursor"></span>
+</div>
+<div class="laptop-input-wrapper">
+<input class="laptop-input" id="laptop-input" maxlength="100" placeholder="Type a word or question (e.g. love, copy, rain, city)..." type="text"/>
+<button class="laptop-btn" id="laptop-submit-btn">FILE DRAFT</button>
+</div>
+<div class="keyboard-hint">💡 Hint: Enable sound for a realistic laptop keyboard experience!</div>
+</div>
+<!-- HISTORY -->
+<div class="history-block" id="wonder-hist" style="margin-top: 2rem;">
+<div class="section-header" style="margin-bottom: 1rem;">
+<h2 style="font-size: 1.5rem;">🕒 Past Sessions</h2>
+</div><div class="club-filters-lang" style="justify-content: flex-start; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-lang="all">All Languages</button>
+<button class="filter-btn" data-lang="en">🇬🇧 English</button>
+</div>
+<div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-level="all">All Levels</button>
+<button class="filter-btn" data-level="b1">B1</button>
+<button class="filter-btn" data-level="b2">B2</button>
+<button class="filter-btn" data-level="c1">C1</button>
+</div>
+<div class="wonder-history-grid">
+
+<div class="wonder-card history-session" data-level="b2" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem;">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B2 / C1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif;">Do Bisexuals Really Have to Choose Their Sexuality in the Long Run?</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Examining mononormativity, bisexual erasure, and sexual fluidity regardless of long-term relationship status. (Topic credit: Cassandra Ardnassac)</p>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<span style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/i-couldnt-help-but-wonder/do-bisexuals-have-to-choose.html" style="background:#3F2B96; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Explore Column ➔</a>
+</div>
+</div>
+
+<!-- 📌 PINNED DIARY BATCHES -->
+<div class="pinned-challenges-section" style="margin-bottom: 3.5rem; background: rgba(63, 43, 150, 0.03); border: 2px dashed #3F2B96; border-radius: 28px; padding: 2rem;">
+<h3 style="margin-top: 0; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-size: 1.5rem; display: flex; align-items: center; gap: 0.75rem; color: #3F2B96;">
+<span>📌</span> Pinned Column Batches (60 min)
+  </h3>
+<div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+<!-- Batch 1 -->
+<div class="history-session" data-lang="en" data-level="b1 b2 c1" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+<span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">⛈️ The Poetic Meteorology Series</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Apply meteorological phenomena as metaphors to human behavior, relationship sheltering, and fate matching gravity.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #3F2B96;">
+          Columns:
+          <a href="sessions/i-couldnt-help-but-wonder/whether-raindrops-select-where-to-fall.html" style="color:#3F2B96; text-decoration:underline; font-weight:600;">Raindrops Match (B2)</a> •
+          <a href="sessions/i-couldnt-help-but-wonder/do-insects-hide-when-it-rains.html" style="color:#3F2B96; text-decoration:underline; font-weight:600;">Insects Shelter (B1)</a> •
+          <a href="sessions/i-couldnt-help-but-wonder/is-bad-weather-gods-anger.html" style="color:#3F2B96; text-decoration:underline; font-weight:600;">Bad Weather (C1)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/i-couldnt-help-but-wonder/whether-raindrops-select-where-to-fall.html" style="background:#3F2B96; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+<!-- Batch 2 -->
+<div class="history-session" data-lang="en" data-level="b1 c1" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🎵 Pop Culture, Fame &amp; Media Grief</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Reflect on full-length musical narratives, parasocial mourning, and living-room solitude when series end.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #3F2B96;">
+          Columns:
+          <a href="sessions/i-couldnt-help-but-wonder/death-of-the-album.html" style="color:#3F2B96; text-decoration:underline; font-weight:600;">Death of the Album (B1)</a> •
+          <a href="sessions/i-couldnt-help-but-wonder/feeling-empty-after-series.html" style="color:#3F2B96; text-decoration:underline; font-weight:600;">Series Ending Emptiness (B1)</a> •
+          <a href="sessions/i-couldnt-help-but-wonder/appreciating-amy-winehouse-after-death.html" style="color:#3F2B96; text-decoration:underline; font-weight:600;">Amy Winehouse Tragedy (C1)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/i-couldnt-help-but-wonder/death-of-the-album.html" style="background:#3F2B96; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+</div>
+</div>
+<!-- 26. Information Consumption as Rest -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #26 • B2 • 📱 Digital Rest</div>
+<h4 class="wonder-card-title">Since When Is Information Consumption Considered Rest?</h4>
+</div>
+<div class="wonder-polaroid-frame rot-slight">
+<div class="washi-tape"></div>
+<img src="../../../../images/icouldnthelpbutwonder.png" alt="Since When Is Information Consumption Considered Rest? Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Rennes : Sep '26</div>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Since when did consuming endless streams of digital information become our modern definition of resting?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">24 September 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/information-consumption-as-rest.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/information-consumption-as-rest.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/information-consumption-as-rest.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 25. What If Everyone Refuses to Work? -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2 c1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #25 • B2/C1 • ✊ General Strike</div>
+<h4 class="wonder-card-title">What Would Happen If Everyone Refused to Work?</h4>
+</div>
+<div class="wonder-polaroid-frame rot-right">
+<div class="washi-tape"></div>
+<img src="../../../../images/icouldnthelpbutwonder.png" alt="What Would Happen If Everyone Refused to Work? Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Reykjavík &amp; Rennes : Sep '26</div>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... What if all women walked out tomorrow? What if all men refused to work? And what if every foreign worker stopped?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">18 September 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/what-if-everyone-refuses-to-work.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/what-if-everyone-refuses-to-work.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/what-if-everyone-refuses-to-work.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 24. Celebrity Memorial Photos Trend -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #24 • B2 • 📸 Media Trends</div>
+<h4 class="wonder-card-title">Why Are We Obsessed with Celebrity Memorial Photos on Social Media?</h4>
+</div>
+<div class="wonder-polaroid-frame rot-left">
+<div class="washi-tape"></div>
+<img src="../../../../images/icouldnthelpbutwonder.png" alt="Celebrity Memorial Photos Trend Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Rennes : Sep '26</div>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Why are we so eager to treat living cultural icons as vintage relics on our social feeds?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">12 September 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/celebrity-memorial-photos-trend.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/celebrity-memorial-photos-trend.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/celebrity-memorial-photos-trend.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 23. We Are People, We Are Not Stupid Animals -->
+<div class="wonder-card history-session" data-lang="en" data-level="c1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #23 • C1 • 🐾 Animal Ethics</div>
+<h4 class="wonder-card-title">Is It Ethical to Say "We Are People, We Are Not Stupid Animals"?</h4>
+</div>
+<div class="wonder-polaroid-frame rot-left">
+<div class="washi-tape"></div>
+<img src="../../../../images/icouldnthelpbutwonder.png" alt="We Are People, We Are Not Stupid Animals Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Rennes : Mar '27</div>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Is our artificial hatred and contempt for animals just an insecure human defense mechanism to convince ourselves that we are special?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">24 March 2027</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/we-are-people-we-are-not-stupid-animals.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/we-are-people-we-are-not-stupid-animals.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/we-are-people-we-are-not-stupid-animals.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 22. YouTube Shorts App Trend -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #22 • B2 • 📱 Digital Media</div>
+<h4 class="wonder-card-title">What's the Point of YouTube Auto-Launching Shorts?</h4>
+</div>
+<div class="wonder-polaroid-frame rot-slight">
+<div class="washi-tape"></div>
+<img src="../../../../images/icouldnthelpbutwonder.png" alt="What's the Point of YouTube Auto-Launching Shorts? Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Rennes : Aug '26</div>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Why are app developers so terrified of giving us even three seconds of quiet reflection before forcing content down our throats?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">16 August 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/youtube-shorts-app-trend.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/youtube-shorts-app-trend.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/youtube-shorts-app-trend.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 18. Does Inclusive Language Make Us Equal? -->
+
+<!-- 21. Love Without Sex -->
+<div class="wonder-card history-session" data-lang="en" data-level="c1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #21 • C1 • 🔞 Intimacy</div>
+<h4 class="wonder-card-title">Is It Possible to Find Love Without Sex?</h4>
+</div>
+<div class="wonder-polaroid-frame rot-right">
+<div class="washi-tape"></div>
+<img src="../../../../images/icouldnthelpbutwonder.png" alt="Is It Possible to Find Love Without Sex? Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Rennes : Mar '27</div>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Are we truly capable of pure, transcendent love, or is our intellectual arrogance just a grand hypocrisy covering up our primal animal desires?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">16 March 2027</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/is-it-possible-to-find-love-without-sex.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/is-it-possible-to-find-love-without-sex.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/is-it-possible-to-find-love-without-sex.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 20. Avoiding Free Things -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #20 • B2 • 🏛️ Public Goods</div>
+<h4 class="wonder-card-title">Does Culture Make Us Avoid Things That Are Free?</h4>
+</div>
+<div class="wonder-polaroid-frame rot-left">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Does Culture Make Us Avoid Things for Free.png" alt="Does Culture Make Us Avoid Things That Are Free? Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Saint-Malo : Feb '27</div>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Does our modern culture on purpose make us avoid things that are genuinely free?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">09 February 2027</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/avoiding-things-for-free.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/avoiding-things-for-free.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/avoiding-things-for-free.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 19. Sedentary Lifestyle -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #19 • B2 • 📺 Lifestyle</div>
+<h4 class="wonder-card-title">Is Marketing Making Sedentary Lifestyle a New Normality?</h4>
+</div>
+<div class="wonder-polaroid-frame rot-slight">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Is Marketing Making Sedentary Lifestyle a New Normality.png" alt="Is Marketing Making Sedentary Lifestyle a New Normality? Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Rennes : Centre : Feb '27</div>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Has modern marketing cleverly packaged a sedentary lifestyle as the ultimate luxury status symbol, or are we yearning to move?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">02 February 2027</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/is-marketing-making-sedentary-lifestyle-a-new-normality.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/is-marketing-making-sedentary-lifestyle-a-new-normality.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/is-marketing-making-sedentary-lifestyle-a-new-normality.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #18 • B2 • 🗣️ Inclusivity</div>
+<div class="wonder-polaroid-frame rot-slight">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Does Inclusive Language Make Us Equal.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Bretagne : Jan '27</div>
+</div>
+<h4 class="wonder-card-title">Does Inclusive Language Make Us Equal?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... When we say 'Bonjour à tous et toutes', does it really make us equal, or does it change nothing?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">26 January 2027</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/does-inclusive-language-make-us-equal.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/does-inclusive-language-make-us-equal.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/does-inclusive-language-make-us-equal.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 17. Spend More, Earn More -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #17 • B2 • 💰 Money</div>
+<div class="wonder-polaroid-frame rot-left">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Why Do I Spend More When I Earn More.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Saint-Malo : Jan '27</div>
+</div>
+<h4 class="wonder-card-title">Why Do I Spend More When I Earn More?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Why do I promise myself when I earn more I'll start saving but I actually spend more?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">19 January 2027</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/why-do-i-spend-more-when-i-earn-more.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/why-do-i-spend-more-when-i-earn-more.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/why-do-i-spend-more-when-i-earn-more.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 16. No Time vs No Motivation -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #16 • B2 • ⏳ Time</div>
+<div class="wonder-polaroid-frame rot-right">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Do We Have No Time or Just No Desire.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Vannes : Jan '27</div>
+</div>
+<h4 class="wonder-card-title">Do We Have "No Time" or Just No Desire?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Is 'I have no time' the ultimate, socially acceptable cover-up for a complete lack of desire?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">12 January 2027</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/i-have-no-time-for-it.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/i-have-no-time-for-it.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/i-have-no-time-for-it.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 14. Collective Self-Guilt -->
+<div class="wonder-card history-session" data-lang="en" data-level="c1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #14 • C1 • 🌍 Eco</div>
+<div class="wonder-polaroid-frame rot-slight">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Do We Carry a Collective Self-Guilt for the Planet.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Brest : Jan '27</div>
+</div>
+<h4 class="wonder-card-title">Do We Carry a Collective Self-Guilt for the Planet?</h4>
+</div>
+
+<p class="wonder-card-desc">"I couldn't help but wonder... Are we genuinely responsible for healing a wounded planet, or is this modern shame just a silent tax we pay for comfort?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">02 January 2027</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/collective-guilt-global-crisis.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/collective-guilt-global-crisis.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/collective-guilt-global-crisis.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 15. Traditions & Monogamy (B2) -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #15 • B2 • 🏛️ Customs</div>
+<div class="wonder-polaroid-frame rot-left">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Are Traditions a Hidden Monogamy.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Dinard : Dec '26</div>
+</div>
+<h4 class="wonder-card-title">Are Traditions a Hidden Monogamy?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Why do we pledge such unwavering loyalty to old customs? Is it a comforting embrace, or a hidden monopoly on our choices?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">26 December 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy-upper-intermediate.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy-upper-intermediate.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 13. Traditions & Monogamy -->
+<div class="wonder-card history-session" data-lang="en" data-level="c1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #13 • C1 • 🏛️ Customs</div>
+<div class="wonder-polaroid-frame rot-right">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Are Traditions a Hidden Monogamy.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Dinard : Dec '26</div>
+</div>
+<h4 class="wonder-card-title">Are Traditions a Hidden Monogamy?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Why do we pledge such unwavering loyalty to old customs? Is it a comforting embrace, or a hidden monopoly on our choices?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">26 December 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 1. Parenting Instinct -->
+<div class="wonder-card history-session" data-lang="en" data-level="b1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #12 • B1 • ⚠️ Sensitive</div>
+<div class="wonder-polaroid-frame rot-slight">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Is Parenting Instinct a Real Thing or Just a Scam.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Quimper : Dec '26</div>
+</div>
+<h4 class="wonder-card-title">Is "Parenting Instinct" a Real Thing or Just a Scam?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Are we born with a maternal guide, or are we just desperately copying our parents' errors?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">19 December 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/is-parenting-instinct-a-real-thing-or-scam.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/is-parenting-instinct-a-real-thing-or-scam.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/is-parenting-instinct-a-real-thing-or-scam.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 2. ADHD -->
+<div class="wonder-card history-session" data-lang="en" data-level="b1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #11 • B1 • ⚠️ Sensitive</div>
+<div class="wonder-polaroid-frame rot-left">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Why Do We Try to Relate to ADHD.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Lorient : Dec '26</div>
+</div>
+<h4 class="wonder-card-title">Why Do We Try to Relate to ADHD?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... In a world of non-stop notifications, are we genuinely unique, or are we just looking for a neuro-vibe to wear?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">12 December 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/why-do-we-try-to-relate-to-adhd.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/why-do-we-try-to-relate-to-adhd.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/why-do-we-try-to-relate-to-adhd.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 3. Amy Winehouse -->
+<div class="wonder-card history-session" data-lang="en" data-level="c1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #10 • C1 • 🎤 Music</div>
+<div class="wonder-polaroid-frame rot-right">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/The Tragedy of Amy Winehouse.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Dinan : Oct '26</div>
+</div>
+<h4 class="wonder-card-title">The Tragedy of Amy Winehouse</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Why do we only truly appreciate an artist's genius after they've been consumed by their own darkness?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">14 October 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/appreciating-amy-winehouse-after-death.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/appreciating-amy-winehouse-after-death.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/appreciating-amy-winehouse-after-death.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 4. Euthanasia -->
+<div class="wonder-card history-session" data-lang="en" data-level="c1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #09 • C1 • 🔞 18+</div>
+<div class="wonder-polaroid-frame rot-slight">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Does Euthanasia Reduce Suicide Rates.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Brest : Nov '26</div>
+</div>
+<h4 class="wonder-card-title">Does Euthanasia Reduce Suicide Rates?</h4>
+</div>
+
+<p class="wonder-card-desc">"I couldn't help but wonder... Is the ultimate freedom of control just knowing where the exit sign is in a chaotic universe?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">07 November 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/does-euthanasia-reduce-suicide-rates.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/does-euthanasia-reduce-suicide-rates.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/does-euthanasia-reduce-suicide-rates.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 5. Ugly Produce -->
+<div class="wonder-card history-session" data-lang="en" data-level="b1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #08 • B1 • 🍎 Eco</div>
+<div class="wonder-polaroid-frame rot-left">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Are We Too Obsessed with Perfect-Looking Food.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Carnac : Oct '26</div>
+</div>
+<h4 class="wonder-card-title">Are We Too Obsessed with Perfect-Looking Food?</h4>
+</div>
+
+<p class="wonder-card-desc">"I couldn't help but wonder... If we reject a curved cucumber, do we also reject imperfect souls? Has our search for symmetry made us superficial?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">24 October 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/ugly-produce-anti-waste.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/ugly-produce-anti-waste.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/ugly-produce-anti-waste.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 6. Death of the Album -->
+<div class="wonder-card history-session" data-lang="en" data-level="b1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #07 • B1 • 💿 Album</div>
+<div class="wonder-polaroid-frame rot-right">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Why Did We Stop Listening to Whole Albums.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Saint-Brieuc : Oct '26</div>
+</div>
+<h4 class="wonder-card-title">Why Did We Stop Listening to Whole Albums?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... In a world of single-track playlists, have we lost the patience to appreciate someone else's complete story?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">06 October 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/death-of-the-album.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/death-of-the-album.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/death-of-the-album.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 7. Feeling Empty -->
+<div class="wonder-card history-session" data-lang="en" data-level="b1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #06 • B1 • 📺 Series</div>
+<div class="wonder-polaroid-frame rot-slight">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Why Do We Feel Empty After a Series Ends.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Quiberon : Sep '26</div>
+</div>
+<h4 class="wonder-card-title">Why Do We Feel Empty After a Series Ends?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Why do we feel empty after finishing a series? Is it because we lost a story, or because we have to face our own unedited lives?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">29 September 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/feeling-empty-after-series.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/feeling-empty-after-series.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/feeling-empty-after-series.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 8. Everyone is Copying Me -->
+<div class="wonder-card history-session" data-lang="en" data-level="b1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #05 • B1 • 🛍️ Identity</div>
+<div class="wonder-polaroid-frame rot-left">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Why Do I Feel Like Everyone Is Copying Me.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Concarneau : Sep '26</div>
+</div>
+<h4 class="wonder-card-title">Why Do I Feel Like Everyone Is Copying Me?</h4>
+</div>
+
+<p class="wonder-card-desc">"I couldn't help but wonder... In a city built on the myth of absolute individuality, are our tastes ever truly our own?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">22 September 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/why-is-everyone-copying-me.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/why-is-everyone-copying-me.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/why-is-everyone-copying-me.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 9. Always Watched in a Crowd -->
+<div class="wonder-card history-session" data-lang="en" data-level="c1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #04 • C1 • 🚇 Paranoia</div>
+<div class="wonder-polaroid-frame rot-right">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Why Do I Feel Like Im Always Being Watched in a Crowd.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Rennes : Thabor : Sep '26</div>
+</div>
+<h4 class="wonder-card-title">Why Do I Feel Like I'm Always Being Watched in a Crowd?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Is the paranoia of the spotlight just our desperate hope that someone actually cares enough to look?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">15 September 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/always-watched-in-a-crowd.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/always-watched-in-a-crowd.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/always-watched-in-a-crowd.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+<!-- 10. Bad Weather -->
+<div class="wonder-card history-session" data-lang="en" data-level="c1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #03 • C1 • ⛈️ Weather</div>
+<div class="wonder-polaroid-frame rot-slight">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Is Bad Weather Really About Gods Being Angry.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Forêt de Paimpont : Sep '26</div>
+</div>
+<h4 class="wonder-card-title">Is Bad Weather Really About Gods Being Angry?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Is bad weather just a cosmic warning, or is it our own internal turbulence projected onto the skies?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">22 September 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/is-bad-weather-gods-anger.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/is-bad-weather-gods-anger.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/is-bad-weather-gods-anger.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 11. Do Insects Hide -->
+<div class="wonder-card history-session" data-lang="en" data-level="b1">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #02 • B1 • 🐜 Insects</div>
+<div class="wonder-polaroid-frame rot-left">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Do Insects Hide When It Rains.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Côte d'Émeraude : Sep '26</div>
+</div>
+<h4 class="wonder-card-title">Do Insects Hide When It Rains?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... When life gets stormy, do we actively seek shelter like insects, or do we just hope the rain won't drown us?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">15 September 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/do-insects-hide-when-it-rains.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/do-insects-hide-when-it-rains.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/do-insects-hide-when-it-rains.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+<!-- 12. Do Raindrops Select -->
+<div class="wonder-card history-session" data-lang="en" data-level="b2">
+<div class="wonder-card-header">
+<div class="wonder-card-draft-tag">Draft #01 • B2 • 🌧️ Raindrops</div>
+<div class="wonder-polaroid-frame rot-right">
+<div class="washi-tape"></div>
+<img src="../../../../images/logos/speaking clubs/i couldn't help but wonder/Do Raindrops Select the Place Where to Fall.png" alt="Logo" class="wonder-card-logo" />
+<div class="polaroid-caption">Saint-Cast : Sep '26</div>
+</div>
+<h4 class="wonder-card-title">Do Raindrops Select the Place Where to Fall?</h4>
+</div>
+<p class="wonder-card-desc">"I couldn't help but wonder... Do raindrops select where to fall, or are we all just randomly splashing into each other's lives without a choice?"</p>
+<div class="wonder-card-footer" style="flex-direction: column; align-items: stretch; gap: 8px;">
+<span class="wonder-card-date">08 September 2026</span>
+<div class="wonder-modes-grid">
+<a class="mode-btn btn-big" href="sessions/i-couldnt-help-but-wonder/whether-raindrops-select-where-to-fall.html">🌐 BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/i-couldnt-help-but-wonder/whether-raindrops-select-where-to-fall.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/i-couldnt-help-but-wonder/whether-raindrops-select-where-to-fall.html?mode=private">🎓 PRIVATE LESSON</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- /logged-in content -->
+</div><!-- /club-main -->
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem;">Speculative Thinking</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Expressing hypotheses about highly abstract, poetic, and unusual queries forces speakers to utilize rich conditionals, creative metaphors, and advanced philosophical vocabulary.</p>
+</div>
+</div>
+<!-- /grid -->
+</section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const laptopInput = document.getElementById('laptop-input');
+  const submitBtn = document.getElementById('laptop-submit-btn');
+  const screenText = document.getElementById('typewriter-text');
+
+  // 1. Web Audio Synth
+  let audioCtx = null;
+
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  // Synthesis of snappy laptop plastic keyboard key click sound
+  function playKeyClick() {
+    try {
+      initAudio();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      // Real laptop chiclet key frequency signature (high frequency plastic click)
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(3200 + Math.random() * 400, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(1500, audioCtx.currentTime + 0.015);
+
+      // Snappy laptop decay envelope (extremely short 12ms duration)
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.012);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.015);
+    } catch (e) {
+      // Fallback if web audio is blocked
+    }
+  }
+
+  // Synthesis of retro typewriter carriage return bell chime
+  function playBellChime() {
+    try {
+      initAudio();
+      const osc1 = audioCtx.createOscillator();
+      const osc2 = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      // High-pitched crystal bell frequencies
+      osc1.frequency.setValueAtTime(2100, audioCtx.currentTime);
+      osc2.frequency.setValueAtTime(2700, audioCtx.currentTime);
+
+      gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.8);
+
+      osc1.connect(gain);
+      osc2.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc1.start();
+      osc2.start();
+      osc1.stop(audioCtx.currentTime + 0.8);
+      osc2.stop(audioCtx.currentTime + 0.8);
+    } catch (e) {
+      // Fallback
+    }
+  }
+
+  // Key press listener on input
+  laptopInput.addEventListener('keydown', (e) => {
+    // Play typewriter click on visible characters and spaces
+    if (e.key.length === 1 || e.key === 'Backspace' || e.key === ' ') {
+      playKeyClick();
+    }
+  });
+
+  // 2. Introspective Keyword Metaphor Engine
+  const responses = [
+    {
+      keywords: ['copy', 'style', 'clone', 'mimic', 'preference', 'same', 'wear'],
+      text: "I couldn't help but wonder... In a city built on the myth of absolute individuality, are our tastes ever truly our own? Or is copycat behavior just an intimate, desperate way of saying: 'I want to be you, because I don't know who I am yet'?"
+    },
+    {
+      keywords: ['love', 'romance', 'dating', 'relationship', 'ex', 'boyfriend', 'husband'],
+      text: "I couldn't help but wonder... In a metropolis of eight million options, is looking for a soulmate like searching for a needle in an incredibly stylish, overpriced haystack? Or are we just hoping to find someone who enjoys the same obscure Italian cocktail?"
+    },
+    {
+      keywords: ['rain', 'weather', 'storm', 'snow', 'wind', 'deluge', 'clouds'],
+      text: "I couldn't help but wonder... When we look to the grey skies for mystical omens during a storm, are we actually looking for answers? Or is it just our desperate desire to believe that the universe cares enough about us to pick a fight?"
+    },
+    {
+      keywords: ['city', 'crowd', 'street', 'subway', 'bretagne', 'people'],
+      text: "I couldn't help but wonder... Can you truly find yourself in a crowd where everyone is busy playing the part of someone else? Or does the real spotlight only turn on when we stop performing and disappear into the beautiful urban anonymity?"
+    },
+    {
+      keywords: ['friend', 'friendship', 'bestie', 'girls'],
+      text: "I couldn't help but wonder... Are our friends our real chosen families, or just the mirror reflections we use to make sure our outfits and priorities are perfectly aligned? Or maybe, just maybe, they are the only ones who can see us when we are completely invisible."
+    }
+  ];
+
+  const defaultResponse = "I couldn't help but wonder... In a world constantly demanding us to be sure of everything, is it possible that our question marks-and not our answers-are what make us truly beautiful? Are we all just searching for the right question to ask?";
+
+  function getMetaphorResponse(query) {
+    const q = query.toLowerCase();
+    for (const r of responses) {
+      if (r.keywords.some(k => q.includes(k))) {
+        return r.text;
+      }
+    }
+    return defaultResponse;
+  }
+
+  // 3. Typewriter Effect Logic
+  let typeTimer = null;
+  function typeOutMessage(message) {
+    clearInterval(typeTimer);
+    screenText.innerHTML = '';
+    let index = 0;
+
+    typeTimer = setInterval(() => {
+      if (index < message.length) {
+        screenText.innerHTML += message.charAt(index);
+        index++;
+        // Play click sound at random intervals for a realistic typing cadence
+        if (Math.random() > 0.4) {
+          playKeyClick();
+        }
+      } else {
+        clearInterval(typeTimer);
+        playBellChime();
+      }
+    }, 45); // Typing speed
+  }
+
+  // Submission handler
+  submitBtn.addEventListener('click', () => {
+    const val = laptopInput.value.trim();
+    if (!val) return;
+
+    initAudio();
+    const response = getMetaphorResponse(val);
+    typeOutMessage(response);
+    laptopInput.value = '';
+  });
+
+  // Handle enter key press on input
+  laptopInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      submitBtn.click();
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const sessions = document.querySelectorAll('.history-session');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedLevel = btn.getAttribute('data-level');
+
+      sessions.forEach(sess => {
+        const levels = (sess.getAttribute('data-level') || '').split(' ');
+        if (selectedLevel === 'all' || levels.includes(selectedLevel)) {
+          sess.style.display = 'flex';
+        } else {
+          sess.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script><script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>

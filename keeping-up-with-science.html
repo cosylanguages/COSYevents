@@ -1,0 +1,1642 @@
+<!-- DEVELOPER ALERT: Refer to templates/events/science-session-template.html (or corresponding active templates in events/sessions/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Keeping Up with Science 🔬 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<link rel="stylesheet" href="shared/css/clubs/keeping-up-with-science.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #0F6E56, #073b2d); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+</style>
+<style>
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    background: var(--border);
+  }
+  .filter-btn.active {
+    background: #0F6E56;
+    color: white;
+    border-color: #0F6E56;
+  }
+</style> </head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<img alt="Science logo" src="../../../../images/keepingupwithscience.png" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
+<h1>Keeping Up with Science</h1>
+<p>Real science news, made discussable. Each session unpacks a recent discovery or trend : no lab coat required, just curiosity.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="../../../../events/speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<!-- CLUB CONTENT -->
+<div>
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Upcoming Sessions</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Article</td><td>AI &amp; the brain : who's learning from whom?</td></tr>
+<tr><td>Description</td><td>Explores how AI and the human brain learn differently.</td></tr>
+<tr><td>Link</td><td><a href="https://www.nature.com/articles/d41586-023-03975-y" style="color:var(--cosy-green);" target="_blank">Read Article 📖</a></td></tr>
+<tr><td>Schedule</td><td>Planned : TBC</td></tr>
+<tr><td>Duration</td><td>60 min</td></tr>
+<tr><td>Languages</td><td>🇬🇧 🇫🇷 🇮🇹</td></tr>
+</table></div>
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20Keeping%20Up%20with%20Science.">💬 Register interest</a>
+<!-- HISTORY -->
+<div class="history-block" id="sc-hist" style="margin-top: 2rem;">
+<div class="section-header" style="margin-bottom: 1rem;">
+<h2 style="font-size: 1.5rem;">🕒 Past Sessions</h2>
+</div>
+<div class="club-filters-lang" style="justify-content: flex-start; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-lang="all">All Languages</button>
+<button class="filter-btn" data-lang="en">🇬🇧 English</button>
+</div>
+<div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-level="all">All Levels</button>
+<button class="filter-btn" data-level="a2">A2</button>
+<button class="filter-btn" data-level="b1">B1</button>
+<button class="filter-btn" data-level="b2">B2</button>
+<button class="filter-btn" data-level="c1">C1</button>
+</div>
+<div class="history-body" style="display: block; padding: 0; border: none;"><div class="science-history-grid" id="science-history-grid">
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element"><span class="elem-num">1</span><span class="elem-symbol">B1</span><span class="elem-name">Int</span></div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Scientists Tracked Kids for 8 Years — Screen Time Result</h4>
+<p class="science-card-desc">An 8-year longitudinal study followed children from early childhood into adolescence to examine how daily screen time alters attention spans and cognitive growth.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/screen-time-kids-8-years-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element"><span class="elem-num">2</span><span class="elem-symbol">A2</span><span class="elem-name">Elem</span></div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Multilingual People Have Younger Brains (A2)</h4>
+<p class="science-card-desc">Discover how speaking more than one language keeps your brain active, healthy, and up to 13 years younger.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/multilingual-younger-brains-elementary.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element"><span class="elem-num">3</span><span class="elem-symbol">B1</span><span class="elem-name">Int</span></div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Multilingual People Have Younger Brains (B1)</h4>
+<p class="science-card-desc">Examine neuroimaging research demonstrating how bilingualism builds cognitive reserve and delays neural aging.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/multilingual-younger-brains-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-level="c1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element"><span class="elem-num">4</span><span class="elem-symbol">C1</span><span class="elem-name">Adv</span></div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Coffee Drinkers: Fat, Muscle, and Hormones</h4>
+<p class="science-card-desc">Analyze endocrine research revealing favorable visceral fat profiles and preserved muscle mass in habitual coffee drinkers.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/coffee-fat-muscle-hormones-advanced.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-level="c1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element"><span class="elem-num">5</span><span class="elem-symbol">C1</span><span class="elem-name">Adv</span></div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Rewriting the Human Family Tree</h4>
+<p class="science-card-desc">Explore how recent hominin fossil discoveries and ancient DNA sequencing challenge traditional linear models of evolution.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/human-family-tree-rewrite-advanced.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-level="c1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">5</span>
+<span class="elem-symbol">C1</span>
+<span class="elem-name">Adv</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Why Your Grandmother Is an Evolutionary Mystery</h4>
+<p class="science-card-desc">Analyze the biological and evolutionary mystery of human grandmothers and the 'Grandmother Hypothesis'.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/grandmother-evolutionary-mystery.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/grandmother-evolutionary-mystery.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/grandmother-evolutionary-mystery.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">10 August 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="c1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">5</span>
+<span class="elem-symbol">C1</span>
+<span class="elem-name">Adv</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">We Are Living in the Most Creative Time Ever</h4>
+<p class="science-card-desc">Deconstruct collective human creativity, cultural scaling, and open-source innovation networks.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/living-most-creative-time.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/living-most-creative-time.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/living-most-creative-time.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">30 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Your Fingers Hold a Secret of Human Brain Evolution</h4>
+<p class="science-card-desc">Explore how the anatomy of thumb opposition and precision grip accelerated early human tool-making.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">17 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Your Fingers Hold a Secret of Human Brain Evolution</h4>
+<p class="science-card-desc">Deconstruct how precise hand opposition and motor dexterity co-evolved with speech and cognitive complexity.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">17 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Culture Helps Your Body Stay Younger</h4>
+<p class="science-card-desc">Analyze how active cultural and artistic engagement helps reduce stress and promotes physical longevity.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">14 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Culture Helps Your Body Stay Younger</h4>
+<p class="science-card-desc">Examine the endocrine and somatic effects of regular museum and theater attendance on cortisol levels.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">14 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">2</span>
+<span class="elem-symbol">A2</span>
+<span class="elem-name">Elem</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Culture Helps Your Body Stay Younger</h4>
+<p class="science-card-desc">Learn how visiting museums, movies, and theater can keep our body and mind healthy and young.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-elementary.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-elementary.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-elementary.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">14 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Where You Live Shapes Your Dementia Risk</h4>
+<p class="science-card-desc">Discuss how local environmental factors and neighborhood greenery affect cognitive health.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">13 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Where You Live Shapes Your Dementia Risk</h4>
+<p class="science-card-desc">Deconstruct the spatial epidemiology of cognitive decline and environmental neurology in cities.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">13 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">2</span>
+<span class="elem-symbol">A2</span>
+<span class="elem-name">Elem</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Where You Live Shapes Your Dementia Risk</h4>
+<p class="science-card-desc">Learn how our neighborhoods and parks help protect our brains and keep our memory strong.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-elementary.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-elementary.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-elementary.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">13 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Spider-like Creatures and the Origins of Fatherhood</h4>
+<p class="science-card-desc">Analyze the unusual paternal care and nesting behaviors observed in harvestmen arachnids.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">12 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Spider-like Creatures and the Origins of Fatherhood</h4>
+<p class="science-card-desc">Deconstruct paternal investment, nesting territory defense, and behavioral ecology milestones.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">12 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Nervous System Networks &amp; Pain</h4>
+<p class="science-card-desc">Explore how our sensory nervous system transmits discomfort signals and pain sensitivity.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/sensory-system-pain-disease-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/sensory-system-pain-disease-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/sensory-system-pain-disease-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">09 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Nervous System Networks &amp; Pain</h4>
+<p class="science-card-desc">Deconstruct chronic pathological pain, synaptic transmission, and system network attenuation.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/sensory-system-pain-disease-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/sensory-system-pain-disease-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/sensory-system-pain-disease-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">09 July 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">2</span>
+<span class="elem-symbol">A2</span>
+<span class="elem-name">Elem</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Great Ape Laughter &amp; Human Speech</h4>
+<p class="science-card-desc">Learn how laughter in wild apes shows a fun connection to human language and speech.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-elementary.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-elementary.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-elementary.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">26 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Great Ape Laughter &amp; Human Speech</h4>
+<p class="science-card-desc">Explore the comparative primatology of ape tickle-laughter and early phonetic evolution.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">26 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Climate Scientist Warming Controversy</h4>
+<p class="science-card-desc">Analyze the public debate and scientific consensus surrounding rising global temperatures.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/climate-scientist-warming-report-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/climate-scientist-warming-report-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/climate-scientist-warming-report-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">25 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Climate Scientist Warming Controversy</h4>
+<p class="science-card-desc">Examine self-censorship, socio-political pressures, and mitigation consensus in climate modeling.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/climate-scientist-warming-report-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/climate-scientist-warming-report-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/climate-scientist-warming-report-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">25 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Ozempic &amp; the Obesity Revolution</h4>
+<p class="science-card-desc">Discuss the weight loss hormone therapy taking the world by storm and its health results.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">19 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Ozempic &amp; the Obesity Revolution</h4>
+<p class="science-card-desc">Deconstruct GLP-1 satiety agonists, hypothalamic reward circuitry, and metabolic endocrine therapy.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">19 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">The Secret Language Behind Animal Cooperation</h4>
+<p class="science-card-desc">Learn how meerkats, birds, and other animals use voice calls to cooperate and warn of danger.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/animal-cooperation-language-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/animal-cooperation-language-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/animal-cooperation-language-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">19 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">The Secret Language Behind Animal Cooperation</h4>
+<p class="science-card-desc">Examine predator-specific warning signals, contextual syntax, and cognitive communication syntax.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/animal-cooperation-language-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/animal-cooperation-language-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/animal-cooperation-language-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">19 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Humans May Have Hidden Regenerative Powers</h4>
+<p class="science-card-desc">Explore how our bodies heal skin wounds and our potential for biological regeneration.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/hidden-regenerative-powers-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/hidden-regenerative-powers-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/hidden-regenerative-powers-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">17 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Humans May Have Hidden Regenerative Powers</h4>
+<p class="science-card-desc">Analyze blastema reactivation, cellular signaling cascades, and somatic growth-factor pathways.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/hidden-regenerative-powers-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/hidden-regenerative-powers-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/hidden-regenerative-powers-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">17 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Your Brain Can Keep Improving Into Your 90s</h4>
+<p class="science-card-desc">Discuss how reading, puzzle-solving, and clean lifestyles help keep our memory sharp as we age.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/brain-improving-in-90s-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/brain-improving-in-90s-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/brain-improving-in-90s-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">14 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Your Brain Can Keep Improving Into Your 90s</h4>
+<p class="science-card-desc">Analyze hippocampal neurogenesis, lifelong neuroplasticity, and cognitive reserve in nonagenarians.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/brain-improving-in-90s-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/brain-improving-in-90s-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/brain-improving-in-90s-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">14 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Why Grandparents Matter</h4>
+<p class="science-card-desc">Examine how close intergenerational contact improves the mental health and stability of youngsters.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/grandparents-mental-health.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/grandparents-mental-health.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/grandparents-mental-health.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">13 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="c1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">5</span>
+<span class="elem-symbol">C1</span>
+<span class="elem-name">Adv</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Social Decisions &amp; the Brain</h4>
+<p class="science-card-desc">Explore game theory, neuroeconomics, and amygdala responses during unfair resource negotiations.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/social-decisions-brain.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/social-decisions-brain.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/social-decisions-brain.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">02 June 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="c1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">5</span>
+<span class="elem-symbol">C1</span>
+<span class="elem-name">Adv</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Mendelian Laws Broken</h4>
+<p class="science-card-desc">Deconstruct selfish gene drives and meiotic drive mechanisms bypassing classical Mendelian genetics.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/mendelian-laws-broken.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/mendelian-laws-broken.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/mendelian-laws-broken.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">30 May 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Why 'Football' Beats 'Shamrock'</h4>
+<p class="science-card-desc">Learn why concrete real nouns are much easier to store and recall than abstract symbols.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/football-beats-shamrock-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/football-beats-shamrock-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/football-beats-shamrock-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">20 May 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Why 'Football' Beats 'Shamrock'</h4>
+<p class="science-card-desc">Analyze recall latency, hierarchical semantic networking, and sensory-motor word retention.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/football-beats-shamrock-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/football-beats-shamrock-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/football-beats-shamrock-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">20 May 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Human Right-Handedness</h4>
+<p class="science-card-desc">Explore neurological lateralization and why hand dominance exists stably in human populations.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/right-handedness.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/right-handedness.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/right-handedness.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">17 May 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">AI: Reality or Delusion</h4>
+<p class="science-card-desc">Analyze statistical predictions, model hallucination rates, and semantic grounding in LLMs.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ai-reality-delusion.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ai-reality-delusion.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ai-reality-delusion.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">09 May 2026</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Impersonation Accounts</h4>
+<p class="science-card-desc">Examine social media trust indicators, identity fraud, and online bot verification.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/impersonation-accounts.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/impersonation-accounts.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/impersonation-accounts.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">30 November 2025</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">The Future of Fusion Energy</h4>
+<p class="science-card-desc">Discuss controlled thermonuclear fusion, Tokamaks, and laser ignition thresholds.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/fusion-energy.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/fusion-energy.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/fusion-energy.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">15 August 2025</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Losing Spoken Words</h4>
+<p class="science-card-desc">Deconstruct lexical attrition, screen time saturation, and linguistic contraction in teenagers.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/losing-spoken-words.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/losing-spoken-words.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/losing-spoken-words.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">30 June 2025</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">3</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Intm</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">AI &amp; the Brain</h4>
+<p class="science-card-desc">Compare biological neural networks and digital learning systems from an energy standpoint.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ai-and-the-brain-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ai-and-the-brain-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ai-and-the-brain-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">12 May 2025</span>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Uppr</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">AI &amp; the Brain</h4>
+<p class="science-card-desc">Analyze backpropagation, sparse spike coding, and the thermodynamics of biological learning.</p>
+<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ai-and-the-brain-upper-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ai-and-the-brain-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ai-and-the-brain-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="science-date">12 May 2025</span>
+</div>
+<div class="science-card history-session" data-level="a1">
+<div class="science-card-header">
+<span class="badge-level badge-a1">A1</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Inside the Backrooms (Elementary)</h4>
+<p class="science-card-desc">Explore creepypasta urban legends and liminal spaces in simplified language.</p>
+<div class="mode-access-grid">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/inside-the-backrooms-elementary.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/inside-the-backrooms-elementary.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/inside-the-backrooms-elementary.html?mode=private">🎓 PRIVATE</a>
+</div>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="card-topic-tag">🔬 Science</span>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-card-header">
+<span class="badge-level badge-b1">B1</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Inside the Backrooms (Intermediate)</h4>
+<p class="science-card-desc">Analyze liminal space psychology, architecture, and online mythmaking.</p>
+<div class="mode-access-grid">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/inside-the-backrooms-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/inside-the-backrooms-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/inside-the-backrooms-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="card-topic-tag">🔬 Science</span>
+</div>
+</div>
+<div class="science-card history-session" data-level="a1">
+<div class="science-card-header">
+<span class="badge-level badge-a1">A1</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Childhood Obesity Theory (Elementary)</h4>
+<p class="science-card-desc">Discuss simple health habits, nutrition, and lifestyle choices.</p>
+<div class="mode-access-grid">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/childhood-obesity-theory-elementary.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/childhood-obesity-theory-elementary.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/childhood-obesity-theory-elementary.html?mode=private">🎓 PRIVATE</a>
+</div>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="card-topic-tag">🔬 Science</span>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-card-header">
+<span class="badge-level badge-b1">B1</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Childhood Obesity Theory (Intermediate)</h4>
+<p class="science-card-desc">Deconstruct childhood health theories, systemic factors, and dietary habits.</p>
+<div class="mode-access-grid">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="card-topic-tag">🔬 Science</span>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-card-header">
+<span class="badge-level badge-b1">B1</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">TV in Midlife Shrinks the Brain (Intermediate)</h4>
+<p class="science-card-desc">Examine neurological findings regarding sedentary lifestyle and brain volume.</p>
+<div class="mode-access-grid">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/tv-midlife-shrink-brain-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/tv-midlife-shrink-brain-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/tv-midlife-shrink-brain-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="card-topic-tag">🔬 Science</span>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-card-header">
+<span class="badge-level badge-b1">B1</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Recycling Distraction Test (Intermediate)</h4>
+<p class="science-card-desc">Discuss environmental psychology and consumer recycling behavior.</p>
+<div class="mode-access-grid">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/recycling-distraction-test-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/recycling-distraction-test-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/recycling-distraction-test-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="card-topic-tag">🔬 Science</span>
+</div>
+</div>
+<div class="science-card history-session" data-level="b1">
+<div class="science-card-header">
+<span class="badge-level badge-b1">B1</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Gut-Brain Memory Connection (Intermediate)</h4>
+<p class="science-card-desc">Explore the microbiome-brain axis and its impact on memory and mood.</p>
+<div class="mode-access-grid">
+<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/gut-brain-memory-intermediate.html">🗣️ BIG GROUP</a>
+<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/gut-brain-memory-intermediate.html?mode=mini">👥 MINI GROUP</a>
+<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/gut-brain-memory-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+</div>
+<div class="science-card-footer" style="margin-top: 1rem;">
+<span class="card-topic-tag">🔬 Science</span>
+</div>
+</div>
+</div>
+</div>
+<div class="science-card history-session" data-lang="en" data-level="c1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">10</span>
+<span class="elem-symbol">C1</span>
+<span class="elem-name">Adv</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Brain Cells That Keep You Motivated (C1)</h4>
+<p class="science-card-desc">An in-depth neurochemical analysis of neural circuitry, dopamine modulation, and volition in motivation.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-advanced.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">9</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Int</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Brain Cells That Keep You Motivated (B1)</h4>
+<p class="science-card-desc">Exploring how neural circuits, dopamine release, and personal initiative maintain daily focus and perseverance.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-lang="en" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">8</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Upp</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2)</h4>
+<p class="science-card-desc">Re-evaluating medical hypotheses, caloric expenditure, metabolism, and longitudinal health studies.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/childhood-obesity-theory-upper-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-lang="en" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">7</span>
+<span class="elem-symbol">A2</span>
+<span class="elem-name">Elem</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Ordinary WiFi Can Identify You (A2)</h4>
+<p class="science-card-desc">Discovering how radio signals, smart routers, and wave reflections track indoor human movement in elementary English.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-elementary.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">6</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Int</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Ordinary WiFi Can Identify You (B1)</h4>
+<p class="science-card-desc">Analyzing spatial signal disturbance, biometric gait analysis, non-camera detection, and privacy security.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-lang="en" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">5</span>
+<span class="elem-symbol">A2</span>
+<span class="elem-name">Elem</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (A2)</h4>
+<p class="science-card-desc">Exploring physical body posture, mental focus, chair ergonomics, and mood elevation in basic English.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-elementary.html">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Int</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (B1)</h4>
+<p class="science-card-desc">Investigating embodied cognition, spinal alignment, executive decision-making, and neurobiological stress mechanisms.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+</div>
+<!-- Brain Cells That Keep You Motivated (C1) -->
+<div class="science-card history-session" data-lang="en" data-level="c1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">10</span>
+<span class="elem-symbol">C1</span>
+<span class="elem-name">Adv</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Brain Cells That Keep You Motivated (C1)</h4>
+<p class="science-card-desc">An in-depth neurochemical analysis of neural circuitry, dopamine modulation, and volition in motivation.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-advanced.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Brain Cells That Keep You Motivated (B1) -->
+<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">9</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Int</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Brain Cells That Keep You Motivated (B1)</h4>
+<p class="science-card-desc">Exploring how neural circuits, dopamine release, and personal initiative maintain daily focus and perseverance.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2) -->
+<div class="science-card history-session" data-lang="en" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">8</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Upp</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2)</h4>
+<p class="science-card-desc">Re-evaluating medical hypotheses, caloric expenditure, metabolism, and longitudinal health studies.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/childhood-obesity-theory-upper-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Ordinary WiFi Can Identify You (A2) -->
+<div class="science-card history-session" data-lang="en" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">7</span>
+<span class="elem-symbol">A2</span>
+<span class="elem-name">Elem</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Ordinary WiFi Can Identify You (A2)</h4>
+<p class="science-card-desc">Discovering how radio signals, smart routers, and wave reflections track indoor human movement in elementary English.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-elementary.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Ordinary WiFi Can Identify You (B1) -->
+<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">6</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Int</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Ordinary WiFi Can Identify You (B1)</h4>
+<p class="science-card-desc">Analyzing spatial signal disturbance, biometric gait analysis, non-camera detection, and privacy security.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Sitting Up Straight May Improve Your Mood (A2) -->
+<div class="science-card history-session" data-lang="en" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">5</span>
+<span class="elem-symbol">A2</span>
+<span class="elem-name">Elem</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (A2)</h4>
+<p class="science-card-desc">Exploring physical body posture, mental focus, chair ergonomics, and mood elevation in basic English.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-elementary.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Sitting Up Straight May Improve Your Mood (B1) -->
+<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Int</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (B1)</h4>
+<p class="science-card-desc">Investigating embodied cognition, spinal alignment, executive decision-making, and neurobiological stress mechanisms.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Brain Cells That Keep You Motivated (C1) -->
+<div class="science-card history-session" data-lang="en" data-level="c1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">10</span>
+<span class="elem-symbol">C1</span>
+<span class="elem-name">Adv</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Brain Cells That Keep You Motivated (C1)</h4>
+<p class="science-card-desc">An in-depth neurochemical analysis of neural circuitry, dopamine modulation, and volition in motivation.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-advanced.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Brain Cells That Keep You Motivated (B1) -->
+<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">9</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Int</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Brain Cells That Keep You Motivated (B1)</h4>
+<p class="science-card-desc">Exploring how neural circuits, dopamine release, and personal initiative maintain daily focus and perseverance.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2) -->
+<div class="science-card history-session" data-lang="en" data-level="b2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">8</span>
+<span class="elem-symbol">B2</span>
+<span class="elem-name">Upp</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2)</h4>
+<p class="science-card-desc">Re-evaluating medical hypotheses, caloric expenditure, metabolism, and longitudinal health studies.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/childhood-obesity-theory-upper-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Ordinary WiFi Can Identify You (A2) -->
+<div class="science-card history-session" data-lang="en" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">7</span>
+<span class="elem-symbol">A2</span>
+<span class="elem-name">Elem</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Ordinary WiFi Can Identify You (A2)</h4>
+<p class="science-card-desc">Discovering how radio signals, smart routers, and wave reflections track indoor human movement in elementary English.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-elementary.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Ordinary WiFi Can Identify You (B1) -->
+<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">6</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Int</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Ordinary WiFi Can Identify You (B1)</h4>
+<p class="science-card-desc">Analyzing spatial signal disturbance, biometric gait analysis, non-camera detection, and privacy security.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Sitting Up Straight May Improve Your Mood (A2) -->
+<div class="science-card history-session" data-lang="en" data-level="a2">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">5</span>
+<span class="elem-symbol">A2</span>
+<span class="elem-name">Elem</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (A2)</h4>
+<p class="science-card-desc">Exploring physical body posture, mental focus, chair ergonomics, and mood elevation in basic English.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-elementary.html">Explore Session ➔</a>
+</div>
+</div>
+<!-- Sitting Up Straight May Improve Your Mood (B1) -->
+<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-ruler"></div>
+<div class="science-card-header">
+<div class="periodic-element">
+<span class="elem-num">4</span>
+<span class="elem-symbol">B1</span>
+<span class="elem-name">Int</span>
+</div>
+<span class="science-lang-flag">🇬🇧</span>
+</div>
+<div class="science-card-body">
+<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (B1)</h4>
+<p class="science-card-desc">Investigating embodied cognition, spinal alignment, executive decision-making, and neurobiological stress mechanisms.</p>
+</div>
+<div class="science-card-footer">
+<span class="science-card-date">26 August 2026</span>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-intermediate.html">Explore Session ➔</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /logged-in content -->
+<!-- /club-main -->
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border); margin-top: 0;">
+<h3 style="font-size: 1rem; margin-bottom: .5rem;">Why Science?</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Scientific topics provide the perfect structure for advanced discussion, hypothesis testing, and critical thinking in your target language.</p>
+</div>
+</div>
+<!-- /grid -->
+</section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const sessions = document.querySelectorAll('.history-session');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedLevel = btn.getAttribute('data-level');
+
+      sessions.forEach(sess => {
+        const levels = (sess.getAttribute('data-level') || '').split(' ');
+        if (selectedLevel === 'all' || levels.includes(selectedLevel)) {
+          sess.style.display = 'flex';
+        } else {
+          sess.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script><script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>

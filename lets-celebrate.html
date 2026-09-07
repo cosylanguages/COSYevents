@@ -1,0 +1,643 @@
+<!-- DEVELOPER ALERT: Refer to templates/events/celebrate-session-template.html (or corresponding active templates in events/sessions/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Let's Celebrate 🎉 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<link rel="stylesheet" href="shared/css/clubs/lets-celebrate.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #BA7517, #5c390b); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+</style>
+<style>
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    background: var(--border);
+  }
+  .filter-btn.active {
+    background: #C0392B;
+    color: white;
+    border-color: #C0392B;
+  }
+</style></head>
+<body class="theme-celebrate">
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<img alt="Celebrate logo" src="../../../../images/letscelebrate.png" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
+<h1>Let's Celebrate</h1>
+<p>Festivals, traditions, and the rituals that bring people together. Every session zooms in on a celebration from around the world.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="../../../../events/speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<!-- STUDENT/TEACHER/ADMIN CONTENT -->
+<div>
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Upcoming Sessions</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Article</td><td>Lunar New Year : Traditions &amp; Red Envelopes</td></tr>
+<tr><td>Description</td><td>A deep dive into the most important festival in many Asian cultures.</td></tr>
+<tr><td>Schedule</td><td>Planned : TBC</td></tr>
+<tr><td>Duration</td><td>60 min</td></tr>
+<tr><td>Languages</td><td>🇬🇧 🇫🇷 🇮🇹 🇷🇺 🇬🇷</td></tr>
+</table></div>
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20Let%27s%20Celebrate.">💬 Register interest</a>
+<!-- HISTORY -->
+<div class="history-block" id="lc-hist" style="margin-top: 2rem;">
+<div class="section-header" style="margin-bottom: 1rem;">
+<h2 style="font-size: 1.5rem;">🕒 Past Sessions</h2>
+</div><div class="club-filters-lang" style="justify-content: flex-start; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-lang="all">All Languages</button>
+<button class="filter-btn" data-lang="en">🇬🇧 English</button>
+</div>
+<div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-level="all">All Levels</button>
+<button class="filter-btn" data-level="a1">A1</button>
+<button class="filter-btn" data-level="a2">A2</button>
+<button class="filter-btn" data-level="b1">B1</button>
+<button class="filter-btn" data-level="b2">B2</button>
+</div>
+<div class="history-body" style="display: block; padding: 0; border: none;">
+<!-- 📌 PINNED CELEBRATION BATCHES -->
+<div class="pinned-challenges-section" style="margin-bottom: 3.5rem; background: rgba(186, 117, 23, 0.03); border: 2px dashed #BA7517; border-radius: 28px; padding: 2rem;">
+<h3 style="margin-top: 0; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-size: 1.5rem; display: flex; align-items: center; gap: 0.75rem; color: #BA7517;">
+<span>📌</span> Pinned Celebration Batches (60 min)
+  </h3>
+<div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+<!-- Batch 1 -->
+<div class="history-session" data-lang="en" data-level="a1 b1 b2" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#FFF5F5; color:#E53E3E; border-color:#FED7D7; border:1px solid #FED7D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">A1</span>
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🧘‍♂️ Mindful Living &amp; Balance Celebrations</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Reflect on balance, simplify schedules, and celebrate work-free spaces.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #BA7517;">
+          Invitations:
+          <a href="sessions/lets-celebrate/national-simplicity-day.html" style="color:#BA7517; text-decoration:underline; font-weight:600;">National Simplicity Day (A1)</a> •
+          <a href="sessions/lets-celebrate/national-workaholics-day.html" style="color:#BA7517; text-decoration:underline; font-weight:600;">National Workaholics Day (A1)</a> •
+          <a href="sessions/lets-celebrate/international-peace-love-day-intermediate.html" style="color:#BA7517; text-decoration:underline; font-weight:600;">Peace &amp; Love (B1)</a> •
+          <a href="sessions/lets-celebrate/international-peace-love-day-upper-intermediate.html" style="color:#BA7517; text-decoration:underline; font-weight:600;">Peace &amp; Love (B2)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/lets-celebrate/national-simplicity-day.html" style="background:#BA7517; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+<!-- Batch 2 -->
+<div class="history-session" data-lang="en" data-level="a1 a2 b1 b2" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#FFF5F5; color:#E53E3E; border-color:#FED7D7; border:1px solid #FED7D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">A1</span>
+<span class="club-tag" style="background:#FAEEE8; color:#C0392B; border-color:#F5CBA7; border:1px solid #F5CBA7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">A2</span>
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🐝 Ecosystem &amp; Space Awareness Days</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Explore the delicate balance of planetary biosystems, space monitor systems, and urban green apiary support.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #BA7517;">
+          Invitations:
+          <a href="sessions/lets-celebrate/urban-beekeeping-day-starter.html" style="color:#BA7517; text-decoration:underline; font-weight:600;">Urban Beekeeping (A1)</a> •
+          <a href="sessions/lets-celebrate/urban-beekeeping-day-elementary.html" style="color:#BA7517; text-decoration:underline; font-weight:600;">Urban Beekeeping (A2)</a> •
+          <a href="sessions/lets-celebrate/international-asteroid-day-intermediate.html" style="color:#BA7517; text-decoration:underline; font-weight:600;">Asteroid Day (B1)</a> •
+          <a href="sessions/lets-celebrate/international-asteroid-day-upper-intermediate.html" style="color:#BA7517; text-decoration:underline; font-weight:600;">Asteroid Day (B2)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/lets-celebrate/urban-beekeeping-day-starter.html" style="background:#BA7517; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+</div>
+</div>
+<div class="celebrate-history-grid" id="celebrate-history-grid">
+<div class="celebrate-card history-session" data-level="b1">
+<div class="celebrate-card-banner" style="background: linear-gradient(135deg, #BA7517, #5C380A); color: #FFF; padding: 1rem; font-weight: bold; text-align: center; border-radius: 12px 12px 0 0;">🕊️ August 25</div>
+<div class="celebrate-card-body" style="padding: 1.25rem;">
+<div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">INTERMEDIATE (B1)</span></div>
+<h4 class="celebrate-card-title" style="margin: 0 0 0.5rem; font-size: 1.15rem; font-family:'Playfair Display', serif;">Kiss and Make Up Day</h4>
+<p class="celebrate-card-desc" style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem;">Let go of grudges, clear the air, and explore the social psychology of forgiveness and reconciliation.</p>
+</div>
+<div class="celebrate-card-footer" style="padding: 0 1.25rem 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+<span class="celebrate-card-date" style="font-size: 0.8rem; color: var(--muted);">25 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/kiss-and-make-up-day-intermediate.html" style="background:#BA7517; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Explore Session ➔</a>
+</div>
+</div>
+<!-- World Nature Conservation Day (B1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">World Nature Conservation Day (B1)</h4>
+<p class="celebrate-card-desc">Celebrate global efforts to protect natural ecosystems, defend biodiversity, and preserve wild habitats worldwide.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">28 July 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/world-nature-conservation-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- Single Working Women's Day (B1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Single Working Women's Day (B1)</h4>
+<p class="celebrate-card-desc">Celebrate the achievements, independence, and unique professional journeys of unmarried women in the modern workforce.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">Every Tuesday 2pm</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/single-working-womens-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- National Aunt and Uncle Day (A2) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="a2">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a2">A2</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">National Aunt and Uncle Day (A2)</h4>
+<p class="celebrate-card-desc">Appreciate the special uncles and aunts in your family circle and share your favorite childhood memories in simple English.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">26 July 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/national-aunt-and-uncle-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- 1. Urban Beekeeping Day (Starter) -->
+<!-- 2. Urban Beekeeping Day (Elementary) -->
+<!-- 3. National Someone Day (Intermediate) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">National Someone Day (B1)</h4>
+<p class="celebrate-card-desc">A heartwarming celebration dedicated to recognizing and appreciating the special people in our lives who make a genuine difference every day.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">15 July 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/national-someone-day-intermediate.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- 4. National Someone Day (Upper-Intermediate) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b2">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b2">B2</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">National Someone Day (B2)</h4>
+<p class="celebrate-card-desc">Deconstruct the profound social psychology of mutual gratitude, unsung community heroes, and the art of relationship nurturance.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">15 July 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/national-someone-day-upper-intermediate.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- 5. Pandemonium Day (Intermediate) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Pandemonium Day (B1)</h4>
+<p class="celebrate-card-desc">Embrace the chaotic side of life! Discuss how to find humor, order, and stress relief when things get a little wild and chaotic around us.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">14 July 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/pandemonium-day-intermediate.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- 6. Pandemonium Day (Upper-Intermediate) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b2">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b2">B2</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Pandemonium Day (B2)</h4>
+<p class="celebrate-card-desc">Analyze systemic chaos and unpredictability. Discuss modern coping mechanisms, cognitive adaptations, and creative expressions during life's frantic periods.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">14 July 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/pandemonium-day-upper-intermediate.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- 7. National Simplicity Day -->
+<!-- 8. International Peace & Love Day (Intermediate) -->
+<!-- 9. International Peace & Love Day (Upper-Intermediate) -->
+<!-- 10. National Workaholics Day -->
+<!-- 11. Diwali : The Festival of Lights -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Diwali: The Festival of Lights</h4>
+<p class="celebrate-card-desc">Immerse yourself in India's most vibrant festival. Discuss the triumph of light over darkness, clay lamps, delicious sweets, and warm gatherings.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">01 November 2025</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/diwali-festival.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- 12. International Asteroid Day (Intermediate) -->
+<!-- 13. International Asteroid Day (Upper-Intermediate) -->
+<!-- 14. International Day of Family Remittances -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">International Day of Family Remittances</h4>
+<p class="celebrate-card-desc">Honor the hard work and love of migrant families worldwide who send support back home, strengthening global communities.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">16 June 2025</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/family-remittances-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- 15. Lunar New Year -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Lunar New Year</h4>
+<p class="celebrate-card-desc">Welcome the spring festival! Learn about colorful lion dances, traditional red envelopes, reunion dinners, and zodiac customs.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">10 February 2025</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/lunar-new-year.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- Cheap Flight Day (A1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="a1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a1">A1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Cheap Flight Day (A1)</h4>
+<p class="celebrate-card-desc">Learn basic vocabulary for airport navigation, cheap ticket deals, plane travel, and holiday trips.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">23 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/cheap-flight-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- National Book Lovers Day (A1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="a1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a1">A1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">National Book Lovers Day (A1)</h4>
+<p class="celebrate-card-desc">Share your favorite reading habits, stories, libraries, and book treasures in simple Starter English.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">09 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/national-book-lovers-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- International Homeless Animals Day (A1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="a1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a1">A1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">International Homeless Animals Day (A1)</h4>
+<p class="celebrate-card-desc">Discuss animal rescue, shelter care, pet adoption, and being kind to street animals in basic English.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">15 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/international-homeless-animals-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- Mountain Day (B1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Mountain Day (B1)</h4>
+<p class="celebrate-card-desc">Explore mountain trekking, high altitude endurance, wilderness conservation, and peak tranquility.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">11 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/mountain-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<div class="celebrate-card history-session" data-lang="en" data-level="a1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a1">A1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Cheap Flight Day (A1)</h4>
+<p class="celebrate-card-desc">Learn basic vocabulary for airport navigation, cheap ticket deals, plane travel, and holiday trips.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">23 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/cheap-flight-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<div class="celebrate-card history-session" data-lang="en" data-level="a1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a1">A1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">National Book Lovers Day (A1)</h4>
+<p class="celebrate-card-desc">Share your favorite reading habits, stories, libraries, and book treasures in simple Starter English.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">09 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/national-book-lovers-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<div class="celebrate-card history-session" data-lang="en" data-level="a1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a1">A1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">International Homeless Animals Day (A1)</h4>
+<p class="celebrate-card-desc">Discuss animal rescue, shelter care, pet adoption, and being kind to street animals in basic English.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">15 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/international-homeless-animals-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Mountain Day (B1)</h4>
+<p class="celebrate-card-desc">Explore mountain trekking, high altitude endurance, wilderness conservation, and peak tranquility.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">11 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/mountain-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Cheap Flight Day (A1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="a1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a1">A1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Cheap Flight Day (A1)</h4>
+<p class="celebrate-card-desc">Learn basic vocabulary for airport navigation, cheap ticket deals, plane travel, and holiday trips.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">23 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/cheap-flight-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- National Book Lovers Day (A1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="a1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a1">A1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">National Book Lovers Day (A1)</h4>
+<p class="celebrate-card-desc">Share your favorite reading habits, stories, libraries, and book treasures in simple Starter English.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">09 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/national-book-lovers-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- International Homeless Animals Day (A1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="a1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-a1">A1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">International Homeless Animals Day (A1)</h4>
+<p class="celebrate-card-desc">Discuss animal rescue, shelter care, pet adoption, and being kind to street animals in basic English.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">15 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/international-homeless-animals-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+<!-- Mountain Day (B1) -->
+<div class="celebrate-card history-session" data-lang="en" data-level="b1">
+<div class="celebrate-eyelet"></div>
+<div class="celebrate-loop"></div>
+<div class="celebrate-card-banner">
+<div style="display: flex; gap: 0.3rem;">
+<span class="club-tag tag-b1">B1</span>
+</div>
+<span style="font-size: 1rem;">🇬🇧</span>
+</div>
+<div class="celebrate-card-body">
+<h4 class="celebrate-card-title">Mountain Day (B1)</h4>
+<p class="celebrate-card-desc">Explore mountain trekking, high altitude endurance, wilderness conservation, and peak tranquility.</p>
+<div class="celebrate-card-footer">
+<span style="color: var(--muted); font-size: 0.75rem;">11 August 2026</span>
+<a class="celebrate-card-view" href="sessions/lets-celebrate/mountain-day.html">Open Invitation →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /logged-in content -->
+<!-- /club-main -->
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem;">Global Culture</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Understanding how people celebrate is the fastest way to understand their language and values.</p>
+</div>
+</div>
+<!-- /grid -->
+</section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const sessions = document.querySelectorAll('.history-session');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedLevel = btn.getAttribute('data-level');
+
+      sessions.forEach(sess => {
+        const levels = (sess.getAttribute('data-level') || '').split(' ');
+        if (selectedLevel === 'all' || levels.includes(selectedLevel)) {
+          sess.style.display = 'flex';
+        } else {
+          sess.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script><script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>

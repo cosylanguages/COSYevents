@@ -1,0 +1,854 @@
+
+/**
+ * css/mind-matters.css
+ * Mind Matters Speaking Club styles.
+ * Holds styles for past session cards, sub-conscious profile box, and related elements.
+ */
+
+.mind-history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.mind-card {
+  background: var(--surface-color, #FFFDF9);
+  border: 1px solid var(--border);
+  border-radius: 0 16px 16px 16px; /* tab-like on top left */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: visible; /* to let folder tab show */
+  text-decoration: none;
+}
+
+/* Tab-folder top left accent */
+.mind-card::before {
+  content: 'CASE STUDY';
+  position: absolute;
+  top: -24px;
+  left: -1px;
+  height: 24px;
+  background: var(--surface-color, #FFFDF9);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-radius: 8px 8px 0 0;
+  padding: 0 12px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #993556;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Subtle subconscious watermark brain */
+.mind-card::after {
+  content: '🧠';
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.mind-card:hover {
+  transform: translateY(-6px);
+  border-color: #993556;
+  box-shadow: 0 12px 28px rgba(153, 53, 86, 0.12);
+}
+
+.mind-card:hover::before {
+  border-color: #993556;
+  background: #993556;
+  color: white;
+}
+
+.mind-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.mind-card-tags {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.mind-card-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.mind-card-tag.tag-a1 { background: #FFF5F5; color: #E53E3E; border-color: #FED7D7; }
+.mind-card-tag.tag-a2 { background: #FAEEE8; color: #C0392B; border-color: #F5CBA7; }
+.mind-card-tag.tag-b1 { background: #E1F5EE; color: #1A7A4A; border-color: #A3E4D7; }
+.mind-card-tag.tag-b2 { background: #EBF8FF; color: #2B6CB0; border-color: #BEE3F8; }
+.mind-card-tag.tag-c1 { background: #EEEDFE; color: #534AB7; border-color: #D2CFFE; }
+.mind-card-tag.tag-c2 { background: #FAF5FF; color: #6B46C1; border-color: #E9D8FD; }
+
+.mind-card-lang {
+  font-size: 1rem;
+}
+
+.mind-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-deep);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.mind-card-desc {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  margin: 0 0 1.2rem 0;
+  flex-grow: 1;
+}
+
+.mind-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.8rem;
+  margin-top: auto;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.mind-card-date {
+  color: var(--muted);
+}
+
+.mind-card-view {
+  color: #993556;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.mind-card-view:hover {
+  color: #4d1a2b;
+  transform: translateX(3px);
+}
+
+/* 🧠 MIND MATTERS: Subconscious Mind Profile Box & Session Card Box */
+.mind-profile-box {
+  background: var(--surface-color, #FFFDF9);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.mind-profile-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #993556;
+}
+
+.mind-profile-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #993556;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mind-session-info-box {
+  background: var(--cream-dark);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.mind-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.mind-profile-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.mind-profile-item strong {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.mind-profile-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+body[class*="theme-mind"]::after {
+  content: "🧠";
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 6rem;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ─── MIND MATTERS: THEMATIC ATMOSPHERIC STYLE OVERRIDES ─── */
+
+body[class*="theme-mind-"] {
+  background-color: var(--mind-theme-bg, #FFFDF9) !important;
+  color: var(--mind-theme-text, #372F2F) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[class*="theme-mind-"]::after {
+  content: var(--mind-theme-watermark, "🧠") !important;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 8rem;
+  opacity: 0.04 !important;
+  pointer-events: none;
+  z-index: -1;
+  transition: content 0.3s ease;
+}
+
+html[data-theme="dark"] body[class*="theme-mind-"]::after {
+  opacity: 0.025 !important;
+}
+
+/* Breadcrumbs & links color synchronization */
+body[class*="theme-mind-"] .back-link,
+body[class*="theme-mind-"] .cosy-breadcrumbs a {
+  color: var(--mind-theme-accent) !important;
+}
+
+/* Main Box container styling to ensure beautiful persistent cozy contrast */
+body[class*="theme-mind-"] .vocab-card,
+body[class*="theme-mind-"] .round-block,
+body[class*="theme-mind-"] .mind-profile-box,
+body[class*="theme-mind-"] .mind-session-info-box,
+body[class*="theme-mind-"] .sensitive-topic-warning,
+body[class*="theme-mind-"] .mistake-block {
+  background-color: var(--mind-theme-card-bg) !important;
+  border-color: var(--mind-theme-border) !important;
+  color: var(--mind-theme-text) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body[class*="theme-mind-"] .vocab-word {
+  color: var(--mind-theme-accent) !important;
+  font-weight: 700;
+}
+
+body[class*="theme-mind-"] .round-header,
+body[class*="theme-mind-"] .mistake-header {
+  border-bottom: 1px solid var(--mind-theme-border) !important;
+  color: var(--mind-theme-text) !important;
+}
+
+body[class*="theme-mind-"] .btn-primary,
+body[class*="theme-mind-"] .btn-add-dict {
+  background-color: var(--mind-theme-accent) !important;
+  border-color: var(--mind-theme-accent) !important;
+  color: #FFFFFF !important;
+}
+
+body[class*="theme-mind-"] .mind-profile-box h3 {
+  color: var(--mind-theme-accent) !important;
+}
+
+body[class*="theme-mind-"] .mind-profile-box::before {
+  background: var(--mind-theme-accent) !important;
+}
+
+body[class*="theme-mind-"] .mind-profile-item strong {
+  color: var(--mind-theme-accent) !important;
+  opacity: 0.85;
+}
+
+body[class*="theme-mind-"] .round-block.grammar {
+  border-left: 5px solid var(--mind-theme-accent) !important;
+}
+
+body[class*="theme-mind-"] .session-hero {
+  background: var(--mind-theme-hero) !important;
+}
+
+/* ─── Light Mode Definitions ─── */
+body.theme-mind-dopamine {
+  --mind-theme-bg: #FFF9F5;
+  --mind-theme-text: #4A2306;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #D45D00;
+  --mind-theme-border: #FCDCC5;
+  --mind-theme-watermark: "⚡";
+  --mind-theme-hero: linear-gradient(135deg, #D45D00, #4A2306);
+}
+body.theme-mind-sleep {
+  --mind-theme-bg: #F5F6FC;
+  --mind-theme-text: #1A234A;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #3F51B5;
+  --mind-theme-border: #D2D7F3;
+  --mind-theme-watermark: "🌙";
+  --mind-theme-hero: linear-gradient(135deg, #3F51B5, #1A234A);
+}
+body.theme-mind-limerence {
+  --mind-theme-bg: #FFF0F3;
+  --mind-theme-text: #4A1221;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #C2185B;
+  --mind-theme-border: #F8CCD7;
+  --mind-theme-watermark: "🌸";
+  --mind-theme-hero: linear-gradient(135deg, #C2185B, #4A1221);
+}
+body.theme-mind-depersonalization {
+  --mind-theme-bg: #F0F4F8;
+  --mind-theme-text: #1F2D3D;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #475669;
+  --mind-theme-border: #CFD8DC;
+  --mind-theme-watermark: "🪞";
+  --mind-theme-hero: linear-gradient(135deg, #475669, #1F2D3D);
+}
+body.theme-mind-inner-child {
+  --mind-theme-bg: #FAF5EF;
+  --mind-theme-text: #42301B;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #8D6E63;
+  --mind-theme-border: #E6D7C3;
+  --mind-theme-watermark: "🧸";
+  --mind-theme-hero: linear-gradient(135deg, #8D6E63, #42301B);
+}
+body.theme-mind-fear-love {
+  --mind-theme-bg: #EFF3F3;
+  --mind-theme-text: #1B2D2D;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #3E6161;
+  --mind-theme-border: #CADADA;
+  --mind-theme-watermark: "🗝️";
+  --mind-theme-hero: linear-gradient(135deg, #3E6161, #1B2D2D);
+}
+body.theme-mind-kidlin {
+  --mind-theme-bg: #FAF7F2;
+  --mind-theme-text: #3E3224;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #7B6248;
+  --mind-theme-border: #E8DFC7;
+  --mind-theme-watermark: "📜";
+  --mind-theme-hero: linear-gradient(135deg, #7B6248, #3E3224);
+}
+body.theme-mind-gilbert {
+  --mind-theme-bg: #FAF9F2;
+  --mind-theme-text: #3A321A;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #8B7330;
+  --mind-theme-border: #F1ECD0;
+  --mind-theme-watermark: "🧭";
+  --mind-theme-hero: linear-gradient(135deg, #8B7330, #3A321A);
+}
+body.theme-mind-wilson {
+  --mind-theme-bg: #F2F4F7;
+  --mind-theme-text: #1C2833;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #2E4053;
+  --mind-theme-border: #D5DBDB;
+  --mind-theme-watermark: "🦉";
+  --mind-theme-hero: linear-gradient(135deg, #2E4053, #1C2833);
+}
+body.theme-mind-murphy {
+  --mind-theme-bg: #F2F4F4;
+  --mind-theme-text: #2C3E50;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #566573;
+  --mind-theme-border: #D5D8DC;
+  --mind-theme-watermark: "☔";
+  --mind-theme-hero: linear-gradient(135deg, #566573, #2C3E50);
+}
+body.theme-mind-attraction {
+  --mind-theme-bg: #F6F3FA;
+  --mind-theme-text: #2B1F3D;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #673AB7;
+  --mind-theme-border: #E1D5F5;
+  --mind-theme-watermark: "✨";
+  --mind-theme-hero: linear-gradient(135deg, #673AB7, #2B1F3D);
+}
+body.theme-mind-connection {
+  --mind-theme-bg: #FAF3F0;
+  --mind-theme-text: #4A2A20;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #A0522D;
+  --mind-theme-border: #F3DFD8;
+  --mind-theme-watermark: "☕";
+  --mind-theme-hero: linear-gradient(135deg, #A0522D, #4A2A20);
+}
+body.theme-mind-inspiration {
+  --mind-theme-bg: #F3F7F4;
+  --mind-theme-text: #1F2E24;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #2E7D32;
+  --mind-theme-border: #DBE6DE;
+  --mind-theme-watermark: "🌱";
+  --mind-theme-hero: linear-gradient(135deg, #2E7D32, #1F2E24);
+}
+body.theme-mind-habits {
+  --mind-theme-bg: #F1F8F5;
+  --mind-theme-text: #1C332A;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #00796B;
+  --mind-theme-border: #D2E6DF;
+  --mind-theme-watermark: "🔄";
+  --mind-theme-hero: linear-gradient(135deg, #00796B, #1C332A);
+}
+body.theme-mind-franklin {
+  --mind-theme-bg: #FAF5E6;
+  --mind-theme-text: #3E2E16;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #A0522D;
+  --mind-theme-border: #EADBB7;
+  --mind-theme-watermark: "✒️";
+  --mind-theme-hero: linear-gradient(135deg, #A0522D, #3E2E16);
+}
+body.theme-mind-rationality {
+  --mind-theme-bg: #F0F4F7;
+  --mind-theme-text: #1B2A36;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #008080;
+  --mind-theme-border: #D1DFE6;
+  --mind-theme-watermark: "🧩";
+  --mind-theme-hero: linear-gradient(135deg, #008080, #1B2A36);
+}
+body.theme-mind-relocation {
+  --mind-theme-bg: #F5F3F7;
+  --mind-theme-text: #2B2036;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #6A5ACD;
+  --mind-theme-border: #E1DCF0;
+  --mind-theme-watermark: "🧳";
+  --mind-theme-hero: linear-gradient(135deg, #6A5ACD, #2B2036);
+}
+body.theme-mind-impersonation {
+  --mind-theme-bg: #FFF2F2;
+  --mind-theme-text: #4A1515;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #D32F2F;
+  --mind-theme-border: #F9D3D3;
+  --mind-theme-watermark: "🎭";
+  --mind-theme-hero: linear-gradient(135deg, #D32F2F, #4A1515);
+}
+body.theme-mind-propaganda {
+  --mind-theme-bg: #F5F5F5;
+  --mind-theme-text: #212121;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #616161;
+  --mind-theme-border: #E0E0E0;
+  --mind-theme-watermark: "👁️‍🗨️";
+  --mind-theme-hero: linear-gradient(135deg, #616161, #212121);
+}
+body.theme-mind-drama {
+  --mind-theme-bg: #FFF1F4;
+  --mind-theme-text: #4A0E17;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #C2185B;
+  --mind-theme-border: #F8CCD4;
+  --mind-theme-watermark: "⚡";
+  --mind-theme-hero: linear-gradient(135deg, #C2185B, #4A0E17);
+}
+body.theme-mind-smiles {
+  --mind-theme-bg: #FFFDF0;
+  --mind-theme-text: #4A3B05;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #E5A900;
+  --mind-theme-border: #FAF2CC;
+  --mind-theme-watermark: "😊";
+  --mind-theme-hero: linear-gradient(135deg, #E5A900, #4A3B05);
+}
+body.theme-mind-conversations {
+  --mind-theme-bg: #FAF5F0;
+  --mind-theme-text: #4A3319;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #8D5B4C;
+  --mind-theme-border: #EEDCD0;
+  --mind-theme-watermark: "💬";
+  --mind-theme-hero: linear-gradient(135deg, #8D5B4C, #4A3319);
+}
+body.theme-mind-work {
+  --mind-theme-bg: #F5F7FA;
+  --mind-theme-text: #2C3E50;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #34495E;
+  --mind-theme-border: #D6DBDF;
+  --mind-theme-watermark: "📈";
+  --mind-theme-hero: linear-gradient(135deg, #34495E, #2C3E50);
+}
+body.theme-mind-language {
+  --mind-theme-bg: #F9F2F4;
+  --mind-theme-text: #4D1A2B;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #993556;
+  --mind-theme-border: #EED0D8;
+  --mind-theme-watermark: "🗣️";
+  --mind-theme-hero: linear-gradient(135deg, #993556, #4D1A2B);
+}
+body.theme-mind-grief {
+  --mind-theme-bg: #FAF5F0;
+  --mind-theme-text: #3E2723;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #8D6E63;
+  --mind-theme-border: #E6D7CB;
+  --mind-theme-watermark: "🍂";
+  --mind-theme-hero: linear-gradient(135deg, #8D6E63, #3E2723);
+}
+body.theme-mind-pinkwashing {
+  --mind-theme-bg: #FFF5F8;
+  --mind-theme-text: #4A1525;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #E91E63;
+  --mind-theme-border: #F8D3DF;
+  --mind-theme-watermark: "🦩";
+  --mind-theme-hero: linear-gradient(135deg, #E91E63, #4A1525);
+}
+body.theme-mind-purplewashing {
+  --mind-theme-bg: #F9F5FC;
+  --mind-theme-text: #2B154A;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #9C27B0;
+  --mind-theme-border: #EEDD80; /* customized border */
+  --mind-theme-watermark: "💜";
+  --mind-theme-hero: linear-gradient(135deg, #9C27B0, #2B154A);
+}
+body.theme-mind-bluewashing {
+  --mind-theme-bg: #F2F7FA;
+  --mind-theme-text: #152A4A;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #2196F3;
+  --mind-theme-border: #DDECF8;
+  --mind-theme-watermark: "🌊";
+  --mind-theme-hero: linear-gradient(135deg, #2196F3, #152A4A);
+}
+body.theme-mind-redwashing {
+  --mind-theme-bg: #FFF2F2;
+  --mind-theme-text: #4A1111;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #F44336;
+  --mind-theme-border: #FAD9D9;
+  --mind-theme-watermark: "🚩";
+  --mind-theme-hero: linear-gradient(135deg, #F44336, #4A1111);
+}
+body.theme-mind-sportswashing {
+  --mind-theme-bg: #F2FAF4;
+  --mind-theme-text: #114A22;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #4CAF50;
+  --mind-theme-border: #D9FADF;
+  --mind-theme-watermark: "🏆";
+  --mind-theme-hero: linear-gradient(135deg, #4CAF50, #114A22);
+}
+body.theme-mind-whitewashing {
+  --mind-theme-bg: #FAFBFB;
+  --mind-theme-text: #2C3E50;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #78909C;
+  --mind-theme-border: #EAECEE;
+  --mind-theme-watermark: "🕊️";
+  --mind-theme-hero: linear-gradient(135deg, #78909C, #2C3E50);
+}
+body.theme-mind-ai {
+  --mind-theme-bg: #F2F5FA;
+  --mind-theme-text: #1A253E;
+  --mind-theme-card-bg: #FFFFFF;
+  --mind-theme-accent: #3F51B5;
+  --mind-theme-border: #DCE4F7;
+  --mind-theme-watermark: "🤖";
+  --mind-theme-hero: linear-gradient(135deg, #3F51B5, #1A253E);
+}
+
+/* ─── Dark Mode Variable Overrides ─── */
+html[data-theme="dark"] body[class*="theme-mind-"] {
+  background-color: var(--mind-theme-bg-dark, #1C1919) !important;
+  color: var(--mind-theme-text-dark, #FAF5F5) !important;
+}
+
+html[data-theme="dark"] body[class*="theme-mind-"] .vocab-card,
+html[data-theme="dark"] body[class*="theme-mind-"] .round-block,
+html[data-theme="dark"] body[class*="theme-mind-"] .mind-profile-box,
+html[data-theme="dark"] body[class*="theme-mind-"] .mind-session-info-box,
+html[data-theme="dark"] body[class*="theme-mind-"] .sensitive-topic-warning,
+html[data-theme="dark"] body[class*="theme-mind-"] .mistake-block {
+  background-color: var(--mind-theme-card-bg-dark, #262222) !important;
+  border-color: var(--mind-theme-border-dark, #3D3535) !important;
+  color: var(--mind-theme-text-dark, #FAF5F5) !important;
+}
+
+html[data-theme="dark"] body[class*="theme-mind-"] .round-header,
+html[data-theme="dark"] body[class*="theme-mind-"] .mistake-header {
+  border-bottom: 1px solid var(--mind-theme-border-dark, #3D3535) !important;
+  color: var(--mind-theme-text-dark, #FAF5F5) !important;
+}
+
+html[data-theme="dark"] body.theme-mind-dopamine {
+  --mind-theme-bg-dark: #1D140E;
+  --mind-theme-text-dark: #FEEFE6;
+  --mind-theme-card-bg-dark: #2B1D14;
+  --mind-theme-border-dark: #523624;
+  --mind-theme-accent: #FF8C33;
+}
+html[data-theme="dark"] body.theme-mind-sleep {
+  --mind-theme-bg-dark: #0F1224;
+  --mind-theme-text-dark: #E8EAF6;
+  --mind-theme-card-bg-dark: #171B33;
+  --mind-theme-border-dark: #30365F;
+  --mind-theme-accent: #7986CB;
+}
+html[data-theme="dark"] body.theme-mind-limerence {
+  --mind-theme-bg-dark: #210B12;
+  --mind-theme-text-dark: #FCE4EC;
+  --mind-theme-card-bg-dark: #33141F;
+  --mind-theme-border-dark: #5E273A;
+  --mind-theme-accent: #F06292;
+}
+html[data-theme="dark"] body.theme-mind-depersonalization {
+  --mind-theme-bg-dark: #182026;
+  --mind-theme-text-dark: #ECEFF1;
+  --mind-theme-card-bg-dark: #222D35;
+  --mind-theme-border-dark: #3E4D59;
+  --mind-theme-accent: #90A4AE;
+}
+html[data-theme="dark"] body.theme-mind-inner-child {
+  --mind-theme-bg-dark: #1C1611;
+  --mind-theme-text-dark: #EFEBE9;
+  --mind-theme-card-bg-dark: #2B221B;
+  --mind-theme-border-dark: #4E3E32;
+  --mind-theme-accent: #B0958B;
+}
+html[data-theme="dark"] body.theme-mind-fear-love {
+  --mind-theme-bg-dark: #131A1A;
+  --mind-theme-text-dark: #E0F2F1;
+  --mind-theme-card-bg-dark: #1F2929;
+  --mind-theme-border-dark: #334545;
+  --mind-theme-accent: #80CBC4;
+}
+html[data-theme="dark"] body.theme-mind-kidlin {
+  --mind-theme-bg-dark: #191511;
+  --mind-theme-text-dark: #FFFDF9;
+  --mind-theme-card-bg-dark: #26201B;
+  --mind-theme-border-dark: #4D4036;
+  --mind-theme-accent: #D7CCC8;
+}
+html[data-theme="dark"] body.theme-mind-gilbert {
+  --mind-theme-bg-dark: #1F1B11;
+  --mind-theme-text-dark: #FFFDEE;
+  --mind-theme-card-bg-dark: #2D2719;
+  --mind-theme-border-dark: #574B30;
+  --mind-theme-accent: #FFE082;
+}
+html[data-theme="dark"] body.theme-mind-wilson {
+  --mind-theme-bg-dark: #131A21;
+  --mind-theme-text-dark: #ECF0F1;
+  --mind-theme-card-bg-dark: #1F2A36;
+  --mind-theme-border-dark: #34495E;
+  --mind-theme-accent: #85929E;
+}
+html[data-theme="dark"] body.theme-mind-murphy {
+  --mind-theme-bg-dark: #1A252C;
+  --mind-theme-text-dark: #F2F4F4;
+  --mind-theme-card-bg-dark: #25343F;
+  --mind-theme-border-dark: #3E4F5B;
+  --mind-theme-accent: #A6ACAF;
+}
+html[data-theme="dark"] body.theme-mind-attraction {
+  --mind-theme-bg-dark: #150F1F;
+  --mind-theme-text-dark: #EDE7F6;
+  --mind-theme-card-bg-dark: #231A33;
+  --mind-theme-border-dark: #453361;
+  --mind-theme-accent: #B39DDB;
+}
+html[data-theme="dark"] body.theme-mind-connection {
+  --mind-theme-bg-dark: #20120D;
+  --mind-theme-text-dark: #FBEBE6;
+  --mind-theme-card-bg-dark: #331E17;
+  --mind-theme-border-dark: #5C362A;
+  --mind-theme-accent: #CD853F;
+}
+html[data-theme="dark"] body.theme-mind-inspiration {
+  --mind-theme-bg-dark: #111A13;
+  --mind-theme-text-dark: #E8F5E9;
+  --mind-theme-card-bg-dark: #1A2E1F;
+  --mind-theme-border-dark: #305C3D;
+  --mind-theme-accent: #81C784;
+}
+html[data-theme="dark"] body.theme-mind-habits {
+  --mind-theme-bg-dark: #0D1C17;
+  --mind-theme-text-dark: #E0F2F1;
+  --mind-theme-card-bg-dark: #172F27;
+  --mind-theme-border-dark: #265243;
+  --mind-theme-accent: #4DB6AC;
+}
+html[data-theme="dark"] body.theme-mind-franklin {
+  --mind-theme-bg-dark: #1D170D;
+  --mind-theme-text-dark: #FFFDEE;
+  --mind-theme-card-bg-dark: #2C2215;
+  --mind-theme-border-dark: #523F27;
+  --mind-theme-accent: #CD853F;
+}
+html[data-theme="dark"] body.theme-mind-rationality {
+  --mind-theme-bg-dark: #101920;
+  --mind-theme-text-dark: #E0F2F1;
+  --mind-theme-card-bg-dark: #192733;
+  --mind-theme-border-dark: #2F4559;
+  --mind-theme-accent: #4DB6AC;
+}
+html[data-theme="dark"] body.theme-mind-relocation {
+  --mind-theme-bg-dark: #161220;
+  --mind-theme-text-dark: #EDEBF6;
+  --mind-theme-card-bg-dark: #231D33;
+  --mind-theme-border-dark: #40355E;
+  --mind-theme-accent: #9FA8DA;
+}
+html[data-theme="dark"] body.theme-mind-impersonation {
+  --mind-theme-bg-dark: #200B0B;
+  --mind-theme-text-dark: #FFEBEE;
+  --mind-theme-card-bg-dark: #331414;
+  --mind-theme-border-dark: #5E2727;
+  --mind-theme-accent: #E57373;
+}
+html[data-theme="dark"] body.theme-mind-propaganda {
+  --mind-theme-bg-dark: #121212;
+  --mind-theme-text-dark: #F5F5F5;
+  --mind-theme-card-bg-dark: #1E1E1E;
+  --mind-theme-border-dark: #333333;
+  --mind-theme-accent: #9E9E9E;
+}
+html[data-theme="dark"] body.theme-mind-drama {
+  --mind-theme-bg-dark: #24060B;
+  --mind-theme-text-dark: #FCE4EC;
+  --mind-theme-card-bg-dark: #381119;
+  --mind-theme-border-dark: #6B2332;
+  --mind-theme-accent: #F48FB1;
+}
+html[data-theme="dark"] body.theme-mind-smiles {
+  --mind-theme-bg-dark: #1C1704;
+  --mind-theme-text-dark: #FFFEE6;
+  --mind-theme-card-bg-dark: #2B240B;
+  --mind-theme-border-dark: #52451C;
+  --mind-theme-accent: #FFD54F;
+}
+html[data-theme="dark"] body.theme-mind-conversations {
+  --mind-theme-bg-dark: #21160C;
+  --mind-theme-text-dark: #FBEFE5;
+  --mind-theme-card-bg-dark: #332314;
+  --mind-theme-border-dark: #5A402B;
+  --mind-theme-accent: #D7CCC8;
+}
+html[data-theme="dark"] body.theme-mind-work {
+  --mind-theme-bg-dark: #17202A;
+  --mind-theme-text-dark: #EAECEE;
+  --mind-theme-card-bg-dark: #212F3D;
+  --mind-theme-border-dark: #34495E;
+  --mind-theme-accent: #AEB6BF;
+}
+html[data-theme="dark"] body.theme-mind-language {
+  --mind-theme-bg-dark: #240E14;
+  --mind-theme-text-dark: #F9EBEF;
+  --mind-theme-card-bg-dark: #3A1822;
+  --mind-theme-border-dark: #6E3345;
+  --mind-theme-accent: #F48FB1;
+}
+html[data-theme="dark"] body.theme-mind-grief {
+  --mind-theme-bg-dark: #1E1512;
+  --mind-theme-text-dark: #EFEBE9;
+  --mind-theme-card-bg-dark: #2D211C;
+  --mind-theme-border-dark: #544037;
+  --mind-theme-accent: #D7CCC8;
+}
+html[data-theme="dark"] body.theme-mind-pinkwashing {
+  --mind-theme-bg-dark: #240B13;
+  --mind-theme-text-dark: #FCE4EC;
+  --mind-theme-card-bg-dark: #3B1724;
+  --mind-theme-border-dark: #6E3347;
+  --mind-theme-accent: #F48FB1;
+}
+html[data-theme="dark"] body.theme-mind-purplewashing {
+  --mind-theme-bg-dark: #170D24;
+  --mind-theme-text-dark: #F3E5F5;
+  --mind-theme-card-bg-dark: #281A38;
+  --mind-theme-border-dark: #4F376A;
+  --mind-theme-accent: #CE93D8;
+}
+html[data-theme="dark"] body.theme-mind-bluewashing {
+  --mind-theme-bg-dark: #0D1624;
+  --mind-theme-text-dark: #E3F2FD;
+  --mind-theme-card-bg-dark: #172438;
+  --mind-theme-border-dark: #324C6D;
+  --mind-theme-accent: #90CAF9;
+}
+html[data-theme="dark"] body.theme-mind-redwashing {
+  --mind-theme-bg-dark: #240B0B;
+  --mind-theme-text-dark: #FFEBEE;
+  --mind-theme-card-bg-dark: #3D1B1B;
+  --mind-theme-border-dark: #733737;
+  --mind-theme-accent: #EF9A9A;
+}
+html[data-theme="dark"] body.theme-mind-sportswashing {
+  --mind-theme-bg-dark: #0B2412;
+  --mind-theme-text-dark: #E8F5E9;
+  --mind-theme-card-bg-dark: #1A3B21;
+  --mind-theme-border-dark: #3B7348;
+  --mind-theme-accent: #A5D6A7;
+}
+html[data-theme="dark"] body.theme-mind-whitewashing {
+  --mind-theme-bg-dark: #1C2833;
+  --mind-theme-text-dark: #F2F4F4;
+  --mind-theme-card-bg-dark: #273746;
+  --mind-theme-border-dark: #4D5D6D;
+  --mind-theme-accent: #B0BEC5;
+}
+html[data-theme="dark"] body.theme-mind-ai {
+  --mind-theme-bg-dark: #0F121C;
+  --mind-theme-text-dark: #E8EAF6;
+  --mind-theme-card-bg-dark: #1B2033;
+  --mind-theme-border-dark: #353F5F;
+  --mind-theme-accent: #7986CB;
+}

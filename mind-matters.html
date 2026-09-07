@@ -1,0 +1,823 @@
+<!-- DEVELOPER ALERT: Refer to templates/events/mind-session-template.html (or corresponding active templates in events/sessions/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mind Matters 🧠 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<link rel="stylesheet" href="shared/css/clubs/mind-matters.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #993556, #4d1a2b); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+</style>
+<style>
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    background: var(--border);
+  }
+  .filter-btn.active {
+    background: #993556;
+    color: white;
+    border-color: #993556;
+  }
+</style></head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<img alt="Mind logo" src="../../../../images/mindmatters.png" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
+<h1>Mind Matters</h1>
+<p>Perhaps our minds are not puzzles to be solved, but landscapes to be gently wandered through. Welcome to a sanctuary of quiet reflection where we unravel our habits, our vulnerabilities, and the silent thoughts we rarely speak aloud. Slow down, breathe, and let us explore together the quiet architecture of human behaviour : with a voice that is gentle, psychological, and deeply reflective.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="../../../../events/speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<!-- CLUB CONTENT -->
+<div>
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Upcoming Sessions</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Article</td><td>The Maze of Biases</td></tr>
+<tr><td>Description</td><td>How our brains trick us and how to recognize these patterns.</td></tr>
+<tr><td>Schedule</td><td>Every Tuesday, 9pm</td></tr>
+<tr><td>Duration</td><td>60 min</td></tr>
+<tr><td>Languages</td><td>🇬🇧 🇫🇷</td></tr>
+</table></div>
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20Mind%20Matters.">💬 Register interest</a>
+<!-- HISTORY -->
+<div class="history-block" id="mm-hist" style="margin-top: 2rem;">
+<div class="section-header" style="margin-bottom: 1rem;">
+<h2 style="font-size: 1.5rem;">🕒 Past Sessions</h2>
+</div><div class="club-filters-lang" style="justify-content: flex-start; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-lang="all">All Languages</button>
+<button class="filter-btn" data-lang="en">🇬🇧 English</button>
+</div>
+<div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-level="all">All Levels</button>
+<button class="filter-btn" data-level="b1">B1</button>
+<button class="filter-btn" data-level="b2">B2</button>
+<button class="filter-btn" data-level="c1">C1</button>
+<button class="filter-btn" data-level="c2">C2</button>
+</div>
+<div class="history-body" style="display: block; padding: 0; border: none;">
+<!-- 📌 PINNED CASE STUDY BATCHES -->
+<div class="pinned-challenges-section" style="margin-bottom: 3.5rem; background: rgba(153, 53, 134, 0.03); border: 2px dashed #993556; border-radius: 28px; padding: 2rem;">
+<h3 style="margin-top: 0; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-size: 1.5rem; display: flex; align-items: center; gap: 0.75rem; color: #993556;">
+<span>📌</span> Pinned Case Study Batches (60 min)
+  </h3>
+<div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+<!-- Batch 1 -->
+<div class="history-session" data-lang="en" data-level="b1 b2" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🧼 The "Washing" &amp; Public Manipulation Series</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Deconstruct performative morality, tokenism, rainbow capitalism, and corporate marketing distraction shields.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #993556;">
+          Analyze Cases:
+          <a href="sessions/mind-matters/bluewashing-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Bluewashing (B1)</a> •
+          <a href="sessions/mind-matters/bluewashing-upper-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Bluewashing (B2)</a> •
+          <a href="sessions/mind-matters/redwashing-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Redwashing (B1)</a> •
+          <a href="sessions/mind-matters/redwashing-upper-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Redwashing (B2)</a> •
+          <a href="sessions/mind-matters/sportswashing-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Sportswashing (B1)</a> •
+          <a href="sessions/mind-matters/sportswashing-upper-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Sportswashing (B2)</a> •
+          <a href="sessions/mind-matters/purple-washing-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Purple Washing (B1)</a> •
+          <a href="sessions/mind-matters/purple-washing-upper-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Purple Washing (B2)</a> •
+          <a href="sessions/mind-matters/whitewashing-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Whitewashing (B1)</a> •
+          <a href="sessions/mind-matters/whitewashing-upper-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Whitewashing (B2)</a> •
+          <a href="sessions/mind-matters/pinkwashing-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Pinkwashing (B1)</a> •
+          <a href="sessions/mind-matters/pinkwashing-upper-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Pinkwashing (B2)</a> •
+          <a href="sessions/mind-matters/brainwashing-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Brainwashing (B1)</a> •
+          <a href="sessions/mind-matters/brainwashing-upper-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">Brainwashing (B2)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/mind-matters/bluewashing-intermediate.html" style="background:#993556; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+<!-- Batch 2 -->
+<div class="history-session" data-lang="en" data-level="b1" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">📜 Mental Laws of Life &amp; Decision Making</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Learn about standard heuristics, cognitive structures, problem definitions, and autonomy expectation laws.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #993556;">
+          Analyze Cases:
+          <a href="sessions/mind-matters/kidlins-law.html" style="color:#993556; text-decoration:underline; font-weight:600;">Kidlin's Law (B1)</a> •
+          <a href="sessions/mind-matters/murphys-law.html" style="color:#993556; text-decoration:underline; font-weight:600;">Murphy's Law (B1)</a> •
+          <a href="sessions/mind-matters/wilsons-law.html" style="color:#993556; text-decoration:underline; font-weight:600;">Wilson's Law (B1)</a> •
+          <a href="sessions/mind-matters/gilberts-law.html" style="color:#993556; text-decoration:underline; font-weight:600;">Gilbert's Law (B1)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/mind-matters/kidlins-law.html" style="background:#993556; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+<!-- Batch 3 -->
+<div class="history-session" data-lang="en" data-level="b1 b2" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🔮 The "Effect" &amp; Subconscious Conditioning Series</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Deconstruct homophones, semantic priming, behavioral economics, and cognitive dissonance resolution in relationships.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #993556;">
+          Analyze Cases:
+          <a href="sessions/mind-matters/the-bye-now-effect-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">The Bye-Now Effect (B1)</a> •
+          <a href="sessions/mind-matters/the-bye-now-effect-upper-intermediate.html" style="color:#993556; text-decoration:underline; font-weight:600;">The Bye-Now Effect (B2)</a> •
+          <a href="sessions/mind-matters/benjamin-franklin-effect.html" style="color:#993556; text-decoration:underline; font-weight:600;">The Benjamin Franklin Effect (B1)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/mind-matters/the-bye-now-effect-intermediate.html" style="background:#993556; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+<!-- Batch 4 -->
+<div class="history-session" data-lang="en" data-level="b1 c1" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🧭 The "Bias" &amp; Cognitive Shortcuts Series</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Analyze confirmation bias, availability heuristics, status quo bias, halo effect, and the psychological impulse of action bias.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #993556;">
+          Analyze Cases:
+          <a href="sessions/mind-matters/maze-of-biases.html" style="color:#993556; text-decoration:underline; font-weight:600;">The Maze of Biases (C1)</a> •
+          <a href="sessions/mind-matters/psychology-of-action-bias.html" style="color:#993556; text-decoration:underline; font-weight:600;">The Psychology of Action Bias (B1)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/mind-matters/maze-of-biases.html" style="background:#993556; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+</div>
+</div>
+<div class="mind-history-grid" id="mind-history-grid">
+<div class="mind-card history-session" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags"><span class="mind-card-tag tag-b1">B1</span></div>
+<span class="mind-card-lang">🇬🇧 English</span>
+</div>
+<div class="mind-card-body">
+<h4 class="mind-card-title">Why Some Friends Always Try to Correct You</h4>
+<p class="mind-card-desc">Psychological analysis of why certain friends interrupt, fix minor details, or control story narratives in social settings.</p>
+</div>
+<div class="mind-card-footer">
+<span class="mind-card-date">26 August 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/why-friends-correct-your-story-intermediate.html">Explore Case Study ➔</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Are You Addicted to Drama?</h4>
+<p class="mind-card-desc">Explore the psychological reasons why some individuals are unconsciously drawn to high-conflict scenarios and interpersonal turmoil.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">10 February 2027</span>
+<a class="mind-card-view" href="sessions/mind-matters/addicted-to-drama-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Moving and the True Self (B1)</h4>
+<p class="mind-card-desc">Explore the psychological tabula rasa of starting fresh in a new environment.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">20 January 2027</span>
+<a class="mind-card-view" href="sessions/mind-matters/moving-new-city-true-self-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Mind and Great Literature</h4>
+<p class="mind-card-desc">How literature functions as a deep mirror to the human subconscious.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">10 January 2027</span>
+<a class="mind-card-view" href="sessions/mind-matters/mind-great-literature.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Georg Simmel: Objective Freedom</h4>
+<p class="mind-card-desc">Examine the tension between individual agency and modern objective culture.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">15 January 2027</span>
+<a class="mind-card-view" href="sessions/mind-matters/simmel-objective-freedom.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Moving and the True Self</h4>
+<p class="mind-card-desc">Deconstruct the psychological tabula rasa of starting fresh in a new environment.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">20 January 2027</span>
+<a class="mind-card-view" href="sessions/mind-matters/moving-new-city-true-self.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Bye-Now Effect</h4>
+<p class="mind-card-desc">Learn how homophones subconsciously trigger spending and shopping decisions.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">17 November 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/the-bye-now-effect-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b2">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b2">B2</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Bye-Now Effect</h4>
+<p class="mind-card-desc">Deconstruct semantic priming and the behavioral economics of consumer triggers.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">17 November 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/the-bye-now-effect-upper-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Is AI Inevitable?</h4>
+<p class="mind-card-desc">Discuss how automation and algorithms affect jobs and human adaptation.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">10 November 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/why-do-they-say-ai-is-inevitable-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b2">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b2">B2</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Is AI Inevitable?</h4>
+<p class="mind-card-desc">Analyze technological determinism, status quo bias, and future workplace upskilling.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">10 November 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/why-do-they-say-ai-is-inevitable-upper-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Jane Elliott's "Blue Eyes - Brown Eyes" Experiment</h4>
+<p class="mind-card-desc">A deep dive into ingroup favoritism, learned prejudice, and outgroup biases.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">20 August 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/blue-eyes-brown-eyes-experiment.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">How to Trick Your Brain Into Liking Discipline</h4>
+<p class="mind-card-desc">Explore dopamine baseline adjustments and reward loops to enjoy routine discomfort.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">15 August 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/brain-discipline-dopamine.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Guilt of Moving Abroad</h4>
+<p class="mind-card-desc">Discuss homesickness, sweet nostalgia, and the challenges of cultural adaptation.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">05 August 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/guilt-moving-abroad-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c2">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c2">C2</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Guilt of Moving Abroad</h4>
+<p class="mind-card-desc">Analyze immigrant guilt, relational dissonance, and self-actualization cost.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">05 August 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/guilt-moving-abroad-proficiency.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Why Experts Defend Language Mistakes</h4>
+<p class="mind-card-desc">Overcome perfectionism, relational anxiety, and the affective filter in speaking.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">25 July 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/expert-defend-language-mistakes.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">How to Love Your Work</h4>
+<p class="mind-card-desc">Find intrinsic career motivation, autonomy, and satisfaction in your tasks.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">20 July 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/how-to-love-your-work.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Nazi Race Propaganda: Would you survive?</h4>
+<p class="mind-card-desc">An introspective study of systematic dehumanization, othering, and empathy loss.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">10 July 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/nazi-race-propaganda.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Benjamin Franklin Effect</h4>
+<p class="mind-card-desc">Learn how doing favors triggers cognitive dissonance resolution to build relationships.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">05 July 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/benjamin-franklin-effect.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Bounded Rationality &amp; Decisions</h4>
+<p class="mind-card-desc">Discuss simple heuristics and satisficing rules when making everyday decisions.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">10 June 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/bounded-rationality-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b2">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b2">B2</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Bounded Rationality &amp; Decisions</h4>
+<p class="mind-card-desc">Examine cognitive constraints, optimization limits, and decision bias.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">10 June 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/bounded-rationality-upper-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Aspiration vs. Inspiration</h4>
+<p class="mind-card-desc">Discuss goal-oriented drive, external motivation, and long-term habits.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">08 June 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/aspiration-vs-inspiration-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b2">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b2">B2</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Aspiration vs. Inspiration</h4>
+<p class="mind-card-desc">Compare intrinsic sparks of imitation with long-term internal goal formulation.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">08 June 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/aspiration-vs-inspiration-upper-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Maze of Biases</h4>
+<p class="mind-card-desc">Deconstruct confirmation bias, the availability heuristic, and subjective logic traps.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">27 May 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/maze-of-biases.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Finding the Right Person</h4>
+<p class="mind-card-desc">Discuss romantic projection, relationship intimacy, and accepting human flaws.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">25 January 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/finding-the-right-person.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Fear of Love</h4>
+<p class="mind-card-desc">Examine avoidant attachment structures and the fear of losing executive autonomy.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">18 January 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/fear-of-love-control.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Depersonalization</h4>
+<p class="mind-card-desc">Deconstruct anxiety-induced dissociation and mindfulness anchoring grounding tools.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">04 January 2026</span>
+<a class="mind-card-view" href="sessions/mind-matters/depersonalization.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Broken Children</h4>
+<p class="mind-card-desc">Understand childhood behavioral coping adaptations that persist in grown adult bodies.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">21 December 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/broken-children-grown-bodies.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Anticipatory Grief</h4>
+<p class="mind-card-desc">Discuss emotional shielding, mourning imminent loss, and vulnerable support.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">14 December 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/anticipatory-grief.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Law of Attraction</h4>
+<p class="mind-card-desc">Critique magical thinking, bias, and the psychological pursuit of safety.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">07 December 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/law-of-attraction.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Impersonation</h4>
+<p class="mind-card-desc">Examine celebrity fake accounts, parasocial obsession, and online trust validation.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">23 November 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/impersonation.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="c1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-c1">C1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">Limerence</h4>
+<p class="mind-card-desc">Explore cognitive intrusion, romantic fantasy patterns, and dopamine obsession.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">19 October 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/limerence.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Science of Sleep</h4>
+<p class="mind-card-desc">Prioritize rest and biological recovery as essential psychological care elements.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">05 August 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/science-of-sleep.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Psychology of Smiles</h4>
+<p class="mind-card-desc">Discerning authentic joy from compliant social masks and coping mechanisms.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">12 July 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/psychology-of-smiles.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Conversations People Avoid</h4>
+<p class="mind-card-desc">Learn about relational listening, empathy, and overcoming simple awkwardness.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">08 July 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/conversations-avoid-enjoy-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b2">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b2">B2</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Conversations People Avoid</h4>
+<p class="mind-card-desc">Deconstruct vulnerability structures, conversational boundaries, and deep trust validation.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">08 July 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/conversations-avoid-enjoy-upper-intermediate.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Psychology of Action Bias</h4>
+<p class="mind-card-desc">Understand the illusion of control and the emotional challenge of patient inaction.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">15 June 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/psychology-of-action-bias.html">Open File →</a>
+</div>
+</div>
+<div class="mind-card history-session" data-lang="en" data-level="b1">
+<div class="mind-card-header">
+<div class="mind-card-tags">
+<span class="mind-card-tag tag-b1">B1</span>
+</div>
+<span class="mind-card-lang">🇬🇧</span>
+</div>
+<h4 class="mind-card-title">The Power of Habits</h4>
+<p class="mind-card-desc">Redesign cue, routine, and reward loops for stable psychological health.</p>
+<div class="mind-card-footer">
+<span class="mind-card-date">20 May 2025</span>
+<a class="mind-card-view" href="sessions/mind-matters/power-of-habits.html">Open File →</a>
+</div>
+</div>
+<div class="history-session mind-case-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="mind-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="mind-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">The Disappearance of Literary Men (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Analyzing reading decline, narrative fiction, human empathy, personal reflection, and literary habits.</p>
+</div>
+<div class="mind-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="mind-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/mind-matters/disappearance-of-literary-men.html" style="background:#993556; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Inspect Case ➔</a>
+</div>
+</div>
+<div class="history-session mind-case-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="mind-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="mind-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Technofeudalism &amp; the War for Attention (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Deconstructing platform monopolies, attention economy exploitation, digital surveillance, and reclaiming focus.</p>
+</div>
+<div class="mind-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="mind-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/mind-matters/technofeudalism-attention.html" style="background:#993556; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Inspect Case ➔</a>
+</div>
+</div>
+</div>
+<!-- The Disappearance of Literary Men (B1) -->
+<div class="history-session mind-case-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="mind-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="mind-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">The Disappearance of Literary Men (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Analyzing reading decline, narrative fiction, human empathy, personal reflection, and literary habits.</p>
+</div>
+<div class="mind-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="mind-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/mind-matters/disappearance-of-literary-men.html" style="background:#993556; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Inspect Case ➔</a>
+</div>
+</div>
+<!-- Technofeudalism & the War for Attention (B1) -->
+<div class="history-session mind-case-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="mind-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="mind-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Technofeudalism &amp; the War for Attention (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Deconstructing platform monopolies, attention economy exploitation, digital surveillance, and reclaiming focus.</p>
+</div>
+<div class="mind-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="mind-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/mind-matters/technofeudalism-attention.html" style="background:#993556; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Inspect Case ➔</a>
+</div>
+</div>
+<!-- The Disappearance of Literary Men (B1) -->
+<div class="history-session mind-case-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="mind-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="mind-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">The Disappearance of Literary Men (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Analyzing reading decline, narrative fiction, human empathy, personal reflection, and literary habits.</p>
+</div>
+<div class="mind-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="mind-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/mind-matters/disappearance-of-literary-men.html" style="background:#993556; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Inspect Case ➔</a>
+</div>
+</div>
+<!-- Technofeudalism & the War for Attention (B1) -->
+<div class="history-session mind-case-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="mind-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="mind-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Technofeudalism &amp; the War for Attention (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Deconstructing platform monopolies, attention economy exploitation, digital surveillance, and reclaiming focus.</p>
+</div>
+<div class="mind-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="mind-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/mind-matters/technofeudalism-attention.html" style="background:#993556; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Inspect Case ➔</a>
+</div>
+</div>
+</div>
+<!-- /logged-in content -->
+<!-- /club-main -->
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem;">Self-Discovery</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Discussing psychology allows for highly personal and emotive language practice, helping you express your true self.</p>
+</div>
+</div>
+<!-- /grid -->
+</div></div></div></div></section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>

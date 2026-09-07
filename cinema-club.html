@@ -1,0 +1,2431 @@
+<link rel="stylesheet" href="shared/css/sessions.css">
+<!-- DEVELOPER ALERT: Refer to planning/notebook/cinema_club_brainstorm.md (or corresponding active templates in events/sessions/cinema-club/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cinema Club 🎬 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="theme-cinema">
+<nav id="cosy-nav"></nav>
+
+<!-- Sticky Top Navigation Header -->
+<header class="sd-sticky-header">
+  <div class="sd-header-inner">
+    <div class="sd-breadcrumbs">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="index.html">Events</a>
+      <span class="sep">/</span>
+      <span class="current">Cinema Club</span>
+    </div>
+    <nav class="sd-jump-links" aria-label="Page jump links">
+      <a href="#sc-hist" class="sd-jump-link">Past Sessions</a>
+    </nav>
+  </div>
+</header>
+
+<header class="club-hero">
+<img alt="Cinema logo" src="../images/cinemaclub.jpg" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
+<h1>Cinema Club</h1>
+<p>Immerse yourself in original-language cinema. Watch authentic scenes, expand your natural slang vocabulary, and discuss powerful films and series with a native COSYlanguages teacher.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="index.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Live Events</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<!-- UPCOMING SESSIONS -->
+<div>
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Next Live Session</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Film</td><td>The Devil Wears Prada (American English)</td></tr>
+<tr><td>Description</td><td>Analyze the high-stress workplace slang and corporate culture in NYC's fashion scene.</td></tr>
+<tr><td>Focus</td><td>Business &amp; Fashion Slang</td></tr>
+<tr><td>Schedule</td><td>Planned : TBC</td></tr>
+<tr><td>Duration</td><td>90 min</td></tr>
+<tr><td>Languages</td><td>🇬🇧 🇫🇷 🇮🇹 🇷🇺</td></tr>
+</table></div>
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20Cinema%20Club." style="background: var(--teal); color: white;">💬 Register Interest</a>
+<!-- HISTORY (PAST SESSIONS) -->
+<div class="history-block" id="sc-hist" style="margin-top: 3.5rem;">
+<div class="section-header" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+<h2 style="font-size: 1.5rem; margin: 0;">🕒 Past Sessions</h2>
+</div><div class="sticky-filter-bar" style="position: sticky; top: 0; background: var(--warm-white, #FAF7F2); border-bottom: 2px solid var(--border); padding: 1rem 0; z-index: 100; margin-bottom: 2rem;">
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+    <h3 style="margin: 0; font-size: 1.1rem; color: #3D2B1F; font-family: 'Playfair Display', serif;">🍿 Past Sessions Filter</h3>
+
+    <!-- Search Input -->
+    <div style="flex: 1; min-width: 220px; max-width: 340px;">
+      <input type="text" id="cinema-search-input" placeholder="🔍 Search films, themes, or directors..." style="padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--border); background: var(--cream, #FAF7F2); font-size: 0.85rem; width: 100%; box-sizing: border-box;">
+    </div>
+
+    <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center;">
+      <!-- Language Filter -->
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="font-weight: bold; font-size: 0.85rem; color: var(--ink);">Language:</span>
+        <div class="lang-filter-buttons" style="display: flex; gap: 0.25rem; flex-wrap: wrap;">
+          <button class="filter-btn active" data-lang-filter="all">All</button>
+          <button class="filter-btn" data-lang-filter="en">🇬🇧</button>
+          <button class="filter-btn" data-lang-filter="fr">🇫🇷</button>
+          <button class="filter-btn" data-lang-filter="es">🇪🇸</button>
+          <button class="filter-btn" data-lang-filter="it">🇮🇹</button>
+          <button class="filter-btn" data-lang-filter="ru">🇷🇺</button>
+          <button class="filter-btn" data-lang-filter="de">🇩🇪</button>
+          <button class="filter-btn" data-lang-filter="el">🇬🇷</button>
+        </div>
+      </div>
+
+      <!-- Level Filter -->
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="font-weight: bold; font-size: 0.85rem; color: var(--ink);">Level:</span>
+        <div class="level-filter-buttons" style="display: flex; gap: 0.25rem; flex-wrap: wrap;">
+          <button class="filter-btn active" data-level-filter="all">All</button>
+          <button class="filter-btn" data-level-filter="a1">A1</button>
+          <button class="filter-btn" data-level-filter="a2">A2</button>
+
+          <button class="filter-btn" data-level-filter="b1">B1</button>
+          <button class="filter-btn" data-level-filter="b2">B2</button>
+          <button class="filter-btn" data-level-filter="c1">C1</button>
+          <button class="filter-btn" data-level-filter="c2">C2</button>
+        </div>
+      </div>
+
+      <!-- Sensitivity Toggle -->
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <label style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; cursor: pointer; user-select: none;">
+          <input type="checkbox" id="cinema-sensitive-toggle">
+          <span>Hide 18+ / Sensitive</span>
+        </label>
+      </div>
+
+      <!-- Result Counter -->
+      <div>
+        <span id="cinema-result-count" style="font-size: 0.85rem; font-weight: 700; color: var(--muted);">Showing 106 films</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- LEVEL FILTERS -->
+<!-- 📌 PINNED FILM SERIES CHALLENGES -->
+<div class="pinned-challenges-section" style="margin-bottom: 3.5rem; background: rgba(61, 43, 31, 0.03); border: 2px dashed #3D2B1F; border-radius: 28px; padding: 2rem;">
+<h3 style="margin-top: 0; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-size: 1.5rem; display: flex; align-items: center; gap: 0.75rem; color: #3D2B1F;">
+<span>📌</span> Pinned Film Series Challenges (90 min)
+            </h3>
+<div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+<!-- 1. Robert Langdon Symbology Series -->
+<div class="history-session" data-level="b2 c1" style="margin-bottom:0;border:1px solid var(--border);border-radius:20px;overflow:hidden;background:#FFFDF9;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;"><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span></div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700;">Robert Langdon Symbology Thrillers</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Deconstruct secret signs, cryptic screenplays, and religious mysteries across Dan Brown's masterpieces. Grouping: <em>The Da Vinci Code</em> and our scene analysis of <em>Angels &amp; Demons</em>.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+<a class="view-btn" href="sessions/cinema-club/the-da-vinci-code.html" style="background:#3D2B1F; color: white; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 1: Da Vinci Code →</a>
+<a class="view-btn" href="sessions/cinema-club/angels-and-demons.html" style="background:#3D2B1F; color: white; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 2: Angels &amp; Demons →</a>
+</div>
+</div>
+<!-- 2. Audrey Hepburn Romance Series -->
+<div class="history-session" data-level="b1 b2" style="margin-bottom:0;border:1px solid var(--border);border-radius:20px;overflow:hidden;background:#FFFDF9;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span></div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700;">Audrey Hepburn Romance Challenges</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Master elegant Mid-Atlantic dialogues and romantic idioms. Grouping: <em>Breakfast at Tiffany's</em> and classical romantic escapes.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+<a class="view-btn" href="sessions/cinema-club/breakfast-at-tiffanys.html" style="background:#3D2B1F; color: white; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 1: Breakfast at Tiffany's →</a>
+<a class="view-btn" href="sessions/cinema-club/roman-holiday-intermediate.html" style="background:#3D2B1F; color: white; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 2a: Roman Holiday (B1) →</a>
+<a class="view-btn" href="sessions/cinema-club/roman-holiday-upper-intermediate.html" style="background:#3D2B1F; color: white; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 2b: Roman Holiday (B2) →</a>
+</div>
+</div>
+<!-- 3. Barbra Streisand Musical Drama Series -->
+<div class="history-session" data-level="b1 c1" style="margin-bottom:0;border:1px solid var(--border);border-radius:20px;overflow:hidden;background:#FFFDF9;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span></div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700;">Barbra Streisand Masterpieces</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Analyze powerful screenplays, dramatic monologues, and musical depth. Grouping: <em>Yentl</em> and <em>Nuts</em>.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+<a class="view-btn" href="sessions/cinema-club/yentl.html" style="background:#3D2B1F; color: white; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 1: Yentl →</a>
+<a class="view-btn" href="sessions/cinema-club/nuts.html" style="background:#3D2B1F; color: white; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 2: Nuts →</a>
+</div>
+</div>
+</div>
+</div>
+<div class="history-body" style="display: block; padding: 0; border: none;">
+<div class="cinema-history-grid" id="cinema-history-grid">
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">The Odyssey</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Odyssey. Deconstruct the themes of Overcoming unhealthy relationships, self-discovery, emotional healing while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-odyssey.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="es" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇪🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Lending My Wings</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Lending My Wings. Deconstruct the themes of Psychological support, empathy, therapeutic trust, emotional vulnerability while practicing native Spanish Language expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/lending-my-wings.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="fr" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇫🇷</span>
+</div>
+</div>
+<h4 class="clapper-title">L'attente</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of L'attente. Deconstruct the themes of Patience, expectation, subconscious illusions, romantic tension while practicing native French Language expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/lattente.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="ru" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇷🇺</span>
+</div>
+</div>
+<h4 class="clapper-title">Karlik Nos (Dwarf Nose)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Karlik Nos (Dwarf Nose). Deconstruct the themes of Kindheartedness, overcoming curses, inner beauty, loyalty while practicing native Russian Language expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/karlik-nos-dwarf-nose.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="a2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-a2">A2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Destino</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Destino. Deconstruct the themes of Surrealism, destiny, artistic collaboration, time, subconscious desires while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/destino.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Once Upon A Time...</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Once Upon A Time.... Deconstruct the themes of Simplicity in fashion, revolutionary millinery, starting an entrepreneurship while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/once-upon-a-time....html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="fr" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇫🇷</span>
+</div>
+</div>
+<h4 class="clapper-title">Once and Forever</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Once and Forever. Deconstruct the themes of Artistic challenging personalities, acting roles, older Coco Chanel reflection while practicing native French / English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/once-and-forever.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Devil Wears Prada (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Devil Wears Prada. Deconstruct the themes of Workplace hierarchies, ambitions, personal cost of success while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-devil-wears-prada-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Devil Wears Prada (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Devil Wears Prada. Deconstruct the themes of Workplace hierarchies, ambitions, personal cost of success while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-devil-wears-prada-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Fleabag</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Fleabag. Deconstruct the themes of Dry humor, grief, unresolved trauma, modern relationships while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/fleabag.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="a2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-a2">A2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Ratatouille (English)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Ratatouille. Deconstruct the themes of Passion, overcoming prejudice, culinary arts, Paris while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/ratatouille-english.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="a2" data-lang="fr" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-a2">A2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇫🇷</span>
+</div>
+</div>
+<h4 class="clapper-title">Ratatouille (French)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Ratatouille. Deconstruct the themes of Passion, overcoming prejudice, culinary arts, Paris while practicing native French Language expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/ratatouille-french.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="ru" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇷🇺</span>
+</div>
+</div>
+<h4 class="clapper-title">Serebryanye Konki (Silver Skates)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Serebryanye Konki (Silver Skates). Deconstruct the themes of Class differences, 19th-century Saint Petersburg, social change while practicing native Russian Language expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/serebryanye-konki.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="es" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇪🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">La Valla (The Barrier)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of La Valla (The Barrier). Deconstruct the themes of Dystopian future, state surveillance, survival, solidarity while practicing native Spanish Language expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/la-valla.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Crazy Ex-Girlfriend</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Crazy Ex-Girlfriend. Deconstruct the themes of Mental health stigma, romance tropes, self-destruction while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/crazy-ex-girlfriend.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Others</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Others. Deconstruct the themes of Grief, isolation, gothic horror, religious boundaries while practicing native Mid-Atlantic English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-others.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Don't Worry Darling</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Don't Worry Darling. Deconstruct the themes of Escapism, patriarchal fantasies, gaslighting, simulations while practicing native American/British expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/dont-worry-darling.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">How I Live Now</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of How I Live Now. Deconstruct the themes of Coming of age in wartime, survival instincts, resilience while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/how-i-live-now.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Beautiful Thing (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Beautiful Thing. Deconstruct the themes of Working-class LGBTQ+ youth, neighbor support, hope while practicing native British (London) expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/beautiful-thing-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Beautiful Thing (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Beautiful Thing. Deconstruct the themes of Working-class LGBTQ+ youth, neighbor support, hope while practicing native British (London) expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/beautiful-thing-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="a2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-a2">A2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Luck</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Luck. Deconstruct the themes of Superstition, optimism, finding belonging in family while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/luck.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">How to Be Single</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of How to Be Single. Deconstruct the themes of Independence, self-reliance, modern metropolitan dating while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/how-to-be-single.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Pianist (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Pianist. Deconstruct the themes of Human resilience, art as survival, war tragedies while practicing native Standard English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-pianist-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Pianist (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Pianist. Deconstruct the themes of Human resilience, art as survival, war tragedies while practicing native Standard English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-pianist-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Love & Other Drugs</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Love &amp; Other Drugs. Deconstruct the themes of Pharmaceutical ethics, chronic illness, vulnerability while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/love-and-other-drugs.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="a2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-a2">A2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Swan Princess</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Swan Princess. Deconstruct the themes of Childhood friendships, devotion, fairy tale logic while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-swan-princess.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="a2 b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-a2">A2</span> <span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">16 Wishes</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of 16 Wishes. Deconstruct the themes of Desires, consequences of wishes, growing up while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/16-wishes.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Just My Luck</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Just My Luck. Deconstruct the themes of Coincidence, luck transfers, humility and generosity while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/just-my-luck.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">She's the Man</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of She's the Man. Deconstruct the themes of Gender swapping, high school soccer culture, peer pressure while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/shes-the-man.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2 c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span> <span class="club-tag tag-c1">C1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Queen's Gambit</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Queen's Gambit. Deconstruct the themes of Obsession, addiction, intellectual superiority, gender barriers while practicing native Mid-Atlantic / American expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-queens-gambit.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="a2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-a2">A2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Homeward Bound</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Homeward Bound. Deconstruct the themes of Animal loyalty, family bond, navigation and survival while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/homeward-bound.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="a2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-a2">A2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">101 & 102 Dalmatians</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of 101 &amp; 102 Dalmatians. Deconstruct the themes of Obsession with possessions, pets, comedy villainy while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/101-and-102-dalmatians.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="ru" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇷🇺</span>
+</div>
+</div>
+<h4 class="clapper-title">Queendom</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Queendom. Deconstruct the themes of Reality TV aesthetics, competition, fame dynamics while practicing native Russian Language expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/queendom.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Lost</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Lost. Deconstruct the themes of Fate, human nature on a deserted island, mythology while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/lost.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The First Wives Club (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The First Wives Club. Deconstruct the themes of Mid-life divorce, sisterhood, turning grief into triumph while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-first-wives-club-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The First Wives Club (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The First Wives Club. Deconstruct the themes of Mid-life divorce, sisterhood, turning grief into triumph while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-first-wives-club-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Stepmom (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Stepmom. Deconstruct the themes of Blended families, terminal illness, stepmother complex while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/stepmom-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Stepmom (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Stepmom. Deconstruct the themes of Blended families, terminal illness, stepmother complex while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/stepmom-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Charade</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Charade. Deconstruct the themes of Deception, elegant suspense, romance under aliases while practicing native American / British expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/charade.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Kinky Boots</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Kinky Boots. Deconstruct the themes of Saving traditional manufacturing, drag culture, diversity while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/kinky-boots.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Heathers: The Musical</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Heathers: The Musical. Deconstruct the themes of Dark high school humor, school cliques, social pressure while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/heathers-the-musical.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Glee (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Glee. Deconstruct the themes of High school stereotypes, musical performance, bullying while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/glee-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Glee (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Glee. Deconstruct the themes of High school stereotypes, musical performance, bullying while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/glee-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="fr" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇫🇷</span>
+</div>
+</div>
+<h4 class="clapper-title">Mrs. Harris Goes to Paris</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Mrs. Harris Goes to Paris. Deconstruct the themes of Class modesty, haute couture, optimism while practicing native British / French expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/mrs.-harris-goes-to-paris.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">About Time</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of About Time. Deconstruct the themes of Appreciating every day, time travel, father-son bond while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/about-time.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="fr" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇫🇷</span>
+</div>
+</div>
+<h4 class="clapper-title">Incendies</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Incendies. Deconstruct the themes of Family trauma, political war history, unbreakable bonds while practicing native French / Arabic expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/incendies.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Odd Thomas</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Odd Thomas. Deconstruct the themes of Clairvoyance, silent grief, hero complex while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/odd-thomas.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Countdown</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Countdown. Deconstruct the themes of Fatalistic apps, technology obsession, jumpscares while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/countdown.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Missing / Searching</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Missing / Searching. Deconstruct the themes of Digital footprints, modern cybersecurity, online personas while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/missing-searching.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Call</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Call. Deconstruct the themes of Temporal loops, phone communication with the past while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-call.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Bird Box</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Bird Box. Deconstruct the themes of Fear of the unseen, motherhood under stress, trust while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/bird-box.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Invasion</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Invasion. Deconstruct the themes of Loss of agency, hive mind, cold rationality while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-invasion.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Run</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Run. Deconstruct the themes of Medical gaslighting, motherly obsession, captivity while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/run.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Black Mirror</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Black Mirror. Deconstruct the themes of Near-future digital obsession, rating culture, dystopia while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/black-mirror.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Leave the World Behind</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Leave the World Behind. Deconstruct the themes of Tech dependency, deer omen, collapse of coordination while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/leave-the-world-behind.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Owl and the Pussycat</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Owl and the Pussycat. Deconstruct the themes of Overintellectualizing vs. raw street-smart instinct while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-owl-and-the-pussycat.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">On a Clear Day You Can See...</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of On a Clear Day You Can See.... Deconstruct the themes of Hypnosis, past-life regression, subconscious gifts while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/on-a-clear-day-you-can-see....html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Hello Dolly (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Hello Dolly. Deconstruct the themes of Financial matchmakers, traditional courting, community parade while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/hello-dolly-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Hello Dolly (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Hello Dolly. Deconstruct the themes of Financial matchmakers, traditional courting, community parade while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/hello-dolly-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Mirror Has Two Faces</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Mirror Has Two Faces. Deconstruct the themes of Unconventional marriages, beauty standards, academic pride while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-mirror-has-two-faces.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Funny Girl</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Funny Girl. Deconstruct the themes of Ambition, stage charisma, marital imbalances under fame while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/funny-girl.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Mummy (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Mummy. Deconstruct the themes of Ancient curses, tomb discovery, greedy expeditions while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-mummy-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Mummy (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Mummy. Deconstruct the themes of Ancient curses, tomb discovery, greedy expeditions while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-mummy-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Notebook (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Notebook. Deconstruct the themes of Long-term devotion, memory loss, class discrepancies while practicing native American (Southern) expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-notebook-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Notebook (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Notebook. Deconstruct the themes of Long-term devotion, memory loss, class discrepancies while practicing native American (Southern) expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-notebook-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2 c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span> <span class="club-tag tag-c1">C1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">V for Vendetta</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of V for Vendetta. Deconstruct the themes of Authoritarian rule, visual propaganda, symbolic mask while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/v-for-vendetta.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2 c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span> <span class="club-tag tag-c1">C1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Gone Girl</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Gone Girl. Deconstruct the themes of Marriage fatigue, framing spouse, toxic dynamic while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/gone-girl.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2 c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span> <span class="club-tag tag-c1">C1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Midsommar</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Midsommar. Deconstruct the themes of Cult indoctrination, grief healing, folklore celebration while practicing native American / Swedish expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/midsommar.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Kill Bill</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Kill Bill. Deconstruct the themes of Overcoming absolute betrayal, elite assassins, duel while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/kill-bill.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Hereditary</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Hereditary. Deconstruct the themes of Inherited trauma, generational cults, loss of control while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/hereditary.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Call Me by Your Name</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Call Me by Your Name. Deconstruct the themes of First love nostalgia, seasonal escapism, poetic dialogs while practicing native American / Italian expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/call-me-by-your-name.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Suspiria (2018)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Suspiria (2018). Deconstruct the themes of Witchcraft in academies, divided Berlin, historical weight while practicing native American / German expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/suspiria-2018.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2 c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span> <span class="club-tag tag-c1">C1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Sex and the City</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Sex and the City. Deconstruct the themes of Modern friendship, shopping culture, metropolitan love while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/sex-and-the-city.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Death Becomes Her</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Death Becomes Her. Deconstruct the themes of Aging anxieties, magic potions, relationship hollows while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/death-becomes-her.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Mamma Mia</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Mamma Mia. Deconstruct the themes of Greek island romance, fatherhood mysteries, mother-daughter bonds while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/mamma-mia.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">What Women Want (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of What Women Want. Deconstruct the themes of Empathy through hearing thoughts, agency, workplace sexism while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/what-women-want-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">What Women Want (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of What Women Want. Deconstruct the themes of Empathy through hearing thoughts, agency, workplace sexism while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/what-women-want-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">It's Complicated</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of It's Complicated. Deconstruct the themes of Mature dating, affair with ex-spouse, bakery entrepreneur while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/its-complicated.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">The Iron Lady</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Iron Lady. Deconstruct the themes of Class barriers, parliamentary speech, cognitive decay while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-iron-lady.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Still Alice</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Still Alice. Deconstruct the themes of Identity preservation, linguistic breakdown, neurology while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/still-alice.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Equals</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Equals. Deconstruct the themes of Utopia without feelings, suicide prevention, hidden connection while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/equals.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="fr" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇫🇷</span>
+</div>
+</div>
+<h4 class="clapper-title">Personal Shopper</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Personal Shopper. Deconstruct the themes of High fashion buying, spirit mediums, text communication while practicing native American / French expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/personal-shopper.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Free Guy (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Free Guy. Deconstruct the themes of Video game NPCs, player skin, AI self-discovery while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/free-guy-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Free Guy (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Free Guy. Deconstruct the themes of Video game NPCs, player skin, AI self-discovery while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/free-guy-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Now You See Me</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Now You See Me. Deconstruct the themes of Sleight of hand, massive bank heist, direct audience trick while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/now-you-see-me.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Hunger Games</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Hunger Games. Deconstruct the themes of Media pageantry for control, revolution, child survival while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-hunger-games.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">A Quiet Place</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of A Quiet Place. Deconstruct the themes of Absolute silence, monster detection, parental protection while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/a-quiet-place.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Spoiler Alert</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Spoiler Alert. Deconstruct the themes of Romance, oncology care, letting go of a loved one while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/spoiler-alert.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Miss You Already</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Miss You Already. Deconstruct the themes of Lifelong best friends, cancer diagnosis, coping mechanisms while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/miss-you-already.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Act</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Act. Deconstruct the themes of Factitious disorder, extreme isolation, digital plans while practicing native American (Southern) expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-act.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">The Regime</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Regime. Deconstruct the themes of Political satiric rule, palace paranoia, geopolitical vanity while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-regime.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Cloud Atlas</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Cloud Atlas. Deconstruct the themes of Human souls through periods, slave rebellions, sci-fi clones while practicing native Multi-variety English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/cloud-atlas.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Lucy</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Lucy. Deconstruct the themes of Full neurological utilization, drug synthesis, transcendent mind while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/lucy.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="fr" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇫🇷</span>
+</div>
+</div>
+<h4 class="clapper-title">Radin</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Radin. Deconstruct the themes of Extreme saving behavior, hiding wealth, daughter connection while practicing native French Language expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/radin.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Julie & Julia (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Julie &amp; Julia. Deconstruct the themes of Cooking through classic recipe book, writing blog, validation while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/julie-and-julia-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Julie & Julia (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Julie &amp; Julia. Deconstruct the themes of Cooking through classic recipe book, writing blog, validation while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/julie-and-julia-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Adolescence</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Adolescence. Deconstruct the themes of Teenage hormones, school anxieties, rebel behavior while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/adolescence.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2 c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span> <span class="club-tag tag-c1">C1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Killing Eve</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Killing Eve. Deconstruct the themes of Psychoanalysis of assassins, mutual attraction, spy handlers while practicing native British / European expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/killing-eve.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Don't Look Up</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Don't Look Up. Deconstruct the themes of Anti-intellectual media spin, climate metaphor, political greed while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/dont-look-up.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b1" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b1">B1</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">CODA (B1)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of CODA. Deconstruct the themes of Deaf community, sign language interpretation, college audition while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/coda-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">CODA (B2)</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of CODA. Deconstruct the themes of Deaf community, sign language interpretation, college audition while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/coda-upper-intermediate.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇬🇧</span>
+</div>
+</div>
+<h4 class="clapper-title">Bohemian Rhapsody</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Bohemian Rhapsody. Deconstruct the themes of Music production, performing on stage, rock star loneliness while practicing native British English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/bohemian-rhapsody.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Shape of Water</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Shape of Water. Deconstruct the themes of Cold war espionage, voiceless connection, fantasy romance while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-shape-of-water.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="false">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Age of Adaline</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Age of Adaline. Deconstruct the themes of Frozen age, accidental immortality, love under fake IDs while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-age-of-adaline.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="b2" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-b2">B2</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">Why Women Kill</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of Why Women Kill. Deconstruct the themes of Infidelity through decades, murder plots, suburban secrets while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/why-women-kill.html">Admit One →</a>
+</div>
+</div>
+</div>
+<div class="cinema-clapperboard-card history-session" data-level="c1" data-lang="en" data-title="" data-sensitive="true">
+<div class="clapper-strip"></div>
+<div class="clapper-body">
+<div class="clapper-meta-row">
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Scene</span>
+<span class="clapper-meta-val"><span class="club-tag tag-c1">C1</span> <span class="club-tag tag-sensitive">🔞 18+ / Sensitive</span></span>
+</div>
+<div class="clapper-meta-cell">
+<span class="clapper-meta-label">Take</span>
+<span class="clapper-meta-val">🇺🇸</span>
+</div>
+</div>
+<h4 class="clapper-title">The Substance</h4>
+<p class="clapper-desc">Explore the screenplay and motifs of The Substance. Deconstruct the themes of Hollywood aging fear, cell division cloning, celebrity monster while practicing native American English expressions.</p>
+<div class="clapper-footer">
+<span class="clapper-pass-label">Cosy Pass</span>
+<a class="clapper-view" href="sessions/cinema-club/the-substance.html">Admit One →</a>
+</div>
+</div>
+</div>
+</div><!-- /grid -->
+</section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../events/index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!-- DEVELOPER ALERT: Refer to templates/events/quotes-session-template.html (or corresponding active templates in events/sessions/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Greatest Quotes 💬 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<link rel="stylesheet" href="shared/css/clubs/the-greatest-quotes.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #5D4037, #3E2723); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+</style>
+<style>
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    background: var(--border);
+  }
+  .filter-btn.active {
+    background: #5D4037;
+    color: white;
+    border-color: #5D4037;
+  }
+</style></head>
+<body class="theme-quotes">
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<img alt="Quotes logo" src="../../../../images/thegreatestquotes.png" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
+<h1>The Greatest Quotes</h1>
+<p>One quote. Deep unpacking. Let's see how many interpretations exist! Imagine Oscar Wilde, Alan Watts, and Marcus Aurelius sitting in a cozy café discussing the depth of human thought. Never one correct answer.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="../../../../events/speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<!-- CLUB CONTENT -->
+<div>
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Upcoming Sessions</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Article</td><td>The WISDOM of SOCRATES</td></tr>
+<tr><td>Description</td><td>Examining the life and philosophy of the father of Western ethics.</td></tr>
+<tr><td>Schedule</td><td>Planned : TBC</td></tr>
+<tr><td>Duration</td><td>60 min</td></tr>
+<tr><td>Languages</td><td>🇬🇧 🇫🇷 🇷🇺</td></tr>
+</table></div>
+<div style="display:flex;gap:10px;align-items:center;">
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20The%20Greatest%20Quotes.">💬 Register interest</a>
+<a class="btn-play-game" href="../../../../games/index.html?game=critic" style="margin-top:4px;">Play Game 🎮</a>
+</div>
+<!-- PHILOSOPHY CAFE INTERACTIVE WIDGET -->
+<style>
+          .cafe-ledger {
+            background: #FAF5EF;
+            border: 4px double #5D4037;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 8px 24px rgba(93, 64, 55, 0.15);
+            color: #3E2723;
+            font-family: 'Playfair Display', serif;
+            text-align: left;
+          }
+          .ledger-header {
+            border-bottom: 2px solid #5D4037;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            font-family: 'DM Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #5D4037;
+            font-weight: 700;
+          }
+          .ledger-screen {
+            background: #FFFDF9;
+            border: 1px solid #D7CCC8;
+            border-radius: 6px;
+            padding: 1.2rem;
+            min-height: 160px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+            font-size: 1rem;
+            line-height: 1.6;
+            position: relative;
+            overflow-y: auto;
+          }
+          .ledger-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1.2rem;
+            background: #5D4037;
+            margin-left: 2px;
+            animation: ledger-blink 1s step-end infinite;
+            vertical-align: middle;
+          }
+          @keyframes ledger-blink {
+            from, to { background-color: transparent }
+            50% { background-color: #5D4037 }
+          }
+          .ledger-input-wrapper {
+            margin-top: 1rem;
+            display: flex;
+            gap: 10px;
+          }
+          .ledger-input {
+            flex-grow: 1;
+            background: #FFF;
+            border: 1px solid #5D4037;
+            border-radius: 6px;
+            color: #3E2723;
+            padding: 0.6rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+          }
+          .ledger-input:focus {
+            outline: none;
+            border-color: #8D6E63;
+            box-shadow: 0 0 8px rgba(141, 110, 99, 0.4);
+          }
+          .ledger-btn {
+            background: #5D4037;
+            color: #FFFEFB;
+            border: none;
+            border-radius: 6px;
+            padding: 0.6rem 1.2rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+          }
+          .ledger-btn:hover {
+            background: #8D6E63;
+            transform: translateY(-1px);
+          }
+          .ledger-hint {
+            font-size: 0.72rem;
+            font-family: 'DM Sans', sans-serif;
+            color: #8D6E63;
+            margin-top: 0.5rem;
+            text-align: right;
+          }
+        </style>
+<div class="cafe-ledger" id="ledger-widget">
+<div class="ledger-header">
+<span>☕ Philosophy Café : Dialogue Ledger</span>
+<span>Table: Wilde, Watts, &amp; Aurelius</span>
+</div>
+<div class="ledger-screen" id="ledger-screen">
+<span id="ledger-typewriter-text">Oscar Wilde, Alan Watts, and Marcus Aurelius are sitting at a corner table, smelling of dark roasted coffee. "What shall we debate today?" Oscar asks, polishing his spectacles. Type a topic or keyword (e.g. success, ignorance, art, death, love) below to start our philosophical espresso table.</span><span class="ledger-cursor"></span>
+</div>
+<div class="ledger-input-wrapper">
+<input class="ledger-input" id="ledger-input" maxlength="100" placeholder="Type a topic (e.g. success, ignorance, art, death, love)..." type="text"/>
+<button class="ledger-btn" id="ledger-submit-btn">DISCUSS</button>
+</div>
+<div class="ledger-hint">💡 Hint: Type anything to see how many wild interpretations we can spark!</div>
+</div>
+<!-- HISTORY -->
+<div class="history-block" id="tq-hist" style="margin-top: 2rem;">
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">🕒 Past Sessions</h2>
+</div><div class="club-filters" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;"><button class="filter-btn active" data-level="all">All Levels</button><button class="filter-btn" data-level="a1">A1</button><button class="filter-btn" data-level="a2">A2</button><button class="filter-btn" data-level="b1">B1</button><button class="filter-btn" data-level="b2">B2</button><button class="filter-btn" data-level="c1">C1</button><button class="filter-btn" data-level="c2">C2</button></div>
+<!-- 📌 PINNED AUTHOR CHALLENGES -->
+<div class="pinned-challenges-section" style="margin-bottom: 3.5rem; background: rgba(93, 64, 55, 0.03); border: 2px dashed #5D4037; border-radius: 28px; padding: 2rem;">
+<h3 style="margin-top: 0; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-size: 1.5rem; display: flex; align-items: center; gap: 0.75rem; color: #5D4037;">
+<span>📌</span> Pinned Author Challenges (90 min)
+            </h3>
+<div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+<!-- 1. Richard Feynman Challenge -->
+<div class="history-session" data-level="a2 b1 b2 c1" style="margin-bottom:0;border:1px solid var(--border);border-radius:20px;overflow:hidden;background:#FFFDF9;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;"><span class="club-tag" style="background:#FAEEE8; color:#C0392B; border-color:#F5CBA7; border:1px solid #F5CBA7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">A2</span><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span></div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700;">Richard Feynman: The Art of Knowing</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Unify the brilliant mind of Richard Feynman. Master vocabulary of curiosity, mental discipline, and absolute honesty across 4 deep-dive sessions: <em>Study Hard</em>, <em>Education vs Intelligence</em>, <em>Knowledge Isn't Free</em>, and <em>No Shame in Not Knowing</em>.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+<a class="view-btn" href="sessions/the-greatest-quotes/feynman-no-shame-knowing-quote.html" style="background:#5D4037; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 1: No Shame →</a>
+<a class="view-btn" href="sessions/the-greatest-quotes/feynman-knowledge-isnt-free-intermediate.html" style="background:#5D4037; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 2: Knowledge (B1) →</a>
+<a class="view-btn" href="sessions/the-greatest-quotes/feynman-knowledge-isnt-free-upper-intermediate.html" style="background:#5D4037; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 2: Knowledge (B2) →</a>
+<a class="view-btn" href="sessions/the-greatest-quotes/feynman-study-hard.html" style="background:#5D4037; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 3: Study Hard (A2) →</a>
+<a class="view-btn" href="sessions/the-greatest-quotes/feynman-study-hard-intermediate.html" style="background:#5D4037; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 3: Study Hard (B1) →</a>
+<a class="view-btn" href="sessions/the-greatest-quotes/feynman-education-quote.html" style="background:#5D4037; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 4: Education →</a>
+</div>
+</div>
+<!-- 2. Socrates Challenge -->
+<div class="history-session" data-level="b1 b2" style="margin-bottom:0;border:1px solid var(--border);border-radius:20px;overflow:hidden;background:#FFFDF9;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span></div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700;">Socrates: The Examined Life</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Master socratic irony and questioning techniques. Grouping <em>The Wisdom of Socrates</em> and our upcoming seminar <em>The Dialogues on Consciousness</em>.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+<a class="view-btn" href="sessions/the-greatest-quotes/wisdom-of-socrates.html" style="background:#5D4037; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 1: Wisdom →</a>
+<a class="view-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20register%20for%20the%20Socratic%20Dialogue%20Upcoming%20Seminar." style="background:#8D6E63; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 2: Dialogues (TBC) →</a>
+</div>
+</div>
+<!-- 3. Fyodor Dostoevsky Challenge -->
+<div class="history-session" data-level="b2 c2" style="margin-bottom:0;border:1px solid var(--border);border-radius:20px;overflow:hidden;background:#FFFDF9;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;"><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span><span class="club-tag" style="background:#FAF5FF; color:#6B46C1; border-color:#E9D8FD; border:1px solid #E9D8FD; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C2</span></div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700;">Dostoevsky: Light &amp; Darkness</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Explore Russian psychological depth. Grouping Dostoevsky's timeless explorations on passion, morality, and social struggles: <em>Loving Means Power</em> and <em>Politics &amp; Religion</em>.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+<a class="view-btn" href="sessions/the-greatest-quotes/dostoevsky-loving-power-quote.html" style="background:#5D4037; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 1: Loving Power →</a>
+<a class="view-btn" href="sessions/the-greatest-quotes/dostoevsky-politics-religion-quote.html" style="background:#5D4037; font-size:0.8rem; padding: 0.4rem 0.8rem; text-decoration: none;">Part 2: Politics &amp; Religion →</a>
+</div>
+</div>
+</div>
+</div>
+<div class="quotes-history-grid" id="tq-grid">
+
+<div class="quotes-card history-session" data-level="a2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-a2">Elementary (A2)</span></div><h4 class="quotes-card-quote">"A number of people have said to me, after hearing your thinking, their mind becomes much happier."</h4><p class="quotes-card-desc">: Dalai Lama</p></div><div class="quotes-card-footer"><span class="quotes-card-date">26 August 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/dalai-lama-happier-minds-elementary.html">View Espresso Debate ➔</a></div></div>
+<div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"A number of people have said to me, after hearing your thinking, their mind becomes much happier."</h4><p class="quotes-card-desc">: Dalai Lama</p></div><div class="quotes-card-footer"><span class="quotes-card-date">26 August 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/dalai-lama-happier-minds-intermediate.html">View Espresso Debate ➔</a></div></div>
+
+      <div class="quotes-card history-session" data-level="a2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-a2">Elementary (A2)</span></div><h4 class="quotes-card-quote">"The older you get the more you understand why people disappear with art, music, books and quiet living."</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">24 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/disappear-with-art-quote-elementary.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"The older you get the more you understand why people disappear with art, music, books and quiet living."</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">23 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/disappear-with-art-quote-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="a2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-a2">Elementary (A2)</span></div><h4 class="quotes-card-quote">"We should turn off AI for a week to see if people's brains still work."</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">20 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/turn-off-ai-quote-elementary.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"I am a lover with or without a lover, because love is who I am, not who I'm with."</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">08 January 2027</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/lover-with-or-without-a-lover.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="a2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-a2">Elementary (A2)</span></div><h4 class="quotes-card-quote">"The longer we keep our inner child alive, the longer we keep the natural gifts we were born with."</h4><p class="quotes-card-desc">: Alisa Freindlich</p></div><div class="quotes-card-footer"><span class="quotes-card-date">10 March 2027</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/alisa-freindlich-inner-child-elementary.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"The longer we keep our inner child alive, the longer we keep the natural gifts we were born with."</h4><p class="quotes-card-desc">: Alisa Freindlich</p></div><div class="quotes-card-footer"><span class="quotes-card-date">10 March 2027</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/alisa-freindlich-inner-child-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"There is no shame in not knowing things! It's okay to say 'I don't know'. The one shame is to pretend that we know everything."</h4><p class="quotes-card-desc">: Richard Feynman</p></div><div class="quotes-card-footer"><span class="quotes-card-date">31 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/feynman-no-shame-knowing-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"If you want to know a person, discuss politics, religion, and women with him."</h4><p class="quotes-card-desc">: Fedor Dostoevsky</p></div><div class="quotes-card-footer"><span class="quotes-card-date">30 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/dostoevsky-politics-religion-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"Maybe if we underpaid politicians and overpaid teachers, there would be smarter people and less stupid laws."</h4><p class="quotes-card-desc">: Anonymous (attrib. Morgan Freeman)</p></div><div class="quotes-card-footer"><span class="quotes-card-date">30 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/underpaid-politicians-teachers-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"I will always prefer weird people with big dreams and poetic personalities."</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">28 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/weird-people-dreams-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"The older you get the more you understand why people disappear with art, music, books and quiet living."</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">22 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/disappear-with-art-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"Let us read, and let us dance, those two amusements will never do any harm to the world."</h4><p class="quotes-card-desc">: Voltaire</p></div><div class="quotes-card-footer"><span class="quotes-card-date">15 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/voltaire-read-dance-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"We should turn off AI for a week to see if people's brains still work."</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">12 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/turn-off-ai-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">"How many times have people used a pen or a paintbrush because they couldn't pull the trigger?"</h4><p class="quotes-card-desc">: Virginia Woolf</p></div><div class="quotes-card-footer"><span class="quotes-card-date">10 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/virginia-woolf-trigger-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">"They took memory cards from us and then made us pay for storage."</h4><p class="quotes-card-desc">: Nithya Shri</p></div><div class="quotes-card-footer"><span class="quotes-card-date">05 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/memory-cards-storage-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"Loving someone means giving them the power to destroy you, but trusting they won't."</h4><p class="quotes-card-desc">: Fedor Dostoevsky</p></div><div class="quotes-card-footer"><span class="quotes-card-date">01 December 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/dostoevsky-loving-power-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"The amount of beautiful things in your life depends on your ability to notice them."</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">25 November 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/ability-to-notice-beauty-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"Do you think so, or were you told to think so?"</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">15 November 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/think-for-yourself-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"The same rain that hurts the ice cream seller helps the umbrella seller."</h4><p class="quotes-card-desc">: Proverb</p></div><div class="quotes-card-footer"><span class="quotes-card-date">10 November 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/rain-seller-umbrella-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="a2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-a2">Elementary (A2)</span></div><h4 class="quotes-card-quote">"I have no special talents, I am only passionately curious."</h4><p class="quotes-card-desc">: Albert Einstein</p></div><div class="quotes-card-footer"><span class="quotes-card-date">05 November 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/einstein-passionately-curious-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">"People, people, people, an ocean of people, but I can't find even a drop of humanity."</h4><p class="quotes-card-desc">: Sadia Hakim</p></div><div class="quotes-card-footer"><span class="quotes-card-date">01 November 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/sadia-hakim-humanity-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"If a child is always convenient, it means they have already suppressed a part of themselves."</h4><p class="quotes-card-desc">: Alfried Längle</p></div><div class="quotes-card-footer"><span class="quotes-card-date">28 October 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/langle-suppressed-child-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"The real problems start not when a child resists, but when they stop resisting."</h4><p class="quotes-card-desc">: Gordon Neufeld</p></div><div class="quotes-card-footer"><span class="quotes-card-date">25 October 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/neufeld-resistance-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"A child has the right to be difficult, that is the only way they learn to be themselves."</h4><p class="quotes-card-desc">: Françoise Dolto</p></div><div class="quotes-card-footer"><span class="quotes-card-date">20 October 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/dolto-difficult-child-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"Pay attention to who changes the subject when you try to talk about something you're proud of."</h4><p class="quotes-card-desc">: Brianna Pastor</p></div><div class="quotes-card-footer"><span class="quotes-card-date">05 October 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/brianna-pastor-proud-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"Algorithms and AI are the opposite of taking risks..."</h4><p class="quotes-card-desc">: Madonna</p></div><div class="quotes-card-footer"><span class="quotes-card-date">30 June 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/madonna-ai-art-quote-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"Algorithms and AI are the opposite of taking risks..."</h4><p class="quotes-card-desc">: Madonna</p></div><div class="quotes-card-footer"><span class="quotes-card-date">30 June 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/madonna-ai-art-quote-upper-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"Knowledge isn't free. You have to pay attention."</h4><p class="quotes-card-desc">: Richard Feynman</p></div><div class="quotes-card-footer"><span class="quotes-card-date">22 June 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/feynman-knowledge-isnt-free-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"Knowledge isn't free. You have to pay attention."</h4><p class="quotes-card-desc">: Richard Feynman</p></div><div class="quotes-card-footer"><span class="quotes-card-date">22 June 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/feynman-knowledge-isnt-free-upper-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"People don't fake depression, they fake being okay."</h4><p class="quotes-card-desc">: Robin Williams</p></div><div class="quotes-card-footer"><span class="quotes-card-date">21 June 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/robin-williams-quote-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"People don't fake depression, they fake being okay."</h4><p class="quotes-card-desc">: Robin Williams</p></div><div class="quotes-card-footer"><span class="quotes-card-date">21 June 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/robin-williams-quote-upper-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"Study hard what interests you..."</h4><p class="quotes-card-desc">: Richard Feynman</p></div><div class="quotes-card-footer"><span class="quotes-card-date">18 June 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/feynman-study-hard-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="a2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-a2">Elementary (A2)</span></div><h4 class="quotes-card-quote">"Study hard what interests you..."</h4><p class="quotes-card-desc">: Richard Feynman</p></div><div class="quotes-card-footer"><span class="quotes-card-date">18 June 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/feynman-study-hard.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">Favorite Days</h4><p class="quotes-card-desc">: That Never Happened</p></div><div class="quotes-card-footer"><span class="quotes-card-date">11 January 2026</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/favorite-days-not-happened.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">Dangerous Blindness</h4><p class="quotes-card-desc">: The Limit of Perspective</p></div><div class="quotes-card-footer"><span class="quotes-card-date">28 December 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/dangerous-blindness-perspective.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">Accepting a Gay Child</h4><p class="quotes-card-desc">: Love vs. Tradition</p></div><div class="quotes-card-footer"><span class="quotes-card-date">30 November 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/accept-gay-child.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="a2">
+<div class="quotes-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+<span class="club-tag tag-a2">Elementary (A2)</span>
+</div>
+<h4 class="quotes-card-quote">Algorithms Cannot Create Art</h4>
+<p class="quotes-card-desc">- Madonna</p>
+</div>
+<div class="quotes-card-footer">
+<span class="quotes-card-date">25 November 2025</span>
+<a class="quotes-card-view" href="sessions/the-greatest-quotes/madonna-ai-art-quote-elementary.html">View Espresso Debate →</a>
+</div>
+</div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">AI is the Opposite of Art</h4><p class="quotes-card-desc">: The Risk of Creation</p></div><div class="quotes-card-footer"><span class="quotes-card-date">23 November 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/ai-opposite-of-art-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">AI is the Opposite of Art</h4><p class="quotes-card-desc">: The Risk of Creation</p></div><div class="quotes-card-footer"><span class="quotes-card-date">23 November 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/ai-opposite-of-art-upper-intermediate.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">You Are a Soul</h4><p class="quotes-card-desc">: Beyond the Body</p></div><div class="quotes-card-footer"><span class="quotes-card-date">16 November 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/you-are-a-soul.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">Women and Mothers</h4><p class="quotes-card-desc">: The Tragedy of Choice</p></div><div class="quotes-card-footer"><span class="quotes-card-date">09 November 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/women-mothers-tragedy.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">You Must Die First</h4><p class="quotes-card-desc">: The Art of Rebirth</p></div><div class="quotes-card-footer"><span class="quotes-card-date">02 November 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/must-die-first.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">Home is a Time</h4><p class="quotes-card-desc">: Not a Place</p></div><div class="quotes-card-footer"><span class="quotes-card-date">26 October 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/home-is-a-time.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">Sonder</h4><p class="quotes-card-desc">: The Lives of Others</p></div><div class="quotes-card-footer"><span class="quotes-card-date">12 October 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/sonder.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">Saudade</h4><p class="quotes-card-desc">: The Presence of Absence</p></div><div class="quotes-card-footer"><span class="quotes-card-date">05 October 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/saudade.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"Stay hungry, stay foolish."</h4><p class="quotes-card-desc">: Steve Jobs</p></div><div class="quotes-card-footer"><span class="quotes-card-date">20 August 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/steve-jobs-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="a2">
+<div class="quotes-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+<span class="club-tag tag-a2">Elementary (A2)</span>
+</div>
+<h4 class="quotes-card-quote">"Knowledge isn't free. You have to pay attention."</h4>
+<p class="quotes-card-desc">- Richard Feynman</p>
+</div>
+<div class="quotes-card-footer">
+<span class="quotes-card-date">18 July 2025</span>
+<a class="quotes-card-view" href="sessions/the-greatest-quotes/feynman-knowledge-isnt-free-elementary.html">View Espresso Debate →</a>
+</div>
+</div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"Never confuse education with intelligence."</h4><p class="quotes-card-desc">: Richard Feynman</p></div><div class="quotes-card-footer"><span class="quotes-card-date">15 July 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/feynman-education-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b2"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b2">Upper-Intermediate (B2)</span></div><h4 class="quotes-card-quote">"The opposite of love is not hate. The actual opposite of love is apathy."</h4><p class="quotes-card-desc">: Amish Tripathi</p></div><div class="quotes-card-footer"><span class="quotes-card-date">12 July 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/amish-tripathi-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"I knew that with a mouth like mine, I just hadda be a star or something."</h4><p class="quotes-card-desc">: Barbra Streisand</p></div><div class="quotes-card-footer"><span class="quotes-card-date">10 July 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/barbra-streisand-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">The Compass and the Clock</h4></div><div class="quotes-card-footer"><span class="quotes-card-date">25 June 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/compass-and-clock.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"Don't take criticism from someone you wouldn't take advice from."</h4><p class="quotes-card-desc">: Jim Kwik</p></div><div class="quotes-card-footer"><span class="quotes-card-date">22 June 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/jim-kwik-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="b1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-b1">Intermediate (B1)</span></div><h4 class="quotes-card-quote">"None of us really have a choice in anything but we do have a choice to be ourselves. Stay free."</h4><p class="quotes-card-desc">: Anonymous</p></div><div class="quotes-card-footer"><span class="quotes-card-date">20 June 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/stay-free-quote.html">View Espresso Debate →</a></div></div>
+      <div class="quotes-card history-session" data-level="c1"><div class="quotes-card-body"><div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"><span class="club-tag tag-c1">Advanced (C1)</span></div><h4 class="quotes-card-quote">"The only true wisdom is in knowing you know nothing."</h4><p class="quotes-card-desc">: Socrates</p></div><div class="quotes-card-footer"><span class="quotes-card-date">15 June 2025</span><a class="quotes-card-view" href="sessions/the-greatest-quotes/wisdom-of-socrates.html">View Espresso Debate →</a></div></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- /logged-in content -->
+<!-- /club-main -->
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem;">Philosophical Depth</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Language isn't just about facts; it's about expressing complex ideas and personal philosophy.</p>
+</div>
+</div>
+<!-- /grid -->
+</section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const ledgerInput = document.getElementById('ledger-input');
+  const submitBtn = document.getElementById('ledger-submit-btn');
+  const screenText = document.getElementById('ledger-typewriter-text');
+
+  // 1. Web Audio Synth for cozy key clicks and café bell chime
+  let audioCtx = null;
+
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  function playKeyClick() {
+    try {
+      initAudio();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(2800 + Math.random() * 300, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.012);
+
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.010);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.012);
+    } catch (e) {
+      // Fallback
+    }
+  }
+
+  function playBellChime() {
+    try {
+      initAudio();
+      const osc1 = audioCtx.createOscillator();
+      const osc2 = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc1.frequency.setValueAtTime(1800, audioCtx.currentTime);
+      osc2.frequency.setValueAtTime(2400, audioCtx.currentTime);
+
+      gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.6);
+
+      osc1.connect(gain);
+      osc2.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc1.start();
+      osc2.start();
+      osc1.stop(audioCtx.currentTime + 0.6);
+      osc2.stop(audioCtx.currentTime + 0.6);
+    } catch (e) {
+      // Fallback
+    }
+  }
+
+  ledgerInput.addEventListener('keydown', (e) => {
+    if (e.key.length === 1 || e.key === 'Backspace' || e.key === ' ') {
+      playKeyClick();
+    }
+  });
+
+  // 2. Philosophical Dialogue Metaphor Engine
+  const responses = [
+    {
+      keywords: ['success', 'ambition', 'goal', 'win', 'wealth', 'money'],
+      text: "<strong>Marcus Aurelius:</strong> 'True success is doing your duty with a tranquil mind. External praise is nothing.'<br><strong>Oscar Wilde:</strong> 'Oh, dear Marcus, success is a public misunderstanding! I prefer scandals-they are so much more authentic.'<br><strong>Alan Watts:</strong> 'Why run after success? You are trying to catch a wave that you are already part of. Let go and enjoy the cup of coffee!'"
+    },
+    {
+      keywords: ['ignorance', 'knowing', 'wisdom', 'knowledge', 'nothing', 'socrates'],
+      text: "<strong>Marcus Aurelius:</strong> 'We must constantly examine our ignorance to avoid being ruled by false opinions.'<br><strong>Alan Watts:</strong> 'Exactly! The mystery of life is not a problem to be solved, but a reality to be experienced. When you know nothing, you know everything.'<br><strong>Oscar Wilde:</strong> 'Personally, I love ignorance. It's like a delicate exotic fruit; touch it and the bloom is gone.'"
+    },
+    {
+      keywords: ['art', 'ai', 'painting', 'song', 'music', 'creative', 'beauty'],
+      text: "<strong>Oscar Wilde:</strong> 'Art is the only serious thing in the world, and the artist is the only person who is never serious.'<br><strong>Marcus Aurelius:</strong> 'Is beauty not self-contained? An emerald is no less beautiful if no one praises it. Neither is art.'<br><strong>Alan Watts:</strong> 'The universe is playing a creative game, and art is just us waking up to that play. There is no formula for a dance!'"
+    },
+    {
+      keywords: ['death', 'die', 'end', 'life', 'mortal'],
+      text: "<strong>Marcus Aurelius:</strong> 'Do not fear death; it is merely a natural process, like leaves falling in autumn.'<br><strong>Oscar Wilde:</strong> 'I find death far too predictable. I'd much rather die beyond my means.'<br><strong>Alan Watts:</strong> 'If you are afraid of death, you are afraid of life itself. You cannot have a solid without empty space around it. They are one!'"
+    },
+    {
+      keywords: ['love', 'romance', 'friendship', 'heart'],
+      text: "<strong>Oscar Wilde:</strong> 'To love oneself is the beginning of a lifelong romance. Others are far too difficult to keep up with!'<br><strong>Marcus Aurelius:</strong> 'We are made for cooperation, like feet, like hands. To love is to serve the common good of humanity.'<br><strong>Alan Watts:</strong> 'Indeed, but you cannot force love. It is like water; if you squeeze it in your hand, it slips away. Just let it flow.'"
+    }
+  ];
+
+  const defaultResponse = "<strong>Oscar Wilde:</strong> 'How delightfully absurd! Let us find five different interpretations of that over our next espresso.'<br><strong>Marcus Aurelius:</strong> 'Whatever the topic, let us examine it with absolute reason and cosmic perspective.'<br><strong>Alan Watts:</strong> 'It is all part of the great cosmic joke. There is no right answer, only the joy of wondering!'";
+
+  function getPhilosophicalResponse(query) {
+    const q = query.toLowerCase();
+    for (const r of responses) {
+      if (r.keywords.some(k => q.includes(k))) {
+        return r.text;
+      }
+    }
+    return defaultResponse;
+  }
+
+  // 3. Typewriter Effect Logic
+  let typeTimer = null;
+  function typeOutMessage(message) {
+    clearInterval(typeTimer);
+    screenText.innerHTML = '';
+    let index = 0;
+
+    // To parse HTML tags like <strong> and <br> while typing, we convert to a temporary container or process token-by-token.
+    // For a simpler approach, we'll split by tag or just render plain text or directly update innerHTML incrementally.
+    // Let's implement an HTML-friendly typewriter!
+    const tokens = [];
+    let currentToken = '';
+    let inTag = false;
+
+    for (let i = 0; i < message.length; i++) {
+      const char = message.charAt(i);
+      if (char === '<') {
+        if (currentToken) {
+          tokens.push({ type: 'text', value: currentToken });
+          currentToken = '';
+        }
+        inTag = true;
+        currentToken += char;
+      } else if (char === '>') {
+        currentToken += char;
+        tokens.push({ type: 'tag', value: currentToken });
+        currentToken = '';
+        inTag = false;
+      } else {
+        currentToken += char;
+      }
+    }
+    if (currentToken) {
+      tokens.push({ type: inTag ? 'tag' : 'text', value: currentToken });
+    }
+
+    let tokenIndex = 0;
+    let charIndex = 0;
+
+    typeTimer = setInterval(() => {
+      if (tokenIndex < tokens.length) {
+        const token = tokens[tokenIndex];
+        if (token.type === 'tag') {
+          screenText.innerHTML += token.value;
+          tokenIndex++;
+        } else {
+          // It's a text token, type it out char-by-char
+          if (charIndex < token.value.length) {
+            screenText.innerHTML += token.value.charAt(charIndex);
+            charIndex++;
+            if (Math.random() > 0.4) {
+              playKeyClick();
+            }
+          } else {
+            tokenIndex++;
+            charIndex = 0;
+          }
+        }
+      } else {
+        clearInterval(typeTimer);
+        playBellChime();
+      }
+    }, 25);
+  }
+
+  submitBtn.addEventListener('click', () => {
+    const val = ledgerInput.value.trim();
+    if (!val) return;
+
+    initAudio();
+    const response = getPhilosophicalResponse(val);
+    typeOutMessage(response);
+    ledgerInput.value = '';
+  });
+
+  ledgerInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      submitBtn.click();
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const sessions = document.querySelectorAll('.history-session');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedLevel = btn.getAttribute('data-level');
+
+      sessions.forEach(sess => {
+        const levels = (sess.getAttribute('data-level') || '').split(' ');
+        if (selectedLevel === 'all' || levels.includes(selectedLevel)) {
+          sess.style.display = 'flex';
+        } else {
+          sess.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script><script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>

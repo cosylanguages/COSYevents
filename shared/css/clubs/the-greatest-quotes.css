@@ -1,0 +1,492 @@
+
+/* ☕ THE GREATEST QUOTES: Vintage Café Napkin & Coaster Grid */
+.quotes-history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.quotes-card {
+  background: var(--surface-color, #FFFDF9);
+  border: 4px double #5D4037;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.quotes-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: #8D6E63;
+}
+
+/* Coffee Stain ring */
+.quotes-card::after {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border: 3px solid rgba(93, 64, 55, 0.08);
+  border-radius: 50%;
+  right: -30px;
+  bottom: -30px;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+.quotes-card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.quotes-card-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink, #3E2723);
+  margin: 0 0 0.75rem 0;
+  font-style: italic;
+}
+
+.quotes-card-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ink-soft, #5D4037);
+  margin: 0 0 1rem 0;
+}
+
+.quotes-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.quotes-card-date {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.quotes-card-view {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #5D4037;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.quotes-card-view:hover {
+  color: #8D6E63;
+  text-decoration: underline;
+}
+
+/* Dark theme overrides */
+html[data-theme="dark"] .quotes-card {
+  background: var(--surface-color, #2D1E1B);
+  border-color: #8D6E63;
+}
+html[data-theme="dark"] .quotes-card::after {
+  border-color: rgba(245, 235, 230, 0.06);
+}
+html[data-theme="dark"] .quotes-card-quote {
+  color: #F5EBE6;
+}
+html[data-theme="dark"] .quotes-card-desc {
+  color: #D7CCC8;
+}
+html[data-theme="dark"] .quotes-card-view {
+  color: #D7CCC8;
+}
+html[data-theme="dark"] .quotes-card-view:hover {
+  color: #F5EBE6;
+}
+
+/* Level badge helper classes for Quotes */
+.quotes-card .tag-a1, .quotes-card .tag-a2 {
+  background: #FAEEE8;
+  color: #C0392B;
+  border: 1px solid #F5CBA7;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.quotes-card .tag-b1 {
+  background: #E1F5EE;
+  color: #1A7A4A;
+  border: 1px solid #A3E4D7;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.quotes-card .tag-b2 {
+  background: #EBF8FF;
+  color: #2B6CB0;
+  border: 1px solid #BEE3F8;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.quotes-card .tag-c1 {
+  background: #EEEDFE;
+  color: #534AB7;
+  border: 1px solid #D2CFFE;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.quotes-card .tag-c2 {
+  background: #FAF5FF;
+  color: #6B46C1;
+  border: 1px solid #E9D8FD;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* ☕ Philosophers' Ledger Global Styles */
+.philosophers-ledger {
+  background: var(--cream-dark, #FAF5EF) !important;
+  border: 4px double #5D4037 !important;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #3E2723 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophers-ledger::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 4px solid rgba(93, 64, 55, 0.05);
+  border-radius: 50%;
+  right: -40px;
+  bottom: -40px;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+.philosophers-ledger h4 {
+  margin: 0 0 0.5rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #5D4037 !important;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.philosophers-ledger p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Dark theme overrides for Philosophers' Ledger */
+html[data-theme="dark"] .philosophers-ledger {
+  background: #2D1E1B !important;
+  border-color: #8D6E63 !important;
+  color: #F5EBE6 !important;
+}
+
+html[data-theme="dark"] .philosophers-ledger h4 {
+  color: #D7CCC8 !important;
+}
+
+html[data-theme="dark"] .philosophers-ledger::after {
+  border-color: rgba(245, 235, 230, 0.05);
+}
+
+/* ☕ Theme Stamp inside Café Ledger */
+.quotes-theme-stamp {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2.5rem;
+  opacity: 0.15;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  transform: rotate(15deg);
+  transition: opacity 0.3s ease;
+}
+.philosophers-ledger:hover .quotes-theme-stamp {
+  opacity: 0.35;
+}
+html[data-theme="dark"] .quotes-theme-stamp {
+  opacity: 0.12;
+}
+html[data-theme="dark"] .philosophers-ledger:hover .quotes-theme-stamp {
+  opacity: 0.28;
+}
+
+/* ─── THE GREATEST QUOTES: VISUAL THEME OVERLAYS ─── */
+
+/* Default resets and common rules */
+body[class*="theme-quotes-"] {
+  background-color: var(--quotes-theme-bg, #FFFDF5) !important;
+  color: var(--quotes-theme-text, #3E2723) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme variable values for Light Mode */
+body.theme-quotes-critical {
+  --quotes-theme-bg: #F7FAFC;
+  --quotes-theme-text: #2D3748;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-accent: #4A5568;
+  --quotes-theme-border: #E2E8F0;
+  --quotes-theme-watermark: "🤔";
+}
+body.theme-quotes-art {
+  --quotes-theme-bg: #FFF5F5;
+  --quotes-theme-text: #2D080C;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-accent: #9B2C2C;
+  --quotes-theme-border: #FEB2B2;
+  --quotes-theme-watermark: "🎨";
+}
+body.theme-quotes-intellect {
+  --quotes-theme-bg: #F0F4F8;
+  --quotes-theme-text: #0F172A;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-accent: #2B6CB0;
+  --quotes-theme-border: #BEE3F8;
+  --quotes-theme-watermark: "🏛️";
+}
+body.theme-quotes-nostalgia {
+  --quotes-theme-bg: #FFFDF5;
+  --quotes-theme-text: #3D1A0D;
+  --quotes-theme-card-bg: #FFFDF9;
+  --quotes-theme-accent: #DD6B20;
+  --quotes-theme-border: #FEEBC8;
+  --quotes-theme-watermark: "⏳";
+}
+body.theme-quotes-parenting {
+  --quotes-theme-bg: #F0FDF4;
+  --quotes-theme-text: #0B1F17;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-accent: #38A169;
+  --quotes-theme-border: #C6F6D5;
+  --quotes-theme-watermark: "🌱";
+}
+body.theme-quotes-relationships {
+  --quotes-theme-bg: #FAF5FF;
+  --quotes-theme-text: #1F0E3D;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-accent: #805AD5;
+  --quotes-theme-border: #E9D8FD;
+  --quotes-theme-watermark: "💖";
+}
+body.theme-quotes-justice {
+  --quotes-theme-bg: #FFFDF0;
+  --quotes-theme-text: #2D2306;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-accent: #D69E2E;
+  --quotes-theme-border: #FEFCBF;
+  --quotes-theme-watermark: "⚖️";
+}
+body.theme-quotes-empathy {
+  --quotes-theme-bg: #F0FDFA;
+  --quotes-theme-text: #041F1E;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-accent: #319795;
+  --quotes-theme-border: #CCFBF1;
+  --quotes-theme-watermark: "🧭";
+}
+body.theme-quotes-existential {
+  --quotes-theme-bg: #FAF5FF;
+  --quotes-theme-text: #110F2E;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-accent: #8B5CF6;
+  --quotes-theme-border: #DDD6FE;
+  --quotes-theme-watermark: "🌌";
+}
+body.theme-quotes-digital {
+  --quotes-theme-bg: #F0FDF4;
+  --quotes-theme-text: #011C15;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-accent: #059669;
+  --quotes-theme-border: #A7F3D0;
+  --quotes-theme-watermark: "💾";
+}
+
+/* Theme variables overrides for Dark Mode */
+html[data-theme="dark"] body.theme-quotes-critical {
+  --quotes-theme-bg: #1A202C;
+  --quotes-theme-text: #E2E8F0;
+  --quotes-theme-card-bg: #2D3748;
+  --quotes-theme-accent: #90CDF4;
+  --quotes-theme-border: #4A5568;
+}
+html[data-theme="dark"] body.theme-quotes-art {
+  --quotes-theme-bg: #1C0D0F;
+  --quotes-theme-text: #FED7D7;
+  --quotes-theme-card-bg: #2D1215;
+  --quotes-theme-accent: #FC8181;
+  --quotes-theme-border: #742A2A;
+}
+html[data-theme="dark"] body.theme-quotes-intellect {
+  --quotes-theme-bg: #0B132B;
+  --quotes-theme-text: #E2E8F0;
+  --quotes-theme-card-bg: #1C2541;
+  --quotes-theme-accent: #63B3ED;
+  --quotes-theme-border: #2A4365;
+}
+html[data-theme="dark"] body.theme-quotes-nostalgia {
+  --quotes-theme-bg: #23120A;
+  --quotes-theme-text: #FEEBC8;
+  --quotes-theme-card-bg: #341B10;
+  --quotes-theme-accent: #F6AD55;
+  --quotes-theme-border: #5C2512;
+}
+html[data-theme="dark"] body.theme-quotes-parenting {
+  --quotes-theme-bg: #0B1F17;
+  --quotes-theme-text: #C6F6D5;
+  --quotes-theme-card-bg: #143528;
+  --quotes-theme-accent: #68D391;
+  --quotes-theme-border: #22543D;
+}
+html[data-theme="dark"] body.theme-quotes-relationships {
+  --quotes-theme-bg: #120626;
+  --quotes-theme-text: #E9D8FD;
+  --quotes-theme-card-bg: #1F0E3D;
+  --quotes-theme-accent: #B794F4;
+  --quotes-theme-border: #44337A;
+}
+html[data-theme="dark"] body.theme-quotes-justice {
+  --quotes-theme-bg: #1C1504;
+  --quotes-theme-text: #FEFCBF;
+  --quotes-theme-card-bg: #2D2306;
+  --quotes-theme-accent: #F6E05E;
+  --quotes-theme-border: #5F370E;
+}
+html[data-theme="dark"] body.theme-quotes-empathy {
+  --quotes-theme-bg: #041F1E;
+  --quotes-theme-text: #CCFBF1;
+  --quotes-theme-card-bg: #0C3E3A;
+  --quotes-theme-accent: #4FD1C5;
+  --quotes-theme-border: #115E59;
+}
+html[data-theme="dark"] body.theme-quotes-existential {
+  --quotes-theme-bg: #070617;
+  --quotes-theme-text: #DDD6FE;
+  --quotes-theme-card-bg: #110F2E;
+  --quotes-theme-accent: #C4B5FD;
+  --quotes-theme-border: #312E81;
+}
+html[data-theme="dark"] body.theme-quotes-digital {
+  --quotes-theme-bg: #011C15;
+  --quotes-theme-text: #A7F3D0;
+  --quotes-theme-card-bg: #023D31;
+  --quotes-theme-accent: #34D399;
+  --quotes-theme-border: #064E3B;
+}
+
+/* 🎨 Hero styles for each theme class */
+body.theme-quotes-critical .session-hero { background: linear-gradient(135deg, #4A5568, #1A202C) !important; }
+body.theme-quotes-art .session-hero { background: linear-gradient(135deg, #741B28, #3A050E) !important; }
+body.theme-quotes-intellect .session-hero { background: linear-gradient(135deg, #1A365D, #0A192F) !important; }
+body.theme-quotes-nostalgia .session-hero { background: linear-gradient(135deg, #9C4221, #481E0C) !important; }
+body.theme-quotes-parenting .session-hero { background: linear-gradient(135deg, #276749, #123420) !important; }
+body.theme-quotes-relationships .session-hero { background: linear-gradient(135deg, #6B21A8, #3B0D66) !important; }
+body.theme-quotes-justice .session-hero { background: linear-gradient(135deg, #744210, #3A1F05) !important; }
+body.theme-quotes-empathy .session-hero { background: linear-gradient(135deg, #0D9488, #07525A) !important; }
+body.theme-quotes-existential .session-hero { background: linear-gradient(135deg, #3B0764, #0F0E26) !important; }
+body.theme-quotes-digital .session-hero { background: linear-gradient(135deg, #065F46, #022C22) !important; }
+
+/* ☕ Custom background watermarks */
+body[class*="theme-quotes-"]::after {
+  content: var(--quotes-theme-watermark, "📜") !important;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 8rem;
+  opacity: 0.05 !important;
+  pointer-events: none;
+  z-index: -1;
+  transition: content 0.3s ease;
+}
+html[data-theme="dark"] body[class*="theme-quotes-"]::after {
+  opacity: 0.03 !important;
+}
+
+/* 🏛️ Main Box overrides to ensure high contrast and beautiful cozy aesthetics */
+body[class*="theme-quotes-"] .philosophers-ledger,
+body[class*="theme-quotes-"] .vocab-card,
+body[class*="theme-quotes-"] .round-block {
+  background-color: var(--quotes-theme-card-bg) !important;
+  border-color: var(--quotes-theme-border) !important;
+  color: var(--quotes-theme-text) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04) !important;
+}
+
+/* Specific elements inside main boxes */
+body[class*="theme-quotes-"] .philosophers-ledger h4 {
+  color: var(--quotes-theme-accent) !important;
+}
+
+body[class*="theme-quotes-"] .btn-primary {
+  background-color: var(--quotes-theme-accent) !important;
+  border-color: var(--quotes-theme-accent) !important;
+  color: #FFFFFF !important;
+}
+
+body[class*="theme-quotes-"] .vocab-word {
+  color: var(--quotes-theme-accent) !important;
+  font-weight: 700;
+}
+
+/* Ensure readable breadcrumbs & back link */
+body[class*="theme-quotes-"] .back-link,
+body[class*="theme-quotes-"] .cosy-breadcrumbs a {
+  color: var(--quotes-theme-accent) !important;
+}
+
+body[class*="theme-quotes"]::after {
+  content: "📜";
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 6rem;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: -1;
+}

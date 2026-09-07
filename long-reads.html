@@ -1,0 +1,486 @@
+<!-- DEVELOPER ALERT: Refer to templates/events/session-template.html (or corresponding active templates in events/sessions/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Long Reads 📚 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<link rel="stylesheet" href="shared/css/clubs/long-reads.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #7A1C1C, #3E0F0F); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+
+  /* Literary Parlor - Dialogue Ledger Widget Styles */
+  .parlor-ledger {
+    background: #FAF3F0;
+    border: 4px double #7A1C1C;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 8px 24px rgba(122, 28, 28, 0.15);
+    color: #3E0F0F;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+  }
+  .ledger-header {
+    border-bottom: 2px solid #7A1C1C;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    font-family: 'DM Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7A1C1C;
+    font-weight: 700;
+  }
+  .ledger-screen {
+    background: #FFFDF9;
+    border: 1px solid #D7CCC8;
+    border-radius: 6px;
+    padding: 1.2rem;
+    min-height: 160px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    overflow-y: auto;
+  }
+  .ledger-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.2rem;
+    background: #7A1C1C;
+    margin-left: 2px;
+    animation: ledger-blink 1s step-end infinite;
+    vertical-align: middle;
+  }
+  @keyframes ledger-blink {
+    from, to { background-color: transparent }
+    50% { background-color: #7A1C1C }
+  }
+  .ledger-input-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+  }
+  .ledger-input {
+    flex-grow: 1;
+    background: #FFF;
+    border: 1px solid #7A1C1C;
+    border-radius: 6px;
+    color: #3E0F0F;
+    padding: 0.6rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+  }
+  .ledger-input:focus {
+    outline: none;
+    border-color: #A34E4E;
+    box-shadow: 0 0 8px rgba(163, 78, 78, 0.4);
+  }
+  .ledger-btn {
+    background: #7A1C1C;
+    color: #FFFEFB;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ledger-btn:hover {
+    background: #A34E4E;
+    transform: translateY(-1px);
+  }
+  .ledger-hint {
+    font-size: 0.72rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #A34E4E;
+    margin-top: 0.5rem;
+    text-align: right;
+  }
+</style>
+<style>
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    background: var(--border);
+  }
+  .filter-btn.active {
+    background: #7A1C1C;
+    color: white;
+    border-color: #7A1C1C;
+  }
+</style></head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<span class="club-emoji" style="font-size: 3rem; margin-bottom: 1rem; display: block;">📚</span>
+<h1>Long Reads</h1>
+<p data-i18n="long_reads.description">We read and discuss micro chapters of outstanding non-fiction books, audiobooks, and long-form podcasts. Explore deep ideas, deconstruct chapters, and expand your conversational limits.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="../../../../events/speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<!-- CLUB CONTENT -->
+<div>
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Current Book Series</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Book</td><td>How to Break Up with Your Phone : Catherine Price</td></tr>
+<tr><td>Description</td><td>A 4-part micro-discussion of Catherine Price's life-changing guide to reclaiming our attention, neurochemistry, and offline lives.</td></tr>
+<tr><td>Schedule</td><td>Every Tuesday</td></tr>
+<tr><td>Duration</td><td>60 min per session</td></tr>
+<tr><td>Languages</td><td>🇬🇧 English</td></tr>
+</table></div>
+<div style="display:flex;gap:10px;align-items:center;">
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20the%20Long%20Reads%20club." style="background:#7A1C1C;">💬 Register interest</a>
+</div>
+
+<!-- LITERARY PARLOR INTERACTIVE WIDGET -->
+<div class="parlor-ledger" id="ledger-widget">
+<div class="ledger-header">
+<span>📖 Literary Parlor : Book Club Ledger</span>
+<span>Current Series: Catherine Price</span>
+</div>
+<div class="ledger-screen" id="ledger-screen">
+<span id="ledger-typewriter-text">Welcome to the COSYlanguages Literary Parlor. We are currently discussing Catherine Price's "How to Break Up with Your Phone". Type a keyword or chapter topic (e.g. dopamine, habits, memory, detox, attention) below to join the intellectual fireplace discussion!</span><span class="ledger-cursor"></span>
+</div>
+<div class="ledger-input-wrapper">
+<input class="ledger-input" id="ledger-input" maxlength="100" placeholder="Type a topic (e.g. dopamine, habits, memory, detox, attention)..." type="text"/>
+<button class="ledger-btn" id="ledger-submit-btn">DISCUSS</button>
+</div>
+<div class="ledger-hint">💡 Hint: Type to see what our literary panel thinks about your digital habits!</div>
+</div>
+
+<!-- HISTORY -->
+<div class="history-block" id="lr-hist" style="margin-top: 3rem;">
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">🕒 Book Club Micro-Discussions (Series 1)</h2>
+</div>
+<div class="club-filters" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-level="all">All Levels</button>
+<button class="filter-btn" data-level="b2">Upper-Intermediate (B2)</button>
+</div>
+
+<div class="quotes-history-grid" id="lr-grid">
+      <!-- Session 1 -->
+      <div class="quotes-card history-session" data-level="b2">
+        <div class="quotes-card-body">
+          <div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+            <span class="club-tag tag-b2" style="background: rgba(122, 28, 28, 0.1); color: #7A1C1C; border-color: rgba(122, 28, 28, 0.2);">Upper-Intermediate (B2)</span>
+            <span class="club-tag" style="background: #E8F8F5; color: #117864; border-color: #A3E4D7;">Part I : Micro-Discussion #1</span>
+          </div>
+          <h4 class="quotes-card-quote">Session 1: Designed to Addict &amp; Dopamine</h4>
+          <p class="quotes-card-desc" style="font-family: var(--font-sans); font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.5;">Deconstruct the chemical hook behind your smartphone. Explore how variable intermittent reinforcements and anticipation release dopamine to trigger compulsive checking behaviors.</p>
+        </div>
+        <div class="quotes-card-footer">
+          <span class="quotes-card-date">Chapter 1-3</span>
+          <a class="quotes-card-view" href="sessions/long-reads/designed-to-addict.html" style="color: #7A1C1C; font-weight: 700;">View Session Details →</a>
+        </div>
+      </div>
+
+      <!-- Session 2 -->
+      <div class="quotes-card history-session" data-level="b2">
+        <div class="quotes-card-body">
+          <div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+            <span class="club-tag tag-b2" style="background: rgba(122, 28, 28, 0.1); color: #7A1C1C; border-color: rgba(122, 28, 28, 0.2);">Upper-Intermediate (B2)</span>
+            <span class="club-tag" style="background: #E8F8F5; color: #117864; border-color: #A3E4D7;">Part I : Micro-Discussion #2</span>
+          </div>
+          <h4 class="quotes-card-quote">Session 2: The Attention Economy &amp; Social Tricks</h4>
+          <p class="quotes-card-desc" style="font-family: var(--font-sans); font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.5;">Unpack the monetization of your awareness. Discuss how free platforms trade your finite attention, manipulate your biological need for validation, and sell the illusion of productivity.</p>
+        </div>
+        <div class="quotes-card-footer">
+          <span class="quotes-card-date">Chapter 4-5</span>
+          <a class="quotes-card-view" href="sessions/long-reads/attention-economy.html" style="color: #7A1C1C; font-weight: 700;">View Session Details →</a>
+        </div>
+      </div>
+
+      <!-- Session 3 -->
+      <div class="quotes-card history-session" data-level="b2">
+        <div class="quotes-card-body">
+          <div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+            <span class="club-tag tag-b2" style="background: rgba(122, 28, 28, 0.1); color: #7A1C1C; border-color: rgba(122, 28, 28, 0.2);">Upper-Intermediate (B2)</span>
+            <span class="club-tag" style="background: #E8F8F5; color: #117864; border-color: #A3E4D7;">Part I : Micro-Discussion #3</span>
+          </div>
+          <h4 class="quotes-card-quote">Session 3: Changing Our Brains &amp; Reclaiming Solitude</h4>
+          <p class="quotes-card-desc" style="font-family: var(--font-sans); font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.5;">Examine neuroplasticity under tech-induced distraction. Discuss how constant notifications erode short-term memory, and explore mindfulness practices as a tool to rebuild deep focus.</p>
+        </div>
+        <div class="quotes-card-footer">
+          <span class="quotes-card-date">Chapter 6-7</span>
+          <a class="quotes-card-view" href="sessions/long-reads/changing-our-brains.html" style="color: #7A1C1C; font-weight: 700;">View Session Details →</a>
+        </div>
+      </div>
+
+      <!-- Session 4 -->
+      <div class="quotes-card history-session" data-level="b2">
+        <div class="quotes-card-body">
+          <div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+            <span class="club-tag tag-b2" style="background: rgba(122, 28, 28, 0.1); color: #7A1C1C; border-color: rgba(122, 28, 28, 0.2);">Upper-Intermediate (B2)</span>
+            <span class="club-tag" style="background: #E8F8F5; color: #117864; border-color: #A3E4D7;">Part II : Micro-Discussion #4</span>
+          </div>
+          <h4 class="quotes-card-quote">Session 4: The 30-Day Breakup Action Plan</h4>
+          <p class="quotes-card-desc" style="font-family: var(--font-sans); font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.5;">Weigh practical, real-world strategies to change your digital habits. Establish no-phone boundaries, delete toxic apps, and restructure your environment to nourish your offline, analog life.</p>
+        </div>
+        <div class="quotes-card-footer">
+          <span class="quotes-card-date">Part II (Complete)</span>
+          <a class="quotes-card-view" href="sessions/long-reads/the-30-day-breakup.html" style="color: #7A1C1C; font-weight: 700;">View Session Details →</a>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- /logged-in content -->
+<!-- /club-main -->
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem; color: #7A1C1C;">Serialized Narrative</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Instead of jumping from one unrelated theme to another, Long Reads builds a cognitive scaffolding. Carry vocabulary, ideas, and reflections from chapter to chapter.</p>
+</div>
+</div>
+<!-- /grid -->
+</div></section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const ledgerInput = document.getElementById('ledger-input');
+  const submitBtn = document.getElementById('ledger-submit-btn');
+  const screenText = document.getElementById('ledger-typewriter-text');
+
+  // Web Audio Synth
+  let audioCtx = null;
+
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  function playKeyClick() {
+    try {
+      initAudio();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(2600 + Math.random() * 200, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(1100, audioCtx.currentTime + 0.012);
+
+      gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.010);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.012);
+    } catch (e) {
+      // Fallback
+    }
+  }
+
+  function playBellChime() {
+    try {
+      initAudio();
+      const osc1 = audioCtx.createOscillator();
+      const osc2 = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc1.frequency.setValueAtTime(1600, audioCtx.currentTime);
+      osc2.frequency.setValueAtTime(2200, audioCtx.currentTime);
+
+      gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.6);
+
+      osc1.connect(gain);
+      osc2.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc1.start();
+      osc2.start();
+      osc1.stop(audioCtx.currentTime + 0.6);
+      osc2.stop(audioCtx.currentTime + 0.6);
+    } catch (e) {
+      // Fallback
+    }
+  }
+
+  ledgerInput.addEventListener('keydown', (e) => {
+    if (e.key.length === 1 || e.key === 'Backspace' || e.key === ' ') {
+      playKeyClick();
+    }
+  });
+
+  const responses = [
+    {
+      keywords: ['dopamine', 'addict', 'hook', 'chemical', 'compulsive'],
+      text: "<strong>Catherine Price:</strong> 'Smartphones drip-feed dopamine by giving us intermittent, variable rewards. The unpredictability is what hooks us.'<br><strong>The Panel:</strong> 'When you refresh a feed, you are pulling the lever of a digital slot machine. Is it a comforting habit or absolute manipulation?'"
+    },
+    {
+      keywords: ['attention', 'economy', 'monetize', 'validation', 'social media'],
+      text: "<strong>Catherine Price:</strong> 'Our attention is finite and precious. Social media platforms monetize your notifications because your awareness is their primary product.'<br><strong>The Panel:</strong> 'If you are not paying for the product, you-and your cognitive focus-are the product being sold.'"
+    },
+    {
+      keywords: ['brain', 'memory', 'neuroplasticity', 'focus', 'mindfulness'],
+      text: "<strong>Catherine Price:</strong> 'Constant multitasking degrades our working memory. Our brains are not designed to process several inputs simultaneously.'<br><strong>The Panel:</strong> 'Neuroplasticity goes both ways. The same way our phones weaken our attention span, active mindfulness can reconstruct it.'"
+    },
+    {
+      keywords: ['detox', 'break', 'habits', 'boundaries', 'triage'],
+      text: "<strong>Catherine Price:</strong> 'A successful breakup requires establishing physical boundaries. Don't charge your phone in your bedroom!'<br><strong>The Panel:</strong> 'Taking back your life starts with Technology Triage. Turn off all non-human notifications and reclaim your physical reality.'"
+    }
+  ];
+
+  const defaultResponse = "<strong>The Literary Panel:</strong> 'A brilliant point of reflection. Our digital habits shape our neural landscape every day. Let us deconstruct this further during our micro-discussions!'";
+
+  function getDialogueResponse(query) {
+    const q = query.toLowerCase();
+    for (const r of responses) {
+      if (r.keywords.some(k => q.includes(k))) {
+        return r.text;
+      }
+    }
+    return defaultResponse;
+  }
+
+  let typeTimer = null;
+  function typeOutMessage(message) {
+    clearInterval(typeTimer);
+    screenText.innerHTML = '';
+    let index = 0;
+
+    const tokens = [];
+    let currentToken = '';
+    let inTag = false;
+
+    for (let i = 0; i < message.length; i++) {
+      const char = message.charAt(i);
+      if (char === '<') {
+        if (currentToken) {
+          tokens.push({ type: 'text', value: currentToken });
+          currentToken = '';
+        }
+        inTag = true;
+        currentToken += char;
+      } else if (char === '>') {
+        currentToken += char;
+        tokens.push({ type: 'tag', value: currentToken });
+        currentToken = '';
+        inTag = false;
+      } else {
+        currentToken += char;
+      }
+    }
+    if (currentToken) {
+      tokens.push({ type: inTag ? 'tag' : 'text', value: currentToken });
+    }
+
+    let tokenIndex = 0;
+    let charIndex = 0;
+
+    typeTimer = setInterval(() => {
+      if (tokenIndex < tokens.length) {
+        const token = tokens[tokenIndex];
+        if (token.type === 'tag') {
+          screenText.innerHTML += token.value;
+          tokenIndex++;
+        } else {
+          if (charIndex < token.value.length) {
+            screenText.innerHTML += token.value.charAt(charIndex);
+            charIndex++;
+            if (Math.random() > 0.4) {
+              playKeyClick();
+            }
+          } else {
+            tokenIndex++;
+            charIndex = 0;
+          }
+        }
+      } else {
+        clearInterval(typeTimer);
+        playBellChime();
+      }
+    }, 25);
+  }
+
+  submitBtn.addEventListener('click', () => {
+    const val = ledgerInput.value.trim();
+    if (!val) return;
+
+    initAudio();
+    const response = getDialogueResponse(val);
+    typeOutMessage(response);
+    ledgerInput.value = '';
+  });
+
+  ledgerInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      submitBtn.click();
+    }
+  });
+});
+</script><script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>

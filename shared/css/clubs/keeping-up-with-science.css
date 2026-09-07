@@ -1,0 +1,783 @@
+
+/* ─── Bespoke Theme Overrides for Keeping Up with Science ─── */
+
+/* 1. Fingers (Manual/Speech Evolution) */
+body.theme-science-fingers {
+  background: linear-gradient(to bottom, #071e22, #0d3b41) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-fingers .science-journal-box {
+  background: rgba(224, 169, 109, 0.05);
+  border: 1px solid rgba(224, 169, 109, 0.25);
+  border-left: 5px solid #e0a96d;
+}
+.theme-science-fingers .vocab-card {
+  border: 1px solid rgba(224, 169, 109, 0.15);
+  background: rgba(13, 59, 65, 0.5);
+  box-shadow: 0 4px 12px rgba(224, 169, 109, 0.05);
+}
+.theme-science-fingers .round-header {
+  background: #104e56 !important;
+  border-left: 5px solid #e0a96d;
+}
+
+/* 2. Spider (Fatherhood Arachnids) */
+body.theme-science-spider {
+  background: linear-gradient(to bottom, #09221d, #14453d) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-spider .science-journal-box {
+  background: rgba(181, 131, 90, 0.05);
+  border: 1px solid rgba(181, 131, 90, 0.25);
+  border-left: 5px solid #b5835a;
+}
+.theme-science-spider .vocab-card {
+  border: 1px solid rgba(181, 131, 90, 0.15);
+  background: rgba(20, 69, 61, 0.5);
+  box-shadow: 0 4px 12px rgba(181, 131, 90, 0.05);
+}
+.theme-science-spider .round-header {
+  background: #1b5c51 !important;
+  border-left: 5px solid #b5835a;
+}
+
+/* 3. Sensory (Pain Pathways) */
+body.theme-science-sensory {
+  background: linear-gradient(to bottom, #110922, #241445) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-sensory .science-journal-box {
+  background: rgba(255, 0, 85, 0.05);
+  border: 1px solid rgba(255, 0, 85, 0.25);
+  border-left: 5px solid #ff0055;
+}
+.theme-science-sensory .vocab-card {
+  border: 1px solid rgba(255, 0, 85, 0.15);
+  background: rgba(36, 20, 69, 0.5);
+  box-shadow: 0 4px 12px rgba(255, 0, 85, 0.05);
+}
+.theme-science-sensory .round-header {
+  background: #2d1856 !important;
+  border-left: 5px solid #ff0055;
+}
+
+/* 4. Climate (Climate Integrity) */
+body.theme-science-climate {
+  background: linear-gradient(to bottom, #2b0c03, #111d2b) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-climate .science-journal-box {
+  background: rgba(255, 85, 0, 0.05);
+  border: 1px solid rgba(255, 85, 0, 0.25);
+  border-left: 5px solid #ff5500;
+}
+.theme-science-climate .vocab-card {
+  border: 1px solid rgba(255, 85, 0, 0.15);
+  background: rgba(17, 29, 43, 0.5);
+  box-shadow: 0 4px 12px rgba(255, 85, 0, 0.05);
+}
+.theme-science-climate .round-header {
+  background: #1b2d43 !important;
+  border-left: 5px solid #ff5500;
+}
+
+/* 5. Ozempic (Endocrine Health) */
+body.theme-science-ozempic {
+  background: linear-gradient(to bottom, #051c14, #0b3d2b) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-ozempic .science-journal-box {
+  background: rgba(162, 232, 221, 0.05);
+  border: 1px solid rgba(162, 232, 221, 0.25);
+  border-left: 5px solid #a2e8dd;
+}
+.theme-science-ozempic .vocab-card {
+  border: 1px solid rgba(162, 232, 221, 0.15);
+  background: rgba(11, 61, 43, 0.5);
+  box-shadow: 0 4px 12px rgba(162, 232, 221, 0.05);
+}
+.theme-science-ozempic .round-header {
+  background: #0e5038 !important;
+  border-left: 5px solid #a2e8dd;
+}
+
+/* 6. Animal (Invertebrate Communication) */
+body.theme-science-animal {
+  background: linear-gradient(to bottom, #041f11, #0c4224) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-animal .science-journal-box {
+  background: rgba(255, 170, 0, 0.05);
+  border: 1px solid rgba(255, 170, 0, 0.25);
+  border-left: 5px solid #ffaa00;
+}
+.theme-science-animal .vocab-card {
+  border: 1px solid rgba(255, 170, 0, 0.15);
+  background: rgba(12, 66, 36, 0.5);
+  box-shadow: 0 4px 12px rgba(255, 170, 0, 0.05);
+}
+.theme-science-animal .round-header {
+  background: #115730 !important;
+  border-left: 5px solid #ffaa00;
+}
+
+/* 7. Hidden (Somatic Regeneration) */
+body.theme-science-hidden {
+  background: linear-gradient(to bottom, #051e22, #1d0922) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-hidden .science-journal-box {
+  background: rgba(0, 255, 204, 0.05);
+  border: 1px solid rgba(0, 255, 204, 0.25);
+  border-left: 5px solid #00ffcc;
+}
+.theme-science-hidden .vocab-card {
+  border: 1px solid rgba(0, 255, 204, 0.15);
+  background: rgba(29, 9, 34, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 255, 204, 0.05);
+}
+.theme-science-hidden .round-header {
+  background: #25122b !important;
+  border-left: 5px solid #00ffcc;
+}
+
+/* 8. Brain90 (Senior Plasticity) */
+body.theme-science-brain90 {
+  background: linear-gradient(to bottom, #1b201a, #2c3325) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-brain90 .science-journal-box {
+  background: rgba(234, 179, 8, 0.05);
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  border-left: 5px solid #eab308;
+}
+.theme-science-brain90 .vocab-card {
+  border: 1px solid rgba(234, 179, 8, 0.15);
+  background: rgba(44, 51, 37, 0.5);
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.05);
+}
+.theme-science-brain90 .round-header {
+  background: #3a4431 !important;
+  border-left: 5px solid #eab308;
+}
+
+/* 9. Football (Word Memory Metrics) */
+body.theme-science-football {
+  background: linear-gradient(to bottom, #051d14, #123e2b) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-football .science-journal-box {
+  background: rgba(74, 222, 128, 0.05);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  border-left: 5px solid #4ade80;
+}
+.theme-science-football .vocab-card {
+  border: 1px solid rgba(74, 222, 128, 0.15);
+  background: rgba(18, 62, 43, 0.5);
+  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.05);
+}
+.theme-science-football .round-header {
+  background: #175239 !important;
+  border-left: 5px solid #4ade80;
+}
+
+/* 10. AI Brain (Synaptic vs Silicon) */
+body.theme-science-aibrain {
+  background: linear-gradient(to bottom, #050d22, #052216) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-aibrain .science-journal-box {
+  background: rgba(0, 243, 255, 0.03);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-left: 5px solid #00f3ff;
+}
+.theme-science-aibrain .vocab-card {
+  border: 1px solid rgba(0, 243, 255, 0.15);
+  background: rgba(5, 34, 22, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 243, 255, 0.05);
+}
+.theme-science-aibrain .round-header {
+  background: #092f20 !important;
+  border-left: 5px solid #00f3ff;
+}
+
+/* 11. Museums (Cultural Gerontology) */
+body.theme-science-museums {
+  background: linear-gradient(to bottom, #1f1110, #2c1a30) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-museums .science-journal-box {
+  background: rgba(236, 72, 153, 0.05);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  border-left: 5px solid #ec4899;
+}
+.theme-science-museums .vocab-card {
+  border: 1px solid rgba(236, 72, 153, 0.15);
+  background: rgba(44, 26, 48, 0.5);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.05);
+}
+.theme-science-museums .round-header {
+  background: #39223e !important;
+  border-left: 5px solid #ec4899;
+}
+
+/* 12. Dementia (Epidemiology Dementia) */
+body.theme-science-dementia {
+  background: linear-gradient(to bottom, #181c1b, #0f2c25) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-dementia .science-journal-box {
+  background: rgba(20, 184, 166, 0.05);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  border-left: 5px solid #14b8a6;
+}
+.theme-science-dementia .vocab-card {
+  border: 1px solid rgba(20, 184, 166, 0.15);
+  background: rgba(15, 44, 37, 0.5);
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.05);
+}
+.theme-science-dementia .round-header {
+  background: #143e34 !important;
+  border-left: 5px solid #14b8a6;
+}
+
+/* 13. Grandmother (Anthropology) */
+body.theme-science-grandmother {
+  background: linear-gradient(to bottom, #2c1809, #3d2310) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-grandmother .science-journal-box {
+  background: rgba(249, 115, 22, 0.05);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  border-left: 5px solid #f97316;
+}
+.theme-science-grandmother .vocab-card {
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  background: rgba(61, 35, 16, 0.5);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.05);
+}
+.theme-science-grandmother .round-header {
+  background: #502e15 !important;
+  border-left: 5px solid #f97316;
+}
+
+/* 14. Creative (Distributed Creativity) */
+body.theme-science-creative {
+  background: linear-gradient(to bottom, #0f0522, #03081e) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-creative .science-journal-box {
+  background: rgba(168, 85, 247, 0.05);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-left: 5px solid #a855f7;
+}
+.theme-science-creative .vocab-card {
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  background: rgba(3, 8, 30, 0.5);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.05);
+}
+.theme-science-creative .round-header {
+  background: #111438 !important;
+  border-left: 5px solid #a855f7;
+}
+
+/* 15. Grandparents (Family Psychometrics) */
+body.theme-science-grandparents {
+  background: linear-gradient(to bottom, #1e1d15, #2d2a1b) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-grandparents .science-journal-box {
+  background: rgba(245, 158, 11, 0.05);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-left: 5px solid #f59e0b;
+}
+.theme-science-grandparents .vocab-card {
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  background: rgba(45, 42, 27, 0.5);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.05);
+}
+.theme-science-grandparents .round-header {
+  background: #3f3b26 !important;
+  border-left: 5px solid #f59e0b;
+}
+
+/* 16. Handedness (Neurological Lateralization) */
+body.theme-science-handedness {
+  background: linear-gradient(to bottom, #151a1e, #1f252d) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-handedness .science-journal-box {
+  background: rgba(148, 163, 184, 0.05);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-left: 5px solid #94a3b8;
+}
+.theme-science-handedness .vocab-card {
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  background: rgba(31, 37, 45, 0.5);
+  box-shadow: 0 4px 12px rgba(148, 163, 184, 0.05);
+}
+.theme-science-handedness .round-header {
+  background: #2a333e !important;
+  border-left: 5px solid #94a3b8;
+}
+
+/* 17. Delusion (AI Hallucinations) */
+body.theme-science-delusion {
+  background: linear-gradient(to bottom, #0f0a1e, #1e0522) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-delusion .science-journal-box {
+  background: rgba(217, 70, 239, 0.05);
+  border: 1px solid rgba(217, 70, 239, 0.25);
+  border-left: 5px solid #d946ef;
+}
+.theme-science-delusion .vocab-card {
+  border: 1px solid rgba(217, 70, 239, 0.15);
+  background: rgba(30, 5, 34, 0.5);
+  box-shadow: 0 4px 12px rgba(217, 70, 239, 0.05);
+}
+.theme-science-delusion .round-header {
+  background: #2e1034 !important;
+  border-left: 5px solid #d946ef;
+}
+
+/* 18. Impersonation (Security Silver) */
+body.theme-science-impersonation {
+  background: linear-gradient(to bottom, #0d1117, #161b22) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-impersonation .science-journal-box {
+  background: rgba(0, 210, 255, 0.03);
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  border-left: 5px solid #00d2ff;
+}
+.theme-science-impersonation .vocab-card {
+  border: 1px solid rgba(0, 210, 255, 0.15);
+  background: rgba(22, 27, 34, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 210, 255, 0.05);
+}
+.theme-science-impersonation .round-header {
+  background: #1f2731 !important;
+  border-left: 5px solid #00d2ff;
+}
+
+/* 19. Fusion (Controlled Thermonuclear Fusion) */
+body.theme-science-fusion {
+  background: linear-gradient(to bottom, #1c052e, #0c1c3a) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-fusion .science-journal-box {
+  background: rgba(234, 179, 8, 0.05);
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  border-left: 5px solid #eab308;
+}
+.theme-science-fusion .vocab-card {
+  border: 1px solid rgba(234, 179, 8, 0.15);
+  background: rgba(12, 28, 58, 0.5);
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.05);
+}
+.theme-science-fusion .round-header {
+  background: #162c50 !important;
+  border-left: 5px solid #eab308;
+}
+
+/* 20. Losing (Language Attrition) */
+body.theme-science-losing {
+  background: linear-gradient(to bottom, #1c1d22, #282a36) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-losing .science-journal-box {
+  background: rgba(255, 121, 198, 0.05);
+  border: 1px solid rgba(255, 121, 198, 0.25);
+  border-left: 5px solid #ff79c6;
+}
+.theme-science-losing .vocab-card {
+  border: 1px solid rgba(255, 121, 198, 0.15);
+  background: rgba(40, 42, 54, 0.5);
+  box-shadow: 0 4px 12px rgba(255, 121, 198, 0.05);
+}
+.theme-science-losing .round-header {
+  background: #373a4a !important;
+  border-left: 5px solid #ff79c6;
+}
+
+/* 21. Social (Decision Making Amygdala) */
+body.theme-science-social {
+  background: linear-gradient(to bottom, #0c1e22, #2c0c16) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-social .science-journal-box {
+  background: rgba(244, 63, 94, 0.05);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  border-left: 5px solid #f43f5e;
+}
+.theme-science-social .vocab-card {
+  border: 1px solid rgba(244, 63, 94, 0.15);
+  background: rgba(44, 12, 22, 0.5);
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.05);
+}
+.theme-science-social .round-header {
+  background: #471924 !important;
+  border-left: 5px solid #f43f5e;
+}
+
+/* 22. Mendelian (Meiotic Drive genetics) */
+body.theme-science-mendelian {
+  background: linear-gradient(to bottom, #0a1c12, #1e1a05) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-mendelian .science-journal-box {
+  background: rgba(132, 204, 22, 0.05);
+  border: 1px solid rgba(132, 204, 22, 0.25);
+  border-left: 5px solid #84cc16;
+}
+.theme-science-mendelian .vocab-card {
+  border: 1px solid rgba(132, 204, 22, 0.15);
+  background: rgba(30, 26, 5, 0.5);
+  box-shadow: 0 4px 12px rgba(132, 204, 22, 0.05);
+}
+.theme-science-mendelian .round-header {
+  background: #352e11 !important;
+  border-left: 5px solid #84cc16;
+}
+
+/* 23. Vliyanie (Soviet Crimson CRT) */
+body.theme-science-vliyanie {
+  background: linear-gradient(to bottom, #1a1a1a, #2b1111) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-vliyanie .science-journal-box {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-left: 5px solid #ef4444;
+}
+.theme-science-vliyanie .vocab-card {
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  background: rgba(43, 17, 17, 0.5);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.05);
+}
+.theme-science-vliyanie .round-header {
+  background: #421c1c !important;
+  border-left: 5px solid #ef4444;
+}
+
+/* 24. Laughter (Ape Vocal Homologies) */
+body.theme-science-laughter {
+  background: linear-gradient(to bottom, #112011, #2c1e11) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-laughter .science-journal-box {
+  background: rgba(217, 119, 6, 0.05);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  border-left: 5px solid #d97706;
+}
+.theme-science-laughter .vocab-card {
+  border: 1px solid rgba(217, 119, 6, 0.15);
+  background: rgba(44, 30, 17, 0.5);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.05);
+}
+.theme-science-laughter .round-header {
+  background: #443221 !important;
+  border-left: 5px solid #d97706;
+}
+
+/* 25. Obesity (Metabolic Theory) */
+body.theme-science-obesity {
+  background: linear-gradient(to bottom, #1f110c, #3d1c14) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-obesity .science-journal-box {
+  background: rgba(194, 89, 63, 0.05);
+  border: 1px solid rgba(194, 89, 63, 0.25);
+  border-left: 5px solid #c2593f;
+}
+.theme-science-obesity .vocab-card {
+  border: 1px solid rgba(194, 89, 63, 0.15);
+  background: rgba(61, 28, 20, 0.5);
+  box-shadow: 0 4px 12px rgba(194, 89, 63, 0.05);
+}
+.theme-science-obesity .round-header {
+  background: #472118 !important;
+  border-left: 5px solid #c2593f;
+}
+
+/* 26. Gut (Gastric Neurological Pathways) */
+body.theme-science-gut {
+  background: linear-gradient(to bottom, #130a1c, #261138) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-gut .science-journal-box {
+  background: rgba(157, 86, 194, 0.05);
+  border: 1px solid rgba(157, 86, 194, 0.25);
+  border-left: 5px solid #9d56c2;
+}
+.theme-science-gut .vocab-card {
+  border: 1px solid rgba(157, 86, 194, 0.15);
+  background: rgba(38, 17, 56, 0.5);
+  box-shadow: 0 4px 12px rgba(157, 86, 194, 0.05);
+}
+.theme-science-gut .round-header {
+  background: #311847 !important;
+  border-left: 5px solid #9d56c2;
+}
+
+/* 27. Backrooms (Liminal Environmental Psychology) */
+body.theme-science-backrooms {
+  background: linear-gradient(to bottom, #1c1a0e, #2d2917) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-backrooms .science-journal-box {
+  background: rgba(196, 171, 86, 0.05);
+  border: 1px solid rgba(196, 171, 86, 0.25);
+  border-left: 5px solid #c4ab56;
+}
+.theme-science-backrooms .vocab-card {
+  border: 1px solid rgba(196, 171, 86, 0.15);
+  background: rgba(45, 41, 23, 0.5);
+  box-shadow: 0 4px 12px rgba(196, 171, 86, 0.05);
+}
+.theme-science-backrooms .round-header {
+  background: #3b3519 !important;
+  border-left: 5px solid #c4ab56;
+}
+
+/* 28. Recycling (Socio-Ecological Policy) */
+body.theme-science-recycling {
+  background: linear-gradient(to bottom, #091c0e, #14331c) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-recycling .science-journal-box {
+  background: rgba(76, 161, 102, 0.05);
+  border: 1px solid rgba(76, 161, 102, 0.25);
+  border-left: 5px solid #4ca166;
+}
+.theme-science-recycling .vocab-card {
+  border: 1px solid rgba(76, 161, 102, 0.15);
+  background: rgba(20, 51, 28, 0.5);
+  box-shadow: 0 4px 12px rgba(76, 161, 102, 0.05);
+}
+.theme-science-recycling .round-header {
+  background: #1b3d24 !important;
+  border-left: 5px solid #4ca166;
+}
+
+/* 29. TV (Midlife Brain Health) */
+body.theme-science-tv {
+  background: linear-gradient(to bottom, #0a0e1c, #161c38) !important;
+  color: #e2e8f0 !important;
+}
+.theme-science-tv .science-journal-box {
+  background: rgba(94, 127, 194, 0.05);
+  border: 1px solid rgba(94, 127, 194, 0.25);
+  border-left: 5px solid #5e7fc2;
+}
+.theme-science-tv .vocab-card {
+  border: 1px solid rgba(94, 127, 194, 0.15);
+  background: rgba(22, 28, 56, 0.5);
+  box-shadow: 0 4px 12px rgba(94, 127, 194, 0.05);
+}
+.theme-science-tv .round-header {
+  background: #1c2447 !important;
+  border-left: 5px solid #5e7fc2;
+}
+
+
+
+/* ── Club-Specific Thematic Watermarks (Priority 4) ── */
+body.theme-science-aibrain, body.theme-science-impersonation {
+  background-image: radial-gradient(rgba(15, 110, 86, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+body[class*="theme-science"]::after {
+  content: "🔬";
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 6rem;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ─── Science Club Thematic Watermarks ─── */
+body.theme-science-fingers::after { content: "🖐️"; }
+body.theme-science-spider::after { content: "🕷️"; }
+body.theme-science-sensory::after { content: "⚡"; }
+body.theme-science-climate::after { content: "🌡️"; }
+body.theme-science-ozempic::after { content: "💊"; }
+body.theme-science-animal::after { content: "🦜"; }
+body.theme-science-hidden::after { content: "🧬"; }
+body.theme-science-brain90::after { content: "🧠"; }
+body.theme-science-football::after { content: "⚽"; }
+body.theme-science-aibrain::after { content: "🤖"; }
+body.theme-science-museums::after { content: "🏛️"; }
+body.theme-science-dementia::after { content: "🏘️"; }
+body.theme-science-grandmother::after { content: "👵"; }
+body.theme-science-creative::after { content: "💡"; }
+body.theme-science-grandparents::after { content: "👴"; }
+body.theme-science-handedness::after { content: "✍️"; }
+body.theme-science-delusion::after { content: "🔮"; }
+body.theme-science-impersonation::after { content: "👤"; }
+body.theme-science-fusion::after { content: "⚛️"; }
+body.theme-science-losing::after { content: "🗣️"; }
+body.theme-science-social::after { content: "👥"; }
+body.theme-science-mendelian::after { content: "🧬"; }
+body.theme-science-vliyanie::after { content: "📢"; }
+body.theme-science-laughter::after { content: "🐒"; }
+body.theme-science-obesity::after { content: "🍽️"; }
+body.theme-science-gut::after { content: "🦠"; }
+body.theme-science-backrooms::after { content: "🚪"; }
+body.theme-science-recycling::after { content: "♻️"; }
+body.theme-science-tv::after { content: "📺"; }
+
+/* ─── KEEPING UP WITH SCIENCE (PHASE 3) REDESIGN ─── */
+body[class*="theme-science"] {
+  /* High contrast, eye-friendly light/cream text variable values because body has custom dark background */
+  --ink: #fdfcf8 !important;
+  --ink-soft: #e2e8f0 !important;
+  --ink-muted: #cbd5e1 !important;
+  --ink-faint: #94a3b8 !important;
+  --muted: #cbd5e1 !important;
+  --text-color: #fdfcf8 !important;
+
+  /* Cozy, semi-transparent container variable values to allow custom gradients to show through beautifully without eye strain */
+  --warm-white: rgba(255, 255, 255, 0.08) !important;
+  --border: rgba(255, 255, 255, 0.15) !important;
+  --cream: rgba(255, 255, 255, 0.05) !important;
+  --cream-dark: rgba(0, 0, 0, 0.25) !important;
+  --surface-color: rgba(255, 255, 255, 0.05) !important;
+  --background-color: transparent !important;
+
+  /* Buttons and back links contrast */
+  --btn-secondary-color: #e2e8f0 !important;
+  --btn-secondary-hover-bg: rgba(255, 255, 255, 0.1) !important;
+  --btn-secondary-hover-color: #ffffff !important;
+  --btn-tertiary-color: #cbd5e1 !important;
+
+  /* Mistake Block Cozy Variables */
+  --mistake-bg: #241515 !important;
+  --mistake-header-bg: #331a1a !important;
+  --mistake-header-text: #fecaca !important;
+  --mistake-wrong-color: #fca5a5 !important;
+  --mistake-right-color: #86efac !important;
+}
+
+body[class*="theme-science"] .science-source-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: var(--border) !important;
+}
+
+body[class*="theme-science"] .science-source-card .source-links-wrapper a {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--border) !important;
+  color: #a2e8dd !important;
+}
+
+body[class*="theme-science"] .science-source-card .source-links-wrapper a:hover {
+  background: #0f6e56 !important;
+  color: white !important;
+  border-color: #0f6e56 !important;
+}
+
+body[class*="theme-science"] .science-digest-summary {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body[class*="theme-science"] .science-digest-summary .digest-header {
+  color: #cbd5e1 !important;
+}
+
+.science-session-info-box {
+  background: var(--cream, #FAF7F2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md, 14px);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  box-sizing: border-box;
+}
+.science-session-info-box .info-box-header {
+  background: linear-gradient(135deg, #0F6E56, #073b2d);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif;
+}
+.science-session-info-box .info-box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  padding: 1.5rem;
+}
+.science-session-info-box .info-field h5 {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.science-session-info-box .info-field p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.science-source-card {
+  background: #fbfbfc;
+  border: 1px solid var(--border);
+  border-left: 5px solid #0F6E56;
+  border-radius: var(--r-sm, 8px);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+.science-source-card .source-card-header {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #0F6E56;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.science-source-card .source-links-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: #0F6E56;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: all 0.2s;
+}
+.science-source-card .source-links-wrapper a:hover {
+  background: #0F6E56;
+  color: white !important;
+  border-color: #0F6E56;
+  transform: translateY(-1px);
+}
+
+.science-digest-summary {
+  background: rgba(15, 110, 86, 0.02);
+  border: 1px dashed rgba(15, 110, 86, 0.2);
+  border-radius: var(--r-md, 14px);
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.science-digest-summary .digest-header {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}

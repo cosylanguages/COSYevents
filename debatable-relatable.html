@@ -1,0 +1,503 @@
+<!-- DEVELOPER ALERT: Refer to templates/events/debate-session-template.html (or corresponding active templates in events/sessions/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Debatable &amp; Relatable 🔥 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<link rel="stylesheet" href="shared/css/clubs/debatable-relatable.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #993C1D, #4d1e0f); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+</style>
+<style>
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    background: var(--border);
+  }
+  .filter-btn.active {
+    background: #993C1D;
+    color: white;
+    border-color: #993C1D;
+  }
+</style> </head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<img alt="Debate logo" src="../../../../images/debatabeandrelatable.png" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
+<h1>Debatable &amp; Relatable</h1>
+<p>Hot takes and genuine dilemmas. Each session presents a statement you'll passionately agree with : or fiercely disagree with. Either way, you'll speak.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="../../../../events/speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<!-- STUDENT/TEACHER/ADMIN CONTENT -->
+<div>
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Upcoming Sessions</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Article</td><td>AI and Art : Can machines be truly creative?</td></tr>
+<tr><td>Description</td><td>Discussing the impact of generative AI on human creativity.</td></tr>
+<tr><td>Schedule</td><td>Planned : TBC</td></tr>
+<tr><td>Duration</td><td>60 min</td></tr>
+<tr><td>Languages</td><td>🇬🇧 🇫🇷</td></tr>
+</table></div>
+<div style="display:flex;gap:10px;align-items:center;">
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20Debatable%20and%20Relatable.">💬 Register interest</a>
+<a class="btn-play-game" href="../../../../games/index.html?game=opinion" style="margin-top:4px;">Play Game 🎮</a>
+</div>
+<!-- HISTORY -->
+<div class="history-block" id="dr-hist" style="margin-top: 2rem;">
+<div class="section-header" style="margin-bottom: 1rem;">
+<h2 style="font-size: 1.5rem;">🕒 Past Sessions</h2>
+</div><div class="club-filters-lang" style="justify-content: flex-start; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-lang="all">All Languages</button>
+<button class="filter-btn" data-lang="en">🇬🇧 English</button>
+</div>
+<div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-level="all">All Levels</button>
+<button class="filter-btn" data-level="a2">A2</button>
+<button class="filter-btn" data-level="b1">B1</button>
+<button class="filter-btn" data-level="b2">B2</button>
+<button class="filter-btn" data-level="c1">C1</button>
+</div>
+<div class="debate-history-grid" style="margin-top: 2rem;">
+<div class="history-session debate-placard-card" data-level="a2" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#FEE2E2; color:#991B1B; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">A2</span></div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Chatting with an AI vs Chatting with a Human (A2)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Comparing simple daily practice with AI chatbots versus conversation with real friends.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/chatting-with-ai-vs-human-elementary.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<div class="history-session debate-placard-card" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span></div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Chatting with an AI vs Chatting with a Human (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Discussing AI as a psychologist, penpal, friend, or teacher versus human connection.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/chatting-with-ai-vs-human-intermediate.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<div class="history-session debate-placard-card" data-level="b2" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B2</span></div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Chatting with an AI vs Chatting with a Human (B2)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Debating synthetic intimacy, social atrophy, and ethical boundary lines in digital relationships.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/chatting-with-ai-vs-human-intermediate.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<!-- 📌 PINNED DEBATE PLACARDS -->
+<div class="pinned-challenges-section" style="margin-bottom: 3.5rem; background: rgba(153, 60, 29, 0.03); border: 2px dashed #993C1D; border-radius: 28px; padding: 2rem;">
+<h3 style="margin-top: 0; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-size: 1.5rem; display: flex; align-items: center; gap: 0.75rem; color: #993C1D;">
+<span>📌</span> Pinned Debate Placards (60 min)
+  </h3>
+<div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+<!-- Batch 1 -->
+<div class="history-session" data-lang="en" data-level="a2 b1 b2 c1" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#FAEEE8; color:#C0392B; border-color:#F5CBA7; border:1px solid #F5CBA7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">A2</span>
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+<span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🏫 The Future of Education &amp; Pedagogy</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Evaluate the rise of digital classroom integrations, structured out-of-school homework, and keyboarding vs manual ink writing.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #993C1D;">
+          Debates:
+          <a href="sessions/debatable-relatable/the-future-proof-educator.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">Future Educator (C1)</a> •
+          <a href="sessions/debatable-relatable/homework-ban.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">Homework Ban (B1)</a> •
+          <a href="sessions/debatable-relatable/pedagogy-and-practice.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">Pedagogy &amp; Practice (C1)</a> •
+          <a href="sessions/debatable-relatable/typing-vs-handwriting-elementary.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">Typing/Writing (A2)</a> •
+          <a href="sessions/debatable-relatable/typing-vs-handwriting-intermediate.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">Typing/Writing (B1)</a> •
+          <a href="sessions/debatable-relatable/typing-vs-handwriting-upper-intermediate.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">Typing/Writing (B2)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/debatable-relatable/the-future-proof-educator.html" style="background:#993C1D; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+<!-- Batch 2 -->
+<div class="history-session" data-lang="en" data-level="b1 b2 c1" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+<span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🔬 Ethical Dilemmas &amp; Creative Tech</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Debate the biological ethics of life ending, human replication, and the threat of generative neural networks on human arts.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #993C1D;">
+          Debates:
+          <a href="sessions/debatable-relatable/assisted-dying.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">Assisted Dying (C1)</a> •
+          <a href="sessions/debatable-relatable/human-cloning-intermediate.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">Human Cloning (B1)</a> •
+          <a href="sessions/debatable-relatable/human-cloning-upper-intermediate.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">Human Cloning (B2)</a> •
+          <a href="sessions/debatable-relatable/ai-and-art.html" style="color:#993C1D; text-decoration:underline; font-weight:600;">AI &amp; Art (C1)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/debatable-relatable/assisted-dying.html" style="background:#993C1D; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+</div>
+</div>
+<!-- Music vs Songs (Elementary A2) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="a2" href="sessions/debatable-relatable/music-vs-songs-elementary.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#FAEEE8; color:#C0392B; border-color:#F5CBA7; border:1px solid #F5CBA7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">A2</span>
+</div>
+<h4 class="debate-card-title">Music vs Songs (A2)</h4>
+<span class="debate-card-date">10 March 2027</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- Music vs Songs (Intermediate B1) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="b1" href="sessions/debatable-relatable/music-vs-songs-intermediate.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<h4 class="debate-card-title">Music vs Songs (B1)</h4>
+<span class="debate-card-date">10 March 2027</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- Money vs Free Time (Elementary A2) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="a2" href="sessions/debatable-relatable/money-vs-free-time-elementary.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#FAEEE8; color:#C0392B; border-color:#F5CBA7; border:1px solid #F5CBA7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">A2</span>
+</div>
+<h4 class="debate-card-title">Money vs Free Time (A2)</h4>
+<span class="debate-card-date">10 March 2027</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- Money vs Free Time (Intermediate B1) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="b1" href="sessions/debatable-relatable/money-vs-free-time-intermediate.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<h4 class="debate-card-title">Money vs Free Time (B1)</h4>
+<span class="debate-card-date">10 March 2027</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- 1. Short Holiday vs Long Holiday (Elementary A2) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="a2" href="sessions/debatable-relatable/short-holiday-vs-long-holiday-elementary.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#FAEEE8; color:#C0392B; border-color:#F5CBA7; border:1px solid #F5CBA7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">A2</span>
+</div>
+<h4 class="debate-card-title">Short Holiday vs Long Holiday</h4>
+<span class="debate-card-date">18 July 2026</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- 2. Short Holiday vs Long Holiday (Intermediate B1) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="b1" href="sessions/debatable-relatable/short-holiday-vs-long-holiday-intermediate.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<h4 class="debate-card-title">Short Holiday vs Long Holiday</h4>
+<span class="debate-card-date">18 July 2026</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- 3. Short Holiday vs Long Holiday (Upper-Intermediate B2) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="b2" href="sessions/debatable-relatable/short-holiday-vs-long-holiday-upper-intermediate.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+</div>
+<h4 class="debate-card-title">Short Holiday vs Long Holiday</h4>
+<span class="debate-card-date">18 July 2026</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- 4. Typing vs Handwriting (Elementary A2) -->
+<!-- 5. Typing vs Handwriting (Intermediate B1) -->
+<!-- 6. Typing vs Handwriting (Upper-Intermediate B2) -->
+<!-- 7. Human Cloning (Intermediate B1) -->
+<!-- 8. Human Cloning (Upper-Intermediate B2) -->
+<!-- 9. Assisted Dying: Yes or No (Advanced C1) -->
+<!-- 10. Old Upbringing vs Modern Upbringing (Intermediate B1) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="b1" href="sessions/debatable-relatable/upbringing-old-vs-modern.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<h4 class="debate-card-title">Old Upbringing vs Modern Upbringing</h4>
+<span class="debate-card-date">15 June 2026</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- 11. The 4-Day Work Week (Intermediate B1) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="b1" href="sessions/debatable-relatable/4-day-work-week.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<h4 class="debate-card-title">The 4-Day Work Week</h4>
+<span class="debate-card-date">20 August 2025</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- 12. The Future-Proof Educator (Advanced C1) -->
+<!-- 13. Homework should be banned (Intermediate B1) -->
+<!-- 14. Pedagogy & Practice (Advanced C1) -->
+<!-- 15. Paid Subscriptions (Intermediate B1) -->
+<a class="history-session debate-placard-card" data-lang="en" data-level="b1" href="sessions/debatable-relatable/meta-subscriptions.html">
+<span class="debate-vs-badge">🔥 VS</span>
+<div class="debate-card-body">
+<div class="club-tag-container" style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<h4 class="debate-card-title">Paid Subscriptions</h4>
+<span class="debate-card-date">05 July 2025</span>
+<div class="debate-card-footer">
+<span class="view-link">View Full Session →</span>
+</div>
+</div>
+</a>
+<!-- 16. AI and Art (Advanced C1) -->
+<!-- Living with Family vs Living Alone (A2) -->
+<div class="history-session debate-placard-card" data-lang="en" data-level="a2" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#FEE2E2; color:#991B1B; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">A2</span>
+</div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Living with Family vs Living Alone (A2)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Discussing rent, household chores, cooking, quiet space, and independence in elementary English.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/living-with-family-vs-living-alone-elementary.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<!-- Living with Family vs Living Alone (B1) -->
+<div class="history-session debate-placard-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Living with Family vs Living Alone (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Debating autonomy, financial burden, privacy boundaries, solitude, and support networks.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/living-with-family-vs-living-alone-intermediate.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<!-- Retirement: Is It Worth It? (A2) -->
+<div class="history-session debate-placard-card" data-lang="en" data-level="a2" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#FEE2E2; color:#991B1B; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">A2</span>
+</div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Retirement: Is It Worth It? (A2)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Talking about post-work freedom, pensions, daily routines, saving money, and remaining active.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/retirement-is-it-worth-it-elementary.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<!-- Retirement: Is It Worth It? (B1) -->
+<div class="history-session debate-placard-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Retirement: Is It Worth It? (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Evaluating economic security, inflation, pension plans, identity, and life purpose past sixty.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/retirement-is-it-worth-it-intermediate.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<div class="history-session debate-placard-card" data-lang="en" data-level="a2" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#FEE2E2; color:#991B1B; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">A2</span>
+</div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Living with Family vs Living Alone (A2)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Discussing rent, household chores, cooking, quiet space, and independence in elementary English.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/living-with-family-vs-living-alone-elementary.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<div class="history-session debate-placard-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Living with Family vs Living Alone (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Debating autonomy, financial burden, privacy boundaries, solitude, and support networks.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/living-with-family-vs-living-alone-intermediate.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<div class="history-session debate-placard-card" data-lang="en" data-level="a2" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#FEE2E2; color:#991B1B; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">A2</span>
+</div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Retirement: Is It Worth It? (A2)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Talking about post-work freedom, pensions, daily routines, saving money, and remaining active.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/retirement-is-it-worth-it-elementary.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+<div class="history-session debate-placard-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="debate-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="debate-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">Retirement: Is It Worth It? (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Evaluating economic security, inflation, pension plans, identity, and life purpose past sixty.</p>
+</div>
+<div class="debate-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="debate-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/debatable-relatable/retirement-is-it-worth-it-intermediate.html" style="background:#993C1D; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">View Placard ➔</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /logged-in content -->
+<!-- /club-main -->
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem;">Critical Thinking</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Defending an opinion requires precise vocabulary and logical structuring, which are hallmarks of high-level fluency.</p>
+</div>
+</div>
+<!-- /grid -->
+</section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const sessions = document.querySelectorAll('.history-session');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedLevel = btn.getAttribute('data-level');
+
+      sessions.forEach(sess => {
+        const levels = (sess.getAttribute('data-level') || '').split(' ');
+        if (selectedLevel === 'all' || levels.includes(selectedLevel)) {
+          sess.style.display = 'flex';
+        } else {
+          sess.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script><script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>

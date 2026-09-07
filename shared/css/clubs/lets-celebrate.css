@@ -1,0 +1,552 @@
+
+/* ─── Premium Let's Celebrate Hanging Gift Tag & Greeting Card Grid ─── */
+.celebrate-history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.celebrate-card {
+  background: var(--surface-color, #FFFDF9);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: visible; /* To allow the string & eyelet to protrude at the top */
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem 1.25rem 1.25rem;
+  margin-top: 1.2rem; /* Space for the hanging loop */
+  box-sizing: border-box;
+}
+
+/* Elegant gold foil-pressed dashed inner border */
+.celebrate-card::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  border: 1px dashed rgba(186, 117, 23, 0.35);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* The Hanging Punch Hole (Eyelet) */
+.celebrate-eyelet {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #E6C687;
+  border: 2px solid #BA7517;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  z-index: 11;
+  pointer-events: none;
+}
+
+/* The Hanging Loop Thread (Cord) */
+.celebrate-loop {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  width: 16px;
+  height: 20px;
+  border: 1.5px solid #BA7517;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  transform: translateX(-50%);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.celebrate-card:hover {
+  border-color: #BA7517;
+  box-shadow: 0 12px 28px rgba(186, 117, 23, 0.16);
+  animation: celebrateSway 2s ease-in-out infinite alternate;
+}
+
+@keyframes celebrateSway {
+  0% {
+    transform: translateY(-6px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateY(-6px) rotate(0.5deg);
+  }
+}
+
+.celebrate-card-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  z-index: 2;
+}
+
+.celebrate-card-banner .club-tag {
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* Badge colors for levels */
+.celebrate-card-banner .tag-a1 {
+  background: #FFF5F5;
+  color: #E53E3E;
+  border-color: #FED7D7;
+}
+.celebrate-card-banner .tag-a2 {
+  background: #FAEEE8;
+  color: #C0392B;
+  border-color: #F5CBA7;
+}
+.celebrate-card-banner .tag-b1 {
+  background: #E1F5EE;
+  color: #1A7A4A;
+  border-color: #A3E4D7;
+}
+.celebrate-card-banner .tag-b2 {
+  background: #EBF8FF;
+  color: #2B6CB0;
+  border-color: #BEE3F8;
+}
+.celebrate-card-banner .tag-c1 {
+  background: #EEEDFE;
+  color: #534AB7;
+  border-color: #D2CFFE;
+}
+.celebrate-card-banner .tag-c2 {
+  background: #EBF8FF;
+  color: #2B6CB0;
+  border-color: #BEE3F8;
+}
+
+.celebrate-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  z-index: 2;
+}
+
+.celebrate-card-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-color, var(--ink));
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.celebrate-card-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 1.2rem 0;
+  flex-grow: 1;
+}
+
+.celebrate-card-footer {
+  margin-top: auto;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.celebrate-card-view {
+  color: #BA7517;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.celebrate-card-view:hover {
+  color: #5c390b;
+  transform: translateX(2px);
+}
+
+/* ─── Premium Let's Celebrate Theme Snapshot Box ─── */
+.celebrate-theme-box {
+  background: var(--surface-color, #FFFDF9);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  box-sizing: border-box;
+}
+
+/* Gold foil-pressed dashed inner border matching parent page */
+.celebrate-theme-box::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  border: 1px dashed rgba(186, 117, 23, 0.35);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.celebrate-theme-box h3 {
+  font-family: 'Playfair Display', serif;
+  color: #BA7517;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  z-index: 2;
+  position: relative;
+}
+
+.celebrate-theme-box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  z-index: 2;
+  position: relative;
+}
+
+.celebrate-theme-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.celebrate-theme-item strong {
+  color: var(--text-color, var(--ink));
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.celebrate-theme-item span {
+  color: var(--muted);
+}
+
+/* ─── LET'S CELEBRATE: VISUAL THEME OVERLAYS ─── */
+
+/* Default resets and common rules */
+body[class*="theme-celebrate-"] {
+  background-color: var(--celebrate-theme-bg, #FFFDF9) !important;
+  color: var(--celebrate-theme-text, #3E2723) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Base custom background watermarks */
+body[class*="theme-celebrate-"]::after {
+  content: var(--celebrate-theme-watermark, "🎉") !important;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 8rem;
+  opacity: 0.04 !important;
+  pointer-events: none;
+  z-index: -1;
+  transition: content 0.3s ease;
+}
+html[data-theme="dark"] body[class*="theme-celebrate-"]::after {
+  opacity: 0.02 !important;
+}
+
+/* Ensure readable breadcrumbs & back link for all Celebrate themes */
+body[class*="theme-celebrate-"] .back-link,
+body[class*="theme-celebrate-"] .cosy-breadcrumbs a {
+  color: var(--celebrate-theme-accent) !important;
+}
+
+/* Main Box overrides to ensure high contrast and beautiful cozy aesthetics */
+body[class*="theme-celebrate-"] .vocab-card,
+body[class*="theme-celebrate-"] .round-block,
+body[class*="theme-celebrate-"] .celebrate-theme-box {
+  background-color: var(--celebrate-theme-card-bg) !important;
+  border-color: var(--celebrate-theme-border) !important;
+  color: var(--celebrate-theme-text) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04) !important;
+}
+
+body[class*="theme-celebrate-"] .vocab-word {
+  color: var(--celebrate-theme-accent) !important;
+  font-weight: 700;
+}
+
+body[class*="theme-celebrate-"] .round-header {
+  border-bottom: 1px solid var(--celebrate-theme-border) !important;
+  color: var(--celebrate-theme-text) !important;
+}
+
+body[class*="theme-celebrate-"] .btn-primary {
+  background-color: var(--celebrate-theme-accent) !important;
+  border-color: var(--celebrate-theme-accent) !important;
+  color: #FFFFFF !important;
+}
+
+body[class*="theme-celebrate-"] .celebrate-theme-box h3 {
+  color: var(--celebrate-theme-accent) !important;
+}
+
+body[class*="theme-celebrate-"] .celebrate-theme-box::before {
+  border-color: var(--celebrate-theme-accent) !important;
+  opacity: 0.25;
+}
+
+body[class*="theme-celebrate-"] .celebrate-theme-item strong {
+  color: var(--celebrate-theme-text) !important;
+}
+
+body[class*="theme-celebrate-"] .round-block.grammar {
+  border-left: 5px solid var(--celebrate-theme-accent) !important;
+}
+
+body[class*="theme-celebrate-"] .session-hero {
+  background: var(--celebrate-theme-hero) !important;
+}
+
+/* Theme variable values for Light Mode */
+body.theme-celebrate-lunar {
+  --celebrate-theme-bg: #FFF5F5;
+  --celebrate-theme-text: #4A1515;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #BA2525;
+  --celebrate-theme-border: #F8D7D7;
+  --celebrate-theme-watermark: "🏮";
+  --celebrate-theme-hero: linear-gradient(135deg, #BA2525, #4A1515);
+}
+body.theme-celebrate-diwali {
+  --celebrate-theme-bg: #FFFDF0;
+  --celebrate-theme-text: #4A3515;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #C27D13;
+  --celebrate-theme-border: #F8E8D0;
+  --celebrate-theme-watermark: "🪔";
+  --celebrate-theme-hero: linear-gradient(135deg, #C27D13, #4A3515);
+}
+body.theme-celebrate-simplicity {
+  --celebrate-theme-bg: #F4F7F5;
+  --celebrate-theme-text: #1E2D24;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #4A6B56;
+  --celebrate-theme-border: #E1EADF;
+  --celebrate-theme-watermark: "🍃";
+  --celebrate-theme-hero: linear-gradient(135deg, #4A6B56, #1E2D24);
+}
+body.theme-celebrate-workaholics {
+  --celebrate-theme-bg: #FAF6F2;
+  --celebrate-theme-text: #3B2F2F;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #8C6239;
+  --celebrate-theme-border: #E8DFD8;
+  --celebrate-theme-watermark: "⏳";
+  --celebrate-theme-hero: linear-gradient(135deg, #8C6239, #3B2F2F);
+}
+body.theme-celebrate-remittances {
+  --celebrate-theme-bg: #FFFDF6;
+  --celebrate-theme-text: #2C3539;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #4A777A;
+  --celebrate-theme-border: #E2EBEC;
+  --celebrate-theme-watermark: "✉️";
+  --celebrate-theme-hero: linear-gradient(135deg, #4A777A, #2C3539);
+}
+body.theme-celebrate-beekeeping {
+  --celebrate-theme-bg: #FFFBF2;
+  --celebrate-theme-text: #423212;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #D4AF37;
+  --celebrate-theme-border: #FAF0CC;
+  --celebrate-theme-watermark: "🐝";
+  --celebrate-theme-hero: linear-gradient(135deg, #D4AF37, #423212);
+}
+body.theme-celebrate-someone {
+  --celebrate-theme-bg: #FFF5F7;
+  --celebrate-theme-text: #4A1A25;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #C2465D;
+  --celebrate-theme-border: #FAD6DD;
+  --celebrate-theme-watermark: "🌹";
+  --celebrate-theme-hero: linear-gradient(135deg, #C2465D, #4A1A25);
+}
+body.theme-celebrate-pandemonium {
+  --celebrate-theme-bg: #FAF5FA;
+  --celebrate-theme-text: #3D1B3D;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #8E44AD;
+  --celebrate-theme-border: #ECDFF0;
+  --celebrate-theme-watermark: "🎈";
+  --celebrate-theme-hero: linear-gradient(135deg, #8E44AD, #3D1B3D);
+}
+body.theme-celebrate-peace {
+  --celebrate-theme-bg: #F8F6FC;
+  --celebrate-theme-text: #2E224A;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #5C4A9E;
+  --celebrate-theme-border: #E5E0FA;
+  --celebrate-theme-watermark: "✌️";
+  --celebrate-theme-hero: linear-gradient(135deg, #5C4A9E, #2E224A);
+}
+body.theme-celebrate-asteroid {
+  --celebrate-theme-bg: #F1F4FA;
+  --celebrate-theme-text: #1B2A4A;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #3A6073;
+  --celebrate-theme-border: #DCE4F2;
+  --celebrate-theme-watermark: "☄️";
+  --celebrate-theme-hero: linear-gradient(135deg, #3A6073, #1B2A4A);
+}
+body.theme-celebrate-womens {
+  --celebrate-theme-bg: #FFF5F2;
+  --celebrate-theme-text: #4D231A;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #D05C48;
+  --celebrate-theme-border: #FADFD9;
+  --celebrate-theme-watermark: "🌹";
+  --celebrate-theme-hero: linear-gradient(135deg, #D05C48, #4D231A);
+}
+body.theme-celebrate-family {
+  --celebrate-theme-bg: #FAF6F0;
+  --celebrate-theme-text: #3B281B;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #8E5E3D;
+  --celebrate-theme-border: #EADCD2;
+  --celebrate-theme-watermark: "🍪";
+  --celebrate-theme-hero: linear-gradient(135deg, #8E5E3D, #3B281B);
+}
+body.theme-celebrate-nature {
+  --celebrate-theme-bg: #F2F6F3;
+  --celebrate-theme-text: #1D3325;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #3E7D58;
+  --celebrate-theme-border: #DCECE2;
+  --celebrate-theme-watermark: "🌲";
+  --celebrate-theme-hero: linear-gradient(135deg, #3E7D58, #1D3325);
+}
+
+/* Theme variables overrides for Dark Mode */
+html[data-theme="dark"] body.theme-celebrate-lunar {
+  --celebrate-theme-bg: #1F1111;
+  --celebrate-theme-text: #FCE8E8;
+  --celebrate-theme-card-bg: #2D1818;
+  --celebrate-theme-accent: #FF6B6B;
+  --celebrate-theme-border: #4A2323;
+  --celebrate-theme-hero: linear-gradient(135deg, #8A1515, #1F1111);
+}
+html[data-theme="dark"] body.theme-celebrate-diwali {
+  --celebrate-theme-bg: #1C160E;
+  --celebrate-theme-text: #FCEFD9;
+  --celebrate-theme-card-bg: #2A2015;
+  --celebrate-theme-accent: #F5B041;
+  --celebrate-theme-border: #443525;
+  --celebrate-theme-hero: linear-gradient(135deg, #8C520C, #1C160E);
+}
+html[data-theme="dark"] body.theme-celebrate-simplicity {
+  --celebrate-theme-bg: #121A15;
+  --celebrate-theme-text: #EAF2EB;
+  --celebrate-theme-card-bg: #1B261F;
+  --celebrate-theme-accent: #8FBC8F;
+  --celebrate-theme-border: #2D3E33;
+  --celebrate-theme-hero: linear-gradient(135deg, #33503E, #121A15);
+}
+html[data-theme="dark"] body.theme-celebrate-workaholics {
+  --celebrate-theme-bg: #1A1513;
+  --celebrate-theme-text: #EFEAE6;
+  --celebrate-theme-card-bg: #261E1A;
+  --celebrate-theme-accent: #C69C6D;
+  --celebrate-theme-border: #3D302A;
+  --celebrate-theme-hero: linear-gradient(135deg, #5C3D20, #1A1513);
+}
+html[data-theme="dark"] body.theme-celebrate-remittances {
+  --celebrate-theme-bg: #131819;
+  --celebrate-theme-text: #E8F0F1;
+  --celebrate-theme-card-bg: #1C2426;
+  --celebrate-theme-accent: #8AB8B9;
+  --celebrate-theme-border: #2D393C;
+  --celebrate-theme-hero: linear-gradient(135deg, #32585B, #131819);
+}
+html[data-theme="dark"] body.theme-celebrate-beekeeping {
+  --celebrate-theme-bg: #1F1A0F;
+  --celebrate-theme-text: #FFF4D1;
+  --celebrate-theme-card-bg: #2E2514;
+  --celebrate-theme-accent: #E5C158;
+  --celebrate-theme-border: #47391F;
+  --celebrate-theme-hero: linear-gradient(135deg, #9C7D1A, #1F1A0F);
+}
+html[data-theme="dark"] body.theme-celebrate-someone {
+  --celebrate-theme-bg: #241115;
+  --celebrate-theme-text: #FCEAEF;
+  --celebrate-theme-card-bg: #351A20;
+  --celebrate-theme-accent: #E57388;
+  --celebrate-theme-border: #4D252E;
+  --celebrate-theme-hero: linear-gradient(135deg, #8E2D3E, #241115);
+}
+html[data-theme="dark"] body.theme-celebrate-pandemonium {
+  --celebrate-theme-bg: #1D121D;
+  --celebrate-theme-text: #F6ECF6;
+  --celebrate-theme-card-bg: #2D1C2D;
+  --celebrate-theme-accent: #BB8FCE;
+  --celebrate-theme-border: #4A2E4A;
+  --celebrate-theme-hero: linear-gradient(135deg, #5E2777, #1D121D);
+}
+html[data-theme="dark"] body.theme-celebrate-peace {
+  --celebrate-theme-bg: #15121F;
+  --celebrate-theme-text: #EDEAFA;
+  --celebrate-theme-card-bg: #221C33;
+  --celebrate-theme-accent: #9B8EE3;
+  --celebrate-theme-border: #342A4D;
+  --celebrate-theme-hero: linear-gradient(135deg, #3E2F75, #15121F);
+}
+html[data-theme="dark"] body.theme-celebrate-asteroid {
+  --celebrate-theme-bg: #0F141F;
+  --celebrate-theme-text: #E2EAF5;
+  --celebrate-theme-card-bg: #172030;
+  --celebrate-theme-accent: #5D9CEC;
+  --celebrate-theme-border: #27354D;
+  --celebrate-theme-hero: linear-gradient(135deg, #243D50, #0F141F);
+}
+html[data-theme="dark"] body.theme-celebrate-womens {
+  --celebrate-theme-bg: #261310;
+  --celebrate-theme-text: #FCEBE8;
+  --celebrate-theme-card-bg: #361D19;
+  --celebrate-theme-accent: #E68A7A;
+  --celebrate-theme-border: #4F2B24;
+  --celebrate-theme-hero: linear-gradient(135deg, #963C2B, #261310);
+}
+html[data-theme="dark"] body.theme-celebrate-family {
+  --celebrate-theme-bg: #1A110B;
+  --celebrate-theme-text: #EFE6E0;
+  --celebrate-theme-card-bg: #261910;
+  --celebrate-theme-accent: #C6926A;
+  --celebrate-theme-border: #3E291B;
+  --celebrate-theme-hero: linear-gradient(135deg, #5E3A20, #1A110B);
+}
+html[data-theme="dark"] body.theme-celebrate-nature {
+  --celebrate-theme-bg: #111C15;
+  --celebrate-theme-text: #EBF5F0;
+  --celebrate-theme-card-bg: #18291F;
+  --celebrate-theme-accent: #62C288;
+  --celebrate-theme-border: #253D2F;
+  --celebrate-theme-hero: linear-gradient(135deg, #2A5A3E, #111C15);
+}

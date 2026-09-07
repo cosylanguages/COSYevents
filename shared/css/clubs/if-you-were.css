@@ -1,0 +1,76 @@
+
+/* "If You Were" speaking club layout components */
+.perspective-mirror-box {
+  background: #EEEDFE;
+  border: 2px dashed #4F46E5;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.perspective-mirror-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.pm-col {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.pm-col h5 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #4F46E5;
+}
+.pm-col p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ─── CLASS-BASED BACKGROUND GRADIENTS FOR SESSION HEROS ─── */
+body.theme-ifyouwere-blind .session-hero {
+  background: linear-gradient(135deg, #312E81, #1E1B4B) !important;
+  border-bottom: 2px solid #4F46E5;
+}
+
+body.theme-ifyouwere-deaf .session-hero {
+  background: linear-gradient(135deg, #0F766E, #134E4A) !important;
+  border-bottom: 2px solid #0D9488;
+}
+
+body.theme-ifyouwere-child-again .session-hero {
+  background: linear-gradient(135deg, #C2410C, #7C2D12) !important;
+  border-bottom: 2px solid #EA580C;
+}
+
+body.theme-ifyouwere-parent-to-yourself .session-hero {
+  background: linear-gradient(135deg, #047857, #064E3B) !important;
+  border-bottom: 2px solid #10B981;
+}
+
+body.theme-ifyouwere-teacher .session-hero {
+  background: linear-gradient(135deg, #831843, #500724) !important;
+  border-bottom: 2px solid #BE185D;
+}
+
+/* ─── THEME WATERMARKS ─── */
+body[class*="theme-ifyouwere-"]::after {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 5rem;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.theme-ifyouwere-blind::after { content: "🕶️"; }
+body.theme-ifyouwere-deaf::after { content: "🔇"; }
+body.theme-ifyouwere-child-again::after { content: "👶"; }
+body.theme-ifyouwere-parent-to-yourself::after { content: "🧬"; }
+body.theme-ifyouwere-teacher::after { content: "🏫"; }

@@ -1,0 +1,434 @@
+<!-- DEVELOPER ALERT: Refer to templates/events/life-session-template.html (or corresponding active templates in events/sessions/) before creating new sessions in the future! -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Life With &amp; Without ⚖️ : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<link rel="stylesheet" href="shared/css/clubs/my-life-with-without.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #3B6D11, #1d3608); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+</style>
+<style>
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    background: var(--border);
+  }
+  .filter-btn.active {
+    background: #3B6D11;
+    color: white;
+    border-color: #3B6D11;
+  }
+</style> </head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<img alt="Life logo" src="../../../../images/lifewithlifewithout.png" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
+<h1>My Life With &amp; Without</h1>
+<p>Each session explores life before and after one thing : a habit, a person, a city, a decision. Raw, honest, relatable.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="../../../../events/speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+<!-- STUDENT/TEACHER/ADMIN CONTENT -->
+<div>
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Upcoming Sessions</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Article</td><td>Life with &amp; without Social Media</td></tr>
+<tr><td>Description</td><td>A reflection on how digital connection affects our mental health.</td></tr>
+<tr><td>Schedule</td><td>Planned : TBC</td></tr>
+<tr><td>Duration</td><td>60 min</td></tr>
+<tr><td>Languages</td><td>🇬🇧 🇫🇷 🇮🇹 🇷🇺 🇬🇷</td></tr>
+</table></div>
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20My%20Life%20With%20and%20Without.">💬 Register interest</a>
+<!-- HISTORY -->
+<div class="history-block" id="lw-hist" style="margin-top: 2rem;">
+<div class="section-header" style="margin-bottom: 1rem;">
+<h2 style="font-size: 1.5rem;">🕒 Past Sessions</h2>
+</div><div class="club-filters-lang" style="justify-content: flex-start; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-lang="all">All Languages</button>
+<button class="filter-btn" data-lang="en">🇬🇧 English</button>
+</div>
+<div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-level="all">All Levels</button>
+<button class="filter-btn" data-level="b1">B1</button>
+<button class="filter-btn" data-level="b2">B2</button>
+<button class="filter-btn" data-level="c1">C1</button>
+</div>
+<div class="history-body" style="display: block; padding: 0; border: none;">
+<!-- 📌 PINNED NARRATIVE BATCHES -->
+<div class="pinned-challenges-section" style="margin-bottom: 3.5rem; background: rgba(59, 109, 17, 0.03); border: 2px dashed #3B6D11; border-radius: 28px; padding: 2rem;">
+<h3 style="margin-top: 0; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-size: 1.5rem; display: flex; align-items: center; gap: 0.75rem; color: #3B6D11;">
+<span>📌</span> Pinned Ledger Batches (60 min)
+  </h3>
+<div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+<!-- Batch 1 -->
+<div class="history-session" data-lang="en" data-level="b1 b2" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🚗 Mobility &amp; Tech Lifestyles</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Contrast vehicular independence with public transit, and evaluate high digital hyper-connection against offline living.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #3B6D11;">
+          Ledgers:
+          <a href="sessions/my-life-with-without/private-cars-intermediate.html" style="color:#3B6D11; text-decoration:underline; font-weight:600;">Private Cars (B1)</a> •
+          <a href="sessions/my-life-with-without/private-cars-upper-intermediate.html" style="color:#3B6D11; text-decoration:underline; font-weight:600;">Private Cars (B2)</a> •
+          <a href="sessions/my-life-with-without/car-life.html" style="color:#3B6D11; text-decoration:underline; font-weight:600;">Car Life (B1)</a> •
+          <a href="sessions/my-life-with-without/social-media-life.html" style="color:#3B6D11; text-decoration:underline; font-weight:600;">Social Media (B1)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/my-life-with-without/private-cars-intermediate.html" style="background:#3B6D11; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+<!-- Batch 2 -->
+<div class="history-session" data-lang="en" data-level="b1 b2 c1" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;background:#FAF7F2;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem; width: 100%; box-sizing: border-box;">
+<div style="flex: 1; min-width: 250px;">
+<div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+<span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; border-color:#BEE3F8; border:1px solid #BEE3F8; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B2</span>
+<span class="club-tag" style="background:#EEEDFE; color:#534AB7; border-color:#D2CFFE; border:1px solid #D2CFFE; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">C1</span>
+</div>
+<h4 style="margin:0 0 0.5rem;font-size:1.2rem;font-family: 'Playfair Display', serif; font-weight:700; color: var(--ink);">🏙️ Urban Living &amp; Comforts</h4>
+<p style="margin:0; font-size:0.88rem; color:var(--muted); line-height:1.5;">Examine horizontal vs vertical block architectures, industrial professional automation, and cold storage technologies.<br/>
+<span style="font-size:0.82rem; display:block; margin-top:0.4rem; color: #3B6D11;">
+          Ledgers:
+          <a href="sessions/my-life-with-without/high-rise-skyscrapers-intermediate.html" style="color:#3B6D11; text-decoration:underline; font-weight:600;">Skyscrapers (B1)</a> •
+          <a href="sessions/my-life-with-without/high-rise-skyscrapers-upper-intermediate.html" style="color:#3B6D11; text-decoration:underline; font-weight:600;">Skyscrapers (B2)</a> •
+          <a href="sessions/my-life-with-without/obsolete-jobs-intermediate.html" style="color:#3B6D11; text-decoration:underline; font-weight:600;">Obsolete Jobs (B1)</a> •
+          <a href="sessions/my-life-with-without/obsolete-jobs-advanced.html" style="color:#3B6D11; text-decoration:underline; font-weight:600;">Obsolete Jobs (C1)</a> •
+          <a href="sessions/my-life-with-without/fridge-life.html" style="color:#3B6D11; text-decoration:underline; font-weight:600;">Fridge Life (B1)</a>
+</span></p>
+</div>
+<a class="view-btn" href="sessions/my-life-with-without/high-rise-skyscrapers-intermediate.html" style="background:#3B6D11; color:#FAF7F2; border-radius:12px; font-weight:600; padding:0.6rem 1.2rem; text-decoration:none;">Enter Batch →</a>
+</div>
+</div>
+</div>
+<div class="life-balance-grid" id="life-balance-grid">
+<div class="life-balance-card history-session" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem;">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif;">My Life With &amp; My Life Without Hearing Abilities (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Explore daily sensory awareness, soundscapes, and how hearing shapes personal connection.</p>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<span style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/my-life-with-without/hearing-abilities-life.html" style="background:#3B6D11; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Explore Session ➔</a>
+</div>
+</div>
+<div class="life-balance-card history-session" data-level="b2" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem;">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#EBF8FF; color:#2B6CB0; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B2</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif;">My Life With &amp; My Life Without Hearing Abilities (B2)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Examine acoustic architecture, auditory fatigue, sign language linguistics, and Deaf culture.</p>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<span style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/my-life-with-without/hearing-abilities-life.html" style="background:#3B6D11; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Explore Session ➔</a>
+</div>
+</div>
+<!-- Life With & Without Series & Soap Operas -->
+<div class="life-balance-card history-session" data-lang="en" data-level="b1">
+<div class="life-balance-header">
+<div class="club-tag-container">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<span class="life-balance-emoji">📺</span>
+</div>
+<div class="life-balance-body">
+<h4 class="life-balance-title">Life With &amp; Without Series &amp; Soap Operas</h4>
+<p class="life-balance-desc">Contrasting high-excitement binge-watching of endless digital dramas with a quiet life of real-world interactions.</p>
+</div>
+<div class="life-balance-footer">
+<span class="life-balance-date">10 March 2027</span>
+<a class="life-balance-view" href="sessions/my-life-with-without/series-soap-opera.html">View Ledger →</a>
+</div>
+</div>
+<!-- Life With & Without Airplanes -->
+<div class="life-balance-card history-session" data-lang="en" data-level="b1">
+<div class="life-balance-header">
+<div class="club-tag-container">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<span class="life-balance-emoji">✈️</span>
+</div>
+<div class="life-balance-body">
+<h4 class="life-balance-title">Life With &amp; Without Airplanes</h4>
+<p class="life-balance-desc">Contrasting the speed of modern flying with the grounding philosophy of slow travel via trains and ships.</p>
+</div>
+<div class="life-balance-footer">
+<span class="life-balance-date">15 February 2027</span>
+<a class="life-balance-view" href="sessions/my-life-with-without/airplane-life.html">View Ledger →</a>
+</div>
+</div>
+<!-- Obsolete Jobs Intermediate -->
+<!-- Obsolete Jobs Advanced -->
+<!-- Holidays & Vacations -->
+<div class="life-balance-card history-session" data-lang="en" data-level="b1">
+<div class="life-balance-header">
+<div class="club-tag-container">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<span class="life-balance-emoji">⚖️</span>
+</div>
+<div class="life-balance-body">
+<h4 class="life-balance-title">Holidays &amp; Vacations</h4>
+<p class="life-balance-desc">Weighing the merits of structured relaxation versus continuous professional pursuit.</p>
+</div>
+<div class="life-balance-footer">
+<span class="life-balance-date">19 July 2026</span>
+<a class="life-balance-view" href="sessions/my-life-with-without/holidays-vacations.html">View Ledger →</a>
+</div>
+</div>
+<!-- Italian Gestures -->
+<div class="life-balance-card history-session" data-lang="en" data-level="b1">
+<div class="life-balance-header">
+<div class="club-tag-container">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<span class="life-balance-emoji">⚖️</span>
+</div>
+<div class="life-balance-body">
+<h4 class="life-balance-title">Italian Gestures</h4>
+<p class="life-balance-desc">Contrasting silent, non-verbal hand gestures with purely verbal expression.</p>
+</div>
+<div class="life-balance-footer">
+<span class="life-balance-date">15 July 2026</span>
+<a class="life-balance-view" href="sessions/my-life-with-without/italian-gestures.html">View Ledger →</a>
+</div>
+</div>
+<!-- Skyscrapers Intermediate -->
+<!-- Skyscrapers Upper-Intermediate -->
+<!-- Private Cars Intermediate -->
+<!-- Private Cars Upper-Intermediate -->
+<!-- Diversity -->
+<div class="life-balance-card history-session" data-lang="en" data-level="b1">
+<div class="life-balance-header">
+<div class="club-tag-container">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<span class="life-balance-emoji">⚖️</span>
+</div>
+<div class="life-balance-body">
+<h4 class="life-balance-title">Cultural &amp; Linguistic Diversity</h4>
+<p class="life-balance-desc">Exploring how rich multiculturality contrasts with homogeneous societal environments.</p>
+</div>
+<div class="life-balance-footer">
+<span class="life-balance-date">22 June 2026</span>
+<a class="life-balance-view" href="sessions/my-life-with-without/diversity-life.html">View Ledger →</a>
+</div>
+</div>
+<!-- Car Life -->
+<!-- Fridge Life -->
+<!-- Celebrity Life -->
+<div class="life-balance-card history-session" data-lang="en" data-level="b1">
+<div class="life-balance-header">
+<div class="club-tag-container">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<span class="life-balance-emoji">⚖️</span>
+</div>
+<div class="life-balance-body">
+<h4 class="life-balance-title">Life With &amp; Without Celebrities</h4>
+<p class="life-balance-desc">Weighing deep celebrity obsession against quiet, simple real-world social circles.</p>
+</div>
+<div class="life-balance-footer">
+<span class="life-balance-date">15 June 2025</span>
+<a class="life-balance-view" href="sessions/my-life-with-without/celebrity-life.html">View Ledger →</a>
+</div>
+</div>
+<!-- Pets Life -->
+<div class="life-balance-card history-session" data-lang="en" data-level="b1">
+<div class="life-balance-header">
+<div class="club-tag-container">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; border-color:#A3E4D7; border:1px solid #A3E4D7; font-weight:600; font-size:0.75rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">B1</span>
+</div>
+<span class="life-balance-emoji">⚖️</span>
+</div>
+<div class="life-balance-body">
+<h4 class="life-balance-title">My Life With &amp; Without Pets</h4>
+<p class="life-balance-desc">Analyzing the daily joy and responsibilities of animals vs the freedom of pet-free spaces.</p>
+</div>
+<div class="life-balance-footer">
+<span class="life-balance-date">08 June 2025</span>
+<a class="life-balance-view" href="sessions/my-life-with-without/pets-life.html">View Ledger →</a>
+</div>
+</div>
+<!-- Social Media Life -->
+<div class="history-session life-ledger-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="life-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="life-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">My Life With &amp; My Life Without Fast Food (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Contrasting ultra-processed convenience with nutritional balance, home cooking, and long-term health wellness.</p>
+</div>
+<div class="life-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="life-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/my-life-with-without/fast-food.html" style="background:#3B6D11; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Ledger ➔</a>
+</div>
+</div>
+<div class="history-session life-ledger-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="life-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="life-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">My Life With &amp; My Life Without AI (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Evaluating daily workplace automation, generative efficiency, human creativity, and digital unplugging.</p>
+</div>
+<div class="life-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="life-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/my-life-with-without/my-life-with-without-ai.html" style="background:#3B6D11; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Ledger ➔</a>
+</div>
+</div>
+</div>
+<!-- My Life With & My Life Without Fast Food (B1) -->
+<div class="history-session life-ledger-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="life-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="life-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">My Life With &amp; My Life Without Fast Food (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Contrasting ultra-processed convenience with nutritional balance, home cooking, and long-term health wellness.</p>
+</div>
+<div class="life-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="life-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/my-life-with-without/fast-food.html" style="background:#3B6D11; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Ledger ➔</a>
+</div>
+</div>
+<!-- My Life With & My Life Without AI (B1) -->
+<div class="history-session life-ledger-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="life-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="life-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">My Life With &amp; My Life Without AI (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Evaluating daily workplace automation, generative efficiency, human creativity, and digital unplugging.</p>
+</div>
+<div class="life-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="life-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/my-life-with-without/my-life-with-without-ai.html" style="background:#3B6D11; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Ledger ➔</a>
+</div>
+</div>
+<!-- My Life With & My Life Without Fast Food (B1) -->
+<div class="history-session life-ledger-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="life-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="life-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">My Life With &amp; My Life Without Fast Food (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Contrasting ultra-processed convenience with nutritional balance, home cooking, and long-term health wellness.</p>
+</div>
+<div class="life-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="life-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/my-life-with-without/fast-food.html" style="background:#3B6D11; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Ledger ➔</a>
+</div>
+</div>
+<!-- My Life With & My Life Without AI (B1) -->
+<div class="history-session life-ledger-card" data-lang="en" data-level="b1" style="background:#FFF; border:1px solid var(--border); border-radius:16px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+<div class="life-card-body">
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+<span class="club-tag" style="background:#E1F5EE; color:#1A7A4A; font-weight:600; font-size:0.75rem; padding:2px 6px; border-radius:4px;">B1</span>
+</div>
+<h4 class="life-card-title" style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem;">My Life With &amp; My Life Without AI (B1)</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Evaluating daily workplace automation, generative efficiency, human creativity, and digital unplugging.</p>
+</div>
+<div class="life-card-footer" style="display:flex; justify-content:space-between; align-items:center;">
+<span class="life-card-date" style="font-size:0.8rem; color:var(--muted);">26 August 2026</span>
+<a href="sessions/my-life-with-without/my-life-with-without-ai.html" style="background:#3B6D11; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Ledger ➔</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /logged-in content -->
+<!-- /club-main -->
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem;">Narrative Practice</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Storytelling is a key language skill. This club focuses on narrative tenses and expressing transitions in life.</p>
+</div>
+</div>
+<!-- /grid -->
+</div></section>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="../../../../#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../../../../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../../../../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../../../../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const sessions = document.querySelectorAll('.history-session');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedLevel = btn.getAttribute('data-level');
+
+      sessions.forEach(sess => {
+        const levels = (sess.getAttribute('data-level') || '').split(' ');
+        if (selectedLevel === 'all' || levels.includes(selectedLevel)) {
+          sess.style.display = 'flex';
+        } else {
+          sess.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script><script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>
