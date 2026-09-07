@@ -7,6 +7,7 @@
   <!-- COSY Base Tokens -->
   <!-- TODO: Swap to https://raw.githubusercontent.com/cosylanguages/COSYlanguages/main/css/cosy-tokens.css once published -->
   <link rel="stylesheet" href="shared/css/hub.css">
+  <link rel="stylesheet" href="shared/css/cosy-icons.css">
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -33,26 +34,29 @@
     </section>
 
     <div class="events-grid">
-      <!-- 1. Speaking Clubs -->
-      <a href="speaking-clubs/" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon">🗣️</span>
-          <span class="event-badge">Discussion</span>
-        </div>
-        <h3 class="event-name">Speaking Clubs</h3>
-        <p class="event-description">
-          Handcrafted, topic-driven discussion sessions with curated vocabulary, level calibration, and structured speaking rounds.
-        </p>
-        <div class="event-card-footer">
-          <span>Explore Sessions</span>
-          <span class="arrow">→</span>
+      <!-- 1. Speaking Clubs (featured) -->
+      <a href="speaking-clubs/" class="event-card event-card-featured">
+        <div class="event-featured-icon cosy-icon icon-speech" aria-hidden="true"></div>
+        <div class="event-card-body">
+          <div class="event-card-header">
+            <span class="event-badge">Discussion</span>
+            <span class="event-featured-meta">Featured Session</span>
+          </div>
+          <h3 class="event-name">Speaking Clubs</h3>
+          <p class="event-description">
+            Handcrafted, topic-driven discussion sessions with curated vocabulary, level calibration, and structured speaking rounds.
+          </p>
+          <div class="event-card-footer">
+            <span>Explore Sessions</span>
+            <span class="arrow">→</span>
+          </div>
         </div>
       </a>
 
       <!-- 2. Cinema Club -->
       <a href="cinema-club/" class="event-card">
         <div class="event-card-header">
-          <span class="event-icon">🎬</span>
+          <span class="event-icon cosy-icon icon-film" aria-hidden="true"></span>
           <span class="event-badge">Multimedia</span>
         </div>
         <h3 class="event-name">Cinema Club</h3>
@@ -68,7 +72,7 @@
       <!-- 3. Karaoke Club -->
       <a href="karaoke-club/" class="event-card">
         <div class="event-card-header">
-          <span class="event-icon">🎤</span>
+          <span class="event-icon cosy-icon icon-mic" aria-hidden="true"></span>
           <span class="event-badge">Music & Drama</span>
         </div>
         <h3 class="event-name">Karaoke Club</h3>
@@ -84,7 +88,7 @@
       <!-- 4. Game Evening -->
       <a href="game-evening/" class="event-card">
         <div class="event-card-header">
-          <span class="event-icon">🎲</span>
+          <span class="event-icon cosy-icon icon-dice" aria-hidden="true"></span>
           <span class="event-badge">Interactive</span>
         </div>
         <h3 class="event-name">Game Evening</h3>
@@ -100,7 +104,7 @@
       <!-- 5. Long Reads -->
       <a href="long-reads/" class="event-card">
         <div class="event-card-header">
-          <span class="event-icon">📖</span>
+          <span class="event-icon cosy-icon icon-book" aria-hidden="true"></span>
           <span class="event-badge">Reading & Analysis</span>
         </div>
         <h3 class="event-name">Long Reads</h3>

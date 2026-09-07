@@ -588,6 +588,9 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0.4rem 0.8rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   transition: all 0.2s ease;
@@ -627,6 +630,58 @@ body {
   gap: 1.5rem;
 }
 
+/* Featured Event Card — breaks the uniform grid with a wide, branded panel */
+.event-card.event-card-featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.25rem;
+  background: linear-gradient(120deg, var(--cosy-primary-dark, #1a2b1d) 0%, var(--cosy-primary, #2f4a36) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+.event-featured-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+  width: 92px;
+  height: 92px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--cosy-radius, 16px);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.event-card-featured .event-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.event-card-featured .event-badge {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+.event-card-featured .event-featured-meta {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.event-card-featured .event-name {
+  color: #fff;
+  font-size: 1.6rem;
+}
+.event-card-featured .event-description {
+  color: rgba(255, 255, 255, 0.92);
+}
+.event-card-featured .event-card-footer {
+  color: #fff;
+}
+
 /* Event Cards */
 .event-card {
   background: var(--cosy-surface);
@@ -658,6 +713,15 @@ body {
 .event-icon {
   font-size: 2rem;
   line-height: 1;
+}
+/* SVG icon instances: size to match the original emoji footprint */
+.event-icon.cosy-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.event-featured-icon.cosy-icon {
+  width: 92px;
+  height: 92px;
 }
 
 .event-badge {
@@ -832,5 +896,15 @@ body {
   }
   .events-grid {
     grid-template-columns: 1fr;
+  }
+  /* Featured card stacks vertically on small screens */
+  .event-card.event-card-featured {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.75rem;
+  }
+  .event-card-featured .event-name {
+    font-size: 1.4rem;
   }
 }
