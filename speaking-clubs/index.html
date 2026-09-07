@@ -109,20 +109,6 @@
       </div>
     </section>
 
-    <!-- Full Theme Sessions List Section -->
-    <section id="theme-sessions-section" style="margin-top: 3rem; display: none;">
-      <div style="background: var(--cosy-surface); padding: 2rem; border-radius: var(--cosy-radius); border: 1px solid var(--cosy-border);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-          <div>
-            <h2 style="color: var(--cosy-primary-dark); margin: 0 0 0.25rem 0;" id="theme-sessions-title">📚 Club Sessions</h2>
-            <p style="color: var(--cosy-text-muted); margin: 0;" id="theme-sessions-desc">Explore full standalone interactive session materials and discussion guides.</p>
-          </div>
-          <span id="theme-sessions-count" style="background: var(--cosy-primary-light); color: var(--cosy-primary-dark); padding: 0.35rem 0.85rem; border-radius: 20px; font-weight: 700; font-size: 0.88rem;">0 Sessions</span>
-        </div>
-        <div class="events-grid" id="theme-sessions-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));"></div>
-      </div>
-    </section>
-
     <!-- Prompt Deck Viewer Container -->
     <section style="margin-top: 3rem;">
       <div id="deck-viewer-container"></div>
@@ -147,7 +133,6 @@
   </main>
 
   <script src="../shared/js/prompt-deck-loader.js"></script>
-  <script src="../shared/js/bgm-player.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
       let data = null;
@@ -162,47 +147,14 @@
         let themeCards = [];
         let themeTitle = 'Speaking Clubs Prompt Deck';
         let pinnedBatches = [];
-        let clubSessions = [];
-        let clubTitle = '';
 
         if (data && data.clubs) {
           const club = data.clubs.find(c => c.id === themeId);
           if (club) {
-            clubTitle = club.title;
             themeTitle = `${club.title} Deck`;
-            themeCards = club.prompts || [];
+            themeCards = club.prompts;
             pinnedBatches = club.pinnedBatches || [];
-            clubSessions = club.sessions || [];
           }
-        }
-
-        // Render Full Sessions List
-        const sessionsSection = document.getElementById('theme-sessions-section');
-        const sessionsGrid = document.getElementById('theme-sessions-grid');
-        const sessionsTitle = document.getElementById('theme-sessions-title');
-        const sessionsCount = document.getElementById('theme-sessions-count');
-
-        if (clubSessions && clubSessions.length > 0) {
-          sessionsSection.style.display = 'block';
-          sessionsTitle.textContent = `📚 ${clubTitle} Sessions (${clubSessions.length})`;
-          sessionsCount.textContent = `${clubSessions.length} Sessions`;
-
-          sessionsGrid.innerHTML = clubSessions.map(session => `
-            <a href="${escapeHtml(session.href)}" style="text-decoration: none; color: inherit; display: block;">
-              <div style="background: var(--cosy-bg); border: 1px solid var(--cosy-border); border-radius: 8px; padding: 1rem; transition: transform 0.2s ease, border-color 0.2s ease; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                  <div style="font-size: 0.95rem; font-weight: 700; color: var(--cosy-primary-dark); margin-bottom: 0.5rem; line-height: 1.4;">${escapeHtml(session.title)}</div>
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
-                  ${session.level ? `<span style="font-size: 0.75rem; background: var(--cosy-primary-light); color: var(--cosy-primary-dark); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600;">${escapeHtml(session.level)}</span>` : '<span></span>'}
-                  <span style="font-size: 0.85rem; color: var(--cosy-primary); font-weight: 600;">Open Session →</span>
-                </div>
-              </div>
-            </a>
-          `).join('');
-        } else {
-          sessionsSection.style.display = 'none';
-          sessionsGrid.innerHTML = '';
         }
 
         // Render Pinned Batches if present

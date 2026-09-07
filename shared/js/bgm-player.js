@@ -109,13 +109,11 @@
       this.masterGain.gain.setValueAtTime(this.volume, this.audioCtx.currentTime);
       this.masterGain.connect(this.audioCtx.destination);
 
-      // Pentatonic warm ambient synth frequencies (Hz)
       const scale = [130.81, 146.83, 164.81, 196.00, 220.00, 261.63, 293.66, 329.63, 392.00, 440.00];
 
       const playChord = () => {
         if (!this.isPlaying) return;
 
-        // Choose 3 soft harmonizing notes
         const note1 = scale[Math.floor(Math.random() * 4)];
         const note2 = scale[Math.floor(Math.random() * 4) + 3];
         const note3 = scale[Math.floor(Math.random() * 3) + 6];
@@ -141,7 +139,6 @@
           osc.stop(now + duration);
         });
 
-        // Schedule next gentle phrase transition
         this.timerId = setTimeout(playChord, 3500 + Math.random() * 2000);
       };
 
@@ -157,7 +154,6 @@
     }
   }
 
-  // Auto-init BGM Player on DOMContentLoaded
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => new BGMPlayer());
   } else {

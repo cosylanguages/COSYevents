@@ -18,13 +18,11 @@
       if (!placeholders.length) return;
 
       placeholders.forEach(placeholder => {
-        // Find transcript text in adjacent details element or column section
         let transcriptText = '';
         const details = placeholder.nextElementSibling;
         if (details && details.classList.contains('transcript-details')) {
           transcriptText = details.textContent.replace('📜 Read Column Transcript', '').trim();
         } else {
-          // Fallback to page description or title
           const introP = document.querySelector('.content-container p');
           transcriptText = introP ? introP.textContent.trim() : 'Welcome to I Couldnt Help But Wonder.';
         }
@@ -89,7 +87,6 @@
         const statusText = playerCard.querySelector('.speech-status-text');
         const voiceSelect = playerCard.querySelector('.speech-voice-select');
 
-        // Populate available voices
         const populateVoices = () => {
           if (!this.synth) return;
           const voices = this.synth.getVoices().filter(v => v.lang.startsWith('en'));
@@ -116,7 +113,7 @@
           } else {
             this.synth.cancel();
             this.utterance = new SpeechSynthesisUtterance(transcriptText);
-            this.utterance.rate = 0.95; // Pleasant reading speed
+            this.utterance.rate = 0.95;
 
             const selectedVoiceName = voiceSelect.value;
             if (selectedVoiceName) {
