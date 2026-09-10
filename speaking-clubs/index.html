@@ -3,269 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Speaking Clubs - COSYevents Catalog</title>
+  <title>Speaking Clubs - COSYlanguages Events</title>
   <link rel="stylesheet" href="../shared/css/hub.css">
+  <link rel="stylesheet" href="../shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="../styles/calendar.css">
 </head>
 <body>
 
   <header class="hub-header">
     <div class="hub-header-content">
-      <span class="hub-brand"><a href="../index.html" style="color: inherit; text-decoration: none;">← COSYevents Catalog</a></span>
-      <h1 class="hub-title">Speaking Clubs</h1>
+      <span class="hub-brand">COSYlanguages Ecosystem</span>
+      <h1 class="hub-title">Speaking Clubs Hub</h1>
       <p class="hub-subtitle">
-        Topic-driven discussion sessions with handcrafted vocabulary, level calibration (A2–C1), and structured speaking rounds.
+        Topic-driven, communicative discussion sessions designed for calibrated fluency (A1–C2).
       </p>
+      <nav class="hub-nav-links" aria-label="Ecosystem Links">
+        <a href="https://cosylanguages.github.io/COSYlanguages/" class="hub-nav-link" target="_blank" rel="noopener">Home</a>
+        <a href="https://cosylanguages.github.io/COSYgames/" class="hub-nav-link" target="_blank" rel="noopener">Games</a>
+        <a href="https://cosylanguages.github.io/COSYworld/" class="hub-nav-link" target="_blank" rel="noopener">World</a>
+        <a href="https://cosylanguages.github.io/COSYtools/" class="hub-nav-link" target="_blank" rel="noopener">Tools</a>
+        <a href="../index.html" class="hub-nav-link">Events Calendar</a>
+      </nav>
     </div>
   </header>
 
   <main class="hub-main">
-    <section class="hub-section-header">
-      <h2 class="hub-section-title">Select a Discussion Theme</h2>
-      <p class="hub-section-desc">Choose from our 8 curated Speaking Club themes below to load prompt cards and session materials.</p>
-    </section>
+    <section class="calendar-section">
+      <h2 class="section-title">Upcoming Speaking Club Sessions</h2>
 
-    <!-- Club Theme Selector Grid -->
-    <div class="events-grid" id="club-selector">
-      <!-- Generated or static cards for 8 themes -->
-      <button class="event-card club-select-btn" data-theme-id="i-couldnt-help-but-wonder" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
-        <div class="event-card-header">
-          <span class="event-icon">🤔</span>
-          <span class="event-badge">Reflections</span>
-        </div>
-        <h3 class="event-name">I Couldn't Help But Wonder</h3>
-        <p class="event-description">Curious reflections and personal dilemmas inspired by modern life.</p>
-      </button>
-
-      <button class="event-card club-select-btn" data-theme-id="keeping-up-with-science" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
-        <div class="event-card-header">
-          <span class="event-icon">🔬</span>
-          <span class="event-badge">Science & Tech</span>
-        </div>
-        <h3 class="event-name">Keeping Up with Science</h3>
-        <p class="event-description">Debates and explorations around discovery and innovation.</p>
-      </button>
-
-      <button class="event-card club-select-btn" data-theme-id="mind-matters" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
-        <div class="event-card-header">
-          <span class="event-icon">🧠</span>
-          <span class="event-badge">Psychology</span>
-        </div>
-        <h3 class="event-name">Mind Matters</h3>
-        <p class="event-description">Psychology, habits, emotional intelligence, and well-being.</p>
-      </button>
-
-      <button class="event-card club-select-btn" data-theme-id="debatable-and-relatable" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
-        <div class="event-card-header">
-          <span class="event-icon">⚖️</span>
-          <span class="event-badge">Debate</span>
-        </div>
-        <h3 class="event-name">Debatable & Relatable</h3>
-        <p class="event-description">Lighthearted yet thought-provoking debates on everyday dilemmas.</p>
-      </button>
-
-      <button class="event-card club-select-btn" data-theme-id="lets-celebrate" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
-        <div class="event-card-header">
-          <span class="event-icon">🎉</span>
-          <span class="event-badge">Culture</span>
-        </div>
-        <h3 class="event-name">Let's Celebrate</h3>
-        <p class="event-description">Traditions, festivities, and shared cultural celebrations.</p>
-      </button>
-
-      <button class="event-card club-select-btn" data-theme-id="my-life-with-without" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
-        <div class="event-card-header">
-          <span class="event-icon">🔄</span>
-          <span class="event-badge">Lifestyle</span>
-        </div>
-        <h3 class="event-name">My Life With/Without</h3>
-        <p class="event-description">Personal storytelling on living with or without specific items or habits.</p>
-      </button>
-
-      <button class="event-card club-select-btn" data-theme-id="the-greatest-quotes" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
-        <div class="event-card-header">
-          <span class="event-icon">💬</span>
-          <span class="event-badge">Wisdom</span>
-        </div>
-        <h3 class="event-name">The Greatest Quotes</h3>
-        <p class="event-description">Inspiring quotes and philosophical proverbs evaluated and debated.</p>
-      </button>
-
-      <button class="event-card club-select-btn" data-theme-id="if-you-were" style="text-align: left; background: var(--cosy-surface); cursor: pointer; border: 1px solid var(--cosy-border);">
-        <div class="event-card-header">
-          <span class="event-icon">✨</span>
-          <span class="event-badge">Hypotheticals</span>
-        </div>
-        <h3 class="event-name">If You Were</h3>
-        <p class="event-description">Hypothetical role-play scenarios and speculative prompt decks.</p>
-      </button>
-    </div>
-
-    <!-- Pinned Case Study Batches Section -->
-    <section id="pinned-batches-section" style="margin-top: 3rem; display: none;">
-      <div style="background: var(--cosy-surface); padding: 2rem; border-radius: var(--cosy-radius); border: 1px solid var(--cosy-border);">
-        <h2 style="color: var(--cosy-primary-dark); margin-bottom: 0.5rem;" id="pinned-batches-title">📌 Pinned Case Study Batches</h2>
-        <p style="color: var(--cosy-text-muted); margin-bottom: 1.5rem;" id="pinned-batches-desc">Hand-curated thematic series grouping related session case studies.</p>
-        <div class="events-grid" id="pinned-batches-grid"></div>
-      </div>
-    </section>
-
-    <!-- Full Theme Sessions List Section -->
-    <section id="theme-sessions-section" style="margin-top: 3rem; display: none;">
-      <div style="background: var(--cosy-surface); padding: 2rem; border-radius: var(--cosy-radius); border: 1px solid var(--cosy-border);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-          <div>
-            <h2 style="color: var(--cosy-primary-dark); margin: 0 0 0.25rem 0;" id="theme-sessions-title">📚 Club Sessions</h2>
-            <p style="color: var(--cosy-text-muted); margin: 0;" id="theme-sessions-desc">Explore full standalone interactive session materials and discussion guides.</p>
+      <div class="upcoming-events-grid">
+        <div class="event-card-item">
+          <div class="event-meta-header">
+            <span class="type-pill badge-speaking-club">Speaking Club</span>
+            <div class="lang-level-pills">
+              <span class="pill-sm">English</span>
+              <span class="pill-sm">B2</span>
+            </div>
           </div>
-          <span id="theme-sessions-count" style="background: var(--cosy-primary-light); color: var(--cosy-primary-dark); padding: 0.35rem 0.85rem; border-radius: 20px; font-weight: 700; font-size: 0.88rem;">0 Sessions</span>
+          <h3 class="event-card-title">Do Bisexuals Have to Choose?</h3>
+          <div class="event-datetime-info">
+            <span>📅 2025-05-12</span>
+            <span>⏰ 18:00 CET (19:00 Local)</span>
+          </div>
+          <div class="event-host-info">🎙️ Host: <strong>Elena Rostova</strong></div>
+          <p class="event-card-desc">Personal identity assumptions, relationship dynamics, and sociolinguistic debates.</p>
+          <div class="event-card-actions">
+            <a href="https://wa.me/34600000000?text=Join%20Speaking%20Club%20Do%20Bisexuals%20Have%20To%20Choose" target="_blank" rel="noopener" class="btn-primary">
+              💬 Join via WhatsApp
+            </a>
+            <a href="../sessions/i-couldnt-help-but-wonder/do-bisexuals-have-to-choose.html" class="btn-outline">
+              View Topic Material
+            </a>
+          </div>
         </div>
-        <div class="events-grid" id="theme-sessions-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));"></div>
+
+        <div class="event-card-item">
+          <div class="event-meta-header">
+            <span class="type-pill badge-speaking-club">Speaking Club</span>
+            <div class="lang-level-pills">
+              <span class="pill-sm">English</span>
+              <span class="pill-sm">C1</span>
+            </div>
+          </div>
+          <h3 class="event-card-title">AI & Art: Can Machines Be Truly Creative?</h3>
+          <div class="event-datetime-info">
+            <span>📅 2025-05-20</span>
+            <span>⏰ 18:30 CET (19:30 Local)</span>
+          </div>
+          <div class="event-host-info">🎙️ Host: <strong>Dr. Aris Thorne</strong></div>
+          <p class="event-card-desc">Philosophical exploration of generative algorithms, human artistry, and copyright ethics.</p>
+          <div class="event-card-actions">
+            <a href="https://wa.me/34600000000?text=Join%20Speaking%20Club%20AI%20and%20Art" target="_blank" rel="noopener" class="btn-primary">
+              💬 Join via WhatsApp
+            </a>
+            <a href="../sessions/debatable-relatable/ai-and-art.html" class="btn-outline">
+              View Topic Material
+            </a>
+          </div>
+        </div>
+
+        <div class="event-card-item">
+          <div class="event-meta-header">
+            <span class="type-pill badge-speaking-club">Speaking Club</span>
+            <div class="lang-level-pills">
+              <span class="pill-sm">English</span>
+              <span class="pill-sm">B1</span>
+            </div>
+          </div>
+          <h3 class="event-card-title">The 4-Day Work Week: Productivity vs. Tradition</h3>
+          <div class="event-datetime-info">
+            <span>📅 2025-05-28</span>
+            <span>⏰ 19:00 CET (20:00 Local)</span>
+          </div>
+          <div class="event-host-info">🎙️ Host: <strong>Elena Rostova</strong></div>
+          <p class="event-card-desc">Work-life balance, pilot trial data, corporate efficiency, and leisure history.</p>
+          <div class="event-card-actions">
+            <a href="https://wa.me/34600000000?text=Join%20Speaking%20Club%204%20Day%20Work%20Week" target="_blank" rel="noopener" class="btn-primary">
+              💬 Join via WhatsApp
+            </a>
+            <a href="../sessions/debatable-relatable/4-day-work-week.html" class="btn-outline">
+              View Topic Material
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Prompt Deck Viewer Container -->
-    <section style="margin-top: 3rem;">
-      <div id="deck-viewer-container"></div>
-    </section>
+    <!-- Past Topics & Materials Archive -->
+    <section class="calendar-section" style="margin-top: 3rem;">
+      <h2 class="section-title">Past Topics & Study Decks Archive</h2>
+      <p style="color: var(--cosy-text-muted); margin-bottom: 1.5rem;">Access self-contained prompt decks, vocabulary guides, and discussion structures from past sessions.</p>
 
-    <!-- Session Template / Turn-Taking Structure Section -->
-    <section style="margin-top: 3rem; background: var(--cosy-surface); padding: 2rem; border-radius: var(--cosy-radius); border: 1px solid var(--cosy-border);">
-      <h2 style="color: var(--cosy-primary-dark); margin-bottom: 1rem;">🗣️ Speaking Club Session Framework</h2>
-      <p style="margin-bottom: 1rem;">Use this structured turn-taking framework for live group discussion or solo practice:</p>
-      <ol style="padding-left: 1.5rem; line-height: 1.8; color: var(--cosy-text);">
-        <li><strong>Warm-up Round (5 mins):</strong> Each participant introduces themselves and gives a 1-sentence quick response to the first card.</li>
-        <li><strong>Deep Dive Rounds (25 mins):</strong> Rotate turn-taking for each prompt card. One speaker shares their main answer (60-90s), followed by follow-up questions from peers.</li>
-        <li><strong>Synthesis & Debrief (10 mins):</strong> Review key vocabulary and insights gathered during the discussion.</li>
-      </ol>
+      <div class="archive-events-grid">
+        <div class="event-card-item">
+          <h4 class="event-card-title">Childhood Obesity Theory Debunked (B1)</h4>
+          <p class="event-card-desc">Vocabulary deck & discussion guide on health science news communication.</p>
+          <a href="../sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html" class="btn-outline">📄 Open Materials</a>
+        </div>
 
-      <div style="margin-top: 1.5rem; padding: 1rem; background: var(--cosy-primary-light); border-left: 4px solid var(--cosy-primary); border-radius: 4px;">
-        <p style="font-size: 0.9rem; color: var(--cosy-primary-dark); margin: 0;">
-          💡 <strong>Framing Note for Hypothetical Prompts (e.g., "If You Were"):</strong> While designed for live group turn-taking and role-play, hypothetical prompts can also serve solo learners as creative journaling or writing prompts. Reflect in writing for 5–10 minutes per prompt to practice target grammar structures (conditionals, speculative phrasing).
-        </p>
+        <div class="event-card-item">
+          <h4 class="event-card-title">Wisdom of Socrates (B2-C1)</h4>
+          <p class="event-card-desc">Socratic questioning frameworks, philosophical quotes, and vocabulary list.</p>
+          <a href="../sessions/the-greatest-quotes/wisdom-of-socrates.html" class="btn-outline">📄 Open Materials</a>
+        </div>
+
+        <div class="event-card-item">
+          <h4 class="event-card-title">My Life With & Without AI (B1)</h4>
+          <p class="event-card-desc">Personal storytelling prompts, conditional grammar exercises, and vocabulary.</p>
+          <a href="../sessions/my-life-with-without/my-life-with-without-ai.html" class="btn-outline">📄 Open Materials</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <script src="../shared/js/prompt-deck-loader.js"></script>
-  <script src="../shared/js/bgm-player.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      let data = null;
-      try {
-        const response = await fetch('../data/events/speaking-clubs.json');
-        data = await response.json();
-      } catch (e) {
-        console.error('Could not load speaking-clubs.json', e);
-      }
+  <footer class="hub-footer">
+    <p>COSYevents &copy; COSYlanguages Ecosystem. All registration flows back to main hub.</p>
+  </footer>
 
-      function loadThemeDeck(themeId) {
-        let themeCards = [];
-        let themeTitle = 'Speaking Clubs Prompt Deck';
-        let pinnedBatches = [];
-        let clubSessions = [];
-        let clubTitle = '';
-
-        if (data && data.clubs) {
-          const club = data.clubs.find(c => c.id === themeId);
-          if (club) {
-            clubTitle = club.title;
-            themeTitle = `${club.title} Deck`;
-            themeCards = club.prompts || [];
-            pinnedBatches = club.pinnedBatches || [];
-            clubSessions = club.sessions || [];
-          }
-        }
-
-        // Render Full Sessions List
-        const sessionsSection = document.getElementById('theme-sessions-section');
-        const sessionsGrid = document.getElementById('theme-sessions-grid');
-        const sessionsTitle = document.getElementById('theme-sessions-title');
-        const sessionsCount = document.getElementById('theme-sessions-count');
-
-        if (clubSessions && clubSessions.length > 0) {
-          sessionsSection.style.display = 'block';
-          sessionsTitle.textContent = `📚 ${clubTitle} Sessions (${clubSessions.length})`;
-          sessionsCount.textContent = `${clubSessions.length} Sessions`;
-
-          sessionsGrid.innerHTML = clubSessions.map(session => `
-            <a href="${escapeHtml(session.href)}" style="text-decoration: none; color: inherit; display: block;">
-              <div style="background: var(--cosy-bg); border: 1px solid var(--cosy-border); border-radius: 8px; padding: 1rem; transition: transform 0.2s ease, border-color 0.2s ease; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                  <div style="font-size: 0.95rem; font-weight: 700; color: var(--cosy-primary-dark); margin-bottom: 0.5rem; line-height: 1.4;">${escapeHtml(session.title)}</div>
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
-                  ${session.level ? `<span style="font-size: 0.75rem; background: var(--cosy-primary-light); color: var(--cosy-primary-dark); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600;">${escapeHtml(session.level)}</span>` : '<span></span>'}
-                  <span style="font-size: 0.85rem; color: var(--cosy-primary); font-weight: 600;">Open Session →</span>
-                </div>
-              </div>
-            </a>
-          `).join('');
-        } else {
-          sessionsSection.style.display = 'none';
-          sessionsGrid.innerHTML = '';
-        }
-
-        // Render Pinned Batches if present
-        const pinnedSection = document.getElementById('pinned-batches-section');
-        const pinnedGrid = document.getElementById('pinned-batches-grid');
-
-        if (pinnedBatches && pinnedBatches.length > 0) {
-          pinnedSection.style.display = 'block';
-          pinnedGrid.innerHTML = pinnedBatches.map(batch => `
-            <div style="background: var(--cosy-bg); border: 1px solid var(--cosy-border); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
-                  <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--cosy-primary-dark); margin: 0;">${escapeHtml(batch.title)}</h3>
-                  <div>
-                    ${(batch.levels || []).map(lvl => `<span style="font-size: 0.75rem; background: var(--cosy-primary-light); color: var(--cosy-primary-dark); padding: 0.15rem 0.4rem; border-radius: 4px; font-weight: 600; margin-left: 0.25rem;">${escapeHtml(lvl)}</span>`).join('')}
-                  </div>
-                </div>
-                <p style="font-size: 0.88rem; color: var(--cosy-text-muted); margin-bottom: 1rem; line-height: 1.4;">${escapeHtml(batch.description)}</p>
-              </div>
-              <div>
-                <strong style="font-size: 0.8rem; text-transform: uppercase; color: var(--cosy-text-muted); letter-spacing: 0.5px; display: block; margin-bottom: 0.5rem;">Case Study Sessions:</strong>
-                <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.6;">
-                  ${batch.sessions.map(s => `
-                    <li><a href="${escapeHtml(s.href)}" style="color: var(--cosy-primary); text-decoration: none; font-weight: 600;">${escapeHtml(s.title)}</a></li>
-                  `).join('')}
-                </ul>
-              </div>
-            </div>
-          `).join('');
-        } else {
-          pinnedSection.style.display = 'none';
-          pinnedGrid.innerHTML = '';
-        }
-
-        new PromptDeckLoader({
-          containerId: 'deck-viewer-container',
-          title: themeTitle,
-          cards: themeCards
-        });
-      }
-
-      function escapeHtml(str) {
-        if (typeof str !== 'string') return str;
-        return str
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#039;');
-      }
-
-      // Default load 'If You Were' or first theme
-      loadThemeDeck('if-you-were');
-
-      // Add click listeners to selector buttons
-      document.querySelectorAll('.club-select-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const themeId = btn.getAttribute('data-theme-id');
-          loadThemeDeck(themeId);
-          document.getElementById('deck-viewer-container').scrollIntoView({ behavior: 'smooth' });
-        });
-      });
-    });
-  </script>
 </body>
 </html>

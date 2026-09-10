@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Detail Template - COSYlanguages</title>
+  <link rel="stylesheet" href="../shared/css/hub.css">
+  <link rel="stylesheet" href="../shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="../styles/calendar.css">
+</head>
+<body>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <span class="hub-brand">COSYlanguages Ecosystem</span>
+      <h1 class="hub-title">Event Detail Template</h1>
+      <p class="hub-subtitle">
+        Standard detail page layout for single event landing views.
+      </p>
+      <nav class="hub-nav-links" aria-label="Ecosystem Links">
+        <a href="https://cosylanguages.github.io/COSYlanguages/" class="hub-nav-link" target="_blank" rel="noopener">Home</a>
+        <a href="https://cosylanguages.github.io/COSYgames/" class="hub-nav-link" target="_blank" rel="noopener">Games</a>
+        <a href="https://cosylanguages.github.io/COSYworld/" class="hub-nav-link" target="_blank" rel="noopener">World</a>
+        <a href="https://cosylanguages.github.io/COSYtools/" class="hub-nav-link" target="_blank" rel="noopener">Tools</a>
+        <a href="../index.html" class="hub-nav-link">Events Calendar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hub-main">
+    <article class="event-card-item" style="padding: 2.5rem; max-width: 800px; margin: 0 auto;">
+      <div class="event-meta-header" style="margin-bottom: 1.25rem;">
+        <span id="detail-type" class="type-pill badge-speaking-club">Speaking Club</span>
+        <div class="lang-level-pills">
+          <span id="detail-lang" class="pill-sm">English</span>
+          <span id="detail-level" class="pill-sm">B2</span>
+        </div>
+      </div>
+
+      <h2 id="detail-title" class="hub-title" style="color: var(--cosy-primary-dark); text-align: left; font-size: 2rem;">
+        Event Title Placeholder
+      </h2>
+
+      <div class="event-datetime-info" style="font-size: 1.05rem; margin: 1rem 0;">
+        <span id="detail-date">📅 Date: 2025-05-12</span> |
+        <span id="detail-time">⏰ Time: 18:00 CET</span>
+      </div>
+
+      <div class="timezone-converter-box">
+        <div><strong>Timezone Converter:</strong> Times automatically adjust to your local timezone in calendar view.</div>
+      </div>
+
+      <section style="margin: 1.5rem 0;">
+        <h3 class="hub-section-title" style="font-size: 1.25rem;">Full Description</h3>
+        <p id="detail-desc" class="event-card-desc" style="font-size: 1rem; margin-top: 0.5rem;">
+          Detailed event description, discussion breakdown, and prerequisites go here.
+        </p>
+      </section>
+
+      <section style="margin: 1.5rem 0;">
+        <h3 class="hub-section-title" style="font-size: 1.25rem;">Host Bio</h3>
+        <div id="detail-host" class="event-host-info" style="font-size: 0.95rem;">
+          <strong>Elena Rostova</strong> — Senior Communicative Facilitator.
+        </div>
+      </section>
+
+      <div class="event-card-actions" style="margin-top: 2rem; flex-wrap: wrap;">
+        <a id="detail-reg-btn" href="https://wa.me/34600000000" target="_blank" rel="noopener" class="btn-primary" style="padding: 0.75rem 1.75rem; font-size: 1rem;">
+          💬 Register via Main Hub (WhatsApp / Telegram)
+        </a>
+        <a id="detail-gcal-btn" href="#" target="_blank" rel="noopener" class="btn-outline">
+          📅 Add to Google Calendar
+        </a>
+      </div>
+
+      <!-- Share & Related Events -->
+      <hr style="margin: 2.5rem 0 1.5rem; border: none; border-top: 1px solid var(--cosy-border);">
+
+      <section>
+        <h3 class="hub-section-title" style="font-size: 1.1rem; margin-bottom: 0.75rem;">Share Event</h3>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn-outline" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');">🔗 Copy Event Link</button>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="hub-footer">
+    <p>COSYevents &copy; COSYlanguages Ecosystem. All registration flows back to main hub.</p>
+  </footer>
+
+</body>
+</html>

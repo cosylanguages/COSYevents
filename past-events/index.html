@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Events Archive - COSYlanguages</title>
+  <link rel="stylesheet" href="../shared/css/hub.css">
+  <link rel="stylesheet" href="../shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="../styles/calendar.css">
+</head>
+<body>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <span class="hub-brand">COSYlanguages Ecosystem</span>
+      <h1 class="hub-title">Past Events Archive</h1>
+      <p class="hub-subtitle">
+        Searchable archive of past speaking clubs, cinema nights, and workshops with downloadable materials and COSYmanuals links.
+      </p>
+      <nav class="hub-nav-links" aria-label="Ecosystem Links">
+        <a href="https://cosylanguages.github.io/COSYlanguages/" class="hub-nav-link" target="_blank" rel="noopener">Home</a>
+        <a href="https://cosylanguages.github.io/COSYgames/" class="hub-nav-link" target="_blank" rel="noopener">Games</a>
+        <a href="https://cosylanguages.github.io/COSYworld/" class="hub-nav-link" target="_blank" rel="noopener">World</a>
+        <a href="https://cosylanguages.github.io/COSYtools/" class="hub-nav-link" target="_blank" rel="noopener">Tools</a>
+        <a href="../index.html" class="hub-nav-link">Events Calendar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hub-main">
+    <!-- Search and Filter Bar -->
+    <section class="calendar-controls">
+      <div class="calendar-filters-row">
+        <div class="select-filter-group" style="flex:1;">
+          <input type="text" id="archive-search" class="calendar-select" placeholder="🔍 Search past topics, titles, or hosts..." style="width:100%;">
+        </div>
+        <div class="select-filter-group">
+          <label for="archive-lang-filter" class="select-filter-label">Language:</label>
+          <select id="archive-lang-filter" class="calendar-select">
+            <option value="all">All Languages</option>
+            <option value="English">English</option>
+            <option value="French">French</option>
+            <option value="Italian">Italian</option>
+            <option value="Russian">Russian</option>
+            <option value="Greek">Greek</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Archive List -->
+    <section class="calendar-section">
+      <h2 class="section-title">Past Events & Learning Materials</h2>
+
+      <div class="archive-events-grid">
+        <div class="event-card-item">
+          <div class="event-meta-header">
+            <span class="type-pill badge-speaking-club">Speaking Club</span>
+            <div class="lang-level-pills">
+              <span class="pill-sm">English</span>
+              <span class="pill-sm">B1</span>
+            </div>
+          </div>
+          <h3 class="event-card-title">Childhood Obesity Theory Debunked</h3>
+          <div class="event-datetime-info">📅 2025-04-10</div>
+          <p class="event-card-desc">Analyzing 42-year-old nutritional science assumptions and public health communication.</p>
+          <div class="event-card-actions">
+            <a href="../sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html" class="btn-outline">
+              📄 Access Discussion Deck
+            </a>
+            <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener" class="btn-outline">
+              📖 Related COSYmanuals
+            </a>
+          </div>
+        </div>
+
+        <div class="event-card-item">
+          <div class="event-meta-header">
+            <span class="type-pill badge-cinema-night">Cinema Night</span>
+            <div class="lang-level-pills">
+              <span class="pill-sm">English</span>
+              <span class="pill-sm">B1</span>
+            </div>
+          </div>
+          <h3 class="event-card-title">The Devil Wears Prada Cinema Session</h3>
+          <div class="event-datetime-info">📅 2025-04-18</div>
+          <p class="event-card-desc">Workplace ethics, fashion industry vocabulary, and corporate hierarchy dialogue analysis.</p>
+          <div class="event-card-actions">
+            <a href="../sessions/cinema-club/the-devil-wears-prada-intermediate.html" class="btn-outline">
+              🎬 Access Film Guide
+            </a>
+          </div>
+        </div>
+
+        <div class="event-card-item">
+          <div class="event-meta-header">
+            <span class="type-pill badge-speaking-club">Speaking Club</span>
+            <div class="lang-level-pills">
+              <span class="pill-sm">English</span>
+              <span class="pill-sm">B2</span>
+            </div>
+          </div>
+          <h3 class="event-card-title">Wisdom of Socrates & Examined Life</h3>
+          <div class="event-datetime-info">📅 2025-03-24</div>
+          <p class="event-card-desc">Socratic questioning techniques, philosophical quotes, and moral vocabulary study.</p>
+          <div class="event-card-actions">
+            <a href="../sessions/the-greatest-quotes/wisdom-of-socrates.html" class="btn-outline">
+              📄 Access Study Deck
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hub-footer">
+    <p>COSYevents &copy; COSYlanguages Ecosystem. Self-contained event archive.</p>
+  </footer>
+
+</body>
+</html>
