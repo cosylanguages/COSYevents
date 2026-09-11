@@ -136,5 +136,20 @@ In addition to the initial 180+ standalone session pages migrated from `COSYlang
 
 ---
 
+## 🌍 Final Catalog Reconciliation & Localized Hub Visibility (Pass 3)
+
+In this final reconciliation pass:
+- **Master Session Catalog (`data/sessions.json`):**
+  - Added all 44 French session HTML pages (`fr/sessions/`) into `data/sessions.json`.
+  - Reconciled all 41 Russian session HTML pages (`ru/sessions/`) and 532 English session HTML pages (`sessions/`).
+  - Total cataloged sessions in `data/sessions.json` brought to **617 session records**, all verified to exist on disk and render dynamically on `browse.html`.
+
+- **Localized Language Hub Visibility (`fr/` and `ru/`):**
+  - Updated `fr/speaking-clubs.html` and `fr/mind-matters.html` with organized session card grids displaying all 44 French sessions.
+  - Updated `ru/speaking-clubs.html` and `ru/mind-matters.html` with organized session card grids displaying all 41 Russian sessions.
+  - Resolved all stale relative links (e.g. `../../apps/premium-events/...`) across French and Russian hub pages.
+
+---
+
 ## 🛑 Status for Old Folder Retirement
-This migration log confirms that **100% of real session content, full standalone session HTML pages (513+ total files across all 5 event types), catalog entries (489+ sessions), pinned curation batches (16 batches), prompt decks, specifications, and structural decisions** from `COSYlanguages` have been mapped, restyled, reconciled, and verified working inside **COSYevents**.
+This migration log confirms that **100% of real session content, full standalone session HTML pages (617 total files across English, French, and Russian), catalog entries (617 sessions in master catalog), pinned curation batches (16 batches), prompt decks, specifications, and structural decisions** from `COSYlanguages` have been mapped, restyled, reconciled, and verified working inside **COSYevents**.
