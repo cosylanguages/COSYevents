@@ -41,7 +41,9 @@ Teachers and community facilitators can host or submit new sessions by updating 
   "host_bio": "Short Facilitator Bio",
   "description": "Comprehensive session description",
   "registration_link": "https://wa.me/...",
-  "materials": "https://cosylanguages.github.io/COSYevents/sessions/..."
+  "materials": "https://cosylanguages.github.io/COSYevents/sessions/...",
+  "conversionStatus": "not-planned | planned | converted",
+  "convertedLessonUrl": "https://cosylanguages.github.io/COSYplatform/lessons/..."
 }
 ```
 2. **Pedagogical Standards:** Ensure all session decks adhere to [docs/speaking-clubs-spec.md](docs/speaking-clubs-spec.md) and [docs/cinema-content-style-guide.md](docs/cinema-content-style-guide.md).
@@ -52,9 +54,12 @@ Teachers and community facilitators can host or submit new sessions by updating 
 
 **COSYevents** seamlessly integrates with sibling portals in the COSYlanguages ecosystem:
 - 🌐 **[COSYlanguages](https://cosylanguages.github.io/COSYlanguages/)** — Main portal and core curriculum.
+- 🎓 **[COSYplatform](https://cosylanguages.github.io/COSYplatform/)** — Where weekly speaking club sessions become full structured lessons for enrolled students.
 - 🛠️ **[COSYtools](https://cosylanguages.github.io/COSYtools/)** — Offline reference engines.
 - 🎮 **[COSYgames](https://cosylanguages.github.io/COSYgames/)** — Interactive linguistic minigame engines.
 - 🗺️ **[COSYworld](https://cosylanguages.github.io/COSYworld/)** — Cultural immersion maps.
+
+Additionally, COSYmanuals provides internal reference manuals and teacher documentation (accessible via direct unlisted links per its access model).
 
 ---
 

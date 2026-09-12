@@ -15,7 +15,9 @@
     "materials": "https://cosylanguages.github.io/COSYevents/sessions/i-couldnt-help-but-wonder/do-bisexuals-have-to-choose.html",
     "poster": "https://cosylanguages.github.io/COSYevents/assets/speaking-clubs-cover.jpg",
     "subtitles_info": null,
-    "synopsis": null
+    "synopsis": null,
+    "conversionStatus": "converted",
+    "convertedLessonUrl": "https://cosylanguages.github.io/COSYplatform/lessons/i-couldnt-help-but-wonder/do-bisexuals-have-to-choose"
   },
   {
     "id": "evt-2025-002",
@@ -87,7 +89,9 @@
     "materials": "https://cosylanguages.github.io/COSYevents/sessions/debatable-relatable/ai-and-art.html",
     "poster": null,
     "subtitles_info": null,
-    "synopsis": null
+    "synopsis": null,
+    "conversionStatus": "planned",
+    "convertedLessonUrl": null
   },
   {
     "id": "evt-2025-006",
@@ -141,7 +145,9 @@
     "materials": "https://cosylanguages.github.io/COSYevents/sessions/debatable-relatable/4-day-work-week.html",
     "poster": null,
     "subtitles_info": null,
-    "synopsis": null
+    "synopsis": null,
+    "conversionStatus": "not-planned",
+    "convertedLessonUrl": null
   },
   {
     "id": "evt-2025-009",
@@ -195,7 +201,9 @@
     "materials": "https://cosylanguages.github.io/COSYevents/sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html",
     "poster": null,
     "subtitles_info": null,
-    "synopsis": null
+    "synopsis": null,
+    "conversionStatus": "converted",
+    "convertedLessonUrl": "https://cosylanguages.github.io/COSYplatform/lessons/keeping-up-with-science/childhood-obesity"
   },
   {
     "id": "evt-2025-012",
