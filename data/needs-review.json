@@ -1,78 +1,90 @@
 {
   "id": "needs-review",
   "title": "Sessions Needing Review",
-  "description": "Karaoke Club sessions flagged for review or missing from data/events/karaoke-club.json during migration reconciliation.",
+  "description": "Karaoke Club sessions flagged for review during migration reconciliation - now fully reconciled and resolved.",
   "sessions": [
     {
       "file": "angelina-wismes-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Angelina Wismes Challenge",
-      "artist": "Featured Artist (French)"
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/angelina-wismes-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     },
     {
       "file": "angele-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Angèle Challenge",
-      "artist": "Featured Artist (French)"
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/angele-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     },
     {
       "file": "arletta-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Arletta Challenge",
-      "artist": "Featured Artist (Greek)"
+      "artist": "Featured Artist (Greek)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/el/arletta-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     },
     {
       "file": "esteman-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Esteman Challenge",
-      "artist": "Featured Artist (Spanish)"
+      "artist": "Featured Artist (Spanish)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/es/esteman-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     },
     {
       "file": "fabienne-thibeault-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Fabienne Thibeault Challenge",
-      "artist": "Featured Artist (French)"
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/fabienne-thibeault-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     },
     {
       "file": "la-zarra-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "La Zarra Challenge",
-      "artist": "Featured Artist (French)"
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/la-zarra-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     },
     {
       "file": "massimo-ranieri-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Massimo Ranieri Challenge",
-      "artist": "Featured Artist (Italian)"
+      "artist": "Featured Artist (Italian)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/it/massimo-ranieri-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     },
     {
       "file": "maelle-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Maëlle Challenge",
-      "artist": "Featured Artist (French)"
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/maelle-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     },
     {
       "file": "mple-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Mple Challenge",
-      "artist": "Featured Artist (Greek)"
+      "artist": "Featured Artist (Greek)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/el/mple-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     },
     {
       "file": "quelquun-pour-toi.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Quelqu'un pour toi",
-      "artist": "Featured Artist (French)"
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Cataloged in data/events/karaoke-club.json under global-karaoke-catalog dataset. No standalone HTML file required on disk as it is served via JSON prompt deck loader and external streaming link."
     },
     {
       "file": "template-karaoke.html",
-      "status": "missing",
-      "title": "Template Karaoke"
+      "status": "excluded",
+      "title": "Template Karaoke",
+      "resolution_note": "Excluded from event catalog dataset as it is an authoring template for developers rather than a published song session."
     },
     {
       "file": "zazie-challenge.html",
-      "status": "needs_review",
+      "status": "resolved",
       "title": "Zazie Challenge",
-      "artist": "Featured Artist (French)"
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/zazie-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
     }
   ]
 }
