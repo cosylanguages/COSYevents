@@ -591,6 +591,14 @@
   background: linear-gradient(135deg, #7C3AED, #6D28D9);
 }
 
+.live-event-card.card-karaoke {
+  background: linear-gradient(135deg, #DB2777, #BE185D);
+}
+
+.live-event-card.card-games {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
 .live-card-icon {
   font-size: 2rem;
   margin-bottom: 0.75rem;
