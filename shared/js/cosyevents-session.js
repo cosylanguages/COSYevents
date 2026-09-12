@@ -105,4 +105,76 @@
       });
     });
   }
+
+  // Lesson Conversion Banner logic
+  function renderConversionBanner(eventData) {
+    if (!eventData || !eventData.conversionStatus) return;
+    var status = eventData.conversionStatus;
+    if (status !== 'converted' && status !== 'planned') return;
+
+    var container = document.querySelector('.content-container') ||
+                    document.querySelector('main') ||
+                    document.body;
+    if (!container) return;
+
+    var banner = document.createElement('div');
+    banner.className = 'ce-conversion-banner';
+    banner.style.cssText = 'background: var(--cosy-color-honey-pale, #fff8e7); border: 1.5px solid var(--cosy-color-amber, #945e05); border-radius: 12px; padding: 0.9rem 1.25rem; margin: 1rem 0 1.5rem 0; font-size: 0.92rem; color: var(--cosy-color-amber-dark, #7d4d03); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; box-shadow: 0 2px 8px rgba(0,0,0,0.05); font-family: var(--cosy-font-sans, sans-serif);';
+
+    var textSpan = document.createElement('span');
+    textSpan.style.cssText = 'font-weight: 600; flex: 1; min-width: 200px;';
+
+    if (status === 'converted') {
+      var linkUrl = eventData.convertedLessonUrl || '#';
+      textSpan.innerHTML = '🎓 This session became a full COSYplatform lesson &rarr; <a href="' + linkUrl + '" target="_blank" rel="noopener" style="color: var(--cosy-color-amber-dark, #7d4d03); text-decoration: underline; font-weight: 700;">' + linkUrl + '</a>';
+    } else if (status === 'planned') {
+      textSpan.innerHTML = '⏳ This topic is scheduled to become a lesson soon.';
+    }
+
+    banner.appendChild(textSpan);
+
+    // Insert banner at top of main container or right after hero
+    var hero = document.querySelector('.session-hero') || document.querySelector('header');
+    if (hero && hero.nextSibling) {
+      hero.parentNode.insertBefore(banner, hero.nextSibling);
+    } else {
+      container.insertBefore(banner, container.firstChild);
+    }
+  }
+
+  function checkEventConversion() {
+    var eventsPath = root + 'shared/calendar-data/events.json';
+    fetch(eventsPath)
+      .then(function (res) {
+        if (!res.ok) return null;
+        return res.json();
+      })
+      .then(function (events) {
+        if (!events || !Array.isArray(events)) return;
+        var currentPath = window.location.pathname;
+        var matchedEvent = events.find(function (evt) {
+          if (!evt.materials) return false;
+          try {
+            var urlObj = new URL(evt.materials);
+            return urlObj.pathname.endsWith(currentPath.split('/').slice(-2).join('/')) ||
+                   currentPath.endsWith(urlObj.pathname.split('/').slice(-2).join('/'));
+          } catch (e) {
+            return evt.materials.indexOf(currentPath) !== -1 || currentPath.indexOf(evt.materials) !== -1;
+          }
+        });
+
+        if (matchedEvent) {
+          renderConversionBanner(matchedEvent);
+        }
+      })
+      .catch(function (err) {
+        // Silently ignore fetch errors if offline or relative path unresolvable
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', checkEventConversion);
+  } else {
+    checkEventConversion();
+  }
 })();

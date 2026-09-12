@@ -222,6 +222,14 @@
       const typeLabel = formatTypeLabel(evt.type);
       const convertedTime = convertTime(evt.date, evt.time, evt.timezone, userTimezone);
 
+      let conversionBannerHtml = '';
+      if (evt.conversionStatus === 'converted') {
+        const linkUrl = evt.convertedLessonUrl || '#';
+        conversionBannerHtml = `<div class="conversion-banner converted" style="background:#fff8e7; border:1px solid #945e05; border-radius:8px; padding:0.5rem 0.75rem; margin:0.5rem 0; font-size:0.85rem; color:#7d4d03; font-weight:600;">This session became a full COSYplatform lesson &rarr; <a href="${linkUrl}" target="_blank" rel="noopener" style="color:#7d4d03; text-decoration:underline; font-weight:700;">${linkUrl}</a></div>`;
+      } else if (evt.conversionStatus === 'planned') {
+        conversionBannerHtml = `<div class="conversion-banner planned" style="background:#fff8e7; border:1px solid #945e05; border-radius:8px; padding:0.5rem 0.75rem; margin:0.5rem 0; font-size:0.85rem; color:#7d4d03; font-weight:600;">This topic is scheduled to become a lesson soon.</div>`;
+      }
+
       card.innerHTML = `
         <div class="event-meta-header">
           <span class="type-pill badge-${evt.type}">${typeLabel}</span>
@@ -231,6 +239,7 @@
           </div>
         </div>
         <h3 class="event-card-title">${evt.title}</h3>
+        ${conversionBannerHtml}
         <div class="event-datetime-info">
           <span>📅 ${evt.date}</span>
           <span>⏰ ${evt.time} ${evt.timezone} (${convertedTime} ${userTimezone})</span>
@@ -279,6 +288,26 @@
     `;
 
     desc.textContent = evt.description;
+
+    let bannerElem = overlay.querySelector('.ce-modal-conversion-banner');
+    if (!bannerElem) {
+      bannerElem = document.createElement('div');
+      bannerElem.className = 'ce-modal-conversion-banner';
+      bannerElem.style.cssText = 'background:#fff8e7; border:1px solid #945e05; border-radius:8px; padding:0.6rem 0.8rem; margin:0.75rem 0; font-size:0.88rem; color:#7d4d03; font-weight:600;';
+      desc.parentNode.insertBefore(bannerElem, desc.nextSibling);
+    }
+
+    if (evt.conversionStatus === 'converted') {
+      const linkUrl = evt.convertedLessonUrl || '#';
+      bannerElem.innerHTML = `This session became a full COSYplatform lesson &rarr; <a href="${linkUrl}" target="_blank" rel="noopener" style="color:#7d4d03; text-decoration:underline; font-weight:700;">${linkUrl}</a>`;
+      bannerElem.style.display = 'block';
+    } else if (evt.conversionStatus === 'planned') {
+      bannerElem.textContent = 'This topic is scheduled to become a lesson soon.';
+      bannerElem.style.display = 'block';
+    } else {
+      bannerElem.style.display = 'none';
+    }
+
     host.innerHTML = `<strong>${evt.host}</strong> — ${evt.host_bio || 'COSYlanguages Facilitator'}`;
 
     const convertedTime = convertTime(evt.date, evt.time, evt.timezone, userTimezone);
