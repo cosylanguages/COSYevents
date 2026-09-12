@@ -507,3 +507,132 @@
     padding: 1rem;
   }
 }
+
+/* ── Live Events Section ───────────────────────────────────────────── */
+.live-events-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background: var(--cosy-surface, #ffffff);
+  border: 1px solid var(--cosy-border, rgba(74, 107, 80, 0.12));
+  border-radius: var(--cosy-radius, 16px);
+  padding: 2rem;
+  box-shadow: var(--cosy-shadow-sm, 0 2px 12px rgba(46, 74, 51, 0.07));
+}
+
+.live-events-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 868px) {
+  .live-events-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.live-events-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.live-events-heading {
+  font-family: var(--cosy-font-serif, serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cosy-primary-dark, #233827);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.live-events-subtext {
+  font-size: 0.95rem;
+  color: var(--cosy-text-muted, #5c5957);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.live-events-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 540px) {
+  .live-events-right {
+    grid-template-columns: 1fr;
+  }
+}
+
+.live-event-card {
+  border-radius: 14px;
+  padding: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.live-event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.live-event-card.card-speaking {
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+}
+
+.live-event-card.card-cinema {
+  background: linear-gradient(135deg, #7C3AED, #6D28D9);
+}
+
+.live-event-card.card-karaoke {
+  background: linear-gradient(135deg, #DB2777, #BE185D);
+}
+
+.live-event-card.card-games {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.live-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.live-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+  color: #ffffff;
+}
+
+.live-card-desc {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.92;
+  margin: 0 0 1.25rem 0;
+}
+
+.live-card-cta {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.live-card-cta:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateX(2px);
+}
