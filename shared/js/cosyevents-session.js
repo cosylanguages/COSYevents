@@ -1,5 +1,6 @@
 /* COSYevents session nav — lightweight, replaces the heavy COSYlanguages ui.js shell.
-   Builds a clean header matching the hub aesthetic. No dictionary/calendar/embedded-reader. */
+   Builds a clean header matching the hub aesthetic, and provides an interactive
+   Slide Deck Presentation system for all session pages. */
 (function () {
   'use strict';
 
@@ -33,14 +34,9 @@
     ['Cinema Club', 'cinema-club.html'],
     ['Karaoke Club', 'karaoke-club.html'],
     ['Long Reads', 'long-reads.html'],
+    ['Basic Speaking Club', 'basic-speaking-club.html']
   ];
 
-  var langLinks = {
-    en: [['FR', root.replace(/(sessions\/[^/]+\/)?$/, '') + 'fr/' + (location.pathname.split('/sessions/')[1] || 'index.html').replace(/^.*?sessions\//, 'sessions/')]],
-    fr: [['EN', root.replace(/\/fr\//, '/')]],
-    ru: [['EN', root.replace(/\/ru\//, '/')]]
-  };
-  // simpler language switcher: toggle to EN from fr/ru, or to fr from en
   var switcher = '';
   if (lang === 'en') {
     switcher = '<a class="ce-nav-lang" href="' + root.replace(/(sessions\/[^/]+\/)?$/, '') + 'fr/' + '">FR</a>';
@@ -49,61 +45,60 @@
   }
 
   var nav = document.getElementById('cosy-nav');
-  if (!nav) return;
+  if (nav) {
+    var html =
+      '<header class="ce-session-nav">' +
+        '<a class="ce-nav-brand" href="' + root + 'index.html">' +
+          '<img src="' + root + 'shared/images/logo.png" alt="COSYlanguages logo" />' +
+          '<span>COSY Events</span>' +
+        '</a>' +
+        '<nav class="ce-nav-links" aria-label="Event categories">' +
+          clubs.map(function (c) {
+            return '<a href="' + root + c[1] + '">' + c[0] + '</a>';
+          }).join('') +
+        '</nav>' +
+        '<div class="ce-nav-right">' +
+          switcher +
+          '<button class="ce-theme-btn" type="button" aria-label="Toggle dark mode"></button>' +
+          '<button class="ce-nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>' +
+        '</div>' +
+      '</header>';
 
-  var html =
-    '<header class="ce-session-nav">' +
-      '<a class="ce-nav-brand" href="' + root + 'index.html">' +
-        '<img src="' + root + 'shared/images/logo.png" alt="COSYlanguages logo" />' +
-        '<span>COSY Events</span>' +
-      '</a>' +
-      '<nav class="ce-nav-links" aria-label="Event categories">' +
-        clubs.map(function (c) {
-          return '<a href="' + root + c[1] + '">' + c[0] + '</a>';
-        }).join('') +
-      '</nav>' +
-      '<div class="ce-nav-right">' +
-        switcher +
-        '<button class="ce-theme-btn" type="button" aria-label="Toggle dark mode"></button>' +
-        '<button class="ce-nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>' +
-      '</div>' +
-    '</header>';
+    nav.innerHTML = html;
 
-  nav.innerHTML = html;
-
-  // Theme toggle
-  var btn = nav.querySelector('.ce-theme-btn');
-  var root_ = document.documentElement;
-  var stored = null;
-  try { stored = localStorage.getItem('ce-theme'); } catch (e) {}
-  var dark = stored === 'dark';
-  function applyTheme() {
-    root_.setAttribute('data-theme', dark ? 'dark' : 'light');
-    if (btn) btn.textContent = dark ? '☀' : '☾';
-  }
-  applyTheme();
-  if (btn) {
-    btn.addEventListener('click', function () {
-      dark = !dark;
-      try { localStorage.setItem('ce-theme', dark ? 'dark' : 'light'); } catch (e) {}
-      applyTheme();
-    });
-  }
-
-  // Mobile hamburger toggle
-  var toggle = nav.querySelector('.ce-nav-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var open = nav.querySelector('.ce-session-nav').classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    // close menu when a link is tapped
-    nav.querySelectorAll('.ce-nav-links a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        nav.querySelector('.ce-session-nav').classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
+    // Theme toggle
+    var btn = nav.querySelector('.ce-theme-btn');
+    var root_ = document.documentElement;
+    var stored = null;
+    try { stored = localStorage.getItem('ce-theme'); } catch (e) {}
+    var dark = stored === 'dark';
+    var applyTheme = function() {
+      root_.setAttribute('data-theme', dark ? 'dark' : 'light');
+      if (btn) btn.textContent = dark ? '☀' : '☾';
+    };
+    applyTheme();
+    if (btn) {
+      btn.addEventListener('click', function () {
+        dark = !dark;
+        try { localStorage.setItem('ce-theme', dark ? 'dark' : 'light'); } catch (e) {}
+        applyTheme();
       });
-    });
+    }
+
+    // Mobile hamburger toggle
+    var toggle = nav.querySelector('.ce-nav-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var open = nav.querySelector('.ce-session-nav').classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('.ce-nav-links a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.querySelector('.ce-session-nav').classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
   }
 
   // Lesson Conversion Banner logic
@@ -133,7 +128,6 @@
 
     banner.appendChild(textSpan);
 
-    // Insert banner at top of main container or right after hero
     var hero = document.querySelector('.session-hero') || document.querySelector('header');
     if (hero && hero.nextSibling) {
       hero.parentNode.insertBefore(banner, hero.nextSibling);
@@ -167,14 +161,283 @@
           renderConversionBanner(matchedEvent);
         }
       })
-      .catch(function (err) {
-        // Silently ignore fetch errors if offline or relative path unresolvable
+      .catch(function () {});
+  }
+
+  /* ──────────────────────────────────────────────────────────────
+     INTERACTIVE SLIDE DECK PRESENTATION SYSTEM
+     Converts session sections/rounds into step-by-step slides.
+     ────────────────────────────────────────────────────────────── */
+  function initSlideDeck() {
+    var container = document.querySelector('.session-container') ||
+                    document.querySelector('.content-container') ||
+                    document.querySelector('.session-grid') ||
+                    document.querySelector('main');
+    if (!container) return;
+
+    var slides = [];
+
+    // Check Strategy A: explicit .session-section elements (e.g. Basic Speaking Club)
+    var explicitSections = container.querySelectorAll('.session-section');
+    if (explicitSections.length > 1) {
+      explicitSections.forEach(function (el, idx) {
+        var h = el.querySelector('h1, h2, h3, h4');
+        var title = h ? h.textContent.trim() : ('Slide ' + (idx + 1));
+        slides.push({
+          element: el,
+          title: title
+        });
       });
+    } else {
+      // Check Strategy B: standard COSYevents sessions with rounds / vocabulary / meta
+      var roundBlocks = Array.from(container.querySelectorAll('.round-block, .mistake-block'));
+      var vocabSection = container.querySelector('#vocabulary, .vocab-grid-10');
+
+      // Group 0: Overview (meta grid, debate duel box, snapshot, intro text)
+      var metaGrid = container.querySelector('.session-meta-grid, .debate-duel-box, .theme-box, .perspective-mirror-box, .science-journal-box, .life-ledger-box, .mind-profile-box, .wonder-column-box');
+      if (metaGrid) {
+        var overviewChildren = [];
+        var overviewWrapper = document.createElement('div');
+        overviewWrapper.className = 'ce-slide-overview-wrapper';
+
+        var stopsAt = vocabSection || (roundBlocks.length > 0 ? roundBlocks[0] : null);
+        var current = container.firstElementChild;
+        while (current && current !== stopsAt) {
+          var next = current.nextElementSibling;
+          if (!current.classList.contains('cosy-breadcrumbs') &&
+              !current.classList.contains('back-link') &&
+              !current.classList.contains('section-title') &&
+              current.tagName !== 'NAV') {
+            overviewChildren.push(current);
+          }
+          current = next;
+        }
+
+        if (overviewChildren.length > 0) {
+          overviewChildren[0].parentNode.insertBefore(overviewWrapper, overviewChildren[0]);
+          overviewChildren.forEach(function (child) {
+            overviewWrapper.appendChild(child);
+          });
+          slides.push({
+            element: overviewWrapper,
+            title: 'Overview'
+          });
+        }
+      }
+
+      // Group 1: Vocabulary
+      if (vocabSection) {
+        var vocabTitle = 'Vocabulary';
+        var parentSection = vocabSection.closest('section');
+        var vocabSlideElem = parentSection || vocabSection;
+        slides.push({
+          element: vocabSlideElem,
+          title: vocabTitle
+        });
+      }
+
+      // Group 2..N: Round blocks and mistake blocks
+      if (roundBlocks.length > 0) {
+        roundBlocks.forEach(function (rb) {
+          var headerSpan = rb.querySelector('.round-header span, .mistake-header span');
+          var titleText = headerSpan ? headerSpan.textContent.trim() : 'Round';
+          slides.push({
+            element: rb,
+            title: titleText
+          });
+        });
+      }
+    }
+
+    if (slides.length <= 1) return; // Not enough content to warrant a slide deck
+
+    // Tag slides with classes
+    slides.forEach(function (item, idx) {
+      item.element.classList.add('ce-slide-item');
+      item.element.setAttribute('data-slide-index', idx);
+    });
+
+    // Create Slide Navigation Controls Container
+    var deckControls = document.createElement('div');
+    deckControls.className = 'ce-slide-deck-bar';
+
+    var currentSlideIndex = 0;
+    var isSlideMode = true; // Default view mode: Slide presentation mode
+
+    var tabPillsHtml = slides.map(function (s, idx) {
+      // Clean up title for pill display (remove leading numbers, dots, spaces)
+      var shortTitle = s.title.replace(/^[0-9\.\s:]+/, '').trim();
+      if (!shortTitle) shortTitle = s.title.trim();
+      if (shortTitle.length > 25) shortTitle = shortTitle.substring(0, 22) + '...';
+      return '<button type="button" class="ce-slide-tab ' + (idx === 0 ? 'active' : '') + '" data-slide-goto="' + idx + '">' +
+               '<span class="ce-tab-num">' + (idx + 1) + '</span> ' + shortTitle +
+             '</button>';
+    }).join('');
+
+    deckControls.innerHTML =
+      '<div class="ce-slide-deck-header">' +
+        '<div class="ce-slide-tabs-scroll">' +
+          '<div class="ce-slide-tabs">' + tabPillsHtml + '</div>' +
+        '</div>' +
+        '<div class="ce-slide-mode-toggle">' +
+          '<button type="button" class="ce-view-btn ce-btn-slides active" title="Slide Presentation Mode">📺 Slides</button>' +
+          '<button type="button" class="ce-view-btn ce-btn-scroll" title="Scroll View Mode">📜 Scroll</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="ce-slide-progress-track">' +
+        '<div class="ce-slide-progress-fill" style="width: ' + Math.round(1 / slides.length * 100) + '%;"></div>' +
+      '</div>' +
+      '<div class="ce-slide-deck-footer">' +
+        '<button type="button" class="ce-slide-nav-btn ce-prev-btn" disabled>← Previous</button>' +
+        '<span class="ce-slide-counter">Slide <strong class="ce-curr-num">1</strong> of ' + slides.length + '</span>' +
+        '<button type="button" class="ce-slide-nav-btn ce-next-btn">Next →</button>' +
+        '<button type="button" class="ce-slide-fs-btn" title="Fullscreen Mode">⛶ Fullscreen</button>' +
+      '</div>';
+
+    // Insert controls above the container (or right below hero)
+    var insertTarget = document.querySelector('.session-hero') || container;
+    if (insertTarget.classList.contains('session-hero') && insertTarget.nextSibling) {
+      insertTarget.parentNode.insertBefore(deckControls, insertTarget.nextSibling);
+    } else {
+      container.parentNode.insertBefore(deckControls, container);
+    }
+
+    var bodyElem = document.body;
+    bodyElem.classList.add('ce-slide-deck-present');
+
+    var tabs = deckControls.querySelectorAll('.ce-slide-tab');
+    var prevBtn = deckControls.querySelector('.ce-prev-btn');
+    var nextBtn = deckControls.querySelector('.ce-next-btn');
+    var counterNum = deckControls.querySelector('.ce-curr-num');
+    var progressFill = deckControls.querySelector('.ce-slide-progress-fill');
+    var slidesBtn = deckControls.querySelector('.ce-btn-slides');
+    var scrollBtn = deckControls.querySelector('.ce-btn-scroll');
+    var fsBtn = deckControls.querySelector('.ce-slide-fs-btn');
+
+    function updateSlideDisplay() {
+      if (!isSlideMode) {
+        bodyElem.classList.remove('ce-slide-mode-active');
+        slides.forEach(function (s) {
+          s.element.classList.remove('ce-slide-active', 'ce-slide-hidden');
+        });
+        return;
+      }
+
+      bodyElem.classList.add('ce-slide-mode-active');
+
+      slides.forEach(function (s, idx) {
+        if (idx === currentSlideIndex) {
+          s.element.classList.add('ce-slide-active');
+          s.element.classList.remove('ce-slide-hidden');
+          if (s.element.classList.contains('round-block') || s.element.classList.contains('mistake-block')) {
+            s.element.classList.add('open');
+            var body = s.element.querySelector('.round-body, .mistake-body');
+            if (body) body.style.display = 'block';
+          }
+        } else {
+          s.element.classList.remove('ce-slide-active');
+          s.element.classList.add('ce-slide-hidden');
+        }
+      });
+
+      // Update Tabs
+      tabs.forEach(function (tab, idx) {
+        if (idx === currentSlideIndex) {
+          tab.classList.add('active');
+          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+
+      // Update Navigation Buttons & Counter
+      prevBtn.disabled = currentSlideIndex === 0;
+      nextBtn.disabled = currentSlideIndex === slides.length - 1;
+      counterNum.textContent = currentSlideIndex + 1;
+      progressFill.style.width = Math.round((currentSlideIndex + 1) / slides.length * 100) + '%';
+    }
+
+    function goToSlide(idx) {
+      if (idx < 0 || idx >= slides.length) return;
+      currentSlideIndex = idx;
+      updateSlideDisplay();
+
+      deckControls.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Event Listeners for Slide Deck
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var idx = parseInt(tab.getAttribute('data-slide-goto'), 10);
+        goToSlide(idx);
+      });
+    });
+
+    prevBtn.addEventListener('click', function () {
+      if (currentSlideIndex > 0) goToSlide(currentSlideIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', function () {
+      if (currentSlideIndex < slides.length - 1) goToSlide(currentSlideIndex + 1);
+    });
+
+    slidesBtn.addEventListener('click', function () {
+      isSlideMode = true;
+      slidesBtn.classList.add('active');
+      scrollBtn.classList.remove('active');
+      updateSlideDisplay();
+    });
+
+    scrollBtn.addEventListener('click', function () {
+      isSlideMode = false;
+      scrollBtn.classList.add('active');
+      slidesBtn.classList.remove('active');
+      updateSlideDisplay();
+    });
+
+    fsBtn.addEventListener('click', function () {
+      if (!document.fullscreenElement) {
+        if (container.requestFullscreen) {
+          container.requestFullscreen();
+        } else if (container.webkitRequestFullscreen) {
+          container.webkitRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    });
+
+    // Keyboard Arrow Navigation
+    document.addEventListener('keydown', function (e) {
+      if (!isSlideMode) return;
+      if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(document.activeElement.tagName) !== -1) return;
+
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+        if (currentSlideIndex < slides.length - 1) {
+          e.preventDefault();
+          goToSlide(currentSlideIndex + 1);
+        }
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        if (currentSlideIndex > 0) {
+          e.preventDefault();
+          goToSlide(currentSlideIndex - 1);
+        }
+      }
+    });
+
+    // Initialize display state
+    updateSlideDisplay();
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', checkEventConversion);
+    document.addEventListener('DOMContentLoaded', function() {
+      checkEventConversion();
+      initSlideDeck();
+    });
   } else {
     checkEventConversion();
+    initSlideDeck();
   }
 })();
