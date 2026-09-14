@@ -43,7 +43,7 @@ Teachers and community facilitators can host or submit new sessions by updating 
   "registration_link": "https://wa.me/...",
   "materials": "https://cosylanguages.github.io/COSYevents/sessions/...",
   "conversionStatus": "not-planned | planned | converted",
-  "convertedLessonUrl": "https://cosylanguages.github.io/COSYplatform/lessons/..."
+  "convertedLessonUrl": "https://cosylanguages.github.io/COSYplatform/..."
 }
 ```
 2. **Pedagogical Standards:** Ensure all session decks adhere to [docs/speaking-clubs-spec.md](docs/speaking-clubs-spec.md) and [docs/cinema-content-style-guide.md](docs/cinema-content-style-guide.md).
@@ -66,3 +66,11 @@ Additionally, COSYmanuals provides internal reference manuals and teacher docume
 ## 🚀 Running Locally
 
 Open `index.html` directly in any web browser or serve with any static HTTP server. No Node.js build step or backend database required!
+
+
+## Documentation & Specifications
+- [Speaking Clubs Specification](docs/speaking-clubs-spec.md)
+- [Cinema Content Style Guide](docs/cinema-content-style-guide.md)
+- [Cinema Inventory](docs/cinema-inventory.md)
+- [Rules Template](docs/rules-template.md)
+- [Structure Audit Report](docs/STRUCTURE_AUDIT.md)
