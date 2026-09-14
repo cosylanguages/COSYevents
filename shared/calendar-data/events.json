@@ -222,5 +222,22 @@
     "poster": "https://cosylanguages.github.io/COSYevents/assets/prada-poster.jpg",
     "subtitles_info": "English Audio + English Subtitles",
     "synopsis": "A smart but sensible young graduate lands a job as an assistant to a demanding fashion magazine editor."
+  },
+  {
+    "id": "evt-2025-020",
+    "title": "A0–A1 Basic Speaking Club Launch",
+    "type": "speaking-club",
+    "language": "English",
+    "level": "A1",
+    "date": "2027-01-15",
+    "time": "18:00",
+    "timezone": "CET",
+    "host": "COSY Teacher Team",
+    "host_bio": "Experienced ESL beginner coaches specializing in safe adult conversation delivery.",
+    "description": "Launch session for the A0–A1 Basic Adult Speaking Club curriculum covering introductions, career choices, daily schedules, and guided adult conversation.",
+    "registration_link": "https://wa.me/330766784195",
+    "materials": "https://cosylanguages.github.io/COSYevents/basic-speaking-club.html",
+    "conversionStatus": "planned",
+    "convertedLessonUrl": null
   }
 ]

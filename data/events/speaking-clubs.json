@@ -4,6 +4,777 @@
   "description": "Topic-driven discussion sessions with handcrafted vocabulary, level calibration (A2–C1), and structured speaking rounds.",
   "clubs": [
     {
+      "id": "basic-speaking-club",
+      "title": "Basic Speaking Club (A0–A1)",
+      "description": "Safe, structured, beginner-friendly adult discussion sessions covering high-utility vocabulary, daily routines, work choices, food, money, and personal choices.",
+      "level_range": "A0–A1",
+      "prompts": [
+        {
+          "level": "A0",
+          "category": "Introductions & First Impressions",
+          "text": "What is your name, country, and favorite hobby?"
+        },
+        {
+          "level": "A1",
+          "category": "Work & Career Choices",
+          "text": "Do you prefer working remotely from home or in an office?"
+        },
+        {
+          "level": "A1",
+          "category": "Time Management & Priorities",
+          "text": "What is your non-negotiable morning routine habit?"
+        }
+      ],
+      "pinnedBatches": [
+        {
+          "title": "🌱 A0–A1 Adult Foundations Series",
+          "description": "Master essential beginner sentence frames, high-utility vocabulary, and adult discussion confidence.",
+          "levels": [
+            "A0",
+            "A1"
+          ],
+          "sessions": [
+            {
+              "title": "Session 1: Introductions & First Impressions (A0–A1)",
+              "href": "../sessions/basic-speaking-club/session-1-introductions-and-first-impressions.html"
+            },
+            {
+              "title": "Session 2: Work & Career Choices (A0–A1)",
+              "href": "../sessions/basic-speaking-club/session-2-work-and-career-choices.html"
+            },
+            {
+              "title": "Session 3: Time Management & Priorities (A0–A1)",
+              "href": "../sessions/basic-speaking-club/session-3-time-management-and-daily-priorities.html"
+            }
+          ]
+        }
+      ],
+      "sessions": [
+        {
+          "id": "bsc-1",
+          "title": "Introductions & First Impressions",
+          "date": "15 January 2027",
+          "topic": "First Impressions & Identity",
+          "url": "sessions/basic-speaking-club/session-1-introductions-and-first-impressions.html"
+        },
+        {
+          "id": "bsc-2",
+          "title": "Work & Career Choices",
+          "date": "22 January 2027",
+          "topic": "Work & Career Choices",
+          "url": "sessions/basic-speaking-club/session-2-work-and-career-choices.html"
+        },
+        {
+          "id": "bsc-3",
+          "title": "Time Management & Daily Priorities",
+          "date": "29 January 2027",
+          "topic": "Time Management & Routines",
+          "url": "sessions/basic-speaking-club/session-3-time-management-and-daily-priorities.html"
+        },
+        {
+          "id": "bsc-4",
+          "title": "Family Roles & Responsibilities",
+          "date": "5 February 2027",
+          "topic": "Family & Household Dynamics",
+          "url": "sessions/basic-speaking-club/session-4-family-roles-and-responsibilities.html"
+        },
+        {
+          "id": "bsc-5",
+          "title": "Appearance & First Judgments",
+          "date": "12 February 2027",
+          "topic": "Appearance & Fashion Standards",
+          "url": "sessions/basic-speaking-club/session-5-appearance-and-first-judgments.html"
+        },
+        {
+          "id": "bsc-6",
+          "title": "Morning Routines & Productivity",
+          "date": "19 February 2027",
+          "topic": "Morning Habits & Energy",
+          "url": "sessions/basic-speaking-club/session-6-morning-routines-and-productivity.html"
+        },
+        {
+          "id": "bsc-7",
+          "title": "Evening Wind-Down & Work-Life Balance",
+          "date": "26 February 2027",
+          "topic": "Relaxation & Work-Life Balance",
+          "url": "sessions/basic-speaking-club/session-7-evening-wind-down-and-work-life-balance.html"
+        },
+        {
+          "id": "bsc-8",
+          "title": "Home & Living Preferences",
+          "date": "5 March 2027",
+          "topic": "Housing & Neighborhoods",
+          "url": "sessions/basic-speaking-club/session-8-home-and-living-preferences.html"
+        },
+        {
+          "id": "bsc-9",
+          "title": "Minimalism vs. Comfort at Home",
+          "date": "12 March 2027",
+          "topic": "Interior Design & Living Spaces",
+          "url": "sessions/basic-speaking-club/session-9-minimalism-vs-comfort-at-home.html"
+        },
+        {
+          "id": "bsc-10",
+          "title": "Food Culture & Personal Taste",
+          "date": "19 March 2027",
+          "topic": "Food Traditions & Diets",
+          "url": "sessions/basic-speaking-club/session-10-food-culture-and-personal-taste.html"
+        },
+        {
+          "id": "bsc-11",
+          "title": "Restaurants & Social Eating",
+          "date": "26 March 2027",
+          "topic": "Dining Out & Social Food",
+          "url": "sessions/basic-speaking-club/session-11-restaurants-and-social-eating.html"
+        },
+        {
+          "id": "bsc-12",
+          "title": "Money Habits & Spending Priorities",
+          "date": "2 April 2027",
+          "topic": "Personal Finance & Spending",
+          "url": "sessions/basic-speaking-club/session-12-money-habits-and-spending-priorities.html"
+        },
+        {
+          "id": "bsc-13",
+          "title": "Fashion & Identity",
+          "date": "9 April 2027",
+          "topic": "Fashion & Self-Expression",
+          "url": "sessions/basic-speaking-club/session-13-fashion-and-identity.html"
+        },
+        {
+          "id": "bsc-14",
+          "title": "Weather & Lifestyle Choices",
+          "date": "16 April 2027",
+          "topic": "Climate & Mood",
+          "url": "sessions/basic-speaking-club/session-14-weather-and-lifestyle-choices.html"
+        },
+        {
+          "id": "bsc-15",
+          "title": "Hobbies & Personal Growth",
+          "date": "23 April 2027",
+          "topic": "Interests & Self-Improvement",
+          "url": "sessions/basic-speaking-club/session-15-hobbies-and-personal-growth.html"
+        },
+        {
+          "id": "bsc-16",
+          "title": "Sports, Health & Competition",
+          "date": "30 April 2027",
+          "topic": "Exercise & Competition",
+          "url": "sessions/basic-speaking-club/session-16-sports-health-and-competition.html"
+        },
+        {
+          "id": "bsc-17",
+          "title": "City Life vs. Small Town",
+          "date": "7 May 2027",
+          "topic": "Urban vs. Rural Living",
+          "url": "sessions/basic-speaking-club/session-17-city-life-vs-small-town.html"
+        },
+        {
+          "id": "bsc-18",
+          "title": "Transport Choices & Sustainability",
+          "date": "14 May 2027",
+          "topic": "Commuting & Transit",
+          "url": "sessions/basic-speaking-club/session-18-transport-choices-and-sustainability.html"
+        },
+        {
+          "id": "bsc-19",
+          "title": "Job Satisfaction & Motivation",
+          "date": "21 May 2027",
+          "topic": "Career Fulfillment & Motivation",
+          "url": "sessions/basic-speaking-club/session-19-job-satisfaction-and-motivation.html"
+        },
+        {
+          "id": "bsc-20",
+          "title": "Emotions & Mental Wellbeing",
+          "date": "28 May 2027",
+          "topic": "Emotions & Stress Management",
+          "url": "sessions/basic-speaking-club/session-20-emotions-and-mental-wellbeing.html"
+        },
+        {
+          "id": "bsc-21",
+          "title": "Health Choices & Prevention",
+          "date": "4 June 2027",
+          "topic": "Healthcare & Wellness",
+          "url": "sessions/basic-speaking-club/session-21-health-choices-and-prevention.html"
+        },
+        {
+          "id": "bsc-22",
+          "title": "Time Perception & Punctuality",
+          "date": "11 June 2027",
+          "topic": "Punctuality & Cultural Norms",
+          "url": "sessions/basic-speaking-club/session-22-time-perception-and-punctuality.html"
+        },
+        {
+          "id": "bsc-23",
+          "title": "Shopping Ethics & Consumer Choices",
+          "date": "18 June 2027",
+          "topic": "Ethical Consumerism",
+          "url": "sessions/basic-speaking-club/session-23-shopping-ethics-and-consumer-choices.html"
+        },
+        {
+          "id": "bsc-24",
+          "title": "Healthcare Access & Expectations",
+          "date": "25 June 2027",
+          "topic": "Medical Services & Access",
+          "url": "sessions/basic-speaking-club/session-24-healthcare-access-and-expectations.html"
+        },
+        {
+          "id": "bsc-25",
+          "title": "Travel Mindset & Cultural Curiosity",
+          "date": "2 July 2027",
+          "topic": "Travel Styles & Exploration",
+          "url": "sessions/basic-speaking-club/session-25-travel-mindset-and-cultural-curiosity.html"
+        },
+        {
+          "id": "bsc-26",
+          "title": "Social Plans & Boundaries",
+          "date": "9 July 2027",
+          "topic": "Social Life & Boundaries",
+          "url": "sessions/basic-speaking-club/session-26-social-plans-and-boundaries.html"
+        },
+        {
+          "id": "bsc-27",
+          "title": "Navigation & Independence",
+          "date": "16 July 2027",
+          "topic": "Maps, Tech & Independence",
+          "url": "sessions/basic-speaking-club/session-27-navigation-and-independence.html"
+        },
+        {
+          "id": "bsc-28",
+          "title": "Learning Styles & Education Memories",
+          "date": "23 July 2027",
+          "topic": "Learning & Education Systems",
+          "url": "sessions/basic-speaking-club/session-28-learning-styles-and-education-memories.html"
+        },
+        {
+          "id": "bsc-29",
+          "title": "Session 29: Tech Dependence & Digital Habits",
+          "date": "30 July 2027",
+          "topic": "Digital Habits & Screen Time",
+          "url": "sessions/basic-speaking-club/session-29-tech-dependence-and-digital-habits.html"
+        },
+        {
+          "id": "bsc-30",
+          "title": "Session 30: Life Reflections & Future Hopes",
+          "date": "6 August 2027",
+          "topic": "Reflections & Future Ambitions",
+          "url": "sessions/basic-speaking-club/session-30-life-reflections-and-future-hopes.html"
+        }
+      ],
+      "promptDecks": [
+        {
+          "id": "deck-bsc-1",
+          "title": "Introductions & First Impressions",
+          "grammarFocus": "to be + adjectives (I am from… / It is interesting)",
+          "vocabulary": [
+            "name",
+            "country",
+            "city",
+            "job",
+            "hobby",
+            "language",
+            "family",
+            "age",
+            "married/single",
+            "interesting"
+          ]
+        },
+        {
+          "id": "deck-bsc-2",
+          "title": "Work & Career Choices",
+          "grammarFocus": "Present simple for routines (I work… / She doesn’t work…)",
+          "vocabulary": [
+            "job",
+            "boss",
+            "colleague",
+            "office",
+            "salary",
+            "shift",
+            "remote",
+            "part-time",
+            "full-time",
+            "career"
+          ]
+        },
+        {
+          "id": "deck-bsc-3",
+          "title": "Time Management & Daily Priorities",
+          "grammarFocus": "What time…? / I usually… at…",
+          "vocabulary": [
+            "morning",
+            "evening",
+            "schedule",
+            "deadline",
+            "late",
+            "early",
+            "busy",
+            "free time",
+            "priority",
+            "routine"
+          ]
+        },
+        {
+          "id": "deck-bsc-4",
+          "title": "Family Roles & Responsibilities",
+          "grammarFocus": "Have got / has got (I’ve got two brothers. She’s got three children.)",
+          "vocabulary": [
+            "parent",
+            "child",
+            "sibling",
+            "responsibility",
+            "support",
+            "care",
+            "tradition",
+            "generation",
+            "household",
+            "respect"
+          ]
+        },
+        {
+          "id": "deck-bsc-5",
+          "title": "Appearance & First Judgments",
+          "grammarFocus": "Adjectives to describe people (He looks… / She dresses…)",
+          "vocabulary": [
+            "style",
+            "fashion",
+            "uniform",
+            "tattoo",
+            "piercing",
+            "makeup",
+            "hairstyle",
+            "professional",
+            "casual",
+            "neat"
+          ]
+        },
+        {
+          "id": "deck-bsc-6",
+          "title": "Morning Routines & Productivity",
+          "grammarFocus": "Adverbs of frequency (always, usually, sometimes, never)",
+          "vocabulary": [
+            "alarm",
+            "coffee",
+            "exercise",
+            "shower",
+            "breakfast",
+            "commute",
+            "news",
+            "podcast",
+            "stretch",
+            "plan"
+          ]
+        },
+        {
+          "id": "deck-bsc-7",
+          "title": "Evening Wind-Down & Work-Life Balance",
+          "grammarFocus": "Like / don’t like + -ing (I like reading. I don’t like watching TV.)",
+          "vocabulary": [
+            "relax",
+            "unwind",
+            "screen",
+            "book",
+            "walk",
+            "music",
+            "family time",
+            "hobby",
+            "sleep",
+            "stress"
+          ]
+        },
+        {
+          "id": "deck-bsc-8",
+          "title": "Home & Living Preferences",
+          "grammarFocus": "There is / There are + opinions (There is a park. It’s good because…)",
+          "vocabulary": [
+            "apartment",
+            "neighborhood",
+            "rent",
+            "mortgage",
+            "roommate",
+            "landlord",
+            "quiet",
+            "noisy",
+            "safe",
+            "convenient"
+          ]
+        },
+        {
+          "id": "deck-bsc-9",
+          "title": "Minimalism vs. Comfort at Home",
+          "grammarFocus": "Prepositions of place + reasons (The sofa is next to… because…)",
+          "vocabulary": [
+            "clutter",
+            "organize",
+            "decorate",
+            "furniture",
+            "storage",
+            "clean",
+            "tidy",
+            "cozy",
+            "simple",
+            "spacious"
+          ]
+        },
+        {
+          "id": "deck-bsc-10",
+          "title": "Food Culture & Personal Taste",
+          "grammarFocus": "Like / love / hate + noun/gerund (I love spicy food. I hate cooking.)",
+          "vocabulary": [
+            "cuisine",
+            "spicy",
+            "healthy",
+            "fast food",
+            "home-cooked",
+            "vegetarian",
+            "diet",
+            "snack",
+            "portion",
+            "ingredient"
+          ]
+        },
+        {
+          "id": "deck-bsc-11",
+          "title": "Restaurants & Social Eating",
+          "grammarFocus": "I would like… / Could I…? + opinions (I would like… / The service is slow.)",
+          "vocabulary": [
+            "reservation",
+            "tip",
+            "service",
+            "atmosphere",
+            "menu",
+            "vegetarian option",
+            "bill",
+            "share",
+            "order",
+            "recommend"
+          ]
+        },
+        {
+          "id": "deck-bsc-12",
+          "title": "Money Habits & Spending Priorities",
+          "grammarFocus": "How much…? / It costs… + comparisons (It’s too expensive. It’s worth it.)",
+          "vocabulary": [
+            "budget",
+            "save",
+            "spend",
+            "debt",
+            "bill",
+            "discount",
+            "luxury",
+            "essential",
+            "cash",
+            "credit card"
+          ]
+        },
+        {
+          "id": "deck-bsc-13",
+          "title": "Fashion & Identity",
+          "grammarFocus": "Comparatives (cheaper than, more comfortable than)",
+          "vocabulary": [
+            "brand",
+            "second-hand",
+            "outfit",
+            "trend",
+            "comfortable",
+            "stylish",
+            "expensive",
+            "cheap",
+            "fit",
+            "occasion"
+          ]
+        },
+        {
+          "id": "deck-bsc-14",
+          "title": "Weather & Lifestyle Choices",
+          "grammarFocus": "It is + adjective + for + activity (It’s too cold for walking.)",
+          "vocabulary": [
+            "climate",
+            "season",
+            "humid",
+            "dry",
+            "heatwave",
+            "freeze",
+            "forecast",
+            "outdoor",
+            "indoor",
+            "adapt"
+          ]
+        },
+        {
+          "id": "deck-bsc-15",
+          "title": "Hobbies & Personal Growth",
+          "grammarFocus": "Like / enjoy + -ing + because (I enjoy painting because it’s relaxing.)",
+          "vocabulary": [
+            "skill",
+            "hobby",
+            "craft",
+            "instrument",
+            "sport",
+            "creative",
+            "relax",
+            "challenge",
+            "improve",
+            "goal"
+          ]
+        },
+        {
+          "id": "deck-bsc-16",
+          "title": "Sports, Health & Competition",
+          "grammarFocus": "Play / go / do + opinion (I play football. It’s fun because…)",
+          "vocabulary": [
+            "gym",
+            "team",
+            "match",
+            "fitness",
+            "injury",
+            "coach",
+            "win",
+            "lose",
+            "train",
+            "compete"
+          ]
+        },
+        {
+          "id": "deck-bsc-17",
+          "title": "City Life vs. Small Town",
+          "grammarFocus": "Comparatives + reasons (The city is bigger but noisier.)",
+          "vocabulary": [
+            "traffic",
+            "pollution",
+            "crowd",
+            "facility",
+            "community",
+            "event",
+            "convenience",
+            "peace",
+            "opportunity",
+            "commute"
+          ]
+        },
+        {
+          "id": "deck-bsc-18",
+          "title": "Transport Choices & Sustainability",
+          "grammarFocus": "By + transport + preference (I go by bike. It’s healthier.)",
+          "vocabulary": [
+            "public transport",
+            "bike lane",
+            "electric car",
+            "traffic jam",
+            "fare",
+            "emission",
+            "walkable",
+            "parking",
+            "rush hour",
+            "eco-friendly"
+          ]
+        },
+        {
+          "id": "deck-bsc-19",
+          "title": "Job Satisfaction & Motivation",
+          "grammarFocus": "Find + noun + adjective (I find my job stressful.)",
+          "vocabulary": [
+            "passion",
+            "burnout",
+            "promotion",
+            "recognition",
+            "workload",
+            "flexible",
+            "meaningful",
+            "routine",
+            "stress",
+            "balance"
+          ]
+        },
+        {
+          "id": "deck-bsc-20",
+          "title": "Emotions & Mental Wellbeing",
+          "grammarFocus": "Feel + adjective + when (I feel stressed when…)",
+          "vocabulary": [
+            "stress",
+            "anxiety",
+            "calm",
+            "overwhelmed",
+            "motivated",
+            "lonely",
+            "supported",
+            "confident",
+            "mood",
+            "cope"
+          ]
+        },
+        {
+          "id": "deck-bsc-21",
+          "title": "Health Choices & Prevention",
+          "grammarFocus": "Should / shouldn’t + advice (You should sleep more.)",
+          "vocabulary": [
+            "check-up",
+            "symptom",
+            "prevention",
+            "diet",
+            "exercise",
+            "sleep",
+            "supplement",
+            "habit",
+            "doctor",
+            "advice"
+          ]
+        },
+        {
+          "id": "deck-bsc-22",
+          "title": "Time Perception & Punctuality",
+          "grammarFocus": "Be + adjective + about (I’m strict about time.)",
+          "vocabulary": [
+            "punctual",
+            "late",
+            "deadline",
+            "flexible",
+            "schedule",
+            "appointment",
+            "wait",
+            "rush",
+            "culture",
+            "respect"
+          ]
+        },
+        {
+          "id": "deck-bsc-23",
+          "title": "Shopping Ethics & Consumer Choices",
+          "grammarFocus": "Try to + verb + because (I try to buy local because…)",
+          "vocabulary": [
+            "ethical",
+            "sustainable",
+            "local",
+            "global",
+            "fair trade",
+            "waste",
+            "recycle",
+            "donate",
+            "impulse",
+            "need"
+          ]
+        },
+        {
+          "id": "deck-bsc-24",
+          "title": "Healthcare Access & Expectations",
+          "grammarFocus": "Have to / don’t have to + opinion (I have to pay for medicine.)",
+          "vocabulary": [
+            "insurance",
+            "clinic",
+            "wait time",
+            "emergency",
+            "prescription",
+            "public",
+            "private",
+            "affordable",
+            "quality",
+            "trust"
+          ]
+        },
+        {
+          "id": "deck-bsc-25",
+          "title": "Travel Mindset & Cultural Curiosity",
+          "grammarFocus": "Want to / plan to + place (I want to visit Japan.)",
+          "vocabulary": [
+            "destination",
+            "local",
+            "tourist",
+            "culture",
+            "language barrier",
+            "budget",
+            "solo",
+            "group",
+            "adventure",
+            "safe"
+          ]
+        },
+        {
+          "id": "deck-bsc-26",
+          "title": "Social Plans & Boundaries",
+          "grammarFocus": "Do you want to…? / I’d rather…",
+          "vocabulary": [
+            "invite",
+            "cancel",
+            "RSVP",
+            "boundary",
+            "energy",
+            "introvert",
+            "extrovert",
+            "commitment",
+            "flexible",
+            "prioritize"
+          ]
+        },
+        {
+          "id": "deck-bsc-27",
+          "title": "Navigation & Independence",
+          "grammarFocus": "Can / can’t + ability (I can read maps. I can’t ask for help.)",
+          "vocabulary": [
+            "map",
+            "GPS",
+            "ask",
+            "lost",
+            "direction",
+            "landmark",
+            "explore",
+            "confident",
+            "anxious",
+            "independent"
+          ]
+        },
+        {
+          "id": "deck-bsc-28",
+          "title": "Learning Styles & Education Memories",
+          "grammarFocus": "Used to + verb (I used to hate math.)",
+          "vocabulary": [
+            "teacher",
+            "student",
+            "exam",
+            "homework",
+            "online",
+            "classroom",
+            "memory",
+            "struggle",
+            "success",
+            "method"
+          ]
+        },
+        {
+          "id": "deck-bsc-29",
+          "title": "Session 29: Tech Dependence & Digital Habits",
+          "grammarFocus": "Spend + time + -ing (I spend too much time scrolling.)",
+          "vocabulary": [
+            "screen time",
+            "notification",
+            "app",
+            "offline",
+            "addictive",
+            "productive",
+            "distract",
+            "focus",
+            "privacy",
+            "update"
+          ]
+        },
+        {
+          "id": "deck-bsc-30",
+          "title": "Session 30: Life Reflections & Future Hopes",
+          "grammarFocus": "Would like to + verb (I’d like to travel more.)",
+          "vocabulary": [
+            "dream",
+            "goal",
+            "regret",
+            "achievement",
+            "lesson",
+            "change",
+            "hope",
+            "fear",
+            "priority",
+            "legacy"
+          ]
+        }
+      ]
+    },
+    {
       "id": "i-couldnt-help-but-wonder",
       "title": "I Couldn't Help But Wonder",
       "description": "Curious reflections, personal dilemmas, and observational discussion topics inspired by modern life.",
