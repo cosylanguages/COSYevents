@@ -37,3 +37,9 @@ When contributing prompt decks or event datasets:
 2. Verify changes locally by opening `index.html` in a web browser.
 3. Commit your changes with clear, descriptive commit messages.
 4. Push to your branch and open a Pull Request.
+
+
+## Specifications & Style Guides
+Please review the following guides before contributing new session decks or formats:
+- [Speaking Clubs Specification](docs/speaking-clubs-spec.md)
+- [Cinema Content Style Guide](docs/cinema-content-style-guide.md)
