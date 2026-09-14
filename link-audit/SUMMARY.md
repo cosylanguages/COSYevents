@@ -63,10 +63,10 @@ This report groups every issue discovered across COSYevents by type, prioritizes
 *Language and CEFR level inconsistencies result in incomplete student offerings and uncataloged entries.*
 
 ### 3.1 Missing Session Content & Top-Level Language Hub Status
-16. **Italian Language Sessions & Hub** — Root-level `it/` language hub does not exist yet (7 Italian session/challenge files exist under `sessions/karaoke-club/it/` and `sessions/karaoke-club/challenges/it/`).
-    * **Explicit Status:** Top-level `it/` folder is not yet created at root level; detailed inventory and hub proposal documented in `link-audit/05-it-el-content-inventory.md`.
-17. **Greek Language Sessions & Hub** — Root-level `el/` language hub does not exist yet (9 Greek session/challenge files exist under `sessions/karaoke-club/el/` and `sessions/karaoke-club/challenges/el/`).
-    * **Explicit Status:** Top-level `el/` folder is not yet created at root level; detailed inventory and hub proposal documented in `link-audit/05-it-el-content-inventory.md`.
+16. **Italian Language Sessions & Hub** — Root-level `it/index.html` language hub built and verified, linking out to all 7 Italian karaoke sessions and challenges.
+    * **Explicit Status:** `it/index.html` is active and wired to existing Italian content; detailed inventory documented in `link-audit/05-it-el-content-inventory.md`.
+17. **Greek Language Sessions & Hub** — Root-level `el/index.html` language hub built and verified, linking out to all 9 Greek karaoke sessions and challenges.
+    * **Explicit Status:** `el/index.html` is active and wired to existing Greek content; detailed inventory documented in `link-audit/05-it-el-content-inventory.md`.
 
 ### 3.2 Unlevelled Entries in Master Catalog (`data/sessions.json`)
 18. **Unlevelled English & Russian Catalog Entries** — 370 English and 35 Russian session entries in `data/sessions.json` have `level: ""`.
