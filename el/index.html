@@ -1,229 +1,213 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ημερολόγιο Εκδηλώσεων : COSYlanguages</title>
-  <link rel="stylesheet" href="../shared/css/hub.css">
-  <link rel="stylesheet" href="../shared/css/cosy-icons.css">
-  <link rel="stylesheet" href="../styles/calendar.css">
-  <link rel="manifest" href="../manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ζωντανές Εκδηλώσεις 🎉 : COSYlanguages</title>
+    <link rel="icon" href="../shared/images/logo.png">
+    <link rel="manifest" href="../manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../shared/css/hub.css">
+    <style>
+      .event-type-card {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: var(--r-xl);
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        transition: all .2s;
+        text-align: left;
+      }
+      .event-type-card:hover { transform: translateY(-4px); border-color: var(--border-hover); }
+      .etc-icon { font-size: 2.5rem; margin-bottom: 1.2rem; }
+      .etc-title { font-size: 1.5rem; margin-bottom: 1rem; font-family: var(--font-serif); }
+      .etc-info { font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--ink-muted); flex-grow: 1; }
+      .etc-meta { list-style: none; padding: 0; margin: 0 0 1.5rem; font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+      .etc-meta li { margin-bottom: 0.4rem; display: flex; justify-content: space-between; gap: 1rem; }
+      .etc-meta li span:first-child { font-weight: 700; color: var(--ink-faint); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; flex-shrink: 0; }
+      .etc-meta li span:last-child { text-align: right; }
+
+      .upcoming-section { background: var(--sage-mist); border-radius: var(--r-xl); padding: 3rem 2rem; margin-top: 2rem; }
+      .events-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; background: white; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+      .events-table th { background: var(--sage-pale); color: var(--sage-deep); text-align: left; padding: 1rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+      .events-table td { padding: 1rem; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+      .events-table tr:last-child td { border-bottom: none; }
+
+      .view-btn {
+        display: inline-block;
+        background: var(--teal);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-align: center;
+        transition: opacity 0.2s;
+      }
+      .view-btn:hover { opacity: 0.9; }
+    </style>
 </head>
 <body>
-
-  <div class="cosy-ecosystem-strip" role="navigation" aria-label="Προϊόντα Οικοσυστήματος COSY">
-    <div class="cosy-strip-inner">
-      <span class="cosy-strip-brand">🌐 Οικοσύστημα COSY:</span>
-      <ul class="cosy-strip-links">
-        <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
-        <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
-        <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
-        <li><a href="../index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
-      </ul>
-    </div>
+<div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
+  <div class="cosy-strip-inner">
+    <span class="cosy-strip-brand">🌐 COSY Ecosystem:</span>
+    <ul class="cosy-strip-links">
+      <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
+      <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
+      <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
+      <li><a href="../index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
+    </ul>
   </div>
+</div>
 
-  <header class="hub-header">
-    <div class="hub-header-content">
-      <span class="hub-brand">Οικοσύστημα COSYlanguages</span>
-      <h1 class="hub-title">Ημερολόγιο Εκδηλώσεων COSYlanguages</h1>
-      <p class="hub-subtitle">
-        Speaking clubs, βραδιές κινηματογράφου και ζωντανές γλωσσικές δραστηριότητες
-      </p>
-      <nav class="hub-nav-links" aria-label="Επιλογή γλώσσας και πλοήγηση">
-        <a href="https://cosylanguages.github.io/COSYlanguages/" class="hub-nav-link" target="_blank" rel="noopener">Αρχική 🏠</a>
-        <a href="https://cosylanguages.github.io/COSYgames/" class="hub-nav-link" target="_blank" rel="noopener">Παιχνίδια 🎮</a>
-        <a href="https://cosylanguages.github.io/COSYtools/" class="hub-nav-link" target="_blank" rel="noopener">Εργαλεία 🔎</a>
-        <a href="../index.html" class="hub-nav-link active">Εκδηλώσεις 🎉</a>
-      </nav>
+
+<nav id="cosy-nav"></nav>
+
+<header class="sd-sticky-header">
+  <div class="sd-header-inner">
+    <div class="sd-breadcrumbs">
+      <a href="../">Αρχική</a>
+      <span class="sep">/</span>
+      <span class="current">Εκδηλώσεις</span>
     </div>
-  </header>
+    <nav class="sd-jump-links" aria-label="Σύνδεσμοι πλοήγησης">
+      <a href="#sessions" class="sd-jump-link">Συνεδρίες στα Ελληνικά</a>
+      <a href="#types" class="sd-jump-link">Τύποι Εκδηλώσεων</a>
+      <a href="#join" class="sd-jump-link">Συμμετοχή</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="hub-main">
-    <!-- Filter Controls -->
-    <section class="calendar-controls">
-      <div class="calendar-filters-row">
-        <div class="type-filters" aria-label="Φιλτράρισμα κατά τύπο εκδήλωσης">
-          <button class="filter-btn active" data-type="all">Όλες οι εκδηλώσεις</button>
-          <button class="filter-btn" data-type="speaking-club">Speaking Clubs</button>
-          <button class="filter-btn" data-type="cinema-night">Βραδιές Σινεμά</button>
-          <button class="filter-btn" data-type="special-event">Ειδικές Εκδηλώσεις</button>
-          <button class="filter-btn" data-type="teacher-session">Συνεδρίες Καθηγητή</button>
-        </div>
-
-        <div class="select-filter-group">
-          <label for="language-filter" class="select-filter-label">Γλώσσα εκδήλωσης:</label>
-          <select id="language-filter" class="calendar-select">
-            <option value="all">Όλες οι γλώσσες</option>
-            <option value="English">Αγγλικά</option>
-            <option value="French">Γαλλικά</option>
-            <option value="Italian">Ιταλικά</option>
-            <option value="Russian">Ρωσικά</option>
-            <option value="Greek">Ελληνικά</option>
-          </select>
-        </div>
-
-        <div class="select-filter-group">
-          <label for="site-language-select" class="select-filter-label">🌐 Γλώσσα ιστότοπου:</label>
-          <select id="site-language-select" class="calendar-select" onchange="if(this.value) window.location.href=this.value;">
-            <option value="../index.html">🇬🇧 English</option>
-            <option value="../fr/index.html">🇫🇷 Français</option>
-            <option value="../it/index.html">🇮🇹 Italiano</option>
-            <option value="../ru/index.html">🇷🇺 Русский</option>
-            <option value="index.html" selected>🇬🇷 Ελληνικά</option>
-          </select>
-        </div>
-      </div>
-    </section>
-
-    <!-- Monthly Calendar View -->
-    <section class="calendar-section">
-      <div class="month-nav-header">
-        <button id="prev-month-btn" class="nav-btn" aria-label="Προηγούμενος μήνας">‹</button>
-        <h2 id="calendar-month-title" class="month-title">Μάιος 2025</h2>
-        <button id="next-month-btn" class="nav-btn" aria-label="Επόμενος μήνας">›</button>
-      </div>
-
-      <div class="calendar-grid-container">
-        <div class="calendar-weekdays">
-          <div class="weekday">Δευ</div>
-          <div class="weekday">Τρι</div>
-          <div class="weekday">Τετ</div>
-          <div class="weekday">Πεμ</div>
-          <div class="weekday">Παρ</div>
-          <div class="weekday">Σαβ</div>
-          <div class="weekday">Κυρ</div>
-        </div>
-        <div id="calendar-days-grid" class="calendar-days-grid">
-          <!-- Rendered dynamically by calendar.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Upcoming Events List -->
-    <section class="calendar-section">
-      <h2 class="section-title">
-        <span>Προσεχείς Εκδηλώσεις</span>
-        <a href="../past-events/index.html" class="btn-outline" style="font-size:0.8rem;">Αρχείο προηγούμενων εκδηλώσεων →</a>
-      </h2>
-      <div id="upcoming-events-list" class="upcoming-events-grid">
-        <!-- Rendered dynamically by calendar.js -->
-      </div>
-    </section>
-
-    <!-- Live Events Section -->
-    <section class="live-events-section" style="margin-top: 3rem;">
-      <div class="live-events-container">
-        <div class="live-events-left">
-          <h2 class="live-events-heading">Ζωντανές Εκδηλώσεις &amp; Διαδραστικά Clubs</h2>
-          <p class="live-events-subtext">Συνεδρίες με καθηγητές, speaking clubs σε πραγματικά θέματα, κινηματογράφος, καραόκε και παιχνίδια.</p>
-        </div>
-        <div class="live-events-right">
-          <div class="live-event-card card-speaking">
-            <div class="live-card-icon">💬</div>
-            <h3 class="live-card-title">Speaking Club</h3>
-            <p class="live-card-desc">Ομαδικές συζητήσεις με βαθμονόμηση επιπέδου</p>
-            <a href="../speaking-clubs.html" class="live-card-cta">Συμμετοχή στο club →</a>
-          </div>
-          <div class="live-event-card card-cinema">
-            <div class="live-card-icon">🎬</div>
-            <h3 class="live-card-title">Βραδιά Σινεμά</h3>
-            <p class="live-card-desc">Προβολές ταινιών στη γλώσσα πρωτοτύπου</p>
-            <a href="../cinema-club.html" class="live-card-cta">Κράτηση θέσης →</a>
-          </div>
-          <div class="live-event-card card-karaoke">
-            <div class="live-card-icon">🎤</div>
-            <h3 class="live-card-title">Karaoke Club</h3>
-            <p class="live-card-desc">Μουσικές συνεδρίες με προφορά και λεξιλόγιο</p>
-            <a href="../karaoke-club.html" class="live-card-cta">Εξερεύνηση Καραόκε →</a>
-          </div>
-          <div class="live-event-card card-games">
-            <div class="live-card-icon">🎲</div>
-            <h3 class="live-card-title">Βραδιές Παιχνιδιών</h3>
-            <p class="live-card-desc">Πολύγλωσσα επιτραπέζια και γλωσσικές προκλήσεις</p>
-            <a href="../game-evenings.html" class="live-card-cta">Παίξτε μαζί μας →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quick Sections Grid -->
-    <section class="hub-section-header" style="margin-top: 3rem;">
-      <h2 class="hub-section-title">Πύλες Εκδηλώσεων &amp; Hubs</h2>
-      <p class="hub-section-desc">Εξερευνήστε τις κατηγορίες εκδηλώσεων και τα κανάλια εγγραφής.</p>
-    </section>
-
-    <div class="events-grid">
-      <a href="../speaking-clubs/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-speech" aria-hidden="true"></span>
-          <span class="event-badge">Συζήτηση</span>
-        </div>
-        <h3 class="event-name">Speaking Clubs</h3>
-        <p class="event-description">Συνεδρίες συζήτησης με επίπεδα CEFR και κάρτες λεξιλογίου.</p>
-        <div class="event-card-footer"><span>Εξερεύνηση Clubs</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../cinema-nights/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-film" aria-hidden="true"></span>
-          <span class="event-badge">Σινεμά</span>
-        </div>
-        <h3 class="event-name">Βραδιές Σινεμά</h3>
-        <p class="event-description">Προβολές ταινιών, ανάλυση σκηνών και οδηγιοί λεξιλογίου.</p>
-        <div class="event-card-footer"><span>Εξερεύνηση Σινεμά</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../teacher-led-sessions/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-book" aria-hidden="true"></span>
-          <span class="event-badge">Με καθηγητή</span>
-        </div>
-        <h3 class="event-name">Συνεδρίες Καθηγητή</h3>
-        <p class="event-description">Ειδικές συνεδρίες από καθηγητές του COSYlanguages.</p>
-        <div class="event-card-footer"><span>Εξερεύνηση Συνεδριών</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../special-events/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-dice" aria-hidden="true"></span>
-          <span class="event-badge">Διαδραστικό</span>
-        </div>
-        <h3 class="event-name">Ειδικές Εκδηλώσεις</h3>
-        <p class="event-description">Διαδραστικά παιχνίδια, πολιτιστικές εκδηλώσεις και εργαστήρια.</p>
-        <div class="event-card-footer"><span>Εξερεύνηση Εκδηλώσεων</span><span class="arrow">→</span></div>
-      </a>
-    </div>
-  </main>
-
-  <!-- Event Detail Modal -->
-  <div id="event-modal-overlay" class="modal-overlay" aria-hidden="true">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="modal-event-title" class="event-card-title" style="margin:0;">Λεπτομέρειες εκδήλωσης</h3>
-        <button id="modal-close-btn" class="modal-close-btn" aria-label="Κλείσιμο">×</button>
-      </div>
-      <div class="modal-body">
-        <div id="modal-event-meta" style="margin-bottom: 1rem;"></div>
-        <p id="modal-event-desc" style="margin-bottom: 1rem; color: var(--cosy-text);"></p>
-        <div id="modal-event-host" class="event-host-info"></div>
-        <div id="modal-timezone-box" class="timezone-converter-box"></div>
-        <div class="modal-actions">
-          <a id="modal-reg-btn" href="#" target="_blank" rel="noopener" class="btn-primary">
-            Εγγραφή μέσω του κεντρικού hub (WhatsApp / Telegram)
-          </a>
-          <a id="modal-gcal-btn" href="#" target="_blank" rel="noopener" class="btn-outline">
-            📅 Προσθήκη στο Google Calendar
-          </a>
-        </div>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">🎉 Κοινότητα</div>
+      <h1>Ζωντανές Εκδηλώσεις στα Ελληνικά 🇬🇷</h1>
+      <p class="hero-sub">Διαδραστικές συνεδρίες με καθηγητή COSYlanguages. Καραόκε, μουσική και λέσχες συνομιλίας για να εξασκήσετε τα ελληνικά σας.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/330766784195" class="btn-primary">Συμμετοχή σε Συνεδρία</a>
+        <a href="#sessions" class="btn-secondary">Εξερεύνηση Περιεχομένου ↓</a>
       </div>
     </div>
   </div>
+</header>
 
-  <footer class="hub-footer">
-    <p>COSYevents &copy; Οικοσύστημα COSYlanguages. Όλες οι εγγραφές πραγματοποιούνται στο κεντρικό hub.</p>
-  </footer>
+<main class="page">
 
-  <script src="../shared/calendar/calendar.js"></script>
+  <section id="sessions">
+    <div class="upcoming-section">
+      <span class="sec-tag">🇬🇷 Συνεδρίες στα Ελληνικά</span>
+      <h2 class="sec-h2">Τραγούδια και Μουσικές Προκλήσεις Καραόκε</h2>
+
+      <div style="overflow-x: auto;">
+        <table class="events-table">
+          <thead>
+            <tr>
+              <th>Τίτλος Συνεδρίας</th>
+              <th>Μορφή</th>
+              <th>Επίπεδο / Λεπτομέρειες</th>
+              <th>Ενέργεια</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Αρλέτα Challenge</td>
+              <td>Karaoke Challenge</td>
+              <td>Κάποιες Νύχτες &amp; Ο Γάτος</td>
+              <td><a href="../sessions/karaoke-club/challenges/el/arletta-challenge/index.html" class="view-btn">Δείτε την Πρόκληση ➔</a></td>
+            </tr>
+            <tr>
+              <td>Μπλε Challenge</td>
+              <td>Karaoke Challenge</td>
+              <td>Τον ίδιο το Θεό &amp; Φοβάμαι</td>
+              <td><a href="../sessions/karaoke-club/challenges/el/mple-challenge/index.html" class="view-btn">Δείτε την Πρόκληση ➔</a></td>
+            </tr>
+            <tr>
+              <td>Αν είναι η αγάπη αμαρτία</td>
+              <td>Karaoke Session</td>
+              <td>Τζένη Βάνου</td>
+              <td><a href="../sessions/karaoke-club/el/an-einai-i-agapi-amartia.html" class="view-btn">Δείτε τη Συνεδρία ➔</a></td>
+            </tr>
+            <tr>
+              <td>Φάρος</td>
+              <td>Karaoke Session</td>
+              <td>Κωστής Μαραβέγιας</td>
+              <td><a href="../sessions/karaoke-club/el/faros.html" class="view-btn">Δείτε τη Συνεδρία ➔</a></td>
+            </tr>
+            <tr>
+              <td>Να η αγάπη να</td>
+              <td>Karaoke Session</td>
+              <td>Δήμητρα Γαλάνη</td>
+              <td><a href="../sessions/karaoke-club/el/na-i-agapi-na.html" class="view-btn">Δείτε τη Συνεδρία ➔</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="types">
+    <span class="sec-tag">💡 Μορφές</span>
+    <h2 class="sec-h2">Εξερευνήστε τα Club μας</h2>
+
+    <div class="tools-grid">
+      <article class="event-type-card">
+        <div class="etc-icon">🎤</div>
+        <h3 class="etc-title">Karaoke Club</h3>
+        <p class="etc-info">Μάθετε ελληνικά μέσα από τη μουσική! Αναλύστε στίχους, φυσική προφορά και πολιτισμικό πλαίσιο αγαπημένων τραγουδιών.</p>
+        <a href="../karaoke-club.html?lang=el" class="view-btn">🎶 Καραόκε στα Ελληνικά</a>
+      </article>
+
+      <article class="event-type-card">
+        <div class="etc-icon">🎙️</div>
+        <h3 class="etc-title">Speaking Clubs</h3>
+        <p class="etc-info">Συναντήσεις συνομιλίας σε μικρές ομάδες με καθοδήγηση καθηγητή.</p>
+        <a href="../speaking-clubs.html" class="view-btn">🎙️ Speaking Clubs</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="cta-section">
+      <h2>Επικοινωνήστε μαζί μας για συμμετοχή</h2>
+      <p>Εγγραφείτε στην ομάδα μας στο WhatsApp ή στο Telegram για να ενημερώνεστε για τις επόμενες ζωντανές εκδηλώσεις!</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/330766784195" class="cta-wa">💬 WhatsApp</a>
+        <a href="https://t.me/cosylanguagesproject" class="cta-tg">✈️ Telegram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="fb-logo">
+        <img src="../shared/images/logo.png" alt="COSYlanguages logo">
+        <span class="fb-name">COSYlanguages</span>
+      </div>
+      <p>Your friendly corner to master new languages and connect with the world. 🌍</p>
+    </div>
+    <div class="footer-links-col">
+      <h5>Courses</h5>
+      <a href="https://cosylanguages.github.io/COSYlanguages/">General Course 📖</a>
+      <a href="https://cosylanguages.github.io/COSYlanguages/">Spoken Course 🗣️</a>
+    </div>
+    <div class="footer-links-col">
+      <h5>Explore</h5>
+      <a href="../#languages">Languages 🌍</a>
+      <a href="../speaking-clubs.html">Events 🎉</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 COSYlanguages : Με την επιφύλαξη παντός δικαιώματος</div>
+</footer>
+
+<script src="../shared/js/cosyevents-session.js"></script>
 </body>
 </html>

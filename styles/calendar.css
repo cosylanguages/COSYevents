@@ -122,6 +122,14 @@
   color: var(--cosy-primary, #416b49);
 }
 
+.nav-btn.today-btn {
+  width: auto;
+  padding: 0 0.85rem;
+  border-radius: var(--cosy-radius-full, 100px);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
 /* ── Calendar Monthly Grid ──────────────────────────────────────────── */
 .calendar-grid-container {
   background: var(--cosy-surface, #ffffff);

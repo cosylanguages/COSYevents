@@ -1,229 +1,213 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendario Eventi : COSYlanguages</title>
-  <link rel="stylesheet" href="../shared/css/hub.css">
-  <link rel="stylesheet" href="../shared/css/cosy-icons.css">
-  <link rel="stylesheet" href="../styles/calendar.css">
-  <link rel="manifest" href="../manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi dal vivo 🎉 : COSYlanguages</title>
+    <link rel="icon" href="../shared/images/logo.png">
+    <link rel="manifest" href="../manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../shared/css/hub.css">
+    <style>
+      .event-type-card {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: var(--r-xl);
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        transition: all .2s;
+        text-align: left;
+      }
+      .event-type-card:hover { transform: translateY(-4px); border-color: var(--border-hover); }
+      .etc-icon { font-size: 2.5rem; margin-bottom: 1.2rem; }
+      .etc-title { font-size: 1.5rem; margin-bottom: 1rem; font-family: var(--font-serif); }
+      .etc-info { font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--ink-muted); flex-grow: 1; }
+      .etc-meta { list-style: none; padding: 0; margin: 0 0 1.5rem; font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+      .etc-meta li { margin-bottom: 0.4rem; display: flex; justify-content: space-between; gap: 1rem; }
+      .etc-meta li span:first-child { font-weight: 700; color: var(--ink-faint); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; flex-shrink: 0; }
+      .etc-meta li span:last-child { text-align: right; }
+
+      .upcoming-section { background: var(--sage-mist); border-radius: var(--r-xl); padding: 3rem 2rem; margin-top: 2rem; }
+      .events-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; background: white; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+      .events-table th { background: var(--sage-pale); color: var(--sage-deep); text-align: left; padding: 1rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+      .events-table td { padding: 1rem; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+      .events-table tr:last-child td { border-bottom: none; }
+
+      .view-btn {
+        display: inline-block;
+        background: var(--teal);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-align: center;
+        transition: opacity 0.2s;
+      }
+      .view-btn:hover { opacity: 0.9; }
+    </style>
 </head>
 <body>
-
-  <div class="cosy-ecosystem-strip" role="navigation" aria-label="Prodotti Ecosistema COSY">
-    <div class="cosy-strip-inner">
-      <span class="cosy-strip-brand">🌐 Ecosistema COSY:</span>
-      <ul class="cosy-strip-links">
-        <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
-        <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
-        <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
-        <li><a href="../index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
-      </ul>
-    </div>
+<div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
+  <div class="cosy-strip-inner">
+    <span class="cosy-strip-brand">🌐 COSY Ecosystem:</span>
+    <ul class="cosy-strip-links">
+      <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
+      <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
+      <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
+      <li><a href="../index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
+    </ul>
   </div>
+</div>
 
-  <header class="hub-header">
-    <div class="hub-header-content">
-      <span class="hub-brand">Ecosistema COSYlanguages</span>
-      <h1 class="hub-title">Calendario Eventi COSYlanguages</h1>
-      <p class="hub-subtitle">
-        Speaking clubs, serate cinema e attività linguistiche dal vivo
-      </p>
-      <nav class="hub-nav-links" aria-label="Selettore di lingua e navigazione">
-        <a href="https://cosylanguages.github.io/COSYlanguages/" class="hub-nav-link" target="_blank" rel="noopener">Home 🏠</a>
-        <a href="https://cosylanguages.github.io/COSYgames/" class="hub-nav-link" target="_blank" rel="noopener">Giochi 🎮</a>
-        <a href="https://cosylanguages.github.io/COSYtools/" class="hub-nav-link" target="_blank" rel="noopener">Strumenti 🔎</a>
-        <a href="../index.html" class="hub-nav-link active">Eventi 🎉</a>
-      </nav>
+
+<nav id="cosy-nav"></nav>
+
+<header class="sd-sticky-header">
+  <div class="sd-header-inner">
+    <div class="sd-breadcrumbs">
+      <a href="../">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Eventi</span>
     </div>
-  </header>
+    <nav class="sd-jump-links" aria-label="Link di navigazione">
+      <a href="#sessions" class="sd-jump-link">Sessioni in Italiano</a>
+      <a href="#types" class="sd-jump-link">Tipi di Eventi</a>
+      <a href="#join" class="sd-jump-link">Partecipa</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="hub-main">
-    <!-- Filter Controls -->
-    <section class="calendar-controls">
-      <div class="calendar-filters-row">
-        <div class="type-filters" aria-label="Filtra per tipo di evento">
-          <button class="filter-btn active" data-type="all">Tutti gli eventi</button>
-          <button class="filter-btn" data-type="speaking-club">Speaking Clubs</button>
-          <button class="filter-btn" data-type="cinema-night">Serate Cinema</button>
-          <button class="filter-btn" data-type="special-event">Eventi Speciali</button>
-          <button class="filter-btn" data-type="teacher-session">Sessioni Insegnante</button>
-        </div>
-
-        <div class="select-filter-group">
-          <label for="language-filter" class="select-filter-label">Lingua dell'evento:</label>
-          <select id="language-filter" class="calendar-select">
-            <option value="all">Tutte le lingue</option>
-            <option value="English">Inglese</option>
-            <option value="French">Francese</option>
-            <option value="Italian">Italiano</option>
-            <option value="Russian">Russo</option>
-            <option value="Greek">Greco</option>
-          </select>
-        </div>
-
-        <div class="select-filter-group">
-          <label for="site-language-select" class="select-filter-label">🌐 Lingua del sito:</label>
-          <select id="site-language-select" class="calendar-select" onchange="if(this.value) window.location.href=this.value;">
-            <option value="../index.html">🇬🇧 English</option>
-            <option value="../fr/index.html">🇫🇷 Français</option>
-            <option value="index.html" selected>🇮🇹 Italiano</option>
-            <option value="../ru/index.html">🇷🇺 Русский</option>
-            <option value="../el/index.html">🇬🇷 Ελληνικά</option>
-          </select>
-        </div>
-      </div>
-    </section>
-
-    <!-- Monthly Calendar View -->
-    <section class="calendar-section">
-      <div class="month-nav-header">
-        <button id="prev-month-btn" class="nav-btn" aria-label="Mese precedente">‹</button>
-        <h2 id="calendar-month-title" class="month-title">Maggio 2025</h2>
-        <button id="next-month-btn" class="nav-btn" aria-label="Mese successivo">›</button>
-      </div>
-
-      <div class="calendar-grid-container">
-        <div class="calendar-weekdays">
-          <div class="weekday">Lun</div>
-          <div class="weekday">Mar</div>
-          <div class="weekday">Mer</div>
-          <div class="weekday">Gio</div>
-          <div class="weekday">Ven</div>
-          <div class="weekday">Sab</div>
-          <div class="weekday">Dom</div>
-        </div>
-        <div id="calendar-days-grid" class="calendar-days-grid">
-          <!-- Rendered dynamically by calendar.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Upcoming Events List -->
-    <section class="calendar-section">
-      <h2 class="section-title">
-        <span>Prossimi Eventi</span>
-        <a href="../past-events/index.html" class="btn-outline" style="font-size:0.8rem;">Archivio eventi passati →</a>
-      </h2>
-      <div id="upcoming-events-list" class="upcoming-events-grid">
-        <!-- Rendered dynamically by calendar.js -->
-      </div>
-    </section>
-
-    <!-- Live Events Section -->
-    <section class="live-events-section" style="margin-top: 3rem;">
-      <div class="live-events-container">
-        <div class="live-events-left">
-          <h2 class="live-events-heading">Eventi dal vivo &amp; Club Interattivi</h2>
-          <p class="live-events-subtext">Sessioni organizzate con insegnanti madrelingua, speaking club su temi reali, cinema in lingua originale, karaoke e giochi interattivi.</p>
-        </div>
-        <div class="live-events-right">
-          <div class="live-event-card card-speaking">
-            <div class="live-card-icon">💬</div>
-            <h3 class="live-card-title">Speaking Club</h3>
-            <p class="live-card-desc">Discussion di gruppo per argomenti con calibrazione del livello</p>
-            <a href="../speaking-clubs.html" class="live-card-cta">Partecipa al club →</a>
-          </div>
-          <div class="live-event-card card-cinema">
-            <div class="live-card-icon">🎬</div>
-            <h3 class="live-card-title">Serata Cinema</h3>
-            <p class="live-card-desc">Proiezioni in lingua originale e studio delle scene</p>
-            <a href="../cinema-club.html" class="live-card-cta">Prenota il tuo posto →</a>
-          </div>
-          <div class="live-event-card card-karaoke">
-            <div class="live-card-icon">🎤</div>
-            <h3 class="live-card-title">Karaoke Club</h3>
-            <p class="live-card-desc">Sessioni musicali guidate con pronuncia e vocabolario</p>
-            <a href="../karaoke-club.html" class="live-card-cta">Esplora il Karaoke →</a>
-          </div>
-          <div class="live-event-card card-games">
-            <div class="live-card-icon">🎲</div>
-            <h3 class="live-card-title">Serate Giochi</h3>
-            <p class="live-card-desc">Giochi da tavolo poliglotti, quiz e sfide linguistiche</p>
-            <a href="../game-evenings.html" class="live-card-cta">Gioca insieme →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quick Sections Grid -->
-    <section class="hub-section-header" style="margin-top: 3rem;">
-      <h2 class="hub-section-title">Portali Eventi &amp; Hub</h2>
-      <p class="hub-section-desc">Esplora le categorie di eventi e i canali di registrazione.</p>
-    </section>
-
-    <div class="events-grid">
-      <a href="../speaking-clubs/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-speech" aria-hidden="true"></span>
-          <span class="event-badge">Discussione</span>
-        </div>
-        <h3 class="event-name">Speaking Clubs</h3>
-        <p class="event-description">Sessioni di conversazione con calibrazione CEFR e schede di vocabolario.</p>
-        <div class="event-card-footer"><span>Esplora i Club</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../cinema-nights/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-film" aria-hidden="true"></span>
-          <span class="event-badge">Cinema</span>
-        </div>
-        <h3 class="event-name">Serate Cinema</h3>
-        <p class="event-description">Proiezioni di film, studio delle scene e guide di vocabolario.</p>
-        <div class="event-card-footer"><span>Esplora il Cinema</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../teacher-led-sessions/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-book" aria-hidden="true"></span>
-          <span class="event-badge">Guidato</span>
-        </div>
-        <h3 class="event-name">Sessioni Insegnante</h3>
-        <p class="event-description">Sessioni speciali guidate da insegnanti madrelingua COSYlanguages.</p>
-        <div class="event-card-footer"><span>Esplora le Sessioni</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../special-events/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-dice" aria-hidden="true"></span>
-          <span class="event-badge">Interattivo</span>
-        </div>
-        <h3 class="event-name">Eventi Speciali</h3>
-        <p class="event-description">Giochi interattivi, celebrazioni culturali e quiz linguistici.</p>
-        <div class="event-card-footer"><span>Esplora gli Eventi</span><span class="arrow">→</span></div>
-      </a>
-    </div>
-  </main>
-
-  <!-- Event Detail Modal -->
-  <div id="event-modal-overlay" class="modal-overlay" aria-hidden="true">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="modal-event-title" class="event-card-title" style="margin:0;">Dettagli dell'evento</h3>
-        <button id="modal-close-btn" class="modal-close-btn" aria-label="Chiudi la finestra">×</button>
-      </div>
-      <div class="modal-body">
-        <div id="modal-event-meta" style="margin-bottom: 1rem;"></div>
-        <p id="modal-event-desc" style="margin-bottom: 1rem; color: var(--cosy-text);"></p>
-        <div id="modal-event-host" class="event-host-info"></div>
-        <div id="modal-timezone-box" class="timezone-converter-box"></div>
-        <div class="modal-actions">
-          <a id="modal-reg-btn" href="#" target="_blank" rel="noopener" class="btn-primary">
-            Iscriviti tramite l'hub principale (WhatsApp / Telegram)
-          </a>
-          <a id="modal-gcal-btn" href="#" target="_blank" rel="noopener" class="btn-outline">
-            📅 Aggiungi a Google Calendar
-          </a>
-        </div>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">🎉 Comunità</div>
+      <h1>Eventi dal vivo in Italiano 🇮🇹</h1>
+      <p class="hero-sub">Sessioni interattive guidate da un insegnante madrelingua COSYlanguages. Karaoke, musica e club di conversazione per praticare l'italiano in modo naturale.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/330766784195" class="btn-primary">Partecipa a una Sessione</a>
+        <a href="#sessions" class="btn-secondary">Esplora Contenuti ↓</a>
       </div>
     </div>
   </div>
+</header>
 
-  <footer class="hub-footer">
-    <p>COSYevents &copy; Ecosistema COSYlanguages. Tutte le iscrizioni si effettuano sull'hub principale.</p>
-  </footer>
+<main class="page">
 
-  <script src="../shared/calendar/calendar.js"></script>
+  <section id="sessions">
+    <div class="upcoming-section">
+      <span class="sec-tag">🇮🇹 Sessioni in Italiano</span>
+      <h2 class="sec-h2">Brani e Sfide Musica Karaoke</h2>
+
+      <div style="overflow-x: auto;">
+        <table class="events-table">
+          <thead>
+            <tr>
+              <th>Titolo Sessione</th>
+              <th>Formato</th>
+              <th>Livello / Dettagli</th>
+              <th>Azione</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Massimo Ranieri Challenge</td>
+              <td>Karaoke Challenge</td>
+              <td>Chi sarà con te &amp; L'amore è un attimo</td>
+              <td><a href="../sessions/karaoke-club/challenges/it/massimo-ranieri-challenge/index.html" class="view-btn">Vedi Sfida ➔</a></td>
+            </tr>
+            <tr>
+              <td>Due grosse lacrime bianche</td>
+              <td>Karaoke Session</td>
+              <td>Iva Zanicchi</td>
+              <td><a href="../sessions/karaoke-club/it/due-grosse-lacrime-bianche.html" class="view-btn">Vedi Sessione ➔</a></td>
+            </tr>
+            <tr>
+              <td>L'uomo che amava le donne</td>
+              <td>Karaoke Session</td>
+              <td>Nina Zilli</td>
+              <td><a href="../sessions/karaoke-club/it/luomo-che-amava-le-donne.html" class="view-btn">Vedi Sessione ➔</a></td>
+            </tr>
+            <tr>
+              <td>Un raggio di sole</td>
+              <td>Karaoke Session</td>
+              <td>Jovanotti</td>
+              <td><a href="../sessions/karaoke-club/it/un-raggio-di-sole.html" class="view-btn">Vedi Sessione ➔</a></td>
+            </tr>
+            <tr>
+              <td>Un'altra estate</td>
+              <td>Karaoke Session</td>
+              <td>Diodato</td>
+              <td><a href="../sessions/karaoke-club/it/unatta-estate.html" class="view-btn">Vedi Sessione ➔</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="types">
+    <span class="sec-tag">💡 Formati</span>
+    <h2 class="sec-h2">Esplora i nostri Club</h2>
+
+    <div class="tools-grid">
+      <article class="event-type-card">
+        <div class="etc-icon">🎤</div>
+        <h3 class="etc-title">Karaoke Club</h3>
+        <p class="etc-info">Impara l'italiano attraverso la musica! Analizza i testi, la pronuncia naturale e il contesto culturale dei grandi brani italiani.</p>
+        <a href="../karaoke-club.html?lang=it" class="view-btn">🎶 Karaoke in Italiano</a>
+      </article>
+
+      <article class="event-type-card">
+        <div class="etc-icon">🎙️</div>
+        <h3 class="etc-title">Speaking Clubs</h3>
+        <p class="etc-info">Incontri di conversazione in piccoli gruppi guidati da tutor madrelingua.</p>
+        <a href="../speaking-clubs.html" class="view-btn">🎙️ Speaking Clubs</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="cta-section">
+      <h2>Contattaci per partecipare</h2>
+      <p>Unisciti al gruppo su WhatsApp o Telegram per rimanere aggiornato sui prossimi eventi dal vivo!</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/330766784195" class="cta-wa">💬 WhatsApp</a>
+        <a href="https://t.me/cosylanguagesproject" class="cta-tg">✈️ Telegram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="fb-logo">
+        <img src="../shared/images/logo.png" alt="COSYlanguages logo">
+        <span class="fb-name">COSYlanguages</span>
+      </div>
+      <p>Your friendly corner to master new languages and connect with the world. 🌍</p>
+    </div>
+    <div class="footer-links-col">
+      <h5>Courses</h5>
+      <a href="https://cosylanguages.github.io/COSYlanguages/">General Course 📖</a>
+      <a href="https://cosylanguages.github.io/COSYlanguages/">Spoken Course 🗣️</a>
+    </div>
+    <div class="footer-links-col">
+      <h5>Explore</h5>
+      <a href="../#languages">Languages 🌍</a>
+      <a href="../speaking-clubs.html">Events 🎉</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 COSYlanguages : Tutti i diritti riservati</div>
+</footer>
+
+<script src="../shared/js/cosyevents-session.js"></script>
 </body>
 </html>
