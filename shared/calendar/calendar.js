@@ -34,7 +34,11 @@
                      window.location.pathname.includes('/cinema-nights/') ||
                      window.location.pathname.includes('/teacher-led-sessions/') ||
                      window.location.pathname.includes('/special-events/') ||
-                     window.location.pathname.includes('/past-events/')
+                     window.location.pathname.includes('/past-events/') ||
+                     window.location.pathname.includes('/fr/') ||
+                     window.location.pathname.includes('/it/') ||
+                     window.location.pathname.includes('/ru/') ||
+                     window.location.pathname.includes('/el/')
                      ? '../shared/calendar-data/events.json'
                      : 'shared/calendar-data/events.json';
 
