@@ -9,6 +9,7 @@ COSYevents is the central practice, event, and session hub within the COSYlangua
 2. **Predictable Navigation & Flow:** Standardized session layouts (Hero → Metadata → Step Tabs / Slides → Content Sections → Linguistic Corrections / Teacher's Note) ensure instant familiarity across every event format.
 3. **Inclusive & Accessible (WCAG 2.1 AA):** High contrast ratios, accessible focus rings, keyboard navigation (tabbing, arrow key controls), and dark mode support guarantee comfortable use across desktop, tablet, and mobile devices.
 4. **Cohesive Ecosystem Harmony:** COSYevents inherits master tokens and design rules from COSYlanguages while maintaining tailored event theme accents (e.g. Sage Green for Speaking Clubs, Warm Terracotta for Cinema, Deep Purple for Karaoke).
+5. **Multilingual Main Hubs & Monolingual Session Decks:** Main hub pages (`index.html`, `fr/index.html`, `it/index.html`, `ru/index.html`, `el/index.html`) offer site language switching (English, French, Italian, Russian, Greek) so beginners can navigate in their native tongue or surround themselves in target languages. Gated session decks (`sessions/`) remain strictly monolingual in the practice language to enforce full language immersion.
 
 ---
 
@@ -21,8 +22,8 @@ All global styling parameters are defined in `shared/css/sessions.css` using CSS
 #### Core Track & Theme Accents
 | Accent Name | CSS Token Name | Hex Value | Used For |
 | :--- | :--- | :--- | :--- |
+| **Terracotta / Social Coral** | `--cosy-event-accent` | `#B84318` | Distinct COSYevents Product Accent, Interactive Badges & Highlights |
 | **Sage / Forest Green** | `--cosy-color-sage` | `#416b49` | Speaking Clubs Master Theme, Primary Buttons |
-| **Terracotta / Coral** | `--cosy-color-coral` | `#B84318` | Spoken Track, Cinema Club, High-priority Alerts |
 | **Credible Navy** | `--cosy-color-navy` | `#1e2f6b` | Professional Track, Grammar Focus Blocks |
 | **Fresh Green** | `--cosy-color-fresh-green` | `#4a6b50` | Travel & Action Badges |
 | **Amber / Honey** | `--cosy-color-amber` | `#945e05` | Note Highlights, Intermediate Badges |

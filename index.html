@@ -52,7 +52,7 @@
         </div>
 
         <div class="select-filter-group">
-          <label for="language-filter" class="select-filter-label">Language:</label>
+          <label for="language-filter" class="select-filter-label">Event Language:</label>
           <select id="language-filter" class="calendar-select">
             <option value="all">All Languages</option>
             <option value="English">English</option>
@@ -60,6 +60,17 @@
             <option value="Italian">Italian</option>
             <option value="Russian">Russian</option>
             <option value="Greek">Greek</option>
+          </select>
+        </div>
+
+        <div class="select-filter-group">
+          <label for="site-language-select" class="select-filter-label">🌐 Site Language:</label>
+          <select id="site-language-select" class="calendar-select" onchange="if(this.value) window.location.href=this.value;">
+            <option value="index.html" selected>🇬🇧 English</option>
+            <option value="fr/index.html">🇫🇷 Français</option>
+            <option value="it/index.html">🇮🇹 Italiano</option>
+            <option value="ru/index.html">🇷🇺 Русский</option>
+            <option value="el/index.html">🇬🇷 Ελληνικά</option>
           </select>
         </div>
       </div>
