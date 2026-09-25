@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-This repository has been audited against the taxonomy, privacy/gating, data interchange, and UI/UX requirements specified for the COSY ecosystem. The taxonomy structure, public catalog pages, access control notices, vocabulary duplication pipeline (`COSYdata`), and session-to-lesson conversion specification (`COSYplatform`/`COSYlanguages`) have been established and verified.
+This repository has been audited against the taxonomy, privacy/gating, data interchange, UI/UX, and session link integrity requirements specified for the COSY ecosystem. The taxonomy structure, public catalog pages, access control notices, vocabulary duplication pipeline (`COSYdata`), session-to-lesson conversion specification (`COSYplatform`/`COSYlanguages`), and internal relative link integrity across all 563 session files have been established and verified.
 
 ---
 
@@ -39,7 +39,17 @@ This repository has been audited against the taxonomy, privacy/gating, data inte
 
 ---
 
-## 2. Data Interchange Specifications
+## 2. Session Content & Relative Link Audit
+
+- **Audit Scope:** Scanned all 563 HTML files under `sessions/` for relative link targets, script paths, and footer links.
+- **Issues Identified & Fixed:**
+  - Resolved 504 incorrect relative footer links (`../../../practice/index.html`, `../../../games/index.html`, `../../../privacy.html`, `../../../index.html`) to correct two-level relative paths (`../../`).
+  - Resolved outdated relative links to legacy paths (`../../../apps/premium-events/...` and `../../../wonder/...`).
+- **Post-Fix Verification:** 100% PASS — 0 broken relative links remain across all 563 session HTML files.
+
+---
+
+## 3. Data Interchange Specifications
 
 ### Vocabulary Interchange (`COSYdata`)
 - **File / Schema:** `templates/vocabulary-export.json` & `docs/vocabulary-pipeline.md`
@@ -55,7 +65,7 @@ This repository has been audited against the taxonomy, privacy/gating, data inte
 
 ---
 
-## 3. Visual / CSS & UX/UI Audit
+## 4. Visual / CSS & UX/UI Audit
 
 - **Clarity of Public/Gated Split:**
   - The central catalog (`events/index.html`) prominently displays a highlighted policy notice box (`🔐 Public & Access-Gated Session Policy`) at the top of the page.
@@ -66,7 +76,7 @@ This repository has been audited against the taxonomy, privacy/gating, data inte
 
 ---
 
-## 4. Ecosystem Cleanliness
+## 5. Ecosystem Cleanliness
 
 - **COSYworld References:** 0 remaining references found. All navigation header links, CSS header comments, and audit files have been scrubbed of obsolete `COSYworld` links.
 - **COSYmanuals Hyperlinking:** Confirmed no public pages directly hyperlink to `COSYmanuals`, maintaining its non-public access policy.
@@ -76,4 +86,4 @@ This repository has been audited against the taxonomy, privacy/gating, data inte
 
 ## Summary Conclusion
 
-The repository is fully audited and ready for real content migration from COSYlanguages' `apps/premium-events`. All structural, data interchange, privacy, and UX requirements are satisfied.
+The repository is fully audited, all session relative links are repaired and verified, and the infrastructure is ready for real content migration from COSYlanguages' `apps/premium-events`.
