@@ -2,7 +2,6 @@
 
 **Audit Date:** September 2025
 **Target File:** `/link-audit/03-external-link-audit.md`
-**Audit Scope:** Comprehensive scan across all HTML, JS, JSON, and Markdown files in COSYevents for outbound links to sibling ecosystem sites (`COSYlanguages`, `COSYplatform`, `COSYtools`, `COSYgames`, `COSYworld`), `COSYmanuals` references, and registration links (`wa.me` WhatsApp & `t.me` Telegram).
 
 ---
 
@@ -16,7 +15,6 @@ Every file in the repository was scanned for references to sibling ecosystem dom
 | **COSYplatform** | 4 | 6 | Root portal **OK (200)**. Lesson sub-paths return **HTTP 404**. |
 | **COSYtools** | 1 | 8 | Landing page `https://cosylanguages.github.io/COSYtools/` **OK (200)**. |
 | **COSYgames** | 1 | 9 | Landing page `https://cosylanguages.github.io/COSYgames/` **OK (200)**. |
-| **COSYworld** | 1 | 8 | Landing page `https://cosylanguages.github.io/COSYworld/` **OK (200)**. |
 | **COSYmanuals** | 1 (text token) | 4 | **No HTML hyperlinks exist.** (Text policy references in `README.md` & `manuals/MIGRATION_PLAN.md`). |
 | **Telegram (`t.me`)** | 8 | 631 | All channel & bot registration pre-filled URLs return **OK (200)**. |
 | **WhatsApp (`wa.me`)** | 31 | 658 | All pre-filled phone registration links return **Redirected (200)** to `api.whatsapp.com`. |
@@ -27,7 +25,6 @@ Every file in the repository was scanned for references to sibling ecosystem dom
 
 Below is the verified status for every unique outbound URL found in the repository, along with sample source file locations.
 
-### 2.1 Sibling Ecosystem URLs (`COSYlanguages`, `COSYplatform`, `COSYtools`, `COSYgames`, `COSYworld`)
 
 | Destination URL | Category | HTTP Status | Status Flag | Sample Source Files |
 | :--- | :--- | :---: | :---: | :--- |
@@ -56,7 +53,6 @@ Below is the verified status for every unique outbound URL found in the reposito
 | `https://cosylanguages.github.io/COSYplatform/lessons/keeping-up-with-science/childhood-obesity` | COSYplatform | **404 Not Found** | **BROKEN** | `shared/calendar-data/events.json` |
 | `https://cosylanguages.github.io/COSYtools/` | COSYtools | **200 OK** | **OK** | `README.md`, `index.html`, `browse.html` |
 | `https://cosylanguages.github.io/COSYgames/` | COSYgames | **200 OK** | **OK** | `README.md`, `index.html`, `browse.html` |
-| `https://cosylanguages.github.io/COSYworld/` | COSYworld | **200 OK** | **OK** | `README.md`, `index.html`, `browse.html` |
 
 ### 2.2 Registration Links (WhatsApp & Telegram)
 

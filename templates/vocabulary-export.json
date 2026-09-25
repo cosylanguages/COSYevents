@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "COSYevents Session Vocabulary Export Interchange Format",
+  "description": "Schema for per-session vocabulary export files intended for automated or script-based ingestion into COSYdata.",
+  "type": "object",
+  "properties": {
+    "sessionId": {
+      "type": "string",
+      "description": "Unique identifier of the session (e.g., 'mind-matters-cognitive-biases')"
+    },
+    "sessionTitle": {
+      "type": "string",
+      "description": "Human-readable title of the session"
+    },
+    "eventType": {
+      "type": "string",
+      "description": "Event type (e.g. 'speaking-club', 'cinema-club', 'karaoke-club', etc.)"
+    },
+    "language": {
+      "type": "string",
+      "description": "Target language (e.g. 'English', 'French', 'Italian', 'Russian', 'Greek')"
+    },
+    "level": {
+      "type": "string",
+      "description": "CEFR level (A1, A2, B1, B2, C1, C2)"
+    },
+    "exportDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of export (YYYY-MM-DD)"
+    },
+    "vocabulary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "description": "Word or phrase in target language"
+          },
+          "pos": {
+            "type": "string",
+            "description": "Part of speech (noun, verb, adjective, expression, idiom, etc.)"
+          },
+          "definition": {
+            "type": "string",
+            "description": "Clear definition of the term in English or target language"
+          },
+          "translation": {
+            "type": "string",
+            "description": "Primary translation"
+          },
+          "example": {
+            "type": "string",
+            "description": "Contextual usage sentence from the session"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Tags for categorizing in COSYdata (e.g. ['psychology', 'biases'])"
+          }
+        },
+        "required": ["term", "definition", "example"]
+      }
+    }
+  },
+  "required": ["sessionId", "sessionTitle", "language", "level", "vocabulary"]
+}
