@@ -16,13 +16,13 @@ COSYevents features two main categories of communicative events across English, 
    - **Let's Celebrate** — Global holidays, cultural festivities, seasonal customs, and international traditions.
    - **My Life With/Without** — Reflective conversations comparing lifestyle choices, minimalism, digital habits, and personal values.
    - **The Greatest Quotes** — Deep-dive conversations inspired by literary quotes, maxims, and philosophical statements.
+   - **If You Were** — Speculative speaking club focusing on hypothetical scenarios, second/third conditional practice, and roleplay.
 
 2. **Interactive Multimedia Nights** (`events/multimedia-nights/`)
    - **Cinema Club** — Authentic film immersion with scene breakdowns, vocabulary primers, and post-watch debate.
    - **Karaoke Club** — Musical immersion with song lyric pronunciation, vocabulary breakdowns, and group singing.
    - **Game Evening** — Polyglot board games, team trivia, linguistic strategy games, and social challenges.
    - **Long Reads** — In-depth analysis of essays, short stories, article excerpts, and literary works.
-   - **If You Were** — Hypothetical scenario discussions, creative roleplay, and imaginative problem-solving.
 
 ---
 
