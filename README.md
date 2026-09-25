@@ -1,52 +1,53 @@
 # COSYevents 🎭 Calendar & Event Hub
 
-**COSYevents** serves as the official public calendar and interactive event content repository for the **COSYlanguages** ecosystem. It hosts live calendar schedules, speaking club prompt decks, cinema immersion guides, teacher-led masterclasses, and past event archives.
+**COSYevents** serves as the official public calendar, event directory, and interactive session repository for the **COSYlanguages** ecosystem. It hosts live calendar schedules, speaking club prompt decks, cinema immersion guides, teacher-led masterclasses, multimedia nights, and past event archives.
 
 ---
 
-## 🌟 Overview of Events Offered
+## 🌟 Architecture & Event Taxonomy
 
-COSYevents features five core communicative event formats across English, French, Italian, Russian, and Greek:
-1. **Speaking Clubs** (`speaking-clubs/`) — Topic-driven discussion sessions with CEFR level calibration (A1–C2), vocabulary decks, and structured speaking rounds.
-2. **Cinema Nights** (`cinema-nights/`) — Authentic film immersion with scene breakdowns, subtitle indicators, vocabulary primers, and post-watch debate guides.
-3. **Teacher-Led Sessions** (`teacher-led-sessions/`) — Specialized masterclasses on phonetics, idioms, and 1-on-1 private lesson bookings.
-4. **Special Events** (`special-events/`) — Polyglot trivia nights, cultural gastronomy workshops, and multiplayer game evenings.
-5. **Past Events Archive** (`past-events/`) — Searchable archive offering instant access to study decks, discussion guides, and companion links to COSYmanuals.
+COSYevents features two main categories of communicative events across English, French, Italian, Russian, and Greek:
+
+1. **Thematic Speaking Clubs** (`events/speaking-clubs/`)
+   - **I Couldn't Help But Wonder** — Modern dating, relationship dynamics, personal identity, and urban social observations.
+   - **Keeping Up with Science** — Scientific breakthroughs, emerging technologies, environmental insights, and innovation.
+   - **Mind Matters** — Psychology, cognitive biases, mental well-being, behavioral science, and philosophy.
+   - **Debatable & Relatable** — Debates on controversial modern dilemmas, ethical questions, and relatable social topics.
+   - **Let's Celebrate** — Global holidays, cultural festivities, seasonal customs, and international traditions.
+   - **My Life With/Without** — Reflective conversations comparing lifestyle choices, minimalism, digital habits, and personal values.
+   - **The Greatest Quotes** — Deep-dive conversations inspired by literary quotes, maxims, and philosophical statements.
+
+2. **Interactive Multimedia Nights** (`events/multimedia-nights/`)
+   - **Cinema Club** — Authentic film immersion with scene breakdowns, vocabulary primers, and post-watch debate.
+   - **Karaoke Club** — Musical immersion with song lyric pronunciation, vocabulary breakdowns, and group singing.
+   - **Game Evening** — Polyglot board games, team trivia, linguistic strategy games, and social challenges.
+   - **Long Reads** — In-depth analysis of essays, short stories, article excerpts, and literary works.
+   - **If You Were** — Hypothetical scenario discussions, creative roleplay, and imaginative problem-solving.
 
 ---
 
-## 📱 Joining Events & Registration Flow
+## 🔒 Public vs. Access-Gated Session Model
 
-- **Free & Open Access:** All event schedules, prompt decks, and materials are freely accessible without logging in.
-- **Central Registration Hub:** To reserve spots or join live sessions, all registration buttons route back to the central COSYlanguages WhatsApp and Telegram contact hubs.
-- **Timezone Awareness:** All session times are displayed in CET with dynamic client-side conversion to your local browser timezone.
+To respect participant privacy and host intellectual property without paid auth/BaaS overhead, COSYevents uses a **Public/Gated Split**:
+
+- **Public Access (`events/index.html` & Per-Event Pages):** Anyone can view event names, themes, CEFR levels, public blurbs, and schedule times. No paid session materials, prompt decks, recordings, or past-session content are exposed publicly.
+- **Access Control (Unlisted Links):** Paid attendees and facilitators receive a unique unlisted session access link (a hard-to-guess URL string) after registration to access full session materials, recordings, and interactive prompt decks.
+
+*Note on Access Control Trade-off:* This unlisted URL approach relies on obscurity rather than full identity-based authentication. If strict access control is required in the future, a roster-based access check (similar to COSYmanuals) can be implemented.
 
 ---
 
-## 👨‍🏫 Teacher Guidelines & Session Submission
+## 🔄 Interchange Pipelines & Ecosystem Integrations
 
-Teachers and community facilitators can host or submit new sessions by updating `/shared/calendar-data/events.json`:
-1. **Add Event Record:** Insert an object following the schema:
-```json
-{
-  "id": "evt-2025-xxx",
-  "title": "Session Title",
-  "type": "speaking-club | cinema-night | teacher-session | special-event",
-  "language": "English | French | Italian | Russian | Greek",
-  "level": "A1 | A2 | B1 | B2 | C1 | C2",
-  "date": "YYYY-MM-DD",
-  "time": "HH:MM",
-  "timezone": "CET",
-  "host": "Host Name",
-  "host_bio": "Short Facilitator Bio",
-  "description": "Comprehensive session description",
-  "registration_link": "https://wa.me/...",
-  "materials": "https://cosylanguages.github.io/COSYevents/sessions/...",
-  "conversionStatus": "not-planned | planned | converted",
-  "convertedLessonUrl": "https://cosylanguages.github.io/COSYplatform/..."
-}
-```
-2. **Pedagogical Standards:** Ensure all session decks adhere to [docs/speaking-clubs-spec.md](docs/speaking-clubs-spec.md) and [docs/cinema-content-style-guide.md](docs/cinema-content-style-guide.md).
+### 1. Vocabulary Duplication Pipeline into COSYdata
+Useful vocabulary extracted from sessions is exported into a standardized `vocabulary-export.json` file.
+- **Specification:** See [docs/vocabulary-pipeline.md](docs/vocabulary-pipeline.md) and template in `templates/vocabulary-export.json`.
+- **Ingestion:** COSYdata's ingestion scripts pick up `vocabulary-export.json` files from `COSYevents` sessions and merge entries into target language/level vocabulary folders.
+
+### 2. Session → Lesson Conversion Output for COSYplatform & COSYlanguages
+Finished live sessions can be converted into structured lessons for **COSYplatform**.
+- **Specification:** See [docs/session-conversion-spec.md](docs/session-conversion-spec.md).
+- **Cataloging in COSYlanguages:** Once converted, the resulting lesson is cataloged in COSYlanguages as a distinct content type: **"Event Lesson"** (alongside General, Spoken, Professional, Travelling, Relocation, and Exam Prep tracks).
 
 ---
 
@@ -57,20 +58,17 @@ Teachers and community facilitators can host or submit new sessions by updating 
 - 🎓 **[COSYplatform](https://cosylanguages.github.io/COSYplatform/)** — Where weekly speaking club sessions become full structured lessons for enrolled students.
 - 🛠️ **[COSYtools](https://cosylanguages.github.io/COSYtools/)** — Offline reference engines.
 - 🎮 **[COSYgames](https://cosylanguages.github.io/COSYgames/)** — Interactive linguistic minigame engines.
-- 🗺️ **[COSYworld](https://cosylanguages.github.io/COSYworld/)** — Cultural immersion maps.
 
-Additionally, COSYmanuals provides internal reference manuals and teacher documentation (accessible via direct unlisted links per its access model).
+*Note: COSYmanuals provides internal reference manuals and teacher documentation via direct unlisted links per its access model.*
 
 ---
 
 ## 🚀 Running Locally
 
-Open `index.html` directly in any web browser or serve with any static HTTP server. No Node.js build step or backend database required!
-
+Open `index.html` or `events/index.html` directly in any web browser or serve with any static HTTP server. No Node.js build step or backend database required!
 
 ## Documentation & Specifications
+- [Vocabulary Duplication Pipeline](docs/vocabulary-pipeline.md)
+- [Session to Lesson Conversion Specification](docs/session-conversion-spec.md)
 - [Speaking Clubs Specification](docs/speaking-clubs-spec.md)
 - [Cinema Content Style Guide](docs/cinema-content-style-guide.md)
-- [Cinema Inventory](docs/cinema-inventory.md)
-- [Rules Template](docs/rules-template.md)
-- [Structure Audit Report](docs/STRUCTURE_AUDIT.md)
