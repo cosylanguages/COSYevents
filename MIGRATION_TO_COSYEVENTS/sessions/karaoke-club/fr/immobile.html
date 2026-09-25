@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>immobile : COSYlanguages</title>
+<link href="../../../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../../shared/css/sessions.css">
+<link rel="stylesheet" href="../../../shared/css/clubs/karaoke-club.css">
+</head>
+<body class="theme-karaoke">
+<nav id="cosy-nav"></nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #4A154B, #2A0A35);">
+<div class="club-tag">Karaoke Club</div>
+<h1>immobile</h1>
+<p class="session-date">Louane • B1</p>
+</header>
+<main class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="https://cosylanguages.github.io/COSYlanguages/">Accueil</a> <span class="sep">/</span>
+<a href="https://cosylanguages.github.io/COSYlanguages/events/index.html">Événements</a> <span class="sep">/</span>
+<a href="../../../karaoke-club.html">Karaoke Club</a> <span class="sep">/</span>
+<span class="current">immobile</span>
+</nav>
+<a class="back-link" href="../../../karaoke-club.html">← Retour au club</a>
+<div class="session-meta-grid">
+<div class="meta-item"><h4>Durée</h4><p>90–120 minutes</p></div>
+<div class="meta-item"><h4>Langue</h4><p>Français</p></div>
+<div class="meta-item"><h4>Niveau</h4><p>Intermédiaire (B1)</p></div>
+<div class="meta-item"><h4>Thème</h4><p>Quand la vie s'arrête</p></div>
+<div class="meta-item"><h4>Resources</h4><p>
+<a href="https://www.youtube.com/watch?v=ADEc3L31tj8" style="color:var(--teal); margin-right: 12px;" target="_blank">Music Video 🎥</a>
+<a href="https://www.youtube.com/watch?v=ADEc3L31tj8" style="color:var(--teal);" target="_blank">Song Link (Backup) 🎵</a>
+</p></div>
+<div class="meta-item"><h4>Offline Access</h4><p><button class="btn-print" onclick="window.print()" style="background: var(--indigo); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: background 0.2s;"><span style="font-size: 1rem;">📄</span> Download PDF</button></p></div>
+</div>
+<div class="cosy-video-wrapper">
+<div class="cosy-video-container">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/ADEc3L31tj8"></iframe>
+</div>
+<div class="cosy-video-disclaimer">
+<span>ℹ️ Source : YouTube. Ce matériel est utilisé uniquement à des fins éducatives.</span>
+</div>
+</div>
+<div class="theme-box" style="background: var(--cream); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem; border: 1px dashed var(--border);">
+<h3 style="margin-top:0; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">❤️ Thème: Quand la vie s'arrête &amp; Saisissement</h3>
+<p style="margin-bottom:0.5rem; font-size:0.9rem; color:var(--ink-soft);">Nous allons discuter de:</p>
+<ul style="margin:0; padding-left:1.2rem; font-size:0.9rem; color:var(--ink-soft);">
+<li>L'angoisse du vide</li>
+<li>La paralysie émotionnelle</li>
+<li>Le doute relationnel</li>
+<li>L'incertitude</li>
+</ul>
+</div>
+<div class="speaking-time-gauge" style="background: var(--warm-white); border-radius: 12px; padding: 1rem; margin-bottom: 3rem; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.5rem;">
+<div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: bold; color: var(--muted);">
+<span>🗣️ Speaking Time Gauge</span>
+<span>90-120 min Session</span>
+</div>
+<div class="gauge-bar" style="display: flex; height: 12px; border-radius: 6px; overflow: hidden;">
+<div style="width: 10%; background: #E67E22;" title="Warm-up (10%)"></div>
+<div style="width: 15%; background: #3498DB;" title="Vocabulary (15%)"></div>
+<div style="width: 15%; background: #9B59B6;" title="Listening (15%)"></div>
+<div style="width: 45%; background: #2ECC71;" title="Discussion (45%)"></div>
+<div style="width: 10%; background: #F1C40F;" title="Language Focus (10%)"></div>
+<div style="width: 5%; background: #E74C3C;" title="Final Challenge (5%)"></div>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); flex-wrap: wrap; gap: 0.5rem;">
+<span>🎵 Warm-up (10%)</span>
+<span>📚 Vocabulary (15%)</span>
+<span>🎧 Listening (15%)</span>
+<span>💬 Discussion (45%)</span>
+<span>✨ Language Focus (10%)</span>
+<span>🎭 Final Challenge (5%)</span>
+</div>
+</div>
+<div class="rounds-container">
+<div class="round-block warm-up open" id="s-warm">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8; cursor:pointer;">
+<span>🎵 Étape 1 : Échauffement</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<ul class="round-questions">
+<li>Quelle est l'importance de ce thème de discussion dans votre vie quotidienne ?</li>
+<li>Regardez le titre 'immobile' et l'artiste 'Louane'. Selon vous, de quoi parle cette chanson ? (Question de prédiction)</li>
+<li>Quelles émotions ou quels sentiments ce style de musique vous inspire-t-il ?</li>
+</ul>
+</div>
+</div>
+<div class="round-block open" id="vocabulary">
+<div class="round-header" onclick="COSY.toggleRound('vocabulary')" style="background:#E1F5EE; cursor:pointer;">
+<span>📚 Étape 2 : Vocabulaire</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div class="vocab-grid-10">
+<h3 style="grid-column: 1 / -1; margin-top: 1rem; margin-bottom: 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">❤️ Concepts clés &amp; Émotions</h3>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">L'immobilité (f.)</div>
+<div class="vocab-def">État de ce qui ne bouge pas, immobilité physique ou mentale.</div>
+<div class="vocab-example">Face au danger, elle reste plongée dans une totale immobilité.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">Le mouvement</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'immobilité (f.)', definition:'État de ce qui ne bouge pas, immobilité physique ou mentale.', example:'Face au danger, elle reste plongée dans une totale immobilité.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Le vide</div>
+<div class="vocab-def">Espace dépourvu de matière ou sentiment d'absence.</div>
+<div class="vocab-example">Louane s'approche du vide sans savoir comment réagir.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">La plénitude</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Le vide', definition:'Espace dépourvu de matière ou sentiment d\'absence.', example:'Louane s\'approche du vide sans savoir comment réagir.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Figer</div>
+<div class="vocab-def">Rendre immobile sous le coup d'une vive émotion.</div>
+<div class="vocab-example">La peur de perdre l'autre peut figer nos paroles.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">Animer</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Figer', definition:'Rendre immobile sous le coup d\'une vive émotion.', example:'La peur de perdre l\'autre peut figer nos paroles.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Ronger</div>
+<div class="vocab-def">Tourmenter l'esprit de façon continue et obsessionnelle.</div>
+<div class="vocab-example">Les doutes et les questions finissent par ronger son esprit.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">Apaiser</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Ronger', definition:'Tourmenter l\'esprit de façon continue et obsessionnelle.', example:'Les doutes et les questions finissent par ronger son esprit.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">La paralysie</div>
+<div class="vocab-def">Incapacité temporaire d'agir ou de prendre une décision.</div>
+<div class="vocab-example">Face à la crise, une forme de paralysie s'empare de son cœur.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">L'action</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La paralysie', definition:'Incapacité temporaire d\'agir ou de prendre une décision.', example:'Face à la crise, une forme de paralysie s\'empare de son cœur.'}, this)">+ Dictionary</button>
+</div>
+<h3 style="grid-column: 1 / -1; margin-top: 1rem; margin-bottom: 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo);">🗣️ Vie, Actions &amp; Connexion</h3>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">L'abîme (m.)</div>
+<div class="vocab-def">Profondeur immense et effrayante.</div>
+<div class="vocab-example">Regarder l'abîme des sentiments peut provoquer un vertige intérieur.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">La surface</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'abîme (m.)', definition:'Profondeur immense et effrayante.', example:'Regarder l\'abîme des sentiments peut provoquer un vertige intérieur.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Le vertige</div>
+<div class="vocab-def">Sensation de perte d'équilibre ou d'angoisse face au vide.</div>
+<div class="vocab-example">L'incertitude amoureuse lui donne un pénible vertige.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">La stabilité</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Le vertige', definition:'Sensation de perte d\'équilibre ou d\'angoisse face au vide.', example:'L\'incertitude amoureuse lui donne un pénible vertige.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">Hésiter</div>
+<div class="vocab-def">Balancer entre deux décisions sans réussir à choisir.</div>
+<div class="vocab-example">Elle continue d'hésiter au lieu d'avancer vers lui.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">Trancher</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Hésiter', definition:'Balancer entre deux décisions sans réussir à choisir.', example:'Elle continue d\'hésiter au lieu d\'avancer vers lui.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">La rupture</div>
+<div class="vocab-def">Interruption soudaine d'un lien ou d'un mouvement.</div>
+<div class="vocab-example">Rester immobile est une tentative de retarder la rupture.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">La continuité</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La rupture', definition:'Interruption soudaine d\'un lien ou d\'un mouvement.', example:'Rester immobile est une tentative de retarder la rupture.'}, this)">+ Dictionary</button>
+</div>
+<div class="vocab-card"><div class="vocab-word" style="font-size: 1.1rem; font-weight: bold; color: var(--indigo); margin-bottom: 0.25rem;">L'hésitation (f.)</div>
+<div class="vocab-def">Incertitude dans les actes ou les paroles.</div>
+<div class="vocab-example">Son hésitation est visible dans son regard silencieux.</div>
+<div class="vocab-opposite" style="margin-top: 6px; font-size: 0.8rem; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 4px;"><strong>Contraire :</strong> <span class="vocab-opp-word" style="font-weight: 600;">L'assurance</span></div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'hésitation (f.)', definition:'Incertitude dans les actes ou les paroles.', example:'Son hésitation est visible dans son regard silencieux.'}, this)">+ Dictionary</button>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block open" id="listening-exercise">
+<div class="round-header" onclick="COSY.toggleRound('listening-exercise')" style="background:#FAF0E6; cursor:pointer;">
+<span>🎧 Étape 3 : Écoute</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 2rem;">
+<h3 style="font-size: 1rem; margin-top: 0; margin-bottom: 0.75rem;">Banque de mots / Aide :</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; font-family: 'Nunito', sans-serif;">
+<span class="club-tag" style="background: white; border-color: var(--border);">immobilité</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">attente</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">silence</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">solitude</span>
+<span class="club-tag" style="background: white; border-color: var(--border);">regard</span>
+</div>
+</div>
+<div class="lyrics-container" style="background: #fafafa; border: 1px solid var(--border); border-radius: 24px; padding: 2rem; font-family: 'DM Sans', sans-serif; line-height: 1.8; color: var(--ink-soft); max-height: 500px; overflow-y: auto;">
+<p style="white-space: pre-wrap; font-style: italic; margin-bottom: 0;">[Couplet 1]<br/>J'm'approche du vide qui me guette<br/>Je plonge, j'mets en premier la tête<br/>Mon cœur se recouvre peu à peu de bleu<br/>J'ai peur d'oublier sa présence<br/>De perdre le jeu de la confiance<br/>Les questions qui me rongent se perdent un peu<br/>Mais c'est pas si facile<br/>Et face à toi je pile<br/>Oui, je reste immobile, hmm-mm<br/><br/>[Refrain]<br/>C'est comme partir en voyage<br/>Ne pas pouvoir tourner la page<br/>Et me perdre encore une fois dans tes bras<br/>C'est comme prendre une autoroute<br/>Oublier ce que l'on redoute<br/>C'est quand je me retrouve seule que j'ai froid<br/><br/>[Couplet 2]<br/>J'avance au plus près de ce gouffre<br/>Et je sens le vent qui me pousse<br/>Je sais que je ne suis pas encore prête<br/>J'essaye d'effacer mes angoisses<br/>Mes peines, ces horreurs qui me passent<br/>Mais s'enfoncent au plus profond de mon être<br/>Mais c'est pas si facile<br/>Et face à toi je pile<br/>Oui, je reste immobile, hmm-mm<br/><br/>[Refrain]<br/>C'est comme partir en voyage<br/>Ne pas pouvoir tourner la page<br/>Et me perdre encore une fois dans tes bras<br/>C'est comme prendre une autoroute<br/>Oublier ce que l'on redoute<br/>C'est quand je me retrouve seule que j'ai froid<br/><br/>[Couplet 3]<br/>Je rentre à contre-sens<br/>Perdue dans mon enfance<br/>Qui s'éloigne encore, encore et encore<br/>Et je sens que je chute<br/>Perdue dans les disputes<br/>Qui ne laissent plus de place au corps-à-corps<br/><br/>[Pont]<br/>C'est comme partir en voyage<br/>Ne pas pouvoir tourner la page<br/>Et me perdre encore une fois dans tes bras<br/><br/>[Refrain]<br/>C'est comme partir en voyage<br/>Ne pas pouvoir tourner la page<br/>Et me perdre encore une fois dans tes bras<br/>C'est comme prendre une autoroute<br/>Oublier ce que l'on redoute<br/>C'est quand je me retrouve seule que j'ai froid<br/>Hmm-hmm<br/><span class="lyrics-disclaimer" style="display: block; margin-top: 1.5rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.75rem; font-family: 'Nunito', sans-serif; font-style: normal;">Lyrics extracted from <strong>Genius platform</strong> and used only for educational purposes.</span></p>
+</div>
+</div>
+</div>
+<div class="round-block open" id="discussion">
+<div class="round-header" onclick="COSY.toggleRound('discussion')" style="background:#EEEDFE; cursor:pointer;">
+<span>💬 Étape 4 : Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div class="round-1" style="margin-bottom: 2rem;">
+<h3 style="font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo); margin-bottom: 1rem;">🔵 Round 1: Lyric Analysis &amp; Discussion</h3>
+<div class="round-item"><div class="round-item-main">Dans 'Immobile', Louane chante : 'J'm'approche du vide qui me guette... et face à toi je pile'. Pourquoi le sentiment d'urgence ou de danger peut-il provoquer une <strong>immobilité</strong> soudaine ?</div>
+<div class="round-item-personal">★ Avez-vous déjà vécu un moment d'intense pression où vous vous êtes senti totalement <strong>figé</strong> ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Le texte évoque la peur de 'perdre le jeu de la confiance' et les questions qui rongent l'esprit. Comment le doute intérieur crée-t-il ce sentiment de <strong>paralysie</strong> ?</div>
+<div class="round-item-personal">★ Préférez-vous affronter un conflit immédiatement ou laisser passer le <strong>vertige</strong> en restant silencieux ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Louane compare cette situation à 'partir en voyage sans pouvoir faire ses bagages'. En quoi cette métaphore illustre-t-elle l'impuissance face au <strong>vide</strong> ?</div>
+<div class="round-item-personal">★ Comment gérez-vous le sentiment de ne pas être préparé face à un changement brutal dans votre vie ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">La chanteuse avoue 'mon cœur se recouvre peu à peu de bleu'. Est-ce que se protéger de la douleur amoureuse mène inévitablement à l'isolement dans <strong>l'abîme</strong> ?</div>
+<div class="round-item-personal">★ Prendre du recul pour ne pas souffrir est-il efficace pour éviter la <strong>rupture</strong> ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Malgré l'immobilité, la chanson montre une conscience aiguë de la crise. Comment transformer cette <strong>hésitation</strong> contemplative en une décision positive ?</div>
+<div class="round-item-personal">★ Quelle étape vous aide le plus à sortir d'une phase d'incertitude pour retrouver le mouvement ?</div>
+</div>
+</div>
+<div class="round-2" style="margin-top: 2rem;">
+<h3 style="font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--indigo); margin-bottom: 1rem;">🟢 Round 2: Broad Themes &amp; Philosophy Debate</h3>
+<div class="round-item"><div class="round-item-main">Rester <strong>immobile</strong> face à une crise amoureuse est une preuve de faiblesse qui ne fait qu'aggraver le problème. Débattons-en.</div>
+</div>
+<div class="round-item"><div class="round-item-main">L'angoisse du <strong>vide</strong> dans les relations modernes provient principalement d'une suranalyse de nos propres sentiments. Qu'en pensez-vous ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Parfois, la meilleure décision lors d'un conflit est de ne rien faire et d'attendre que le <strong>vertige</strong> passe. Partagez votre avis.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block open" id="lang-focus">
+<div class="round-header" onclick="COSY.toggleRound('lang-focus')" style="background:#FFF9E6; cursor:pointer;">
+<span>✨ Étape 5 : Point de langue</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); border-left: 4px solid var(--indigo); padding: 1.5rem; border-radius: 0 16px 16px 0; margin-bottom: 1.5rem;">
+<h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--indigo);">Focus linguistique : La métaphore du blocage et l'utilisation de 'face à'</h3>
+<p style="font-size: 0.92rem; line-height: 1.6; color: var(--ink-soft); margin-bottom: 1rem;">Pour exprimer la confrontation directe avec une situation difficile ou un sentiment, on utilise la préposition 'face à' combinée avec des verbes d'arrêt soudain comme 'piler' ou 'rester immobile'.</p>
+<strong style="font-size: 0.85rem; text-transform: uppercase; color: var(--muted); letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Exemples pratiques :</strong>
+<ul style="margin: 0; padding-left: 1.2rem; color: var(--indigo);">
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Face à la gravité des faits, personne n'a osé intervenir.</li>
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Elle a pilonné net face au mur de silence de son interlocuteur.</li>
+<li style="margin-bottom: 0.5rem; font-size: 0.9rem;">Il demeure immobile face aux questions pressantes du groupe.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="round-block open" id="final-challenge">
+<div class="round-header" onclick="COSY.toggleRound('final-challenge')" style="background:#FEEAEA; cursor:pointer;">
+<span>🎭 Étape 6 : Défi final</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding-top: 1.5rem;">
+<div style="background: var(--cream); border: 2px dashed var(--indigo); padding: 1.5rem; border-radius: 16px; display: flex; align-items: flex-start; gap: 1rem;">
+<span style="font-size: 2rem;">🎭</span>
+<div>
+<p style="margin-top: 0; font-size: 1rem; line-height: 1.6; color: var(--ink); font-weight: 500;">Simulez une consultation où un coach aide une personne paralysée par la peur de prendre une décision importante à faire le premier pas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="mistake-block open" id="s-mistakes">
+<div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+<span>✏️ Notes du Professeur (Corrections Linguistiques)</span><span class="round-toggle">▲</span>
+</div>
+<div class="mistake-body" style="display:block;">
+<div class="mistake-item">
+<span class="mistake-wrong">Elle reste immobile <span class="mistake-highlight">devant de</span> la situation.</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Elle reste immobile <span class="mistake-highlight">face à</span> la situation.</span>
+<span class="mistake-note-text">(Utilisez 'face à' pour exprimer la confrontation directe.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">J'ai peur <span class="mistake-highlight">de perdre</span> confiance à toi.</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">J'ai peur <span class="mistake-highlight">de perdre</span> confiance en toi.</span>
+<span class="mistake-note-text">(Dites 'avoir confiance en quelqu'un'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">Ça me donne <span class="mistake-highlight">un vertige</span>.</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Ça me donne <span class="mistake-highlight">le vertige</span>.</span>
+<span class="mistake-note-text">(L'expression idiomatique utilise l'article défini : 'donner le vertige'.)</span>
+</div>
+</div>
+</div>
+
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="https://cosylanguages.github.io/COSYlanguages/#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="https://cosylanguages.github.io/COSYlanguages/practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="https://cosylanguages.github.io/COSYlanguages/games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="../../../shared/js/cosyevents-session.js"></script>
+</body>
+</html>

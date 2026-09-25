@@ -1,1 +1,155 @@
-<!DOCTYPE html><html><head><title>Practice</title></head><body><h1>Practice Portal</h1><!-- TODO: content needed --></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Practice Portal — COSYlanguages</title>
+  <link rel="stylesheet" href="../shared/css/hub.css">
+  <link rel="stylesheet" href="../shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="../styles/calendar.css">
+  <style>
+    .practice-container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .data-wiring-box {
+      background: #f0fdf4;
+      border: 1px solid #10b981;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      font-size: 0.92rem;
+      color: #065f46;
+    }
+    .data-wiring-box h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: #047857;
+    }
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .practice-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .practice-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+    }
+    .practice-card p {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .source-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+    .tag-cosydata { background: #dbeafe; color: #1e40af; }
+    .tag-cosytools { background: #fef3c7; color: #92400e; }
+  </style>
+</head>
+<body>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <span class="hub-brand">COSYlanguages Ecosystem</span>
+      <h1 class="hub-title">Free Practice Hub & Manuals</h1>
+      <p class="hub-subtitle">
+        Interactive vocabulary drills, grammar manuals, and placement testing powered by COSYdata & COSYtools
+      </p>
+      <nav class="hub-nav-links" aria-label="Ecosystem Links">
+        <a href="../index.html" class="hub-nav-link">Home</a>
+        <a href="index.html" class="hub-nav-link active">Free Portal</a>
+        <a href="../apps/premium-courses/general/index.html" class="hub-nav-link">Courses</a>
+        <a href="../apps/premium-events/index.html" class="hub-nav-link">Events</a>
+        <a href="../blog/index.html" class="hub-nav-link">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="practice-container">
+
+    <!-- Ecosystem Data Architecture Box -->
+    <div class="data-wiring-box">
+      <h3>⚡ Ecosystem Single Source of Truth Wiring</h3>
+      <p>
+        In accordance with the COSY architecture, COSYlanguages does not duplicate vocabulary or grammar datasets locally.
+        Vocabulary decks are fetched dynamically from <strong>COSYdata</strong>, while grammar reference guides and interactive exercise engines are resolved from <strong>COSYtools</strong>.
+      </p>
+    </div>
+
+    <!-- Practice Categories Grid -->
+    <section>
+      <h2 style="font-size:1.5rem; color:#0f172a; margin-bottom:0.5rem;">Interactive Practice Modules</h2>
+      <p style="color:#64748b; font-size:0.95rem;">Select a practice module to begin self-guided study.</p>
+
+      <div class="practice-grid">
+
+        <!-- Module 1: Vocabulary Practice (COSYdata) -->
+        <div class="practice-card">
+          <span class="source-tag tag-cosydata">Source: COSYdata</span>
+          <h4>Vocabulary Practice Engine</h4>
+          <p>Access CEFR A1–C2 thematic word decks, space-repetition flashcards, and audio pronunciation guides.</p>
+          <a href="https://cosylanguages.github.io/COSYdata/" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block; text-decoration:none;">
+            Launch COSYdata Vocabulary →
+          </a>
+        </div>
+
+        <!-- Module 2: Interactive Grammar Practice (COSYtools) -->
+        <div class="practice-card" id="grammar">
+          <span class="source-tag tag-cosytools">Source: COSYtools</span>
+          <h4>Grammar Reference & Engine</h4>
+          <p>Interactive gap-fills, verb conjugation drills, tense trees, and sentence formulation engines.</p>
+          <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block; text-decoration:none;">
+            Launch COSYtools Grammar →
+          </a>
+        </div>
+
+        <!-- Module 3: Placement Quiz -->
+        <div class="practice-card" id="quiz">
+          <span class="source-tag tag-cosytools">Source: COSYtools Engine</span>
+          <h4>CEFR Placement Quiz</h4>
+          <p>Adaptive diagnostic quiz testing grammar awareness, reading comprehension, and active vocabulary.</p>
+          <a href="https://cosylanguages.github.io/COSYtools/placement/" target="_blank" rel="noopener" class="btn-outline" style="display:inline-block; text-decoration:none;">
+            Start Placement Quiz →
+          </a>
+        </div>
+
+        <!-- Module 4: Word & Vocabulary Games -->
+        <div class="practice-card">
+          <span class="source-tag tag-cosydata">Source: COSYgames / COSYdata</span>
+          <h4>22 Minigames & Arcade</h4>
+          <p>Word association, speed matching, anagram solvers, and lyric gap-fills.</p>
+          <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="btn-outline" style="display:inline-block; text-decoration:none;">
+            Play Games →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="hub-footer" style="margin-top: 4rem;">
+    <p>COSYlanguages &copy; Practice Portal. Vocabulary data resolved from COSYdata &amp; Grammar engines from COSYtools.</p>
+  </footer>
+
+</body>
+</html>

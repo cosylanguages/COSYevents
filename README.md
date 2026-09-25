@@ -57,7 +57,6 @@ Teachers and community facilitators can host or submit new sessions by updating 
 - 🎓 **[COSYplatform](https://cosylanguages.github.io/COSYplatform/)** — Where weekly speaking club sessions become full structured lessons for enrolled students.
 - 🛠️ **[COSYtools](https://cosylanguages.github.io/COSYtools/)** — Offline reference engines.
 - 🎮 **[COSYgames](https://cosylanguages.github.io/COSYgames/)** — Interactive linguistic minigame engines.
-- 🗺️ **[COSYworld](https://cosylanguages.github.io/COSYworld/)** — Cultural immersion maps.
 
 Additionally, COSYmanuals provides internal reference manuals and teacher documentation (accessible via direct unlisted links per its access model).
 

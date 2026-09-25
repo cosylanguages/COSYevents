@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Удобные люди : COSYlanguages</title>
+<link href="../../../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../../shared/css/sessions.css">
+<link rel="stylesheet" href="../../../shared/css/clubs/the-greatest-quotes.css">
+</head>
+<body class="theme-quotes-parenting">
+<nav id="cosy-nav"></nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+<div class="club-tag">The Greatest Quotes</div>
+<h1>"Наши родители с детства делали из нас "удобных" людей, а потом всю жизнь удивлялись, почему мы такие бесхребетные.": Михаил Пришвин</h1>
+<p class="session-date">15 October 2026</p>
+</header>
+<main class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="../../index.html">Главная</a> <span class="sep">/</span>
+<a href="../../index.html">События</a> <span class="sep">/</span>
+<a href="../../../the-greatest-quotes.html">The Greatest Quotes</a> <span class="sep">/</span>
+<span class="current">Удобные люди</span>
+</nav>
+<a class="back-link" href="../../../the-greatest-quotes.html">← Вернуться в клуб</a>
+<div class="session-meta-grid">
+<div class="meta-item"><h4>Продолжительность</h4><p>60 минут</p></div>
+<div class="meta-item"><h4>Языки</h4><p>🇷🇺 Русский</p></div>
+<div class="meta-item"><h4>Уровень</h4><p>Выше среднего (B2)</p></div>
+<div class="meta-item"><h4>Тема</h4><p>Отношения &amp; Самопознание</p></div>
+</div>
+<div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+<p>Михаил Пришвин : это человек, который олицетворяет коллективную, тихую мудрость наблюдателей, находящих глубокий смысл в повседневной жизни, и в этой сессии они сосредоточены на следующей цитате: «Наши родители с детства делали из нас 'удобных' людей, а потом всю жизнь удивлялись, почему мы такие бесхребетные.» Как нам найти чувство независимости и подлинности мышления в эпоху постоянного информационного шума? Действительно ли наши мнения принадлежат нам, или мы просто повторяем то, что нам велели думать? Давайте обсудим границы свободы мысли в современном обществе.</p>
+</div>
+<!-- PHILOSOPHERS' LEDGER INTERACTIVE CARD -->
+<div class="philosophers-ledger" style="background: #FFFDF9; border: 2px solid #5D4037; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm); font-family: 'Playfair Display', serif; font-style: italic; color: #3E2723;"><div class="quotes-theme-stamp">☕</div>
+<h4 style="margin: 0 0 0.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #5D4037; font-style: normal; font-weight: 700;">☕ The Philosophers' Ledger: Café Debates</h4>
+<p id="ledger-quote" style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem;">"Let us see how many interpretations exist! There is never only one correct answer to any profound human question." : Oscar Wilde</p>
+<button class="btn-primary" id="ledger-next-btn" style="background: #5D4037; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-style: normal; cursor: pointer; font-weight: 700; transition: background 0.2s;">Next Page in Ledger 📖</button>
+</div>
+<section id="vocabulary">
+<h2 class="section-title">📖 Словарь сессии</h2>
+<div class="vocab-grid-10">
+<div class="vocab-card"><div class="vocab-word">Аутентичность (она)</div>
+<div class="vocab-def">верность себе, своим ценностям и убеждениям.</div>
+<div class="vocab-example">Жизнь в соответствии со своей аутентичностью приносит внутренний покой.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Аутентичность (она)', definition:'верность себе, своим ценностям и убеждениям.', example:'Жизнь в соответствии со своей аутентичностью приносит внутренний покой.'}, this)">Добавить в словарь</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Конформизм (он)</div>
+<div class="vocab-def">принятие существующего порядка вещей, приспособление к общему мнению.</div>
+<div class="vocab-example">Давление общества часто вынуждает людей скатываться в конформизм.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Конформизм (он)', definition:'принятие существующего порядка вещей, приспособление к общему мнению.', example:'Давление общества часто вынуждает людей скатываться в конформизм.'}, this)">Добавить в словарь</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Автономия (она)</div>
+<div class="vocab-def">независимость в действиях и принятии решений.</div>
+<div class="vocab-example">Подростковый возраст : это период активной борьбы за личную автономию.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Автономия (она)', definition:'независимость в действиях и принятии решений.', example:'Подростковый возраст : это период активной борьбы за личную автономию.'}, this)">Добавить в словарь</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Подавление (оно)</div>
+<div class="vocab-def">насильственное ограничение или удержание чувств и желаний.</div>
+<div class="vocab-example">Подавление эмоций может привести к серьезным психологическим проблемам.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Подавление (оно)', definition:'насильственное ограничение или удержание чувств и желаний.', example:'Подавление эмоций может привести к серьезным психологическим проблемам.'}, this)">Добавить в словарь</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Бунт (он)</div>
+<div class="vocab-def">активное сопротивление навязанным правилам или авторитетам.</div>
+<div class="vocab-example">Ее подростковый бунт был важным шагом на пути к самоопределению.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Бунт (он)', definition:'активное сопротивление навязанным правилам или авторитетам.', example:'Ее подростковый бунт был важным шагом на пути к самоопределению.'}, this)">Добавить в словарь</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Подсознание (оно)</div>
+<div class="vocab-def">область психики, которая не осознается, но влияет на поведение.</div>
+<div class="vocab-example">Многие наши страхи берут свое начало в глубоком подсознании.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Подсознание (оно)', definition:'область психики, которая не осознается, но влияет на поведение.', example:'Многие наши страхи берут свое начало в глубоком подсознании.'}, this)">Добавить в словарь</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Самопознание (оно)</div>
+<div class="vocab-def">процесс изучения своих психических и физических особенностей.</div>
+<div class="vocab-example">Чтение хороших книг стимулирует наше внутреннее самопознание.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Самопознание (оно)', definition:'процесс изучения своих психических и физических особенностей.', example:'Чтение хороших книг стимулирует наше внутреннее самопознание.'}, this)">Добавить в словарь</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Маска (она)</div>
+<div class="vocab-def">социальная роль, которую человек играет перед другими.</div>
+<div class="vocab-example">За маской уверенности часто скрывается глубокая неуверенность в себе.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Маска (она)', definition:'социальная роль, которую человек играет перед другими.', example:'За маской уверенности часто скрывается глубокая неуверенность в себе.'}, this)">Добавить в словарь</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Индивидуальность (она)</div>
+<div class="vocab-def">совокупность уникальных черт, отличающих одного человека от других.</div>
+<div class="vocab-example">Школьная программа должна уважать индивидуальность каждого ребенка.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Индивидуальность (она)', definition:'совокупность уникальных черт, отличающих одного человека от других.', example:'Школьная программа должна уважать индивидуальность каждого ребенка.'}, this)">Добавить в словарь</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">Достоинство (оно)</div>
+<div class="vocab-def">уважение к себе и чувство собственной значимости.</div>
+<div class="vocab-example">Каждый человек заслуживает права жить и работать с достоинством.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Достоинство (оно)', definition:'уважение к себе и чувство собственной значимости.', example:'Каждый человек заслуживает права жить и работать с достоинством.'}, this)">Добавить в словарь</button>
+</div>
+</div>
+</section>
+<section id="structure">
+<h2 class="section-title">🎙️ Обсуждение</h2>
+<div class="rounds-container">
+<div class="round-block warm-up open" id="s-warm">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8;">
+<span>🟠 Разминка</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<ul class="round-questions">
+<li>Что для вас означает понятие «удобный человек»?</li>
+<li>Легко ли вам говорить «нет» в ответ на просьбы других людей?</li>
+</ul>
+</div>
+</div><div class="round-block grammar open" id="s-grammar">
+<div class="round-header" onclick="COSY.toggleRound('s-grammar')" style="background:#EFEBE9; border-left: 5px solid #5D4037;">
+<span>⚡ Практика грамматики : Модальные слова долженствования и разрешения</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<div class="grammar-interactive-game" style="position:relative; z-index:2;">
+<h3>⚡ Грамматическое объяснение (Выше среднего (B2))</h3>
+<p style="margin-bottom: 1.5rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Обсуждайте воспитание, границы и автономию ребенка с помощью кратких прилагательных (<strong>должен</strong>, <strong>обязан</strong>) и модальных слов (<strong>следует</strong>, <strong>необходимо</strong>).
+</p>
+<div style="background: rgba(93, 64, 55, 0.03); border: 1px dashed rgba(93, 64, 55, 0.3); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🧩 Интерактивный банк слов:</strong>
+<p style="font-size:0.82rem; color:var(--muted); margin:0 0 0.75rem 0;">Нажмите на слово ниже, затем нажмите на пустые скобки <code>[_____]</code>, чтобы вставить его!</p>
+<div class="grammar-word-bank" style="display:flex; flex-wrap:wrap; gap:8px;">
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">должна</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">следует</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">должны</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">обязаны</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">рекомендацию</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">должен</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">необходимо</span>
+</div>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Задание 1 : Часть А: Формулировка правила:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.8;">
+Завершите правило: Краткое прилагательное 'должен' согласуется с подлежащим в роде и числе: 'ребенок должен', 'мать <span class="grammar-gap" data-answer="должна" onclick="COSY.placeGrammarChip(this)">_____</span>', 'родители <span class="grammar-gap" data-answer="должны" onclick="COSY.placeGrammarChip(this)">_____</span>'. Слово 'следует' выражает мягкую <span class="grammar-gap" data-answer="рекомендацию" onclick="COSY.placeGrammarChip(this)">_____</span>.
+</p>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Задание 1 : Часть Б: Структурированная практика:</strong>
+<ol style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink); line-height: 2.0;">
+<li>Родитель не <span class="grammar-gap" data-answer="должен" onclick="COSY.placeGrammarChip(this)">_____</span> подавлять индивидуальность своего ребенка.</li>
+<li>Ребенку <span class="grammar-gap" data-answer="следует" onclick="COSY.placeGrammarChip(this)">_____</span> дать право на бунт и самопознание.</li>
+<li>Нам <span class="grammar-gap" data-answer="необходимо" onclick="COSY.placeGrammarChip(this)">_____</span> научиться слушать детские проблемы с эмпатией.</li>
+<li>Они вовсе не <span class="grammar-gap" data-answer="обязаны" onclick="COSY.placeGrammarChip(this)">_____</span> быть всегда удобными для взрослых.</li>
+<li>Должна ли современная школа воспитывать слепое подчинение?</li></ol>
+</div>
+<div style="display:flex; gap:10px; margin-bottom:1.5rem;">
+<button class="btn-verify" onclick="COSY.verifyGrammarGame(this)" style="background:#5D4037; color:white; border:none; padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Проверить ответы</button>
+<button class="btn-reset" onclick="COSY.resetGrammarGame(this)" style="background:transparent; border:1px solid var(--border); color:var(--muted); padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Сбросить доску</button>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm);">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🗣️ Задание 2 : Интерактивная разговорная практика:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Каковы главные обязанности родителей в воспитании сильной, психологически свободной личности?
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block round-1 open" id="s-r1">
+<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
+<span>🔵 Раунд 1 : Анализ</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<div class="round-item"><div class="round-item-main">Как стремление к <strong>аутентичность</strong> влияет на наше восприятие успеха и неудач в современной жизни?</div>
+<div class="round-item-personal">★ Когда в последний раз вам приходилось сталкиваться с <strong>аутентичность</strong> на своем жизненном пути?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Возможно ли найти истинный баланс, <strong>если</strong> <strong>конформизм</strong> полностью отсутствует или проявляется в избытке?</div>
+<div class="round-item-personal">★ Насколько вам комфортно позволять <strong>конформизм</strong> направлять ваши повседневные решения?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Почему мы часто изо всех сил пытаемся развивать в себе <strong>автономия</strong>, даже когда знаем, что это полезно?</div>
+<div class="round-item-personal">★ Чувствовали ли вы когда-нибудь глубокий внутренний конфликт из-за <strong>автономия</strong> в отношениях?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Как <strong>подавление</strong> меняет наш эмоциональный ландшафт в периоды серьезных жизненных перемен?</div>
+<div class="round-item-personal">★ Можете ли вы вспомнить момент из детства, когда <strong>подавление</strong> казалось чем-то совершенно естественным?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Может ли <strong>бунт</strong> выступать в роли невидимого щита против требований социального конформизма?</div>
+<div class="round-item-personal">★ Как вы лично восстанавливаете в себе <strong>бунт</strong>, когда чувствуете эмоциональное истощение?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Как наши детские переживания формируют наше отношение к <strong>подсознание</strong> во взрослом возрасте?</div>
+<div class="round-item-personal">★ Приходилось ли вам когда-нибудь выбирать между общественным одобрением и личным <strong>подсознание</strong>?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Каким образом <strong>самопознание</strong> бросает вызов жестким границам логического мышления?</div>
+<div class="round-item-personal">★ Кто в вашей жизни лучше всего воплощает суть <strong>самопознание</strong>, и чему вы у него научились?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Как принятие <strong>маска</strong> меняет то, как мы справляемся с межличностными конфликтами?</div>
+<div class="round-item-personal">★ В какой сфере вашей жизни, по вашему мнению, <strong>маска</strong> больше всего <strong>необходимо</strong> прямо сейчас?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Является ли <strong>индивидуальность</strong> качеством тихого уединения или оно лучше всего расцветает в шумном обществе?</div>
+<div class="round-item-personal">★ Как изменилось ваше личное понимание <strong>индивидуальность</strong> за последние пять лет?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Какой самый глубокий урок <strong>достоинство</strong> может преподать нам о нашей собственной природе?</div>
+<div class="round-item-personal">★ <strong>Если</strong> <strong>бы</strong> вам пришлось описать свой личный опыт общения с <strong>достоинство</strong> одним словом, какое <strong>бы</strong> это <strong>было</strong> слово?</div>
+</div>
+</div>
+</div>
+<div class="round-block lst open" id="s-lst">
+<div class="round-header" onclick="COSY.toggleRound('s-lst')" style="background:#EEEDFE;">
+<span>🟣 Обсудим вместе</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<p class="round-note">Сравнительный анализ наших привычек и восприятия себя.</p>
+</div>
+</div>
+<div class="round-block round-2 open" id="s-r2">
+<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
+<span>🟢 Раунд 2 : Философское применение</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<div class="round-item"><div class="round-item-main">В будущем технологии позволят нам оцифровывать и передавать свой опыт <strong>аутентичность</strong> напрямую другим. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ Как <strong>бы</strong> вы лично приспособились, <strong>если</strong> <strong>бы</strong> <strong>аутентичность</strong> полностью исчезло в завтрашнем мире?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Стремительный темп современного общества со временем превратит <strong>конформизм</strong> в устаревшее понятие. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ Согласились <strong>бы</strong> вы использовать технологии для искусственного повышения вашей способности к <strong>конформизм</strong>?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Будущие образовательные системы будут уделять приоритетное внимание развитию <strong>автономия</strong>, а не стандартным академическим навыкам. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ Каким <strong>бы</strong> вы хотели, чтобы будущие поколения вашей семьи помнили ваше отношение к <strong>автономия</strong>?</div>
+</div>
+<div class="round-item"><div class="round-item-main">По мере развития искусственного интеллекта машины продемонстрируют превосходную способность к <strong>подавление</strong> по сравнению с людьми. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ <strong>Если</strong> <strong>бы</strong> вы <strong>могли</strong> спроектировать футуристическую школу, как <strong>бы</strong> вы обучали детей ценности <strong>подавление</strong>?</div>
+</div>
+<div class="round-item"><div class="round-item-main">В ближайшие десятилетия <strong>бунт</strong> превратится в коммерциализированный предмет роскоши. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ Боитесь ли вы будущего, в котором <strong>бунт</strong> будет полностью управляться или контролироваться цифровыми алгоритмами?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Выживание человеческой цивилизации будет зависеть от нашей коллективной способности проявлять <strong>подсознание</strong>. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ Как вы лично готовитесь к будущему, в котором <strong>подсознание</strong> становится все большей редкостью?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Будущие поколения будут смотреть на наше нынешнее понимание <strong>самопознание</strong> с глубоким скептицизмом. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ <strong>Если</strong> <strong>бы</strong> вы <strong>могли</strong> отправить одно послание о важности <strong>самопознание</strong> людям, живущим через 100 лет, что <strong>бы</strong> вы им сказали?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Глобальная цифровая связь сделает истинное сохранение <strong>маска</strong> невероятно сложной задачей в будущем. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ Выбрали ли <strong>бы</strong> вы жизнь в футуристической утопии, которая гарантирует <strong>маска</strong> ценой вашей личной свободы?</div>
+</div>
+<div class="round-item"><div class="round-item-main">В будущем социальный статус человека будет определяться его способностью к <strong>индивидуальность</strong>, а не богатством. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ Какую роль, по вашему мнению, <strong>индивидуальность</strong> сыграет в вашей личной жизни в течение следующего десятилетия?</div>
+</div>
+<div class="round-item"><div class="round-item-main">В мире, полностью управляемом логикой, не останется места для тайны <strong>достоинство</strong>. : Вы согласны или не согласны?</div>
+<div class="round-item-personal">★ <strong>Если</strong> <strong>бы</strong> машина <strong>могла</strong> идеально воспроизвести ваш опыт переживания <strong>достоинство</strong>, стали <strong>бы</strong> вы по-прежнему ценить его?</div>
+</div>
+</div>
+</div>
+<div class="mistake-block open" id="s-mistakes">
+<div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+<span>✏️ Заметки преподавателя (Исправление ошибок)</span><span class="round-toggle">▲</span>
+</div>
+<div class="mistake-body" style="display:block;">
+<div class="mistake-item">
+<span class="mistake-wrong">Я согласен <u>с вами</u></span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Я согласен с вами / разделяю ваше мнение</span>
+<span class="mistake-note-text">(Для большего разнообразия речи используйте выражение «я разделяю ваше мнение».)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">Это делает меня <u>более счастливый</u></span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Это делает меня более счастливым</span>
+<span class="mistake-note-text">(После глагола «делать» требуется творительный падеж («счастливым»).)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">Люди опасаются <u>о будущем</u></span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Люди опасаются будущего</span>
+<span class="mistake-note-text">(Глагол «опасаться» управляет родительным падежом без предлога.)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="https://cosylanguages.github.io/COSYlanguages/#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="https://cosylanguages.github.io/COSYlanguages/practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="https://cosylanguages.github.io/COSYlanguages/games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="../../../shared/js/cosyevents-session.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { const quotes = ["\"Наши родители с детства делали из нас \"удобных\" людей, а потом всю жизнь удивлялись, почему мы такие бесхребетные.\" : Михаил Пришвин"]; let index = 0; const quoteText = document.getElementById("ledger-quote"); if (quoteText) quoteText.innerText = quotes[0]; });</script>
+</body>
+</html>

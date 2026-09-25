@@ -30,7 +30,7 @@ The repository contains the following specification, guide, and process document
 | `README.md` | `COSYplatform` | `https://cosylanguages.github.io/COSYplatform/` | **OK** | External Ecosystem Hub |
 | `README.md` | `COSYtools` | `https://cosylanguages.github.io/COSYtools/` | **OK** | External Ecosystem Hub |
 | `README.md` | `COSYgames` | `https://cosylanguages.github.io/COSYgames/` | **OK** | External Ecosystem Hub |
-| `README.md` | `COSYworld` | `https://cosylanguages.github.io/COSYworld/` | **OK** | External Ecosystem Hub |
+| `README.md` | `` | `https://cosylanguages.github.io//` | **OK** | External Ecosystem Hub |
 | `README.md` | `COSYplatform lessons/` | `https://cosylanguages.github.io/COSYplatform/lessons/` | **BROKEN** | Returns **404 Not Found** |
 
 ---

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lire et danser : COSYlanguages</title>
+<link href="../../../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../../shared/css/sessions.css">
+<link rel="stylesheet" href="../../../shared/css/clubs/the-greatest-quotes.css">
+</head>
+<body class="theme-quotes-art">
+<nav id="cosy-nav"></nav>
+<header class="session-hero" style="background: linear-gradient(135deg, #5D4037, #3E2723);">
+<div class="club-tag">The Greatest Quotes</div>
+<h1>"Laissez lire, et laissez danser; ces deux amusements ne feront jamais de mal au monde.": Voltaire</h1>
+<p class="session-date">15 December 2026</p>
+</header>
+<main class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="../../index.html">Accueil</a> <span class="sep">/</span>
+<a href="../../index.html">Événements</a> <span class="sep">/</span>
+<a href="../../../the-greatest-quotes.html">The Greatest Quotes</a> <span class="sep">/</span>
+<span class="current">Lire et danser</span>
+</nav>
+<a class="back-link" href="../../../the-greatest-quotes.html">← Retour au club</a>
+<div class="session-meta-grid">
+<div class="meta-item"><h4>Durée</h4><p>60 minutes</p></div>
+<div class="meta-item"><h4>Langues</h4><p>🇬🇧 🇫🇷</p></div>
+<div class="meta-item"><h4>Niveau</h4><p>Intermédiaire (B1)</p></div>
+<div class="meta-item"><h4>Thème</h4><p>Art &amp; Liberté</p></div>
+</div>
+<div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+<p>Voltaire est la personne qui a défendu la liberté de pensée, la tolérance et les plaisirs simples et inoffensifs de la vie contre les dogmes rigides, et dans cette session, ils se concentrent sur la citation suivante : « Laissez lire, et laissez danser; ces deux amusements ne feront jamais de mal au monde. » Pourquoi la société suspecte-t-elle si souvent les activités qui nous apportent une joie inoffensive ? Si lire et danser sont les formes ultimes de liberté mentale et physique, comment nous aident-elles à résister aux dogmes sociaux rigides ? Célébrons le pouvoir libérateur des plaisirs simples.</p>
+</div>
+<!-- PHILOSOPHERS' LEDGER INTERACTIVE CARD -->
+<div class="philosophers-ledger" style="background: #FFFDF9; border: 2px solid #5D4037; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm); font-family: 'Playfair Display', serif; font-style: italic; color: #3E2723;"><div class="quotes-theme-stamp">🧠</div>
+<h4 style="margin: 0 0 0.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #5D4037; font-style: normal; font-weight: 700;">☕ The Philosophers' Ledger: Café Debates</h4>
+<p id="ledger-quote" style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem;">"Let us see how many interpretations exist! There is never only one correct answer to any profound human question." : Oscar Wilde</p>
+<button class="btn-primary" id="ledger-next-btn" style="background: #5D4037; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-style: normal; cursor: pointer; font-weight: 700; transition: background 0.2s;">Next Page in Ledger 📖</button>
+</div>
+<section id="vocabulary">
+<h2 class="section-title">📖 Vocabulaire de la session</h2>
+<div class="vocab-grid-10">
+<div class="vocab-card"><div class="vocab-word">L'artisticité (f)</div>
+<div class="vocab-def">le caractère artistique ou la qualité d'une œuvre de l'esprit.</div>
+<div class="vocab-example">Ce livre est salué pour son originalité et sa profonde artisticité.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'artisticité (f)', definition:'le caractère artistique ou la qualité d\'une œuvre de l\'esprit.', example:'Ce livre est salué pour son originalité et sa profonde artisticité.'}, this)">Ajouter au dictionnaire</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">L'interprétation (f)</div>
+<div class="vocab-def">l'action d'expliquer ou de donner un sens particulier à quelque chose.</div>
+<div class="vocab-example">Ce texte philosophique se prête à de nombreuses interprétations.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'interprétation (f)', definition:'l\'action d\'expliquer ou de donner un sens particulier à quelque chose.', example:'Ce texte philosophique se prête à de nombreuses interprétations.'}, this)">Ajouter au dictionnaire</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">L'esthétique (f)</div>
+<div class="vocab-def">l'ensemble des principes qui définissent le beau dans une œuvre.</div>
+<div class="vocab-example">L'esthétique épurée de la pièce favorise le calme et la réflexion.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'esthétique (f)', definition:'l\'ensemble des principes qui définissent le beau dans une œuvre.', example:'L\'esthétique épurée de la pièce favorise le calme et la réflexion.'}, this)">Ajouter au dictionnaire</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">L'inspiration (f)</div>
+<div class="vocab-def">le souffle créateur qui stimule l'imagination et l'action.</div>
+<div class="vocab-example">La nature est une source d'inspiration intarissable pour les poètes.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'inspiration (f)', definition:'le souffle créateur qui stimule l\'imagination et l\'action.', example:'La nature est une source d\'inspiration intarissable pour les poètes.'}, this)">Ajouter au dictionnaire</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">L'expression (f)</div>
+<div class="vocab-def">l'action de faire connaître ses pensées, ses sentiments ou ses goûts.</div>
+<div class="vocab-example">La danse est un moyen d'expression universel et libérateur.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'expression (f)', definition:'l\'action de faire connaître ses pensées, ses sentiments ou ses goûts.', example:'La danse est un moyen d\'expression universel et libérateur.'}, this)">Ajouter au dictionnaire</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">L'imagination (f)</div>
+<div class="vocab-def">la faculté de concevoir des idées ou de créer des images mentes.</div>
+<div class="vocab-example">Les enfants possèdent une imagination débordante que l'on doit encourager.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'imagination (f)', definition:'la faculté de concevoir des idées ou de créer des images mentes.', example:'Les enfants possèdent une imagination débordante que l\'on doit encourager.'}, this)">Ajouter au dictionnaire</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">La paraphrase</div>
+<div class="vocab-def">la reformulation d'un texte ou d'une parole avec d'autres mots.</div>
+<div class="vocab-example">Pour bien comprendre cette citation, essayez d'en faire une paraphrase.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La paraphrase', definition:'la reformulation d\'un texte ou d\'une parole avec d\'autres mots.', example:'Pour bien comprendre cette citation, essayez d\'en faire une paraphrase.'}, this)">Ajouter au dictionnaire</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">La sincérité</div>
+<div class="vocab-def">la fidélité à la vérité et l'absence de toute hypocrisie.</div>
+<div class="vocab-example">La sincérité de l'artiste transparaît dans chacun de ses tableaux.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'La sincérité', definition:'la fidélité à la vérité et l\'absence de toute hypocrisie.', example:'La sincérité de l\'artiste transparaît dans chacun de ses tableaux.'}, this)">Ajouter au dictionnaire</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">L'ambiguïté (f)</div>
+<div class="vocab-def">le caractère d'une parole ou d'une œuvre qui comporte plusieurs sens.</div>
+<div class="vocab-example">L'ambiguïté de la fin du film laisse le spectateur libre de conclure.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'ambiguïté (f)', definition:'le caractère d\'une parole ou d\'une œuvre qui comporte plusieurs sens.', example:'L\'ambiguïté de la fin du film laisse le spectateur libre de conclure.'}, this)">Ajouter au dictionnaire</button>
+</div>
+<div class="vocab-card"><div class="vocab-word">L'originalité (f)</div>
+<div class="vocab-def">le caractère de ce qui est nouveau, singulier et novateur.</div>
+<div class="vocab-example">Les critiques ont salué l'originalité absolue de cette mise en scène.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'L\'originalité (f)', definition:'le caractère de ce qui est nouveau, singulier et novateur.', example:'Les critiques ont salué l\'originalité absolue de cette mise en scène.'}, this)">Ajouter au dictionnaire</button>
+</div>
+</div>
+</section>
+<section id="structure">
+<h2 class="section-title">🎙️ Structure de la discussion</h2>
+<div class="rounds-container">
+<div class="round-block warm-up open" id="s-warm">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8;">
+<span>🟠 Échauffement</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<ul class="round-questions">
+<li>Pourquoi les régimes autoritaires tentent-ils souvent d'interdire les livres et la danse ?</li>
+<li>Comment la lecture et la danse vous aident-elles à décompresser après une semaine chargée ?</li>
+</ul>
+</div>
+</div><div class="round-block grammar open" id="s-grammar">
+<div class="round-header" onclick="COSY.toggleRound('s-grammar')" style="background:#EFEBE9; border-left: 5px solid #5D4037;">
+<span>⚡ Pratique de la grammaire : Infinitif vs Forme Nominale</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<div class="grammar-interactive-game" style="position:relative; z-index:2;">
+<h3>⚡ Explication de la grammaire (Intermédiaire (B1))</h3>
+<p style="margin-bottom: 1.5rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Maîtrisez le choix entre l'<strong>infinitif</strong> et la <strong>forme nominale</strong> (<em>la création, le fait de créer</em>) après les verbes exprimant l'appréciation ou le risque artistique.
+</p>
+<div style="background: rgba(93, 64, 55, 0.03); border: 1px dashed rgba(93, 64, 55, 0.3); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🧩 Banque de mots interactive :</strong>
+<p style="font-size:0.82rem; color:var(--muted); margin:0 0 0.75rem 0;">Appuyez sur un mot ci-dessous, puis appuyez sur des crochets vides <code>[_____]</code> pour le placer !</p>
+<div class="grammar-word-bank" style="display:flex; flex-wrap:wrap; gap:8px;">
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">créer</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">s'exprimer</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">infinitif</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">verbe</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">contempler</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">lire</span>
+<span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">danser</span>
+</div>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Exercice 1 : Partie A : Formulation de la règle :</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.8;">
+Complétez la règle : Après les prépositions 'sans' ou 'pour', le verbe se met toujours à l'<span class="grammar-gap" data-answer="infinitif" onclick="COSY.placeGrammarChip(this)">_____</span>. Pour insister sur l'action en tant que sujet, on utilise 'Le fait de + <span class="grammar-gap" data-answer="verbe" onclick="COSY.placeGrammarChip(this)">_____</span>'.
+</p>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Exercice 1 : Partie B : Pratique structurée :</strong>
+<ol style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink); line-height: 2.0;">
+<li>Prendre des risques est essentiel pour <span class="grammar-gap" data-answer="créer" onclick="COSY.placeGrammarChip(this)">_____</span> une œuvre d'art authentique.</li>
+<li>Elle a choisi de <span class="grammar-gap" data-answer="s'exprimer" onclick="COSY.placeGrammarChip(this)">_____</span> sans craindre les critiques de la société.</li>
+<li>Le fait de <span class="grammar-gap" data-answer="danser" onclick="COSY.placeGrammarChip(this)">_____</span> libère l'esprit des contraintes logiques.</li>
+<li>Nous aimons <span class="grammar-gap" data-answer="contempler" onclick="COSY.placeGrammarChip(this)">_____</span> ces toiles abstraites dans le silence.</li>
+<li>Ils préfèrent <span class="grammar-gap" data-answer="lire" onclick="COSY.placeGrammarChip(this)">_____</span> des poèmes plutôt que de suivre la foule algorithmique.</li></ol>
+</div>
+<div style="display:flex; gap:10px; margin-bottom:1.5rem;">
+<button class="btn-verify" onclick="COSY.verifyGrammarGame(this)" style="background:#5D4037; color:white; border:none; padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Vérifier les réponses</button>
+<button class="btn-reset" onclick="COSY.resetGrammarGame(this)" style="background:transparent; border:1px solid var(--border); color:var(--muted); padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Réinitialiser le plateau</button>
+</div>
+<div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm);">
+<strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🗣️ Exercice 2 : Expression orale interactive :</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Pourquoi est-il si difficile de créer ou de s'exprimer de manière totalement authentique aujourd'hui ?
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="round-block round-1 open" id="s-r1">
+<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
+<span>🔵 Round 1 : Analyse</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<div class="round-item"><div class="round-item-main">Comment la quête de <strong>artisticité</strong> influence-t-elle notre perception de la réussite dans la vie moderne ?</div>
+<div class="round-item-personal">★ Quand avez-vous dû faire face à <strong>artisticité</strong> pour la dernière fois dans votre propre parcours ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Est-il possible de trouver un équilibre lorsque <strong>interprétation</strong> est complètement absent ou excessif ?</div>
+<div class="round-item-personal">★ Dans quelle mesure êtes-vous à l'aise pour laisser <strong>interprétation</strong> guider vos décisions quotidiennes ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Pourquoi avons-nous souvent du mal à cultiver <strong>esthétique</strong> même lorsque nous savons que c'est bénéfique ?</div>
+<div class="round-item-personal">★ Avez-vous déjà ressenti un profond conflit concernant <strong>esthétique</strong> dans une relation ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Comment <strong>inspiration</strong> transforme-t-il notre paysage paysage émotionnel en période de grand changement ?</div>
+<div class="round-item-personal">★ <strong>Pouvez</strong>-vous partager un moment de votre enfance où <strong>inspiration</strong> vous semblait tout à fait naturel ?</div>
+</div>
+<div class="round-item"><div class="round-item-main"><strong>expression</strong> peut-il agir comme un bouclier silencieux contre les exigences du conformisme social ?</div>
+<div class="round-item-personal">★ Comment nourrissez-vous personnellement <strong>expression</strong> lorsque vous vous sentez épuisé émotionnellement ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Comment nos expériences d'enfance façonnent-elles notre relation avec <strong>imagination</strong> à l'âge adulte ?</div>
+<div class="round-item-personal">★ Avez-vous déjà dû choisir entre le conformisme social et votre propre <strong>imagination</strong> ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">De quelles manières <strong>paraphrase</strong> remet-il en question les frontières rigides de la pensée logique ?</div>
+<div class="round-item-personal">★ Qui dans votre vie incarne le mieux l'essence de <strong>paraphrase</strong>, et qu'est-ce que cela vous a appris ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Comment le fait d'embrasser <strong>sincérité</strong> change-t-il notre façon de gérer les conflits interpersonnels ?</div>
+<div class="round-item-personal">★ Dans quel domaine de votre vie pensez-vous que <strong>sincérité</strong> est le plus désespérément nécessaire en ce moment ?</div>
+</div>
+<div class="round-item"><div class="round-item-main"><strong>ambiguïté</strong> est-il une qualité de solitude tranquille, ou s'épanouit-il dans les communautés bruyantes ?</div>
+<div class="round-item-personal">★ Comment votre compréhension personnelle de <strong>ambiguïté</strong> a-t-elle évolué au cours des cinq dernières années ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Quelle est la leçon la plus profonde que <strong>originalité</strong> peut nous enseigner sur notre propre nature ?</div>
+<div class="round-item-personal">★ <strong>Si</strong> vous deviez décrire votre expérience personnelle de <strong>originalité</strong> en un mot, quel <strong>serait</strong>-il ?</div>
+</div>
+</div>
+</div>
+<div class="round-block lst open" id="s-lst">
+<div class="round-header" onclick="COSY.toggleRound('s-lst')" style="background:#EEEDFE;">
+<span>🟣 Parlons ensemble</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<p class="round-note">Une réflexion comparative sur nos habitudes et notre vision de nous-mêmes.</p>
+</div>
+</div>
+<div class="round-block round-2 open" id="s-r2">
+<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
+<span>🟢 Round 2 : Application philosophique</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block;">
+<div class="round-item"><div class="round-item-main">À l'avenir, la technologie nous permettra de numériser et de partager directement notre expérience de <strong>artisticité</strong>. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ Comment vous adapteriez-vous personnellement <strong>si</strong> <strong>artisticité</strong> devenait totalement obsolète dans le monde de demain ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Le rythme rapide de la société moderne finira par faire de <strong>interprétation</strong> un concept obsolète. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ Seriez-vous prêt à utiliser la technologie pour stimuler artificiellement votre capacité de <strong>interprétation</strong> ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Les futurs systèmes éducatifs donneront la priorité à la culture de <strong>esthétique</strong> plutôt qu'aux compétences académiques. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ Comment voulez-vous que les futures générations de votre famille se souviennent de votre relation avec <strong>esthétique</strong> ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Avec les progrès de l'intelligence artificielle, les machines feront preuve d'une capacité supérieure de <strong>inspiration</strong> par rapport aux humains. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ <strong>Si</strong> vous deviez concevoir une école du futur, comment enseigneriez-vous la valeur de <strong>inspiration</strong> aux enfants ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Dans les décennies à venir, <strong>expression</strong> deviendra un produit de luxe hautement commercialisé. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ Craignez-vous un avenir où <strong>expression</strong> <strong>serait</strong> entièrement géré ou surveillé par des algorithmes numériques ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">La survie de la civilisation humaine dépendra de notre capacité collective à pratiquer <strong>imagination</strong>. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ Comment vous préparez-vous personnellement à un avenir où <strong>imagination</strong> se fera de plus en plus rare ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Les générations futures regarderont notre compréhension actuelle de <strong>paraphrase</strong> avec un profond scepticisme. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ <strong>Si</strong> vous pouviez envoyer un message unique concernant <strong>paraphrase</strong> aux personnes vivant dans 100 ans, quel <strong>serait</strong>-il ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">La connectivité numérique mondiale rendra le véritable <strong>sincérité</strong> incredibly difficile à maintenir à l'avenir. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ Choisiriez-vous de vivre dans une utopie futuriste qui garantit pleinement <strong>sincérité</strong> au détriment de votre liberté ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">À l'avenir, le statut social sera déterminé par la capacité d'une personne à exprimer <strong>ambiguïté</strong> plutôt que par sa richesse. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ Quel rôle espérez-vous que <strong>ambiguïté</strong> jouera dans votre propre avenir au cours de la prochaine décennie ?</div>
+</div>
+<div class="round-item"><div class="round-item-main">Un monde entièrement régi par la logique ne laissera plus de place au mystère de <strong>originalité</strong>. : Êtes-vous d'accord ou pas d'accord ?</div>
+<div class="round-item-personal">★ <strong>Si</strong> une machine pouvait reproduire parfaitement votre expérience de <strong>originalité</strong>, y accorderiez-vous toujours de la valeur ?</div>
+</div>
+</div>
+</div>
+<div class="mistake-block open" id="s-mistakes">
+<div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+<span>✏️ Note de l'enseignant (Corrections linguistiques)</span><span class="round-toggle">▲</span>
+</div>
+<div class="mistake-body" style="display:block;">
+<div class="mistake-item">
+<span class="mistake-wrong">Je suis <u>d'accord avec</u> vous</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Je partage votre avis / je suis d'accord avec vous</span>
+<span class="mistake-note-text">(Pour enrichir votre expression, préférez 'je partage votre avis'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">Il est important de réfléchir <u>à ce sujet</u></span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">Il est important de réfléchir sur ce sujet</span>
+<span class="mistake-note-text">(Pour un examen approfondi ou philosophique, on utilise la préposition 'sur'.)</span>
+</div>
+<div class="mistake-item">
+<span class="mistake-wrong">C'est une <u>bonne</u> question</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">C'est une question pertinente / intéressante</span>
+<span class="mistake-note-text">(Évitez l'adjectif générique 'bon' et utilisez des qualificatifs plus précis.)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/exam/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/travelling/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/professional/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/relocation/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="https://cosylanguages.github.io/COSYlanguages/#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="https://cosylanguages.github.io/COSYlanguages/practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../../../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="https://cosylanguages.github.io/COSYlanguages/games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="../../../shared/js/cosyevents-session.js"></script>
+<script>document.addEventListener("DOMContentLoaded", () => { const quotes = ["\"Laissez lire, et laissez danser; ces deux amusements ne feront jamais de mal au monde.\" : Voltaire"]; let index = 0; const quoteText = document.getElementById("ledger-quote"); if (quoteText) quoteText.innerText = quotes[0]; });</script>
+</body>
+</html>

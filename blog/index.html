@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSYlanguages Free Resource Blog</title>
+  <style>
+    /* Blogger.com Classic Visual Language */
+    :root {
+      --blogger-bg: #f8f9fa;
+      --blogger-card-bg: #ffffff;
+      --blogger-header-bg: #ffffff;
+      --blogger-text: #222222;
+      --blogger-muted: #666666;
+      --blogger-border: #e0e0e0;
+      --blogger-link: #2b547e;
+      --blogger-link-hover: #133352;
+      --blogger-accent: #e65100;
+      --blogger-font-serif: "Georgia", "Times New Roman", serif;
+      --blogger-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--blogger-bg);
+      color: var(--blogger-text);
+      font-family: var(--blogger-font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Minimal Chrome Header */
+    .blogger-header {
+      background: var(--blogger-header-bg);
+      border-bottom: 1px solid var(--blogger-border);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .blogger-header-content {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .blogger-title {
+      font-family: var(--blogger-font-serif);
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.25rem;
+    }
+
+    .blogger-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .blogger-subtitle {
+      font-size: 0.95rem;
+      color: var(--blogger-muted);
+      font-style: italic;
+    }
+
+    .blogger-nav {
+      margin-top: 1rem;
+      border-top: 1px solid var(--blogger-border);
+      padding-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.88rem;
+    }
+
+    .blogger-nav a {
+      color: var(--blogger-link);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .blogger-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main 2-Column Layout (Post Feed + Simple Sidebar) */
+    .blogger-container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .blogger-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Single-Column Post Feed */
+    .post-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .post-card {
+      background: var(--blogger-card-bg);
+      border: 1px solid var(--blogger-border);
+      border-radius: 4px;
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .post-header {
+      margin-bottom: 1rem;
+    }
+
+    .post-date {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--blogger-muted);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .post-title {
+      font-family: var(--blogger-font-serif);
+      font-size: 1.6rem;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    .post-title a {
+      color: var(--blogger-text);
+      text-decoration: none;
+    }
+
+    .post-title a:hover {
+      color: var(--blogger-link);
+    }
+
+    .post-labels {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .post-label {
+      background: #f0f4f8;
+      color: var(--blogger-link);
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .post-label:hover {
+      background: var(--blogger-link);
+      color: #fff;
+    }
+
+    /* List-Post Template Content Styling */
+    .post-content {
+      font-size: 0.98rem;
+      color: #333;
+      margin-top: 1rem;
+    }
+
+    .post-content p {
+      margin-bottom: 1rem;
+    }
+
+    .resource-list-container {
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .resource-item {
+      border-left: 3px solid var(--blogger-link);
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .resource-item-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .resource-item-num {
+      font-weight: 700;
+      color: var(--blogger-accent);
+      font-size: 1.1rem;
+      font-family: var(--blogger-font-serif);
+    }
+
+    .resource-item-term {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #111;
+    }
+
+    .resource-item-translation {
+      font-style: italic;
+      color: var(--blogger-muted);
+      font-size: 0.9rem;
+    }
+
+    .resource-item-meaning {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 0.35rem;
+    }
+
+    .resource-item-example {
+      font-size: 0.88rem;
+      background: #fff;
+      padding: 0.4rem 0.75rem;
+      border: 1px solid var(--blogger-border);
+      border-radius: 3px;
+      font-family: var(--blogger-font-serif);
+      color: #222;
+    }
+
+    .post-footer {
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--blogger-border);
+      padding-top: 0.75rem;
+      font-size: 0.82rem;
+      color: var(--blogger-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Sidebar Styling */
+    .blogger-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar-widget {
+      background: var(--blogger-card-bg);
+      border: 1px solid var(--blogger-border);
+      border-radius: 4px;
+      padding: 1.25rem;
+    }
+
+    .widget-title {
+      font-family: var(--blogger-font-serif);
+      font-size: 1.1rem;
+      border-bottom: 2px solid #111;
+      padding-bottom: 0.35rem;
+      margin-bottom: 0.85rem;
+      color: #111;
+    }
+
+    .sidebar-list {
+      list-style: none;
+      font-size: 0.88rem;
+    }
+
+    .sidebar-list li {
+      margin-bottom: 0.4rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .sidebar-list li:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar-list a {
+      color: var(--blogger-link);
+      text-decoration: none;
+    }
+
+    .sidebar-list a:hover {
+      text-decoration: underline;
+    }
+
+    .sidebar-count {
+      color: var(--blogger-muted);
+      font-size: 0.78rem;
+    }
+
+    /* Footer */
+    .blogger-footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--blogger-border);
+      font-size: 0.82rem;
+      color: var(--blogger-muted);
+      margin-top: 3rem;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="blogger-header">
+    <div class="blogger-header-content">
+      <h1 class="blogger-title"><a href="index.html">COSYlanguages Free Resource Blog</a></h1>
+      <p class="blogger-subtitle">Free vocabulary lists, grammar breakdowns, phrasal verb packs, and language tips</p>
+      <nav class="blogger-nav">
+        <a href="../index.html">← Ecosystem Home</a>
+        <a href="../practice/index.html">Practice Hub</a>
+        <a href="../apps/premium-courses/general/index.html">Courses</a>
+        <a href="../apps/premium-events/index.html">Events</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Container -->
+  <div class="blogger-container">
+
+    <!-- Post Feed -->
+    <main class="post-feed">
+
+      <!-- Post 1: French Idioms (List-Post Format) -->
+      <article class="post-card">
+        <div class="post-header">
+          <div class="post-date">May 10, 2025</div>
+          <h2 class="post-title"><a href="#">Top 10 French Idioms for Everyday Conversations</a></h2>
+          <div class="post-labels">
+            <a href="#" class="post-label">French</a>
+            <a href="#" class="post-label">Idioms</a>
+            <a href="#" class="post-label">Vocabulary List</a>
+            <a href="#" class="post-label">B1-B2</a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <p>Idioms give your language natural flavor and help you sound like a native speaker. Here are 10 authentic French idioms with literal meanings, figurative translations, and realistic conversational examples.</p>
+
+          <div class="resource-list-container">
+
+            <div class="resource-item">
+              <div class="resource-item-header">
+                <span class="resource-item-num">1.</span>
+                <span class="resource-item-term">Poser un lapin</span>
+                <span class="resource-item-translation">(Lit: To place a rabbit)</span>
+              </div>
+              <div class="resource-item-meaning"><strong>Meaning:</strong> To stand someone up / to fail to meet someone for a date or meeting.</div>
+              <div class="resource-item-example">"Il ne vient pas ? Il m'a encore posé un lapin !" (He's not coming? He stood me up again!)</div>
+            </div>
+
+            <div class="resource-item">
+              <div class="resource-item-header">
+                <span class="resource-item-num">2.</span>
+                <span class="resource-item-term">Avoir le cafard</span>
+                <span class="resource-item-translation">(Lit: To have the cockroach)</span>
+              </div>
+              <div class="resource-item-meaning"><strong>Meaning:</strong> To feel blue / to be feeling down or depressed.</div>
+              <div class="resource-item-example">"Le temps est si gris aujourd'hui, j'ai un peu le cafard." (The weather is so gray today, I'm feeling a bit blue.)</div>
+            </div>
+
+            <div class="resource-item">
+              <div class="resource-item-header">
+                <span class="resource-item-num">3.</span>
+                <span class="resource-item-term">Coûter les yeux de la tête</span>
+                <span class="resource-item-translation">(Lit: To cost the eyes of the head)</span>
+              </div>
+              <div class="resource-item-meaning"><strong>Meaning:</strong> To cost an arm and a leg / to be extremely expensive.</div>
+              <div class="resource-item-example">"Cet appartement à Paris coûte les yeux de la tête !" (This apartment in Paris costs an arm and a leg!)</div>
+            </div>
+
+            <div class="resource-item">
+              <div class="resource-item-header">
+                <span class="resource-item-num">4.</span>
+                <span class="resource-item-term">Coup de foudre</span>
+                <span class="resource-item-translation">(Lit: Lightning strike)</span>
+              </div>
+              <div class="resource-item-meaning"><strong>Meaning:</strong> Love at first sight / instant attraction.</div>
+              <div class="resource-item-example">"Quand ils se sont rencontrés, ça a été le coup de foudre." (When they met, it was love at first sight.)</div>
+            </div>
+
+            <div class="resource-item">
+              <div class="resource-item-header">
+                <span class="resource-item-num">5.</span>
+                <span class="resource-item-term">Appeler un chat un chat</span>
+                <span class="resource-item-translation">(Lit: To call a cat a cat)</span>
+              </div>
+              <div class="resource-item-meaning"><strong>Meaning:</strong> To call a spade a spade / to speak plainly and directly.</div>
+              <div class="resource-item-example">"Soyons honnêtes et appelons un chat un chat." (Let's be honest and call a spade a spade.)</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="post-footer">
+          <span>Posted by COSYlanguages Team</span>
+          <span>💬 0 comments</span>
+        </div>
+      </article>
+
+
+      <!-- Post 2: English Phrasal Verbs (List-Post Format) -->
+      <article class="post-card">
+        <div class="post-header">
+          <div class="post-date">May 04, 2025</div>
+          <h2 class="post-title"><a href="#">Top 100 English Phrasal Verbs: Part 1 (Work & Communication)</a></h2>
+          <div class="post-labels">
+            <a href="#" class="post-label">English</a>
+            <a href="#" class="post-label">Phrasal Verbs</a>
+            <a href="#" class="post-label">Professional</a>
+            <a href="#" class="post-label">A2-B2</a>
+          </div>
+        </div>
+
+        <div class="post-content">
+          <p>Phrasal verbs are essential for natural spoken English. Master these key professional phrasal verbs for workplace meetings and everyday conversations.</p>
+
+          <div class="resource-list-container">
+
+            <div class="resource-item">
+              <div class="resource-item-header">
+                <span class="resource-item-num">1.</span>
+                <span class="resource-item-term">Bring up</span>
+                <span class="resource-item-translation">(Separable verb)</span>
+              </div>
+              <div class="resource-item-meaning"><strong>Meaning:</strong> To introduce a topic or issue into a discussion.</div>
+              <div class="resource-item-example">"She brought up the budget issue during our team meeting."</div>
+            </div>
+
+            <div class="resource-item">
+              <div class="resource-item-header">
+                <span class="resource-item-num">2.</span>
+                <span class="resource-item-term">Call off</span>
+                <span class="resource-item-translation">(Separable verb)</span>
+              </div>
+              <div class="resource-item-meaning"><strong>Meaning:</strong> To cancel a planned event or meeting.</div>
+              <div class="resource-item-example">"They had to call off the afternoon conference due to technical errors."</div>
+            </div>
+
+            <div class="resource-item">
+              <div class="resource-item-header">
+                <span class="resource-item-num">3.</span>
+                <span class="resource-item-term">Come across</span>
+                <span class="resource-item-translation">(Inseparable verb)</span>
+              </div>
+              <div class="resource-item-meaning"><strong>Meaning:</strong> To find or encounter something by chance.</div>
+              <div class="resource-item-example">"I came across a very useful grammar manual on COSYlanguages."</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="post-footer">
+          <span>Posted by COSYlanguages Team</span>
+          <span>💬 0 comments</span>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="blogger-sidebar">
+
+      <!-- About Widget -->
+      <div class="sidebar-widget">
+        <h3 class="widget-title">About This Blog</h3>
+        <p style="font-size:0.88rem; color:var(--blogger-muted);">Free public resource lists, idiom collections, phrasal verb primers, and grammar references curated by the COSYlanguages open learning community.</p>
+      </div>
+
+      <!-- Categories / Labels Widget -->
+      <div class="sidebar-widget">
+        <h3 class="widget-title">Labels & Categories</h3>
+        <ul class="sidebar-list">
+          <li><a href="#">French <span class="sidebar-count">(12)</span></a></li>
+          <li><a href="#">English <span class="sidebar-count">(18)</span></a></li>
+          <li><a href="#">Italian <span class="sidebar-count">(8)</span></a></li>
+          <li><a href="#">Russian <span class="sidebar-count">(6)</span></a></li>
+          <li><a href="#">Idioms & Expressions <span class="sidebar-count">(15)</span></a></li>
+          <li><a href="#">Phrasal Verbs <span class="sidebar-count">(10)</span></a></li>
+          <li><a href="#">Grammar Manuals <span class="sidebar-count">(9)</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Blog Archive Widget -->
+      <div class="sidebar-widget">
+        <h3 class="widget-title">Blog Archive</h3>
+        <ul class="sidebar-list">
+          <li><a href="#">▼ 2025 <span class="sidebar-count">(24)</span></a>
+            <ul class="sidebar-list" style="margin-left:1rem; margin-top:0.25rem;">
+              <li><a href="#">May <span class="sidebar-count">(8)</span></a></li>
+              <li><a href="#">April <span class="sidebar-count">(10)</span></a></li>
+              <li><a href="#">March <span class="sidebar-count">(6)</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#">► 2024 <span class="sidebar-count">(42)</span></a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="blogger-footer">
+    <p>COSYlanguages Free Resource Blog &copy; 2025. Powered by COSYlanguages Open Ecosystem.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Basic Speaking Club (A0–A1) 🌱 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #0F6E56, #07382c); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover { background: var(--border); }
+  .filter-btn.active { background: #0F6E56; color: white; border-color: #0F6E56; }
+  .basic-session-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  .basic-card {
+    background: #FFF;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .basic-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md, 0 10px 20px rgba(0,0,0,0.08)); }
+</style>
+</head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<div style="font-size: 3rem; margin-bottom: 0.5rem;">🌱</div>
+<h1>Basic Speaking Club (A0–A1)</h1>
+<p>Safe, structured, beginner-friendly discussion sessions designed for adults. Build immediate conversational confidence through clear sentence frames, essential high-utility vocabulary, and guided peer interaction.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Live Session Info</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Format</td><td>Basic Adult Speaking Club (A0–A1)</td></tr>
+<tr><td>Description</td><td>Interactive 60-minute adult speaking sessions focused on safe topics, essential grammar formulas, and guided discussion.</td></tr>
+<tr><td>Schedule</td><td>Weekly live sessions in CET timezone</td></tr>
+<tr><td>Duration</td><td>60 min</td></tr>
+<tr><td>Languages</td><td>🇬🇧 English</td></tr>
+</table></div>
+<div style="display:flex;gap:10px;align-items:center;margin-top:1rem;">
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20the%20A0-A1%20Basic%20Speaking%20Club." style="background:#0F6E56; color:white; padding:0.6rem 1.2rem; border-radius:8px; text-decoration:none; font-weight:700;">💬 Register interest</a>
+</div>
+
+<!-- HISTORY / SESSIONS CATALOG -->
+<div class="history-block" id="basic-hist" style="margin-top: 3rem;">
+<div class="section-header" style="margin-bottom: 1rem;">
+<h2 style="font-size: 1.5rem;">📚 Complete 30-Session Curriculum Catalog</h2>
+<p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem;">Browse all ready-to-teach adult A0–A1 session decks below.</p>
+</div>
+
+<div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-level="all">All Sessions</button>
+<button class="filter-btn" data-level="a0">A0 Starter</button>
+<button class="filter-btn" data-level="a1">A1 Elementary</button>
+</div>
+
+<div class="basic-session-grid">
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 1 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Introductions & First Impressions</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Express name, country, city, job, and hobbies with 'to be' and simple adjectives.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-1-introductions-and-first-impressions.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 2 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Work & Career Choices</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Talk about office schedules, colleagues, salary, and remote vs office choices.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-2-work-and-career-choices.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 3 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Time Management & Priorities</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss morning routines, busy schedules, deadlines, and free time priorities.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-3-time-management-and-daily-priorities.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 4 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Family Roles & Responsibilities</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss family members, household responsibilities, support, and traditions.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-4-family-roles-and-responsibilities.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 5 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Appearance & First Judgments</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Explore personal style, workplace dress codes, uniforms, and fashion judgments.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-5-appearance-and-first-judgments.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 6 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Morning Routines & Productivity</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Master frequency adverbs (always, usually, never) describing morning habits.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-6-morning-routines-and-productivity.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 7 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Evening Wind-Down & Balance</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Share evening relaxation routines, switching off from work, and handling stress.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-7-evening-wind-down-and-work-life-balance.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 8 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Home & Living Preferences</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Compare city vs countryside living, renting vs buying, and good neighborhoods.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-8-home-and-living-preferences.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 9 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Minimalism vs. Comfort at Home</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss cozy vs simple interiors, home organization, storage, and clutter.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-9-minimalism-vs-comfort-at-home.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 10 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Food Culture & Personal Taste</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Express food likes/dislikes, spicy dishes, fast food, and home cooking traditions.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-10-food-culture-and-personal-taste.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 11 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Restaurants & Social Eating</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Practice dining out phrases, reservations, tipping ethics, and menu recommendations.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-11-restaurants-and-social-eating.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 12 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Money Habits & Spending</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss saving vs spending, budgets, essential vs luxury items, and prices.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-12-money-habits-and-spending-priorities.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 13 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Fashion & Identity</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Talk about self-expression through clothes, big brands, second-hand, and comfort.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-13-fashion-and-identity.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 14 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Weather & Lifestyle Choices</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss hot vs cold climates, weather impacts on mood, and outdoor activities.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-14-weather-and-lifestyle-choices.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 15 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Hobbies & Personal Growth</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Share creative hobbies, skills to learn, relaxation, and self-improvement goals.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-15-hobbies-and-personal-growth.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 16 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Sports, Health & Competition</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss fitness routines, team vs individual sports, competition, and motivation.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-16-sports-health-and-competition.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 17 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">City Life vs. Small Town</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Compare urban excitement with small-town peace, traffic, facilities, and stress.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-17-city-life-vs-small-town.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 18 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Transport Choices & Sustainability</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Talk about public transit, driving, bike lanes, electric cars, and pedestrian zones.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-18-transport-choices-and-sustainability.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 19 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Job Satisfaction & Motivation</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss meaningful work, avoiding burnout, passion vs salary, and flexible hours.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-19-job-satisfaction-and-motivation.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 20 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Emotions & Mental Wellbeing</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Express feelings, stress coping methods, confidence, and open conversations.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-20-emotions-and-mental-wellbeing.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 21 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Health Choices & Prevention</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Give wellness advice using 'should/shouldn't', medical check-ups, and habits.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-21-health-choices-and-prevention.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 22 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Time Perception & Punctuality</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Explore cultural time norms, punctuality, deadlines, and schedule flexibility.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-22-time-perception-and-punctuality.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 23 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Shopping Ethics & Consumer Choices</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss sustainable shopping, buying local, impulse buys, and waste reduction.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-23-shopping-ethics-and-consumer-choices.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 24 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Healthcare Access & Expectations</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Express opinions on medical care access, insurance, clinics, and doctor trust.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-24-healthcare-access-and-expectations.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 25 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Travel Mindset & Cultural Curiosity</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Compare tourist vs local experiences, solo travel, budget trips, and destination hopes.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-25-travel-mindset-and-cultural-curiosity.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 26 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Social Plans & Boundaries</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Practice making/canceling plans politely, setting social boundaries, and energy.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-26-social-plans-and-boundaries.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 27 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Navigation & Independence</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss asking for directions, using GPS maps, getting lost, and independence.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-27-navigation-and-independence.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 28 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Learning Styles & Education</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Share school memories with 'used to', online vs classroom learning, and methods.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-28-learning-styles-and-education-memories.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 29 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Tech Dependence & Digital Habits</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Examine screen time, digital distractions, notifications, and smartphone habits.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-29-tech-dependence-and-digital-habits.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="basic-card history-session" data-level="a0 a1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#E1F5EE; color:#0F6E56; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 30 • A0–A1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Life Reflections & Future Hopes</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Express proud achievements, future ambitions, and goals using 'would like to'.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/basic-speaking-club/session-30-life-reflections-and-future-hopes.html" style="background:#0F6E56; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem; color: #0F6E56;">A0–A1 Teaching Formula</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Every session follows a safe 60-minute framework: Warm-up → Vocabulary → Sentence Frames → Guided Discussion → Collaborative Activity → Reflection.</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p>Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5>Courses</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+</div>
+<div class="footer-links-col">
+<h5>Explore</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/#languages">Languages 🌍</a>
+<a href="practice/index.html">Free Practice 💡</a>
+<a href="speaking-clubs.html">Events 🎉</a>
+</div>
+<div class="footer-links-col">
+<h5>Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+</div>
+</div>
+<div class="footer-bottom">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>
