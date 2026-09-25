@@ -431,13 +431,28 @@
     updateSlideDisplay();
   }
 
+  // Lighter Footer Note for Gated Session Pages
+  function renderGatedFooterNote() {
+    if (document.querySelector('.cosy-gated-ecosystem-note')) return;
+    var footer = document.querySelector('footer');
+    if (!footer) return;
+
+    var note = document.createElement('div');
+    note.className = 'cosy-gated-ecosystem-note';
+    note.innerHTML = 'Part of the <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages</a> ecosystem &bull; Explore <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a> &bull; <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>';
+
+    footer.appendChild(note);
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       checkEventConversion();
       initSlideDeck();
+      renderGatedFooterNote();
     });
   } else {
     checkEventConversion();
     initSlideDeck();
+    renderGatedFooterNote();
   }
 })();
