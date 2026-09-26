@@ -1,59 +1,158 @@
 media:
-  input: assets/images
-  output: /assets/images
+  input: images
+  output: /images
 
 content:
   - name: speaking_clubs
     label: Speaking Clubs
-    type: collection
-    path: speaking-clubs       # Folder where speaking club files are kept
-    format: html               # Or 'md' if using Markdown
+    type: file
+    path: data/events/speaking-clubs.json
     fields:
+      - name: id
+        label: Event ID
+        type: string
+        required: true
       - name: title
         label: Event Title
         type: string
         required: true
-      - name: date
-        label: Date & Time
-        type: string           # e.g., "Saturday, 18:00 CEST" or a date picker
-      - name: level
-        label: Target Level
-        type: select
-        options: [A1-A2, B1-B2, C1-C2, All Levels]
-      - name: body
-        label: Agenda / Description
+      - name: description
+        label: Description
         type: rich-text
+      - name: clubs
+        label: Clubs & Topics
+        type: list
+        fields:
+          - name: id
+            label: Club ID
+            type: string
+          - name: title
+            label: Club Title
+            type: string
+          - name: description
+            label: Description
+            type: string
+          - name: level_range
+            label: Level Range
+            type: string
 
   - name: karaoke
     label: Karaoke Sessions
-    type: collection
-    path: karaoke
-    format: html
+    type: file
+    path: data/events/karaoke-club.json
     fields:
+      - name: id
+        label: Event ID
+        type: string
+        required: true
       - name: title
         label: Event Title
         type: string
         required: true
-      - name: playlist
-        label: Playlist / Song List
-        type: string
-      - name: body
+      - name: description
         label: Description
         type: rich-text
+      - name: themes
+        label: Song Themes & Playlists
+        type: list
+        fields:
+          - name: id
+            label: Theme ID
+            type: string
+          - name: title
+            label: Theme Title
+            type: string
+          - name: level_range
+            label: Level Range
+            type: string
 
   - name: film_sessions
-    label: Film Sessions
-    type: collection
-    path: film-sessions
-    format: html
+    label: Film Sessions (Cinema Club)
+    type: file
+    path: data/events/cinema-club.json
     fields:
-      - name: title
-        label: Movie Title
+      - name: id
+        label: Event ID
         type: string
         required: true
-      - name: language
-        label: Film Language
+      - name: title
+        label: Movie / Event Title
         type: string
-      - name: body
-        label: Discussion Outline / Synopsis
+        required: true
+      - name: description
+        label: Description
         type: rich-text
+      - name: sessions
+        label: Film Sessions
+        type: list
+        fields:
+          - name: id
+            label: Session ID
+            type: string
+          - name: title
+            label: Movie Title
+            type: string
+          - name: suggested_genre
+            label: Suggested Genre
+            type: string
+          - name: level_range
+            label: Level Range
+            type: string
+
+  - name: game_evening
+    label: Game Evening
+    type: file
+    path: data/events/game-evening.json
+    fields:
+      - name: event_type
+        label: Event Type
+        type: string
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: rich-text
+      - name: lineups
+        label: Session Lineups
+        type: list
+        fields:
+          - name: id
+            label: Lineup ID
+            type: string
+          - name: title
+            label: Lineup Title
+            type: string
+          - name: target_level
+            label: Target Level
+            type: string
+
+  - name: long_reads
+    label: Long Reads
+    type: file
+    path: data/events/long-reads.json
+    fields:
+      - name: id
+        label: Event ID
+        type: string
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: rich-text
+      - name: articles
+        label: Reading Articles
+        type: list
+        fields:
+          - name: id
+            label: Article ID
+            type: string
+          - name: title
+            label: Article Title
+            type: string
+          - name: level_range
+            label: Target Level
+            type: string

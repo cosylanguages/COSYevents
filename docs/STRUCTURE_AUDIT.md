@@ -59,14 +59,13 @@ All structural page duplications, singular/plural directory mismatches, needs-re
   - Consolidated catalog rendering into root `long-reads.html`.
   - Configured `long-reads/index.html` to redirect to `../long-reads.html`.
 
-### 5. Speaking Clubs
+### 5. Speaking Clubs & Multimedia Night Subfolders (`events/`)
 - **Files/Folders:**
-  - `speaking-clubs.html` (Root overview)
-  - `speaking-clubs/index.html` (Calendar event category hub)
-  - Individual club root files (`mind-matters.html`, `debatable-relatable.html`, `i-couldnt-help-but-wonder.html`, `if-you-were.html`, `keeping-up-with-science.html`, `lets-celebrate.html`, `my-life-with-without.html`, `the-greatest-quotes.html`)
-  - `sessions/<club-name>/` (Session Decks)
+  - Root topic catalog pages (`mind-matters.html`, `debatable-relatable.html`, `i-couldnt-help-but-wonder.html`, `if-you-were.html`, `keeping-up-with-science.html`, `lets-celebrate.html`, `my-life-with-without.html`, `the-greatest-quotes.html`, `cinema-club.html`, `game-evenings.html`, `karaoke-club.html`, `long-reads.html`) - Primary Single Source of Truth.
+  - Subfolder routes (`events/speaking-clubs/*/index.html` and `events/multimedia-nights/*/index.html`).
 - **Resolution:**
-  - Well-structured separation maintained.
+  - Root `<topic>.html` files are designated as canonical single sources of truth.
+  - Subfolder `index.html` routes under `events/speaking-clubs/` and `events/multimedia-nights/` are configured to redirect client-side (`../../../<topic>.html`) to ensure external link compatibility without duplicating catalog templates.
 
 ### 6. Needs-Review Sessions Reconciliation (`data/needs-review.json`)
 - **Resolution:**
