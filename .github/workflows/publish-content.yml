@@ -1,0 +1,26 @@
+name: Publish Content to Supabase
+
+on:
+  workflow_dispatch:
+    inputs:
+      session_file:
+        description: 'Path to the private session JSON file (e.g. private/evt-2026-mind-matters.json)'
+        required: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm install @supabase/supabase-js dotenv
+
+      - name: Publish session to Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/publish_to_supabase.js "${{ github.event.inputs.session_file }}"
