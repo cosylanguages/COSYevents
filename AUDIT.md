@@ -14,21 +14,12 @@ This repository has been audited against the taxonomy, privacy/gating, data inte
 
 ## 1. Structural & Logic Audit
 
-### Taxonomy Structure (`events/`)
-- **Thematic Speaking Clubs (`events/speaking-clubs/`):**
-  - `i-couldnt-help-but-wonder`
-  - `keeping-up-with-science`
-  - `mind-matters`
-  - `debatable-relatable`
-  - `lets-celebrate`
-  - `my-life-with-without`
-  - `the-greatest-quotes`
-  - `if-you-were` (classified under Speaking Clubs per explicit founder request)
-- **Interactive Multimedia Nights (`events/multimedia-nights/`):**
-  - `cinema-club`
-  - `karaoke-club`
-  - `game-evening`
-  - `long-reads`
+### Taxonomy Structure (`events/`) & Single Source of Truth
+- **Root Format Catalogs (`<topic>.html`):** The canonical single source of truth for format and topic catalog pages reside at the repository root (`i-couldnt-help-but-wonder.html`, `mind-matters.html`, `cinema-club.html`, `karaoke-club.html`, `game-evenings.html`, `long-reads.html`, etc.).
+- **Taxonomy Subfolder Index Pages (`events/speaking-clubs/*/index.html` and `events/multimedia-nights/*/index.html`):**
+  - Subfolder index pages exist as URL-compatible redirect routes pointing seamlessly to their canonical root `<topic>.html` pages (`../../../<topic>.html`).
+  - **Thematic Speaking Clubs:** `i-couldnt-help-but-wonder`, `keeping-up-with-science`, `mind-matters`, `debatable-relatable`, `lets-celebrate`, `my-life-with-without`, `the-greatest-quotes`, `if-you-were`.
+  - **Interactive Multimedia Nights:** `cinema-club`, `karaoke-club`, `game-evening`, `long-reads`.
 
 ### Data Leak Audit (Public vs. Gated Split)
 - **Verification Result:** PASSED — No Data Leaks Detected.
