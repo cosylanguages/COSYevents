@@ -1,0 +1,59 @@
+media:
+  input: assets/images
+  output: /assets/images
+
+content:
+  - name: speaking_clubs
+    label: Speaking Clubs
+    type: collection
+    path: speaking-clubs       # Folder where speaking club files are kept
+    format: html               # Or 'md' if using Markdown
+    fields:
+      - name: title
+        label: Event Title
+        type: string
+        required: true
+      - name: date
+        label: Date & Time
+        type: string           # e.g., "Saturday, 18:00 CEST" or a date picker
+      - name: level
+        label: Target Level
+        type: select
+        options: [A1-A2, B1-B2, C1-C2, All Levels]
+      - name: body
+        label: Agenda / Description
+        type: rich-text
+
+  - name: karaoke
+    label: Karaoke Sessions
+    type: collection
+    path: karaoke
+    format: html
+    fields:
+      - name: title
+        label: Event Title
+        type: string
+        required: true
+      - name: playlist
+        label: Playlist / Song List
+        type: string
+      - name: body
+        label: Description
+        type: rich-text
+
+  - name: film_sessions
+    label: Film Sessions
+    type: collection
+    path: film-sessions
+    format: html
+    fields:
+      - name: title
+        label: Movie Title
+        type: string
+        required: true
+      - name: language
+        label: Film Language
+        type: string
+      - name: body
+        label: Discussion Outline / Synopsis
+        type: rich-text
