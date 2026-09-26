@@ -1,0 +1,13 @@
+{
+  "name": "cosyevents",
+  "version": "1.0.0",
+  "description": "COSYevents Calendar & Event Hub for the COSYlanguages ecosystem",
+  "main": "index.html",
+  "scripts": {
+    "publish:supabase": "node scripts/publish_to_supabase.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.4.5"
+  }
+}

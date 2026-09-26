@@ -1,0 +1,26 @@
+{
+  "session_id": "evt-2026-mind-matters-sample",
+  "title": "Bounded Rationality & Cognitive Biases",
+  "event_type": "speaking-club",
+  "category": "Mind Matters",
+  "level": "B2",
+  "language": "en",
+  "date": "2026-10-15",
+  "summary": "Exploring how cognitive limits and heuristics shape human decision-making and modern everyday choices.",
+  "key_vocabulary": [
+    {
+      "term": "bounded rationality",
+      "translation": "ограниченная рациональность",
+      "example": "In complex economic choices, bounded rationality forces consumers to select satisfactory rather than optimal solutions."
+    },
+    {
+      "term": "heuristic",
+      "translation": "эвристика",
+      "example": "An availability heuristic makes people overestimate the likelihood of memorable events."
+    }
+  ],
+  "discussion_prompts": [
+    "Have you ever made an impulse decision based on limited information that turned out surprisingly well?",
+    "How can leaders mitigate cognitive bias when making high-stakes strategic choices under pressure?"
+  ]
+}
