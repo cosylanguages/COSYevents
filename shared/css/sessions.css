@@ -6482,3 +6482,198 @@ body.theme-dark .session-jump-link.active {
 /* Standardize round-header tints to a cohesive warm palette (less patchy pastels) */
 .round-header { background: var(--surface-alt, #FBFBF9); }
 .round-block.warm-up::before { background: #C77D3A; }
+
+/* ── Interactive Slide Deck Presentation System ── */
+.ce-slide-deck-bar {
+  background: var(--cosy-color-surface, #ffffff);
+  border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.12));
+  border-radius: var(--cosy-radius-base, 18px);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0 2rem;
+  box-shadow: var(--cosy-shadow-sm, 0 2px 12px rgba(46, 74, 51, 0.07));
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ce-slide-deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ce-slide-tabs-scroll {
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ce-slide-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 2px;
+}
+
+.ce-slide-tab {
+  background: var(--cosy-color-cream, #fdfcf8);
+  border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.15));
+  border-radius: var(--cosy-radius-full, 100px);
+  padding: 0.4rem 0.85rem;
+  font-family: var(--cosy-font-sans, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--cosy-color-ink-soft, #4a4a4a);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ce-slide-tab:hover {
+  background: var(--cosy-color-sage-pale, #e8f0e9);
+  color: var(--cosy-color-sage-dark, #375742);
+}
+
+.ce-slide-tab.active {
+  background: var(--cosy-event-accent, #B84318);
+  border-color: var(--cosy-event-accent, #B84318);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.ce-tab-num {
+  font-size: 0.72rem;
+  opacity: 0.85;
+}
+
+.ce-slide-mode-toggle {
+  display: flex;
+  gap: 0.35rem;
+  background: var(--cosy-color-cream, #fdfcf8);
+  border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.15));
+  border-radius: var(--cosy-radius-full, 100px);
+  padding: 0.2rem;
+}
+
+.ce-view-btn {
+  background: transparent;
+  border: none;
+  border-radius: var(--cosy-radius-full, 100px);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--cosy-color-ink-soft, #4a4a4a);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ce-view-btn.active {
+  background: var(--cosy-color-sage, #416b49);
+  color: #ffffff;
+}
+
+.ce-slide-progress-track {
+  width: 100%;
+  height: 4px;
+  background: var(--cosy-color-cream-dark, #f5ede0);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ce-slide-progress-fill {
+  height: 100%;
+  background: var(--cosy-event-accent, #B84318);
+  transition: width 0.3s ease;
+}
+
+.ce-slide-deck-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ce-slide-nav-btn {
+  background: var(--cosy-color-sage, #416b49);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--cosy-radius-full, 100px);
+  padding: 0.45rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ce-slide-nav-btn:hover:not(:disabled) {
+  background: var(--cosy-color-sage-dark, #375742);
+  transform: translateY(-1px);
+}
+
+.ce-slide-nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.ce-slide-fs-btn {
+  background: transparent;
+  border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.2));
+  border-radius: var(--cosy-radius-full, 100px);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cosy-color-ink-soft, #4a4a4a);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ce-slide-fs-btn:hover {
+  background: var(--cosy-color-sage-pale, #e8f0e9);
+  color: var(--cosy-color-sage-dark, #375742);
+}
+
+.ce-slide-counter {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cosy-color-ink-muted, #5c5957);
+}
+
+.ce-slide-mode-active .ce-slide-hidden {
+  display: none !important;
+}
+
+.ce-slide-mode-active .ce-slide-active {
+  display: block !important;
+  animation: slideFadeIn 0.3s ease-out;
+}
+
+@keyframes slideFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Light ecosystem footer note on gated pages */
+.cosy-gated-ecosystem-note {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--cosy-color-ink-muted, #5c5957);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--cosy-color-border, rgba(74, 107, 80, 0.12));
+}
+
+.cosy-gated-ecosystem-note a {
+  color: var(--cosy-event-accent, #B84318);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cosy-gated-ecosystem-note a:hover {
+  text-decoration: underline;
+}

@@ -45,12 +45,10 @@
       })
       .then(data => {
         allEvents = data;
-        // Default view to May 2025 for demonstration if events exist
-        if (allEvents.length > 0) {
-          const sampleDate = new Date(allEvents[0].date);
-          currentMonth = sampleDate.getMonth();
-          currentYear = sampleDate.getFullYear();
-        }
+        // Default view to current actual month and year
+        const now = new Date();
+        currentMonth = now.getMonth();
+        currentYear = now.getFullYear();
         render();
       })
       .catch(err => {
@@ -96,6 +94,7 @@
   function setupNavListeners() {
     const prevBtn = document.getElementById('prev-month-btn');
     const nextBtn = document.getElementById('next-month-btn');
+    const todayBtn = document.getElementById('today-month-btn');
 
     if (prevBtn) {
       prevBtn.addEventListener('click', function () {
@@ -115,6 +114,15 @@
           currentMonth = 0;
           currentYear++;
         }
+        render();
+      });
+    }
+
+    if (todayBtn) {
+      todayBtn.addEventListener('click', function () {
+        const now = new Date();
+        currentMonth = now.getMonth();
+        currentYear = now.getFullYear();
         render();
       });
     }
