@@ -3,6 +3,167 @@ media:
   output: /images
 
 content:
+  - name: mind_matters_sessions
+    label: Mind Matters Sessions (.md)
+    type: folder
+    path: sessions/mind-matters
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: page_title
+        label: Page Title
+        type: string
+      - name: breadcrumbs_current
+        label: Breadcrumbs Current Page
+        type: string
+      - name: club_tag
+        label: Club Tag
+        type: string
+      - name: date
+        label: Date
+        type: string
+      - name: theme_class
+        label: Theme Class
+        type: string
+      - name: decorator_icon
+        label: Decorator Icon
+        type: string
+      - name: duration
+        label: Duration
+        type: string
+      - name: languages
+        label: Languages
+        type: string
+      - name: level
+        label: Level
+        type: string
+      - name: topic
+        label: Topic
+        type: string
+      - name: hero_background
+        label: Hero Background
+        type: string
+      - name: description
+        label: Description
+        type: rich-text
+      - name: mind_profile
+        label: Subconscious Mind Profile
+        type: object
+        fields:
+          - name: core_tendency
+            label: Core Human Tendency
+            type: string
+          - name: trigger
+            label: Subconscious Trigger
+            type: string
+          - name: phenomenon
+            label: Psychological Phenomenon
+            type: string
+          - name: anchor
+            label: Self-Reflection Anchor
+            type: string
+      - name: sensitive_topic_warning
+        label: Sensitive Topic Warning
+        type: string
+      - name: vocabulary
+        label: Session Vocabulary
+        type: list
+        fields:
+          - name: word
+            label: Word
+            type: string
+          - name: definition
+            label: Definition
+            type: string
+          - name: example
+            label: Example
+            type: string
+      - name: warm_up
+        label: Warm-up Section
+        type: object
+        fields:
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: questions
+            label: Questions
+            type: list
+            field:
+              type: string
+      - name: round_1
+        label: Round 1
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Questions
+            type: list
+            fields:
+              - name: main
+                label: Main Question
+                type: string
+              - name: personal
+                label: Personal Application Question
+                type: string
+      - name: lets_speak_together
+        label: Let's Speak Together
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: note
+            label: Task Note / Roleplay (HTML/Rich-text)
+            type: rich-text
+      - name: round_2
+        label: Round 2
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Scenarios / Dilemmas
+            type: list
+            fields:
+              - name: main
+                label: Main Question / Statement
+                type: string
+              - name: personal
+                label: Personal Question (Optional)
+                type: string
+      - name: mistakes
+        label: Teacher Notes / Linguistic Corrections
+        type: list
+        fields:
+          - name: wrong
+            label: Incorrect
+            type: string
+          - name: right
+            label: Correct
+            type: string
+          - name: note
+            label: Explanation Note
+            type: string
+
   - name: speaking_clubs
     label: Speaking Clubs
     type: file
