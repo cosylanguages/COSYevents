@@ -1,0 +1,7 @@
+scripts/archive/check_cross_repo_links.js
+scripts/archive/generate_a0_a1_sessions.js
+scripts/archive/generate_basic_speaking_club_sessions.js
+scripts/archive/update_basic_speaking_club_page.js
+scripts/archive/update_master_metadata.js
+scripts/archive/update_sessions_catalog.js
+scripts/archive/update_speaking_clubs_json.js
