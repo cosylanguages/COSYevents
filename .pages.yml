@@ -44,6 +44,9 @@ content:
       - name: topic
         label: Topic
         type: string
+      - name: target_grammar
+        label: Target Grammar Focus
+        type: string
       - name: hero_background
         label: Hero Background
         type: string
@@ -65,6 +68,59 @@ content:
             type: string
           - name: anchor
             label: Self-Reflection Anchor
+            type: string
+      - name: film_metadata
+        label: Film Metadata (Cinema Club)
+        type: object
+        fields:
+          - name: movie_title
+            label: Movie Title
+            type: string
+          - name: director
+            label: Director
+            type: string
+          - name: release_year
+            label: Release Year
+            type: string
+          - name: suggested_genre
+            label: Suggested Genre
+            type: string
+          - name: age_rating
+            label: Age Rating
+            type: string
+      - name: song_metadata
+        label: Song Metadata (Karaoke Club)
+        type: object
+        fields:
+          - name: song_title
+            label: Song Title
+            type: string
+          - name: artist
+            label: Artist
+            type: string
+          - name: release_year
+            label: Release Year
+            type: string
+          - name: genre
+            label: Genre
+            type: string
+          - name: lyrics_gap_fill_lines
+            label: Lyrics Gap-Fill Lines (Max 8 lines allowed)
+            type: list
+            field:
+              type: string
+      - name: science_takeaway
+        label: Science Takeaway (Keeping Up with Science)
+        type: object
+        fields:
+          - name: core_finding
+            label: Core Finding
+            type: string
+          - name: scientific_field
+            label: Field of Study
+            type: string
+          - name: real_world_application
+            label: Real World Application
             type: string
       - name: sensitive_topic_warning
         label: Sensitive Topic Warning
@@ -115,17 +171,28 @@ content:
                 label: Main Question
                 type: string
               - name: personal
-                label: Personal Application Question
+                label: Personal Application Question (Optional)
                 type: string
       - name: lets_speak_together
         label: Let's Speak Together
         type: object
         fields:
           - name: title
-            label: Title
+            label: Section Title
             type: string
+          - name: task_title
+            label: Task Title (Structured)
+            type: string
+          - name: task_description
+            label: Task Description (Structured)
+            type: string
+          - name: grammar_requirements
+            label: Grammar Requirements (Structured)
+            type: list
+            field:
+              type: string
           - name: note
-            label: Task Note / Roleplay (HTML/Rich-text)
+            label: Custom Note / Rich-Text Fallback
             type: rich-text
       - name: round_2
         label: Round 2
@@ -148,17 +215,23 @@ content:
                 label: Main Question / Statement
                 type: string
               - name: personal
-                label: Personal Question (Optional)
+                label: Personal Application Question (Optional)
                 type: string
       - name: mistakes
         label: Teacher Notes / Linguistic Corrections
         type: list
         fields:
           - name: wrong
-            label: Incorrect
+            label: Incorrect (HTML / String)
+            type: string
+          - name: wrong_part
+            label: Erroneous Part (Structured)
             type: string
           - name: right
-            label: Correct
+            label: Correct (HTML / String)
+            type: string
+          - name: right_part
+            label: Corrected Part (Structured)
             type: string
           - name: note
             label: Explanation Note
