@@ -99,10 +99,10 @@ content:
             label: Level Range
             type: string
 
-  - name: game_evening
-    label: Game Evening
+  - name: game_evenings
+    label: Game Evenings
     type: file
-    path: data/events/game-evening.json
+    path: data/events/game-evenings.json
     fields:
       - name: event_type
         label: Event Type
