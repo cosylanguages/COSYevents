@@ -17,28 +17,34 @@ function parseMarkdownFile(filepath) {
   return { ...frontmatter, markdownBody };
 }
 
-function generateSessionHtml(data) {
-  const pageTitle = data.page_title || `${data.title} : COSYlanguages`;
-  const themeClass = data.theme_class || 'theme-mind';
-  const heroStyle = data.hero_background ? ` style="background: ${data.hero_background};"` : ' style="background: linear-gradient(135deg, #993556, #4d1a2b);"';
-  const clubTag = data.club_tag || 'Mind Matters';
-  const decoratorIcon = data.decorator_icon || '🎙️';
-  const breadcrumbCurrent = data.breadcrumbs_current || data.title;
-  const duration = data.duration || '60 minutes';
-  const languages = data.languages || '🇬🇧 English';
-
-  let descriptionHtml = '';
-  if (data.description) {
-    if (data.description.trim().startsWith('<p>')) {
-      descriptionHtml = data.description.trim();
-    } else {
-      descriptionHtml = `<p>${data.description.trim()}</p>`;
+function renderLetsSpeakTogether(lst) {
+  if (!lst) return '';
+  if (lst.task_title || lst.task_description) {
+    let grammarHtml = '';
+    if (lst.grammar_requirements) {
+      const items = Array.isArray(lst.grammar_requirements)
+        ? lst.grammar_requirements
+        : [lst.grammar_requirements];
+      grammarHtml = `
+<strong style="display:block; margin-bottom:0.5rem; color:#3b368c;">Your Synthesizing Task:</strong>
+<ul style="margin:0; padding-left:1.5rem; font-size:0.92rem; color:var(--ink); line-height:1.8;">
+${items.map(req => `<li>${req}</li>`).join('\n')}
+</ul>`;
     }
-  }
 
-  let mindProfileHtml = '';
+    return `
+<div style="background:#fff; border:1px solid #534AB7; border-radius:12px; padding:1.25rem; box-shadow: var(--shadow-sm);">
+<h4 style="margin:0 0 0.75rem 0; color:#534AB7;">🗣️ ${lst.task_title || "The Integration Challenge"}:</h4>
+<p style="margin:0 0 1rem 0; font-size:0.95rem; line-height:1.6; color:var(--ink);">${lst.task_description || ''}</p>
+${grammarHtml}
+</div>`;
+  }
+  return lst.note || '';
+}
+
+function renderFormatProfile(data) {
   if (data.mind_profile) {
-    mindProfileHtml = `
+    return `
 <div class="mind-profile-box">
 <h3>🧠 Subconscious Mind Profile</h3>
 <div class="mind-profile-grid">
@@ -61,6 +67,100 @@ function generateSessionHtml(data) {
 </div>
 </div>`;
   }
+
+  if (data.film_metadata) {
+    const f = data.film_metadata;
+    return `
+<div class="mind-profile-box">
+<h3>🎬 Film Profile</h3>
+<div class="mind-profile-grid">
+<div class="mind-profile-item"><strong>Movie Title</strong><span>${f.movie_title || ''}</span></div>
+<div class="mind-profile-item"><strong>Director</strong><span>${f.director || ''}</span></div>
+<div class="mind-profile-item"><strong>Release Year / Genre</strong><span>${f.release_year || ''} (${f.suggested_genre || ''})</span></div>
+<div class="mind-profile-item"><strong>Age Rating</strong><span>${f.age_rating || 'PG-13'}</span></div>
+</div>
+</div>`;
+  }
+
+  if (data.song_metadata) {
+    const s = data.song_metadata;
+    let gapFillLines = (s.lyrics_gap_fill_lines || []);
+    if (gapFillLines.length > 8) {
+      console.warn(`[Copyright Constraint Warning] lyrics_gap_fill_lines capped at 8 lines (found ${gapFillLines.length}).`);
+      gapFillLines = gapFillLines.slice(0, 8);
+    }
+    const gapFillHtml = gapFillLines.length > 0 ? `
+<div style="margin-top:1rem; padding:0.75rem; background:#FAF7F2; border-radius:8px;">
+<strong>🎵 Key Song Lines / Gap-Fill (Max 8 lines allowed):</strong>
+<ol style="margin:0.5rem 0 0 1.25rem; font-size:0.9rem;">
+${gapFillLines.map(l => `<li>${l}</li>`).join('\n')}
+</ol>
+</div>` : '';
+
+    return `
+<div class="mind-profile-box">
+<h3>🎤 Song & Lyric Profile</h3>
+<div class="mind-profile-grid">
+<div class="mind-profile-item"><strong>Track Title</strong><span>${s.song_title || ''}</span></div>
+<div class="mind-profile-item"><strong>Artist</strong><span>${s.artist || ''}</span></div>
+<div class="mind-profile-item"><strong>Release Year</strong><span>${s.release_year || ''}</span></div>
+<div class="mind-profile-item"><strong>Genre</strong><span>${s.genre || ''}</span></div>
+</div>
+${gapFillHtml}
+</div>`;
+  }
+
+  if (data.science_takeaway) {
+    const st = data.science_takeaway;
+    return `
+<div class="mind-profile-box">
+<h3>🔬 Scientific Profile & Takeaway</h3>
+<div class="mind-profile-grid">
+<div class="mind-profile-item"><strong>Core Finding</strong><span>${st.core_finding || ''}</span></div>
+<div class="mind-profile-item"><strong>Field of Study</strong><span>${st.scientific_field || ''}</span></div>
+<div class="mind-profile-item"><strong>Real World Application</strong><span>${st.real_world_application || ''}</span></div>
+</div>
+</div>`;
+  }
+
+  return '';
+}
+
+function renderMistakeItem(m) {
+  const wrongText = m.wrong || m.wrong_part || '';
+  const rightText = m.right || m.right_part || '';
+  const noteText = m.note || '';
+
+  return `
+<div class="mistake-item">
+<span class="mistake-wrong">${wrongText}</span>
+<span class="mistake-arrow">→</span>
+<span class="mistake-right">${rightText}</span>
+${noteText ? `<span class="mistake-note-text">${noteText}</span>` : ''}
+</div>`;
+}
+
+function generateSessionHtml(data) {
+  const pageTitle = data.page_title || `${data.title} : COSYlanguages`;
+  const themeClass = data.theme_class || 'theme-mind';
+  const heroStyle = data.hero_background ? ` style="background: ${data.hero_background};"` : ' style="background: linear-gradient(135deg, #993556, #4d1a2b);"';
+  const clubTag = data.club_tag || 'Mind Matters';
+  const decoratorIcon = data.decorator_icon || '🎙️';
+  const breadcrumbCurrent = data.breadcrumbs_current || data.title;
+  const duration = data.duration || '60 minutes';
+  const languages = data.languages || '🇬🇧 English';
+  const targetGrammar = data.target_grammar ? `<div class="meta-item"><h4>Grammar Focus</h4><p>${data.target_grammar}</p></div>` : '';
+
+  let descriptionHtml = '';
+  if (data.description) {
+    if (data.description.trim().startsWith('<p>')) {
+      descriptionHtml = data.description.trim();
+    } else {
+      descriptionHtml = `<p>${data.description.trim()}</p>`;
+    }
+  }
+
+  const profileHtml = renderFormatProfile(data);
 
   let sensitiveTopicHtml = '';
   const warningNote = data.sensitive_topic_warning || data.sensitive_topic_note;
@@ -86,7 +186,7 @@ function generateSessionHtml(data) {
   const warmUpInstruction = data.warm_up?.instruction ? `<div class="vim-instruction">${data.warm_up.instruction}</div>\n` : '';
 
   const round1Title = data.round_1?.title || 'Round 1 : Psychological Analysis';
-  const round1Badge = data.round_1?.badge || 'Questions';
+  const round1Badge = data.round_1?.badge || data.target_grammar || 'Questions';
   const round1Instruction = data.round_1?.instruction ? `<div class="vim-instruction">${data.round_1.instruction}</div>\n` : '';
   const round1ItemsHtml = (data.round_1?.items || []).map(item => `
 <div class="round-item">
@@ -95,10 +195,10 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
 </div>`).join('');
 
   const lstTitle = data.lets_speak_together?.title || "Let's Speak Together";
-  const lstNoteHtml = data.lets_speak_together?.note || '';
+  const lstContentHtml = renderLetsSpeakTogether(data.lets_speak_together);
 
   const round2Title = data.round_2?.title || 'Round 2 : Conditional Practices';
-  const round2Badge = data.round_2?.badge || 'Conditionals';
+  const round2Badge = data.round_2?.badge || data.target_grammar || 'Conditionals';
   const round2Instruction = data.round_2?.instruction ? `<div class="vim-instruction">${data.round_2.instruction}</div>\n` : '';
   const round2ItemsHtml = (data.round_2?.items || []).map(item => `
 <div class="round-item">
@@ -106,13 +206,7 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
 ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''}
 </div>`).join('');
 
-  const mistakesHtml = (data.mistakes || []).map(m => `
-<div class="mistake-item">
-<span class="mistake-wrong">${m.wrong}</span>
-<span class="mistake-arrow">→</span>
-<span class="mistake-right">${m.right}</span>
-${m.note ? `<span class="mistake-note-text">${m.note}</span>` : ''}
-</div>`).join('');
+  const mistakesHtml = (data.mistakes || []).map(renderMistakeItem).join('');
 
   return `<!DOCTYPE html>
 
@@ -148,10 +242,11 @@ ${m.note ? `<span class="mistake-note-text">${m.note}</span>` : ''}
 <div class="meta-item"><h4>Languages</h4><p>${languages}</p></div>
 <div class="meta-item"><h4>Level</h4><p>${data.level}</p></div>
 ${data.topic ? `<div class="meta-item"><h4>Topic</h4><p>${data.topic}</p></div>` : ''}
+${targetGrammar}
 </div>
 <div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
 ${descriptionHtml}
-</div>${mindProfileHtml}${sensitiveTopicHtml}
+</div>${profileHtml}${sensitiveTopicHtml}
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
 <div class="vocab-grid-10">${vocabCardsHtml}
@@ -184,7 +279,7 @@ ${round1Instruction}${round1ItemsHtml}
 <span>🟣 ${lstTitle}</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block; padding: 1.5rem 1.25rem;">
-${lstNoteHtml}
+${lstContentHtml}
 </div>
 </div>
 <div class="round-block round-2 open" id="s-r2">

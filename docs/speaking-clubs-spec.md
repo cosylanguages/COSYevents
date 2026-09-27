@@ -155,3 +155,102 @@ Place inside `.history-body` of a club card.
   </div>
 </div>
 ```
+
+## 6. Markdown Frontmatter Session Schema (Stage 3 Refined)
+
+The Markdown frontmatter format (`sessions/<club>/*.md`) serves as the structured content source for session static generation and PagesCMS editing.
+
+### Frontmatter Schema Definition
+```yaml
+---
+title: "Session Title"
+page_title: "Session Title : COSYlanguages"
+breadcrumbs_current: "Short Title"
+club_tag: "Mind Matters" # or Cinema Club, Karaoke Club, Keeping Up with Science, etc.
+date: "DD Month YYYY"
+theme_class: "theme-mind-topic"
+decorator_icon: "🎙️" # or 🧠, 🎬, 🎤, 🔬, 🧪
+duration: "60 minutes"
+languages: "🇬🇧 English"
+level: "Intermediate (B1)"
+topic: "Session Topic"
+target_grammar: "Conditionals (2nd, 3rd, Mixed)" # Explicit key auto-populating badges & filters
+hero_background: "linear-gradient(135deg, #993556, #4d1a2b)"
+description: "Detailed 3-sentence blurb introducing the session theme."
+
+# Format-Specific Profile Objects (Optional)
+mind_profile:
+  core_tendency: "Core Human Tendency"
+  trigger: "Subconscious Trigger"
+  phenomenon: "Psychological Phenomenon"
+  anchor: "Self-Reflection Anchor"
+
+film_metadata:
+  movie_title: "Movie Title"
+  director: "Director Name"
+  release_year: "2024"
+  suggested_genre: "Drama / Sci-Fi"
+  age_rating: "PG-13"
+
+song_metadata:
+  song_title: "Track Title"
+  artist: "Artist Name"
+  release_year: "2023"
+  genre: "Pop / Indie"
+  lyrics_gap_fill_lines: # Max 8 lines allowed per copyright policy
+    - "Line 1..."
+    - "Line 2..."
+
+science_takeaway:
+  core_finding: "Core Scientific Finding"
+  scientific_field: "Neuroscience"
+  real_world_application: "Practical Application"
+
+sensitive_topic_warning: "Optional note for sensitive or 18+ personal/philosophical themes."
+
+vocabulary:
+  - word: "Term"
+    definition: "definition ending with period."
+    example: "Example sentence using term."
+
+warm_up:
+  instruction: "Optional instruction text."
+  questions:
+    - "Question 1?"
+    - "Question 2?"
+
+round_1:
+  title: "Round 1 : Title"
+  badge: "Questions" # Falls back to target_grammar if omitted
+  instruction: "Optional instruction."
+  items:
+    - main: "Main question statement."
+      personal: "Optional personal application question."
+
+lets_speak_together:
+  title: "Let's Speak Together"
+  # Structured subfields option (recommended for PagesCMS):
+  task_title: "The Roleplay / Synthesis Task"
+  task_description: "Scenario description for participants."
+  grammar_requirements:
+    - "At least one Second Conditional"
+    - "At least one Third Conditional"
+  # Rich-text fallback:
+  note: "<p>Custom HTML card or paragraph fallback.</p>"
+
+round_2:
+  title: "Round 2 : Title"
+  badge: "Conditionals"
+  instruction: "Optional instruction."
+  items:
+    - main: "Main statement or dilemma."
+      personal: "Optional personal question."
+
+mistakes:
+  - wrong: "Incorrect string or HTML snippet"
+    wrong_part: "Structured incorrect part"
+    right: "Corrected string or HTML snippet"
+    right_part: "Structured corrected part"
+    note: "Level-appropriate explanation note."
+---
+```
