@@ -1,0 +1,217 @@
+<!--
+  🌌 I Couldn't Help But Wonder - Reusable MINI GROUP Session Template
+
+  HOW TO USE:
+  - This template defines the exact HTML layout and class structures for the 6-unit small-group (2-5 learners) session mode.
+  - Insert this markup block inside the session's HTML file enclosed inside a `<div data-session-mode="mini" style="display: none;">` wrapper.
+  - The script setupWonderModeRouter() inside js/core/ui.js will dynamically toggle and display this container based on '?mode=mini'.
+
+  PEDAGOGICAL ARC:
+  UNDERSTAND → POSITION → EXPLORE → CHALLENGE → RESPOND → SPECULATE
+-->
+
+<div class="rounds-container">
+
+    <!-- ================= UNIT 1 ================= -->
+    <!-- UNDERSTAND: Frame the Dialogue (Intro, Warm-up & 10 Vocabulary Units) -->
+    <div class="round-block warm-up open" id="m-unit1">
+        <div class="round-header" onclick="COSY.toggleRound('m-unit1')" style="background:#FAEEE8;">
+            <span>🟠 UNIT 1: Frame the Dialogue (Introduction & Vocabulary)</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+            <div style="background: rgba(230, 126, 34, 0.04); border-left: 4px solid #E67E22; padding: 1rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; font-size: 0.92rem; line-height: 1.5; color: var(--ink-soft);">
+                <strong>Topic Frame:</strong> [Insert 2-3 introspective sentences contextualizing the premise of the session in Carrie's relationship-column tone.]
+            </div>
+
+            <h4 style="margin: 0 0 0.5rem; font-size: 1rem; color: var(--ink);">🌱 Warm-Up Prompts</h4>
+            <ul class="round-questions" style="margin-bottom: 2rem;">
+                <li>[Warm-up Question 1?]</li>
+                <li>[Warm-up Question 2?]</li>
+            </ul>
+
+            <h4 style="margin: 0 0 1rem; font-size: 1rem; color: var(--ink); border-bottom: 1px dashed var(--border); padding-bottom: 0.5rem;">📖 Active Vocabulary Check (10 Units)</h4>
+            <p style="font-size:0.82rem; color:var(--muted); margin:0 0 1.25rem 0;">Work together as a small group to review these 10 core words. Pronounce them aloud and construct a quick personal sentence with each.</p>
+
+            <div class="vocab-grid-10">
+                <!-- Word 1 -->
+                <div class="vocab-card">
+                    <div class="vocab-word">[WORD 1]</div>
+                    <div class="vocab-def">[definition.]</div>
+                    <div class="vocab-example">[Example sentence.]</div>
+                </div>
+                <!-- Word 2 up to 10... -->
+                <div class="vocab-card">
+                    <div class="vocab-word">[WORD 2]</div>
+                    <div class="vocab-def">[definition.]</div>
+                    <div class="vocab-example">[Example sentence.]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= UNIT 2 ================= -->
+    <!-- POSITION: General Discussion (5 prompts with matching personalizations) -->
+    <div class="round-block round-1 open" id="m-unit2">
+        <div class="round-header" onclick="COSY.toggleRound('m-unit2')" style="background:#E1F5EE;">
+            <span>🔵 UNIT 2: The Core Premise (General Discussion)</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+            <p style="font-size:0.82rem; color:var(--muted); margin:0 0 1.5rem 0;">Position your thoughts. Answer each main question, then use the matched personalized star prompt to reflect on your own behaviors.</p>
+
+            <div class="round-item">
+                <div class="round-item-main">[General Question 1?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 1?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[General Question 2?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 2?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[General Question 3?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 3?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[General Question 4?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 4?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[General Question 5?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 5?]</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= UNIT 3 ================= -->
+    <!-- EXPLORE: Topic-Specific Deep Dive (Adapted title specific to topic) -->
+    <div class="round-block round-1 open" id="m-unit3">
+        <div class="round-header" onclick="COSY.toggleRound('m-unit3')" style="background:#E1F5EE; border-left: 5px solid #1A7A4A;">
+            <span>🔵 UNIT 3: [Topic-Specific Title - e.g., Language vs. Mind]</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+            <p style="font-size:0.82rem; color:var(--muted); margin:0 0 1.5rem 0;">Explore the concepts. Discuss these topic-focused angles in-depth and share your personal anecdotes.</p>
+
+            <div class="round-item">
+                <div class="round-item-main">[Topic Question 1?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 1?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Topic Question 2?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 2?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Topic Question 3?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 3?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Topic Question 4?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 4?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Topic Question 5?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 5?]</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= UNIT 4 ================= -->
+    <!-- CHALLENGE: Contrast / Challenge (e.g. A vs B, past vs present, etc.) -->
+    <div class="round-block round-1 open" id="m-unit4">
+        <div class="round-header" onclick="COSY.toggleRound('m-unit4')" style="background:#E1F5EE; border-left: 5px solid #2B6CB0;">
+            <span>🔵 UNIT 4: [Contrast/Challenge Title - e.g., Individual Identity vs. Collective Agreements]</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+            <p style="font-size:0.82rem; color:var(--muted); margin:0 0 1.5rem 0;">Challenge standard opinions. Contrast opposing viewpoints and share which side you naturally lean towards.</p>
+
+            <div class="round-item">
+                <div class="round-item-main">[Contrast/Challenge Question 1?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 1?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Contrast/Challenge Question 2?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 2?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Contrast/Challenge Question 3?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 3?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Contrast/Challenge Question 4?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 4?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Contrast/Challenge Question 5?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 5?]</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= UNIT 5 ================= -->
+    <!-- RESPOND: Consequences / Solutions / Responsibility / Actions -->
+    <div class="round-block round-1 open" id="m-unit5">
+        <div class="round-header" onclick="COSY.toggleRound('m-unit5')" style="background:#E1F5EE; border-left: 5px solid #8B5CF6;">
+            <span>🔵 UNIT 5: [Consequences/Solutions Title - e.g., Real-world Accountability]</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+            <p style="font-size:0.82rem; color:var(--muted); margin:0 0 1.5rem 0;">Respond with action. Reflect on the practical consequences, social responsibilities, and solutions available.</p>
+
+            <div class="round-item">
+                <div class="round-item-main">[Responsibility Question 1?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 1?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Responsibility Question 2?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 2?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Responsibility Question 3?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 3?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Responsibility Question 4?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 4?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Responsibility Question 5?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 5?]</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= UNIT 6 ================= -->
+    <!-- SPECULATE: Future / Speculation -->
+    <div class="round-block round-2 open" id="m-unit6">
+        <div class="round-header" onclick="COSY.toggleRound('m-unit6')" style="background:#EAF3DE;">
+            <span>🟢 UNIT 6: [Future Speculation Title - e.g., The Future of Speech]</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+            <p style="font-size:0.82rem; color:var(--muted); margin:0 0 1.5rem 0;">Speculate on what lies ahead. Use advanced conditional structures (second, third, or mixed) to project these realities into future decades.</p>
+
+            <div class="round-item">
+                <div class="round-item-main">[Future Question 1?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 1?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Future Question 2?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 2?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Future Question 3?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 3?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Future Question 4?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 4?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[Future Question 5?]</div>
+                <div class="round-item-personal">★ [Matched Personal Prompt 5?]</div>
+            </div>
+        </div>
+    </div>
+
+</div>

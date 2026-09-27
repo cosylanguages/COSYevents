@@ -3112,14 +3112,6 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Session Title : COSYlanguages",
-    "href": "sessions/lets-celebrate/template-celebrate.html",
-    "level": "",
-    "lang": "English",
-    "club": "Let's Celebrate",
-    "format": "Speaking Club"
-  },
-  {
     "title": "Single Working Women's Day : COSYlanguages",
     "href": "sessions/lets-celebrate/single-working-womens-day.html",
     "level": "",
@@ -3616,14 +3608,6 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Session Title : COSYlanguages",
-    "href": "sessions/mind-matters/template-mind.html",
-    "level": "",
-    "lang": "English",
-    "club": "Mind Matters",
-    "format": "Speaking Club"
-  },
-  {
     "title": "Technofeudalism &amp; the War for Attention (B1) : COSYlanguages",
     "href": "sessions/mind-matters/technofeudalism-attention.html",
     "level": "B1",
@@ -4106,14 +4090,6 @@
   {
     "title": "Saudade : COSYlanguages",
     "href": "sessions/the-greatest-quotes/saudade.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Session Title : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/template-quotes.html",
     "level": "",
     "lang": "English",
     "club": "The Greatest Quotes",

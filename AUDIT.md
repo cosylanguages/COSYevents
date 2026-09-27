@@ -1,80 +1,92 @@
-# Repository Audit Report — COSYevents
+# Master Repository Audit & State Report — COSYevents
 
-**Audit Date:** May 2025
+**Audit Date:** September 2026
 **Auditor:** Jules (AI Software Engineer)
 **Repository:** COSYevents (`cosylanguages/COSYevents`)
+**Status:** FULLY RECONCILED & VERIFIED
 
 ---
 
 ## Executive Summary
 
-This repository has been audited against the taxonomy, privacy/gating, data interchange, UI/UX, and session link integrity requirements specified for the COSY ecosystem. The taxonomy structure, public catalog pages, access control notices, vocabulary duplication pipeline (`COSYdata`), session-to-lesson conversion specification (`COSYplatform`/`COSYlanguages`), and internal relative link integrity across all 563 session files have been established and verified.
+This report serves as the consolidated single source of truth for the audit state, architecture, taxonomy, asset integrity, and data pipelines of the **COSYevents** repository. All prior audit findings across legacy documents (`docs/STRUCTURE_AUDIT.md` and the `link-audit/` directory) have been verified against the live repository state as of **September 2026**, with all previously flagged issues marked as resolved.
 
 ---
 
-## 1. Structural & Logic Audit
+## 1. Taxonomy & Architecture
 
-### Taxonomy Structure (`events/`) & Single Source of Truth
-- **Root Format Catalogs (`<topic>.html`):** The canonical single source of truth for format and topic catalog pages reside at the repository root (`i-couldnt-help-but-wonder.html`, `mind-matters.html`, `cinema-club.html`, `karaoke-club.html`, `game-evenings.html`, `long-reads.html`, etc.).
-- **Taxonomy Subfolder Index Pages (`events/speaking-clubs/*/index.html` and `events/multimedia-nights/*/index.html`):**
-  - Subfolder index pages exist as URL-compatible redirect routes pointing seamlessly to their canonical root `<topic>.html` pages (`../../../<topic>.html`).
-  - **Thematic Speaking Clubs:** `i-couldnt-help-but-wonder`, `keeping-up-with-science`, `mind-matters`, `debatable-relatable`, `lets-celebrate`, `my-life-with-without`, `the-greatest-quotes`, `if-you-were`.
-  - **Interactive Multimedia Nights:** `cinema-club`, `karaoke-club`, `game-evening`, `long-reads`.
+### Single Source of Truth Catalog Architecture
+- **Root Format & Topic Catalogs (`<topic>.html`):** The primary interactive catalog pages reside at the repository root (`speaking-clubs.html`, `cinema-club.html`, `karaoke-club.html`, `game-evenings.html`, `long-reads.html`, `basic-speaking-club.html`, `debatable-relatable.html`, `i-couldnt-help-but-wonder.html`, `if-you-were.html`, `keeping-up-with-science.html`, `lets-celebrate.html`, `mind-matters.html`, `my-life-with-without.html`, `the-greatest-quotes.html`).
+- **Category Hubs (`<category>/index.html`):** Filter hubs for calendar views (`speaking-clubs/index.html`, `cinema-nights/index.html`, `teacher-led-sessions/index.html`, `special-events/index.html`).
+- **Taxonomy Subfolder Index Routes (`events/speaking-clubs/*/index.html` and `events/multimedia-nights/*/index.html`):** All 12 subfolder index pages act as client-side redirect routes pointing seamlessly to their canonical root catalog pages (`../../../<topic>.html`), ensuring URL compatibility across sibling ecosystem repositories (`cosylanguages`, `cosydata`, `cosyplatform`).
 
-### Data Leak Audit (Public vs. Gated Split)
-- **Verification Result:** PASSED — No Data Leaks Detected.
-- **Detailed Findings:**
-  - Public pages (`events/index.html` and per-event `index.html` files) expose strictly public metadata: event format, theme title, CEFR level scope, and a high-level blurb.
-  - No session materials, prompt decks, audio/video recordings, or past-session content are present in the DOM (neither in hidden CSS elements nor in commented HTML blocks).
-  - Access to full session interactive decks is granted exclusively via unlisted session access URLs provided to paid participants and hosts upon registration.
-
----
-
-## 2. Session Content & Relative Link Audit
-
-- **Audit Scope:** Scanned all 563 HTML files under `sessions/` for relative link targets, script paths, and footer links.
-- **Issues Identified & Fixed:**
-  - Resolved 504 incorrect relative footer links (`../../../practice/index.html`, `../../../games/index.html`, `../../../privacy.html`, `../../../index.html`) to correct two-level relative paths (`../../`).
-  - Resolved outdated relative links to legacy paths (`../../../apps/premium-events/...` and `../../../wonder/...`).
-- **Post-Fix Verification:** 100% PASS — 0 broken relative links remain across all 563 session HTML files.
+### PagesCMS Configuration (`.pages.yml`)
+- **Media Paths:** `media.input` points to `images` (existing root directory) and `media.output` to `/images`.
+- **Collections Mapping:** Collections map directly to real event JSON datasets in `data/events/`:
+  - `speaking_clubs` → `data/events/speaking-clubs.json`
+  - `karaoke` → `data/events/karaoke-club.json`
+  - `film_sessions` → `data/events/cinema-club.json`
+  - `game_evening` → `data/events/game-evening.json`
+  - `long_reads` → `data/events/long-reads.json`
 
 ---
 
-## 3. Data Interchange Specifications
+## 2. Session Content & Catalog Verification
+
+### Master Catalog Statistics (`data/sessions.json`)
+- **Total Session Files on Disk:** 645 standalone HTML session pages across all supported languages:
+  - English Sessions (`sessions/`): 560 files
+  - French Sessions (`fr/sessions/`): 44 files
+  - Russian Sessions (`ru/sessions/`): 41 files
+- **Total Catalog Entries in `data/sessions.json`:** 645 sessions (100% match, verified via `scripts/verify_catalog.js`).
+- **Master Calendar Records (`shared/calendar-data/events.json`):** 19 scheduled event entries.
+
+### Public / Gated Content Model
+- **Public Catalog Views:** Expose strictly event metadata, format, topic, CEFR level scope, and public blurbs. No interactive prompt decks or unlisted session materials are rendered publicly on catalog pages.
+- **Session Materials:** Interactive decks and prompt cards are served inside self-contained session pages (`sessions/`) accessed via unlisted URLs sent to registered attendees.
+
+---
+
+## 3. Asset & Link Integrity Verification
+
+All issues previously flagged in legacy audit summaries have been verified and resolved as of **September 2026**:
+
+| Category | Flagged Issue | Resolution Status | Verified Location |
+|---|---|---|---|
+| **Materials PDFs** | `french-phonetics-guide.pdf` & `russian-idioms.pdf` | ✅ RESOLVED (Sept 2026) | `shared/materials/` |
+| **Session Pages** | `italian-gastronomy.html` | ✅ RESOLVED (Sept 2026) | `sessions/lets-celebrate/` |
+| **Poster Images** | Cover posters (`speaking-clubs-cover.jpg`, `roman-holiday-poster.jpg`, `ratatouille-poster.jpg`, `prada-poster.jpg`) | ✅ RESOLVED (Sept 2026) | `assets/` |
+| **Hub Navigation** | Relative links on `browse.html`, `cinema-club.html`, `fr/index.html`, `ru/index.html` | ✅ RESOLVED (Sept 2026) | `node scripts/check_hub_links.js` |
+| **Localized Linkage** | French and Russian session grids | ✅ RESOLVED (Sept 2026) | `node scripts/verify_hub_linkage.js` |
+| **Authoring Templates** | Scattered template files in `sessions/` | ✅ RESOLVED (Sept 2026) | Consolidated into `templates/` (14 templates total) |
+| **Migration Tooling** | One-time scripts in `scripts/` | ✅ RESOLVED (Sept 2026) | Archived in `scripts/archive/` with `README.md` |
+
+---
+
+## 4. Localized Language Hubs
+
+- **French Portal (`fr/`):** `fr/index.html`, `fr/speaking-clubs.html`, `fr/mind-matters.html` (44 standalone session pages in `fr/sessions/`).
+- **Russian Portal (`ru/`):** `ru/index.html`, `ru/speaking-clubs.html`, `ru/mind-matters.html` (41 standalone session pages in `ru/sessions/`).
+- **Italian Portal (`it/`):** `it/index.html` (7 sessions).
+- **Greek Portal (`el/`):** `el/index.html` (9 sessions).
+
+---
+
+## 5. Ecosystem Interchange Specifications
 
 ### Vocabulary Interchange (`COSYdata`)
-- **File / Schema:** `templates/vocabulary-export.json` & `docs/vocabulary-pipeline.md`
-- **Audit Result:** WELL-FORMED & READY.
-- **Specification:** Uses Draft-07 JSON Schema. Mandates `sessionId`, `sessionTitle`, `language`, `level`, and a `vocabulary` array containing `term`, `pos`, `definition`, `translation`, `example`, and `tags`.
-- **Ecosystem Fit:** Seamlessly matches COSYdata's ingestion script expectation (`scripts/ingest_events_vocabulary.js`), merging terms into target language/level vocabulary datasets.
+- **Specification:** `templates/vocabulary-export.json` & `docs/vocabulary-pipeline.md`.
+- **Function:** Standardized Draft-07 JSON schema for exporting session vocabulary entries into `COSYdata` ingestion pipelines.
 
-### Session → Lesson Conversion Interchange (`COSYplatform` & `COSYlanguages`)
-- **File / Schema:** `docs/session-conversion-spec.md` (`session-export.json`)
-- **Audit Result:** WELL-FORMED & READY.
-- **Specification:** Defines structured session export containing sections (`warmup`, `vocabulary`, `deep-dive`, `wrapup`) and conversion metadata (`conversionStatus`, `convertedLessonUrl`).
-- **Ecosystem Fit:** Aligns with COSYplatform's lesson builder and COSYlanguages' cataloging requirements. Converted lessons are published in COSYlanguages under the distinct content type **"Event Lesson"** (alongside General, Spoken, Professional, Travelling, Relocation, and Exam Prep tracks).
+### Session → Lesson Conversion (`COSYplatform` & `COSYlanguages`)
+- **Specification:** `docs/session-conversion-spec.md` (`session-export.json`).
+- **Function:** Defines export structure for converting completed live sessions into structured COSYplatform lessons, published in `COSYlanguages` as "Event Lessons".
 
 ---
 
-## 4. Visual / CSS & UX/UI Audit
+## 6. Automated Verification Tooling
 
-- **Clarity of Public/Gated Split:**
-  - The central catalog (`events/index.html`) prominently displays a highlighted policy notice box (`🔐 Public & Access-Gated Session Policy`) at the top of the page.
-  - Per-event pages include a dedicated `🔒 Gated Content Notice` banner explaining that full session materials and recordings require host/paid participant registration.
-- **No Dead Ends:**
-  - Visitors browsing public pages receive clear registration pathways back to the central COSYlanguages WhatsApp and Telegram hubs (`wa.me` / `t.me`).
-  - Clear navigation links (`Calendar`, `Events Catalog`, `COSYlanguages Main`) allow intuitive exploration without hitting dead-end walls.
-
----
-
-## 5. Ecosystem Cleanliness
-
-- **COSYworld References:** 0 remaining references found. All navigation header links, CSS header comments, and audit files have been scrubbed of obsolete `COSYworld` links.
-- **COSYmanuals Hyperlinking:** Confirmed no public pages directly hyperlink to `COSYmanuals`, maintaining its non-public access policy.
-- **Master Catalog Script Verification:** Ran `scripts/verify_catalog.js`, `scripts/check_hub_links.js`, and `scripts/verify_hub_linkage.js` — 100% verification pass rate across all catalog entries and localized language hubs.
-
----
-
-## Summary Conclusion
-
-The repository is fully audited, all session relative links are repaired and verified, and the infrastructure is ready for real content migration from COSYlanguages' `apps/premium-events`.
+Active verification scripts in `scripts/`:
+- `verify_catalog.js` — Confirms 1:1 catalog mapping between `data/sessions.json` and disk HTML files.
+- `check_hub_links.js` — Validates relative link integrity across localized hubs.
+- `verify_hub_linkage.js` — Ensures 100% of localized sessions are displayed and linked on hub pages.

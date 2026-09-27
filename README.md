@@ -68,6 +68,7 @@ Finished live sessions can be converted into structured lessons for **COSYplatfo
 Open `index.html` or `events/index.html` directly in any web browser or serve with any static HTTP server. No Node.js build step or backend database required!
 
 ## Documentation & Specifications
+- [Master Audit & State Report](AUDIT.md)
 - [Vocabulary Duplication Pipeline](docs/vocabulary-pipeline.md)
 - [Session to Lesson Conversion Specification](docs/session-conversion-spec.md)
 - [Speaking Clubs Specification](docs/speaking-clubs-spec.md)

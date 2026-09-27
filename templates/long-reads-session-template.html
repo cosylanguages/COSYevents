@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Long Reads: [Session Title] : COSYlanguages</title>
+<link rel="icon" href="../shared/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../shared/css/sessions.css">
+<link rel="stylesheet" href="https://cosylanguages.github.io/COSYevents/shared/css/clubs/long-reads.css">
+</head>
+<body class="theme-longreads-[topic-slug]">
+
+<nav id="cosy-nav"></nav>
+
+<header class="session-hero">
+  <div class="club-tag">Long Reads</div>
+  <div class="session-decorator-icon">📚</div>
+  <h1>[Session Title]</h1>
+  <p class="session-date">[Part / Chapter Details]</p>
+</header>
+
+<main class="content-container">
+
+  <nav class="cosy-breadcrumbs">
+    <a href="../index.html">Home</a> <span class="sep">/</span>
+    <a href="../index.html">Events</a> <span class="sep">/</span>
+    <a href="../long-reads.html">Long Reads</a> <span class="sep">/</span>
+    <span class="current">[Short Title]</span>
+  </nav>
+
+  <a href="../long-reads.html" class="back-link">← Back to Club</a>
+
+  <div class="session-meta-grid">
+    <div class="meta-item">
+      <h4>Duration</h4>
+      <p>60 minutes</p>
+    </div>
+    <div class="meta-item">
+      <h4>Languages</h4>
+      <p>🇬🇧 English</p>
+    </div>
+    <div class="meta-item">
+      <h4>Level</h4>
+      <p>Upper-Intermediate (B2)</p>
+    </div>
+    <div class="meta-item">
+      <h4>Theme</h4>
+      <p>[Session Focus Theme]</p>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+    <p>[Session summary introducing book chapter focus and core literary discussion theme.]</p>
+  </div>
+
+  <!-- SESSION CURRICULUM BANNER -->
+  <div style="background: #FFF9F9; border: 1px solid rgba(122, 28, 28, 0.2); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+    <h3 style="margin-top: 0; margin-bottom: 1rem; color: #7A1C1C; display: flex; align-items: center; gap: 0.5rem; font-family: 'Playfair Display', serif; font-size: 1.25rem;">
+      <span>📖</span> Active Book Curriculum Breakdown
+    </h3>
+    <ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8; color: var(--ink); font-size: 0.95rem;">
+      <li><strong>Chapter X:</strong> [Chapter Title] <em>- [Brief summary of chapter takeaways.]</em></li>
+      <li><strong>Chapter Y:</strong> [Chapter Title] <em>- [Brief summary of chapter takeaways.]</em></li>
+    </ul>
+  </div>
+
+  <!-- LITERARY PARLOR - DIALOGUE LEDGER WIDGET -->
+  <div class="parlor-ledger">
+    <div class="ledger-header">
+      <span>📚 Literary Parlor : Dialogue Ledger</span>
+      <span>Live Book Notes</span>
+    </div>
+    <div class="ledger-screen">
+      <p><strong>[Book Quote / Central Reflection Prompt]:</strong> "[Insert featured chapter quote or core book thesis statement here]."</p>
+      <p style="margin-top:0.75rem; color:#7A1C1C;"><em>Discussion Question: How does this chapter insight apply to your daily habits?</em><span class="ledger-cursor"></span></p>
+    </div>
+  </div>
+
+  <!-- VOCABULARY SECTION (10 UNITS) -->
+  <section id="vocabulary">
+    <h2 class="section-title">📖 Session Vocabulary</h2>
+
+    <div class="vocab-grid-10">
+      <div class="vocab-card"><div class="vocab-word">Word 1</div>
+<div class="vocab-def">definition.</div>
+<div class="vocab-example">Example sentence.</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'Word 1', definition:'definition.', example:'Example sentence.'}, this)">Add to Dictionary</button>
+</div>
+      <!-- 10 vocab cards... -->
+    </div>
+  </section>
+
+  <!-- ROUNDS SECTION -->
+  <section id="rounds">
+    <h2 class="section-title">🎙️ Discussion Rounds</h2>
+
+    <div class="rounds-container">
+
+      <!-- WARM-UP -->
+      <div class="round-block warm-up open" id="s-warm">
+        <div class="round-header" style="background:#FAEEE8;" onclick="COSY.toggleRound('s-warm')">
+          <span>🟠 Warm-up</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+          <ul class="round-questions">
+            <li>Warm-up question 1?</li>
+            <li>Warm-up question 2?</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- GRAMMAR PRACTICE -->
+      <div class="round-block grammar open" id="s-grammar">
+        <div class="round-header" onclick="COSY.toggleRound('s-grammar')" style="background:#EEEDFE; border-left: 5px solid #7A1C1C;">
+          <span>⚡ Grammar Practice : [Grammar Topic]</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+          <!-- Grammar Explanation & Game -->
+        </div>
+      </div>
+
+      <!-- ROUND 1 -->
+      <div class="round-block round-1 open" id="s-r1">
+        <div class="round-header" style="background:#E1F5EE;" onclick="COSY.toggleRound('s-r1')">
+          <span>🔵 Round 1 : Chapter Analysis</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+          <!-- Round 1 items -->
+        </div>
+      </div>
+
+      <!-- SPEAK TOGETHER INTERACTIVE -->
+      <div class="round-block lst open" id="s-lst">
+        <div class="round-header" style="background:#EEEDFE;" onclick="COSY.toggleRound('s-lst')">
+          <span>🟣 Let's Speak Together</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+          <!-- LST content -->
+        </div>
+      </div>
+
+      <!-- ROUND 2 -->
+      <div class="round-block round-2 open" id="s-r2">
+        <div class="round-header" style="background:#EAF3DE;" onclick="COSY.toggleRound('s-r2')">
+          <span>🟢 Round 2 : Future Speculations</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="round-body" style="display:block;">
+          <!-- Round 2 items -->
+        </div>
+      </div>
+
+      <!-- TEACHER'S NOTES -->
+      <div class="mistake-block open" id="s-mistakes">
+        <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
+          <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle" tabindex="0" role="button">▲</span>
+        </div>
+        <div class="mistake-body" style="display:block;">
+          <div class="vim-instruction">
+            <strong>Developer Correction & Feedback Guidelines:</strong><br>
+            1. <strong>Do not cross out or strike through the whole sentence.</strong> Accentuate/highlight specific errors using the three error-type system below.<br>
+            2. <strong>1. Extra/Wrong Word:</strong> On the wrong side, wrap ONLY the erroneous word in <code>&lt;span class="mistake-flag-wrong"&gt;</code>. On the correct side, wrap the replacement in <code>&lt;span class="mistake-flag-right"&gt;</code> (or use <code>&lt;span class="mistake-null"&gt;X&lt;/span&gt;</code> for pure deletion).<br>
+            3. <strong>2. Missing Word:</strong> On the wrong side, place <code>&lt;span class="mistake-null"&gt;X&lt;/span&gt;</code> at the gap. On the correct side, wrap the inserted word in <code>&lt;span class="mistake-flag-right"&gt;</code>.<br>
+            4. <strong>3. Word Order / Structure:</strong> On BOTH sides, wrap matching sentence constituents in <code>mistake-part-subj</code> (Subject), <code>mistake-part-verb</code> (Verb), <code>mistake-part-obj</code> (Object), <code>mistake-part-mod</code> (Modifier), or <code>mistake-part-other</code> so reordering is visually traceable by color. Do not use flag or null classes in this mode.<br>
+            5. <strong>Level-Appropriate Diversification:</strong> Starter/Elementary (basic grammar/vocab swaps), Intermediate (word order/structure or collocations), Advanced (register/nuance adjustments or direct deletions).
+          </div>
+
+          <!-- Starter/Elementary Example (Extra/Wrong Word) -->
+          <div class="mistake-item">
+            <span class="mistake-wrong">He <span class="mistake-flag-wrong">have</span> went to Paris</span>
+            <span class="mistake-arrow">→</span>
+            <span class="mistake-right">He <span class="mistake-flag-right">has</span> gone to Paris</span>
+            <span class="mistake-note-text">(Wrong word: 'have' vs singular auxiliary 'has' for present perfect)</span>
+          </div>
+
+          <!-- Intermediate Example (Word Order / Structure) -->
+          <div class="mistake-item">
+            <span class="mistake-wrong"><span class="mistake-part-subj">We</span> <span class="mistake-part-verb">discussed</span> <span class="mistake-part-mod">yesterday</span> <span class="mistake-part-obj">the problem</span></span>
+            <span class="mistake-arrow">→</span>
+            <span class="mistake-right"><span class="mistake-part-subj">We</span> <span class="mistake-part-verb">discussed</span> <span class="mistake-part-obj">the problem</span> <span class="mistake-part-mod">yesterday</span></span>
+            <span class="mistake-note-text">(Word order: Verb + direct object + temporal adverbial modifier)</span>
+          </div>
+
+          <!-- Advanced Example (Deletion / Extra Word) -->
+          <div class="mistake-item">
+            <span class="mistake-wrong">We discussed <span class="mistake-flag-wrong">about</span> the problem</span>
+            <span class="mistake-arrow">→</span>
+            <span class="mistake-right">We discussed <span class="mistake-null">X</span> the problem</span>
+            <span class="mistake-note-text">(Extra word deletion: 'discuss' is transitive and takes a direct object without 'about')</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_courses">Courses</h5>
+<a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYplatform/">General Course 📖</a>
+<a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYplatform/">Spoken Course 🗣️</a>
+<a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYplatform/">Exam Preparation 📝</a>
+<a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYplatform/">Travelling Course ✈️</a>
+<a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYplatform/">Professional Course 💼</a>
+<a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYplatform/">Relocation Course 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_explore">Explore</h5>
+<a data-translate-key="nav_languages" href="https://cosylanguages.github.io/COSYlanguages/#languages">Languages 🌍</a>
+<a data-translate-key="nav_practice" href="../practice/index.html">Free Practice 💡</a>
+<a data-translate-key="nav_events" href="../index.html">Events 🎉</a>
+<a data-translate-key="nav_games" href="../games/index.html">Games 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5>Project</h5>
+<a href="../privacy.html">Privacy &amp; Safety 🛡️</a>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages: All rights reserved</div>
+</footer>
+
+<script src="../shared/js/cosyevents-session.js"></script>
+</body>
+</html>
