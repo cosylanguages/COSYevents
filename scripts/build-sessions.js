@@ -2,6 +2,57 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 
+const CLUB_CONFIGS = {
+  'mind-matters': {
+    id: 'mind-matters',
+    tag: 'Mind Matters',
+    css: '../../shared/css/clubs/mind-matters.css',
+    href: '../../mind-matters.html',
+    collectionName: 'mind_matters_sessions',
+    speakingClubsId: 'mind-matters'
+  },
+  'the-greatest-quotes': {
+    id: 'the-greatest-quotes',
+    tag: 'The Greatest Quotes',
+    css: '../../shared/css/clubs/the-greatest-quotes.css',
+    href: '../../the-greatest-quotes.html',
+    collectionName: 'the_greatest_quotes_sessions',
+    speakingClubsId: 'the-greatest-quotes'
+  },
+  'debatable-relatable': {
+    id: 'debatable-relatable',
+    tag: 'Debatable & Relatable',
+    css: '../../shared/css/clubs/debatable-relatable.css',
+    href: '../../debatable-relatable.html',
+    collectionName: 'debatable_relatable_sessions',
+    speakingClubsId: 'debatable-and-relatable'
+  },
+  'lets-celebrate': {
+    id: 'lets-celebrate',
+    tag: "Let's Celebrate",
+    css: '../../shared/css/clubs/lets-celebrate.css',
+    href: '../../lets-celebrate.html',
+    collectionName: 'lets_celebrate_sessions',
+    speakingClubsId: 'lets-celebrate'
+  },
+  'my-life-with-without': {
+    id: 'my-life-with-without',
+    tag: 'My Life With & Without',
+    css: '../../shared/css/clubs/my-life-with-without.css',
+    href: '../../my-life-with-without.html',
+    collectionName: 'my_life_with_without_sessions',
+    speakingClubsId: 'my-life-with-without'
+  },
+  'if-you-were': {
+    id: 'if-you-were',
+    tag: 'If You Were',
+    css: '../../shared/css/clubs/if-you-were.css',
+    href: '../../if-you-were.html',
+    collectionName: 'if_you_were_sessions',
+    speakingClubsId: 'if-you-were'
+  }
+};
+
 function escapeAttrSingleQuotes(str) {
   return (str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 }
@@ -19,6 +70,7 @@ function parseMarkdownFile(filepath) {
 
 function renderLetsSpeakTogether(lst) {
   if (!lst) return '';
+  if (typeof lst === 'string') return lst;
   if (lst.task_title || lst.task_description) {
     let grammarHtml = '';
     if (lst.grammar_requirements) {
@@ -65,6 +117,110 @@ function renderFormatProfile(data) {
 <span>${data.mind_profile.anchor || ''}</span>
 </div>
 </div>
+</div>`;
+  }
+
+  if (data.debate_duel) {
+    const d = data.debate_duel;
+    return `
+<div class="debate-duel-box">
+<h3>🔥 Debate Duel</h3>
+<div class="debate-duel-grid">
+<div class="debate-duel-item">
+<strong>Core Dilemma</strong>
+<span>${d.core_dilemma || ''}</span>
+</div>
+<div class="debate-duel-item">
+<strong>Side A (Hot Take)</strong>
+<span>${d.side_a || ''}</span>
+</div>
+<div class="debate-duel-item">
+<strong>Side B (Hot Take)</strong>
+<span>${d.side_b || ''}</span>
+</div>
+<div class="debate-duel-item">
+<strong>Thematic Symbol</strong>
+<span>${d.thematic_symbol || ''}</span>
+</div>
+</div>
+</div>`;
+  }
+
+  if (data.celebrate_theme) {
+    const c = data.celebrate_theme;
+    return `
+<div class="celebrate-theme-box">
+<h3>🪔 Celebration Snapshot</h3>
+<div class="celebrate-theme-box-grid">
+<div class="celebrate-theme-item">
+<strong>Thematic Symbol</strong>
+<span>${c.thematic_symbol || ''}</span>
+</div>
+<div class="celebrate-theme-item">
+<strong>Traditional Rituals</strong>
+<span>${c.traditional_rituals || ''}</span>
+</div>
+<div class="celebrate-theme-item">
+<strong>Signature Treat</strong>
+<span>${c.signature_treat || ''}</span>
+</div>
+<div class="celebrate-theme-item">
+<strong>Linguistic Focus</strong>
+<span>${c.linguistic_focus || ''}</span>
+</div>
+</div>
+</div>`;
+  }
+
+  if (data.life_ledger) {
+    const l = data.life_ledger;
+    return `
+<div class="life-ledger-box">
+<h3 class="life-ledger-title">${l.title || '⚖️ Dual-Perspective Balance Sheet'}</h3>
+<div class="life-ledger-grid">
+<div class="life-ledger-column with">
+<h5>${l.with_title || 'Presence (With)'}</h5>
+<p>${l.with_content || ''}</p>
+</div>
+<div class="life-ledger-column without">
+<h5>${l.without_title || 'Absence (Without)'}</h5>
+<p>${l.without_content || ''}</p>
+</div>
+</div>
+</div>`;
+  }
+
+  if (data.perspective_mirror) {
+    const p = data.perspective_mirror;
+    const anchorHtml = p.anchor ? `
+<div style="margin-top:1.25rem; border-top:1px solid #D2CFFE; padding-top:0.75rem; font-size:0.88rem; color:#4F46E5; line-height:1.5;">
+<strong>🗣️ Speculative Syntactic Anchor:</strong> ${p.anchor}
+</div>` : '';
+    return `
+<div class="perspective-mirror-box">
+<h3 style="margin-top:0; margin-bottom:1rem; font-family:'Playfair Display', serif; font-size:1.3rem; display:flex; align-items:center; gap:0.5rem; color:#4F46E5;">
+<span>⚖️</span> ${p.title || 'Perspective Mirror Box'}
+</h3>
+<div class="perspective-mirror-grid">
+<div class="pm-col">
+<h5>${p.col1_title || 'Screen Gaze (With Sight)'}</h5>
+<p>${p.col1_content || ''}</p>
+</div>
+<div class="pm-col">
+<h5>${p.col2_title || 'Echo Mapping (Without Sight)'}</h5>
+<p>${p.col2_content || ''}</p>
+</div>
+</div>${anchorHtml}
+</div>`;
+  }
+
+  if (data.philosophers_ledger) {
+    const q = data.philosophers_ledger;
+    return `
+<div class="philosophers-ledger" style="background: #FFFDF9; border: 2px solid #5D4037; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm); font-family: 'Playfair Display', serif; font-style: italic; color: #3E2723;"><div class="quotes-theme-stamp">${q.stamp || '🧭'}</div>
+<h4 style="margin: 0 0 0.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #5D4037; font-style: normal; font-weight: 700;">${q.title || "☕ The Philosophers' Ledger: Café Debates"}</h4>
+<p id="ledger-quote" style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem;">${q.quote || ''}</p>
+<button class="btn-primary" id="ledger-next-btn" style="background: #5D4037; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-family: 'DM Sans', sans-serif; font-style: normal; cursor: pointer; font-weight: 700; transition: background 0.2s;">${q.button_text || 'Next Page in Ledger 📖'}</button>
 </div>`;
   }
 
@@ -123,6 +279,10 @@ ${gapFillHtml}
 </div>`;
   }
 
+  if (data.profile_html) {
+    return data.profile_html;
+  }
+
   return '';
 }
 
@@ -140,20 +300,24 @@ ${noteText ? `<span class="mistake-note-text">${noteText}</span>` : ''}
 </div>`;
 }
 
-function generateSessionHtml(data) {
+function generateSessionHtml(data, clubSlug = 'mind-matters') {
+  const config = CLUB_CONFIGS[clubSlug] || CLUB_CONFIGS['mind-matters'];
   const pageTitle = data.page_title || `${data.title} : COSYlanguages`;
   const themeClass = data.theme_class || 'theme-mind';
-  const heroStyle = data.hero_background ? ` style="background: ${data.hero_background};"` : ' style="background: linear-gradient(135deg, #993556, #4d1a2b);"';
-  const clubTag = data.club_tag || 'Mind Matters';
+  const heroStyle = data.hero_background ? ` style="background: ${data.hero_background};"` : '';
+  const clubTag = data.club_tag || config.tag;
   const decoratorIcon = data.decorator_icon || '🎙️';
   const breadcrumbCurrent = data.breadcrumbs_current || data.title;
   const duration = data.duration || '60 minutes';
   const languages = data.languages || '🇬🇧 English';
   const targetGrammar = data.target_grammar ? `<div class="meta-item"><h4>Grammar Focus</h4><p>${data.target_grammar}</p></div>` : '';
+  const topicKey = data.topic ? 'Topic' : (data.theme ? 'Theme' : (data.resources ? 'Resources' : 'Topic'));
+  const topicValue = data.topic || data.theme || data.resources || '';
+  const metaTopicHtml = topicValue ? `<div class="meta-item"><h4>${topicKey}</h4><p>${topicValue}</p></div>` : '';
 
   let descriptionHtml = '';
   if (data.description) {
-    if (data.description.trim().startsWith('<p>')) {
+    if (data.description.trim().startsWith('<p>') || data.description.trim().startsWith('<div')) {
       descriptionHtml = data.description.trim();
     } else {
       descriptionHtml = `<p>${data.description.trim()}</p>`;
@@ -185,8 +349,10 @@ function generateSessionHtml(data) {
   const warmUpQuestionsHtml = (data.warm_up?.questions || []).map(q => `<li>${q}</li>`).join('\n');
   const warmUpInstruction = data.warm_up?.instruction ? `<div class="vim-instruction">${data.warm_up.instruction}</div>\n` : '';
 
+  const grammarHtml = data.grammar_html ? `\n${data.grammar_html}` : '';
+
   const round1Title = data.round_1?.title || 'Round 1 : Psychological Analysis';
-  const round1Badge = data.round_1?.badge || data.target_grammar || 'Questions';
+  const round1Badge = data.round_1?.badge ? `<div class="round-type-badge">${data.round_1.badge}</div>` : (data.target_grammar ? `<div class="round-type-badge">${data.target_grammar}</div>` : '');
   const round1Instruction = data.round_1?.instruction ? `<div class="vim-instruction">${data.round_1.instruction}</div>\n` : '';
   const round1ItemsHtml = (data.round_1?.items || []).map(item => `
 <div class="round-item">
@@ -198,7 +364,7 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
   const lstContentHtml = renderLetsSpeakTogether(data.lets_speak_together);
 
   const round2Title = data.round_2?.title || 'Round 2 : Conditional Practices';
-  const round2Badge = data.round_2?.badge || data.target_grammar || 'Conditionals';
+  const round2Badge = data.round_2?.badge ? `<div class="round-type-badge">${data.round_2.badge}</div>` : (data.target_grammar ? `<div class="round-type-badge">${data.target_grammar}</div>` : '');
   const round2Instruction = data.round_2?.instruction ? `<div class="vim-instruction">${data.round_2.instruction}</div>\n` : '';
   const round2ItemsHtml = (data.round_2?.items || []).map(item => `
 <div class="round-item">
@@ -206,7 +372,11 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
 ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''}
 </div>`).join('');
 
+  const closingHtml = data.closing_html ? `\n${data.closing_html}` : '';
+
   const mistakesHtml = (data.mistakes || []).map(renderMistakeItem).join('');
+
+  const customScriptHtml = data.script_html ? `\n${data.script_html}` : '';
 
   return `<!DOCTYPE html>
 
@@ -219,7 +389,7 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="../../shared/css/sessions.css">
-<link rel="stylesheet" href="../../shared/css/clubs/mind-matters.css">
+<link rel="stylesheet" href="${config.css}">
 </head>
 <body class="${themeClass}">
 <nav id="cosy-nav"></nav>
@@ -233,15 +403,15 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
 <nav class="cosy-breadcrumbs">
 <a href="../../index.html">Home</a> <span class="sep">/</span>
 <a href="../../">Events</a> <span class="sep">/</span>
-<a href="../../mind-matters.html">Mind Matters</a> <span class="sep">/</span>
+<a href="${config.href}">${clubTag}</a> <span class="sep">/</span>
 <span class="current">${breadcrumbCurrent}</span>
 </nav>
-<a class="back-link" href="../../mind-matters.html">← Back to Club</a>
+<a class="back-link" href="${config.href}">← Back to Club</a>
 <div class="session-meta-grid">
 <div class="meta-item"><h4>Duration</h4><p>${duration}</p></div>
 <div class="meta-item"><h4>Languages</h4><p>${languages}</p></div>
 <div class="meta-item"><h4>Level</h4><p>${data.level}</p></div>
-${data.topic ? `<div class="meta-item"><h4>Topic</h4><p>${data.topic}</p></div>` : ''}
+${metaTopicHtml}
 ${targetGrammar}
 </div>
 <div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
@@ -264,13 +434,13 @@ ${warmUpInstruction}<ul class="round-questions">
 ${warmUpQuestionsHtml}
 </ul>
 </div>
-</div>
+</div>${grammarHtml}
 <div class="round-block round-1 open" id="s-r1">
 <div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
 <span>🔵 ${round1Title}</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
-<div class="round-type-badge">${round1Badge}</div>
+${round1Badge}
 ${round1Instruction}${round1ItemsHtml}
 </div>
 </div>
@@ -287,10 +457,10 @@ ${lstContentHtml}
 <span>🟢 ${round2Title}</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
-<div class="round-type-badge">${round2Badge}</div>
+${round2Badge}
 ${round2Instruction}${round2ItemsHtml}
 </div>
-</div>
+</div>${closingHtml}
 <div class="mistake-block open" id="s-mistakes">
 <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
 <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>
@@ -339,14 +509,15 @@ ${round2Instruction}${round2ItemsHtml}
 </div>
 <div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
 </footer>
-<script src="../../shared/js/cosyevents-session.js"></script>
+<script src="../../shared/js/cosyevents-session.js"></script>${customScriptHtml}
 </body>
 </html>
 `;
 }
 
-function updateCatalog(slug, sessionData) {
-  const relHtmlPath = `sessions/mind-matters/${slug}.html`;
+function updateCatalog(clubSlug, slug, sessionData) {
+  const relHtmlPath = `sessions/${clubSlug}/${slug}.html`;
+  const config = CLUB_CONFIGS[clubSlug] || { tag: sessionData.club_tag || 'Speaking Club', speakingClubsId: clubSlug };
 
   // 1. Update data/sessions.json
   const sessionsJsonPath = path.join(__dirname, '../data/sessions.json');
@@ -364,7 +535,7 @@ function updateCatalog(slug, sessionData) {
       href: relHtmlPath,
       level: levelCode,
       lang: 'English',
-      club: 'Mind Matters',
+      club: config.tag,
       format: 'Speaking Club'
     };
 
@@ -380,33 +551,33 @@ function updateCatalog(slug, sessionData) {
   const speakingClubsPath = path.join(__dirname, '../data/events/speaking-clubs.json');
   if (fs.existsSync(speakingClubsPath)) {
     let clubsData = JSON.parse(fs.readFileSync(speakingClubsPath, 'utf8'));
-    const mindMattersClub = clubsData.clubs.find(c => c.id === 'mind-matters');
-    if (mindMattersClub) {
-      if (!mindMattersClub.sessions) mindMattersClub.sessions = [];
-      const sessionHref = `../sessions/mind-matters/${slug}.html`;
-      const sIndex = mindMattersClub.sessions.findIndex(s => s.href === sessionHref);
+    const targetClub = clubsData.clubs.find(c => c.id === config.speakingClubsId);
+    if (targetClub) {
+      if (!targetClub.sessions) targetClub.sessions = [];
+      const sessionHref = `../sessions/${clubSlug}/${slug}.html`;
+      const sIndex = targetClub.sessions.findIndex(s => s.href === sessionHref || s.url === `sessions/${clubSlug}/${slug}.html`);
       const sessionItem = {
         title: sessionData.title,
         href: sessionHref
       };
       if (sIndex >= 0) {
-        mindMattersClub.sessions[sIndex] = { ...mindMattersClub.sessions[sIndex], ...sessionItem };
+        targetClub.sessions[sIndex] = { ...targetClub.sessions[sIndex], ...sessionItem };
       } else {
-        mindMattersClub.sessions.push(sessionItem);
+        targetClub.sessions.push(sessionItem);
       }
       fs.writeFileSync(speakingClubsPath, JSON.stringify(clubsData, null, 2) + '\n', 'utf8');
     }
   }
 }
 
-function buildMindMattersSessions() {
-  const targetDir = path.join(__dirname, '../sessions/mind-matters');
+function buildSessionsForClub(clubSlug) {
+  const targetDir = path.join(__dirname, `../sessions/${clubSlug}`);
   if (!fs.existsSync(targetDir)) return;
 
   const files = fs.readdirSync(targetDir);
   const mdFiles = files.filter(f => f.endsWith('.md'));
 
-  console.log(`Found ${mdFiles.length} Markdown session files in sessions/mind-matters/`);
+  console.log(`Found ${mdFiles.length} Markdown session files in sessions/${clubSlug}/`);
 
   for (const file of mdFiles) {
     const slug = file.replace(/\.md$/, '');
@@ -415,20 +586,38 @@ function buildMindMattersSessions() {
 
     try {
       const data = parseMarkdownFile(mdPath);
-      const htmlContent = generateSessionHtml(data);
+      const htmlContent = generateSessionHtml(data, clubSlug);
       fs.writeFileSync(htmlPath, htmlContent, 'utf8');
       console.log(`[Generated] ${htmlPath}`);
 
-      updateCatalog(slug, data);
-      console.log(`[Catalog Updated] ${slug}`);
+      updateCatalog(clubSlug, slug, data);
+      console.log(`[Catalog Updated] ${clubSlug}/${slug}`);
     } catch (err) {
       console.error(`Error processing ${file}:`, err);
     }
   }
 }
 
-if (require.main === module) {
-  buildMindMattersSessions();
+function buildMindMattersSessions() {
+  buildSessionsForClub('mind-matters');
 }
 
-module.exports = { buildMindMattersSessions, generateSessionHtml, parseMarkdownFile };
+function buildAllSessions() {
+  const clubs = Object.keys(CLUB_CONFIGS);
+  for (const clubSlug of clubs) {
+    buildSessionsForClub(clubSlug);
+  }
+}
+
+if (require.main === module) {
+  buildAllSessions();
+}
+
+module.exports = {
+  CLUB_CONFIGS,
+  buildAllSessions,
+  buildSessionsForClub,
+  buildMindMattersSessions,
+  generateSessionHtml,
+  parseMarkdownFile
+};

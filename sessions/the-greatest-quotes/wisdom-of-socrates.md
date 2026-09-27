@@ -1,0 +1,186 @@
+---
+title: '"The only true wisdom is in knowing you know nothing.": Socrates'
+page_title: 'The Wisdom of Socrates : COSYlanguages'
+breadcrumbs_current: The Wisdom of Socrates
+club_tag: The Greatest Quotes
+date: 15 June 2025
+theme_class: theme-quotes-intellect
+decorator_icon: 💬
+duration: 60 minutes
+languages: 🇬🇧 🇫🇷 🇷🇺
+level: Advanced (C1)
+theme: Intellectual Humility &amp; Inquiry
+hero_background: 'linear-gradient(135deg, #5D4037, #3E2723);'
+description: '<p>Socrates is the person who challenged the foundation of Western thought by asking questions that exposed the limits of human certainty, and in this session they focus on the following quote: "The only true wisdom is in knowing you know nothing." Why are we so terrified of admitting we know nothing? Does our modern obsession with having an opinion on everything prevent us from acquiring true, quiet wisdom? Join us for a foundational debate on intellectual humility.</p>'
+philosophers_ledger:
+  stamp: ''
+  title: ''
+  quote: ''
+  button_text: ''
+vocabulary:
+  - word: Intellectual humility
+    definition: a conscious awareness of the limitations of one's own knowledge.
+    example: Embracing intellectual humility is the first step toward genuine learning.
+warm_up:
+  instruction: ''
+  questions:
+    - What does "wisdom" mean to you?
+    - Is it easy to admit when you are wrong?
+grammar_html: |-
+  <div class="round-block grammar open" id="s-grammar">
+  <div class="round-header" onclick="COSY.toggleRound('s-grammar')" style="background:#EFEBE9; border-left: 5px solid #5D4037;">
+  <span>⚡ Grammar Practice : Inversion for Emphasis</span><span class="round-toggle">▲</span>
+  </div>
+  <div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+  <div class="grammar-interactive-game" style="position:relative; z-index:2;">
+  <h3>⚡ Grammar Explanation (Advanced (C1))</h3>
+  <p style="margin-bottom: 1.5rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+  Use <strong>inversion for emphasis</strong> after negative or restrictive adverbials (<em>rarely, seldom, little did I know, not only</em>) to sound formal and emphatic.
+  </p>
+  <div style="background: rgba(93, 64, 55, 0.03); border: 1px dashed rgba(93, 64, 55, 0.3); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem;">
+  <strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🧩 Interactive Word Bank:</strong>
+  <p style="font-size:0.82rem; color:var(--muted); margin:0 0 0.75rem 0;">Tap a word chip below, then tap any empty bracket <code>[_____]</code> to place it!</p>
+  <div class="grammar-word-bank" style="display:flex; flex-wrap:wrap; gap:8px;">
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">did they</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">do/does</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">does a</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">auxiliary verb</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">do we</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">can we</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">did he</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #5D4037; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#5D4037; font-size:0.85rem; user-select:none; transition:all 0.2s;">did</span>
+  </div>
+  </div>
+  <div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+  <strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Task 1 : Part A: Rule Formulation:</strong>
+  <p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.8;">
+  Complete the rule: When we put a negative adverbial at the beginning of a sentence, the subject and the <span class="grammar-gap" data-answer="auxiliary verb" onclick="COSY.placeGrammarChip(this)">_____</span> are inverted (swapped). We use <span class="grammar-gap" data-answer="do/does" onclick="COSY.placeGrammarChip(this)">_____</span> for present simple or <span class="grammar-gap" data-answer="did" onclick="COSY.placeGrammarChip(this)">_____</span> for past simple.
+  </p>
+  </div>
+  <div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+  <strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">📝 Task 1 : Part B: Structured Practice:</strong>
+  <ol style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink); line-height: 2.0;">
+  <li>Rarely <span class="grammar-gap" data-answer="do we" onclick="COSY.placeGrammarChip(this)">_____</span> meet someone passionately curious about simple truths.</li>
+  <li>Not only <span class="grammar-gap" data-answer="did he" onclick="COSY.placeGrammarChip(this)">_____</span> memorize the book, but he also analyzed it.</li>
+  <li>Little <span class="grammar-gap" data-answer="did they" onclick="COSY.placeGrammarChip(this)">_____</span> know that school education would not guarantee wisdom.</li>
+  <li>Seldom <span class="grammar-gap" data-answer="does a" onclick="COSY.placeGrammarChip(this)">_____</span> person accept ignorance with humble dignity.</li>
+  <li>Only when we ask questions <span class="grammar-gap" data-answer="can we" onclick="COSY.placeGrammarChip(this)">_____</span> achieve deep, authentic insight.</li></ol>
+  </div>
+  <div style="display:flex; gap:10px; margin-bottom:1.5rem;">
+  <button class="btn-verify" onclick="COSY.verifyGrammarGame(this)" style="background:#5D4037; color:white; border:none; padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Check Answers</button>
+  <button class="btn-reset" onclick="COSY.resetGrammarGame(this)" style="background:transparent; border:1px solid var(--border); color:var(--muted); padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Reset Board</button>
+  </div>
+  <div class="grammar-task-item" style="background: rgba(93, 64, 55, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #5D4037; box-shadow: var(--shadow-sm);">
+  <strong style="display: block; margin-bottom: 0.5rem; color: #3E2723;">🗣️ Task 2 : Interactive Speaking:</strong>
+  <p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+  Rarely do we encounter people who challenge their own biases. Why is genuine wisdom so rare in modern society?
+  </p>
+  </div>
+  </div>
+  </div>
+round_1:
+  title: 'Round 1 : General Discussion'
+  badge: Interpretations
+  instruction: ''
+  items:
+    - main: How does Socratic questioning help us dismantle our deeply held <strong>preconceptions</strong> about the world?
+      personal: '★ Complete using inversion: ''Seldom do we discover profound truths without active questioning.'''
+    - main: Why does modern social media encourage absolute <strong>dogmatism</strong> instead of intellectual openness?
+      personal: ★ How do you handle talking to someone who refuses to admit they could be wrong?
+    - main: In what ways does possessing <strong>intellectual humility</strong> make a leader more effective and respected?
+      personal: ★ Is it easy for you to say "I don't know" when asked about a topic you aren't familiar with?
+    - main: Why do we often fear admitting our <strong>ignorance</strong>, and how can we learn to view it as a positive starting point?
+      personal: ★ What is a subject where you are perfectly happy to remain ignorant?
+    - main: How does the famous Socratic <strong>paradox</strong>-knowing that you know nothing-actually lead to real wisdom?
+      personal: ★ What is a paradox in your own life that you still find difficult to resolve?
+    - main: Should modern education focus more on active <strong>inquiry</strong> rather than the passive memorization of facts?
+      personal: ★ What was the last topic that sparked a deep, personal inquiry in your spare time?
+    - main: How can we revive the art of constructive <strong>dialogue</strong> in a world that is heavily polarized?
+      personal: ★ When was the last time you had a truly satisfying dialogue with someone who has opposite views?
+    - main: Socrates believed that knowledge is <strong>virtue</strong> and that people only do bad things out of ignorance. Do you agree?
+      personal: ★ What is a personal virtue that you strive to protect no matter the external circumstances?
+    - main: Why is it so difficult to remain <strong>cognizant</strong> of our own cognitive biases during heated debates?
+      personal: ★ Are you highly cognizant of how your emotions affect your logical arguments?
+    - main: How can we find the quiet mental space to <strong>contemplate</strong> complex philosophical questions in a hyper-distracted world?
+      personal: ★ Where is your favorite place to go when you need to contemplate a major life decision?
+lets_speak_together:
+  title: 'Let''s Speak Together : The Hierarchy of True Understanding 🧠'
+  note: |-
+    <p class="round-note" style="margin-bottom:1.5rem; font-weight:600; color:#3F2B96;">Discuss with your partner: Rank these types of minds from most to least wise, according to Socrates' philosophy:</p>
+    <div class="lst-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-bottom:1.5rem;">
+    <div class="lst-item" onclick="this.style.background='#EEEDFE';" style="border: 1px solid #EEEDFE; padding: 1.25rem; border-radius: 12px; background: rgba(238, 237, 254, 0.2); transition: transform 0.2s; cursor: pointer;">
+    <span style="font-size:2rem; display:block; margin-bottom:0.5rem;">🧘 The Silent Contemplator</span>
+    <div style="font-size:0.9rem; line-height:1.5;">Admits ignorance and quietly contemplates life's deep mysteries without arguing or lecturing others.
+round_2:
+  title: 'Round 2 : Speculating on the Future'
+  badge: ''
+  instruction: ''
+  items:
+    - main: 'In the future, advanced neural networks will scan our brains to identify and erase our hidden <strong>preconceptions</strong>. : Do you agree or disagree?'
+      personal: ★ <strong>Would</strong> you allow a machine to optimize your mind by clearing your biases?
+    - main: 'As information becomes even more overwhelming, future societies will retreat into extreme <strong>dogmatism</strong> to survive. : Do you agree or disagree?'
+      personal: ★ <strong>Should</strong> schools teach children how to detect dogmatism in media from a young age?
+    - main: 'Future artificial intelligence will display such perfect <strong>intellectual humility</strong> that humans will look arrogant in comparison. : Do you agree or disagree?'
+      personal: ★ <strong>Could</strong> you trust an AI doctor that openly admits it doesn't know the answer?
+    - main: 'Our future reliance on algorithms will create a world of comfortable <strong>ignorance</strong>, where humans no longer understand how their technology works. : Do you agree or disagree?'
+      personal: ★ If technology <strong>managed</strong> everything, <strong>would</strong> you mind being ignorant of how it functions?
+    - main: 'A future high-tech paradise will eliminate all struggle, but it will face the Socratic <strong>paradox</strong> of human boredom. : Do you agree or disagree?'
+      personal: ★ If you <strong>lived</strong> in a perfect world, how <strong>would</strong> you keep your life meaningful?
+    - main: 'Future search engines will answer questions instantly, rendering the art of active human <strong>inquiry</strong> obsolete. : Do you agree or disagree?'
+      personal: ★ <strong>Would</strong> you miss the joy of searching for answers if everything <strong>were</strong> known instantly?
+    - main: 'In the coming decades, virtual reality spaces will allow perfectly unbiased Socratic <strong>dialogue</strong> between historical enemies. : Do you agree or disagree?'
+      personal: ★ <strong>Would</strong> you participate in a global digital dialogue with strangers to solve world issues?
+    - main: 'Future bio-engineering will allow us to physically upgrade human empathy, turning <strong>virtue</strong> into a biological guarantee rather than a choice. : Do you agree or disagree?'
+      personal: ★ <strong>Would</strong> you take a pill that guaranteed you <strong>would</strong> always act with perfect virtue?
+    - main: 'We will eventually wear wearable sensors that make us dynamically <strong>cognizant</strong> of when we are being closed-minded. : Do you agree or disagree?'
+      personal: ★ <strong>Would</strong> you wear a wristband that vibrated whenever you showed dogmatic thinking?
+    - main: 'The hyper-accelerated future will leave absolutely no time to quietly <strong>contemplate</strong> the meaning of our existence. : Do you agree or disagree?'
+      personal: ★ If life <strong>became</strong> twice as fast, how <strong>would</strong> you preserve your mental peace?
+closing_html: |-
+  <div class="round-block closing open" id="s-close">
+  <div class="round-header" onclick="COSY.toggleRound('s-close')" style="background:#FFF9C4; border-left: 5px solid #FBC02D;">
+  <span>🏁 Closing Circle: Complete the Sentence</span><span class="round-toggle">▲</span>
+  </div>
+  <div class="round-body" style="display:block; padding:1.5rem;">
+  <p style="margin-bottom:1rem; font-weight:600; font-size:1.05rem; color:#5D4037;">Finish the session by going in a circle. Each student must complete the following sentence with exactly one adjective or short phrase using the vocabulary learned:</p>
+  <div style="background:#FFFDE9; border:2px dashed #FBC02D; padding:1.5rem; border-radius:12px; text-align:center; font-family: 'Playfair Display', serif; font-size:1.5rem; font-style:italic; color:#5D4037; margin-bottom:1rem;">
+  "True wisdom is..."
+  </div>
+  <p style="font-size:0.9rem; color:var(--muted); text-align:center;">Examples: admitting our own ignorance, letting go of dogmatism, cultivating intellectual humility, a continuous journey of inquiry, stripping away preconceptions.</p>
+  </div>
+  </div>
+mistakes:
+  - wrong: I am more wise
+    right: I am wiser
+    note: (Short adjectives use comparative suffix '-er')
+  - wrong: Socrates was an expert of questioning
+    right: Socrates was an expert at questioning
+    note: (Use preposition 'at' after 'expert')
+  - wrong: The most of people think...
+    right: Most people think...
+    note: (Use 'Most people' for general statements)
+  - wrong: If I was him, I would...
+    right: If I were him, I would...
+    note: (Subjunctive mood in conditional structures)
+script_html: |-
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const quotes = [
+      '"The only true wisdom is in knowing you know nothing." : Socrates',
+      '"Let us see how many interpretations exist! There is never only one correct answer." : Oscar Wilde',
+      '"To live is the rarest thing in the world. Most people exist, that is all." : Oscar Wilde',
+      '"The mystery of life is not a problem to be solved, but a reality to be experienced." : Alan Watts'
+    ];
+    let index = 0;
+    const quoteText = document.getElementById('ledger-quote');
+    const nextBtn = document.getElementById('ledger-next-btn');
+
+    if (nextBtn && quoteText) {
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % quotes.length;
+        quoteText.innerText = quotes[index];
+      });
+    }
+  });
+  </script>
+---

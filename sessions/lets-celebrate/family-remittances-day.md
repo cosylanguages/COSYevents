@@ -1,0 +1,164 @@
+---
+title: Family Remittances Day
+page_title: 'International Day of Family Remittances : COSYlanguages'
+breadcrumbs_current: Family Remittances Day
+club_tag: Let's Celebrate
+date: 16 June 2025
+theme_class: theme-celebrate-remittances
+decorator_icon: 🥳
+duration: 60 minutes
+languages: 🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺
+level: Intermediate (B1)
+hero_background: 'linear-gradient(135deg, #BA7517, #5d3a0b);'
+description: <p>International Day of Family Remittances recognizes the crucial financial contribution that over 200 million migrant workers make to their families back home. This session explores the economic impact of these transfers on developing nations and the personal sacrifices made by those working abroad. We will discuss the challenges of migration, the importance of financial inclusion, and the future of global money transfers in a digital age.</p>
+celebrate_theme:
+  thematic_symbol: ✉️ International Day of Family Remittances Emblem
+  traditional_rituals: Sending financial support overseas, writing encouraging family letters
+  signature_treat: Traditional family home-cooked recipes
+  linguistic_focus: Expressing Support &amp; Subjunctive Wishes
+vocabulary:
+  - word: Remittance
+    definition: money sent to family in another country.
+    example: Many workers send remittances to support their parents back home.
+warm_up:
+  instruction: Have you ever sent money to another city or country?
+  questions:
+    - What was the reason? Was it easy to do?
+grammar_html: |-
+  <div class="round-block grammar open" id="s-grammar">
+  <div class="round-header" onclick="COSY.toggleRound('s-grammar')" style="background:#FFF3E0; border-left: 5px solid #BA7517;">
+  <span>⚡ Grammar Practice : Expressing Support &amp; Subjunctive Wishes</span><span class="round-toggle">▲</span>
+  </div>
+  <div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+  <div class="grammar-interactive-game" style="position:relative; z-index:2;">
+  <h3>⚡ Grammar Explanation (Intermediate (B1))</h3>
+  <p style="margin-bottom: 1.5rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+  To express support and subjunctive wishes, use <strong>I wish + past simple / would</strong> or <strong>it is crucial / essential that + subject + base verb</strong>.
+  </p>
+  <div style="background: rgba(186, 117, 23, 0.03); border: 1px dashed rgba(186, 117, 23, 0.3); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem;">
+  <strong style="display: block; margin-bottom: 0.5rem; color: #5c390b;">🧩 Interactive Word Bank:</strong>
+  <p style="font-size:0.82rem; color:var(--muted); margin:0 0 0.75rem 0;">Tap a word chip below, then tap any empty bracket <code>[_____]</code> to place it!</p>
+  <div class="grammar-word-bank" style="display:flex; flex-wrap:wrap; gap:8px;">
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #BA7517; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#BA7517; font-size:0.85rem; user-select:none; transition:all 0.2s;">lived</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #BA7517; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#BA7517; font-size:0.85rem; user-select:none; transition:all 0.2s;">receive</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #BA7517; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#BA7517; font-size:0.85rem; user-select:none; transition:all 0.2s;">were</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #BA7517; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#BA7517; font-size:0.85rem; user-select:none; transition:all 0.2s;">helps</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #BA7517; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#BA7517; font-size:0.85rem; user-select:none; transition:all 0.2s;">Past Simple</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #BA7517; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#BA7517; font-size:0.85rem; user-select:none; transition:all 0.2s;">base verb</span>
+  <span class="grammar-tap-chip" onclick="COSY.selectGrammarChip(this)" style="background:#FFFDF9; border:1px solid #BA7517; padding:5px 12px; border-radius:20px; cursor:pointer; font-weight:600; color:#BA7517; font-size:0.85rem; user-select:none; transition:all 0.2s;">transfer</span>
+  </div>
+  </div>
+  <div class="grammar-task-item" style="background: rgba(186, 117, 23, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #BA7517; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+  <strong style="display: block; margin-bottom: 0.5rem; color: #5c390b;">📝 Task 1 : Part A: Rule Formulation:</strong>
+  <p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.8;">
+  Complete the rule: To express hypothetical wishes for others' welfare, use <strong>I wish + <span class="grammar-gap" data-answer="past simple" onclick="cosy.placegrammarchip(this)">_____</span></strong>. For urgent importance, use <strong>it is crucial/essential that + subject + <span class="grammar-gap" data-answer="base verb" onclick="cosy.placegrammarchip(this)">_____</span></strong>.
+  </p>
+  </div>
+  <div class="grammar-task-item" style="background: rgba(186, 117, 23, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #BA7517; box-shadow: var(--shadow-sm); margin-bottom:1.5rem;">
+  <strong style="display: block; margin-bottom: 0.5rem; color: #5c390b;">📝 Task 1 : Part B: Structured Practice:</strong>
+  <ol style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; color: var(--ink); line-height: 2.0;">
+  <li>It is essential that the migrant worker <span class="grammar-gap" data-answer="receive" onclick="COSY.placeGrammarChip(this)">_____</span> fair treatment.</li>
+  <li>I wish my family <span class="grammar-gap" data-answer="lived" onclick="COSY.placeGrammarChip(this)">_____</span> closer so we could celebrate together.</li>
+  <li>We hope that this financial support <span class="grammar-gap" data-answer="helps" onclick="COSY.placeGrammarChip(this)">_____</span> them open a new business.</li>
+  <li>It is crucial that he <span class="grammar-gap" data-answer="transfer" onclick="COSY.placeGrammarChip(this)">_____</span> the household income today.</li>
+  <li>I wish the transaction fees <span class="grammar-gap" data-answer="were" onclick="COSY.placeGrammarChip(this)">_____</span> much lower.</li></ol>
+  </div>
+  <div style="display:flex; gap:10px; margin-bottom:1.5rem;">
+  <button class="btn-verify" onclick="COSY.verifyGrammarGame(this)" style="background:#0F6E56; color:white; border:none; padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Check Answers</button>
+  <button class="btn-reset" onclick="COSY.resetGrammarGame(this)" style="background:transparent; border:1px solid var(--border); color:var(--muted); padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:700; font-size:0.9rem; transition:all 0.2s;">Reset Board</button>
+  </div>
+  <div class="grammar-task-item" style="background: rgba(186, 117, 23, 0.04); padding: 1.25rem; border-radius: 12px; border-left: 4px solid #BA7517; box-shadow: var(--shadow-sm);">
+  <strong style="display: block; margin-bottom: 0.5rem; color: #5c390b;">🗣️ Task 2 : Interactive Speaking:</strong>
+  <p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+  Share 3 wishes or hopes you have for your family's future financial stability and prosperity using 'I wish' and 'I hope' structures.
+  </p>
+  </div>
+  </div>
+  </div>
+round_1:
+  title: 'Round 1 : General Discussion'
+  badge: Questions
+  instruction: ''
+  items:
+    - main: I wish that sending a regular <strong>remittance</strong> <strong>were</strong> less complicated for separated families who require immediate help.
+      personal: ★ Is sending money abroad a common practice in your community?
+    - main: It is essential that a <strong>migrant worker</strong> <strong>feel</strong> welcomed and supported by their new host community.
+      personal: ★ What are the hardest challenges for people working abroad?
+    - main: We hope that receiving direct <strong>financial support</strong> <strong>assists</strong> children in securing a better education.
+      personal: ★ How can families use financial support to improve their lives?
+    - main: I wish that rising global <strong>living expenses</strong> <strong>did not pressure</strong> families so heavily.
+      personal: ★ Have you noticed a big rise in your daily living expenses recently?
+    - main: It is crucial that each <strong>bank transfer</strong> <strong>be</strong> processed securely and quickly.
+      personal: ★ Do you prefer traditional bank transfers or mobile apps?
+    - main: We hope that the low transaction <strong>fee</strong> <strong>allows</strong> workers to send more money back home.
+      personal: ★ Do you think transfer fees should be capped by governments?
+    - main: It is vital that a <strong>developing country</strong> <strong>invest</strong> remittance inflows into local schools and infrastructure.
+      personal: ★ How can a nation help its citizens who work abroad?
+    - main: I wish that every stable <strong>household income</strong> <strong>enabled</strong> local families to open their own businesses.
+      personal: ★ What is the best way to manage a family budget?
+    - main: We hope that the positive <strong>economic impact</strong> of global trade <strong>improves</strong> local job markets.
+      personal: ★ How does your country's economic state affect your career choices?
+    - main: It is essential that financial institutions <strong>promote</strong> <strong>financial inclusion</strong> for unbanked rural populations.
+      personal: ★ Do you think everyone should have access to digital banking?
+lets_speak_together:
+  title: 'Let''s Speak Together : Collaborative Activities'
+  note: |-
+    <div style="background: rgba(99, 102, 241, 0.03); border: 1px solid rgba(99, 102, 241, 0.2); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);">
+    <h4 style="margin: 0 0 0.5rem 0; color: #4f46e5; display: flex; align-items: center; gap: 8px;">🗺️ Activity 1: The Global Care Map</h4>
+    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.5; color: var(--ink-soft);">
+    Remittances represent a flow of care across global borders. Together with your partner, evaluate the primary ways migrant workers connect with their families. Discuss how technology has simplified these connections. Practice using subjunctive wishes (<em>I wish my family lived...</em>, <em>It is crucial that...</em>):
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+    <div style="background: #ffffff; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; box-shadow: var(--shadow-sm);">
+    <span style="font-size: 2rem;">📲</span>
+    <h5 style="margin: 0.5rem 0 0.25rem 0; font-size: 0.95rem;">Instant Mobile Wallet</h5>
+    <p style="margin: 0; font-size: 0.8rem; color: var(--muted);">Promoting immediate <strong>financial inclusion</strong> with zero delays or heavy travel requirements.</p>
+    </div>
+    <div style="background: #ffffff; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; box-shadow: var(--shadow-sm);">
+    <span style="font-size: 2rem;">✉️</span>
+    <h5 style="margin: 0.5rem 0 0.25rem 0; font-size: 0.95rem;">The Personal Letter</h5>
+    <p style="margin: 0; font-size: 0.8rem; color: var(--muted);">A deep, handwritten emotional message that accompanies any financial transfer.</p>
+    </div>
+    <div style="background: #ffffff; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; box-shadow: var(--shadow-sm);">
+    <span style="font-size: 2rem;">🎁</span>
+    <h5 style="margin: 0.5rem 0 0.25rem 0; font-size: 0.95rem;">Physical Box of Goods</h5>
+    <p style="margin: 0; font-size: 0.8rem; color: var(--muted);">Filling a container with special snacks and clothes to send over cargo ships.</p>
+round_2:
+  title: 'Round 2 : The Future: Agree or Disagree?'
+  badge: Agree or Disagree
+  instruction: ''
+  items:
+    - main: In the future, we hope that global transactions <strong>take</strong> place instantly with a zero <strong>fee</strong> guarantee.
+      personal: ★ How would zero-fee instant international transfers change your family's global financial habits?
+    - main: It is crucial that governments <strong>implement</strong> basic income so no <strong>migrant worker</strong> <strong>need</strong> to travel for employment.
+      personal: ★ Do you believe everyone should have the freedom to work locally rather than migrating for higher wages?
+    - main: I wish that decentralized finance <strong>replaced</strong> the traditional <strong>bank transfer</strong> entirely to speed up global transfers.
+      personal: ★ Would you feel comfortable using cryptocurrency or digital wallets to send emergency funds to relatives?
+    - main: We hope that remote work <strong>allows</strong> employees to stay with their families while reducing <strong>living expenses</strong>.
+      personal: ★ Would you choose to work remotely for an overseas company if it meant remaining in your hometown?
+    - main: It is vital that AI algorithms <strong>manage</strong> the <strong>economic impact</strong> of remittances to prevent sudden inflation.
+      personal: ★ Do you worry that heavy foreign currency inflows can make local living expenses too high for residents?
+    - main: I wish that young generations <strong>continued</strong> to prioritize supporting extended families to boost <strong>household income</strong>.
+      personal: ★ Do you feel a personal obligation to provide financial support to extended family members when they need help?
+    - main: It is important that citizens <strong>protect</strong> their privacy as states seek to control <strong>financial inclusion</strong>.
+      personal: ★ How comfortable are you with digital banking platforms verifying your identity and tracking cross-border transactions?
+    - main: We hope that smart platforms <strong>allow</strong> workers to send target-specific 'smart <strong>financial support</strong>' for education.
+      personal: ★ Would you prefer sending money directly tied to specific expenses like tuition or healthcare over cash?
+    - main: It is essential that a <strong>developing country</strong> <strong>create</strong> modern jobs so families don't have to rely on remittances.
+      personal: ★ What local economic improvements would encourage citizens working abroad to return home permanently?
+    - main: I wish that the emotional stress of sending a regular <strong>remittance</strong> <strong>did not discourage</strong> workers from seeking global careers.
+      personal: ★ How can separated families maintain strong emotional bonds when separated by long distances for work?
+mistakes:
+  - wrong: I send money for my family.
+    right: I send money to my family.
+    note: (Verb agreement)
+  - wrong: I am agree with you
+    right: I agree with you
+    note: (Verb agreement)
+  - wrong: It is depend on you
+    right: It depends on you
+    note: (Verb vs Adjective)
+  - wrong: I have 25 years old
+    right: I am 25 years old
+    note: (Age with 'to be')
+---

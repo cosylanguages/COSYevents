@@ -904,9 +904,9 @@
     "format": "Cinema Club"
   },
   {
-    "title": "AI and Art : COSYlanguages",
+    "title": "AI and Art: Can machines be truly creative? : COSYlanguages",
     "href": "sessions/debatable-relatable/ai-and-art.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
@@ -914,7 +914,7 @@
   {
     "title": "Assisted Dying: Yes or No : COSYlanguages",
     "href": "sessions/debatable-relatable/assisted-dying.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
@@ -938,7 +938,7 @@
   {
     "title": "Homework should be banned : COSYlanguages",
     "href": "sessions/debatable-relatable/homework-ban.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
@@ -954,7 +954,7 @@
   {
     "title": "Human Cloning : COSYlanguages",
     "href": "sessions/debatable-relatable/human-cloning-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
@@ -976,7 +976,7 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Money vs Free Time (A2) : COSYlanguages",
+    "title": "Money vs Free Time : COSYlanguages",
     "href": "sessions/debatable-relatable/money-vs-free-time-elementary.html",
     "level": "A2",
     "lang": "English",
@@ -984,7 +984,7 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Money vs Free Time (B1) : COSYlanguages",
+    "title": "Money vs Free Time : COSYlanguages",
     "href": "sessions/debatable-relatable/money-vs-free-time-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -992,7 +992,7 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Music vs Songs (Elementary) : COSYlanguages",
+    "title": "Instrumental Music vs Songs with Lyrics : COSYlanguages",
     "href": "sessions/debatable-relatable/music-vs-songs-elementary.html",
     "level": "A2",
     "lang": "English",
@@ -1000,7 +1000,7 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Music vs Songs (Intermediate) : COSYlanguages",
+    "title": "Instrumental Music vs Songs with Lyrics : COSYlanguages",
     "href": "sessions/debatable-relatable/music-vs-songs-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -1010,23 +1010,23 @@
   {
     "title": "Old Upbringing vs Modern Upbringing : COSYlanguages",
     "href": "sessions/debatable-relatable/upbringing-old-vs-modern.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
   },
   {
-    "title": "Paid Subscriptions : COSYlanguages",
+    "title": "Paid Subscriptions for Meta Platforms : COSYlanguages",
     "href": "sessions/debatable-relatable/meta-subscriptions.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
   },
   {
-    "title": "Pedagogy &amp; Practice : COSYlanguages",
+    "title": "Pedagogy &amp; Practice: The Future of Learning : COSYlanguages",
     "href": "sessions/debatable-relatable/pedagogy-and-practice.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
@@ -1050,7 +1050,7 @@
   {
     "title": "Short Holiday vs Long Holiday : COSYlanguages",
     "href": "sessions/debatable-relatable/short-holiday-vs-long-holiday-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
@@ -1072,17 +1072,17 @@
     "format": "Speaking Club"
   },
   {
-    "title": "The 4-Day Work Week : COSYlanguages",
+    "title": "The 4-Day Work Week: Productivity vs. Tradition : COSYlanguages",
     "href": "sessions/debatable-relatable/4-day-work-week.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
   },
   {
-    "title": "The Future-Proof Educator : COSYlanguages",
+    "title": "The Future-Proof Educator: AI, Critical Thinking &amp; Diversity : COSYlanguages",
     "href": "sessions/debatable-relatable/the-future-proof-educator.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
@@ -1106,7 +1106,7 @@
   {
     "title": "Typing vs Handwriting : COSYlanguages",
     "href": "sessions/debatable-relatable/typing-vs-handwriting-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "Debatable & Relatable",
     "format": "Speaking Club"
@@ -1328,41 +1328,41 @@
     "format": "Speaking Club"
   },
   {
-    "title": "If You Were Blind 🕶️ : COSYlanguages",
+    "title": "If You Were Blind : COSYlanguages",
     "href": "sessions/if-you-were/if-you-were-blind.html",
-    "level": "",
+    "level": "B2",
     "lang": "English",
     "club": "If You Were",
     "format": "Speaking Club"
   },
   {
-    "title": "If You Were Deaf 🔇 : COSYlanguages",
+    "title": "If You Were Deaf : COSYlanguages",
     "href": "sessions/if-you-were/if-you-were-deaf.html",
-    "level": "",
+    "level": "B2",
     "lang": "English",
     "club": "If You Were",
     "format": "Speaking Club"
   },
   {
-    "title": "If You Were a Child Again 👶 : COSYlanguages",
+    "title": "If You Were a Child Again : COSYlanguages",
     "href": "sessions/if-you-were/if-you-were-child-again.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "If You Were",
     "format": "Speaking Club"
   },
   {
-    "title": "If You Were a Parent to Yourself 🧬 : COSYlanguages",
+    "title": "If You Were a Parent to Yourself : COSYlanguages",
     "href": "sessions/if-you-were/if-you-were-parent-to-yourself.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "If You Were",
     "format": "Speaking Club"
   },
   {
-    "title": "If You Were a Teacher 🏫 : COSYlanguages",
+    "title": "If You Were a Teacher : COSYlanguages",
     "href": "sessions/if-you-were/if-you-were-teacher.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "If You Were",
     "format": "Speaking Club"
@@ -2962,21 +2962,21 @@
   {
     "title": "Cheap Flight Day (A1) : COSYlanguages",
     "href": "sessions/lets-celebrate/cheap-flight-day.html",
-    "level": "",
+    "level": "A1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
   },
   {
-    "title": "Diwali : The Festival of Lights : COSYlanguages",
+    "title": "Diwali: The Festival of Lights : COSYlanguages",
     "href": "sessions/lets-celebrate/diwali-festival.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
   },
   {
-    "title": "International Asteroid Day (B1) : COSYlanguages",
+    "title": "International Asteroid Day : COSYlanguages",
     "href": "sessions/lets-celebrate/international-asteroid-day-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -2984,17 +2984,17 @@
     "format": "Speaking Club"
   },
   {
-    "title": "International Asteroid Day (B2) : COSYlanguages",
+    "title": "International Asteroid Day : COSYlanguages",
     "href": "sessions/lets-celebrate/international-asteroid-day-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
   },
   {
-    "title": "International Day of Family Remittances : COSYlanguages",
+    "title": "Family Remittances Day : COSYlanguages",
     "href": "sessions/lets-celebrate/family-remittances-day.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
@@ -3002,13 +3002,13 @@
   {
     "title": "International Homeless Animals Day (A1) : COSYlanguages",
     "href": "sessions/lets-celebrate/international-homeless-animals-day.html",
-    "level": "",
+    "level": "A1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
   },
   {
-    "title": "International Peace &amp; Love Day (B1) : COSYlanguages",
+    "title": "International Peace &amp; Love Day : COSYlanguages",
     "href": "sessions/lets-celebrate/international-peace-love-day-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3016,9 +3016,9 @@
     "format": "Speaking Club"
   },
   {
-    "title": "International Peace &amp; Love Day (B2) : COSYlanguages",
+    "title": "International Peace &amp; Love Day : COSYlanguages",
     "href": "sessions/lets-celebrate/international-peace-love-day-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
@@ -3034,7 +3034,7 @@
   {
     "title": "Lunar New Year : COSYlanguages",
     "href": "sessions/lets-celebrate/lunar-new-year.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
@@ -3050,7 +3050,7 @@
   {
     "title": "National Aunt and Uncle Day : COSYlanguages",
     "href": "sessions/lets-celebrate/national-aunt-and-uncle-day.html",
-    "level": "",
+    "level": "A2",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
@@ -3058,7 +3058,7 @@
   {
     "title": "National Book Lovers Day (A1) : COSYlanguages",
     "href": "sessions/lets-celebrate/national-book-lovers-day.html",
-    "level": "",
+    "level": "A1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
@@ -3066,13 +3066,13 @@
   {
     "title": "National Simplicity Day : COSYlanguages",
     "href": "sessions/lets-celebrate/national-simplicity-day.html",
-    "level": "",
+    "level": "A1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
   },
   {
-    "title": "National Someone Day (B1) : COSYlanguages",
+    "title": "National Someone Day : COSYlanguages",
     "href": "sessions/lets-celebrate/national-someone-day-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3080,9 +3080,9 @@
     "format": "Speaking Club"
   },
   {
-    "title": "National Someone Day (B2) : COSYlanguages",
+    "title": "National Someone Day : COSYlanguages",
     "href": "sessions/lets-celebrate/national-someone-day-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
@@ -3090,13 +3090,13 @@
   {
     "title": "National Workaholics Day : COSYlanguages",
     "href": "sessions/lets-celebrate/national-workaholics-day.html",
-    "level": "",
+    "level": "A1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
   },
   {
-    "title": "Pandemonium Day (B1) : COSYlanguages",
+    "title": "Pandemonium Day : COSYlanguages",
     "href": "sessions/lets-celebrate/pandemonium-day-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3104,9 +3104,9 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Pandemonium Day (B2) : COSYlanguages",
+    "title": "Pandemonium Day : COSYlanguages",
     "href": "sessions/lets-celebrate/pandemonium-day-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
@@ -3114,21 +3114,21 @@
   {
     "title": "Single Working Women's Day : COSYlanguages",
     "href": "sessions/lets-celebrate/single-working-womens-day.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
   },
   {
-    "title": "Urban Beekeeping Day (A1) : COSYlanguages",
+    "title": "Urban Beekeeping Day : COSYlanguages",
     "href": "sessions/lets-celebrate/urban-beekeeping-day-starter.html",
-    "level": "",
+    "level": "A1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
   },
   {
-    "title": "Urban Beekeeping Day (A2) : COSYlanguages",
+    "title": "Urban Beekeeping Day : COSYlanguages",
     "href": "sessions/lets-celebrate/urban-beekeeping-day-elementary.html",
     "level": "A2",
     "lang": "English",
@@ -3138,7 +3138,7 @@
   {
     "title": "World Nature Conservation Day : COSYlanguages",
     "href": "sessions/lets-celebrate/world-nature-conservation-day.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
@@ -3632,17 +3632,17 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Diversity (Cultural, Linguistic, etc.) : COSYlanguages",
+    "title": "Life With &amp; Without Diversity : COSYlanguages",
     "href": "sessions/my-life-with-without/diversity-life.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
   },
   {
-    "title": "Italian Gestures &amp; Expression : COSYlanguages",
+    "title": "Italian Gestures &amp; Non-Verbal Expression : COSYlanguages",
     "href": "sessions/my-life-with-without/italian-gestures.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
@@ -3650,7 +3650,7 @@
   {
     "title": "Life With &amp; Without Airplanes : COSYlanguages",
     "href": "sessions/my-life-with-without/airplane-life.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
@@ -3658,7 +3658,7 @@
   {
     "title": "Life With &amp; Without Celebrities : COSYlanguages",
     "href": "sessions/my-life-with-without/celebrity-life.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
@@ -3666,7 +3666,7 @@
   {
     "title": "Life With &amp; Without Series &amp; Soap Operas : COSYlanguages",
     "href": "sessions/my-life-with-without/series-soap-opera.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
@@ -3674,7 +3674,7 @@
   {
     "title": "My Life With & My Life Without Hearing Abilities : COSYlanguages",
     "href": "sessions/my-life-with-without/hearing-abilities-life.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
@@ -3698,13 +3698,13 @@
   {
     "title": "My Life With &amp; Without Holidays : COSYlanguages",
     "href": "sessions/my-life-with-without/holidays-vacations.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
   },
   {
-    "title": "My Life With &amp; Without Obsolete Jobs (B1) : COSYlanguages",
+    "title": "My Life With &amp; Without Obsolete Jobs : COSYlanguages",
     "href": "sessions/my-life-with-without/obsolete-jobs-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3712,7 +3712,7 @@
     "format": "Speaking Club"
   },
   {
-    "title": "My Life With &amp; Without Obsolete Jobs (C1) : COSYlanguages",
+    "title": "My Life With &amp; Without Obsolete Jobs : COSYlanguages",
     "href": "sessions/my-life-with-without/obsolete-jobs-advanced.html",
     "level": "C1",
     "lang": "English",
@@ -3720,15 +3720,15 @@
     "format": "Speaking Club"
   },
   {
-    "title": "My Life With &amp; Without Pets : COSYlanguages",
+    "title": "Life With &amp; Without Pets : COSYlanguages",
     "href": "sessions/my-life-with-without/pets-life.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
   },
   {
-    "title": "My Life With &amp; Without Private Cars (B1) : COSYlanguages",
+    "title": "My Life With &amp; Without Private Cars : COSYlanguages",
     "href": "sessions/my-life-with-without/private-cars-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3736,15 +3736,15 @@
     "format": "Speaking Club"
   },
   {
-    "title": "My Life With &amp; Without Private Cars (B2) : COSYlanguages",
+    "title": "My Life With &amp; Without Private Cars : COSYlanguages",
     "href": "sessions/my-life-with-without/private-cars-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
   },
   {
-    "title": "My Life With &amp; Without Skyscrapers (B1) : COSYlanguages",
+    "title": "My Life With &amp; Without Skyscrapers : COSYlanguages",
     "href": "sessions/my-life-with-without/high-rise-skyscrapers-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3752,9 +3752,9 @@
     "format": "Speaking Club"
   },
   {
-    "title": "My Life With &amp; Without Skyscrapers (B2) : COSYlanguages",
+    "title": "My Life With &amp; Without Skyscrapers : COSYlanguages",
     "href": "sessions/my-life-with-without/high-rise-skyscrapers-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "My Life With & Without",
     "format": "Speaking Club"
@@ -3762,37 +3762,37 @@
   {
     "title": "My Life With &amp; Without a Car : COSYlanguages",
     "href": "sessions/my-life-with-without/car-life.html",
-    "level": "",
-    "lang": "English",
-    "club": "My Life With & Without",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "My Life With &amp; Without a Fridge : COSYlanguages",
-    "href": "sessions/my-life-with-without/fridge-life.html",
-    "level": "",
-    "lang": "English",
-    "club": "My Life With & Without",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Social Media Life : COSYlanguages",
-    "href": "sessions/my-life-with-without/social-media-life.html",
-    "level": "",
-    "lang": "English",
-    "club": "My Life With & Without",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "AI is the Opposite of Art (B2) : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/ai-opposite-of-art-upper-intermediate.html",
     "level": "B1",
+    "lang": "English",
+    "club": "My Life With & Without",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "Life With &amp; Without a Fridge : COSYlanguages",
+    "href": "sessions/my-life-with-without/fridge-life.html",
+    "level": "B1",
+    "lang": "English",
+    "club": "My Life With & Without",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "Life With &amp; Without Social Media : COSYlanguages",
+    "href": "sessions/my-life-with-without/social-media-life.html",
+    "level": "B1",
+    "lang": "English",
+    "club": "My Life With & Without",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "AI is the Opposite of Art: The Risk of Creation (B2) : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/ai-opposite-of-art-upper-intermediate.html",
+    "level": "B2",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "AI is the Opposite of Art : COSYlanguages",
+    "title": "AI is the Opposite of Art: The Risk of Creation : COSYlanguages",
     "href": "sessions/the-greatest-quotes/ai-opposite-of-art-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3800,23 +3800,23 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Ability to Notice Beauty : COSYlanguages",
+    "title": "\"The amount of beautiful things in your life depends on your ability to notice them.\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/ability-to-notice-beauty-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Accepting a Gay Child : COSYlanguages",
+    "title": "Accepting a Gay Child: Love vs. Tradition : COSYlanguages",
     "href": "sessions/the-greatest-quotes/accept-gay-child.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Alisa Freindlich Quote (Elementary) : COSYlanguages",
+    "title": "\"The longer we keep our inner child alive, the longer we keep the natural gifts we were born with.\": Alisa Freindlich : COSYlanguages",
     "href": "sessions/the-greatest-quotes/alisa-freindlich-inner-child-elementary.html",
     "level": "A2",
     "lang": "English",
@@ -3824,7 +3824,7 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Alisa Freindlich Quote (Intermediate) : COSYlanguages",
+    "title": "\"The longer we keep our inner child alive, the longer we keep the natural gifts we were born with.\": Alisa Freindlich : COSYlanguages",
     "href": "sessions/the-greatest-quotes/alisa-freindlich-inner-child-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3832,25 +3832,25 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Apathy vs. Love : COSYlanguages",
+    "title": "\"The opposite of love is not hate. The actual opposite of love is apathy.\": Amish Tripathi : COSYlanguages",
     "href": "sessions/the-greatest-quotes/amish-tripathi-quote.html",
-    "level": "",
+    "level": "B2",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Barbra Streisand Quote : COSYlanguages",
+    "title": "\"I knew that with a mouth like mine, I just hadda be a star or something.\": Barbra Streisand : COSYlanguages",
     "href": "sessions/the-greatest-quotes/barbra-streisand-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Criticism &amp; Advice : COSYlanguages",
+    "title": "\"Don't take criticism from someone you wouldn't take advice from.\": Jim Kwik : COSYlanguages",
     "href": "sessions/the-greatest-quotes/jim-kwik-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
@@ -3872,23 +3872,23 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Dangerous Blindness : COSYlanguages",
+    "title": "Dangerous Blindness: The Limit of Perspective : COSYlanguages",
     "href": "sessions/the-greatest-quotes/dangerous-blindness-perspective.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Difficult Children : COSYlanguages",
+    "title": "\"A child has the right to be difficult, that is the only way they learn to be themselves.\": Françoise Dolto : COSYlanguages",
     "href": "sessions/the-greatest-quotes/dolto-difficult-child-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Disappear with Art (A2) : COSYlanguages",
+    "title": "\"The older you get the more you understand why people disappear with art, music, books and quiet living.\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/disappear-with-art-quote-elementary.html",
     "level": "A2",
     "lang": "English",
@@ -3896,7 +3896,7 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Disappear with Art (B1) : COSYlanguages",
+    "title": "\"The older you get the more you understand why people disappear with art, music, books and quiet living.\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/disappear-with-art-quote-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3904,39 +3904,39 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Disappear with Art : COSYlanguages",
+    "title": "\"The older you get the more you understand why people disappear with art, music, books and quiet living.\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/disappear-with-art-quote.html",
-    "level": "",
+    "level": "B2",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Education vs Intelligence : COSYlanguages",
+    "title": "\"Never confuse education with intelligence.\": Richard Feynman : COSYlanguages",
     "href": "sessions/the-greatest-quotes/feynman-education-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Favorite Days That Never Happened : COSYlanguages",
+    "title": "Favorite Days: That Never Happened : COSYlanguages",
     "href": "sessions/the-greatest-quotes/favorite-days-not-happened.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Home is a Time : COSYlanguages",
+    "title": "Home is a Time: Not a Place : COSYlanguages",
     "href": "sessions/the-greatest-quotes/home-is-a-time.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Knowledge Isn't Free : COSYlanguages",
+    "title": "\"Knowledge isn't free. You have to pay attention.\": Richard Feynman : COSYlanguages",
     "href": "sessions/the-greatest-quotes/feynman-knowledge-isnt-free-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3944,31 +3944,31 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Love as an Identity : COSYlanguages",
+    "title": "\"I am a lover with or without a lover, because love is who I am, not who I'm with.\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/lover-with-or-without-a-lover.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Loving Means Power : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/dostoevsky-loving-power-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Madonna Quote on AI &amp; Art (B2) : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/madonna-ai-art-quote-upper-intermediate.html",
     "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Madonna Quote on AI &amp; Art : COSYlanguages",
+    "title": "\"Loving someone means giving them the power to destroy you, but trusting they won't.\": Fedor Dostoevsky : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/dostoevsky-loving-power-quote.html",
+    "level": "B2",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"Algorithms and AI are the opposite of taking risks...\": Madonna (B2) : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/madonna-ai-art-quote-upper-intermediate.html",
+    "level": "B2",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"Algorithms and AI are the opposite of taking risks...\": Madonna : COSYlanguages",
     "href": "sessions/the-greatest-quotes/madonna-ai-art-quote-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -3976,7 +3976,7 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Madonna Quote on AI &amp; Art : COSYlanguages",
+    "title": "\"AI is the opposite of taking risks...\": Madonna : COSYlanguages",
     "href": "sessions/the-greatest-quotes/madonna-ai-art-quote-elementary.html",
     "level": "A2",
     "lang": "English",
@@ -3984,87 +3984,87 @@
     "format": "Speaking Club"
   },
   {
-    "title": "No Shame in Not Knowing : COSYlanguages",
+    "title": "\"There is no shame in not knowing things! It's okay to say 'I don't know'. The one shame is to pretend that we know everything.\": Richard Feynman : COSYlanguages",
     "href": "sessions/the-greatest-quotes/feynman-no-shame-knowing-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Ocean of People : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/sadia-hakim-humanity-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Passionately Curious : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/einstein-passionately-curious-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Pay Attention : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/brianna-pastor-proud-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Pay for Storage : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/memory-cards-storage-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Pen or Paintbrush : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/virginia-woolf-trigger-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Politicians and Teachers : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/underpaid-politicians-teachers-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Politics and Religion : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/dostoevsky-politics-religion-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Read and Dance : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/voltaire-read-dance-quote.html",
-    "level": "",
-    "lang": "English",
-    "club": "The Greatest Quotes",
-    "format": "Speaking Club"
-  },
-  {
-    "title": "Richard Feynman Quote (B2) : COSYlanguages",
-    "href": "sessions/the-greatest-quotes/feynman-knowledge-isnt-free-upper-intermediate.html",
     "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Richard Feynman Quote : COSYlanguages",
+    "title": "\"People, people, people, an ocean of people, but I can't find even a drop of humanity.\": Sadia Hakim : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/sadia-hakim-humanity-quote.html",
+    "level": "C1",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"I have no special talents, I am only passionately curious.\": Albert Einstein : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/einstein-passionately-curious-quote.html",
+    "level": "A2",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"Pay attention to who changes the subject when you try to talk about something you're proud of.\": Brianna Pastor : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/brianna-pastor-proud-quote.html",
+    "level": "B1",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"They took memory cards from us and then made us pay for storage.\": Nithya Shri : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/memory-cards-storage-quote.html",
+    "level": "C1",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"How many times have people used a pen or a paintbrush because they couldn't pull the trigger?\": Virginia Woolf : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/virginia-woolf-trigger-quote.html",
+    "level": "C1",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"Maybe if we underpaid politicians and overpaid teachers, there would be smarter people and less stupid laws.\": Anonymous (often attributed to Morgan Freeman) : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/underpaid-politicians-teachers-quote.html",
+    "level": "B2",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"If you want to know a person, discuss politics, religion, and women with him.\": Fedor Dostoevsky : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/dostoevsky-politics-religion-quote.html",
+    "level": "B2",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"Let us read, and let us dance, those two amusements will never do any harm to the world.\": Voltaire : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/voltaire-read-dance-quote.html",
+    "level": "B1",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"Knowledge isn't free. You have to pay attention.\": Richard Feynman : COSYlanguages",
+    "href": "sessions/the-greatest-quotes/feynman-knowledge-isnt-free-upper-intermediate.html",
+    "level": "B2",
+    "lang": "English",
+    "club": "The Greatest Quotes",
+    "format": "Speaking Club"
+  },
+  {
+    "title": "\"Knowledge isn't free. You have to pay attention.\": Richard Feynman : COSYlanguages",
     "href": "sessions/the-greatest-quotes/feynman-knowledge-isnt-free-elementary.html",
     "level": "A2",
     "lang": "English",
@@ -4072,15 +4072,15 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Robin Williams Quote (B2) : COSYlanguages",
+    "title": "\"People don't fake depression, they fake being okay.\": Robin Williams : COSYlanguages",
     "href": "sessions/the-greatest-quotes/robin-williams-quote-upper-intermediate.html",
-    "level": "B1",
+    "level": "B2",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Robin Williams Quote : COSYlanguages",
+    "title": "\"People don't fake depression, they fake being okay.\": Robin Williams : COSYlanguages",
     "href": "sessions/the-greatest-quotes/robin-williams-quote-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -4088,39 +4088,39 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Saudade : COSYlanguages",
+    "title": "Saudade: The Presence of Absence : COSYlanguages",
     "href": "sessions/the-greatest-quotes/saudade.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Sonder : COSYlanguages",
+    "title": "Sonder: The Lives of Others : COSYlanguages",
     "href": "sessions/the-greatest-quotes/sonder.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Stay Free : COSYlanguages",
+    "title": "\"None of us really have a choice in anything but we do have a choice to be ourselves. Stay free.\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/stay-free-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Stay Hungry, Stay Foolish : COSYlanguages",
+    "title": "\"Stay hungry, stay foolish.\": Steve Jobs : COSYlanguages",
     "href": "sessions/the-greatest-quotes/steve-jobs-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Study Hard what Interests You (B2) : COSYlanguages",
+    "title": "\"Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.\": Richard Feynman : COSYlanguages",
     "href": "sessions/the-greatest-quotes/feynman-study-hard.html",
     "level": "B2",
     "lang": "English",
@@ -4128,7 +4128,7 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Study Hard what Interests You : COSYlanguages",
+    "title": "\"Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.\": Richard Feynman : COSYlanguages",
     "href": "sessions/the-greatest-quotes/feynman-study-hard-intermediate.html",
     "level": "B1",
     "lang": "English",
@@ -4136,41 +4136,41 @@
     "format": "Speaking Club"
   },
   {
-    "title": "The Compass and the Clock : COSYlanguages",
+    "title": "\"The compass was invented before the clock because direction was more important than how long it took to get there.\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/compass-and-clock.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "The Convenient Child : COSYlanguages",
+    "title": "\"If a child is always convenient, it means they have already suppressed a part of themselves.\": Alfried Längle : COSYlanguages",
     "href": "sessions/the-greatest-quotes/langle-suppressed-child-quote.html",
-    "level": "",
+    "level": "B2",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "The Same Rain : COSYlanguages",
+    "title": "\"The same rain that hurts the ice cream seller helps the umbrella seller.\": Proverb : COSYlanguages",
     "href": "sessions/the-greatest-quotes/rain-seller-umbrella-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "The Tragedy of Women : COSYlanguages",
+    "title": "Women and Mothers: The Tragedy of Choice : COSYlanguages",
     "href": "sessions/the-greatest-quotes/women-mothers-tragedy.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "The Wisdom of Socrates : COSYlanguages",
+    "title": "\"The only true wisdom is in knowing you know nothing.\": Socrates : COSYlanguages",
     "href": "sessions/the-greatest-quotes/wisdom-of-socrates.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
@@ -4184,49 +4184,49 @@
     "format": "Speaking Club"
   },
   {
-    "title": "Turn Off AI : COSYlanguages",
+    "title": "\"We should turn off AI for a week to see if people's brains still work.\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/turn-off-ai-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Weird People with Big Dreams : COSYlanguages",
+    "title": "\"I will always prefer weird people with big dreams and poetic personalities.\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/weird-people-dreams-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "When Kids Stop Resisting : COSYlanguages",
+    "title": "\"The real problems start not when a child resists, but when they stop resisting.\": Gordon Neufeld : COSYlanguages",
     "href": "sessions/the-greatest-quotes/neufeld-resistance-quote.html",
-    "level": "",
+    "level": "B2",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "Who Told You to Think So? : COSYlanguages",
+    "title": "\"Do you think so, or were you told to think so?\": Anonymous : COSYlanguages",
     "href": "sessions/the-greatest-quotes/think-for-yourself-quote.html",
-    "level": "",
+    "level": "B1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "You Are a Soul : COSYlanguages",
+    "title": "\"You don't have a soul. You are a soul. You have a body.\": C.S. Lewis : COSYlanguages",
     "href": "sessions/the-greatest-quotes/you-are-a-soul.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
   },
   {
-    "title": "You Must Die First : COSYlanguages",
+    "title": "You Must Die First: The Art of Rebirth : COSYlanguages",
     "href": "sessions/the-greatest-quotes/must-die-first.html",
-    "level": "",
+    "level": "C1",
     "lang": "English",
     "club": "The Greatest Quotes",
     "format": "Speaking Club"
@@ -4912,10 +4912,10 @@
     "format": "Speaking Club"
   },
   {
-    "title": "La Dolce Vita & Italian Gastronomy Evening",
+    "title": "Italian Gastronomy : COSYlanguages",
     "href": "sessions/lets-celebrate/italian-gastronomy.html",
-    "level": "A2",
-    "lang": "Italian",
+    "level": "B1",
+    "lang": "English",
     "club": "Let's Celebrate",
     "format": "Speaking Club"
   },

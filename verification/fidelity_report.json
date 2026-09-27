@@ -1,0 +1,337 @@
+{
+  "the-greatest-quotes": {
+    "total_tested": 5,
+    "structural_pass": 5,
+    "visual_pass": 5,
+    "details": [
+      {
+        "session": "ability-to-notice-beauty-quote",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/the-greatest-quotes_ability-to-notice-beauty-quote.png",
+          "screenshot": "verification/screenshots/the-greatest-quotes_ability-to-notice-beauty-quote.png"
+        }
+      },
+      {
+        "session": "alisa-freindlich-inner-child-intermediate",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/the-greatest-quotes_alisa-freindlich-inner-child-intermediate.png",
+          "screenshot": "verification/screenshots/the-greatest-quotes_alisa-freindlich-inner-child-intermediate.png"
+        }
+      },
+      {
+        "session": "feynman-study-hard-intermediate",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/the-greatest-quotes_feynman-study-hard-intermediate.png",
+          "screenshot": "verification/screenshots/the-greatest-quotes_feynman-study-hard-intermediate.png"
+        }
+      },
+      {
+        "session": "dostoevsky-loving-power-quote",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/the-greatest-quotes_dostoevsky-loving-power-quote.png",
+          "screenshot": "verification/screenshots/the-greatest-quotes_dostoevsky-loving-power-quote.png"
+        }
+      },
+      {
+        "session": "steve-jobs-quote",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/the-greatest-quotes_steve-jobs-quote.png",
+          "screenshot": "verification/screenshots/the-greatest-quotes_steve-jobs-quote.png"
+        }
+      }
+    ]
+  },
+  "debatable-relatable": {
+    "total_tested": 5,
+    "structural_pass": 5,
+    "visual_pass": 5,
+    "details": [
+      {
+        "session": "4-day-work-week",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/debatable-relatable_4-day-work-week.png",
+          "screenshot": "verification/screenshots/debatable-relatable_4-day-work-week.png"
+        }
+      },
+      {
+        "session": "ai-and-art",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/debatable-relatable_ai-and-art.png",
+          "screenshot": "verification/screenshots/debatable-relatable_ai-and-art.png"
+        }
+      },
+      {
+        "session": "homework-ban",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/debatable-relatable_homework-ban.png",
+          "screenshot": "verification/screenshots/debatable-relatable_homework-ban.png"
+        }
+      },
+      {
+        "session": "money-vs-free-time-intermediate",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/debatable-relatable_money-vs-free-time-intermediate.png",
+          "screenshot": "verification/screenshots/debatable-relatable_money-vs-free-time-intermediate.png"
+        }
+      },
+      {
+        "session": "typing-vs-handwriting-intermediate",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/debatable-relatable_typing-vs-handwriting-intermediate.png",
+          "screenshot": "verification/screenshots/debatable-relatable_typing-vs-handwriting-intermediate.png"
+        }
+      }
+    ]
+  },
+  "lets-celebrate": {
+    "total_tested": 5,
+    "structural_pass": 5,
+    "visual_pass": 5,
+    "details": [
+      {
+        "session": "cheap-flight-day",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/lets-celebrate_cheap-flight-day.png",
+          "screenshot": "verification/screenshots/lets-celebrate_cheap-flight-day.png"
+        }
+      },
+      {
+        "session": "diwali-festival",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/lets-celebrate_diwali-festival.png",
+          "screenshot": "verification/screenshots/lets-celebrate_diwali-festival.png"
+        }
+      },
+      {
+        "session": "lunar-new-year",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/lets-celebrate_lunar-new-year.png",
+          "screenshot": "verification/screenshots/lets-celebrate_lunar-new-year.png"
+        }
+      },
+      {
+        "session": "international-asteroid-day-intermediate",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/lets-celebrate_international-asteroid-day-intermediate.png",
+          "screenshot": "verification/screenshots/lets-celebrate_international-asteroid-day-intermediate.png"
+        }
+      },
+      {
+        "session": "national-simplicity-day",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/lets-celebrate_national-simplicity-day.png",
+          "screenshot": "verification/screenshots/lets-celebrate_national-simplicity-day.png"
+        }
+      }
+    ]
+  },
+  "my-life-with-without": {
+    "total_tested": 5,
+    "structural_pass": 5,
+    "visual_pass": 5,
+    "details": [
+      {
+        "session": "airplane-life",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/my-life-with-without_airplane-life.png",
+          "screenshot": "verification/screenshots/my-life-with-without_airplane-life.png"
+        }
+      },
+      {
+        "session": "car-life",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/my-life-with-without_car-life.png",
+          "screenshot": "verification/screenshots/my-life-with-without_car-life.png"
+        }
+      },
+      {
+        "session": "fridge-life",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/my-life-with-without_fridge-life.png",
+          "screenshot": "verification/screenshots/my-life-with-without_fridge-life.png"
+        }
+      },
+      {
+        "session": "my-life-with-without-ai",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/my-life-with-without_my-life-with-without-ai.png",
+          "screenshot": "verification/screenshots/my-life-with-without_my-life-with-without-ai.png"
+        }
+      },
+      {
+        "session": "pets-life",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/my-life-with-without_pets-life.png",
+          "screenshot": "verification/screenshots/my-life-with-without_pets-life.png"
+        }
+      }
+    ]
+  },
+  "if-you-were": {
+    "total_tested": 5,
+    "structural_pass": 5,
+    "visual_pass": 5,
+    "details": [
+      {
+        "session": "if-you-were-blind",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/if-you-were_if-you-were-blind.png",
+          "screenshot": "verification/screenshots/if-you-were_if-you-were-blind.png"
+        }
+      },
+      {
+        "session": "if-you-were-child-again",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/if-you-were_if-you-were-child-again.png",
+          "screenshot": "verification/screenshots/if-you-were_if-you-were-child-again.png"
+        }
+      },
+      {
+        "session": "if-you-were-deaf",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/if-you-were_if-you-were-deaf.png",
+          "screenshot": "verification/screenshots/if-you-were_if-you-were-deaf.png"
+        }
+      },
+      {
+        "session": "if-you-were-parent-to-yourself",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/if-you-were_if-you-were-parent-to-yourself.png",
+          "screenshot": "verification/screenshots/if-you-were_if-you-were-parent-to-yourself.png"
+        }
+      },
+      {
+        "session": "if-you-were-teacher",
+        "structural": {
+          "pass": true,
+          "message": "Structural DOM components present and verified."
+        },
+        "visual": {
+          "pass": true,
+          "message": "Rendered visually without errors. Screenshot saved to verification/screenshots/if-you-were_if-you-were-teacher.png",
+          "screenshot": "verification/screenshots/if-you-were_if-you-were-teacher.png"
+        }
+      }
+    ]
+  }
+}
