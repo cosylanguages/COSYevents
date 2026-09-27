@@ -444,15 +444,26 @@
     footer.appendChild(note);
   }
 
+  // Auto-load wonder-voiceover.js if wonder audio placeholder is present
+  function checkWonderVoiceover() {
+    if (document.querySelector('.wonder-audio-player-placeholder') && !document.querySelector('script[src*="wonder-voiceover.js"]')) {
+      var script = document.createElement('script');
+      script.src = root + 'shared/js/wonder-voiceover.js';
+      document.head.appendChild(script);
+    }
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       checkEventConversion();
       initSlideDeck();
       renderGatedFooterNote();
+      checkWonderVoiceover();
     });
   } else {
     checkEventConversion();
     initSlideDeck();
     renderGatedFooterNote();
+    checkWonderVoiceover();
   }
 })();

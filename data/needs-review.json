@@ -1,7 +1,33 @@
 {
   "id": "needs-review",
-  "title": "Sessions Needing Review",
-  "description": "Karaoke Club sessions flagged for review during migration reconciliation - now fully reconciled and resolved.",
+  "title": "Sessions & Assets Needing Review",
+  "description": "Sessions and assets flagged for review during migration reconciliation and audio integration.",
+  "audio_mappings": {
+    "i_couldnt_help_but_wonder": {
+      "status": "pending_human_confirmation",
+      "description": "Proposed 1:1 mapping between draft1.mp3..draft18.mp3 and 'I Couldn't Help But Wonder' session HTML files.",
+      "mapping": [
+        { "audio": "draft1.mp3", "session": "whether-raindrops-select-where-to-fall.html", "tag": "Draft #01" },
+        { "audio": "draft2.mp3", "session": "do-insects-hide-when-it-rains.html", "tag": "Draft #02" },
+        { "audio": "draft3.mp3", "session": "is-bad-weather-gods-anger.html", "tag": "Draft #03" },
+        { "audio": "draft4.mp3", "session": "always-watched-in-a-crowd.html", "tag": "Draft #04" },
+        { "audio": "draft5.mp3", "session": "why-is-everyone-copying-me.html", "tag": "Draft #05" },
+        { "audio": "draft6.mp3", "session": "feeling-empty-after-series.html", "tag": "Draft #06" },
+        { "audio": "draft7.mp3", "session": "death-of-the-album.html", "tag": "Draft #07" },
+        { "audio": "draft8.mp3", "session": "ugly-produce-anti-waste.html", "tag": "Draft #08" },
+        { "audio": "draft9.mp3", "session": "does-euthanasia-reduce-suicide-rates.html", "tag": "Draft #09" },
+        { "audio": "draft10.mp3", "session": "appreciating-amy-winehouse-after-death.html", "tag": "Draft #10" },
+        { "audio": "draft11.mp3", "session": "why-do-we-try-to-relate-to-adhd.html", "tag": "Draft #11" },
+        { "audio": "draft12.mp3", "session": "is-parenting-instinct-a-real-thing-or-scam.html", "tag": "Draft #12" },
+        { "audio": "draft13.mp3", "session": "are-traditions-hidden-monogamy.html", "tag": "Draft #13" },
+        { "audio": "draft14.mp3", "session": "collective-guilt-global-crisis.html", "tag": "Draft #14" },
+        { "audio": "draft15.mp3", "session": "are-traditions-hidden-monogamy-upper-intermediate.html", "tag": "Draft #15" },
+        { "audio": "draft16.mp3", "session": "i-have-no-time-for-it.html", "tag": "Draft #16" },
+        { "audio": "draft17.mp3", "session": "why-do-i-spend-more-when-i-earn-more.html", "tag": "Draft #17" },
+        { "audio": "draft18.mp3", "session": "does-inclusive-language-make-us-equal.html", "tag": "Draft #18" }
+      ]
+    }
+  },
   "sessions": [
     {
       "file": "angelina-wismes-challenge.html",
