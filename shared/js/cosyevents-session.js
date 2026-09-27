@@ -444,15 +444,114 @@
     footer.appendChild(note);
   }
 
+  /* ──────────────────────────────────────────────────────────────
+     SUPABASE AUTH-BASED GATING FOR FACILITATOR NOTES & RECORDING URL
+     ────────────────────────────────────────────────────────────── */
+  function initSupabaseGating() {
+    var container = document.querySelector('.content-container') ||
+                    document.querySelector('.session-container') ||
+                    document.querySelector('main');
+    if (!container) return;
+
+    // Create or locate the Facilitator Notes & Recording Section
+    var section = document.getElementById('ce-facilitator-section');
+    if (!section) {
+      section = document.createElement('div');
+      section.id = 'ce-facilitator-section';
+      section.className = 'ce-facilitator-notes-block';
+      section.style.cssText = 'margin-top: 2rem; padding: 1.5rem; border-radius: 16px; border: 1.5px solid var(--cosy-color-border, rgba(74, 107, 80, 0.15)); background: var(--cosy-color-surface, #ffffff); box-shadow: var(--shadow-sm); font-family: var(--cosy-font-sans, sans-serif);';
+
+      // Insert below mistake block or at the end of content container
+      var mistakeBlock = container.querySelector('.mistake-block');
+      if (mistakeBlock && mistakeBlock.nextSibling) {
+        mistakeBlock.parentNode.insertBefore(section, mistakeBlock.nextSibling);
+      } else {
+        container.appendChild(section);
+      }
+    }
+
+    // Default Unauthorized / Anonymous Gating Card
+    var renderUnauthorizedCard = function () {
+      section.innerHTML =
+        '<div style="text-align: center; padding: 1rem 0;">' +
+          '<div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🔒</div>' +
+          '<h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--cosy-color-ink, #2a2a2a);">Facilitator Notes & Session Recording</h3>' +
+          '<p style="margin: 0 0 1.25rem 0; font-size: 0.9rem; color: var(--cosy-color-muted, #5c5957); max-width: 500px; margin-left: auto; margin-right: auto;">' +
+            'Detailed facilitator notes, live transcripts, and video recordings are restricted to enrolled students and assigned hosts.' +
+          '</p>' +
+          '<a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener" class="btn-primary" style="display: inline-block; padding: 0.65rem 1.5rem; font-size: 0.9rem; text-decoration: none; border-radius: 100px; background: var(--cosy-event-accent, #B84318); color: white; font-weight: 700;">' +
+            '💬 Register / Login via COSYlanguages' +
+          '</a>' +
+        '</div>';
+    };
+
+    renderUnauthorizedCard();
+
+    function loadSupabaseSDK(callback) {
+      if (window.supabase) {
+        callback();
+        return;
+      }
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
+      script.onload = callback;
+      script.onerror = function () {};
+      document.head.appendChild(script);
+    }
+
+    loadSupabaseSDK(function () {
+      if (!window.supabase || !window.supabase.createClient) return;
+
+      var url = window.COSY_SUPABASE_URL || 'https://xyzcompany.supabase.co';
+      var key = window.COSY_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummyKeyForRLS';
+
+      var supabaseClient = window.supabase.createClient(url, key);
+
+      var currentPath = window.location.pathname.replace(/\/$/, '');
+      var pathParts = currentPath.split('/');
+      var sessionId = pathParts.slice(-2).join('/');
+
+      supabaseClient.auth.getSession().then(function () {
+        supabaseClient
+          .from('session_content')
+          .select('full_notes, recording_url')
+          .or('session_id.eq.' + encodeURIComponent(sessionId) + ',session_id.eq.' + encodeURIComponent(pathParts[pathParts.length - 1]))
+          .maybeSingle()
+          .then(function (res) {
+            if (res.data && (res.data.full_notes || res.data.recording_url)) {
+              var data = res.data;
+              var html = '<div style="border-left: 4px solid var(--cosy-event-accent, #B84318); padding-left: 1rem;">' +
+                           '<h3 style="margin: 0 0 0.75rem 0; font-size: 1.15rem; color: var(--cosy-color-ink, #2a2a2a);">🎓 Facilitator Notes & Session Materials</h3>';
+              if (data.recording_url) {
+                html += '<div style="margin-bottom: 1rem;">' +
+                          '<strong>📹 Session Recording:</strong> <a href="' + data.recording_url + '" target="_blank" rel="noopener" style="color: var(--cosy-event-accent, #B84318); text-decoration: underline; font-weight: 700;">Watch Video Recording</a>' +
+                        '</div>';
+              }
+              if (data.full_notes) {
+                html += '<div style="font-size: 0.95rem; line-height: 1.6; color: var(--cosy-color-ink-soft, #4a4a4a); white-space: pre-wrap;">' +
+                          data.full_notes +
+                        '</div>';
+              }
+              html += '</div>';
+              section.innerHTML = html;
+            }
+          })
+          .catch(function () {});
+      }).catch(function () {});
+    });
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       checkEventConversion();
       initSlideDeck();
+      initSupabaseGating();
       renderGatedFooterNote();
     });
   } else {
     checkEventConversion();
     initSlideDeck();
+    initSupabaseGating();
     renderGatedFooterNote();
   }
 })();
