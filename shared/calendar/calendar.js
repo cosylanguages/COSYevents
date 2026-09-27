@@ -31,6 +31,7 @@
   function fetchEvents() {
     // Relative path for root and nested pages fallback
     const jsonPath = window.location.pathname.includes('/speaking-clubs/') ||
+                     window.location.pathname.includes('/cinema-club') ||
                      window.location.pathname.includes('/cinema-nights/') ||
                      window.location.pathname.includes('/teacher-led-sessions/') ||
                      window.location.pathname.includes('/special-events/') ||
