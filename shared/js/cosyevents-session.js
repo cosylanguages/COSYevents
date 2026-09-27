@@ -453,17 +453,176 @@
     }
   }
 
+  /* ──────────────────────────────────────────────────────────────
+     SUPABASE AUTH-BASED SESSION CONTENT GATING
+     Gates facilitator-notes and recording-url based on public.session_content & RLS
+     ────────────────────────────────────────────────────────────── */
+  var SUPABASE_URL = 'https://xyxyxyxyxyxyxy.supabase.co'; // Placeholder Supabase Project URL
+  var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsYWNlaG9sZGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2MDA0MDAwMDAsImV4cCI6MTkyMzc2MDAwMH0.placeholderKey'; // Placeholder Anon Key
+
+  function loadSupabaseSdk(callback) {
+    if (window.supabase) {
+      callback(window.supabase);
+      return;
+    }
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
+    script.onload = function () {
+      if (window.supabase) {
+        callback(window.supabase);
+      }
+    };
+    script.onerror = function () {
+      console.warn('COSYevents: Failed to load Supabase SDK');
+    };
+    document.head.appendChild(script);
+  }
+
+  function getSessionId(callback) {
+    var notesElem = document.getElementById('facilitator-notes');
+    var recElem = document.getElementById('recording-url');
+    var datasetId = (notesElem && notesElem.getAttribute('data-session-id')) ||
+                    (recElem && recElem.getAttribute('data-session-id'));
+    if (datasetId) {
+      callback(datasetId);
+      return;
+    }
+
+    var metaSession = document.querySelector('meta[name="session-id"]');
+    if (metaSession && metaSession.getAttribute('content')) {
+      callback(metaSession.getAttribute('content'));
+      return;
+    }
+
+    // Lookup in events.json matching pathname
+    var eventsPath = root + 'shared/calendar-data/events.json';
+    fetch(eventsPath)
+      .then(function (res) {
+        if (!res.ok) return null;
+        return res.json();
+      })
+      .then(function (events) {
+        if (!events || !Array.isArray(events)) {
+          callback(null);
+          return;
+        }
+        var currentPath = window.location.pathname;
+        var matched = events.find(function (evt) {
+          if (!evt.materials) return false;
+          try {
+            var urlObj = new URL(evt.materials);
+            return urlObj.pathname.endsWith(currentPath.split('/').slice(-2).join('/')) ||
+                   currentPath.endsWith(urlObj.pathname.split('/').slice(-2).join('/'));
+          } catch (e) {
+            return evt.materials.indexOf(currentPath) !== -1 || currentPath.indexOf(evt.materials) !== -1;
+          }
+        });
+        callback(matched ? matched.id : null);
+      })
+      .catch(function () {
+        callback(null);
+      });
+  }
+
+  function renderUnauthorizedPrompt(container, title) {
+    if (!container) return;
+    container.classList.add('ce-gated-visible');
+    container.innerHTML =
+      '<div class="ce-gated-prompt">' +
+        '<h4>🔒 ' + (title || 'Exclusive Session Content') + '</h4>' +
+        '<p>Access to facilitator notes and session recordings is reserved for enrolled students and hosts.</p>' +
+        '<a class="ce-gated-btn" href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">Register / Login via COSYlanguages 🔐</a>' +
+      '</div>';
+  }
+
+  function renderGatedContent(container, content, isVideo) {
+    if (!container || !content) return;
+    container.classList.add('ce-gated-visible');
+    var targetDiv = container.querySelector('.ce-gated-content') || container;
+    if (isVideo) {
+      targetDiv.innerHTML =
+        '<div class="cosy-video-wrapper">' +
+          '<div class="cosy-video-container">' +
+            '<iframe src="' + content + '" allowfullscreen title="Session Recording"></iframe>' +
+          '</div>' +
+        '</div>';
+    } else {
+      targetDiv.innerHTML = '<div class="ce-notes-body">' + content + '</div>';
+    }
+  }
+
+  function initGatedContent() {
+    var notesElem = document.getElementById('facilitator-notes');
+    var recElem = document.getElementById('recording-url');
+
+    // If neither gated section exists on the page, do nothing
+    if (!notesElem && !recElem) return;
+
+    // Hide gated sections by default
+    if (notesElem) notesElem.style.display = 'none';
+    if (recElem) recElem.style.display = 'none';
+
+    getSessionId(function (sessionId) {
+      if (!sessionId) {
+        if (notesElem) renderUnauthorizedPrompt(notesElem, "Facilitator's Notes");
+        if (recElem) renderUnauthorizedPrompt(recElem, "Session Recording");
+        return;
+      }
+
+      loadSupabaseSdk(function (supabaseLib) {
+        var supabaseClient = supabaseLib.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        supabaseClient.auth.getSession().then(function (sessionRes) {
+          var user = sessionRes && sessionRes.data && sessionRes.data.session ? sessionRes.data.session.user : null;
+
+          supabaseClient
+            .from('session_content')
+            .select('full_notes, recording_url')
+            .eq('session_id', sessionId)
+            .maybeSingle()
+            .then(function (res) {
+              var data = res.data;
+              var error = res.error;
+
+              if (error || !data) {
+                if (notesElem) renderUnauthorizedPrompt(notesElem, "Facilitator's Notes");
+                if (recElem) renderUnauthorizedPrompt(recElem, "Session Recording");
+                return;
+              }
+
+              if (notesElem) {
+                if (data.full_notes) {
+                  renderGatedContent(notesElem, data.full_notes, false);
+                } else {
+                  renderUnauthorizedPrompt(notesElem, "Facilitator's Notes");
+                }
+              }
+
+              if (recElem) {
+                if (data.recording_url) {
+                  renderGatedContent(recElem, data.recording_url, true);
+                } else {
+                  renderUnauthorizedPrompt(recElem, "Session Recording");
+                }
+              }
+            });
+        });
+      });
+    });
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       checkEventConversion();
       initSlideDeck();
       renderGatedFooterNote();
       checkWonderVoiceover();
+      initGatedContent();
     });
   } else {
     checkEventConversion();
     initSlideDeck();
     renderGatedFooterNote();
     checkWonderVoiceover();
+    initGatedContent();
   }
 })();
