@@ -530,7 +530,7 @@
     container.innerHTML =
       '<div class="ce-gated-prompt">' +
         '<h4>🔒 ' + (title || 'Exclusive Session Content') + '</h4>' +
-        '<p>Access to facilitator notes and session recordings is reserved for enrolled students and hosts.</p>' +
+        '<p>Access to facilitator notes and session recordings is reserved for enrolled students and teachers.</p>' +
         '<a class="ce-gated-btn" href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">Register / Login via COSYlanguages 🔐</a>' +
       '</div>';
   }
