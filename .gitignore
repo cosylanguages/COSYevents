@@ -4,3 +4,4 @@ private/
 .env
 .env.local
 *.log
+gated-content-export/

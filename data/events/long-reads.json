@@ -24,28 +24,6 @@
           "term": "User friction",
           "definition": "Any obstacle or step that slows down a user when completing an action in an app."
         }
-      ],
-      "prompts": [
-        {
-          "level": "B2",
-          "category": "Reading Analysis",
-          "text": "How does the corporate drive to monetize every single second of our day impact our psychological health?"
-        },
-        {
-          "level": "B2",
-          "category": "Psychological Drives",
-          "text": "Why are humans biologically driven to seek social validation, and how do social platforms exploit this vulnerability?"
-        },
-        {
-          "level": "B2",
-          "category": "Focus & Productivity",
-          "text": "How does trying to multitask degrade our ability to maintain deep, productive concentration?"
-        },
-        {
-          "level": "C1",
-          "category": "Ethical Reflections",
-          "text": "Is it possible to completely isolate ourselves from the attention economy while remaining professional members of modern society?"
-        }
       ]
     },
     {
@@ -64,23 +42,6 @@
         {
           "term": "Digital detox",
           "definition": "A period during which a person refrains from using electronic devices."
-        }
-      ],
-      "prompts": [
-        {
-          "level": "B2",
-          "category": "Behavioral Science",
-          "text": "What role does dopamine play in forming habitual smartphone checking routines?"
-        },
-        {
-          "level": "B2",
-          "category": "Product Design",
-          "text": "How do variable rewards in notification systems mirror slot machine mechanics?"
-        },
-        {
-          "level": "C1",
-          "category": "Personal Strategy",
-          "text": "What specific environmental rules or digital boundaries have you set to protect your focus?"
         }
       ]
     },
@@ -101,23 +62,6 @@
           "term": "Deep work",
           "definition": "Professional activities performed in a state of distraction-free concentration."
         }
-      ],
-      "prompts": [
-        {
-          "level": "B2",
-          "category": "Neuroscience",
-          "text": "How does persistent digital distraction alter our brain neural pathways over time?"
-        },
-        {
-          "level": "B2",
-          "category": "Solitude",
-          "text": "Why is solitude necessary for creative insight and self-reflection?"
-        },
-        {
-          "level": "C1",
-          "category": "Lifestyle Balance",
-          "text": "How can individuals cultivate deep work habits in an environment built for constant interruption?"
-        }
       ]
     },
     {
@@ -136,23 +80,6 @@
         {
           "term": "Analog alternatives",
           "definition": "Non-digital tools or activities used in place of smartphone apps."
-        }
-      ],
-      "prompts": [
-        {
-          "level": "B1",
-          "category": "Habit Formation",
-          "text": "What triggers lead you to reach for your phone automatically without thinking?"
-        },
-        {
-          "level": "B2",
-          "category": "Action Plan",
-          "text": "Which step of a 30-day digital boundary plan would be most challenging for you, and why?"
-        },
-        {
-          "level": "B2",
-          "category": "Analog Life",
-          "text": "What analog hobbies or activities would you substitute for evening screen time?"
         }
       ]
     }
