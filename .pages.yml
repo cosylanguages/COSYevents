@@ -69,59 +69,6 @@ content:
           - name: anchor
             label: Self-Reflection Anchor
             type: string
-      - name: film_metadata
-        label: Film Metadata (Cinema Club)
-        type: object
-        fields:
-          - name: movie_title
-            label: Movie Title
-            type: string
-          - name: director
-            label: Director
-            type: string
-          - name: release_year
-            label: Release Year
-            type: string
-          - name: suggested_genre
-            label: Suggested Genre
-            type: string
-          - name: age_rating
-            label: Age Rating
-            type: string
-      - name: song_metadata
-        label: Song Metadata (Karaoke Club)
-        type: object
-        fields:
-          - name: song_title
-            label: Song Title
-            type: string
-          - name: artist
-            label: Artist
-            type: string
-          - name: release_year
-            label: Release Year
-            type: string
-          - name: genre
-            label: Genre
-            type: string
-          - name: lyrics_gap_fill_lines
-            label: Lyrics Gap-Fill Lines (Max 8 lines allowed)
-            type: list
-            field:
-              type: string
-      - name: science_takeaway
-        label: Science Takeaway (Keeping Up with Science)
-        type: object
-        fields:
-          - name: core_finding
-            label: Core Finding
-            type: string
-          - name: scientific_field
-            label: Field of Study
-            type: string
-          - name: real_world_application
-            label: Real World Application
-            type: string
       - name: sensitive_topic_warning
         label: Sensitive Topic Warning
         type: string
@@ -232,6 +179,820 @@ content:
             type: string
           - name: right_part
             label: Corrected Part (Structured)
+            type: string
+          - name: note
+            label: Explanation Note
+            type: string
+
+  - name: the_greatest_quotes_sessions
+    label: The Greatest Quotes Sessions (.md)
+    type: folder
+    path: sessions/the-greatest-quotes
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: page_title
+        label: Page Title
+        type: string
+      - name: breadcrumbs_current
+        label: Breadcrumbs Current Page
+        type: string
+      - name: club_tag
+        label: Club Tag
+        type: string
+      - name: date
+        label: Date
+        type: string
+      - name: theme_class
+        label: Theme Class
+        type: string
+      - name: decorator_icon
+        label: Decorator Icon
+        type: string
+      - name: duration
+        label: Duration
+        type: string
+      - name: languages
+        label: Languages
+        type: string
+      - name: level
+        label: Level
+        type: string
+      - name: theme
+        label: Theme
+        type: string
+      - name: target_grammar
+        label: Target Grammar Focus
+        type: string
+      - name: hero_background
+        label: Hero Background
+        type: string
+      - name: description
+        label: Description
+        type: rich-text
+      - name: philosophers_ledger
+        label: Philosophers Ledger Card
+        type: object
+        fields:
+          - name: stamp
+            label: Stamp Emoji
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: quote
+            label: Quote Text
+            type: string
+          - name: button_text
+            label: Button Text
+            type: string
+      - name: vocabulary
+        label: Session Vocabulary
+        type: list
+        fields:
+          - name: word
+            label: Word
+            type: string
+          - name: definition
+            label: Definition
+            type: string
+          - name: example
+            label: Example
+            type: string
+      - name: warm_up
+        label: Warm-up Section
+        type: object
+        fields:
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: questions
+            label: Questions
+            type: list
+            field:
+              type: string
+      - name: round_1
+        label: Round 1
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Questions
+            type: list
+            fields:
+              - name: main
+                label: Main Question
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: lets_speak_together
+        label: Let's Speak Together
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: string
+          - name: note
+            label: Custom Note / Rich-Text Fallback
+            type: rich-text
+      - name: round_2
+        label: Round 2
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Scenarios / Dilemmas
+            type: list
+            fields:
+              - name: main
+                label: Main Question / Statement
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: mistakes
+        label: Teacher Notes / Linguistic Corrections
+        type: list
+        fields:
+          - name: wrong
+            label: Incorrect (HTML / String)
+            type: string
+          - name: right
+            label: Correct (HTML / String)
+            type: string
+          - name: note
+            label: Explanation Note
+            type: string
+
+  - name: debatable_relatable_sessions
+    label: Debatable & Relatable Sessions (.md)
+    type: folder
+    path: sessions/debatable-relatable
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: page_title
+        label: Page Title
+        type: string
+      - name: breadcrumbs_current
+        label: Breadcrumbs Current Page
+        type: string
+      - name: club_tag
+        label: Club Tag
+        type: string
+      - name: date
+        label: Date
+        type: string
+      - name: theme_class
+        label: Theme Class
+        type: string
+      - name: decorator_icon
+        label: Decorator Icon
+        type: string
+      - name: duration
+        label: Duration
+        type: string
+      - name: languages
+        label: Languages
+        type: string
+      - name: level
+        label: Level
+        type: string
+      - name: topic
+        label: Topic
+        type: string
+      - name: target_grammar
+        label: Target Grammar Focus
+        type: string
+      - name: hero_background
+        label: Hero Background
+        type: string
+      - name: description
+        label: Description
+        type: rich-text
+      - name: debate_duel
+        label: Debate Duel Box
+        type: object
+        fields:
+          - name: core_dilemma
+            label: Core Dilemma
+            type: string
+          - name: side_a
+            label: Side A (Hot Take)
+            type: string
+          - name: side_b
+            label: Side B (Hot Take)
+            type: string
+          - name: thematic_symbol
+            label: Thematic Symbol
+            type: string
+      - name: vocabulary
+        label: Session Vocabulary
+        type: list
+        fields:
+          - name: word
+            label: Word
+            type: string
+          - name: definition
+            label: Definition
+            type: string
+          - name: example
+            label: Example
+            type: string
+      - name: warm_up
+        label: Warm-up Section
+        type: object
+        fields:
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: questions
+            label: Questions
+            type: list
+            field:
+              type: string
+      - name: round_1
+        label: Round 1
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Questions
+            type: list
+            fields:
+              - name: main
+                label: Main Question
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: lets_speak_together
+        label: Let's Speak Together
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: string
+          - name: note
+            label: Custom Note / Rich-Text Fallback
+            type: rich-text
+      - name: round_2
+        label: Round 2
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Scenarios / Dilemmas
+            type: list
+            fields:
+              - name: main
+                label: Main Question / Statement
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: mistakes
+        label: Teacher Notes / Linguistic Corrections
+        type: list
+        fields:
+          - name: wrong
+            label: Incorrect (HTML / String)
+            type: string
+          - name: right
+            label: Correct (HTML / String)
+            type: string
+          - name: note
+            label: Explanation Note
+            type: string
+
+  - name: lets_celebrate_sessions
+    label: Let's Celebrate Sessions (.md)
+    type: folder
+    path: sessions/lets-celebrate
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: page_title
+        label: Page Title
+        type: string
+      - name: breadcrumbs_current
+        label: Breadcrumbs Current Page
+        type: string
+      - name: club_tag
+        label: Club Tag
+        type: string
+      - name: date
+        label: Date
+        type: string
+      - name: theme_class
+        label: Theme Class
+        type: string
+      - name: decorator_icon
+        label: Decorator Icon
+        type: string
+      - name: duration
+        label: Duration
+        type: string
+      - name: languages
+        label: Languages
+        type: string
+      - name: level
+        label: Level
+        type: string
+      - name: theme
+        label: Theme
+        type: string
+      - name: target_grammar
+        label: Target Grammar Focus
+        type: string
+      - name: hero_background
+        label: Hero Background
+        type: string
+      - name: description
+        label: Description
+        type: rich-text
+      - name: celebrate_theme
+        label: Celebration Snapshot Box
+        type: object
+        fields:
+          - name: thematic_symbol
+            label: Thematic Symbol
+            type: string
+          - name: traditional_rituals
+            label: Traditional Rituals
+            type: string
+          - name: signature_treat
+            label: Signature Treat
+            type: string
+          - name: linguistic_focus
+            label: Linguistic Focus
+            type: string
+      - name: vocabulary
+        label: Session Vocabulary
+        type: list
+        fields:
+          - name: word
+            label: Word
+            type: string
+          - name: definition
+            label: Definition
+            type: string
+          - name: example
+            label: Example
+            type: string
+      - name: warm_up
+        label: Warm-up Section
+        type: object
+        fields:
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: questions
+            label: Questions
+            type: list
+            field:
+              type: string
+      - name: round_1
+        label: Round 1
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Questions
+            type: list
+            fields:
+              - name: main
+                label: Main Question
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: lets_speak_together
+        label: Let's Speak Together
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: string
+          - name: note
+            label: Custom Note / Rich-Text Fallback
+            type: rich-text
+      - name: round_2
+        label: Round 2
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Scenarios / Dilemmas
+            type: list
+            fields:
+              - name: main
+                label: Main Question / Statement
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: mistakes
+        label: Teacher Notes / Linguistic Corrections
+        type: list
+        fields:
+          - name: wrong
+            label: Incorrect (HTML / String)
+            type: string
+          - name: right
+            label: Correct (HTML / String)
+            type: string
+          - name: note
+            label: Explanation Note
+            type: string
+
+  - name: my_life_with_without_sessions
+    label: My Life With/Without Sessions (.md)
+    type: folder
+    path: sessions/my-life-with-without
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: page_title
+        label: Page Title
+        type: string
+      - name: breadcrumbs_current
+        label: Breadcrumbs Current Page
+        type: string
+      - name: club_tag
+        label: Club Tag
+        type: string
+      - name: date
+        label: Date
+        type: string
+      - name: theme_class
+        label: Theme Class
+        type: string
+      - name: decorator_icon
+        label: Decorator Icon
+        type: string
+      - name: duration
+        label: Duration
+        type: string
+      - name: languages
+        label: Languages
+        type: string
+      - name: level
+        label: Level
+        type: string
+      - name: topic
+        label: Topic
+        type: string
+      - name: target_grammar
+        label: Target Grammar Focus
+        type: string
+      - name: hero_background
+        label: Hero Background
+        type: string
+      - name: description
+        label: Description
+        type: rich-text
+      - name: life_ledger
+        label: Dual-Perspective Balance Sheet
+        type: object
+        fields:
+          - name: title
+            label: Ledger Title
+            type: string
+          - name: with_title
+            label: Presence (With) Title
+            type: string
+          - name: with_content
+            label: Presence (With) Content
+            type: string
+          - name: without_title
+            label: Absence (Without) Title
+            type: string
+          - name: without_content
+            label: Absence (Without) Content
+            type: string
+      - name: vocabulary
+        label: Session Vocabulary
+        type: list
+        fields:
+          - name: word
+            label: Word
+            type: string
+          - name: definition
+            label: Definition
+            type: string
+          - name: example
+            label: Example
+            type: string
+      - name: warm_up
+        label: Warm-up Section
+        type: object
+        fields:
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: questions
+            label: Questions
+            type: list
+            field:
+              type: string
+      - name: round_1
+        label: Round 1
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Questions
+            type: list
+            fields:
+              - name: main
+                label: Main Question
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: lets_speak_together
+        label: Let's Speak Together
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: string
+          - name: note
+            label: Custom Note / Rich-Text Fallback
+            type: rich-text
+      - name: round_2
+        label: Round 2
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Scenarios / Dilemmas
+            type: list
+            fields:
+              - name: main
+                label: Main Question / Statement
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: mistakes
+        label: Teacher Notes / Linguistic Corrections
+        type: list
+        fields:
+          - name: wrong
+            label: Incorrect (HTML / String)
+            type: string
+          - name: right
+            label: Correct (HTML / String)
+            type: string
+          - name: note
+            label: Explanation Note
+            type: string
+
+  - name: if_you_were_sessions
+    label: If You Were Sessions (.md)
+    type: folder
+    path: sessions/if-you-were
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: page_title
+        label: Page Title
+        type: string
+      - name: breadcrumbs_current
+        label: Breadcrumbs Current Page
+        type: string
+      - name: club_tag
+        label: Club Tag
+        type: string
+      - name: date
+        label: Date
+        type: string
+      - name: theme_class
+        label: Theme Class
+        type: string
+      - name: decorator_icon
+        label: Decorator Icon
+        type: string
+      - name: duration
+        label: Duration
+        type: string
+      - name: languages
+        label: Languages
+        type: string
+      - name: level
+        label: Level
+        type: string
+      - name: resources
+        label: Resources
+        type: string
+      - name: target_grammar
+        label: Target Grammar Focus
+        type: string
+      - name: hero_background
+        label: Hero Background
+        type: string
+      - name: description
+        label: Description
+        type: rich-text
+      - name: perspective_mirror
+        label: Perspective Mirror Box
+        type: object
+        fields:
+          - name: title
+            label: Box Title
+            type: string
+          - name: col1_title
+            label: Column 1 Title
+            type: string
+          - name: col1_content
+            label: Column 1 Content
+            type: string
+          - name: col2_title
+            label: Column 2 Title
+            type: string
+          - name: col2_content
+            label: Column 2 Content
+            type: string
+          - name: anchor
+            label: Speculative Syntactic Anchor
+            type: string
+      - name: vocabulary
+        label: Session Vocabulary
+        type: list
+        fields:
+          - name: word
+            label: Word
+            type: string
+          - name: definition
+            label: Definition
+            type: string
+          - name: example
+            label: Example
+            type: string
+      - name: warm_up
+        label: Warm-up Section
+        type: object
+        fields:
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: questions
+            label: Questions
+            type: list
+            field:
+              type: string
+      - name: round_1
+        label: Round 1
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Questions
+            type: list
+            fields:
+              - name: main
+                label: Main Question
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: lets_speak_together
+        label: Let's Speak Together
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: string
+          - name: note
+            label: Custom Note / Rich-Text Fallback
+            type: rich-text
+      - name: round_2
+        label: Round 2
+        type: object
+        fields:
+          - name: title
+            label: Round Title
+            type: string
+          - name: badge
+            label: Badge
+            type: string
+          - name: instruction
+            label: Instruction
+            type: string
+          - name: items
+            label: Scenarios / Dilemmas
+            type: list
+            fields:
+              - name: main
+                label: Main Question / Statement
+                type: string
+              - name: personal
+                label: Personal Application Question (Optional)
+                type: string
+      - name: mistakes
+        label: Teacher Notes / Linguistic Corrections
+        type: list
+        fields:
+          - name: wrong
+            label: Incorrect (HTML / String)
+            type: string
+          - name: right
+            label: Correct (HTML / String)
             type: string
           - name: note
             label: Explanation Note
