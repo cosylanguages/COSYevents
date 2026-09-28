@@ -2,14 +2,13 @@
 -- Reuses COSYplatform's Supabase project and profiles table.
 --
 -- ARCHITECTURE & ASSUMPTIONS NOTE ON ROLES & PERMISSIONS:
--- 1. Supported Profile Roles: 'founder', 'host', 'teacher', 'student'.
--- 2. Teacher Access Assumption: 'teacher' profiles do NOT get automatic access to session_content.
---    If a teacher is facilitating/hosting a session, their profile role must be set to 'host' for that purpose,
---    or they must be assigned to that session's `hosted_sessions` array if dual-role access is needed.
+-- 1. Supported Profile Roles: 'founder', 'teacher', 'student'.
+-- 2. Teacher Access Assumption: Event hosting is an activity performed by teachers, tracked via `hosted_sessions`.
+--    'teacher' profiles can view and update `session_content` where `session_id` is assigned to their `hosted_sessions` array.
 -- 3. Separation of Session Arrays:
---    - `hosted_sessions` (text[]) tracks session IDs assigned to hosts for facilitation & recording updates.
+--    - `hosted_sessions` (text[]) tracks session IDs assigned to teachers for facilitation & recording updates.
 --    - `enrolled_sessions` (text[]) tracks session IDs purchased or enrolled in by students for viewing notes.
---    These columns are deliberately separate because host-access (facilitation) and student-access (paid-viewer)
+--    These columns are deliberately separate because teacher-access (facilitation) and student-access (paid-viewer)
 --    represent distinct domain reasons for access.
 --
 -- ANALYSIS OF PREVIOUS FAILURE MODE:
@@ -63,11 +62,13 @@ DROP POLICY IF EXISTS "Founder and hosts can view all session content" ON public
 DROP POLICY IF EXISTS "Founder and teachers can view all session content" ON public.session_content;
 DROP POLICY IF EXISTS "Founders can view all session content" ON public.session_content;
 DROP POLICY IF EXISTS "Hosts can view their own hosted sessions" ON public.session_content;
+DROP POLICY IF EXISTS "Teachers can view their own hosted sessions" ON public.session_content;
 DROP POLICY IF EXISTS "Students view paid or enrolled sessions" ON public.session_content;
 DROP POLICY IF EXISTS "Students can view their enrolled sessions" ON public.session_content;
 DROP POLICY IF EXISTS "Founder and hosts can insert and update session content" ON public.session_content;
 DROP POLICY IF EXISTS "Founder and teachers can insert and update session content" ON public.session_content;
 DROP POLICY IF EXISTS "Founders and hosts can insert and update their own session content" ON public.session_content;
+DROP POLICY IF EXISTS "Founders and teachers can insert and update their own session content" ON public.session_content;
 
 -- Policy 1: Founders can view all session content
 CREATE POLICY "Founders can view all session content"
@@ -81,15 +82,15 @@ CREATE POLICY "Founders can view all session content"
     )
   );
 
--- Policy 2: Hosts can view their own hosted sessions
-CREATE POLICY "Hosts can view their own hosted sessions"
+-- Policy 2: Teachers can view their own hosted sessions
+CREATE POLICY "Teachers can view their own hosted sessions"
   ON public.session_content
   FOR SELECT
   USING (
     EXISTS (
       SELECT 1 FROM public.profiles
       WHERE profiles.id = auth.uid()
-        AND profiles.role = 'host'
+        AND profiles.role = 'teacher'
         AND session_content.session_id = ANY(hosted_sessions)
     )
   );
@@ -107,8 +108,8 @@ CREATE POLICY "Students can view their enrolled sessions"
     )
   );
 
--- Policy 4: Founders and hosts can insert and update their own session content
-CREATE POLICY "Founders and hosts can insert and update their own session content"
+-- Policy 4: Founders and teachers can insert and update their own session content
+CREATE POLICY "Founders and teachers can insert and update their own session content"
   ON public.session_content
   FOR ALL
   USING (
@@ -120,7 +121,7 @@ CREATE POLICY "Founders and hosts can insert and update their own session conten
     OR EXISTS (
       SELECT 1 FROM public.profiles
       WHERE profiles.id = auth.uid()
-        AND profiles.role = 'host'
+        AND profiles.role = 'teacher'
         AND session_content.session_id = ANY(hosted_sessions)
     )
   );
