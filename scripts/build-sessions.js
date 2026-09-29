@@ -378,6 +378,16 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
 
   const customScriptHtml = data.script_html ? `\n${data.script_html}` : '';
 
+  const warmUpContent = warmUpQuestionsHtml ? `${warmUpInstruction}<ul class="round-questions">\n${warmUpQuestionsHtml}\n</ul>` : `<div class="ce-gated-prompt"><h4>🔒 Warm-up Discussion Prompts</h4><p>Discussion prompts and facilitator notes for this round are reserved for enrolled students and hosts.</p></div>`;
+
+  const round1Content = round1ItemsHtml ? `${round1Badge}\n${round1Instruction}${round1ItemsHtml}` : `<div class="ce-gated-prompt"><h4>🔒 Round 1 Discussion Prompts</h4><p>Discussion prompts and facilitator notes for this round are reserved for enrolled students and hosts.</p></div>`;
+
+  const lstContent = lstContentHtml ? lstContentHtml : `<div class="ce-gated-prompt"><h4>🔒 Let's Speak Together</h4><p>Discussion prompts and facilitator notes for this round are reserved for enrolled students and hosts.</p></div>`;
+
+  const round2Content = round2ItemsHtml ? `${round2Badge}\n${round2Instruction}${round2ItemsHtml}` : `<div class="ce-gated-prompt"><h4>🔒 Round 2 Discussion Prompts</h4><p>Discussion prompts and facilitator notes for this round are reserved for enrolled students and hosts.</p></div>`;
+
+  const mistakesContent = mistakesHtml ? mistakesHtml : `<div class="ce-gated-prompt"><h4>🔒 Teacher's Note (Linguistic Corrections)</h4><p>Linguistic corrections and facilitator notes are reserved for enrolled students and hosts.</p></div>`;
+
   return `<!DOCTYPE html>
 
 <html lang="en">
@@ -430,9 +440,7 @@ ${descriptionHtml}
 <span>🟠 Warm-up</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
-${warmUpInstruction}<ul class="round-questions">
-${warmUpQuestionsHtml}
-</ul>
+${warmUpContent}
 </div>
 </div>${grammarHtml}
 <div class="round-block round-1 open" id="s-r1">
@@ -440,8 +448,7 @@ ${warmUpQuestionsHtml}
 <span>🔵 ${round1Title}</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
-${round1Badge}
-${round1Instruction}${round1ItemsHtml}
+${round1Content}
 </div>
 </div>
 <div class="round-block lst open" id="s-lst">
@@ -449,7 +456,7 @@ ${round1Instruction}${round1ItemsHtml}
 <span>🟣 ${lstTitle}</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block; padding: 1.5rem 1.25rem;">
-${lstContentHtml}
+${lstContent}
 </div>
 </div>
 <div class="round-block round-2 open" id="s-r2">
@@ -457,15 +464,14 @@ ${lstContentHtml}
 <span>🟢 ${round2Title}</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
-${round2Badge}
-${round2Instruction}${round2ItemsHtml}
+${round2Content}
 </div>
 </div>${closingHtml}
 <div class="mistake-block open" id="s-mistakes">
 <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
 <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>
 </div>
-<div class="mistake-body" style="display:block;">${mistakesHtml}
+<div class="mistake-body" style="display:block;">${mistakesContent}
 </div>
 </div>
 </div>
