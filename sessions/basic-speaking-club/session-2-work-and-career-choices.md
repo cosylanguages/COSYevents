@@ -3,7 +3,7 @@ title: 'Session 2: Work & Career Choices'
 page_title: 'Session 2: Work & Career Choices — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 22 January 2027
+date: 22 January 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

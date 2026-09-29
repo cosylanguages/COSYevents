@@ -3,7 +3,7 @@ title: 'Session 7: Evening Wind-Down & Work-Life Balance'
 page_title: 'Session 7: Evening Wind-Down & Work-Life Balance — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 26 February 2027
+date: 26 February 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

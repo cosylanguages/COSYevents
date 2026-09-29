@@ -3,7 +3,7 @@ title: 'Session 19: Job Satisfaction & Motivation'
 page_title: 'Session 19: Job Satisfaction & Motivation — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 21 May 2027
+date: 21 May 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

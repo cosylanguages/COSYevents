@@ -3,7 +3,7 @@ title: 'Session 13: Fashion & Identity'
 page_title: 'Session 13: Fashion & Identity — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 9 April 2027
+date: 9 April 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

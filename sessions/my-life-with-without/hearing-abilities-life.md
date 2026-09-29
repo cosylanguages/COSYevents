@@ -3,7 +3,7 @@ title: My Life With & My Life Without Hearing Abilities
 page_title: 'My Life With & My Life Without Hearing Abilities : COSYlanguages'
 breadcrumbs_current: My Life With & My Life Without Hearing Abilities
 club_tag: My Life With & My Life Without
-date: Cosy Speaking Club
+date:  15 June 2026
 theme_class: theme-life-light
 decorator_icon: ⚖️
 duration: 60 minutes

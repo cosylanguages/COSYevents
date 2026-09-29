@@ -3,7 +3,7 @@ title: 'Session 6: Morning Routines & Productivity'
 page_title: 'Session 6: Morning Routines & Productivity — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 19 February 2027
+date: 19 February 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

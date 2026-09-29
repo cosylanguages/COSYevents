@@ -3,7 +3,7 @@ title: 'Session 12: Money Habits & Spending Priorities'
 page_title: 'Session 12: Money Habits & Spending Priorities — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 2 April 2027
+date: 2 April 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

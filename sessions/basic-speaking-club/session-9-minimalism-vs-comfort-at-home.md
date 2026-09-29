@@ -3,7 +3,7 @@ title: 'Session 9: Minimalism vs. Comfort at Home'
 page_title: 'Session 9: Minimalism vs. Comfort at Home — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 12 March 2027
+date: 12 March 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

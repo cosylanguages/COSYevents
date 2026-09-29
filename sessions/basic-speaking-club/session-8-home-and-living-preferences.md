@@ -3,7 +3,7 @@ title: 'Session 8: Home & Living Preferences'
 page_title: 'Session 8: Home & Living Preferences — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 5 March 2027
+date: 5 March 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

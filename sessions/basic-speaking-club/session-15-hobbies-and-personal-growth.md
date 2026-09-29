@@ -3,7 +3,7 @@ title: 'Session 15: Hobbies & Personal Growth'
 page_title: 'Session 15: Hobbies & Personal Growth — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 23 April 2027
+date: 23 April 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

@@ -3,7 +3,7 @@ title: 'Session 1: Introductions & First Impressions'
 page_title: 'Session 1: Introductions & First Impressions — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 15 January 2027
+date: 15 January 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

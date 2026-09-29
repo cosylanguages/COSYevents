@@ -3,7 +3,7 @@ title: Kiss and Make Up Day
 page_title: 'Kiss and Make Up Day : COSYlanguages'
 breadcrumbs_current: Kiss and Make Up Day
 club_tag: Let's Celebrate
-date: Cosy Speaking Club
+date:  15 June 2026
 theme_class: theme-celebrate-light
 decorator_icon: 🕊️
 duration: 60 minutes

@@ -3,7 +3,7 @@ title: 'Session 3: Time Management & Daily Priorities'
 page_title: 'Session 3: Time Management & Daily Priorities — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 29 January 2027
+date: 29 January 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

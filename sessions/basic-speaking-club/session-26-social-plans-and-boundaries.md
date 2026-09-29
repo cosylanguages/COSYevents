@@ -3,7 +3,7 @@ title: 'Session 26: Social Plans & Boundaries'
 page_title: 'Session 26: Social Plans & Boundaries — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 9 July 2027
+date: 9 July 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes
