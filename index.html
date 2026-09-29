@@ -114,6 +114,64 @@
       </div>
     </section>
 
+    <!-- Tariff & Price Calculator Section -->
+    <section id="tariff-calculator" class="calc-section" style="max-width: 1040px; margin: 3rem auto; padding: 0 1rem;">
+      <div class="calc-card" style="background: #ffffff; border: 1.5px solid rgba(74, 107, 80, 0.18); border-radius: 28px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #233827; display: block; margin-bottom: 0.4rem;">💳 Flexible Access Tariffs</span>
+          <h2 style="font-family: 'Playfair Display', 'Fraunces', serif; font-size: 2rem; margin-bottom: 0.5rem; color: #2a2a2a;">Event Passes &amp; Price Calculator</h2>
+          <p style="color: #5c5957; max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.5;">
+            Select your level and desired plan to calculate your weekly/monthly live session access rights, cost per session, and savings. Max 10 participants per session.
+          </p>
+        </div>
+
+        <!-- Configurator controls bar -->
+        <div class="calc-chips-bar" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 2rem; background: #FAF7F2; padding: 1rem 1.5rem; border-radius: 20px; border: 1px solid rgba(74, 107, 80, 0.15);">
+          <div class="calc-chip-item" style="display: flex; align-items: center; gap: 0.5rem; background: #fff; padding: 0.5rem 1rem; border-radius: 12px; border: 1px solid rgba(74, 107, 80, 0.15);">
+            <span class="chip-lbl" style="font-size: 0.75rem; font-weight: 800; color: #5c5957;">1. LEVEL:</span>
+            <select id="calc-level-select" class="calc-chip-select" style="border: none; background: transparent; font-weight: 700; color: #2a2a2a; font-size: 0.9rem; cursor: pointer;">
+              <option value="beginner">🌱 Beginner (A0–A1)</option>
+              <option value="intermediate" selected>🚀 Intermediate (B1–B2)</option>
+              <option value="advanced">🧠 Advanced (C1–C2)</option>
+            </select>
+          </div>
+
+          <div class="calc-chip-item" style="display: flex; align-items: center; gap: 0.5rem; background: #fff; padding: 0.5rem 1rem; border-radius: 12px; border: 1px solid rgba(74, 107, 80, 0.15);">
+            <span class="chip-lbl" style="font-size: 0.75rem; font-weight: 800; color: #5c5957;">2. TARIFF PLAN:</span>
+            <select id="calc-plan-select" class="calc-chip-select" style="border: none; background: transparent; font-weight: 700; color: #2a2a2a; font-size: 0.9rem; cursor: pointer;">
+              <option value="single">🎁 Single Session Pass (1st Session FREE!)</option>
+              <option value="week">⚡ 1-Week Pass (€15 / week)</option>
+              <option value="month" selected>⭐ 1-Month Pass (€45 / month - Best Value)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Output Result Display Box -->
+        <div id="calc-result-display" class="calc-result-box" style="background: linear-gradient(135deg, #375742, #233827); color: white; border-radius: 24px; padding: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">
+          <div style="flex: 1; min-width: 260px;">
+            <div style="display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <span id="calc-price-display" style="font-size: 2.8rem; font-weight: 800; font-family: 'Fraunces', serif; line-height: 1;">€45</span>
+              <span id="calc-billing-period" style="font-size: 0.9rem; opacity: 0.85; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em;">/ month</span>
+            </div>
+            <h4 id="calc-plan-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff;">1-Month Pass • Intermediate (B1–B2)</h4>
+            <p id="calc-plan-desc" style="font-size: 0.9rem; opacity: 0.9; line-height: 1.5; margin-bottom: 0.75rem;">
+              Unlimited access to <strong>up to 14 live events/month</strong> (8 Intermediate Clubs 2x/wk, 4 Karaoke Nights 1x/wk, 1 Film Night, 1 Game Evening).
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.8rem; font-weight: 700;">
+              <span style="background: rgba(255,255,255,0.18); padding: 4px 10px; border-radius: 12px;" id="calc-unit-price">~€3.21 per session</span>
+              <span style="background: rgba(255,255,255,0.18); padding: 4px 10px; border-radius: 12px;">Max 10 people/session</span>
+              <span style="background: rgba(255,255,255,0.18); padding: 4px 10px; border-radius: 12px;">handcrafted Decks + Teacher Notes</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; min-width: 220px;">
+            <a id="calc-wa-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20reserve%20a%201-Month%20Pass%20(Intermediate%20B1-B2)." target="_blank" rel="noopener" style="background: #25D366; color: white; width: 100%; text-align: center; justify-content: center; font-weight: 800; border: none; padding: 0.8rem 1.2rem; border-radius: 100px; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box;">💬 Claim Pass via WhatsApp</a>
+            <a id="calc-tg-btn" href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; width: 100%; text-align: center; justify-content: center; font-weight: 700; padding: 0.7rem 1.2rem; border-radius: 100px; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box;">✈️ Ask on Telegram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Live Events Section -->
     <section class="live-events-section" style="margin-top: 3rem;">
       <div class="live-events-container">
@@ -228,5 +286,72 @@
   </footer>
 
   <script src="shared/calendar/calendar.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const levelSelect = document.getElementById('calc-level-select');
+      const planSelect = document.getElementById('calc-plan-select');
+
+      if (levelSelect && planSelect) {
+        function updateCalculator() {
+          const level = levelSelect.value;
+          const plan = planSelect.value;
+
+          const priceElem = document.getElementById('calc-price-display');
+          const periodElem = document.getElementById('calc-billing-period');
+          const titleElem = document.getElementById('calc-plan-title');
+          const descElem = document.getElementById('calc-plan-desc');
+          const unitElem = document.getElementById('calc-unit-price');
+          const waBtn = document.getElementById('calc-wa-btn');
+
+          let levelLabel = 'Intermediate (B1–B2)';
+          if (level === 'beginner') levelLabel = 'Beginner (A0–A1)';
+          if (level === 'advanced') levelLabel = 'Advanced (C1–C2)';
+
+          let priceStr = '€45';
+          let periodStr = '/ month';
+          let planTitle = `1-Month Pass • ${levelLabel}`;
+          let planDesc = '';
+          let unitPrice = '';
+          let waMessage = `Hi! I'd like to reserve a 1-Month Pass (${levelLabel}).`;
+
+          if (plan === 'single') {
+            priceStr = '€0';
+            periodStr = '1st session free';
+            planTitle = `Free Trial Session Pass • ${levelLabel}`;
+            planDesc = `Join 1 live session of your choice for free (€0). If you love it, single sessions thereafter are only €8/session.`;
+            unitPrice = 'First Session FREE (€0)';
+            waMessage = `Hi! I'd like to claim my Free Trial Session (${levelLabel}).`;
+          } else if (plan === 'week') {
+            priceStr = '€15';
+            periodStr = '/ week';
+            planTitle = `1-Week Unlimited Pass • ${levelLabel}`;
+            planDesc = `Unlimited access to all live sessions of your level for 7 days (e.g., 2 Speaking Clubs + 1 Karaoke Night).`;
+            unitPrice = '~€5.00 per session';
+            waMessage = `Hi! I'd like to reserve a 1-Week Pass (${levelLabel}).`;
+          } else if (plan === 'month') {
+            priceStr = '€45';
+            periodStr = '/ month';
+            planTitle = `1-Month Pass • ${levelLabel}`;
+            let sessionCount = 'up to 14 live sessions/month (8 Speaking Clubs 2x/wk, 4 Karaoke Nights 1x/wk, 1 Film Night, 1 Game Evening)';
+            if (level === 'beginner') sessionCount = 'up to 14 live sessions/month (8 Basic Clubs 2x/wk, 4 Karaoke Nights, 1 Film Night, 1 Game Evening)';
+            planDesc = `Unlimited monthly access to ${sessionCount}. Includes session decks, teacher correction notes, and COSY Passport progress backup.`;
+            unitPrice = '~€3.21 per session (Save 60%)';
+            waMessage = `Hi! I'd like to reserve a 1-Month Pass (${levelLabel}).`;
+          }
+
+          if (priceElem) priceElem.textContent = priceStr;
+          if (periodElem) periodElem.textContent = periodStr;
+          if (titleElem) titleElem.textContent = planTitle;
+          if (descElem) descElem.innerHTML = planDesc;
+          if (unitElem) unitElem.textContent = unitPrice;
+          if (waBtn) waBtn.href = `https://wa.me/330766784195?text=${encodeURIComponent(waMessage)}`;
+        }
+
+        levelSelect.addEventListener('change', updateCalculator);
+        planSelect.addEventListener('change', updateCalculator);
+        updateCalculator();
+      }
+    });
+  </script>
 </body>
 </html>

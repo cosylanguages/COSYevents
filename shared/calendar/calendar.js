@@ -239,12 +239,26 @@
         conversionBannerHtml = `<div class="conversion-banner planned" style="background:#fff8e7; border:1px solid #945e05; border-radius:8px; padding:0.5rem 0.75rem; margin:0.5rem 0; font-size:0.85rem; color:#7d4d03; font-weight:600;">This topic is scheduled to become a lesson soon.</div>`;
       }
 
+      const capacity = evt.max_capacity || 10;
+      const seats = evt.available_seats !== undefined ? evt.available_seats : 6;
+      let capacityDot = '🟢';
+      let capacityColor = '#1A7A4A';
+      if (seats <= 2) {
+        capacityDot = '🔥';
+        capacityColor = '#B91C1C';
+      } else if (seats <= 4) {
+        capacityDot = '🟡';
+        capacityColor = '#8A5200';
+      }
+      const capacityPill = `<span class="pill-sm" style="font-weight:700; color:${capacityColor}; background:#fff; border:1px solid ${capacityColor}; padding:2px 8px; border-radius:10px;">${capacityDot} ${seats}/${capacity} seats left</span>`;
+
       card.innerHTML = `
         <div class="event-meta-header">
           <span class="type-pill badge-${evt.type}">${typeLabel}</span>
-          <div class="lang-level-pills">
+          <div class="lang-level-pills" style="display:flex; gap:0.4rem; align-items:center;">
             <span class="pill-sm">${evt.language}</span>
             ${evt.level ? `<span class="pill-sm">${evt.level}</span>` : ''}
+            ${capacityPill}
           </div>
         </div>
         <h3 class="event-card-title">${evt.title}</h3>
