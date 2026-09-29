@@ -3,7 +3,7 @@ title: Chatting with an AI vs Chatting with a Human (B1-B2)
 page_title: 'Chatting with an AI vs Chatting with a Human (B1-B2) : COSYlanguages'
 breadcrumbs_current: Chatting with an AI vs Chatting with a Human (B1-B2)
 club_tag: Debatable & Relatable
-date: Cosy Speaking Club
+date:  15 June 2026
 theme_class: theme-debate-light
 decorator_icon: 🔥
 duration: 60 minutes

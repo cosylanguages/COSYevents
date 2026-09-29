@@ -3,7 +3,7 @@ title: 'Session 18: Transport Choices & Sustainability'
 page_title: 'Session 18: Transport Choices & Sustainability — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 14 May 2027
+date: 14 May 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

@@ -3,7 +3,7 @@ title: Single Working Women's Day
 page_title: 'Single Working Women''s Day : COSYlanguages'
 breadcrumbs_current: Single Working Women's Day
 club_tag: Let's Celebrate
-date: Every Tuesday 2pm
+date:  15 June 2026
 theme_class: theme-celebrate-womens
 decorator_icon: 🎙️
 duration: 60 minutes

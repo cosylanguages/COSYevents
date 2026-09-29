@@ -3,7 +3,7 @@ title: 'Session 11: Restaurants & Social Eating'
 page_title: 'Session 11: Restaurants & Social Eating — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 26 March 2027
+date: 26 March 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

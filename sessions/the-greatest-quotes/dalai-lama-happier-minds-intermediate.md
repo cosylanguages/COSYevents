@@ -3,7 +3,7 @@ title: 'Dalai Lama: Happier Minds (B1)'
 page_title: 'Dalai Lama: Happier Minds (B1) : COSYlanguages'
 breadcrumbs_current: 'Dalai Lama: Happier Minds (B1)'
 club_tag: The Greatest Quotes
-date: Cosy Speaking Club
+date:  15 June 2026
 theme_class: theme-quotes-light
 decorator_icon: ☕
 duration: 60 minutes

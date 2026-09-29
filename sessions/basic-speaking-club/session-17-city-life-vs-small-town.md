@@ -3,7 +3,7 @@ title: 'Session 17: City Life vs. Small Town'
 page_title: 'Session 17: City Life vs. Small Town — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 7 May 2027
+date: 7 May 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

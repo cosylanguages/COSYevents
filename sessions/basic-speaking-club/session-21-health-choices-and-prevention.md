@@ -3,7 +3,7 @@ title: 'Session 21: Health Choices & Prevention'
 page_title: 'Session 21: Health Choices & Prevention — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 4 June 2027
+date: 4 June 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes

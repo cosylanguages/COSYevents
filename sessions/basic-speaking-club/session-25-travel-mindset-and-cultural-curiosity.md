@@ -3,7 +3,7 @@ title: 'Session 25: Travel Mindset & Cultural Curiosity'
 page_title: 'Session 25: Travel Mindset & Cultural Curiosity — Basic Speaking Club (A0–A1)'
 breadcrumbs_current: ''
 club_tag: ''
-date: 📅 2 July 2027
+date: 2 July 2027
 theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes
