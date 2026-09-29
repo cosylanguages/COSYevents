@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Intermediate Speaking Club (B1–B2) 🚀 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<style>
+  .hero h1, .section-header h2 { font-family: 'Playfair Display', serif; }
+  .club-hero { background: linear-gradient(135deg, #B84318, #7A280B); color: white; padding: 4rem 2rem; text-align: center; }
+  .club-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+  .club-hero p { max-width: 600px; margin: 0 auto; opacity: 0.9; }
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream, #FAF7F2);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover { background: var(--border); }
+  .filter-btn.active { background: #B84318; color: white; border-color: #B84318; }
+  .inter-session-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  .inter-card {
+    background: #FFF;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .inter-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md, 0 10px 20px rgba(0,0,0,0.08)); }
+</style>
+</head>
+<body>
+<div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
+  <div class="cosy-strip-inner">
+    <span class="cosy-strip-brand">🌐 COSY Ecosystem:</span>
+    <ul class="cosy-strip-links">
+      <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
+      <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
+      <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
+      <li><a href="index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
+    </ul>
+  </div>
+</div>
+
+<nav id="cosy-nav"></nav>
+<header class="club-hero">
+<div style="font-size: 3rem; margin-bottom: 0.5rem;">🚀</div>
+<h1>Intermediate Speaking Club (B1–B2)</h1>
+<p>Active, level-calibrated adult speaking sessions designed for B1–B2 learners. Expand idiomatic range, master complex sentence structures, debate real-world dilemmas, and express nuanced opinions with confidence.</p>
+</header>
+<section class="container" style="padding: 2rem 1.5rem 5rem;">
+<a class="back-link" href="speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
+<div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+<div class="club-main">
+
+<div class="section-header" style="margin-bottom: 1.5rem;">
+<h2 style="font-size: 1.5rem;">📅 Live Session Info</h2>
+</div>
+<div class="session-info"><table>
+<tr><td>Format</td><td>Intermediate Adult Speaking Club (B1–B2)</td></tr>
+<tr><td>Description</td><td>Interactive 60-minute adult speaking sessions focused on real-world dilemmas, complex sentence structures, and fluid debate. Max 10 participants per session (breakout rooms of 5).</td></tr>
+<tr><td>Schedule</td><td>Twice weekly live sessions (Tuesdays &amp; Thursdays) in CET timezone</td></tr>
+<tr><td>Duration</td><td>60 min</td></tr>
+<tr><td>Languages</td><td>🇬🇧 English</td></tr>
+</table></div>
+<div style="display:flex;gap:10px;align-items:center;margin-top:1rem;">
+<a class="join-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20the%20B1-B2%20Intermediate%20Speaking%20Club." style="background:#B84318; color:white; padding:0.6rem 1.2rem; border-radius:8px; text-decoration:none; font-weight:700;">💬 Reserve Trial Spot</a>
+</div>
+
+<!-- HISTORY / SESSIONS CATALOG -->
+<div class="history-block" id="inter-hist" style="margin-top: 3rem;">
+<div class="section-header" style="margin-bottom: 1rem;">
+<h2 style="font-size: 1.5rem;">📚 Curated B1–B2 Session Curriculum</h2>
+<p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem;">Browse all ready-to-teach adult B1–B2 session decks below.</p>
+</div>
+
+<div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="filter-btn active" data-level="all">All Sessions</button>
+<button class="filter-btn" data-level="b1">B1 Intermediate</button>
+<button class="filter-btn" data-level="b2">B2 Upper-Intermediate</button>
+</div>
+
+<div class="inter-session-grid">
+
+<div class="inter-card history-session" data-level="b1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#faeee8; color:#B84318; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 1 • B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Conversations to Avoid & Enjoy</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss conversational boundaries, polite refusal strategies, and small talk vs deep dialogue.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/mind-matters/conversations-avoid-enjoy-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#faeee8; color:#B84318; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 2 • B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Are You Addicted to Drama?</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Unpack psychological triggers, stress responses, and why conflict attracts human attention.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/mind-matters/addicted-to-drama-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#faeee8; color:#B84318; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 3 • B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Aspiration vs. Inspiration</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Compare structured long-term goals with spontaneous bursts of creative motivation.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/mind-matters/aspiration-vs-inspiration-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b2">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#e8ecf5; color:#1e2f6b; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 4 • B2</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Bounded Rationality & Choice Limits</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Examine decision fatigue, satisficing, and how cognitive limits shape daily choices.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/mind-matters/bounded-rationality-upper-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#faeee8; color:#B84318; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 5 • B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Moving to a New City & "True Self"</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Debate relocation psychology, fresh starts, and identity shifts across new surroundings.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/mind-matters/moving-new-city-true-self-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#faeee8; color:#B84318; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 6 • B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">The Guilt of Moving Abroad</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Share stories about leaving home, family distance, and navigating cultural guilt.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/mind-matters/guilt-moving-abroad-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b2">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#e8ecf5; color:#1e2f6b; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 7 • B2</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Human Cloning & Bioethics</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Evaluate the ethical, biological, and societal arguments surrounding cloning technology.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/debatable-relatable/human-cloning-upper-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#faeee8; color:#B84318; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 8 • B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">AI & The Human Brain</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss machine learning, memory offloading, and human cognitive independence.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/keeping-up-with-science/ai-and-the-brain-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b2">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#e8ecf5; color:#1e2f6b; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 9 • B2</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">4-Day Work Week Trial Data</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Analyze productivity metrics, work-life balance, and business tradition shifts.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/debatable-relatable/4-day-work-week.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#faeee8; color:#B84318; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 10 • B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Life With & Without Private Cars</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Compare vehicle independence with public transit infrastructure and city design.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/my-life-with-without/private-cars-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b2">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#e8ecf5; color:#1e2f6b; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 11 • B2</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Why Experts Defend Language Mistakes</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Debate prescriptivism vs descriptivism, regional accents, and language evolution.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/mind-matters/expert-defend-language-mistakes.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#faeee8; color:#B84318; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 12 • B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Feynman: Knowledge Isn't Free</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Reflect on active attention vs passive information consumption in modern life.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/the-greatest-quotes/feynman-knowledge-isnt-free-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b2">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#e8ecf5; color:#1e2f6b; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 13 • B2</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Ozempic & The Obesity Revolution</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Discuss pharmaceutical breakthroughs, body image ethics, and health culture.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/keeping-up-with-science/ozempic-obesity-revolution-upper-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b1">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#faeee8; color:#B84318; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 14 • B1</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Chatting with AI vs Human Friends</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Evaluate artificial companionship, social fatigue, and authentic empathy.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/debatable-relatable/chatting-with-ai-vs-human-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+<div class="inter-card history-session" data-level="b2">
+<div>
+<div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;"><span class="club-tag" style="background:#e8ecf5; color:#1e2f6b; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">Session 15 • B2</span></div>
+<h4 style="margin:0 0 0.5rem; font-family:'Playfair Display', serif; font-size:1.1rem; color:var(--ink);">Sportswashing & Global Reputation</h4>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">Deconstruct international sports tournaments, PR shields, and political influence.</p>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<a href="sessions/mind-matters/sportswashing-upper-intermediate.html" style="background:#B84318; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Open Session Deck ➔</a>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="club-sidebar">
+<div class="sidebar-promo" style="background: var(--cream); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border);">
+<h3 style="font-size: 1rem; margin-bottom: .5rem; color: #B84318;">B1–B2 Discussion Formula</h3>
+<p style="font-size: .85rem; color: var(--muted); line-height: 1.5;">Every session follows an active 60-minute adult framework: Warm-up &amp; Idioms → Vocabulary Breakdown → Guided Small-Group Debates (4–5 per breakout room) → Error Harvesting &amp; Reflection.</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p>Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5>Courses</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/general/">General Course 📖</a>
+<a href="https://cosylanguages.github.io/COSYlanguages/apps/premium-courses/spoken/">Spoken Course 🗣️</a>
+</div>
+<div class="footer-links-col">
+<h5>Explore</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/#languages">Languages 🌍</a>
+<a href="practice/index.html">Free Practice 💡</a>
+<a href="speaking-clubs.html">Events 🎉</a>
+</div>
+<div class="footer-links-col">
+<h5>Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+</div>
+</div>
+<div class="footer-bottom">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const levelButtons = document.querySelectorAll('.filter-btn');
+  const sessionCards = document.querySelectorAll('.inter-card');
+
+  levelButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      levelButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedLevel = btn.getAttribute('data-level');
+
+      sessionCards.forEach(card => {
+        const level = card.getAttribute('data-level') || '';
+        if (selectedLevel === 'all' || level.includes(selectedLevel)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+<script src="shared/js/cosyevents-session.js"></script>
+</body>
+</html>

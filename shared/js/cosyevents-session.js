@@ -34,7 +34,8 @@
     ['Cinema Club', 'cinema-club.html'],
     ['Karaoke Club', 'karaoke-club.html'],
     ['Long Reads', 'long-reads.html'],
-    ['Basic Speaking Club', 'basic-speaking-club.html']
+    ['Basic Speaking Club', 'basic-speaking-club.html'],
+    ['Intermediate Speaking Club', 'intermediate-speaking-club.html']
   ];
 
   var switcher = '';

@@ -779,6 +779,38 @@
       ]
     },
     {
+      "id": "intermediate-speaking-club",
+      "title": "Intermediate Speaking Club (B1–B2)",
+      "description": "Active, level-calibrated adult speaking sessions designed for B1–B2 learners. Expand idiomatic range, debate real-world dilemmas, and express nuanced opinions.",
+      "level_range": "B1–B2",
+      "prompts": [
+        {
+          "level": "B1",
+          "category": "Conversations to Avoid & Enjoy",
+          "text": "How do you handle awkward conversations or small talk with strangers?"
+        },
+        {
+          "level": "B2",
+          "category": "Bounded Rationality & Choice Limits",
+          "text": "How does option overload affect your ability to make decisions?"
+        }
+      ],
+      "sessions": [
+        {
+          "id": "isc-1",
+          "title": "Conversations to Avoid & Enjoy",
+          "topic": "Social Boundaries & Dialogue Depth",
+          "url": "sessions/mind-matters/conversations-avoid-enjoy-intermediate.html"
+        },
+        {
+          "id": "isc-2",
+          "title": "Are You Addicted to Drama?",
+          "topic": "Psychology of Conflict & Attention",
+          "url": "sessions/mind-matters/addicted-to-drama-intermediate.html"
+        }
+      ]
+    },
+    {
       "id": "i-couldnt-help-but-wonder",
       "title": "I Couldn't Help But Wonder",
       "description": "Curious reflections, personal dilemmas, and observational discussion topics inspired by modern life.",
