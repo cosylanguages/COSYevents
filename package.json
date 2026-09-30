@@ -4,6 +4,7 @@
   "description": "COSYevents Calendar & Event Hub for the COSYlanguages ecosystem",
   "main": "index.html",
   "scripts": {
+    "check-links": "node scripts/check_links.js",
     "publish:supabase": "node scripts/publish_to_supabase.js"
   },
   "dependencies": {
