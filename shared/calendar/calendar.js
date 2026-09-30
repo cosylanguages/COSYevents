@@ -7,12 +7,24 @@
 (function () {
   'use strict';
 
+  // Capture script URL at execution time to resolve relative resources robustly
+  const currentScriptUrl = (document.currentScript && document.currentScript.src)
+    ? document.currentScript.src
+    : window.location.href;
+
   let allEvents = [];
   let currentMonth = new Date().getMonth();
   let currentYear = new Date().getFullYear();
   let selectedType = 'all';
   let selectedLanguage = 'all';
-  let userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+  let userTimezone = 'UTC';
+  try {
+    userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+  } catch (e) {
+    userTimezone = 'UTC';
+  }
+
+  let lastActiveElement = null;
 
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',
@@ -29,24 +41,21 @@
   }
 
   function fetchEvents() {
-    // Relative path for root and nested pages fallback
-    const jsonPath = window.location.pathname.includes('/speaking-clubs/') ||
-                     window.location.pathname.includes('/cinema-club') ||
-                     window.location.pathname.includes('/cinema-nights/') ||
-                     window.location.pathname.includes('/teacher-led-sessions/') ||
-                     window.location.pathname.includes('/special-events/') ||
-                     window.location.pathname.includes('/past-events/')
-                     ? '../shared/calendar-data/events.json'
-                     : 'shared/calendar-data/events.json';
+    // Derive events.json location relative to currentScriptUrl
+    let jsonUrl;
+    try {
+      jsonUrl = new URL('../calendar-data/events.json', currentScriptUrl).href;
+    } catch (e) {
+      jsonUrl = 'shared/calendar-data/events.json';
+    }
 
-    fetch(jsonPath)
+    fetch(jsonUrl)
       .then(response => {
         if (!response.ok) throw new Error('Failed to load events data');
         return response.json();
       })
       .then(data => {
-        allEvents = data;
-        // Default view to current actual month and year
+        allEvents = data || [];
         const now = new Date();
         currentMonth = now.getMonth();
         currentYear = now.getFullYear();
@@ -192,12 +201,20 @@
 
       const dayEvents = events.filter(evt => evt.date === dateStr);
       dayEvents.forEach(evt => {
-        const marker = document.createElement('a');
+        const marker = document.createElement('button');
+        marker.type = 'button';
         marker.className = `event-marker badge-${evt.type}`;
-        marker.textContent = `${evt.time} ${evt.title}`;
-        marker.href = '#';
+
+        const textContent = `${evt.time} ${evt.title}`;
+        marker.textContent = textContent;
+
+        const ariaLabelText = `${evt.time} ${evt.host || ''} - ${evt.title}, ${evt.language || ''} ${evt.level || ''}`.trim();
+        marker.setAttribute('aria-label', ariaLabelText);
+        marker.setAttribute('title', textContent);
+
         marker.addEventListener('click', function (e) {
           e.preventDefault();
+          lastActiveElement = marker;
           openEventModal(evt.id);
         });
         markersList.appendChild(marker);
@@ -214,13 +231,46 @@
 
     listElem.innerHTML = '';
 
+    const now = new Date();
+    const todayISO = formatDateISO(now);
+    const nowTimeISO = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
     const upcoming = events
-      .filter(evt => evt.date >= '2025-01-01')
-      .sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time))
-      .slice(0, 10);
+      .filter(evt => {
+        const evtDateUtc = parseParisDateTime(evt.date, evt.time);
+        if (evtDateUtc) {
+          return evtDateUtc >= now;
+        }
+        if (evt.date > todayISO) return true;
+        if (evt.date === todayISO) return evt.time >= nowTimeISO;
+        return false;
+      })
+      .sort((a, b) => {
+        const dtA = parseParisDateTime(a.date, a.time);
+        const dtB = parseParisDateTime(b.date, b.time);
+        if (dtA && dtB) return dtA - dtB;
+        return (a.date + a.time).localeCompare(b.date + b.time);
+      })
+      .slice(0, 9);
 
     if (upcoming.length === 0) {
-      listElem.innerHTML = '<p class="no-events-msg">No upcoming events match your filter criteria.</p>';
+      let pastEventsUrl;
+      try {
+        pastEventsUrl = new URL('../../past-events/index.html', currentScriptUrl).href;
+      } catch (e) {
+        pastEventsUrl = 'past-events/index.html';
+      }
+
+      listElem.innerHTML = `
+        <div class="no-events-container" style="grid-column: 1 / -1; text-align: center; padding: 2.5rem 1rem; background: var(--cosy-surface, #ffffff); border-radius: var(--cosy-radius, 16px); border: 1px solid var(--cosy-border, rgba(74, 107, 80, 0.12));">
+          <p class="no-events-msg" style="font-size: 1.05rem; color: var(--cosy-text-soft, #4a4a4a); margin-bottom: 1rem;">
+            No upcoming events match your filters. Check the Past Events archive.
+          </p>
+          <a href="${escapeAttribute(pastEventsUrl)}" class="btn-outline">
+            View Past Events Archive →
+          </a>
+        </div>
+      `;
       return;
     }
 
@@ -229,51 +279,75 @@
       card.className = 'event-card-item';
 
       const typeLabel = formatTypeLabel(evt.type);
-      const convertedTime = convertTime(evt.date, evt.time, evt.timezone, userTimezone);
+
+      const utcDate = parseParisDateTime(evt.date, evt.time);
+      const parisLabel = getParisZoneLabel(utcDate);
+      const convertedTime = formatInTimezone(utcDate, userTimezone);
 
       let conversionBannerHtml = '';
       if (evt.conversionStatus === 'converted') {
-        const linkUrl = evt.convertedLessonUrl || '#';
-        conversionBannerHtml = `<div class="conversion-banner converted" style="background:#fff8e7; border:1px solid #945e05; border-radius:8px; padding:0.5rem 0.75rem; margin:0.5rem 0; font-size:0.85rem; color:#7d4d03; font-weight:600;">This session became a full COSYplatform lesson &rarr; <a href="${linkUrl}" target="_blank" rel="noopener" style="color:#7d4d03; text-decoration:underline; font-weight:700;">${linkUrl}</a></div>`;
+        const linkUrl = sanitizeUrl(evt.convertedLessonUrl);
+        if (linkUrl !== '#') {
+          conversionBannerHtml = `
+            <div class="conversion-banner converted">
+              This session became a full lesson on COSYplatform <a href="${escapeAttribute(linkUrl)}" target="_blank" rel="noopener">View the lesson -&gt;</a>
+            </div>
+          `;
+        } else {
+          conversionBannerHtml = `
+            <div class="conversion-banner converted">
+              This session became a full lesson on COSYplatform.
+            </div>
+          `;
+        }
       } else if (evt.conversionStatus === 'planned') {
-        conversionBannerHtml = `<div class="conversion-banner planned" style="background:#fff8e7; border:1px solid #945e05; border-radius:8px; padding:0.5rem 0.75rem; margin:0.5rem 0; font-size:0.85rem; color:#7d4d03; font-weight:600;">This topic is scheduled to become a lesson soon.</div>`;
+        conversionBannerHtml = `
+          <div class="conversion-banner planned">
+            This topic is scheduled to become a lesson soon.
+          </div>
+        `;
       }
 
       const capacity = evt.max_capacity || 10;
       const seats = evt.available_seats !== undefined ? evt.available_seats : 6;
       let capacityDot = '🟢';
-      let capacityColor = '#1A7A4A';
+      let seatClass = 'seat-pill-ok';
       if (seats <= 2) {
         capacityDot = '🔥';
-        capacityColor = '#B91C1C';
+        seatClass = 'seat-pill-low';
       } else if (seats <= 4) {
         capacityDot = '🟡';
-        capacityColor = '#8A5200';
+        seatClass = 'seat-pill-medium';
       }
-      const capacityPill = `<span class="pill-sm" style="font-weight:700; color:${capacityColor}; background:#fff; border:1px solid ${capacityColor}; padding:2px 8px; border-radius:10px;">${capacityDot} ${seats}/${capacity} seats left</span>`;
+      const capacityPill = `<span class="seat-pill ${seatClass}">${capacityDot} ${seats}/${capacity} seats left</span>`;
+
+      const regUrl = sanitizeUrl(evt.registration_link);
+      const regButtonHtml = regUrl !== '#' ? `
+        <a href="${escapeAttribute(regUrl)}" target="_blank" rel="noopener" class="btn-primary">
+          Join via Hub
+        </a>
+      ` : '';
 
       card.innerHTML = `
         <div class="event-meta-header">
-          <span class="type-pill badge-${evt.type}">${typeLabel}</span>
-          <div class="lang-level-pills" style="display:flex; gap:0.4rem; align-items:center;">
-            <span class="pill-sm">${evt.language}</span>
-            ${evt.level ? `<span class="pill-sm">${evt.level}</span>` : ''}
+          <span class="type-pill badge-${escapeAttribute(evt.type)}">${escapeHtml(typeLabel)}</span>
+          <div class="lang-level-pills" style="display:flex; gap:0.4rem; align-items:center; flex-wrap:wrap;">
+            <span class="pill-sm">${escapeHtml(evt.language || '')}</span>
+            ${evt.level ? `<span class="pill-sm">${escapeHtml(evt.level)}</span>` : ''}
             ${capacityPill}
           </div>
         </div>
-        <h3 class="event-card-title">${evt.title}</h3>
+        <h3 class="event-card-title">${escapeHtml(evt.title || '')}</h3>
         ${conversionBannerHtml}
         <div class="event-datetime-info">
-          <span>📅 ${evt.date}</span>
-          <span>⏰ ${evt.time} ${evt.timezone} (${convertedTime} ${userTimezone})</span>
+          <span>📅 ${escapeHtml(evt.date || '')}</span>
+          <span>⏰ ${escapeHtml(evt.time || '')} ${escapeHtml(parisLabel)} (${escapeHtml(convertedTime)} ${escapeHtml(userTimezone)})</span>
         </div>
-        <div class="event-host-info">🎙️ Host: <strong>${evt.host}</strong></div>
-        <p class="event-card-desc">${evt.description}</p>
+        <div class="event-host-info">🎙️ Host: <strong>${escapeHtml(evt.host || '')}</strong></div>
+        <p class="event-card-desc">${escapeHtml(evt.description || '')}</p>
         <div class="event-card-actions">
-          <a href="${evt.registration_link}" target="_blank" rel="noopener" class="btn-primary">
-            Join via Hub
-          </a>
-          <button class="btn-outline view-details-btn" data-id="${evt.id}">
+          ${regButtonHtml}
+          <button type="button" class="btn-outline view-details-btn" data-id="${escapeAttribute(evt.id)}">
             Details
           </button>
         </div>
@@ -281,6 +355,7 @@
 
       const detailsBtn = card.querySelector('.view-details-btn');
       detailsBtn.addEventListener('click', function () {
+        lastActiveElement = detailsBtn;
         openEventModal(evt.id);
       });
 
@@ -303,91 +378,272 @@
 
     if (!overlay) return;
 
-    title.textContent = evt.title;
-    meta.innerHTML = `
-      <span class="type-pill badge-${evt.type}">${formatTypeLabel(evt.type)}</span>
-      <span class="pill-sm">${evt.language}</span>
-      ${evt.level ? `<span class="pill-sm">${evt.level}</span>` : ''}
-    `;
+    if (title) title.textContent = evt.title || '';
+    if (meta) {
+      meta.innerHTML = `
+        <span class="type-pill badge-${escapeAttribute(evt.type)}">${escapeHtml(formatTypeLabel(evt.type))}</span>
+        <span class="pill-sm">${escapeHtml(evt.language || '')}</span>
+        ${evt.level ? `<span class="pill-sm">${escapeHtml(evt.level)}</span>` : ''}
+      `;
+    }
 
-    desc.textContent = evt.description;
+    if (desc) desc.textContent = evt.description || '';
 
     let bannerElem = overlay.querySelector('.ce-modal-conversion-banner');
-    if (!bannerElem) {
+    if (!bannerElem && desc && desc.parentNode) {
       bannerElem = document.createElement('div');
-      bannerElem.className = 'ce-modal-conversion-banner';
-      bannerElem.style.cssText = 'background:#fff8e7; border:1px solid #945e05; border-radius:8px; padding:0.6rem 0.8rem; margin:0.75rem 0; font-size:0.88rem; color:#7d4d03; font-weight:600;';
+      bannerElem.className = 'ce-modal-conversion-banner conversion-banner';
       desc.parentNode.insertBefore(bannerElem, desc.nextSibling);
     }
 
-    if (evt.conversionStatus === 'converted') {
-      const linkUrl = evt.convertedLessonUrl || '#';
-      bannerElem.innerHTML = `This session became a full COSYplatform lesson &rarr; <a href="${linkUrl}" target="_blank" rel="noopener" style="color:#7d4d03; text-decoration:underline; font-weight:700;">${linkUrl}</a>`;
-      bannerElem.style.display = 'block';
-    } else if (evt.conversionStatus === 'planned') {
-      bannerElem.textContent = 'This topic is scheduled to become a lesson soon.';
-      bannerElem.style.display = 'block';
-    } else {
-      bannerElem.style.display = 'none';
+    if (bannerElem) {
+      if (evt.conversionStatus === 'converted') {
+        const linkUrl = sanitizeUrl(evt.convertedLessonUrl);
+        if (linkUrl !== '#') {
+          bannerElem.innerHTML = `This session became a full lesson on COSYplatform <a href="${escapeAttribute(linkUrl)}" target="_blank" rel="noopener">View the lesson -&gt;</a>`;
+        } else {
+          bannerElem.textContent = 'This session became a full lesson on COSYplatform.';
+        }
+        bannerElem.style.display = 'block';
+      } else if (evt.conversionStatus === 'planned') {
+        bannerElem.textContent = 'This topic is scheduled to become a lesson soon.';
+        bannerElem.style.display = 'block';
+      } else {
+        bannerElem.style.display = 'none';
+      }
     }
 
-    host.innerHTML = `<strong>${evt.host}</strong> — ${evt.host_bio || 'COSYlanguages Facilitator'}`;
+    if (host) {
+      host.innerHTML = `<strong>${escapeHtml(evt.host || '')}</strong> — ${escapeHtml(evt.host_bio || 'COSYlanguages Facilitator')}`;
+    }
 
-    const convertedTime = convertTime(evt.date, evt.time, evt.timezone, userTimezone);
-    timeBox.innerHTML = `
-      <div>
-        <strong>Original Time:</strong> ${evt.date} @ ${evt.time} ${evt.timezone}
-      </div>
-      <div>
-        <strong>Your Local Time:</strong> ${convertedTime} (${userTimezone})
-      </div>
-    `;
+    const utcDate = parseParisDateTime(evt.date, evt.time);
+    const parisLabel = getParisZoneLabel(utcDate);
+    const convertedTime = formatInTimezone(utcDate, userTimezone);
 
-    regBtn.href = evt.registration_link;
+    if (timeBox) {
+      timeBox.innerHTML = `
+        <div>
+          <strong>Paris time:</strong> ${escapeHtml(evt.date || '')} @ ${escapeHtml(evt.time || '')} ${escapeHtml(parisLabel)}
+        </div>
+        <div>
+          <strong>Your Local Time:</strong> ${escapeHtml(convertedTime)} (${escapeHtml(userTimezone)})
+        </div>
+      `;
+    }
+
+    const regUrl = sanitizeUrl(evt.registration_link);
+    if (regBtn) {
+      if (regUrl !== '#') {
+        regBtn.href = regUrl;
+        regBtn.style.display = 'inline-flex';
+      } else {
+        regBtn.style.display = 'none';
+      }
+    }
 
     const gCalUrl = generateGoogleCalendarUrl(evt);
-    gcalBtn.href = gCalUrl;
+    if (gcalBtn) {
+      gcalBtn.href = gCalUrl;
+    }
 
     overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+
+    // Move focus into the modal for accessibility
+    const closeBtn = document.getElementById('modal-close-btn');
+    if (closeBtn) {
+      closeBtn.focus();
+    }
+  }
+
+  function closeEventModal() {
+    const overlay = document.getElementById('event-modal-overlay');
+    if (!overlay) return;
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+
+    if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+      lastActiveElement.focus();
+      lastActiveElement = null;
+    }
   }
 
   function setupModalListeners() {
     const overlay = document.getElementById('event-modal-overlay');
     const closeBtn = document.getElementById('modal-close-btn');
 
-    if (closeBtn && overlay) {
-      closeBtn.addEventListener('click', function () {
-        overlay.classList.remove('active');
-      });
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeEventModal);
     }
 
     if (overlay) {
       overlay.addEventListener('click', function (e) {
         if (e.target === overlay) {
-          overlay.classList.remove('active');
+          closeEventModal();
         }
       });
     }
+
+    // Keyboard navigation (Escape & Focus trapping)
+    document.addEventListener('keydown', function (e) {
+      if (!overlay || !overlay.classList.contains('active')) return;
+
+      if (e.key === 'Escape') {
+        closeEventModal();
+        return;
+      }
+
+      if (e.key === 'Tab') {
+        const focusables = overlay.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusables.length === 0) return;
+
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            last.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === last) {
+            first.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    });
   }
 
-  function convertTime(dateStr, timeStr, fromTz, toTz) {
-    if (!dateStr || !timeStr) return '';
+  /**
+   * Converts dateStr ("YYYY-MM-DD") and timeStr ("HH:MM") in Europe/Paris wall-clock time
+   * to a real UTC Date object, handling CET/CEST daylight saving transitions accurately.
+   */
+  function parseParisDateTime(dateStr, timeStr) {
+    if (!dateStr || !timeStr) return null;
+    const [year, month, day] = dateStr.split('-').map(Number);
+    const [hour, minute] = timeStr.split(':').map(Number);
+
+    const targetUtcMs = Date.UTC(year, month - 1, day, hour, minute, 0);
+
+    let dtf;
     try {
-      // Parse ISO date and time in CET (UTC+1 offset)
-      const isoString = `${dateStr}T${timeStr}:00+01:00`;
-      const dateObj = new Date(isoString);
-      return dateObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', timeZone: toTz });
+      dtf = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Europe/Paris',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hourCycle: 'h23'
+      });
     } catch (e) {
-      return timeStr;
+      // Fallback if Europe/Paris timezone is unsupported
+      return new Date(Date.UTC(year, month - 1, day, hour - 1, minute, 0));
+    }
+
+    function getParts(d) {
+      const parts = dtf.formatToParts(d);
+      const m = {};
+      for (const p of parts) {
+        if (p.type !== 'literal') m[p.type] = parseInt(p.value, 10);
+      }
+      if (m.hour === 24) m.hour = 0;
+      return m;
+    }
+
+    const p1 = getParts(new Date(targetUtcMs));
+    const parisMs1 = Date.UTC(p1.year, p1.month - 1, p1.day, p1.hour, p1.minute, p1.second || 0);
+    const offsetMs = parisMs1 - targetUtcMs;
+
+    let utcMs = targetUtcMs - offsetMs;
+    let res = new Date(utcMs);
+
+    const p2 = getParts(res);
+    const parisMs2 = Date.UTC(p2.year, p2.month - 1, p2.day, p2.hour, p2.minute, p2.second || 0);
+    if (parisMs2 !== targetUtcMs) {
+      utcMs -= (parisMs2 - targetUtcMs);
+      res = new Date(utcMs);
+    }
+
+    return res;
+  }
+
+  function getParisZoneLabel(utcDate) {
+    if (!utcDate) return 'Paris time';
+    try {
+      const dtf = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Europe/Paris',
+        timeZoneName: 'short'
+      });
+      const parts = dtf.formatToParts(utcDate);
+      const tzPart = parts.find(p => p.type === 'timeZoneName');
+      return tzPart ? tzPart.value : 'Paris time';
+    } catch (e) {
+      return 'Paris time';
+    }
+  }
+
+  function formatInTimezone(utcDate, targetTz) {
+    if (!utcDate) return '';
+    try {
+      return utcDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', timeZone: targetTz });
+    } catch (e) {
+      return utcDate.toUTCString();
     }
   }
 
   function generateGoogleCalendarUrl(evt) {
-    const startIso = evt.date.replace(/-/g, '') + 'T' + evt.time.replace(':', '') + '00Z';
-    const endIso = evt.date.replace(/-/g, '') + 'T' + (parseInt(evt.time.split(':')[0]) + 1) + evt.time.split(':')[1] + '00Z';
-    const title = encodeURIComponent(evt.title);
-    const details = encodeURIComponent(evt.description + '\n\nJoin via: ' + evt.registration_link);
+    const startUtc = parseParisDateTime(evt.date, evt.time);
+    if (!startUtc) return '#';
+
+    const durationMin = evt.duration_minutes ? parseInt(evt.duration_minutes, 10) : 60;
+    const endUtc = new Date(startUtc.getTime() + durationMin * 60 * 1000);
+
+    function formatUtcISO(d) {
+      const y = d.getUTCFullYear();
+      const m = String(d.getUTCMonth() + 1).padStart(2, '0');
+      const day = String(d.getUTCDate()).padStart(2, '0');
+      const h = String(d.getUTCHours()).padStart(2, '0');
+      const min = String(d.getUTCMinutes()).padStart(2, '0');
+      const s = String(d.getUTCSeconds()).padStart(2, '0');
+      return `${y}${m}${day}T${h}${min}${s}Z`;
+    }
+
+    const startIso = formatUtcISO(startUtc);
+    const endIso = formatUtcISO(endUtc);
+
+    const title = encodeURIComponent(evt.title || 'COSYevents Session');
+    const regUrl = sanitizeUrl(evt.registration_link);
+    const regNote = regUrl !== '#' ? `\n\nJoin via: ${regUrl}` : '';
+    const details = encodeURIComponent((evt.description || '') + regNote);
+
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startIso}/${endIso}&details=${details}`;
+  }
+
+  function sanitizeUrl(url) {
+    if (!url || typeof url !== 'string') return '#';
+    const trimmed = url.trim();
+    if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) {
+      return trimmed;
+    }
+    return '#';
+  }
+
+  function escapeHtml(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function escapeAttribute(str) {
+    return escapeHtml(str);
   }
 
   function formatTypeLabel(type) {
