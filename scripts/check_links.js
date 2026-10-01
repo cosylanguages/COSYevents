@@ -47,7 +47,7 @@ function extractTagAttributes(html) {
   return results;
 }
 
-function shouldIgnore(val) {
+function shouldIgnore(val, filePath) {
   if (!val || val.trim() === '') return true;
   const trimmed = val.trim();
   if (trimmed.startsWith('#')) return true; // pure anchor
@@ -55,6 +55,11 @@ function shouldIgnore(val) {
   if (trimmed.startsWith('mailto:') || trimmed.startsWith('tel:') || trimmed.startsWith('data:') || trimmed.startsWith('javascript:')) return true;
   if (trimmed.startsWith('//')) return true; // protocol relative
   if (/\{\{.*?\}\}|\$\{.*?\}|\[\[.*?\]\]/.test(trimmed)) return true; // template placeholders
+  if (filePath) {
+    const relPath = path.relative(ROOT_DIR, filePath);
+    const isTemplate = relPath.startsWith('templates' + path.sep) || relPath.startsWith('templates/');
+    if (isTemplate && /\[[^\]\/]+\]/.test(trimmed)) return true;
+  }
   return false;
 }
 
@@ -67,7 +72,7 @@ function checkLinks() {
     const attrEntries = extractTagAttributes(content);
 
     for (const { attr, val } of attrEntries) {
-      if (shouldIgnore(val)) continue;
+      if (shouldIgnore(val, filePath)) continue;
 
       // Strip query and hash
       let cleanUrl = val.split('?')[0].split('#')[0];

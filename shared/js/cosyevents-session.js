@@ -19,8 +19,14 @@
   }
 
   var root = rootPrefix();
-  var path = location.pathname;
-  var lang = /\/(fr|ru)\//.test(path) ? (path.match(/\/(fr|ru)\//)[1]) : 'en';
+
+  // Dynamically ensure cosyevents-lang.js is loaded
+  if (!window.CosyLang && !document.querySelector('script[src*="cosyevents-lang.js"]')) {
+    var langScript = document.createElement('script');
+    langScript.src = root + 'shared/js/cosyevents-lang.js';
+    langScript.defer = true;
+    document.head.appendChild(langScript);
+  }
 
   var clubs = [
     ['Mind Matters', 'mind-matters.html'],
@@ -38,13 +44,6 @@
     ['Intermediate Speaking Club', 'intermediate-speaking-club.html']
   ];
 
-  var switcher = '';
-  if (lang === 'en') {
-    switcher = '<a class="ce-nav-lang" href="' + root.replace(/(sessions\/[^/]+\/)?$/, '') + 'fr/' + '">FR</a>';
-  } else {
-    switcher = '<a class="ce-nav-lang" href="' + root + '">EN</a>';
-  }
-
   var nav = document.getElementById('cosy-nav');
   if (nav) {
     var html =
@@ -55,11 +54,18 @@
         '</a>' +
         '<nav class="ce-nav-links" aria-label="Event categories">' +
           clubs.map(function (c) {
-            return '<a href="' + root + c[1] + '">' + c[0] + '</a>';
+            var targetRel = c[1];
+            if (window.CosyLang && window.CosyLang.equivalentPath) {
+              var currentPath = location.pathname;
+              var pageLang = window.CosyLang.detectPageLang(currentPath);
+              var eq = window.CosyLang.equivalentPath(pageLang, targetRel, window.CosyLang.state ? window.CosyLang.state.manifest : null, window.CosyLang.state ? window.CosyLang.state.aliases : null);
+              if (eq) targetRel = eq;
+            }
+            return '<a href="' + root + targetRel + '">' + c[0] + '</a>';
           }).join('') +
         '</nav>' +
         '<div class="ce-nav-right">' +
-          switcher +
+          '<div class="ce-nav-right-switcher" data-ce-lang-switcher></div>' +
           '<button class="ce-theme-btn" type="button" aria-label="Toggle dark mode"></button>' +
           '<button class="ce-nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>' +
         '</div>' +

@@ -25,7 +25,10 @@
 
   <header class="hub-header">
     <div class="hub-header-content">
-      <span class="hub-brand">Écosystème COSYlanguages</span>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+        <span class="hub-brand" style="margin-bottom: 0;">Écosystème COSYlanguages</span>
+        <div data-ce-lang-switcher></div>
+      </div>
       <h1 class="hub-title">Calendrier des Événements COSYlanguages</h1>
       <p class="hub-subtitle">
         Clubs de conversation, soirées cinéma et activités linguistiques
@@ -65,16 +68,6 @@
           </select>
         </div>
 
-        <div class="select-filter-group">
-          <label for="site-language-select" class="select-filter-label">🌐 Langue du site :</label>
-          <select id="site-language-select" class="calendar-select" onchange="if(this.value) window.location.href=this.value;">
-            <option value="../index.html">🇬🇧 English</option>
-            <option value="index.html" selected>🇫🇷 Français</option>
-            <option value="../it/index.html">🇮🇹 Italiano</option>
-            <option value="../ru/index.html">🇷🇺 Русский</option>
-            <option value="../el/index.html">🇬🇷 Ελληνικά</option>
-          </select>
-        </div>
       </div>
     </section>
 
@@ -227,6 +220,7 @@
     <p>COSYevents &copy; Écosystème COSYlanguages. Toutes les inscriptions renvoient au hub principal.</p>
   </footer>
 
+  <script src="../shared/js/cosyevents-lang.js" defer></script>
   <script src="../shared/calendar/calendar.js"></script>
 </body>
 </html>
