@@ -7,6 +7,13 @@
 (function (root, factory) {
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = factory();
+    if (typeof document !== 'undefined') {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () { module.exports.init(); });
+      } else {
+        module.exports.init();
+      }
+    }
   } else {
     root.CosyLang = factory();
     if (typeof document !== 'undefined') {
@@ -192,6 +199,7 @@
       }
     }
 
+    // Step (a): Symmetric explicit mapping in aliases.json
     if (aliases && Array.isArray(aliases.groups)) {
       for (var i = 0; i < aliases.groups.length; i++) {
         var group = aliases.groups[i];
@@ -210,6 +218,7 @@
       }
     }
 
+    // Step (b): Same relative path under targetLang's folder
     var enRel = stripLangFolder(normCurrent);
     if (!enRel) enRel = 'index.html';
 
@@ -233,6 +242,7 @@
       return candidate;
     }
 
+    // Step (c): Fallback to targetLang's hub
     return hubFor(targetLang);
   }
 
@@ -408,7 +418,6 @@
     var currentLang = state.pageLang;
     var myLangs = getMyLangs(currentLang);
 
-    // If current language is not in My languages list yet, ensure it is available in UI
     var displayChips = [].concat(myLangs);
 
     var html = '<div class="ce-lang-switcher" aria-label="Language">';
@@ -432,7 +441,7 @@
               '<span class="ce-chip-code">' + lCode.toUpperCase() + '</span>' +
               '</a>';
     }
-    html += '</div>'; // .ce-lang-chips
+    html += '</div>';
 
     // Dropdown Menu Trigger
     html += '<div class="ce-lang-menu-wrapper">';
@@ -449,12 +458,13 @@
       var tHref = relativeUrl(state.currentRelPath, tRelPath);
       var inMyLangs = (myLangs.indexOf(code) !== -1);
       var isCur = (code === currentLang);
+      var showCheckBadge = (inMyLangs && myLangs.length >= 2);
 
       html += '<div class="ce-menu-item' + (isCur ? ' is-current' : '') + '">';
       html += '<a href="' + tHref + '" class="ce-menu-link" role="menuitem" data-lang="' + code + '">' +
               '<span class="ce-menu-flag">' + lCfg.flag + '</span> ' +
               '<span class="ce-menu-name">' + lCfg.nativeName + '</span>' +
-              (inMyLangs ? ' <span class="ce-menu-badge">Added</span>' : '') +
+              (showCheckBadge ? ' <span class="ce-menu-badge" aria-label="In your languages">✓</span>' : '') +
               '</a>';
 
       if (inMyLangs && myLangs.length > 1) {
@@ -463,13 +473,12 @@
       html += '</div>';
     }
 
-    html += '</div>'; // .ce-lang-menu
-    html += '</div>'; // .ce-lang-menu-wrapper
-    html += '</div>'; // .ce-lang-switcher
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
 
     container.innerHTML = html;
 
-    // Attach Event Handlers
     var trigger = container.querySelector('.ce-lang-trigger');
     var menu = container.querySelector('.ce-lang-menu');
 
@@ -504,7 +513,6 @@
       });
     }
 
-    // Add lang to My languages when clicking chips or menu links
     var langLinks = container.querySelectorAll('a[data-lang]');
     langLinks.forEach(function (a) {
       a.addEventListener('click', function () {
@@ -513,7 +521,6 @@
       });
     });
 
-    // Remove buttons in menu
     var removeBtns = container.querySelectorAll('button[data-remove-lang]');
     removeBtns.forEach(function (b) {
       b.addEventListener('click', function (e) {
@@ -535,7 +542,6 @@
   }
 
   function renderAlsoAvailableLine() {
-    // Only on session pages and catalog pages
     var breadcrumbs = document.querySelector('.cosy-breadcrumbs, .sd-breadcrumbs');
     var main = document.querySelector('main, .page, .container');
 
@@ -546,10 +552,8 @@
     var currentLang = state.pageLang;
     var myLangs = getMyLangs(currentLang);
 
-    // Find languages that have an EXISTING equivalent page (rule 4 a / b only, never hubs)
     var available = [];
 
-    // Order: My languages first, then remaining in LANG_ORDER
     var orderedLangs = [].concat(myLangs);
     for (var i = 0; i < LANG_ORDER.length; i++) {
       if (orderedLangs.indexOf(LANG_ORDER[i]) === -1) {
@@ -564,7 +568,6 @@
       var eq = equivalentPath(lCode, currentPath, state.manifest, state.aliases);
       var hub = hubFor(lCode);
 
-      // Rule 6: Only include if eq is an actual equivalent page, NOT a hub fallback
       if (eq && eq !== hub) {
         available.push({
           code: lCode,
@@ -574,7 +577,7 @@
       }
     }
 
-    if (available.length === 0) return; // Hide when none
+    if (available.length === 0) return;
 
     var line = document.createElement('div');
     line.className = 'ce-also-available';
@@ -608,7 +611,6 @@
 
     if (!requestedUi || !LANG_CONFIG[requestedUi] || state.pageLang !== 'en') return;
 
-    // Check if dismissed for session
     if (safeGetStorage('ce-notice-dismissed-' + requestedUi, true)) return;
 
     var reqCfg = LANG_CONFIG[requestedUi];
@@ -670,7 +672,6 @@
   }
 
   function rewriteSameSiteLinks() {
-    // Rule 7: Localized page link rewriting
     if (state.pageLang === 'en') return;
 
     var links = document.querySelectorAll('a[href]');
@@ -716,6 +717,7 @@
     hubFor: hubFor,
     equivalentPath: equivalentPath,
     relativeUrl: relativeUrl,
-    localizeTarget: localizeTarget
+    localizeTarget: localizeTarget,
+    state: state
   };
 }));
