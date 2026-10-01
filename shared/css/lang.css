@@ -1,0 +1,337 @@
+/* COSYevents Shared Language Switcher & Banners CSS */
+
+:root {
+  --ce-lang-bg: var(--warm-white, #FFFEFB);
+  --ce-lang-border: var(--border, #E2DED9);
+  --ce-lang-text: var(--ink, #2C2825);
+  --ce-lang-muted: var(--muted, #6E6862);
+  --ce-lang-active-bg: var(--sage-deep, #233827);
+  --ce-lang-active-text: #FFFFFF;
+  --ce-lang-accent: var(--teal, #0F6E56);
+}
+
+[data-theme="dark"] {
+  --ce-lang-bg: #1A162B;
+  --ce-lang-border: #3F3766;
+  --ce-lang-text: #F3F0FF;
+  --ce-lang-muted: #A39CBD;
+  --ce-lang-active-bg: #7C5CFC;
+  --ce-lang-active-text: #FFFFFF;
+  --ce-lang-accent: #9D84FF;
+}
+
+/* --- Language Switcher Control --- */
+.ce-lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+  font-size: 0.85rem;
+  vertical-align: middle;
+  position: relative;
+  max-width: 100%;
+}
+
+.ce-lang-label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--ce-lang-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.ce-lang-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: nowrap;
+}
+
+.ce-lang-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--ce-lang-border);
+  background: var(--ce-lang-bg);
+  color: var(--ce-lang-text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.ce-lang-chip:hover {
+  border-color: var(--ce-lang-accent);
+  color: var(--ce-lang-accent);
+  transform: translateY(-1px);
+}
+
+.ce-lang-chip.active {
+  background: var(--ce-lang-active-bg);
+  color: var(--ce-lang-active-text);
+  border-color: var(--ce-lang-active-bg);
+}
+
+.ce-chip-flag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.ce-chip-code {
+  letter-spacing: 0.03em;
+}
+
+/* Dropdown Menu Trigger & Wrapper */
+.ce-lang-menu-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.ce-lang-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--ce-lang-border);
+  background: var(--ce-lang-bg);
+  color: var(--ce-lang-text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.ce-lang-trigger:hover,
+.ce-lang-trigger[aria-expanded="true"] {
+  border-color: var(--ce-lang-accent);
+  background: var(--sage-pale, rgba(15, 110, 86, 0.08));
+}
+
+.ce-lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 1000;
+  min-width: 200px;
+  background: var(--ce-lang-bg);
+  border: 1px solid var(--ce-lang-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ce-lang-menu[hidden] {
+  display: none !important;
+}
+
+.ce-menu-header {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ce-lang-muted);
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--ce-lang-border);
+  margin-bottom: 0.2rem;
+}
+
+.ce-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.ce-menu-item:hover {
+  background: var(--sage-pale, rgba(15, 110, 86, 0.08));
+}
+
+.ce-menu-item.is-current {
+  background: var(--sage-mist, rgba(15, 110, 86, 0.12));
+  font-weight: 700;
+}
+
+.ce-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0 0.6rem;
+  flex-grow: 1;
+  text-decoration: none;
+  color: var(--ce-lang-text);
+  font-size: 0.88rem;
+}
+
+.ce-menu-flag {
+  font-size: 1.1rem;
+}
+
+.ce-menu-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: var(--ce-lang-accent);
+  color: #FFF;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+.ce-lang-remove-btn {
+  background: transparent;
+  border: none;
+  color: #C53030;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.4rem 0.6rem;
+  min-height: 44px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ce-lang-remove-btn:hover {
+  background: rgba(197, 48, 48, 0.1);
+}
+
+/* --- Also Available In Line --- */
+.ce-also-available {
+  background: var(--cream-dark, #F5F1E8);
+  border: 1px solid var(--border, #E2DED9);
+  border-radius: 10px;
+  padding: 0.5rem 0.9rem;
+  margin: 0.8rem 0;
+  font-size: 0.85rem;
+  color: var(--ce-lang-muted);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ce-aa-label {
+  font-weight: 700;
+  color: var(--ce-lang-text);
+}
+
+.ce-aa-link {
+  color: var(--ce-lang-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ce-aa-link:hover {
+  opacity: 0.8;
+}
+
+.ce-aa-sep {
+  color: var(--ce-lang-border);
+}
+
+/* --- Not Available Notice Banner --- */
+.ce-not-available-notice {
+  background: #FFF8E7;
+  border-bottom: 2px solid #945E05;
+  color: #7D4D03;
+  padding: 0.8rem 1.25rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 1100;
+}
+
+.ce-notice-content {
+  font-weight: 600;
+  flex: 1;
+  min-width: 240px;
+}
+
+.ce-notice-hub-link {
+  color: #7D4D03;
+  font-weight: 800;
+  text-decoration: underline;
+  margin-left: 0.4rem;
+}
+
+.ce-notice-dismiss-btn {
+  background: #945E05;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 36px;
+}
+
+.ce-notice-dismiss-btn:hover {
+  background: #7D4D03;
+}
+
+/* --- Resume Line Component --- */
+.ce-resume-line {
+  background: #E8F0EC;
+  border: 1px solid #0F6E56;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  margin: 1rem auto;
+  max-width: 1040px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #0F6E56;
+}
+
+.ce-resume-link {
+  color: #0F6E56;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.ce-resume-link:hover {
+  text-decoration: underline;
+}
+
+.ce-resume-dismiss-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #0F6E56;
+  cursor: pointer;
+  padding: 0 0.4rem;
+  line-height: 1;
+}
+
+/* Mobile Responsiveness (390px) */
+@media (max-width: 480px) {
+  .ce-lang-chips .ce-lang-chip:nth-child(n+4) {
+    display: none; /* Hide 4th+ chip on narrow mobile view, accessible via 🌐 dropdown */
+  }
+}

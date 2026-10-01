@@ -5,6 +5,9 @@
   "main": "index.html",
   "scripts": {
     "check-links": "node scripts/check_links.js",
+    "build-i18n": "node scripts/build_localized_manifest.js",
+    "check-i18n": "node scripts/build_localized_manifest.js --check",
+    "test-lang": "node scripts/test_lang.js",
     "publish:supabase": "node scripts/publish_to_supabase.js"
   },
   "dependencies": {
