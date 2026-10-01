@@ -36,7 +36,8 @@
       type_karaoke: "Karaoke Club",
       type_game_evening: "Game Evening",
       type_long_read: "Long Reads",
-      type_event: "Event"
+      type_event: "Event",
+      event_ended_badge: "Event ended"
     },
     fr: {
       seats_left: "{n}/{total} places restantes",
@@ -64,13 +65,14 @@
       type_karaoke: "Club Karaoké",
       type_game_evening: "Soirée Jeux",
       type_long_read: "Lecture Longue",
-      type_event: "Événement"
+      type_event: "Événement",
+      event_ended_badge: "Événement terminé"
     },
     it: {
       seats_left: "{n}/{total} posti rimasti",
       join_via_hub: "Partecipa tramite l'Hub",
       details: "Dettagli",
-      host_label: "Host:",
+      host_label: "Conduce:",
       paris_time: "Ora di Parigi",
       your_local_time: "La tua ora locale",
       modal_register: "Iscriviti tramite l'Hub principale (WhatsApp / Telegram)",
@@ -92,7 +94,8 @@
       type_karaoke: "Club Karaoke",
       type_game_evening: "Serata Giochi",
       type_long_read: "Letture Lunghe",
-      type_event: "Evento"
+      type_event: "Evento",
+      event_ended_badge: "Evento terminato"
     },
     ru: {
       seats_left: "Осталось {n}/{total} мест",
@@ -120,7 +123,8 @@
       type_karaoke: "Караоке Клуб",
       type_game_evening: "Игровой Вечер",
       type_long_read: "Чтение",
-      type_event: "Событие"
+      type_event: "Событие",
+      event_ended_badge: "Событие завершено"
     },
     el: {
       seats_left: "{n}/{total} θέσεις απομένουν",
@@ -148,7 +152,8 @@
       type_karaoke: "Λέσχη Καραόκε",
       type_game_evening: "Βραδιά Παιχνιδιών",
       type_long_read: "Εκτενής Ανάγνωση",
-      type_event: "Εκδήλωση"
+      type_event: "Εκδήλωση",
+      event_ended_badge: "Η εκδήλωση ολοκληρώθηκε"
     }
   };
 }));
