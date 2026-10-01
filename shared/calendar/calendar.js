@@ -4,10 +4,21 @@
  * timezone conversion, upcoming events list, and modal details.
  */
 
+/*
+ * Per-event i18n override shape:
+ * {
+ *   "title": "English Title",
+ *   "description": "English Description",
+ *   "i18n": {
+ *     "fr": { "title": "Titre en français", "description": "Description en français", "host_bio": "Bio en français" },
+ *     "ru": { "title": "Название на русском", "description": "Описание на русском", "host_bio": "Био на русском" }
+ *   }
+ * }
+ */
+
 (function () {
   'use strict';
 
-  // Capture script URL at execution time to resolve relative resources robustly
   const currentScriptUrl = (document.currentScript && document.currentScript.src)
     ? document.currentScript.src
     : window.location.href;
@@ -26,10 +37,75 @@
 
   let lastActiveElement = null;
 
-  const monthNames = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
-  ];
+  const LANG_NAME_TO_CODE = {
+    'English': 'en',
+    'French': 'fr',
+    'Italian': 'it',
+    'Russian': 'ru',
+    'Greek': 'el',
+    'Spanish': 'es',
+    'German': 'de',
+    'Portuguese': 'pt',
+    'Japanese': 'ja',
+    'Chinese': 'zh',
+    'Korean': 'ko',
+    'Arabic': 'ar',
+    'Dutch': 'nl',
+    'Polish': 'pl',
+    'Turkish': 'tr'
+  };
+
+  function getPageLang() {
+    const htmlLang = document.documentElement.lang || 'en';
+    const clean = htmlLang.trim().toLowerCase().substring(0, 2);
+    return clean || 'en';
+  }
+
+  function t(key, vars) {
+    const lang = getPageLang();
+    let str = null;
+    if (window.COSY_CAL_I18N) {
+      if (window.COSY_CAL_I18N[lang] && window.COSY_CAL_I18N[lang][key]) {
+        str = window.COSY_CAL_I18N[lang][key];
+      } else if (window.COSY_CAL_I18N.en && window.COSY_CAL_I18N.en[key]) {
+        str = window.COSY_CAL_I18N.en[key];
+      }
+    }
+    if (!str) str = key;
+    if (vars && typeof vars === 'object') {
+      for (const v in vars) {
+        if (vars.hasOwnProperty(v)) {
+          str = str.replace(new RegExp('\\{' + v + '\\}', 'g'), vars[v]);
+        }
+      }
+    }
+    return str;
+  }
+
+  function getEventField(evt, fieldName) {
+    const pageLang = getPageLang();
+    if (evt && evt.i18n && evt.i18n[pageLang] && evt.i18n[pageLang][fieldName]) {
+      return evt.i18n[pageLang][fieldName];
+    }
+    return evt ? evt[fieldName] : '';
+  }
+
+  function formatEventLanguage(langStr) {
+    if (!langStr) return '';
+    const pageLang = getPageLang();
+    const code = LANG_NAME_TO_CODE[langStr];
+    if (!code) return langStr;
+    try {
+      if (typeof Intl !== 'undefined' && Intl.DisplayNames) {
+        const dn = new Intl.DisplayNames([pageLang], { type: 'language' });
+        const name = dn.of(code);
+        if (name) {
+          return name.charAt(0).toUpperCase() + name.slice(1);
+        }
+      }
+    } catch (e) {}
+    return langStr;
+  }
 
   document.addEventListener('DOMContentLoaded', initCalendar);
 
@@ -41,7 +117,6 @@
   }
 
   function fetchEvents() {
-    // Derive events.json location relative to currentScriptUrl
     let jsonUrl;
     try {
       jsonUrl = new URL('../calendar-data/events.json', currentScriptUrl).href;
@@ -69,6 +144,7 @@
   function render() {
     const filtered = filterEventsList(allEvents);
     renderMonthTitle();
+    renderWeekdayHeader();
     renderGrid(filtered);
     renderUpcomingList(filtered);
   }
@@ -107,6 +183,7 @@
     const todayBtn = document.getElementById('today-month-btn');
 
     if (prevBtn) {
+      prevBtn.setAttribute('aria-label', t('prev_month_aria'));
       prevBtn.addEventListener('click', function () {
         currentMonth--;
         if (currentMonth < 0) {
@@ -118,6 +195,7 @@
     }
 
     if (nextBtn) {
+      nextBtn.setAttribute('aria-label', t('next_month_aria'));
       nextBtn.addEventListener('click', function () {
         currentMonth++;
         if (currentMonth > 11) {
@@ -129,6 +207,8 @@
     }
 
     if (todayBtn) {
+      todayBtn.setAttribute('aria-label', t('today'));
+      todayBtn.textContent = t('today');
       todayBtn.addEventListener('click', function () {
         const now = new Date();
         currentMonth = now.getMonth();
@@ -140,9 +220,48 @@
 
   function renderMonthTitle() {
     const titleElem = document.getElementById('calendar-month-title');
-    if (titleElem) {
-      titleElem.textContent = `${monthNames[currentMonth]} ${currentYear}`;
-    }
+    if (!titleElem) return;
+
+    const pageLang = getPageLang();
+    try {
+      const dtf = new Intl.DateTimeFormat(pageLang, { month: 'long', year: 'numeric' });
+      const parts = dtf.formatToParts(new Date(currentYear, currentMonth, 1));
+      let monthStr = '';
+      let yearStr = '';
+      for (const p of parts) {
+        if (p.type === 'month') monthStr = p.value;
+        if (p.type === 'year') yearStr = p.value;
+      }
+      if (monthStr) {
+        monthStr = monthStr.charAt(0).toUpperCase() + monthStr.slice(1);
+        titleElem.textContent = `${monthStr} ${yearStr}`;
+        return;
+      }
+    } catch (e) {}
+
+    titleElem.textContent = `${currentMonth + 1}/${currentYear}`;
+  }
+
+  function renderWeekdayHeader() {
+    const weekdaysContainer = document.querySelector('.calendar-weekdays');
+    if (!weekdaysContainer) return;
+
+    const pageLang = getPageLang();
+    // 2026-06-01 is a Monday
+    const mondayBase = new Date(2026, 5, 1);
+    const weekdayElems = weekdaysContainer.querySelectorAll('.weekday');
+
+    try {
+      const dtf = new Intl.DateTimeFormat(pageLang, { weekday: 'short' });
+      for (let dayIdx = 0; dayIdx < 7; dayIdx++) {
+        const d = new Date(mondayBase.getTime() + dayIdx * 86400000);
+        let dayName = dtf.format(d);
+        dayName = dayName.charAt(0).toUpperCase() + dayName.slice(1).replace('.', '');
+        if (weekdayElems[dayIdx]) {
+          weekdayElems[dayIdx].textContent = dayName;
+        }
+      }
+    } catch (e) {}
   }
 
   function renderGrid(events) {
@@ -205,10 +324,12 @@
         marker.type = 'button';
         marker.className = `event-marker badge-${evt.type}`;
 
-        const textContent = `${evt.time} ${evt.title}`;
+        const titleText = getEventField(evt, 'title');
+        const textContent = `${evt.time} ${titleText}`;
         marker.textContent = textContent;
 
-        const ariaLabelText = `${evt.time} ${evt.host || ''} - ${evt.title}, ${evt.language || ''} ${evt.level || ''}`.trim();
+        const langText = formatEventLanguage(evt.language || '');
+        const ariaLabelText = `${evt.time} ${evt.host || ''} - ${titleText}, ${langText} ${evt.level || ''}`.trim();
         marker.setAttribute('aria-label', ariaLabelText);
         marker.setAttribute('title', textContent);
 
@@ -264,10 +385,10 @@
       listElem.innerHTML = `
         <div class="no-events-container" style="grid-column: 1 / -1; text-align: center; padding: 2.5rem 1rem; background: var(--cosy-surface, #ffffff); border-radius: var(--cosy-radius, 16px); border: 1px solid var(--cosy-border, rgba(74, 107, 80, 0.12));">
           <p class="no-events-msg" style="font-size: 1.05rem; color: var(--cosy-text-soft, #4a4a4a); margin-bottom: 1rem;">
-            No upcoming events match your filters. Check the Past Events archive.
+            ${escapeHtml(t('no_events_msg'))}
           </p>
           <a href="${escapeAttribute(pastEventsUrl)}" class="btn-outline">
-            View Past Events Archive →
+            ${escapeHtml(t('view_past_events'))}
           </a>
         </div>
       `;
@@ -279,6 +400,8 @@
       card.className = 'event-card-item';
 
       const typeLabel = formatTypeLabel(evt.type);
+      const titleText = getEventField(evt, 'title');
+      const descText = getEventField(evt, 'description');
 
       const utcDate = parseParisDateTime(evt.date, evt.time);
       const parisLabel = getParisZoneLabel(utcDate);
@@ -288,22 +411,23 @@
       if (evt.conversionStatus === 'converted') {
         const linkUrl = sanitizeUrl(evt.convertedLessonUrl);
         if (linkUrl !== '#') {
+          const linkHtml = `<a href="${escapeAttribute(linkUrl)}" target="_blank" rel="noopener">${escapeHtml(t('view_the_lesson'))}</a>`;
           conversionBannerHtml = `
             <div class="conversion-banner converted">
-              This session became a full lesson on COSYplatform <a href="${escapeAttribute(linkUrl)}" target="_blank" rel="noopener">View the lesson -&gt;</a>
+              ${t('conversion_converted_link', { link: linkHtml })}
             </div>
           `;
         } else {
           conversionBannerHtml = `
             <div class="conversion-banner converted">
-              This session became a full lesson on COSYplatform.
+              ${escapeHtml(t('conversion_converted'))}
             </div>
           `;
         }
       } else if (evt.conversionStatus === 'planned') {
         conversionBannerHtml = `
           <div class="conversion-banner planned">
-            This topic is scheduled to become a lesson soon.
+            ${escapeHtml(t('conversion_planned'))}
           </div>
         `;
       }
@@ -319,36 +443,39 @@
         capacityDot = '🟡';
         seatClass = 'seat-pill-medium';
       }
-      const capacityPill = `<span class="seat-pill ${seatClass}">${capacityDot} ${seats}/${capacity} seats left</span>`;
+      const seatsText = t('seats_left', { n: seats, total: capacity });
+      const capacityPill = `<span class="seat-pill ${seatClass}">${capacityDot} ${escapeHtml(seatsText)}</span>`;
 
       const regUrl = sanitizeUrl(evt.registration_link);
       const regButtonHtml = regUrl !== '#' ? `
         <a href="${escapeAttribute(regUrl)}" target="_blank" rel="noopener" class="btn-primary">
-          Join via Hub
+          ${escapeHtml(t('join_via_hub'))}
         </a>
       ` : '';
+
+      const localizedLangName = formatEventLanguage(evt.language || '');
 
       card.innerHTML = `
         <div class="event-meta-header">
           <span class="type-pill badge-${escapeAttribute(evt.type)}">${escapeHtml(typeLabel)}</span>
           <div class="lang-level-pills" style="display:flex; gap:0.4rem; align-items:center; flex-wrap:wrap;">
-            <span class="pill-sm">${escapeHtml(evt.language || '')}</span>
+            <span class="pill-sm">${escapeHtml(localizedLangName)}</span>
             ${evt.level ? `<span class="pill-sm">${escapeHtml(evt.level)}</span>` : ''}
             ${capacityPill}
           </div>
         </div>
-        <h3 class="event-card-title">${escapeHtml(evt.title || '')}</h3>
+        <h3 class="event-card-title">${escapeHtml(titleText)}</h3>
         ${conversionBannerHtml}
         <div class="event-datetime-info">
           <span>📅 ${escapeHtml(evt.date || '')}</span>
           <span>⏰ ${escapeHtml(evt.time || '')} ${escapeHtml(parisLabel)} (${escapeHtml(convertedTime)} ${escapeHtml(userTimezone)})</span>
         </div>
-        <div class="event-host-info">🎙️ Host: <strong>${escapeHtml(evt.host || '')}</strong></div>
-        <p class="event-card-desc">${escapeHtml(evt.description || '')}</p>
+        <div class="event-host-info">🎙️ ${escapeHtml(t('host_label'))} <strong>${escapeHtml(evt.host || '')}</strong></div>
+        <p class="event-card-desc">${escapeHtml(descText)}</p>
         <div class="event-card-actions">
           ${regButtonHtml}
           <button type="button" class="btn-outline view-details-btn" data-id="${escapeAttribute(evt.id)}">
-            Details
+            ${escapeHtml(t('details'))}
           </button>
         </div>
       `;
@@ -375,19 +502,26 @@
     const timeBox = document.getElementById('modal-timezone-box');
     const regBtn = document.getElementById('modal-reg-btn');
     const gcalBtn = document.getElementById('modal-gcal-btn');
+    const closeBtn = document.getElementById('modal-close-btn');
 
     if (!overlay) return;
 
-    if (title) title.textContent = evt.title || '';
+    if (closeBtn) closeBtn.setAttribute('aria-label', t('close_aria'));
+
+    const titleText = getEventField(evt, 'title');
+    const descText = getEventField(evt, 'description');
+    const hostBioText = getEventField(evt, 'host_bio') || 'COSYlanguages Facilitator';
+
+    if (title) title.textContent = titleText;
     if (meta) {
       meta.innerHTML = `
         <span class="type-pill badge-${escapeAttribute(evt.type)}">${escapeHtml(formatTypeLabel(evt.type))}</span>
-        <span class="pill-sm">${escapeHtml(evt.language || '')}</span>
+        <span class="pill-sm">${escapeHtml(formatEventLanguage(evt.language || ''))}</span>
         ${evt.level ? `<span class="pill-sm">${escapeHtml(evt.level)}</span>` : ''}
       `;
     }
 
-    if (desc) desc.textContent = evt.description || '';
+    if (desc) desc.textContent = descText;
 
     let bannerElem = overlay.querySelector('.ce-modal-conversion-banner');
     if (!bannerElem && desc && desc.parentNode) {
@@ -400,13 +534,14 @@
       if (evt.conversionStatus === 'converted') {
         const linkUrl = sanitizeUrl(evt.convertedLessonUrl);
         if (linkUrl !== '#') {
-          bannerElem.innerHTML = `This session became a full lesson on COSYplatform <a href="${escapeAttribute(linkUrl)}" target="_blank" rel="noopener">View the lesson -&gt;</a>`;
+          const linkHtml = `<a href="${escapeAttribute(linkUrl)}" target="_blank" rel="noopener">${escapeHtml(t('view_the_lesson'))}</a>`;
+          bannerElem.innerHTML = t('conversion_converted_link', { link: linkHtml });
         } else {
-          bannerElem.textContent = 'This session became a full lesson on COSYplatform.';
+          bannerElem.textContent = t('conversion_converted');
         }
         bannerElem.style.display = 'block';
       } else if (evt.conversionStatus === 'planned') {
-        bannerElem.textContent = 'This topic is scheduled to become a lesson soon.';
+        bannerElem.textContent = t('conversion_planned');
         bannerElem.style.display = 'block';
       } else {
         bannerElem.style.display = 'none';
@@ -414,7 +549,7 @@
     }
 
     if (host) {
-      host.innerHTML = `<strong>${escapeHtml(evt.host || '')}</strong> — ${escapeHtml(evt.host_bio || 'COSYlanguages Facilitator')}`;
+      host.innerHTML = `<strong>${escapeHtml(evt.host || '')}</strong> — ${escapeHtml(hostBioText)}`;
     }
 
     const utcDate = parseParisDateTime(evt.date, evt.time);
@@ -424,16 +559,17 @@
     if (timeBox) {
       timeBox.innerHTML = `
         <div>
-          <strong>Paris time:</strong> ${escapeHtml(evt.date || '')} @ ${escapeHtml(evt.time || '')} ${escapeHtml(parisLabel)}
+          <strong>${escapeHtml(t('paris_time'))}:</strong> ${escapeHtml(evt.date || '')} @ ${escapeHtml(evt.time || '')} ${escapeHtml(parisLabel)}
         </div>
         <div>
-          <strong>Your Local Time:</strong> ${escapeHtml(convertedTime)} (${escapeHtml(userTimezone)})
+          <strong>${escapeHtml(t('your_local_time'))}:</strong> ${escapeHtml(convertedTime)} (${escapeHtml(userTimezone)})
         </div>
       `;
     }
 
     const regUrl = sanitizeUrl(evt.registration_link);
     if (regBtn) {
+      regBtn.textContent = t('modal_register');
       if (regUrl !== '#') {
         regBtn.href = regUrl;
         regBtn.style.display = 'inline-flex';
@@ -444,14 +580,13 @@
 
     const gCalUrl = generateGoogleCalendarUrl(evt);
     if (gcalBtn) {
+      gcalBtn.textContent = `📅 ${t('modal_gcal')}`;
       gcalBtn.href = gCalUrl;
     }
 
     overlay.classList.add('active');
     overlay.setAttribute('aria-hidden', 'false');
 
-    // Move focus into the modal for accessibility
-    const closeBtn = document.getElementById('modal-close-btn');
     if (closeBtn) {
       closeBtn.focus();
     }
@@ -485,7 +620,6 @@
       });
     }
 
-    // Keyboard navigation (Escape & Focus trapping)
     document.addEventListener('keydown', function (e) {
       if (!overlay || !overlay.classList.contains('active')) return;
 
@@ -516,10 +650,6 @@
     });
   }
 
-  /**
-   * Converts dateStr ("YYYY-MM-DD") and timeStr ("HH:MM") in Europe/Paris wall-clock time
-   * to a real UTC Date object, handling CET/CEST daylight saving transitions accurately.
-   */
   function parseParisDateTime(dateStr, timeStr) {
     if (!dateStr || !timeStr) return null;
     const [year, month, day] = dateStr.split('-').map(Number);
@@ -540,7 +670,6 @@
         hourCycle: 'h23'
       });
     } catch (e) {
-      // Fallback if Europe/Paris timezone is unsupported
       return new Date(Date.UTC(year, month - 1, day, hour - 1, minute, 0));
     }
 
@@ -572,24 +701,27 @@
   }
 
   function getParisZoneLabel(utcDate) {
-    if (!utcDate) return 'Paris time';
+    const pageLang = getPageLang();
+    const fallbackLabel = t('paris_time');
+    if (!utcDate) return fallbackLabel;
     try {
-      const dtf = new Intl.DateTimeFormat('en-US', {
+      const dtf = new Intl.DateTimeFormat(pageLang, {
         timeZone: 'Europe/Paris',
         timeZoneName: 'short'
       });
       const parts = dtf.formatToParts(utcDate);
       const tzPart = parts.find(p => p.type === 'timeZoneName');
-      return tzPart ? tzPart.value : 'Paris time';
+      return tzPart ? tzPart.value : fallbackLabel;
     } catch (e) {
-      return 'Paris time';
+      return fallbackLabel;
     }
   }
 
   function formatInTimezone(utcDate, targetTz) {
     if (!utcDate) return '';
+    const pageLang = getPageLang();
     try {
-      return utcDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', timeZone: targetTz });
+      return utcDate.toLocaleTimeString([pageLang], { hour: '2-digit', minute: '2-digit', timeZone: targetTz });
     } catch (e) {
       return utcDate.toUTCString();
     }
@@ -615,10 +747,12 @@
     const startIso = formatUtcISO(startUtc);
     const endIso = formatUtcISO(endUtc);
 
-    const title = encodeURIComponent(evt.title || 'COSYevents Session');
+    const titleText = getEventField(evt, 'title') || 'COSYevents Session';
+    const title = encodeURIComponent(titleText);
     const regUrl = sanitizeUrl(evt.registration_link);
     const regNote = regUrl !== '#' ? `\n\nJoin via: ${regUrl}` : '';
-    const details = encodeURIComponent((evt.description || '') + regNote);
+    const descText = getEventField(evt, 'description') || '';
+    const details = encodeURIComponent(descText + regNote);
 
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startIso}/${endIso}&details=${details}`;
   }
@@ -648,11 +782,14 @@
 
   function formatTypeLabel(type) {
     switch (type) {
-      case 'speaking-club': return 'Speaking Club';
-      case 'cinema-night': return 'Cinema Night';
-      case 'teacher-session': return 'Teacher Session';
-      case 'special-event': return 'Special Event';
-      default: return 'Event';
+      case 'speaking-club': return t('type_speaking_club');
+      case 'cinema-night': return t('type_cinema_night');
+      case 'teacher-session': return t('type_teacher_session');
+      case 'special-event': return t('type_special_event');
+      case 'karaoke': return t('type_karaoke');
+      case 'game-evening': return t('type_game_evening');
+      case 'long-read': return t('type_long_read');
+      default: return t('type_event');
     }
   }
 
