@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COSYevents Public Calendar & Session Directory</title>
+  <title>COSYevents: live language events</title>
+  <meta name="description" content="Speaking clubs, cinema nights, karaoke and games in English, French, Italian, Russian and Greek. Check the calendar, pick your level, and join on WhatsApp or Telegram.">
   <link rel="stylesheet" href="shared/css/hub.css">
   <link rel="stylesheet" href="shared/css/cosy-icons.css">
   <link rel="stylesheet" href="styles/calendar.css">
+  <link rel="stylesheet" href="styles/home.css">
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -25,21 +27,26 @@
 
   <header class="hub-header">
     <div class="hub-header-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
-        <span class="hub-brand" style="margin-bottom: 0;">COSYlanguages Ecosystem</span>
+      <div class="hub-header-top-row">
+        <span class="hub-brand">COSYlanguages Ecosystem</span>
         <div data-ce-lang-switcher></div>
       </div>
-      <h1 class="hub-title">COSYevents Calendar & Master Directory</h1>
+      <h1 class="hub-title">COSYevents: live language events</h1>
       <p class="hub-subtitle">
-        Public event calendar and catalog — view titles, dates, CEFR levels, and summaries for all sessions.
+        Speaking clubs, cinema nights, karaoke and games in English, French, Italian, Russian and Greek. Check the calendar, pick your level, and join on WhatsApp or Telegram.
       </p>
+      <div class="hero-cta-group">
+        <a href="#calendar-controls" class="hero-btn hero-btn-primary">See the calendar</a>
+        <a href="#tariff-calculator" class="hero-btn hero-btn-outline">Pricing</a>
+        <a href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20a%20COSYevents%20session." target="_blank" rel="noopener" class="hero-btn hero-btn-wa">💬 Join on WhatsApp</a>
+      </div>
       <nav class="hub-nav-links" aria-label="Event Categories">
-        <a href="speaking-clubs/index.html" class="hub-nav-link">Conversation Clubs 💬</a>
-        <a href="cinema-club.html" class="hub-nav-link">Cinema 🎬</a>
-        <a href="karaoke-club/index.html" class="hub-nav-link">Karaoke 🎤</a>
-        <a href="game-evenings.html" class="hub-nav-link">Games 🎲</a>
-        <a href="long-reads/index.html" class="hub-nav-link">Long Reads 📚</a>
-        <a href="teacher-led-sessions/index.html" class="hub-nav-link">For Teachers 🍎</a>
+        <a href="speaking-clubs/index.html" class="hub-nav-link">Speaking Clubs</a>
+        <a href="cinema-nights/index.html" class="hub-nav-link">Cinema</a>
+        <a href="karaoke-club.html" class="hub-nav-link">Karaoke</a>
+        <a href="game-evenings.html" class="hub-nav-link">Games</a>
+        <a href="long-reads.html" class="hub-nav-link">Long Reads</a>
+        <a href="teacher-led-sessions/index.html" class="hub-nav-link">Teacher-Led Sessions</a>
       </nav>
     </div>
   </header>
@@ -99,168 +106,159 @@
 
     <!-- Public Event Catalog & Upcoming Sessions -->
     <section class="calendar-section">
-      <h2 class="section-title">
-        <span>Public Session Catalog & Schedule</span>
-        <a href="browse.html" class="btn-outline" style="font-size:0.8rem;">Master Directory →</a>
+      <h2 class="section-title section-title-wrap">
+        <span>Public Session Catalog &amp; Schedule</span>
+        <a href="browse.html" class="btn-outline">All sessions →</a>
       </h2>
       <div id="upcoming-events-list" class="upcoming-events-grid">
         <!-- Rendered dynamically by calendar.js: title, date, level, and one-line summary always visible -->
       </div>
     </section>
 
+    <!-- Explore Event Types Section -->
+    <section class="explore-events-section">
+      <h2 class="section-title">Explore event types</h2>
+      <div class="explore-grid">
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-speech" aria-hidden="true">💬</span>
+              <h3 class="explore-card-title">Speaking Clubs</h3>
+            </div>
+            <p class="explore-card-desc">Topic-driven group discussions with CEFR level calibration.</p>
+          </div>
+          <a href="speaking-clubs/index.html" class="explore-card-cta">Explore Speaking Clubs →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-film" aria-hidden="true">🎬</span>
+              <h3 class="explore-card-title">Cinema Nights</h3>
+            </div>
+            <p class="explore-card-desc">Original-language film screenings &amp; scene study.</p>
+          </div>
+          <a href="cinema-nights/index.html" class="explore-card-cta">Explore Cinema Nights →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-music" aria-hidden="true">🎤</span>
+              <h3 class="explore-card-title">Karaoke Club</h3>
+            </div>
+            <p class="explore-card-desc">Singing sessions with guided lyric pronunciation &amp; vocabulary primers.</p>
+          </div>
+          <a href="karaoke-club.html" class="explore-card-cta">Explore Karaoke Club →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-dice" aria-hidden="true">🎲</span>
+              <h3 class="explore-card-title">Game Evenings</h3>
+            </div>
+            <p class="explore-card-desc">Polyglot board games, trivia nights, and social language challenges.</p>
+          </div>
+          <a href="game-evenings.html" class="explore-card-cta">Explore Game Evenings →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-book" aria-hidden="true">🍎</span>
+              <h3 class="explore-card-title">Teacher-Led Sessions</h3>
+            </div>
+            <p class="explore-card-desc">Masterclasses and 1-on-1 coaching with COSYlanguages' lead facilitator.</p>
+          </div>
+          <a href="teacher-led-sessions/index.html" class="explore-card-cta">Explore Teacher-Led Sessions →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-star" aria-hidden="true">⭐</span>
+              <h3 class="explore-card-title">Special Events</h3>
+            </div>
+            <p class="explore-card-desc">Interactive games, cultural celebrations, polyglot trivia, and workshops.</p>
+          </div>
+          <a href="special-events/index.html" class="explore-card-cta">Explore Special Events →</a>
+        </div>
+      </div>
+      <p class="past-events-footer-link">
+        Looking for earlier sessions? <a href="past-events/index.html">See past events →</a>
+      </p>
+    </section>
+
     <!-- Tariff & Price Calculator Section -->
-    <section id="tariff-calculator" class="calc-section" style="max-width: 1040px; margin: 3rem auto; padding: 0 1rem;">
-      <div class="calc-card" style="background: #ffffff; border: 1.5px solid rgba(74, 107, 80, 0.18); border-radius: 28px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
-        <div style="text-align: center; margin-bottom: 2rem;">
-          <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #233827; display: block; margin-bottom: 0.4rem;">💳 Flexible Access Tariffs</span>
-          <h2 style="font-family: 'Playfair Display', 'Fraunces', serif; font-size: 2rem; margin-bottom: 0.5rem; color: #2a2a2a;">Event Passes &amp; Price Calculator</h2>
-          <p style="color: #5c5957; max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.5;">
+    <section id="tariff-calculator" class="calc-section">
+      <div class="calc-card">
+        <div class="calc-header-box">
+          <span class="calc-tag">💳 Flexible Access Tariffs</span>
+          <h2 class="calc-title">Event Passes &amp; Price Calculator</h2>
+          <p class="calc-subtitle">
             Select your level and desired plan to calculate your weekly/monthly live session access rights, cost per session, and savings. Max 10 participants per session.
           </p>
         </div>
 
         <!-- Configurator controls bar -->
-        <div class="calc-chips-bar" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 2rem; background: #FAF7F2; padding: 1rem 1.5rem; border-radius: 20px; border: 1px solid rgba(74, 107, 80, 0.15);">
-          <div class="calc-chip-item" style="display: flex; align-items: center; gap: 0.5rem; background: #fff; padding: 0.5rem 1rem; border-radius: 12px; border: 1px solid rgba(74, 107, 80, 0.15);">
-            <span class="chip-lbl" style="font-size: 0.75rem; font-weight: 800; color: #5c5957;">1. LEVEL:</span>
-            <select id="calc-level-select" class="calc-chip-select" style="border: none; background: transparent; font-weight: 700; color: #2a2a2a; font-size: 0.9rem; cursor: pointer;">
+        <div class="calc-chips-bar">
+          <div class="calc-chip-item">
+            <span class="chip-lbl">1. LEVEL:</span>
+            <select id="calc-level-select" class="calc-chip-select">
               <option value="beginner">🌱 Beginner (A0–A1)</option>
               <option value="intermediate" selected>🚀 Intermediate (B1–B2)</option>
               <option value="advanced">🧠 Advanced (C1–C2)</option>
             </select>
           </div>
 
-          <div class="calc-chip-item" style="display: flex; align-items: center; gap: 0.5rem; background: #fff; padding: 0.5rem 1rem; border-radius: 12px; border: 1px solid rgba(74, 107, 80, 0.15);">
-            <span class="chip-lbl" style="font-size: 0.75rem; font-weight: 800; color: #5c5957;">2. TARIFF PLAN:</span>
-            <select id="calc-plan-select" class="calc-chip-select" style="border: none; background: transparent; font-weight: 700; color: #2a2a2a; font-size: 0.9rem; cursor: pointer;">
-              <option value="single">🎁 Single Session Pass (1st Session FREE!)</option>
-              <option value="week">⚡ 1-Week Pass (€15 / week)</option>
-              <option value="month" selected>⭐ 1-Month Pass (€45 / month - Best Value)</option>
+          <div class="calc-chip-item">
+            <span class="chip-lbl">2. TARIFF PLAN:</span>
+            <select id="calc-plan-select" class="calc-chip-select">
+              <option value="single">Single session (first one free)</option>
+              <option value="week">1-Week Pass (€15)</option>
+              <option value="month" selected>1-Month Pass (€45, best value)</option>
             </select>
           </div>
         </div>
 
         <!-- Output Result Display Box -->
-        <div id="calc-result-display" class="calc-result-box" style="background: linear-gradient(135deg, #375742, #233827); color: white; border-radius: 24px; padding: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">
-          <div style="flex: 1; min-width: 260px;">
-            <div style="display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.5rem;">
-              <span id="calc-price-display" style="font-size: 2.8rem; font-weight: 800; font-family: 'Fraunces', serif; line-height: 1;">€45</span>
-              <span id="calc-billing-period" style="font-size: 0.9rem; opacity: 0.85; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em;">/ month</span>
+        <div id="calc-result-display" class="calc-result-box">
+          <div class="calc-result-left">
+            <div class="calc-price-row">
+              <span id="calc-price-display" class="calc-price-num">€45</span>
+              <span id="calc-billing-period" class="calc-price-period">/ month</span>
             </div>
-            <h4 id="calc-plan-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff;">1-Month Pass • Intermediate (B1–B2)</h4>
-            <p id="calc-plan-desc" style="font-size: 0.9rem; opacity: 0.9; line-height: 1.5; margin-bottom: 0.75rem;">
-              Unlimited access to <strong>up to 14 live events/month</strong> (8 Intermediate Clubs 2x/wk, 4 Karaoke Nights 1x/wk, 1 Film Night, 1 Game Evening).
+            <h3 id="calc-plan-title" class="calc-result-title">1-Month Pass • Intermediate (B1–B2)</h3>
+            <p id="calc-plan-desc" class="calc-result-desc">
+              Access to all live sessions at your level for one month, up to 14 in a typical month (8 Speaking Clubs at 2 a week, 4 Karaoke Nights, 1 Film Night and 1 Game Evening). Includes session decks, correction notes and COSY Passport progress backup.
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.8rem; font-weight: 700;">
-              <span style="background: rgba(255,255,255,0.18); padding: 4px 10px; border-radius: 12px;" id="calc-unit-price">~€3.21 per session</span>
-              <span style="background: rgba(255,255,255,0.18); padding: 4px 10px; border-radius: 12px;">Max 10 people/session</span>
-              <span style="background: rgba(255,255,255,0.18); padding: 4px 10px; border-radius: 12px;">handcrafted Decks + Teacher Notes</span>
+            <div class="calc-pills-row">
+              <span id="calc-unit-price" class="calc-badge">≈ €3.21 per session if you attend all 14 (about 60% less than single sessions)</span>
+              <span class="calc-badge">Max 10 people per session</span>
+              <span class="calc-badge">handcrafted Decks + Teacher Notes</span>
             </div>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 0.75rem; min-width: 220px;">
-            <a id="calc-wa-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20reserve%20a%201-Month%20Pass%20(Intermediate%20B1-B2)." target="_blank" rel="noopener" style="background: #25D366; color: white; width: 100%; text-align: center; justify-content: center; font-weight: 800; border: none; padding: 0.8rem 1.2rem; border-radius: 100px; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box;">💬 Claim Pass via WhatsApp</a>
-            <a id="calc-tg-btn" href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; width: 100%; text-align: center; justify-content: center; font-weight: 700; padding: 0.7rem 1.2rem; border-radius: 100px; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box;">✈️ Ask on Telegram</a>
+          <div class="calc-result-right">
+            <a id="calc-wa-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20reserve%20a%201-Month%20Pass%20(Intermediate%20B1-B2)." target="_blank" rel="noopener" class="calc-btn-wa">💬 Claim Pass via WhatsApp</a>
+            <a id="calc-tg-btn" href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener" class="calc-btn-tg">✈️ Ask on Telegram</a>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Live Events Section -->
-    <section class="live-events-section" style="margin-top: 3rem;">
-      <div class="live-events-container">
-        <div class="live-events-left">
-          <h2 class="live-events-heading">Live Events &amp; Interactive Clubs</h2>
-          <p class="live-events-subtext">Organised sessions with native teachers, speaking clubs on real topics, original language cinema, karaoke, and interactive games.</p>
-        </div>
-        <div class="live-events-right">
-          <div class="live-event-card card-speaking">
-            <div class="live-card-icon">💬</div>
-            <h3 class="live-card-title">Speaking Club</h3>
-            <p class="live-card-desc">Topic-driven group discussions with level calibration</p>
-            <a href="speaking-clubs.html" class="live-card-cta">Join next club →</a>
-          </div>
-          <div class="live-event-card card-cinema">
-            <div class="live-card-icon">🎬</div>
-            <h3 class="live-card-title">Cinema Night</h3>
-            <p class="live-card-desc">Original-language film screenings &amp; scene study</p>
-            <a href="cinema-club.html" class="live-card-cta">Reserve your seat →</a>
-          </div>
-          <div class="live-event-card card-karaoke">
-            <div class="live-card-icon">🎤</div>
-            <h3 class="live-card-title">Karaoke Club</h3>
-            <p class="live-card-desc">Singing sessions with guided lyric pronunciation &amp; vocabulary primers</p>
-            <a href="karaoke-club.html" class="live-card-cta">Explore Karaoke →</a>
-          </div>
-          <div class="live-event-card card-games">
-            <div class="live-card-icon">🎲</div>
-            <h3 class="live-card-title">Game Evenings</h3>
-            <p class="live-card-desc">Polyglot board games, trivia nights, and social language challenges</p>
-            <a href="game-evenings.html" class="live-card-cta">Play together →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quick Sections Grid -->
-    <section class="hub-section-header" style="margin-top: 3rem;">
-      <h2 class="hub-section-title">Event Portals & Hubs</h2>
-      <p class="hub-section-desc">Explore targeted event categories and registration channels.</p>
-    </section>
-
-    <div class="events-grid">
-      <a href="speaking-clubs/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-speech" aria-hidden="true"></span>
-          <span class="event-badge">Discussion</span>
-        </div>
-        <h3 class="event-name">Speaking Clubs</h3>
-        <p class="event-description">Topic-driven discussion sessions with CEFR level calibration and vocabulary decks.</p>
-        <div class="event-card-footer"><span>Explore Speaking Clubs</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="cinema-club.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-film" aria-hidden="true"></span>
-          <span class="event-badge">Cinema</span>
-        </div>
-        <h3 class="event-name">Cinema Nights</h3>
-        <p class="event-description">Movie screenings, scene study, vocabulary primers, and discussion notes.</p>
-        <div class="event-card-footer"><span>Explore Cinema Nights</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="teacher-led-sessions/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-book" aria-hidden="true"></span>
-          <span class="event-badge">Guided</span>
-        </div>
-        <h3 class="event-name">Teacher Sessions</h3>
-        <p class="event-description">Special sessions led by native COSYlanguages teachers & 1-on-1 scheduling.</p>
-        <div class="event-card-footer"><span>Explore Teacher Sessions</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="special-events/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-dice" aria-hidden="true"></span>
-          <span class="event-badge">Interactive</span>
-        </div>
-        <h3 class="event-name">Special Events</h3>
-        <p class="event-description">Interactive games, cultural celebrations, polyglot trivia, and workshops.</p>
-        <div class="event-card-footer"><span>Explore Special Events</span><span class="arrow">→</span></div>
-      </a>
-    </div>
   </main>
 
   <!-- Event Detail Modal -->
   <div id="event-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-event-title" aria-hidden="true">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 id="modal-event-title" class="event-card-title" style="margin:0;">Event Details</h3>
+        <h3 id="modal-event-title" class="event-card-title">Event Details</h3>
         <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">×</button>
       </div>
       <div class="modal-body">
-        <div id="modal-event-meta" style="margin-bottom: 1rem;"></div>
-        <p id="modal-event-desc" style="margin-bottom: 1rem; color: var(--cosy-text);"></p>
+        <div id="modal-event-meta"></div>
+        <p id="modal-event-desc"></p>
         <div id="modal-event-host" class="event-host-info"></div>
         <div id="modal-timezone-box" class="timezone-converter-box"></div>
         <div class="modal-actions">
@@ -276,8 +274,13 @@
   </div>
 
   <footer class="hub-footer">
-    <p>COSYevents &copy; COSYlanguages Ecosystem. All event registrations flow to main hub.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+    <p class="footer-messaging-line">
+      Join by messaging us on <a href="https://wa.me/330766784195" target="_blank" rel="noopener">WhatsApp</a> or <a href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener">Telegram</a>
+    </p>
+    <p class="footer-ecosystem-line">
+      COSYevents &copy; <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages</a> Ecosystem &bull; <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a> &bull; <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>
+    </p>
+    <p class="footer-privacy-line">
       <a href="privacy.html">Privacy &amp; legal notice</a>
     </p>
   </footer>
@@ -314,27 +317,26 @@
           let waMessage = `Hi! I'd like to reserve a 1-Month Pass (${levelLabel}).`;
 
           if (plan === 'single') {
-            priceStr = '€0';
-            periodStr = '1st session free';
-            planTitle = `Free Trial Session Pass • ${levelLabel}`;
-            planDesc = `Join 1 live session of your choice for free (€0). If you love it, single sessions thereafter are only €8/session.`;
-            unitPrice = 'First Session FREE (€0)';
-            waMessage = `Hi! I'd like to claim my Free Trial Session (${levelLabel}).`;
+            priceStr = '€8';
+            periodStr = '/ session';
+            planTitle = `Single Session • ${levelLabel}`;
+            planDesc = `Join one live session of your choice. Your first session is free; after that, single sessions are €8 each.`;
+            unitPrice = 'First session free, then €8';
+            waMessage = `Hi! I'd like to book my free first session (${levelLabel}).`;
           } else if (plan === 'week') {
             priceStr = '€15';
             periodStr = '/ week';
-            planTitle = `1-Week Unlimited Pass • ${levelLabel}`;
-            planDesc = `Unlimited access to all live sessions of your level for 7 days (e.g., 2 Speaking Clubs + 1 Karaoke Night).`;
-            unitPrice = '~€5.00 per session';
+            planTitle = `1-Week Pass • ${levelLabel}`;
+            planDesc = `Access to all live sessions at your level for 7 days, for example 2 Speaking Clubs and 1 Karaoke Night.`;
+            unitPrice = '≈ €5 per session if you attend 3';
             waMessage = `Hi! I'd like to reserve a 1-Week Pass (${levelLabel}).`;
           } else if (plan === 'month') {
             priceStr = '€45';
             periodStr = '/ month';
             planTitle = `1-Month Pass • ${levelLabel}`;
-            let sessionCount = 'up to 14 live sessions/month (8 Speaking Clubs 2x/wk, 4 Karaoke Nights 1x/wk, 1 Film Night, 1 Game Evening)';
-            if (level === 'beginner') sessionCount = 'up to 14 live sessions/month (8 Basic Clubs 2x/wk, 4 Karaoke Nights, 1 Film Night, 1 Game Evening)';
-            planDesc = `Unlimited monthly access to ${sessionCount}. Includes session decks, teacher correction notes, and COSY Passport progress backup.`;
-            unitPrice = '~€3.21 per session (Save 60%)';
+            const clubsText = level === 'beginner' ? '8 Basic Speaking Clubs' : '8 Speaking Clubs';
+            planDesc = `Access to all live sessions at your level for one month, up to 14 in a typical month (${clubsText} at 2 a week, 4 Karaoke Nights, 1 Film Night and 1 Game Evening). Includes session decks, correction notes and COSY Passport progress backup.`;
+            unitPrice = '≈ €3.21 per session if you attend all 14 (about 60% less than single sessions)';
             waMessage = `Hi! I'd like to reserve a 1-Month Pass (${levelLabel}).`;
           }
 
