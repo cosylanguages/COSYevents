@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join an authenticated COSYevents speaking club video session.">
+  <title>Live Speaking Clubs | COSYevents</title>
+  <link rel="stylesheet" href="shared/css/hub.css">
+  <link rel="stylesheet" href="shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="styles/live-classroom.css">
+</head>
+<body>
+  <div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
+    <div class="cosy-strip-inner">
+      <span class="cosy-strip-brand">COSY Ecosystem</span>
+      <ul class="cosy-strip-links">
+        <li><a href="https://cosylanguages.github.io/COSYlanguages/">COSYlanguages</a></li>
+        <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools</a></li>
+        <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames</a></li>
+        <li><a href="index.html" class="active">COSYevents</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="live-header">
+    <a class="live-brand" href="index.html">COSYevents <span>Live speaking clubs</span></a>
+    <a class="live-back-link" href="speaking-clubs/index.html">Speaking clubs</a>
+  </header>
+
+  <main class="live-main">
+    <section class="live-intro">
+      <p class="live-eyebrow">COSYevents · SPEAKING CLUBS</p>
+      <h1>Join the conversation</h1>
+      <p>Sign in to see your booked sessions and enter the live room.</p>
+      <div id="live-status" class="live-status" role="status" aria-live="polite">Checking live classroom configuration…</div>
+    </section>
+
+    <section id="live-auth-panel" class="live-panel" hidden>
+      <h2>Student sign in</h2>
+      <p>Use your COSYlanguages student account. Access is checked against your session entitlement.</p>
+      <form id="live-login-form">
+        <label for="live-email">Email</label>
+        <input id="live-email" name="email" type="email" autocomplete="username" required>
+        <label for="live-password">Password</label>
+        <input id="live-password" name="password" type="password" autocomplete="current-password" required>
+        <button id="live-login-button" type="submit" disabled>Sign in</button>
+      </form>
+      <p class="live-help">Accounts are managed by COSYlanguages. No account creation happens on this page.</p>
+    </section>
+
+    <section id="live-session-panel" class="live-session-panel" hidden>
+      <div class="live-session-toolbar">
+        <div>
+          <h2>Your live sessions</h2>
+          <p id="live-user-label"></p>
+        </div>
+        <button id="live-refresh-button" type="button">Refresh</button>
+      </div>
+      <div id="live-meeting-list" class="live-meeting-list" aria-live="polite"></div>
+    </section>
+
+    <section id="live-room-panel" class="live-room-panel" hidden>
+      <div class="live-room-heading">
+        <div>
+          <p class="live-eyebrow">LIVE ROOM</p>
+          <h2 id="live-room-title">Speaking Club</h2>
+          <p id="live-room-details"></p>
+        </div>
+        <button id="live-leave-button" type="button">Leave session</button>
+      </div>
+      <div class="live-room-layout">
+        <div class="live-video-frame">
+          <div id="jaas-container" aria-label="COSYevents video call"></div>
+          <div id="live-video-placeholder" class="live-video-placeholder">
+            <span class="live-camera-icon" aria-hidden="true">◉</span>
+            <p>Your video room will appear here after you join.</p>
+          </div>
+        </div>
+        <aside class="live-room-tools">
+          <section class="live-breakout-tools">
+            <h3>Breakout rooms</h3>
+            <p id="breakout-status">The host has not opened breakout rooms yet.</p>
+            <div id="breakout-room-list"></div>
+          </section>
+          <section id="host-tools" class="live-host-tools" hidden>
+            <button id="create-breakouts-button" type="button">Create 2 breakout rooms</button>
+            <div id="participant-list"></div>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="live-footer">
+    <a href="privacy.html">Privacy &amp; legal notice</a>
+    <span>Video rooms are private and require an active session entitlement.</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="shared/js/cosy-supabase-config.js"></script>
+  <script src="shared/js/live-classroom.js" defer></script>
+</body>
+</html>
