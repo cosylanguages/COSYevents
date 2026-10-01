@@ -48,7 +48,7 @@
     <section class="calendar-section">
       <h2 class="section-title">Upcoming Masterclasses</h2>
 
-      <div class="upcoming-events-grid">
+      <div class="upcoming-events-grid" data-upcoming-events data-event-type="teacher-session" aria-live="polite" hidden>
         <div class="event-card-item">
           <div class="event-meta-header">
             <span class="type-pill badge-teacher-session">Teacher Session</span>
@@ -135,6 +135,8 @@
     </p>
   </footer>
 
+  <noscript><p>Enable JavaScript to load current sessions, or <a href="../index.html#calendar-controls">view the full calendar</a>.</p></noscript>
   <script src="../shared/js/cosyevents-lang.js" defer></script>
+  <script src="../shared/js/upcoming-events.js" defer></script>
 </body>
 </html>

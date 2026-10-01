@@ -51,7 +51,7 @@ function parseSessionHtml(htmlContent) {
   // Meta grid
   let duration = '60 minutes';
   let languages = '🇬🇧 English';
-  let level = 'Intermediate (B1)';
+  let level = '';
   let topic = '';
   let theme = '';
   let resources = '';

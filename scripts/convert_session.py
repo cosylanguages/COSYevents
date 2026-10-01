@@ -33,7 +33,10 @@ def convert_session(session_file, out_dir="output"):
 
     session_id = session.get("session_id", "session-unknown")
     title = session.get("title", "Untitled Session")
-    level = session.get("level", "B1")
+    level = str(session.get("level") or "").strip()
+    if not level:
+      print("Error: An explicit session level is required before conversion.", file=sys.stderr)
+      sys.exit(1)
     language = session.get("language", "en")
     summary = session.get("summary", "")
     key_vocab = session.get("key_vocabulary", [])

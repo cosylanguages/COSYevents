@@ -523,10 +523,11 @@ function updateCatalog(clubSlug, slug, sessionData) {
   const sessionsJsonPath = path.join(__dirname, '../data/sessions.json');
   if (fs.existsSync(sessionsJsonPath)) {
     let sessions = JSON.parse(fs.readFileSync(sessionsJsonPath, 'utf8'));
-    let levelCode = 'B1';
+    let levelCode = '';
     if (sessionData.level) {
-      const match = sessionData.level.match(/\b(A[0-2]|B[1-2]|C[1-2])\b/i);
-      if (match) levelCode = match[1].toUpperCase();
+      const levels = [...new Set(sessionData.level.match(/\b(A[0-2]|B[1-2]|C[1-2])\b/gi) || [])]
+        .map(level => level.toUpperCase());
+      if (levels.length > 0) levelCode = levels.join('-');
     }
 
     const existingIndex = sessions.findIndex(item => item.href === relHtmlPath);

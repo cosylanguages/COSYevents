@@ -9,6 +9,9 @@
     "check-i18n": "node scripts/build_localized_manifest.js --check",
     "test-lang": "node scripts/test_lang.js",
     "test-calendar-i18n": "node scripts/test_calendar_i18n.js",
+    "test:private-export": "node scripts/test_private_export.js",
+    "test:hubs": "node scripts/test_hubs_visual.js",
+    "export:private-sessions": "node scripts/export_private_sessions.js",
     "set-contact": "node scripts/set_contact.js",
     "check-contact": "node scripts/set_contact.js --check",
     "publish:supabase": "node scripts/publish_to_supabase.js"
@@ -17,5 +20,9 @@
     "@supabase/supabase-js": "^2.39.0",
     "dotenv": "^16.4.5",
     "js-yaml": "^5.4.2"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "playwright": "^1.63.0"
   }
 }

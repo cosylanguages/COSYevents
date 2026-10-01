@@ -81,7 +81,7 @@
       // Extract unique languages and formats from sessions
       const languages = Array.from(new Set(this.sessions.map(s => s.lang).filter(Boolean))).sort();
       const formats = Array.from(new Set(this.sessions.map(s => s.format).filter(Boolean))).sort();
-      const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+      const levels = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
       this.container.innerHTML = `
         <div class="sd-container">
@@ -145,6 +145,14 @@
                   ${lvl}
                 </button>
               `).join('')}
+              <button
+                type="button"
+                class="sd-pill"
+                data-level="UNSPECIFIED"
+                aria-pressed="false"
+              >
+                Not specified
+              </button>
             </div>
           </section>
 
@@ -344,11 +352,15 @@
 
         // Level filter
         if (selectedLevel !== null) {
-          const sessionLevel = session.level ? String(session.level).trim() : null;
-          if (Array.isArray(selectedLevel)) {
-            if (!sessionLevel || !selectedLevel.includes(sessionLevel)) return false;
+          const sessionLevels = session.level
+            ? String(session.level).match(/\b(A0|A1|A2|B1|B2|C1|C2)\b/g) || []
+            : [];
+          if (selectedLevel === 'UNSPECIFIED') {
+            if (sessionLevels.length > 0) return false;
+          } else if (Array.isArray(selectedLevel)) {
+            if (!sessionLevels.some(level => selectedLevel.includes(level))) return false;
           } else {
-            if (sessionLevel !== selectedLevel) return false;
+            if (!sessionLevels.includes(selectedLevel)) return false;
           }
         }
 
