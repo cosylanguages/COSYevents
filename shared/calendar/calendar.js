@@ -322,14 +322,18 @@
       dayEvents.forEach(evt => {
         const marker = document.createElement('button');
         marker.type = 'button';
-        marker.className = `event-marker badge-${evt.type}`;
+
+        const startUtc = parseParisDateTime(evt.date, evt.time);
+        const isEnded = startUtc && (startUtc < today);
+
+        marker.className = `event-marker badge-${evt.type}${isEnded ? ' ended-event' : ''}`;
 
         const titleText = getEventField(evt, 'title');
         const textContent = `${evt.time} ${titleText}`;
         marker.textContent = textContent;
 
         const langText = formatEventLanguage(evt.language || '');
-        const ariaLabelText = `${evt.time} ${evt.host || ''} - ${titleText}, ${langText} ${evt.level || ''}`.trim();
+        const ariaLabelText = `${evt.time} ${evt.host || ''} - ${titleText}, ${langText} ${evt.level || ''}${isEnded ? ' (' + t('event_ended_badge') + ')' : ''}`.trim();
         marker.setAttribute('aria-label', ariaLabelText);
         marker.setAttribute('title', textContent);
 
@@ -356,6 +360,7 @@
     const todayISO = formatDateISO(now);
     const nowTimeISO = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
 
+    // Filter OUT ended events for upcoming events list
     const upcoming = events
       .filter(evt => {
         const evtDateUtc = parseParisDateTime(evt.date, evt.time);
@@ -404,7 +409,7 @@
       const descText = getEventField(evt, 'description');
 
       const utcDate = parseParisDateTime(evt.date, evt.time);
-      const parisLabel = getParisZoneLabel(utcDate);
+      const parisLabel = getParisOffsetLabel(utcDate);
       const convertedTime = formatInTimezone(utcDate, userTimezone);
 
       let conversionBannerHtml = '';
@@ -432,19 +437,7 @@
         `;
       }
 
-      const capacity = evt.max_capacity || 10;
-      const seats = evt.available_seats !== undefined ? evt.available_seats : 6;
-      let capacityDot = '🟢';
-      let seatClass = 'seat-pill-ok';
-      if (seats <= 2) {
-        capacityDot = '🔥';
-        seatClass = 'seat-pill-low';
-      } else if (seats <= 4) {
-        capacityDot = '🟡';
-        seatClass = 'seat-pill-medium';
-      }
-      const seatsText = t('seats_left', { n: seats, total: capacity });
-      const capacityPill = `<span class="seat-pill ${seatClass}">${capacityDot} ${escapeHtml(seatsText)}</span>`;
+      const capacityPill = renderCapacityPill(evt);
 
       const regUrl = sanitizeUrl(evt.registration_link);
       const regButtonHtml = regUrl !== '#' ? `
@@ -490,6 +483,25 @@
     });
   }
 
+  function renderCapacityPill(evt) {
+    if (typeof evt.available_seats !== 'number') {
+      return ''; // Show NOTHING when seats are unknown
+    }
+    const seats = evt.available_seats;
+    const capacity = typeof evt.capacity === 'number' ? evt.capacity : (evt.max_capacity || 10);
+    let capacityDot = '🟢';
+    let seatClass = 'seat-pill-ok';
+    if (seats <= 2) {
+      capacityDot = '🔥';
+      seatClass = 'seat-pill-low';
+    } else if (seats <= 4) {
+      capacityDot = '🟡';
+      seatClass = 'seat-pill-medium';
+    }
+    const seatsText = t('seats_left', { n: seats, total: capacity });
+    return `<span class="seat-pill ${seatClass}">${capacityDot} ${escapeHtml(seatsText)}</span>`;
+  }
+
   function openEventModal(eventId) {
     const evt = allEvents.find(e => e.id === eventId);
     if (!evt) return;
@@ -512,12 +524,18 @@
     const descText = getEventField(evt, 'description');
     const hostBioText = getEventField(evt, 'host_bio') || 'COSYlanguages Facilitator';
 
+    const utcDate = parseParisDateTime(evt.date, evt.time);
+    const now = new Date();
+    const isEnded = utcDate && (utcDate < now);
+
     if (title) title.textContent = titleText;
     if (meta) {
+      const endedBadge = isEnded ? `<span class="pill-sm seat-pill-low" style="background:#FFF3CD; color:#856404; font-weight:700;">⌛ ${escapeHtml(t('event_ended_badge'))}</span>` : '';
       meta.innerHTML = `
         <span class="type-pill badge-${escapeAttribute(evt.type)}">${escapeHtml(formatTypeLabel(evt.type))}</span>
         <span class="pill-sm">${escapeHtml(formatEventLanguage(evt.language || ''))}</span>
         ${evt.level ? `<span class="pill-sm">${escapeHtml(evt.level)}</span>` : ''}
+        ${endedBadge}
       `;
     }
 
@@ -552,8 +570,7 @@
       host.innerHTML = `<strong>${escapeHtml(evt.host || '')}</strong> — ${escapeHtml(hostBioText)}`;
     }
 
-    const utcDate = parseParisDateTime(evt.date, evt.time);
-    const parisLabel = getParisZoneLabel(utcDate);
+    const parisLabel = getParisOffsetLabel(utcDate);
     const convertedTime = formatInTimezone(utcDate, userTimezone);
 
     if (timeBox) {
@@ -568,20 +585,27 @@
     }
 
     const regUrl = sanitizeUrl(evt.registration_link);
-    if (regBtn) {
-      regBtn.textContent = t('modal_register');
-      if (regUrl !== '#') {
-        regBtn.href = regUrl;
-        regBtn.style.display = 'inline-flex';
-      } else {
-        regBtn.style.display = 'none';
-      }
-    }
 
-    const gCalUrl = generateGoogleCalendarUrl(evt);
-    if (gcalBtn) {
-      gcalBtn.textContent = `📅 ${t('modal_gcal')}`;
-      gcalBtn.href = gCalUrl;
+    if (isEnded) {
+      if (regBtn) regBtn.style.display = 'none';
+      if (gcalBtn) gcalBtn.style.display = 'none';
+    } else {
+      if (regBtn) {
+        regBtn.textContent = t('modal_register');
+        if (regUrl !== '#') {
+          regBtn.href = regUrl;
+          regBtn.style.display = 'inline-flex';
+        } else {
+          regBtn.style.display = 'none';
+        }
+      }
+
+      const gCalUrl = generateGoogleCalendarUrl(evt);
+      if (gcalBtn) {
+        gcalBtn.textContent = `📅 ${t('modal_gcal')}`;
+        gcalBtn.href = gCalUrl;
+        gcalBtn.style.display = 'inline-flex';
+      }
     }
 
     overlay.classList.add('active');
@@ -700,28 +724,35 @@
     return res;
   }
 
-  function getParisZoneLabel(utcDate) {
-    const pageLang = getPageLang();
-    const fallbackLabel = t('paris_time');
-    if (!utcDate) return fallbackLabel;
+  function getParisOffsetLabel(utcDate) {
+    if (!utcDate) return 'CET';
     try {
-      const dtf = new Intl.DateTimeFormat(pageLang, {
+      const dtf = new Intl.DateTimeFormat('en-US', {
         timeZone: 'Europe/Paris',
-        timeZoneName: 'short'
+        timeZoneName: 'shortOffset'
       });
       const parts = dtf.formatToParts(utcDate);
       const tzPart = parts.find(p => p.type === 'timeZoneName');
-      return tzPart ? tzPart.value : fallbackLabel;
-    } catch (e) {
-      return fallbackLabel;
-    }
+      if (tzPart) {
+        if (tzPart.value.includes('+2') || tzPart.value.includes('CEST')) return 'CEST';
+        if (tzPart.value.includes('+1') || tzPart.value.includes('CET')) return 'CET';
+      }
+    } catch (e) {}
+    const m = utcDate.getUTCMonth();
+    return (m >= 3 && m <= 9) ? 'CEST' : 'CET';
   }
 
   function formatInTimezone(utcDate, targetTz) {
     if (!utcDate) return '';
     const pageLang = getPageLang();
+    const use12Hour = (pageLang === 'en');
     try {
-      return utcDate.toLocaleTimeString([pageLang], { hour: '2-digit', minute: '2-digit', timeZone: targetTz });
+      return utcDate.toLocaleTimeString([pageLang], {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: use12Hour,
+        timeZone: targetTz
+      });
     } catch (e) {
       return utcDate.toUTCString();
     }

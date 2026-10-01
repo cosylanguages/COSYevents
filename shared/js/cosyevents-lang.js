@@ -37,6 +37,77 @@
 
   var LANG_ORDER = ['en', 'fr', 'it', 'ru', 'el'];
 
+  var UI_STRINGS = {
+    en: {
+      practise_label: "Practise in",
+      menu_header: "Practise Languages",
+      trigger_aria: "All languages menu",
+      remove_btn: "Remove",
+      remove_aria: "Remove {name} from My Languages",
+      also_available: "Also available in:",
+      in_your_langs: "In your languages",
+      resume_text: "Continue in {lang} {flag} →",
+      dismiss_aria: "Dismiss"
+    },
+    fr: {
+      practise_label: "Je pratique :",
+      menu_header: "Langues pratiquées",
+      trigger_aria: "Menu de toutes les langues",
+      remove_btn: "Retirer",
+      remove_aria: "Retirer {name} de Mes langues",
+      also_available: "Aussi disponible en :",
+      in_your_langs: "Dans vos langues",
+      resume_text: "Continuer en {lang} {flag} →",
+      dismiss_aria: "Masquer"
+    },
+    it: {
+      practise_label: "Pratico :",
+      menu_header: "Lingue praticate",
+      trigger_aria: "Menu di tutte le lingue",
+      remove_btn: "Rimuovi",
+      remove_aria: "Rimuovi {name} dalle Mie lingue",
+      also_available: "Disponibile anche in:",
+      in_your_langs: "Nelle tue lingue",
+      resume_text: "Continua in {lang} {flag} →",
+      dismiss_aria: "Ignora"
+    },
+    ru: {
+      practise_label: "Я практикую:",
+      menu_header: "Языки практики",
+      trigger_aria: "Меню всех языков",
+      remove_btn: "Удалить",
+      remove_aria: "Удалить {name} из Моих языков",
+      also_available: "Также доступно на:",
+      in_your_langs: "В ваших языках",
+      resume_text: "Продолжить на {lang} {flag} →",
+      dismiss_aria: "Скрыть"
+    },
+    el: {
+      practise_label: "Εξασκούμαι σε:",
+      menu_header: "Γλώσσες εξάσκησης",
+      trigger_aria: "Μενού όλων των γλωσσών",
+      remove_btn: "Αφαίρεση",
+      remove_aria: "Αφαίρεση {name} από τις Γλώσσες μου",
+      also_available: "Διαθέσιμο επίσης σε:",
+      in_your_langs: "Στις γλώσσες σας",
+      resume_text: "Συνέχεια στα {lang} {flag} →",
+      dismiss_aria: "Απόκρυψη"
+    }
+  };
+
+  function getUiString(key, pageLang, vars) {
+    var dict = UI_STRINGS[pageLang] || UI_STRINGS.en;
+    var str = dict[key] || UI_STRINGS.en[key] || key;
+    if (vars && typeof vars === 'object') {
+      for (var v in vars) {
+        if (vars.hasOwnProperty(v)) {
+          str = str.replace(new RegExp('\\{' + v + '\\}', 'g'), vars[v]);
+        }
+      }
+    }
+    return str;
+  }
+
   function getScriptRoot() {
     if (typeof document === 'undefined') return './';
     var src = null;
@@ -199,7 +270,6 @@
       }
     }
 
-    // Step (a): Symmetric explicit mapping in aliases.json
     if (aliases && Array.isArray(aliases.groups)) {
       for (var i = 0; i < aliases.groups.length; i++) {
         var group = aliases.groups[i];
@@ -218,7 +288,6 @@
       }
     }
 
-    // Step (b): Same relative path under targetLang's folder
     var enRel = stripLangFolder(normCurrent);
     if (!enRel) enRel = 'index.html';
 
@@ -242,7 +311,6 @@
       return candidate;
     }
 
-    // Step (c): Fallback to targetLang's hub
     return hubFor(targetLang);
   }
 
@@ -421,7 +489,7 @@
     var displayChips = [].concat(myLangs);
 
     var html = '<div class="ce-lang-switcher" aria-label="Language">';
-    html += '<span class="ce-lang-label">Practise in</span>';
+    html += '<span class="ce-lang-label">' + getUiString('practise_label', currentLang) + '</span>';
 
     // Quick-switch Chips
     html += '<div class="ce-lang-chips">';
@@ -445,11 +513,11 @@
 
     // Dropdown Menu Trigger
     html += '<div class="ce-lang-menu-wrapper">';
-    html += '<button type="button" class="ce-lang-trigger" aria-expanded="false" aria-haspopup="true" aria-label="All languages menu">🌐</button>';
+    html += '<button type="button" class="ce-lang-trigger" aria-expanded="false" aria-haspopup="true" aria-label="' + getUiString('trigger_aria', currentLang) + '">🌐</button>';
 
     // Dropdown Menu Content
     html += '<div class="ce-lang-menu" role="menu" hidden>';
-    html += '<div class="ce-menu-header">Practise Languages</div>';
+    html += '<div class="ce-menu-header">' + getUiString('menu_header', currentLang) + '</div>';
 
     for (var j = 0; j < LANG_ORDER.length; j++) {
       var code = LANG_ORDER[j];
@@ -464,11 +532,12 @@
       html += '<a href="' + tHref + '" class="ce-menu-link" role="menuitem" data-lang="' + code + '">' +
               '<span class="ce-menu-flag">' + lCfg.flag + '</span> ' +
               '<span class="ce-menu-name">' + lCfg.nativeName + '</span>' +
-              (showCheckBadge ? ' <span class="ce-menu-badge" aria-label="In your languages">✓</span>' : '') +
+              (showCheckBadge ? ' <span class="ce-menu-badge" aria-label="' + getUiString('in_your_langs', currentLang) + '">✓</span>' : '') +
               '</a>';
 
       if (inMyLangs && myLangs.length > 1) {
-        html += '<button type="button" class="ce-lang-remove-btn" data-remove-lang="' + code + '" aria-label="Remove ' + lCfg.name + ' from My Languages">Remove</button>';
+        var removeAria = getUiString('remove_aria', currentLang, { name: lCfg.name });
+        html += '<button type="button" class="ce-lang-remove-btn" data-remove-lang="' + code + '" aria-label="' + removeAria + '">' + getUiString('remove_btn', currentLang) + '</button>';
       }
       html += '</div>';
     }
@@ -581,7 +650,7 @@
 
     var line = document.createElement('div');
     line.className = 'ce-also-available';
-    var innerHtml = '<span class="ce-aa-label">Also available in:</span> ';
+    var innerHtml = '<span class="ce-aa-label">' + getUiString('also_available', currentLang) + '</span> ';
     innerHtml += available.map(function (item) {
       return '<a href="' + item.href + '" class="ce-aa-link" data-lang="' + item.code + '">' +
                item.config.flag + ' ' + item.config.nativeName +
@@ -655,11 +724,13 @@
 
     var cfg = LANG_CONFIG[lastLang];
     var hubHref = relativeUrl(state.currentRelPath, hubFor(lastLang));
+    var resumeText = getUiString('resume_text', state.pageLang, { lang: cfg.nativeName, flag: cfg.flag });
+    var dismissAria = getUiString('dismiss_aria', state.pageLang);
 
     resumeElem.innerHTML =
       '<div class="ce-resume-line">' +
-        '<a href="' + hubHref + '" class="ce-resume-link">Continue in ' + cfg.nativeName + ' ' + cfg.flag + ' →</a>' +
-        '<button type="button" class="ce-resume-dismiss-btn" aria-label="Dismiss">×</button>' +
+        '<a href="' + hubHref + '" class="ce-resume-link">' + resumeText + '</a>' +
+        '<button type="button" class="ce-resume-dismiss-btn" aria-label="' + dismissAria + '">×</button>' +
       '</div>';
 
     var dismissBtn = resumeElem.querySelector('.ce-resume-dismiss-btn');
@@ -708,6 +779,8 @@
     init: init,
     LANG_CONFIG: LANG_CONFIG,
     LANG_ORDER: LANG_ORDER,
+    UI_STRINGS: UI_STRINGS,
+    getUiString: getUiString,
     getMyLangs: getMyLangs,
     setMyLangs: setMyLangs,
     addMyLang: addMyLang,

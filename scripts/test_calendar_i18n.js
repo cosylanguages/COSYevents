@@ -80,4 +80,32 @@ for (const [englishName, testInfo] of Object.entries(langMap)) {
 }
 console.log('✔ Passed Intl.DisplayNames tests.');
 
+// Test 5: CET / CEST Europe/Paris Offset Label Calculation
+console.log('\nTest 5: CET / CEST Europe/Paris Timezone Label Calculation');
+
+function getParisOffsetLabel(dateObj) {
+  if (!dateObj) return 'CET';
+  try {
+    const dtf = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'Europe/Paris',
+      timeZoneName: 'shortOffset'
+    });
+    const parts = dtf.formatToParts(dateObj);
+    const tzPart = parts.find(p => p.type === 'timeZoneName');
+    if (tzPart) {
+      if (tzPart.value.includes('+2') || tzPart.value.includes('CEST')) return 'CEST';
+      if (tzPart.value.includes('+1') || tzPart.value.includes('CET')) return 'CET';
+    }
+  } catch (e) {}
+  const m = dateObj.getUTCMonth();
+  return (m >= 3 && m <= 9) ? 'CEST' : 'CET';
+}
+
+const cestDate = new Date('2026-10-02T12:00:00Z');
+const cetDate = new Date('2027-01-15T12:00:00Z');
+
+assert.strictEqual(getParisOffsetLabel(cestDate), 'CEST', '2026-10-02 must return CEST');
+assert.strictEqual(getParisOffsetLabel(cetDate), 'CET', '2027-01-15 must return CET');
+console.log('✔ Passed CET / CEST offset label tests.');
+
 console.log('\n=== ALL CALENDAR I18N UNIT TESTS PASSED SUCCESSFULLY! ===\n');
