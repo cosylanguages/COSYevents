@@ -440,15 +440,32 @@
 
   // Lighter Footer Note for Gated Session Pages
   function renderGatedFooterNote() {
-    if (document.querySelector('.cosy-gated-ecosystem-note')) return;
     var footer = document.querySelector('footer');
-    if (!footer) return;
+    if (!footer) {
+      footer = document.createElement('footer');
+      footer.className = 'hub-footer';
+      document.body.appendChild(footer);
+    }
 
-    var note = document.createElement('div');
-    note.className = 'cosy-gated-ecosystem-note';
-    note.innerHTML = 'Part of the <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages</a> ecosystem &bull; Explore <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a> &bull; <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>';
+    if (!document.querySelector('.cosy-gated-ecosystem-note')) {
+      var note = document.createElement('div');
+      note.className = 'cosy-gated-ecosystem-note';
+      note.innerHTML = 'Part of the <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages</a> ecosystem &bull; Explore <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a> &bull; <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>';
+      footer.appendChild(note);
+    }
 
-    footer.appendChild(note);
+    if (!document.querySelector('.ce-privacy-footer-link')) {
+      var currentPath = window.location.pathname;
+      var pageLang = (window.CosyLang && window.CosyLang.detectPageLang) ? window.CosyLang.detectPageLang(currentPath) : (currentPath.indexOf('/fr/') !== -1 ? 'fr' : 'en');
+      var privacyUrl = (pageLang === 'fr') ? (root + 'fr/privacy.html') : (root + 'privacy.html');
+      var privacyText = (pageLang === 'fr') ? 'Politique de confidentialité &amp; mentions légales' : 'Privacy &amp; legal notice';
+
+      var linkContainer = document.createElement('div');
+      linkContainer.className = 'ce-privacy-footer-link';
+      linkContainer.style.cssText = 'margin-top: 0.5rem; font-size: 0.85rem; text-align: center;';
+      linkContainer.innerHTML = '<a href="' + privacyUrl + '">' + privacyText + '</a>';
+      footer.appendChild(linkContainer);
+    }
   }
 
   // Auto-load wonder-voiceover.js if wonder audio placeholder is present
