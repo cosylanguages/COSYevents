@@ -16,3 +16,4 @@ jobs:
           node-version: 20
       - run: npm run check-i18n
       - run: npm run test-lang
+      - run: npm run test-calendar-i18n

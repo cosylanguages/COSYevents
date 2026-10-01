@@ -63,6 +63,33 @@ Finished live sessions can be converted into structured lessons for **COSYplatfo
 
 ---
 
+## 🌐 Translating Events & Calendar UI
+
+COSYevents supports multi-language calendar UI rendering across English, French, Italian, Russian, and Greek via `shared/calendar/calendar-i18n.js` and dynamic browser `Intl` APIs in `shared/calendar/calendar.js`.
+
+### Optional Per-Event Translations in `events.json`
+Individual event records in `shared/calendar-data/events.json` can include optional per-language overrides under an `i18n` object. If present for the current page language, `calendar.js` will display the localized title, description, or host bio; otherwise it seamlessly falls back to English:
+
+```json
+{
+  "id": "event-123",
+  "title": "4-Day Work Week Debate",
+  "description": "Discussing productivity, work-life balance, and trial results.",
+  "i18n": {
+    "fr": {
+      "title": "La semaine de 4 jours",
+      "description": "Équilibre vie pro-vie privée, essais pilotes et productivité."
+    },
+    "ru": {
+      "title": "4-дневная рабочая неделя",
+      "description": "Баланс работы и жизни, пилотные проекты и производительность."
+    }
+  }
+}
+```
+
+---
+
 ## 🚀 Running Locally
 
 Open `index.html` or `events/index.html` directly in any web browser or serve with any static HTTP server. No Node.js build step or backend database required!
