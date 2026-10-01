@@ -1,3 +1,17 @@
 {
-  "groups": []
+  "groups": [
+    {
+      "en": "sessions/debatable-relatable/4-day-work-week.html",
+      "fr": "fr/sessions/debatable-relatable/la-semaine-de-4-jours.html",
+      "ru": "ru/sessions/debatable-relatable/4-dnevnaya-rabochaya-nedelya.html"
+    },
+    {
+      "en": "sessions/debatable-relatable/assisted-dying.html",
+      "fr": "fr/sessions/debatable-relatable/l-aide-active-a-mourir.html"
+    },
+    {
+      "en": "sessions/the-greatest-quotes/wisdom-of-socrates.html",
+      "fr": "fr/sessions/the-greatest-quotes/la-sagesse-de-socrate.html"
+    }
+  ]
 }

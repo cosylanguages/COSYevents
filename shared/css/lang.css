@@ -4,10 +4,11 @@
   --ce-lang-bg: var(--warm-white, #FFFEFB);
   --ce-lang-border: var(--border, #E2DED9);
   --ce-lang-text: var(--ink, #2C2825);
-  --ce-lang-muted: var(--muted, #6E6862);
+  --ce-lang-muted: var(--muted, #5C5957);
   --ce-lang-active-bg: var(--sage-deep, #233827);
   --ce-lang-active-text: #FFFFFF;
   --ce-lang-accent: var(--teal, #0F6E56);
+  --ce-lang-label-color: #3D3935;
 }
 
 [data-theme="dark"] {
@@ -18,6 +19,7 @@
   --ce-lang-active-bg: #7C5CFC;
   --ce-lang-active-text: #FFFFFF;
   --ce-lang-accent: #9D84FF;
+  --ce-lang-label-color: #F3F0FF;
 }
 
 /* --- Language Switcher Control --- */
@@ -35,10 +37,14 @@
 .ce-lang-label {
   font-weight: 700;
   font-size: 0.78rem;
-  color: var(--ce-lang-muted);
+  color: var(--ce-lang-label-color);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   white-space: nowrap;
+}
+
+.hub-header .ce-lang-label {
+  color: #FAF7F2; /* High contrast (12:1) on dark green hub header */
 }
 
 .ce-lang-chips {
@@ -183,13 +189,9 @@
 }
 
 .ce-menu-badge {
-  font-size: 0.65rem;
-  font-weight: 700;
-  background: var(--ce-lang-accent);
-  color: #FFF;
-  padding: 0.1rem 0.4rem;
-  border-radius: 4px;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ce-lang-accent);
   margin-left: auto;
 }
 
@@ -332,6 +334,6 @@
 /* Mobile Responsiveness (390px) */
 @media (max-width: 480px) {
   .ce-lang-chips .ce-lang-chip:nth-child(n+4) {
-    display: none; /* Hide 4th+ chip on narrow mobile view, accessible via 🌐 dropdown */
+    display: none;
   }
 }
