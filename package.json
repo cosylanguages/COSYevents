@@ -10,6 +10,7 @@
     "test-lang": "node scripts/test_lang.js",
     "test-calendar-i18n": "node scripts/test_calendar_i18n.js",
     "test:private-export": "node scripts/test_private_export.js",
+    "test:video-meetings": "bash scripts/test_video_meetings_schema.sh",
     "test:hubs": "node scripts/test_hubs_visual.js",
     "export:private-sessions": "node scripts/export_private_sessions.js",
     "set-contact": "node scripts/set_contact.js",

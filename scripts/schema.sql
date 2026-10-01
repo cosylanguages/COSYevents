@@ -120,8 +120,9 @@ DROP POLICY IF EXISTS "Students can view entitled session sources" ON public.ses
 DROP POLICY IF EXISTS "Founders and teachers can view session sources" ON public.session_sources;
 DROP POLICY IF EXISTS "Founder and hosts can insert and update session content" ON public.session_content;
 DROP POLICY IF EXISTS "Founder and teachers can insert and update session content" ON public.session_content;
-DROP POLICY IF EXISTS "Founders and hosts can insert and update their own session content" ON public.session_content;
-DROP POLICY IF EXISTS "Founders and teachers can insert and update their own session content" ON public.session_content;
+DROP POLICY IF EXISTS "Founders and hosts can insert and update their own session cont" ON public.session_content;
+DROP POLICY IF EXISTS "Founders and teachers can insert and update their own session c" ON public.session_content;
+DROP POLICY IF EXISTS "Hosts can manage session content" ON public.session_content;
 
 -- Policy 1: Founders can view all session content
 CREATE POLICY "Founders can view all session content"
@@ -164,7 +165,7 @@ CREATE POLICY "Students can view entitled session content"
   );
 
 -- Policy 4: Founders and teachers can insert and update their own session content
-CREATE POLICY "Founders and teachers can insert and update their own session content"
+CREATE POLICY "Hosts can manage session content"
   ON public.session_content
   FOR ALL
   USING (
