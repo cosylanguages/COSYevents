@@ -213,6 +213,8 @@
 
 /* --- Also Available In Line --- */
 .ce-also-available {
+  width: 100%;
+  flex-basis: 100%;
   background: var(--cream-dark, #F5F1E8);
   border: 1px solid var(--border, #E2DED9);
   border-radius: 10px;
@@ -224,6 +226,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 0.4rem;
+  box-sizing: border-box;
 }
 
 .ce-aa-label {
