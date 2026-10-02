@@ -1048,6 +1048,14 @@ html[data-theme="dark"] .wonder-polaroid-frame {
 
 /* ─── CLASS-BASED BACKGROUND GRADIENTS FOR SESSION HEROS ─── */
 
+body[class*="theme-wonder-"] {
+  --wonder-theme-hero: linear-gradient(135deg, #1E1B4B, #0F0E26);
+}
+
+body[class*="theme-wonder-"] .session-hero {
+  background: var(--wonder-theme-hero, linear-gradient(135deg, #1E1B4B, #0F0E26)) !important;
+}
+
 body.theme-wonder-organic .session-hero {
   background: linear-gradient(135deg, #422006, #1C1917) !important; /* Sun-dappled rich wood, cider apples */
   border-bottom: 2px solid #CA8A04;

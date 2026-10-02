@@ -3610,7 +3610,7 @@ vim-choice { margin-bottom: 1.5rem; }
 }
 
 /* ── Modular Session Pages ──────────────────────── */
-.session-hero { padding: 5rem 2rem; text-align: center; color: white; margin-bottom: 2rem; position: relative; overflow: hidden; }
+.session-hero { padding: 5rem 2rem; text-align: center; color: white; background-color: #1E293B; margin-bottom: 2rem; position: relative; overflow: hidden; }
 .session-hero::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
 .session-hero .club-tag { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 20px; background: rgba(255,255,255,0.2); font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; border: none; color: white; }
 .session-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; line-height: 1.1; }
@@ -6325,44 +6325,90 @@ body.theme-dark .session-jump-link.active {
 }
 
 /* ============================================================
-   COSYevents session nav — clean header matching the hub aesthetic
+   COSYevents session nav — clean header with fixed height & disclosure
    ============================================================ */
 .ce-session-nav {
-  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
-  padding: 0.7rem 1.25rem; position: sticky; top: 0; z-index: 100;
-  background: rgba(247,246,242,0.92); backdrop-filter: blur(10px);
+  display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: nowrap;
+  height: 64px; min-height: 64px; max-height: 64px; padding: 0 1.25rem; box-sizing: border-box;
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(247,246,242,0.95); backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border, #d4d1ca);
 }
-:root[data-theme="dark"] .ce-session-nav { background: rgba(23,22,20,0.92); border-bottom-color: #393836; }
+:root[data-theme="dark"] .ce-session-nav { background: rgba(23,22,20,0.95); border-bottom-color: #393836; }
 .ce-nav-brand {
   display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;
   font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem;
-  color: var(--ink, #28251d); white-space: nowrap;
+  color: #28251d; white-space: nowrap; flex-shrink: 0;
 }
 .ce-nav-brand img { width: 30px; height: 30px; object-fit: contain; border-radius: 6px; }
-.ce-nav-links { display: flex; align-items: center; gap: 0.2rem; flex-wrap: wrap; flex: 1; }
-.ce-nav-links a {
-  text-decoration: none; font-size: 0.82rem; font-weight: 600; color: var(--ink-muted, #5f5e58);
-  padding: 0.5rem 0.7rem; border-radius: 8px; white-space: nowrap; transition: all .18s ease;
-  min-height: 44px; display: inline-flex; align-items: center;
+
+.ce-clubs-disclosure { position: relative; display: inline-flex; align-items: center; }
+.ce-clubs-btn {
+  background: transparent; border: 1px solid #d4d1ca; border-radius: 8px;
+  padding: 0.4rem 0.8rem; font-size: 0.88rem; font-weight: 700; color: #28251d;
+  min-height: 38px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;
+  transition: all .18s ease; font-family: inherit; white-space: nowrap;
 }
-.ce-nav-links a:hover { background: var(--sage-mist, #e6efe6); color: var(--ink, #28251d); }
-.ce-nav-right { display: flex; align-items: center; gap: 0.5rem; margin-left: auto; }
-.ce-nav-lang {
-  text-decoration: none; font-size: 0.8rem; font-weight: 800; color: var(--ink-muted, #5f5e58);
-  padding: 0.45rem 0.6rem; border-radius: 8px; border: 1px solid var(--border, #d4d1ca);
-  min-height: 44px; display: inline-flex; align-items: center; transition: all .18s ease;
+.ce-clubs-btn:hover, .ce-clubs-btn[aria-expanded="true"] {
+  border-color: #01696f; color: #01696f; background: rgba(1,105,111,0.06);
 }
-.ce-nav-lang:hover { color: var(--primary, #01696f); border-color: var(--primary, #01696f); }
+.ce-clubs-arrow { font-size: 0.75rem; transition: transform 0.2s ease; }
+.ce-clubs-btn[aria-expanded="true"] .ce-clubs-arrow { transform: rotate(180deg); }
+
+.ce-clubs-panel {
+  position: absolute; top: calc(100% + 8px); left: 0;
+  width: min(560px, calc(100vw - 2rem)); max-height: calc(100vh - 80px); overflow-y: auto;
+  background: #ffffff; border: 1px solid #d4d1ca; border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12); padding: 0.75rem; z-index: 200;
+}
+:root[data-theme="dark"] .ce-clubs-panel {
+  background: #1e1d1a; border-color: #393836; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.ce-clubs-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem;
+}
+@media (min-width: 900px) {
+  .ce-clubs-grid { grid-template-columns: repeat(4, 1fr); }
+  .ce-clubs-panel { width: 680px; }
+}
+@media (max-width: 520px) {
+  .ce-clubs-grid { grid-template-columns: repeat(2, 1fr); }
+  .ce-clubs-panel { width: min(360px, calc(100vw - 1.5rem)); left: -10px; }
+}
+
+.ce-club-link {
+  display: flex; align-items: center; padding: 0.5rem 0.6rem; border-radius: 6px;
+  text-decoration: none; font-size: 0.82rem; font-weight: 600; color: #37352f;
+  transition: background 0.15s ease, color 0.15s ease; min-height: 40px; box-sizing: border-box;
+}
+.ce-club-link:hover, .ce-club-link:focus {
+  background: #e6efe6; color: #01696f; outline: none;
+}
+:root[data-theme="dark"] .ce-club-link { color: #cdccca; }
+:root[data-theme="dark"] .ce-club-link:hover, :root[data-theme="dark"] .ce-club-link:focus {
+  background: #2a2925; color: #fff;
+}
+
+.ce-nav-right { display: flex; align-items: center; gap: 0.5rem; margin-left: auto; flex-shrink: 0; }
+.ce-nav-right-switcher { display: flex; align-items: center; }
 .ce-theme-btn {
-  background: none; border: 1px solid var(--border, #d4d1ca); border-radius: 50%;
-  width: 38px; height: 38px; font-size: 1rem; cursor: pointer; color: var(--ink, #28251d);
-  display: inline-flex; align-items: center; justify-content: center; transition: all .18s ease;
+  background: none; border: 1px solid #d4d1ca; border-radius: 50%;
+  width: 38px; height: 38px; font-size: 1rem; cursor: pointer; color: #28251d;
+  display: inline-flex; align-items: center; justify-content: center; transition: all .18s ease; flex-shrink: 0;
 }
-.ce-theme-btn:hover { border-color: var(--primary, #01696f); color: var(--primary, #01696f); }
-:root[data-theme="dark"] .ce-nav-brand, :root[data-theme="dark"] .ce-nav-links a,
-:root[data-theme="dark"] .ce-nav-lang, :root[data-theme="dark"] .ce-theme-btn { color: #cdccca; }
-:root[data-theme="dark"] .ce-nav-links a:hover, :root[data-theme="dark"] .ce-nav-lang:hover { color: #fff; }
+.ce-theme-btn:hover { border-color: #01696f; color: #01696f; }
+:root[data-theme="dark"] .ce-nav-brand, :root[data-theme="dark"] .ce-clubs-btn,
+:root[data-theme="dark"] .ce-theme-btn { color: #cdccca; border-color: #393836; }
+:root[data-theme="dark"] .ce-clubs-btn:hover, :root[data-theme="dark"] .ce-theme-btn:hover {
+  border-color: #01696f; color: #fff;
+}
+
+@media (max-width: 480px) {
+  .ce-session-nav { padding: 0 0.75rem; gap: 0.4rem; }
+  .ce-nav-brand span { font-size: 0.95rem; }
+  .ce-clubs-btn { padding: 0.35rem 0.6rem; font-size: 0.82rem; }
+}
 
 /* Session body refinements */
 .content-container { max-width: 980px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
@@ -6372,27 +6418,6 @@ body.theme-dark .session-jump-link.active {
 .back-link { display: inline-block; margin-bottom: 1.5rem; color: var(--primary, #01696f); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 .back-link:hover { text-decoration: underline; }
 
-
-@media (max-width: 640px) {
-  .ce-session-nav { padding: 0.6rem 0.9rem; }
-  .ce-nav-brand span { font-size: 0.95rem; }
-  .ce-nav-toggle {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px; min-height: 44px; margin-left: auto;
-    background: none; border: 1px solid var(--border, #d4d1ca); border-radius: 8px;
-    cursor: pointer; color: var(--ink, #28251d); font-size: 1.1rem;
-  }
-  .ce-nav-toggle:hover { border-color: var(--primary, #01696f); color: var(--primary, #01696f); }
-  .ce-nav-links {
-    display: none; width: 100%; flex-direction: column; align-items: stretch;
-    order: 3; padding: 0.3rem 0 0.4rem; gap: 0.1rem;
-  }
-  .ce-session-nav.open .ce-nav-links { display: flex; }
-  .ce-session-nav .ce-nav-links a { padding: 0.7rem 0.5rem; border-radius: 8px; min-height: 44px; }
-  .ce-nav-right { margin-left: 0; }
-}
-
-
 /* Meta-grid contrast: scope dark tokens inside the card so session themes
    that force --ink light (cinema) don't cause white-on-white. */
 .session-meta-grid { --ink: #28251d; --ink-muted: #5f5e58; --muted: #5f5e58; color: #28251d; }
@@ -6401,39 +6426,6 @@ body.theme-dark .session-jump-link.active {
 :root[data-theme="dark"] .session-meta-grid, :root[data-theme="dark"] .session-meta-grid .meta-item,
 :root[data-theme="dark"] .session-meta-grid .meta-item p { color: #cdccca; }
 :root[data-theme="dark"] .session-meta-grid .meta-item h4 { color: #797876; }
-
-/* Session nav: fixed dark-on-light colors — immune to per-session theme overrides */
-.ce-session-nav, .ce-session-nav .ce-nav-brand, .ce-session-nav .ce-nav-links a,
-.ce-session-nav .ce-nav-lang, .ce-session-nav .ce-theme-btn, .ce-session-nav .ce-nav-toggle {
-  color: #28251d;
-}
-.ce-session-nav .ce-nav-links a:hover, .ce-session-nav .ce-nav-lang:hover,
-.ce-session-nav .ce-nav-toggle:hover { color: #01696f; }
-:root[data-theme="dark"] .ce-session-nav, :root[data-theme="dark"] .ce-session-nav .ce-nav-brand,
-:root[data-theme="dark"] .ce-session-nav .ce-nav-links a, :root[data-theme="dark"] .ce-session-nav .ce-nav-lang,
-:root[data-theme="dark"] .ce-session-nav .ce-theme-btn, :root[data-theme="dark"] .ce-session-nav .ce-nav-toggle {
-  color: #cdccca;
-}
-
-/* Mobile nav: hamburger toggle */
-.ce-nav-toggle { display: none; }
-@media (max-width: 640px) {
-  .ce-session-nav { padding: 0.6rem 0.9rem; }
-  .ce-nav-brand span { font-size: 0.95rem; }
-  .ce-nav-toggle {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px; min-height: 44px; margin-left: auto;
-    background: none; border: 1px solid #d4d1ca; border-radius: 8px;
-    cursor: pointer; font-size: 1.1rem;
-  }
-  .ce-nav-links {
-    display: none; width: 100%; flex-direction: column; align-items: stretch;
-    order: 3; padding: 0.3rem 0 0.4rem; gap: 0.1rem;
-  }
-  .ce-session-nav.open .ce-nav-links { display: flex; }
-  .ce-session-nav .ce-nav-links a { padding: 0.7rem 0.5rem; border-radius: 8px; min-height: 44px; }
-  .ce-nav-right { margin-left: 0; }
-}
 
 /* ─── Session visual refinements ─── */
 

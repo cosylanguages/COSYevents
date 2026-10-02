@@ -74,30 +74,57 @@
     ['Intermediate Speaking Club', 'intermediate-speaking-club.html']
   ];
 
+  function getClubsButtonLabel(pageLang) {
+    if (pageLang === 'ru') return 'Клубы';
+    if (pageLang === 'el') return 'Λέσχες';
+    if (pageLang === 'it' || pageLang === 'fr') return 'Club';
+    return 'Clubs';
+  }
+
   var nav = document.getElementById('cosy-nav');
   if (nav) {
+    var currentPath = location.pathname;
+    var pageLang = 'en';
+    if (window.CosyLang && window.CosyLang.detectPageLang) {
+      pageLang = window.CosyLang.detectPageLang(currentPath);
+    } else if (currentPath.indexOf('/fr/') !== -1) {
+      pageLang = 'fr';
+    } else if (currentPath.indexOf('/ru/') !== -1) {
+      pageLang = 'ru';
+    } else if (currentPath.indexOf('/it/') !== -1) {
+      pageLang = 'it';
+    } else if (currentPath.indexOf('/el/') !== -1) {
+      pageLang = 'el';
+    }
+
+    var clubsLabel = getClubsButtonLabel(pageLang);
+
     var html =
       '<header class="ce-session-nav">' +
         '<a class="ce-nav-brand" href="' + root + 'index.html">' +
           '<img src="' + root + 'shared/images/logo.png" alt="COSYlanguages logo" />' +
           '<span>COSY Events</span>' +
         '</a>' +
-        '<nav class="ce-nav-links" aria-label="Event categories">' +
-          clubs.map(function (c) {
-            var targetRel = c[1];
-            if (window.CosyLang && window.CosyLang.equivalentPath) {
-              var currentPath = location.pathname;
-              var pageLang = window.CosyLang.detectPageLang(currentPath);
-              var eq = window.CosyLang.equivalentPath(pageLang, targetRel, window.CosyLang.state ? window.CosyLang.state.manifest : null, window.CosyLang.state ? window.CosyLang.state.aliases : null);
-              if (eq) targetRel = eq;
-            }
-            return '<a href="' + root + targetRel + '">' + c[0] + '</a>';
-          }).join('') +
-        '</nav>' +
+        '<div class="ce-clubs-disclosure">' +
+          '<button class="ce-clubs-btn" type="button" aria-expanded="false" aria-controls="ce-clubs-panel">' +
+            '<span>' + clubsLabel + '</span> <span class="ce-clubs-arrow">▾</span>' +
+          '</button>' +
+          '<div id="ce-clubs-panel" class="ce-clubs-panel" role="region" aria-label="Event categories" hidden>' +
+            '<div class="ce-clubs-grid">' +
+              clubs.map(function (c) {
+                var targetRel = c[1];
+                if (window.CosyLang && window.CosyLang.equivalentPath) {
+                  var eq = window.CosyLang.equivalentPath(pageLang, targetRel, window.CosyLang.state ? window.CosyLang.state.manifest : null, window.CosyLang.state ? window.CosyLang.state.aliases : null);
+                  if (eq) targetRel = eq;
+                }
+                return '<a class="ce-club-link" href="' + root + targetRel + '">' + c[0] + '</a>';
+              }).join('') +
+            '</div>' +
+          '</div>' +
+        '</div>' +
         '<div class="ce-nav-right">' +
           '<div class="ce-nav-right-switcher" data-ce-lang-switcher></div>' +
           '<button class="ce-theme-btn" type="button" aria-label="Toggle dark mode"></button>' +
-          '<button class="ce-nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>' +
         '</div>' +
       '</header>';
 
@@ -122,18 +149,51 @@
       });
     }
 
-    // Mobile hamburger toggle
-    var toggle = nav.querySelector('.ce-nav-toggle');
-    if (toggle) {
-      toggle.addEventListener('click', function () {
-        var open = nav.querySelector('.ce-session-nav').classList.toggle('open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    // Disclosure Panel logic
+    var clubsBtn = nav.querySelector('.ce-clubs-btn');
+    var clubsPanel = nav.querySelector('#ce-clubs-panel');
+
+    function openClubsPanel() {
+      if (!clubsPanel || !clubsBtn) return;
+      clubsBtn.setAttribute('aria-expanded', 'true');
+      clubsPanel.hidden = false;
+      clubsPanel.classList.add('open');
+      var firstLink = clubsPanel.querySelector('a');
+      if (firstLink) {
+        firstLink.focus();
+      }
+    }
+
+    function closeClubsPanel() {
+      if (!clubsPanel || !clubsBtn) return;
+      if (clubsBtn.getAttribute('aria-expanded') === 'false') return;
+      clubsBtn.setAttribute('aria-expanded', 'false');
+      clubsPanel.hidden = true;
+      clubsPanel.classList.remove('open');
+      clubsBtn.focus();
+    }
+
+    if (clubsBtn && clubsPanel) {
+      clubsBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var expanded = clubsBtn.getAttribute('aria-expanded') === 'true';
+        if (expanded) {
+          closeClubsPanel();
+        } else {
+          openClubsPanel();
+        }
       });
-      nav.querySelectorAll('.ce-nav-links a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          nav.querySelector('.ce-session-nav').classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-        });
+
+      document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target)) {
+          closeClubsPanel();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeClubsPanel();
+        }
       });
     }
   }

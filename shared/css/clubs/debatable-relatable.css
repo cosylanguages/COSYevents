@@ -60,8 +60,12 @@ body[class*="theme-debate-"] .btn-verify {
   color: #FFFFFF !important;
 }
 
+body[class*="theme-debate-"] {
+  --debate-theme-hero: linear-gradient(135deg, #1E3A8A, #0F172A);
+}
+
 body[class*="theme-debate-"] .session-hero {
-  background: var(--debate-theme-hero) !important;
+  background: var(--debate-theme-hero, linear-gradient(135deg, #1E3A8A, #0F172A)) !important;
 }
 
 body[class*="theme-debate-"] .debate-duel-box h3 {
@@ -145,7 +149,7 @@ body.theme-debate-ai-art {
   --debate-theme-accent: #D84315;
   --debate-theme-border: #FFCCBC;
   --debate-theme-watermark: "🎨";
-  --debate-theme-hero: linear-gradient(135deg, #D84315, #5D4037);
+  --debate-theme-hero: linear-gradient(135deg, #9A2C0D, #5D4037);
   --debate-theme-round-header-bg: #FBE9E7;
 }
 body.theme-debate-assisted-dying {
@@ -165,7 +169,7 @@ body.theme-debate-homework-ban {
   --debate-theme-accent: #EF6C00;
   --debate-theme-border: #FFE082;
   --debate-theme-watermark: "🎒";
-  --debate-theme-hero: linear-gradient(135deg, #EF6C00, #4E342E);
+  --debate-theme-hero: linear-gradient(135deg, #994000, #4E342E);
   --debate-theme-round-header-bg: #FFF8E1;
 }
 body.theme-debate-human-cloning {
@@ -225,7 +229,7 @@ body.theme-debate-holidays {
   --debate-theme-accent: #00897B;
   --debate-theme-border: #B2DFDB;
   --debate-theme-watermark: "🌴";
-  --debate-theme-hero: linear-gradient(135deg, #00897B, #004D40);
+  --debate-theme-hero: linear-gradient(135deg, #00695C, #004D40);
   --debate-theme-round-header-bg: #E0F2F1;
 }
 body.theme-debate-typing-writing {
@@ -245,7 +249,7 @@ body.theme-debate-upbringing {
   --debate-theme-accent: #D84315;
   --debate-theme-border: #FFDCC8;
   --debate-theme-watermark: "🧒";
-  --debate-theme-hero: linear-gradient(135deg, #D84315, #4E2314);
+  --debate-theme-hero: linear-gradient(135deg, #9A2C0D, #4E2314);
   --debate-theme-round-header-bg: #FDF2EB;
 }
 

@@ -96,6 +96,14 @@
 }
 
 /* ─── CLASS-BASED BACKGROUND GRADIENTS FOR SESSION HEROS ─── */
+body[class*="theme-longreads-"] {
+  --longreads-theme-hero: linear-gradient(135deg, #7A1C1C, #3E0F0F);
+}
+
+body[class*="theme-longreads-"] .session-hero {
+  background: var(--longreads-theme-hero, linear-gradient(135deg, #7A1C1C, #3E0F0F)) !important;
+}
+
 body.theme-longreads-addict .session-hero {
   background: linear-gradient(135deg, #7A1C1C, #3E0F0F) !important;
   border-bottom: 2px solid #A34E4E;
