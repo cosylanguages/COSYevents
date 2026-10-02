@@ -4,6 +4,7 @@
   "description": "COSYevents Calendar & Event Hub for the COSYlanguages ecosystem",
   "main": "index.html",
   "scripts": {
+    "check-structure": "node scripts/check_page_structure.js",
     "check-links": "node scripts/check_links.js",
     "build-i18n": "node scripts/build_localized_manifest.js",
     "check-i18n": "node scripts/build_localized_manifest.js --check",
