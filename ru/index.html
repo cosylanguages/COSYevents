@@ -3,12 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Календарь событий COSYevents : COSYlanguages</title>
-  <meta name="description" content="Публичный календарь и каталог событий COSYevents — разговорные клубы, киновечера и языковые сессии.">
-  <link rel="stylesheet" href="../shared/css/hub.css">
+  <title>COSYevents : Живые языковые события</title>
+                        <link rel="stylesheet" href="../shared/css/hub.css">
   <link rel="stylesheet" href="../shared/css/cosy-icons.css">
   <link rel="stylesheet" href="../styles/calendar.css">
+  <link rel="stylesheet" href="../styles/home.css">
+  <meta name="description" content="Разговорные клубы, киновечера и интерактивные языковые сессии на английском, французском, итальянском, русском и греческом языках.">
+  <link rel="icon" href="../shared/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../shared/assets/apple-touch-icon.png">
   <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#416b49">
+  <meta property="og:title" content="COSYevents : Живые языковые события">
+  <meta property="og:description" content="Разговорные клубы, киновечера и интерактивные языковые сессии на английском, французском, итальянском, русском и греческом языках.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cosylanguages.github.io/COSYevents/shared/assets/og-image.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -30,17 +40,21 @@
         <span class="hub-brand" style="margin-bottom: 0;">Экосистема COSYlanguages</span>
         <div data-ce-lang-switcher></div>
       </div>
-      <h1 class="hub-title">Календарь событий COSYevents</h1>
+      <h1 class="hub-title">COSYevents</h1>
       <p class="hub-subtitle">
-        Публичный календарь и каталог — даты, уровни CEFR и описания всех предстоящих сессий.
+        Разговорные клубы, киновечера и интерактивные языковые сессии на английском, французском, итальянском, русском и греческом языках.
       </p>
+      <div class="hero-cta-group">
+        <a href="#calendar-controls" class="hero-btn hero-btn-primary">Смотреть календарь ↓</a>
+        <a href="https://wa.me/330766784195?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D0%B5%D1%85%D0%BE%D1%82%D0%B5%D0%BB%28%D0%B0%29%20%D0%B1%D1%8B%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%81%D0%B5%D1%81%D1%81%D0%B8%D1%8E%20COSYevents." target="_blank" rel="noopener" class="hero-btn hero-btn-secondary">💬 Записаться в WhatsApp</a>
+      </div>
       <nav class="hub-nav-links" aria-label="Категории событий">
         <a href="speaking-clubs.html" class="hub-nav-link">Разговорные клубы 💬</a>
-        <a href="../cinema-club.html" class="hub-nav-link">Киноклуб 🎬</a>
-        <a href="../karaoke-club/index.html" class="hub-nav-link">Караоке 🎤</a>
+        <a href="../cinema-nights/index.html" class="hub-nav-link">Киноклуб 🎬</a>
+        <a href="../karaoke-club.html" class="hub-nav-link">Караоке 🎤</a>
         <a href="../game-evenings.html" class="hub-nav-link">Игры 🎲</a>
-        <a href="../long-reads/index.html" class="hub-nav-link">Чтение 📚</a>
-        <a href="../teacher-led-sessions/index.html" class="hub-nav-link">Учителям 🍎</a>
+        <a href="../long-reads.html" class="hub-nav-link">Чтение 📚</a>
+        <a href="../teacher-led-sessions/index.html" class="hub-nav-link">Учительские сессии 🍎</a>
       </nav>
     </div>
   </header>
@@ -134,89 +148,73 @@
       </div>
     </section>
 
-    <!-- Live Events Section -->
-    <section class="live-events-section" style="margin-top: 3rem;">
-      <div class="live-events-container">
-        <div class="live-events-left">
-          <h2 class="live-events-heading">Прямой эфир и интерактивные клубы</h2>
-          <p class="live-events-subtext">Организованные сессии с носителями языка, разговорные клубы на актуальные темы, кино на языке оригинала, караоке и интерактивные игры.</p>
-        </div>
-        <div class="live-events-right">
-          <div class="live-event-card card-speaking">
-            <div class="live-card-icon">💬</div>
-            <h3 class="live-card-title">Разговорный клуб</h3>
-            <p class="live-card-desc">Дискуссии по темам с калибровкой уровней</p>
-            <a href="speaking-clubs.html" class="live-card-cta">Присоединиться →</a>
+    <!-- Merged Explore Section -->
+    <section class="explore-section">
+      <h2 class="section-title">Исследовать типы событий</h2>
+      <div class="explore-grid">
+        <a href="speaking-clubs.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">💬</span>
+            <span class="explore-badge">Прямой эфир &amp; Интерактив</span>
           </div>
-          <div class="live-event-card card-cinema">
-            <div class="live-card-icon">🎬</div>
-            <h3 class="live-card-title">Киновечер</h3>
-            <p class="live-card-desc">Просмотр фильмов на языке оригинала и разбор сцен</p>
-            <a href="../cinema-club.html" class="live-card-cta">Забронировать место →</a>
+          <h3 class="explore-card-title">Разговорные клубы</h3>
+          <p class="explore-card-desc">Дискуссии в малых группах по темам, калибровка уровней CEFR и учебные материалы.</p>
+          <div class="explore-card-footer"><span>Исследовать клубы</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../cinema-nights/index.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🎬</span>
+            <span class="explore-badge">Мультимедиа</span>
           </div>
-          <div class="live-event-card card-karaoke">
-            <div class="live-card-icon">🎤</div>
-            <h3 class="live-card-title">Караоке Клуб</h3>
-            <p class="live-card-desc">Музыкальные сессии с разбором произношения и лексики</p>
-            <a href="../karaoke-club/index.html" class="live-card-cta">Изучить Караоке →</a>
+          <h3 class="explore-card-title">Киновечера</h3>
+          <p class="explore-card-desc">Просмотр фильмов на языке оригинала, разборы сцен, словари и обсуждения после просмотра.</p>
+          <div class="explore-card-footer"><span>Исследовать киноклуб</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../karaoke-club.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🎤</span>
+            <span class="explore-badge">Музыка</span>
           </div>
-          <div class="live-event-card card-games">
-            <div class="live-card-icon">🎲</div>
-            <h3 class="live-card-title">Игровые вечера</h3>
-            <p class="live-card-desc">Настольные игры для полиглотов, викторины и языковые челленджи</p>
-            <a href="../game-evenings.html" class="live-card-cta">Играть вместе →</a>
+          <h3 class="explore-card-title">Караоке Клуб</h3>
+          <p class="explore-card-desc">Интерактивные музыкальные сессии, разбор произношения, словари и групповое пение.</p>
+          <div class="explore-card-footer"><span>Исследовать караоке</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../game-evenings.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🎲</span>
+            <span class="explore-badge">Игры</span>
           </div>
-        </div>
+          <h3 class="explore-card-title">Игровые вечера</h3>
+          <p class="explore-card-desc">Настольные игры для полиглотов, командные викторины, языковые челленджи и социальные игры.</p>
+          <div class="explore-card-footer"><span>Исследовать игры</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../long-reads.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">📚</span>
+            <span class="explore-badge">Литература</span>
+          </div>
+          <h3 class="explore-card-title">Чтение</h3>
+          <p class="explore-card-desc">Глубокий анализ эссе, рассказов, отрывков статей и литературных произведений.</p>
+          <div class="explore-card-footer"><span>Исследовать литературу</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../teacher-led-sessions/index.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🍎</span>
+            <span class="explore-badge">Персонально</span>
+          </div>
+          <h3 class="explore-card-title">Учительские сессии</h3>
+          <p class="explore-card-desc">Персональные уроки, подготовка к экзаменам и структурированное руководство с нашим ведущим преподавателем.</p>
+          <div class="explore-card-footer"><span>Посмотреть сессии</span><span class="arrow">→</span></div>
+        </a>
       </div>
+
+      <p class="past-events-prompt">Ищете материалы прошлых сессий, руководства или учебные карточки? <a href="../past-events/index.html">Перейти в архив прошедших событий →</a></p>
     </section>
-
-    <!-- Quick Sections Grid -->
-    <section class="hub-section-header" style="margin-top: 3rem;">
-      <h2 class="hub-section-title">Порталы и Хабы событий</h2>
-      <p class="hub-section-desc">Исследуйте специализированные категории событий и каналы записи.</p>
-    </section>
-
-    <div class="events-grid">
-      <a href="speaking-clubs.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-speech" aria-hidden="true"></span>
-          <span class="event-badge">Дискуссия</span>
-        </div>
-        <h3 class="event-name">Разговорные клубы</h3>
-        <p class="event-description">Дискуссионные сессии с калибровкой уровней CEFR и материалами.</p>
-        <div class="event-card-footer"><span>Исследовать клубы</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../cinema-club.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-film" aria-hidden="true"></span>
-          <span class="event-badge">Кино</span>
-        </div>
-        <h3 class="event-name">Киновечера</h3>
-        <p class="event-description">Показы фильмов, разборы сцен и материалы к занятиям.</p>
-        <div class="event-card-footer"><span>Исследовать киноклуб</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../teacher-led-sessions/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-book" aria-hidden="true"></span>
-          <span class="event-badge">Уроки</span>
-        </div>
-        <h3 class="event-name">Учительские сессии</h3>
-        <p class="event-description">Специальные сессии и персональные занятия с преподавателями.</p>
-        <div class="event-card-footer"><span>Учительские сессии</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../special-events/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-dice" aria-hidden="true"></span>
-          <span class="event-badge">Интерактив</span>
-        </div>
-        <h3 class="event-name">Спецпроекты</h3>
-        <p class="event-description">Интерактивные игры, праздники и воркшопы.</p>
-        <div class="event-card-footer"><span>Спецпроекты</span><span class="arrow">→</span></div>
-      </a>
-    </div>
   </main>
 
   <!-- Event Detail Modal -->
@@ -244,10 +242,25 @@
   </div>
 
   <footer class="hub-footer">
-    <p>COSYevents &copy; Экосистема COSYlanguages. Все права защищены.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
-      <a href="../privacy.html">Политика конфиденциальности и правовая информация</a>
-    </p>
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand-title">COSYevents</div>
+        <p class="footer-brand-desc">Разговорные клубы, киновечера и языковые события в экосистеме COSYlanguages.</p>
+      </div>
+      <div class="footer-links-col">
+        <h5>Экосистема</h5>
+        <a href="https://cosylanguages.github.io/COSYlanguages/">COSYlanguages</a>
+        <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a>
+        <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>
+      </div>
+      <div class="footer-links-col">
+        <h5>Контакты и Запись</h5>
+        <a href="https://wa.me/330766784195" target="_blank" rel="noopener">WhatsApp 📱</a>
+        <a href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener">Telegram ✈️</a>
+        <a href="../privacy.html">Политика конфиденциальности и правовая информация</a>
+      </div>
+    </div>
+    <div class="footer-bottom">COSYevents &copy; Экосистема COSYlanguages. Все права защищены.</div>
   </footer>
 
   <script src="../shared/js/cosyevents-lang.js" defer></script>

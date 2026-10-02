@@ -3,12 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ημερολόγιο Εκδηλώσεων COSYevents : COSYlanguages</title>
-  <meta name="description" content="Δημόσιο ημερολόγιο και κατάλογος εκδηλώσεων COSYevents — λέσχες συζήτησης, βραδιές κινηματογράφου και γλωσσικές συνεδρίες.">
-  <link rel="stylesheet" href="../shared/css/hub.css">
+  <title>COSYevents : Ζωντανές γλωσσικές εκδηλώσεις</title>
+                        <link rel="stylesheet" href="../shared/css/hub.css">
   <link rel="stylesheet" href="../shared/css/cosy-icons.css">
   <link rel="stylesheet" href="../styles/calendar.css">
+  <link rel="stylesheet" href="../styles/home.css">
+  <meta name="description" content="Λέσχες συζήτησης, βραδιές κινηματογράφου και διαδραστικές γλωσσικές συνεδρίες στα αγγλικά, γαλλικά, ιταλικά, ρωσικά και ελληνικά.">
+  <link rel="icon" href="../shared/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../shared/assets/apple-touch-icon.png">
   <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#416b49">
+  <meta property="og:title" content="COSYevents : Ζωντανές γλωσσικές εκδηλώσεις">
+  <meta property="og:description" content="Λέσχες συζήτησης, βραδιές κινηματογράφου και διαδραστικές γλωσσικές συνεδρίες στα αγγλικά, γαλλικά, ιταλικά, ρωσικά και ελληνικά.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cosylanguages.github.io/COSYevents/shared/assets/og-image.png">
+  <meta property="og:locale" content="el_GR">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -30,17 +40,21 @@
         <span class="hub-brand" style="margin-bottom: 0;">Οικοσύστημα COSYlanguages</span>
         <div data-ce-lang-switcher></div>
       </div>
-      <h1 class="hub-title">Ημερολόγιο Εκδηλώσεων COSYevents</h1>
+      <h1 class="hub-title">COSYevents</h1>
       <p class="hub-subtitle">
-        Δημόσιο ημερολόγιο και κατάλογος εκδηλώσεων — ημερομηνίες, επίπεδα CEFR και περιλήψεις όλων των συνεδριών.
+        Λέσχες συζήτησης, βραδιές κινηματογράφου και διαδραστικές γλωσσικές συνεδρίες στα αγγλικά, γαλλικά, ιταλικά, ρωσικά και ελληνικά.
       </p>
+      <div class="hero-cta-group">
+        <a href="#calendar-controls" class="hero-btn hero-btn-primary">Δείτε το ημερολόγιο ↓</a>
+        <a href="https://wa.me/330766784195?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%21%20%CE%98%CE%B1%20%CE%B7%CE%B8%CE%B5%CE%BB%CE%B1%20%CE%BD%CE%B1%20%CE%B5%CE%B3%CE%B3%CF%81%CE%B1%CF%86%CF%89%20%CF%83%CE%B5%20%CE%BC%CE%B9%CE%B1%20%CF%83%CF%85%CE%BD%CE%B5%CE%B4%CF%81%CE%B9%CE%B1%20COSYevents." target="_blank" rel="noopener" class="hero-btn hero-btn-secondary">💬 Εγγραφή στο WhatsApp</a>
+      </div>
       <nav class="hub-nav-links" aria-label="Κατηγορίες εκδηλώσεων">
-        <a href="../speaking-clubs.html" class="hub-nav-link">Λέσχες Συζήτησης 💬</a>
-        <a href="../cinema-club.html" class="hub-nav-link">Κινηματογράφος 🎬</a>
-        <a href="../karaoke-club/index.html" class="hub-nav-link">Καραόκε 🎤</a>
+        <a href="../speaking-clubs/index.html" class="hub-nav-link">Λέσχες Συζήτησης 💬</a>
+        <a href="../cinema-nights/index.html" class="hub-nav-link">Κινηματογράφος 🎬</a>
+        <a href="../karaoke-club.html" class="hub-nav-link">Καραόκε 🎤</a>
         <a href="../game-evenings.html" class="hub-nav-link">Παιχνίδια 🎲</a>
-        <a href="../long-reads/index.html" class="hub-nav-link">Ανάγνωση 📚</a>
-        <a href="../teacher-led-sessions/index.html" class="hub-nav-link">Για Καθηγητές 🍎</a>
+        <a href="../long-reads.html" class="hub-nav-link">Ανάγνωση 📚</a>
+        <a href="../teacher-led-sessions/index.html" class="hub-nav-link">Συνεδρίες με Καθηγητή 🍎</a>
       </nav>
     </div>
   </header>
@@ -160,89 +174,73 @@
       </div>
     </section>
 
-    <!-- Live Events Section -->
-    <section class="live-events-section" style="margin-top: 3rem;">
-      <div class="live-events-container">
-        <div class="live-events-left">
-          <h2 class="live-events-heading">Ζωντανές εκδηλώσεις και διαδραστικές λέσχες</h2>
-          <p class="live-events-subtext">Οργανωμένες συνεδρίες με φυσικούς ομιλητές, λέσχες συζήτησης για πραγματικά θέματα, κινηματογράφος στην πρωτότυπη γλώσσα, καραόκε και διαδραστικά παιχνίδια.</p>
-        </div>
-        <div class="live-events-right">
-          <div class="live-event-card card-speaking">
-            <div class="live-card-icon">💬</div>
-            <h3 class="live-card-title">Λέσχη Συζήτησης</h3>
-            <p class="live-card-desc">Θεματικές συζητήσεις με διαβάθμιση επιπέδου</p>
-            <a href="../speaking-clubs.html" class="live-card-cta">Συμμετοχή →</a>
+    <!-- Merged Explore Section -->
+    <section class="explore-section">
+      <h2 class="section-title">Εξερευνήστε τους τύπους εκδηλώσεων</h2>
+      <div class="explore-grid">
+        <a href="../speaking-clubs/index.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">💬</span>
+            <span class="explore-badge">Ζωντανό &amp; Διαδραστικό</span>
           </div>
-          <div class="live-event-card card-cinema">
-            <div class="live-card-icon">🎬</div>
-            <h3 class="live-card-title">Βραδιά Σινεμά</h3>
-            <p class="live-card-desc">Προβολές ταινιών στην πρωτότυπη γλώσσα και ανάλυση σκηνών</p>
-            <a href="../cinema-club.html" class="live-card-cta">Κράτηση θέσης →</a>
+          <h3 class="explore-card-title">Λέσχες συζήτησης</h3>
+          <p class="explore-card-desc">Θεματικές συζητήσεις σε μικρές ομάδες, διαβάθμιση επιπέδων CEFR και κάρτες λεξιλογίου.</p>
+          <div class="explore-card-footer"><span>Εξερεύνηση λεσχών</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../cinema-nights/index.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🎬</span>
+            <span class="explore-badge">Πολυμέσα</span>
           </div>
-          <div class="live-event-card card-karaoke">
-            <div class="live-card-icon">🎤</div>
-            <h3 class="live-card-title">Karaoke Club</h3>
-            <p class="live-card-desc">Μουσικές συνεδρίες με ανάλυση προφοράς και λεξιλογίου</p>
-            <a href="../karaoke-club/index.html" class="live-card-cta">Εξερεύνηση Καραόκε →</a>
+          <h3 class="explore-card-title">Βραδιές σινεμά</h3>
+          <p class="explore-card-desc">Προβολές ταινιών στην πρωτότυπη γλώσσα, αναλύσεις σκηνών, οδηγoί λεξιλογίου και συζητήσεις.</p>
+          <div class="explore-card-footer"><span>Εξερεύνηση σινεμά</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../karaoke-club.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🎤</span>
+            <span class="explore-badge">Μουσική</span>
           </div>
-          <div class="live-event-card card-games">
-            <div class="live-card-icon">🎲</div>
-            <h3 class="live-card-title">Βραδιές Παιχνιδιών</h3>
-            <p class="live-card-desc">Επιτραπέζια παιχνίδια για πολύγλωσσους, κουίζ και γλωσσικές προκλήσεις</p>
-            <a href="../game-evenings.html" class="live-card-cta">Παίξτε μαζί →</a>
+          <h3 class="explore-card-title">Karaoke Club</h3>
+          <p class="explore-card-desc">Διαδραστική μουσική εμπειρία, προφορά στίχων, οδηγoί λεξιλογίου και ομαδικό τραγούδι.</p>
+          <div class="explore-card-footer"><span>Εξερεύνηση καραόκε</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../game-evenings.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🎲</span>
+            <span class="explore-badge">Παιχνίδια</span>
           </div>
-        </div>
+          <h3 class="explore-card-title">Βραδιές παιχνιδιών</h3>
+          <p class="explore-card-desc">Επιτραπέζια παιχνίδια για πολύγλωσσους, κουίζ, γλωσσικές προκλήσεις και κοινωνικές δραστηριότητες.</p>
+          <div class="explore-card-footer"><span>Εξερεύνηση παιχνιδιών</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../long-reads.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">📚</span>
+            <span class="explore-badge">Λογοτεχνία</span>
+          </div>
+          <h3 class="explore-card-title">Ανάγνωση</h3>
+          <p class="explore-card-desc">Εμβριθής ανάλυση δοκιμίων, διηγημάτων, αποσπασμάτων άρθρων και λογοτεχνικών έργων.</p>
+          <div class="explore-card-footer"><span>Εξερεύνηση λογοτεχνίας</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../teacher-led-sessions/index.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🍎</span>
+            <span class="explore-badge">Προσαρμοσμένο</span>
+          </div>
+          <h3 class="explore-card-title">Συνεδρίες με καθηγητή</h3>
+          <p class="explore-card-desc">Εξατομικευμένα μαθήματα, προετοιμασία για εξετάσεις και δομημένη καθοδήγηση από τον επικεφαλής συντονιστή μας.</p>
+          <div class="explore-card-footer"><span>Δείτε τις συνεδρίες</span><span class="arrow">→</span></div>
+        </a>
       </div>
+
+      <p class="past-events-prompt">Ψάχνετε για υλικό παλαιότερων συνεδριών, οδηγούς ή κάρτες; <a href="../past-events/index.html">Περιηγηθείτε στο αρχείο παλαιότερων εκδηλώσεων →</a></p>
     </section>
-
-    <!-- Quick Sections Grid -->
-    <section class="hub-section-header" style="margin-top: 3rem;">
-      <h2 class="hub-section-title">Πύλες και Hubs Εκδηλώσεων</h2>
-      <p class="hub-section-desc">Εξερευνήστε τις ειδικές κατηγορίες εκδηλώσεων και τα κανάλια εγγραφής.</p>
-    </section>
-
-    <div class="events-grid">
-      <a href="../speaking-clubs.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-speech" aria-hidden="true"></span>
-          <span class="event-badge">Συζήτηση</span>
-        </div>
-        <h3 class="event-name">Λέσχες Συζήτησης</h3>
-        <p class="event-description">Συνεδρίες συζήτησης με επίπεδα CEFR και κάρτες λεξιλογίου.</p>
-        <div class="event-card-footer"><span>Εξερεύνηση Λεσχών</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../cinema-club.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-film" aria-hidden="true"></span>
-          <span class="event-badge">Σινεμά</span>
-        </div>
-        <h3 class="event-name">Βραδιές Σινεμά</h3>
-        <p class="event-description">Προβολές ταινιών, αναλύσεις σκηνών και οδηγιοί λεξιλογίου.</p>
-        <div class="event-card-footer"><span>Εξερεύνηση Σινεμά</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../teacher-led-sessions/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-book" aria-hidden="true"></span>
-          <span class="event-badge">Μαθήματα</span>
-        </div>
-        <h3 class="event-name">Συνεδρίες με Καθηγητή</h3>
-        <p class="event-description">Ειδικές συνεδρίες και ιδιαίτερα μαθήματα με καθηγητές.</p>
-        <div class="event-card-footer"><span>Συνεδρίες με Καθηγητή</span><span class="arrow">→</span></div>
-      </a>
-
-      <a href="../special-events/index.html" class="event-card">
-        <div class="event-card-header">
-          <span class="event-icon cosy-icon icon-dice" aria-hidden="true"></span>
-          <span class="event-badge">Διαδραστικό</span>
-        </div>
-        <h3 class="event-name">Ειδικές Εκδηλώσεις</h3>
-        <p class="event-description">Διαδραστικά παιχνίδια, πολιτιστικές γιορτές και εργαστήρια.</p>
-        <div class="event-card-footer"><span>Ειδικές Εκδηλώσεις</span><span class="arrow">→</span></div>
-      </a>
-    </div>
   </main>
 
   <!-- Event Detail Modal -->
@@ -270,10 +268,25 @@
   </div>
 
   <footer class="hub-footer">
-    <p>COSYevents &copy; Οικοσύστημα COSYlanguages. Με την επιφύλαξη παντός δικαιώματος.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
-      <a href="../privacy.html">Πολιτική απορρήτου &amp; νομική σημείωση</a>
-    </p>
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand-title">COSYevents</div>
+        <p class="footer-brand-desc">Λέσχες συζήτησης, βραδιές κινηματογράφου και γλωσσικές εκδηλώσεις στο οικοσύστημα COSYlanguages.</p>
+      </div>
+      <div class="footer-links-col">
+        <h5>Οικοσύστημα</h5>
+        <a href="https://cosylanguages.github.io/COSYlanguages/">COSYlanguages</a>
+        <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a>
+        <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>
+      </div>
+      <div class="footer-links-col">
+        <h5>Επικοινωνία &amp; Εγγραφή</h5>
+        <a href="https://wa.me/330766784195" target="_blank" rel="noopener">WhatsApp 📱</a>
+        <a href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener">Telegram ✈️</a>
+        <a href="../privacy.html">Πολιτική απορρήτου &amp; νομική σημείωση</a>
+      </div>
+    </div>
+    <div class="footer-bottom">COSYevents &copy; Οικοσύστημα COSYlanguages. Με την επιφύλαξη παντός δικαιώματος.</div>
   </footer>
 
   <script src="../shared/js/cosyevents-lang.js" defer></script>
