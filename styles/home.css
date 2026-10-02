@@ -185,6 +185,7 @@
 }
 
 .calc-title {
+  font-family: var(--cosy-font-serif, serif);
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;

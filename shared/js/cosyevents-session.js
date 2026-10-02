@@ -20,6 +20,36 @@
 
   var root = rootPrefix();
 
+  // Inject favicon, apple-touch-icon, manifest, and theme-color into head if missing
+  (function injectHeadAssets() {
+    if (!document.querySelector('link[rel="icon"]')) {
+      var fav = document.createElement('link');
+      fav.rel = 'icon';
+      fav.type = 'image/png';
+      fav.sizes = '32x32';
+      fav.href = root + 'shared/assets/favicon-32.png';
+      document.head.appendChild(fav);
+    }
+    if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+      var appleFav = document.createElement('link');
+      appleFav.rel = 'apple-touch-icon';
+      appleFav.href = root + 'shared/assets/apple-touch-icon.png';
+      document.head.appendChild(appleFav);
+    }
+    if (!document.querySelector('link[rel="manifest"]')) {
+      var manifest = document.createElement('link');
+      manifest.rel = 'manifest';
+      manifest.href = root + 'manifest.json';
+      document.head.appendChild(manifest);
+    }
+    if (!document.querySelector('meta[name="theme-color"]')) {
+      var themeMeta = document.createElement('meta');
+      themeMeta.name = 'theme-color';
+      themeMeta.content = '#416b49';
+      document.head.appendChild(themeMeta);
+    }
+  })();
+
   // Dynamically ensure cosyevents-lang.js is loaded
   if (!window.CosyLang && !document.querySelector('script[src*="cosyevents-lang.js"]')) {
     var langScript = document.createElement('script');
