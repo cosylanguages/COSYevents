@@ -33,6 +33,14 @@
 }
 
 /* ─── CLASS-BASED BACKGROUND GRADIENTS FOR SESSION HEROS ─── */
+body[class*="theme-ifyouwere-"] {
+  --ifyouwere-theme-hero: linear-gradient(135deg, #312E81, #1E1B4B);
+}
+
+body[class*="theme-ifyouwere-"] .session-hero {
+  background: var(--ifyouwere-theme-hero, linear-gradient(135deg, #312E81, #1E1B4B)) !important;
+}
+
 body.theme-ifyouwere-blind .session-hero {
   background: linear-gradient(135deg, #312E81, #1E1B4B) !important;
   border-bottom: 2px solid #4F46E5;

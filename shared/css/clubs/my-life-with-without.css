@@ -81,8 +81,12 @@ body[class*="theme-life-"] .round-block.grammar {
   border-left: 5px solid var(--life-theme-accent) !important;
 }
 
+body[class*="theme-life-"] {
+  --life-theme-hero: linear-gradient(135deg, #1E2D38, #0F172A);
+}
+
 body[class*="theme-life-"] .session-hero {
-  background: var(--life-theme-hero) !important;
+  background: var(--life-theme-hero, linear-gradient(135deg, #1E2D38, #0F172A)) !important;
 }
 
 /* ─── Light Mode Definitions ─── */
@@ -137,7 +141,7 @@ body.theme-life-fridge {
   --life-theme-accent: #319795;
   --life-theme-border: #CBECEB;
   --life-theme-watermark: "🧊";
-  --life-theme-hero: linear-gradient(135deg, #319795, #1A3533);
+  --life-theme-hero: linear-gradient(135deg, #0B6E67, #1A3533);
   --life-theme-accent-contrast: #E67E22;
   --life-theme-column-bg: rgba(49, 151, 149, 0.02);
 }
@@ -159,7 +163,7 @@ body.theme-life-holidays {
   --life-theme-accent: #D4AF37;
   --life-theme-border: #FAF0CC;
   --life-theme-watermark: "🏖️";
-  --life-theme-hero: linear-gradient(135deg, #D4AF37, #423212);
+  --life-theme-hero: linear-gradient(135deg, #8C7010, #423212);
   --life-theme-accent-contrast: #2B6CB0;
   --life-theme-column-bg: rgba(212, 175, 55, 0.02);
 }

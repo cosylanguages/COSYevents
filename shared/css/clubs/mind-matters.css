@@ -311,8 +311,12 @@ body[class*="theme-mind-"] .round-block.grammar {
   border-left: 5px solid var(--mind-theme-accent) !important;
 }
 
+body[class*="theme-mind-"] {
+  --mind-theme-hero: linear-gradient(135deg, #1E293B, #0F172A);
+}
+
 body[class*="theme-mind-"] .session-hero {
-  background: var(--mind-theme-hero) !important;
+  background: var(--mind-theme-hero, linear-gradient(135deg, #1E293B, #0F172A)) !important;
 }
 
 /* ─── Light Mode Definitions ─── */
@@ -323,7 +327,7 @@ body.theme-mind-dopamine {
   --mind-theme-accent: #D45D00;
   --mind-theme-border: #FCDCC5;
   --mind-theme-watermark: "⚡";
-  --mind-theme-hero: linear-gradient(135deg, #D45D00, #4A2306);
+  --mind-theme-hero: linear-gradient(135deg, #9A3B00, #4A2306);
 }
 body.theme-mind-sleep {
   --mind-theme-bg: #F5F6FC;
@@ -503,7 +507,7 @@ body.theme-mind-smiles {
   --mind-theme-accent: #E5A900;
   --mind-theme-border: #FAF2CC;
   --mind-theme-watermark: "😊";
-  --mind-theme-hero: linear-gradient(135deg, #E5A900, #4A3B05);
+  --mind-theme-hero: linear-gradient(135deg, #8C6500, #4A3B05);
 }
 body.theme-mind-conversations {
   --mind-theme-bg: #FAF5F0;
@@ -548,7 +552,7 @@ body.theme-mind-pinkwashing {
   --mind-theme-accent: #E91E63;
   --mind-theme-border: #F8D3DF;
   --mind-theme-watermark: "🦩";
-  --mind-theme-hero: linear-gradient(135deg, #E91E63, #4A1525);
+  --mind-theme-hero: linear-gradient(135deg, #991147, #4A1525);
 }
 body.theme-mind-purplewashing {
   --mind-theme-bg: #F9F5FC;
@@ -566,7 +570,7 @@ body.theme-mind-bluewashing {
   --mind-theme-accent: #2196F3;
   --mind-theme-border: #DDECF8;
   --mind-theme-watermark: "🌊";
-  --mind-theme-hero: linear-gradient(135deg, #2196F3, #152A4A);
+  --mind-theme-hero: linear-gradient(135deg, #1565C0, #152A4A);
 }
 body.theme-mind-redwashing {
   --mind-theme-bg: #FFF2F2;
@@ -575,7 +579,7 @@ body.theme-mind-redwashing {
   --mind-theme-accent: #F44336;
   --mind-theme-border: #FAD9D9;
   --mind-theme-watermark: "🚩";
-  --mind-theme-hero: linear-gradient(135deg, #F44336, #4A1111);
+  --mind-theme-hero: linear-gradient(135deg, #C62828, #4A1111);
 }
 body.theme-mind-sportswashing {
   --mind-theme-bg: #F2FAF4;
@@ -584,7 +588,7 @@ body.theme-mind-sportswashing {
   --mind-theme-accent: #4CAF50;
   --mind-theme-border: #D9FADF;
   --mind-theme-watermark: "🏆";
-  --mind-theme-hero: linear-gradient(135deg, #4CAF50, #114A22);
+  --mind-theme-hero: linear-gradient(135deg, #2E7D32, #114A22);
 }
 body.theme-mind-whitewashing {
   --mind-theme-bg: #FAFBFB;
@@ -593,7 +597,7 @@ body.theme-mind-whitewashing {
   --mind-theme-accent: #78909C;
   --mind-theme-border: #EAECEE;
   --mind-theme-watermark: "🕊️";
-  --mind-theme-hero: linear-gradient(135deg, #78909C, #2C3E50);
+  --mind-theme-hero: linear-gradient(135deg, #455A64, #2C3E50);
 }
 body.theme-mind-ai {
   --mind-theme-bg: #F2F5FA;

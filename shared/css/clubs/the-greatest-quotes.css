@@ -421,6 +421,14 @@ html[data-theme="dark"] body.theme-quotes-digital {
 }
 
 /* 🎨 Hero styles for each theme class */
+body[class*="theme-quotes-"] {
+  --quotes-theme-hero: linear-gradient(135deg, #1A365D, #0A192F);
+}
+
+body[class*="theme-quotes-"] .session-hero {
+  background: var(--quotes-theme-hero, linear-gradient(135deg, #1A365D, #0A192F)) !important;
+}
+
 body.theme-quotes-critical .session-hero { background: linear-gradient(135deg, #4A5568, #1A202C) !important; }
 body.theme-quotes-art .session-hero { background: linear-gradient(135deg, #741B28, #3A050E) !important; }
 body.theme-quotes-intellect .session-hero { background: linear-gradient(135deg, #1A365D, #0A192F) !important; }
@@ -428,7 +436,7 @@ body.theme-quotes-nostalgia .session-hero { background: linear-gradient(135deg, 
 body.theme-quotes-parenting .session-hero { background: linear-gradient(135deg, #276749, #123420) !important; }
 body.theme-quotes-relationships .session-hero { background: linear-gradient(135deg, #6B21A8, #3B0D66) !important; }
 body.theme-quotes-justice .session-hero { background: linear-gradient(135deg, #744210, #3A1F05) !important; }
-body.theme-quotes-empathy .session-hero { background: linear-gradient(135deg, #0D9488, #07525A) !important; }
+body.theme-quotes-empathy .session-hero { background: linear-gradient(135deg, #0B6E67, #07525A) !important; }
 body.theme-quotes-existential .session-hero { background: linear-gradient(135deg, #3B0764, #0F0E26) !important; }
 body.theme-quotes-digital .session-hero { background: linear-gradient(135deg, #065F46, #022C22) !important; }
 

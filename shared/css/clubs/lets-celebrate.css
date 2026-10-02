@@ -322,8 +322,12 @@ body[class*="theme-celebrate-"] .round-block.grammar {
   border-left: 5px solid var(--celebrate-theme-accent) !important;
 }
 
+body[class*="theme-celebrate-"] {
+  --celebrate-theme-hero: linear-gradient(135deg, #4A1515, #1A0A0A);
+}
+
 body[class*="theme-celebrate-"] .session-hero {
-  background: var(--celebrate-theme-hero) !important;
+  background: var(--celebrate-theme-hero, linear-gradient(135deg, #4A1515, #1A0A0A)) !important;
 }
 
 /* Theme variable values for Light Mode */
@@ -343,7 +347,7 @@ body.theme-celebrate-diwali {
   --celebrate-theme-accent: #C27D13;
   --celebrate-theme-border: #F8E8D0;
   --celebrate-theme-watermark: "🪔";
-  --celebrate-theme-hero: linear-gradient(135deg, #C27D13, #4A3515);
+  --celebrate-theme-hero: linear-gradient(135deg, #8C520C, #4A3515);
 }
 body.theme-celebrate-simplicity {
   --celebrate-theme-bg: #F4F7F5;
@@ -379,7 +383,7 @@ body.theme-celebrate-beekeeping {
   --celebrate-theme-accent: #D4AF37;
   --celebrate-theme-border: #FAF0CC;
   --celebrate-theme-watermark: "🐝";
-  --celebrate-theme-hero: linear-gradient(135deg, #D4AF37, #423212);
+  --celebrate-theme-hero: linear-gradient(135deg, #8C7010, #423212);
 }
 body.theme-celebrate-someone {
   --celebrate-theme-bg: #FFF5F7;
@@ -424,7 +428,7 @@ body.theme-celebrate-womens {
   --celebrate-theme-accent: #D05C48;
   --celebrate-theme-border: #FADFD9;
   --celebrate-theme-watermark: "🌹";
-  --celebrate-theme-hero: linear-gradient(135deg, #D05C48, #4D231A);
+  --celebrate-theme-hero: linear-gradient(135deg, #963C2B, #4D231A);
 }
 body.theme-celebrate-family {
   --celebrate-theme-bg: #FAF6F0;
