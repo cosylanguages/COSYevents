@@ -430,7 +430,7 @@ REVOKE EXECUTE ON FUNCTION public.my_access() FROM PUBLIC;
 REVOKE EXECUTE ON FUNCTION public.set_user_role(uuid, text) FROM PUBLIC;
 
 GRANT EXECUTE ON FUNCTION public.level_rank(text) TO anon, authenticated;
-GRANT EXECUTE ON FUNCTION public.is_founder() TO authenticated;
+GRANT EXECUTE ON FUNCTION public.is_founder() TO anon, authenticated;
 GRANT EXECUTE ON FUNCTION public.is_teacher_of(text) TO authenticated;
 GRANT EXECUTE ON FUNCTION public.can_read_session(text) TO authenticated;
 GRANT EXECUTE ON FUNCTION public.my_access() TO authenticated;
