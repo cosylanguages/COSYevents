@@ -34,9 +34,12 @@
 
   <header class="hub-header">
     <div class="hub-header-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
         <span class="hub-brand" style="margin-bottom: 0;">COSYlanguages Ecosystem</span>
-        <div data-ce-lang-switcher></div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <div data-cosy-account></div>
+          <div data-ce-lang-switcher></div>
+        </div>
       </div>
       <h1 class="hub-title">Privacy Policy &amp; Legal Notice</h1>
       <p class="hub-subtitle">
@@ -74,7 +77,20 @@
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">3. Registration and Messaging Contact</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">3. Optional Accounts</h2>
+        <p style="margin-bottom: 0.75rem;">An optional shared account system allows enrolled students and facilitators to access private session materials across COSY ecosystem sites.</p>
+        <p style="margin-bottom: 0.5rem;">When enabled, an account stores:</p>
+        <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem;">
+          <li>Your email address, optional display name, and assigned ecosystem role (student, teacher, or founder).</li>
+          <li>Your language, CEFR level, and course access grants along with expiration dates.</li>
+          <li>A secure login session stored in your browser under the key <code>cosy-auth</code>.</li>
+        </ul>
+        <p style="margin-bottom: 0.75rem;"><strong>Data Processor:</strong> Accounts and access rules are processed by <strong>Supabase Inc.</strong> (database in the EU region chosen by the site owner). Account data is processed solely for authenticating users and granting appropriate content access rights.</p>
+        <p><strong>Disabled Status:</strong> Shared accounts are completely disabled by default until explicitly enabled by the site owner. When disabled, no account network calls, UI elements, or storage writes take place.</p>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">4. Registration and Messaging Contact</h2>
         <p style="margin-bottom: 0.75rem;">Event registrations, passes, and inquiries are handled directly through external instant messaging services via links on our site:</p>
         <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem;">
           <li><strong>WhatsApp</strong> (WhatsApp Ireland Limited / Meta Platforms, Inc.)</li>
@@ -86,19 +102,19 @@
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">4. Hosting, Technical Data, &amp; Embedded Media</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">5. Hosting, Technical Data, &amp; Embedded Media</h2>
         <p style="margin-bottom: 0.75rem;"><strong>Hosting:</strong> This website is hosted on <strong>GitHub Pages</strong>, a service provided by GitHub, Inc. (88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). When you visit COSYevents, GitHub servers automatically collect technical request data (such as your IP address, browser type, referring URL, and date/time of request) as necessary to serve web assets and ensure server security.</p>
         <p style="margin-bottom: 0.75rem;"><strong>Typography / Fonts:</strong> Typography styles are rendered using Google Fonts loaded from <code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>. Loading fonts from these domains involves a technical request where Google LLC receives your IP address in accordance with Google's privacy policy.</p>
         <p><strong>Embedded Media &amp; Videos:</strong> Select session pages (such as Karaoke Club and Cinema Club pages) contain embedded YouTube video players (<code>youtube.com/embed/...</code>) or direct links to YouTube search results. Interacting with embedded YouTube players allows YouTube (Google LLC) to receive your IP address and process viewing interaction data under Google's privacy policy.</p>
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">5. External Links</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">6. External Links</h2>
         <p>COSYevents contains links to external websites and services, including WhatsApp, Telegram, YouTube, COSYplatform, and other COSY ecosystem products. We have no control over third-party platforms, and their data processing activities are governed by their respective privacy policies.</p>
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">6. Your Rights Under the GDPR</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">7. Your Rights Under the GDPR</h2>
         <p style="margin-bottom: 0.75rem;">Under the General Data Protection Regulation (GDPR), you hold the following rights regarding personal data you transmit to us via our communication channels:</p>
         <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem;">
           <li>Right of access (Art. 15 GDPR)</li>
@@ -114,7 +130,7 @@
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">7. Legal Notice (Mentions Légales)</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">8. Legal Notice (Mentions Légales)</h2>
         <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem;">
           <li><strong>Site Publisher &amp; Director of Publication:</strong> &lt;legal name of the person or business running the site&gt;</li>
           <li><strong>Legal Status:</strong> &lt;e.g. "individual, auto-entrepreneur, SIRET 123 456 789 00012" or "COSYlanguages SAS, RCS ..."&gt;</li>
@@ -139,5 +155,6 @@
   </footer>
 
   <script src="shared/js/cosyevents-lang.js" defer></script>
+  <script src="shared/js/cosy-auth.js" defer></script>
 </body>
 </html>

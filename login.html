@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Log in — COSYevents</title>
+  <link rel="stylesheet" href="shared/css/hub.css">
+  <link rel="stylesheet" href="shared/css/cosy-icons.css">
+  <link rel="icon" href="shared/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="shared/assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#416b49">
+</head>
+<body>
+
+  <div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
+    <div class="cosy-strip-inner">
+      <span class="cosy-strip-brand">🌐 COSY Ecosystem:</span>
+      <ul class="cosy-strip-links">
+        <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
+        <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
+        <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
+        <li><a href="index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+        <span class="hub-brand" style="margin-bottom: 0;">COSYlanguages Ecosystem</span>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <div data-cosy-account></div>
+          <div data-ce-lang-switcher></div>
+        </div>
+      </div>
+      <h1 id="login-title" class="hub-title">Log in</h1>
+      <p id="login-subtitle" class="hub-subtitle">
+        Enter your email address to receive a secure 6-digit login code. No password needed.
+      </p>
+    </div>
+  </header>
+
+  <main class="hub-main" style="max-width: 480px; margin: 0 auto; padding: 2.5rem 1.5rem;">
+    <article style="background: var(--cosy-surface, #fff); border: 1px solid var(--cosy-border, #eee); border-radius: var(--cosy-radius, 12px); padding: 2rem; box-shadow: var(--cosy-shadow, 0 4px 12px rgba(0,0,0,0.05));">
+
+      <div id="login-status-msg" role="status" aria-live="polite" style="display: none; padding: 0.85rem; border-radius: 8px; margin-bottom: 1.25rem; font-size: 0.9rem; font-weight: 600;"></div>
+
+      <!-- Step 1: Request OTP -->
+      <form id="login-step-1" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div>
+          <label id="lbl-email" for="input-email" style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--cosy-text, #333);">
+            Email address
+          </label>
+          <input type="email" id="input-email" required placeholder="you@example.com" style="width: 100%; min-height: 44px; padding: 0.6rem 0.85rem; font-size: 1rem; border: 1px solid var(--cosy-border, #ccc); border-radius: 8px; background: var(--cosy-bg, #fff); color: var(--cosy-text, #333);" />
+        </div>
+
+        <button type="submit" id="btn-send-code" style="min-height: 44px; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 700; color: #fff; background: var(--cosy-primary, #416b49); border: none; border-radius: 8px; cursor: pointer; transition: background 0.2s ease;">
+          Send login code
+        </button>
+      </form>
+
+      <!-- Step 2: Verify Code -->
+      <form id="login-step-2" style="display: none; flex-direction: column; gap: 1.25rem;">
+        <div>
+          <label id="lbl-code" for="input-code" style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--cosy-text, #333);">
+            Enter 6-digit code
+          </label>
+          <input type="text" id="input-code" pattern="[0-9]{6}" maxlength="6" inputmode="numeric" required placeholder="123456" style="width: 100%; min-height: 44px; padding: 0.6rem 0.85rem; font-size: 1.25rem; letter-spacing: 4px; text-align: center; border: 1px solid var(--cosy-border, #ccc); border-radius: 8px; background: var(--cosy-bg, #fff); color: var(--cosy-text, #333);" />
+        </div>
+
+        <button type="submit" id="btn-verify-code" style="min-height: 44px; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 700; color: #fff; background: var(--cosy-primary, #416b49); border: none; border-radius: 8px; cursor: pointer;">
+          Verify &amp; Log in
+        </button>
+
+        <button type="button" id="btn-resend-code" style="min-height: 44px; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 600; color: var(--cosy-primary, #416b49); background: none; border: 1px solid var(--cosy-border, #ccc); border-radius: 8px; cursor: pointer;">
+          Resend code
+        </button>
+      </form>
+
+      <div style="margin-top: 1.5rem; text-align: center; border-top: 1px solid var(--cosy-border, #eee); padding-top: 1rem;">
+        <a id="link-home" href="index.html" style="color: var(--cosy-primary, #416b49); font-size: 0.9rem; text-decoration: none; font-weight: 600;">
+          ← Back to home
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="hub-footer">
+    <p>COSYevents &copy; COSYlanguages Ecosystem.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+      <a href="privacy.html">Privacy &amp; legal notice</a>
+    </p>
+  </footer>
+
+  <script src="shared/js/cosyevents-lang.js" defer></script>
+  <script src="shared/js/cosy-auth.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var params = new URLSearchParams(window.location.search);
+      var rawNext = params.get('next');
+
+      function getLang() {
+        if (window.CosyAuth && window.CosyAuth.getTranslation) {
+          var pLang = 'en';
+          if (window.CosyLang && window.CosyLang.detectPageLang) {
+            pLang = window.CosyLang.detectPageLang(window.location.pathname);
+          }
+          return pLang;
+        }
+        return 'en';
+      }
+
+      function updatePageText() {
+        if (!window.CosyAuth) return;
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        document.getElementById('login-title').textContent = t('login');
+        document.getElementById('lbl-email').textContent = t('email_label');
+        document.getElementById('btn-send-code').textContent = t('send_code');
+        document.getElementById('lbl-code').textContent = t('enter_code');
+        document.getElementById('btn-verify-code').textContent = t('verify_code');
+        document.getElementById('btn-resend-code').textContent = t('resend_code');
+        document.getElementById('link-home').textContent = '← ' + t('back_to_home');
+      }
+
+      setTimeout(updatePageText, 100);
+
+      var step1 = document.getElementById('login-step-1');
+      var step2 = document.getElementById('login-step-2');
+      var statusMsg = document.getElementById('login-status-msg');
+      var emailInput = document.getElementById('input-email');
+      var codeInput = document.getElementById('input-code');
+      var resendBtn = document.getElementById('btn-resend-code');
+
+      var currentEmail = '';
+      var resendTimer = null;
+      var resendCooldown = 0;
+
+      function showStatus(msg, isError) {
+        statusMsg.style.display = 'block';
+        statusMsg.textContent = msg;
+        if (isError) {
+          statusMsg.style.background = 'var(--cosy-rose-light, #fcebeb)';
+          statusMsg.style.color = 'var(--cosy-rose, #a32d2d)';
+          statusMsg.style.border = '1px solid var(--cosy-rose, #a32d2d)';
+        } else {
+          statusMsg.style.background = 'var(--cosy-primary-light, #e8f0e9)';
+          statusMsg.style.color = 'var(--cosy-primary-dark, #233827)';
+          statusMsg.style.border = '1px solid var(--cosy-primary, #416b49)';
+        }
+      }
+
+      function hideStatus() {
+        statusMsg.style.display = 'none';
+      }
+
+      function startResendCooldown() {
+        resendCooldown = 30;
+        resendBtn.disabled = true;
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        if (resendTimer) clearInterval(resendTimer);
+        resendTimer = setInterval(function () {
+          resendCooldown--;
+          if (resendCooldown <= 0) {
+            clearInterval(resendTimer);
+            resendBtn.disabled = false;
+            resendBtn.textContent = t('resend_code');
+          } else {
+            resendBtn.textContent = t('resend_code') + ' (' + resendCooldown + 's)';
+          }
+        }, 1000);
+      }
+
+      // Check if already signed in
+      if (window.CosyAuth) {
+        window.CosyAuth.init().then(function () {
+          updatePageText();
+          if (window.CosyAuth.getSession()) {
+            var target = window.CosyAuth.validateNextParam(rawNext, 'index.html');
+            window.location.href = target;
+          }
+        });
+      }
+
+      step1.addEventListener('submit', function (e) {
+        e.preventDefault();
+        hideStatus();
+        var email = emailInput.value.trim();
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        if (!email || email.indexOf('@') === -1) {
+          showStatus(t('error_invalid_email'), true);
+          return;
+        }
+
+        if (!navigator.onLine) {
+          showStatus(t('error_offline'), true);
+          return;
+        }
+
+        currentEmail = email;
+        var sendBtn = document.getElementById('btn-send-code');
+        sendBtn.disabled = true;
+
+        if (window.CosyAuth && window.CosyAuth.signInWithEmail) {
+          window.CosyAuth.signInWithEmail(email)
+            .then(function (res) {
+              sendBtn.disabled = false;
+              if (res.error) {
+                if (res.error.status === 429 || (res.error.message && res.error.message.indexOf('rate') !== -1)) {
+                  showStatus(t('error_rate_limit'), true);
+                } else {
+                  showStatus(res.error.message || t('error_generic'), true);
+                }
+              } else {
+                step1.style.display = 'none';
+                step2.style.display = 'flex';
+                showStatus(t('code_sent'), false);
+                codeInput.focus();
+                startResendCooldown();
+              }
+            })
+            .catch(function (err) {
+              sendBtn.disabled = false;
+              showStatus(err.message || t('error_generic'), true);
+            });
+        }
+      });
+
+      step2.addEventListener('submit', function (e) {
+        e.preventDefault();
+        hideStatus();
+        var code = codeInput.value.trim();
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        if (!code || code.length !== 6) {
+          showStatus(t('error_expired_code'), true);
+          return;
+        }
+
+        if (!navigator.onLine) {
+          showStatus(t('error_offline'), true);
+          return;
+        }
+
+        var verifyBtn = document.getElementById('btn-verify-code');
+        verifyBtn.disabled = true;
+
+        if (window.CosyAuth && window.CosyAuth.verifyCode) {
+          window.CosyAuth.verifyCode(currentEmail, code)
+            .then(function (res) {
+              verifyBtn.disabled = false;
+              if (res.error) {
+                showStatus(t('error_expired_code'), true);
+              } else {
+                var target = window.CosyAuth.validateNextParam(rawNext, 'index.html');
+                window.location.href = target;
+              }
+            })
+            .catch(function () {
+              verifyBtn.disabled = false;
+              showStatus(t('error_expired_code'), true);
+            });
+        }
+      });
+
+      resendBtn.addEventListener('click', function () {
+        if (resendCooldown > 0 || !currentEmail) return;
+        hideStatus();
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        if (window.CosyAuth && window.CosyAuth.signInWithEmail) {
+          window.CosyAuth.signInWithEmail(currentEmail)
+            .then(function (res) {
+              if (res.error) {
+                showStatus(res.error.message || t('error_generic'), true);
+              } else {
+                showStatus(t('code_sent'), false);
+                startResendCooldown();
+              }
+            });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

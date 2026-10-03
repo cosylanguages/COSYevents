@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>My Access — COSYevents</title>
+  <link rel="stylesheet" href="shared/css/hub.css">
+  <link rel="stylesheet" href="shared/css/cosy-icons.css">
+  <link rel="icon" href="shared/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="shared/assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#416b49">
+</head>
+<body>
+
+  <div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
+    <div class="cosy-strip-inner">
+      <span class="cosy-strip-brand">🌐 COSY Ecosystem:</span>
+      <ul class="cosy-strip-links">
+        <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
+        <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
+        <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
+        <li><a href="index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+        <span class="hub-brand" style="margin-bottom: 0;">COSYlanguages Ecosystem</span>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <div data-cosy-account></div>
+          <div data-ce-lang-switcher></div>
+        </div>
+      </div>
+      <h1 id="account-title" class="hub-title">My Access &amp; Passes</h1>
+      <p id="account-subtitle" class="hub-subtitle">
+        Overview of your active COSYpasses, course grants, teacher languages, and event access rights.
+      </p>
+    </div>
+  </header>
+
+  <main class="hub-main" style="max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem;">
+    <article style="background: var(--cosy-surface, #fff); border: 1px solid var(--cosy-border, #eee); border-radius: var(--cosy-radius, 12px); padding: 2rem; box-shadow: var(--cosy-shadow, 0 4px 12px rgba(0,0,0,0.05)); display: flex; flex-direction: column; gap: 1.5rem;">
+
+      <!-- User Banner -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--cosy-border, #eee); padding-bottom: 1rem;">
+        <div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--cosy-text-muted, #666); text-transform: uppercase;">Logged in as</span>
+          <div id="account-email" style="font-size: 1.2rem; font-weight: 700; color: var(--cosy-primary-dark, #233827);">...</div>
+        </div>
+        <div>
+          <span id="account-role-badge" style="display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; border-radius: 12px; background: var(--cosy-primary-light, #e8f0e9); color: var(--cosy-primary-dark, #233827);">
+            Student
+          </span>
+        </div>
+      </div>
+
+      <!-- Grants Section -->
+      <div>
+        <h2 id="heading-access" style="font-size: 1.25rem; font-weight: 700; color: var(--cosy-primary-dark, #233827); margin-bottom: 1rem;">
+          Active Access Grants &amp; Passes
+        </h2>
+
+        <div id="grants-container" style="overflow-x: auto;">
+          <!-- Table rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Matching Event Hub Links -->
+      <div style="border-top: 1px solid var(--cosy-border, #eee); padding-top: 1.5rem;">
+        <h3 id="heading-hubs" style="font-size: 1.1rem; font-weight: 700; color: var(--cosy-primary-dark, #233827); margin-bottom: 0.85rem;">
+          Explore Event Hubs
+        </h3>
+        <nav style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="speaking-clubs/index.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Speaking Clubs 💬</a>
+          <a href="cinema-nights/index.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Cinema 🎬</a>
+          <a href="karaoke-club.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Karaoke 🎤</a>
+          <a href="game-evenings.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Games 🎲</a>
+          <a href="long-reads.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Long Reads 📚</a>
+          <a href="teacher-led-sessions/index.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Teacher Sessions 🍎</a>
+        </nav>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="hub-footer">
+    <p>COSYevents &copy; COSYlanguages Ecosystem.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+      <a href="privacy.html">Privacy &amp; legal notice</a>
+    </p>
+  </footer>
+
+  <script src="shared/js/cosyevents-lang.js" defer></script>
+  <script src="shared/js/cosy-auth.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function getLang() {
+        if (window.CosyAuth && window.CosyAuth.getTranslation) {
+          var pLang = 'en';
+          if (window.CosyLang && window.CosyLang.detectPageLang) {
+            pLang = window.CosyLang.detectPageLang(window.location.pathname);
+          }
+          return pLang;
+        }
+        return 'en';
+      }
+
+      function renderAccountPage() {
+        if (!window.CosyAuth) return;
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        var session = window.CosyAuth.getSession();
+        if (!session) {
+          window.location.href = 'login.html?next=account.html';
+          return;
+        }
+
+        var access = window.CosyAuth.getAccess();
+        var email = session.user ? session.user.email : '';
+        document.getElementById('account-email').textContent = email;
+
+        var userRole = window.CosyAuth.role() || 'student';
+        var roleLabel = t('role_student');
+        if (userRole === 'teacher') roleLabel = t('role_teacher');
+        if (userRole === 'founder') roleLabel = t('role_founder');
+        document.getElementById('account-role-badge').textContent = roleLabel;
+
+        document.getElementById('heading-access').textContent = t('my_access');
+
+        var grantsContainer = document.getElementById('grants-container');
+
+        var grants = (access && Array.isArray(access.grants)) ? access.grants : [];
+        var teaches = (access && Array.isArray(access.teaches)) ? access.teaches : [];
+
+        if (userRole === 'teacher' && teaches.length > 0) {
+          var tHtml = '<div style="margin-bottom: 1rem; font-weight: 600;">' + t('role_teacher') + ' languages: ' + teaches.map(function(l){ return l.toUpperCase(); }).join(', ') + '</div>';
+          if (grants.length === 0) {
+            grantsContainer.innerHTML = tHtml;
+            return;
+          }
+        }
+
+        if (grants.length === 0 && teaches.length === 0) {
+          grantsContainer.innerHTML = '<p style="color: var(--cosy-text-muted, #666); font-style: italic;">' + t('no_grants') + '</p>';
+          return;
+        }
+
+        var html =
+          '<table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">' +
+            '<thead>' +
+              '<tr style="border-bottom: 2px solid var(--cosy-border, #ccc); color: var(--cosy-primary-dark, #233827);">' +
+                '<th style="padding: 0.6rem 0.5rem;">' + t('language') + '</th>' +
+                '<th style="padding: 0.6rem 0.5rem;">' + t('level') + '</th>' +
+                '<th style="padding: 0.6rem 0.5rem;">' + t('course') + '</th>' +
+                '<th style="padding: 0.6rem 0.5rem;">' + t('valid_until') + '</th>' +
+                '<th style="padding: 0.6rem 0.5rem;">Notes</th>' +
+              '</tr>' +
+            '</thead>' +
+            '<tbody>';
+
+        for (var i = 0; i < grants.length; i++) {
+          var g = grants[i];
+          var langName = g.language ? g.language.toUpperCase() : '-';
+          if (window.CosyLang && window.CosyLang.LANG_CONFIG && window.CosyLang.LANG_CONFIG[g.language]) {
+            langName = window.CosyLang.LANG_CONFIG[g.language].flag + ' ' + window.CosyLang.LANG_CONFIG[g.language].name;
+          }
+          var validUntil = g.valid_until ? g.valid_until : '∞';
+          var noteStr = g.include_lower ? t('includes_lower') : '';
+
+          html +=
+            '<tr style="border-bottom: 1px solid var(--cosy-border, #eee);">' +
+              '<td style="padding: 0.6rem 0.5rem; font-weight: 700;">' + langName + '</td>' +
+              '<td style="padding: 0.6rem 0.5rem;">' + (g.level || '-') + '</td>' +
+              '<td style="padding: 0.6rem 0.5rem;">' + (g.course || 'General') + '</td>' +
+              '<td style="padding: 0.6rem 0.5rem;">' + validUntil + '</td>' +
+              '<td style="padding: 0.6rem 0.5rem; font-size: 0.85rem; color: var(--cosy-text-muted, #666);">' + noteStr + '</td>' +
+            '</tr>';
+        }
+
+        html += '</tbody></table>';
+        grantsContainer.innerHTML = html;
+      }
+
+      if (window.CosyAuth) {
+        window.CosyAuth.init().then(renderAccountPage);
+      }
+    });
+  </script>
+</body>
+</html>
