@@ -1,4 +1,8 @@
 /**
+ * DEPRECATION / SUPERSEDED NOTICE:
+ * The per-session entitlement model referenced in earlier versions of this script is superseded by the core ecosystem
+ * access-control design in `supabase/migrations/20261003000000_ecosystem_access.sql`.
+ *
  * Local-only script to publish public metadata and paid session content to Supabase.
  * Uses service-role key from local environment variables (.env).
  * NEVER commit private payloads, source URLs, or audio files to the public git repository.
