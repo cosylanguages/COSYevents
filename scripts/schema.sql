@@ -1,3 +1,8 @@
+-- DEPRECATION / SUPERSEDED NOTICE:
+-- The per-session entitlement model defined in this file is superseded by the core ecosystem access-control design
+-- in `supabase/migrations/20261003000000_ecosystem_access.sql`. Use `supabase/migrations/20261003000000_ecosystem_access.sql`
+-- for all new deployments and role/grant-based access security rules.
+
 -- SQL Schema for COSYplatform / COSYevents Supabase Database Extension
 -- Reuses COSYplatform's Supabase project and profiles table.
 --
