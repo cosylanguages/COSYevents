@@ -78,4 +78,32 @@ assert.strictEqual(calendar.eventMatches(mockEvents[0], ['en'], 'cinema-night'),
 assert.strictEqual(calendar.eventMatches(mockEvents[1], ['en'], 'cinema-night'), false);
 console.log('✔ Passed Combined Filter Matching tests.');
 
+// Test 9: computeNextSelection Preset and Transition Logic
+console.log('\nTest 9: computeNextSelection Transitions');
+
+// 9a: Clicking language not in My languages preset ADDS it
+const resAdd = calendar.computeNextSelection('mine', 'it', ['en', 'fr'], true);
+assert.deepStrictEqual(resAdd, ['en', 'fr', 'it'], '"mine" + "it" should add "it" to ["en", "fr"]');
+
+// 9b: Clicking language in My languages preset REMOVES it
+const resRem = calendar.computeNextSelection('mine', 'en', ['en', 'fr'], true);
+assert.deepStrictEqual(resRem, ['fr'], '"mine" + "en" should remove "en" leaving ["fr"]');
+
+// 9c: Clicking language from "all" selects only that language
+const resAll = calendar.computeNextSelection('all', 'it', ['en', 'fr'], true);
+assert.deepStrictEqual(resAll, ['it'], '"all" + "it" should set custom selection to ["it"]');
+
+// 9d: Custom selection matching My languages list returns to 'mine'
+const resMineMatch = calendar.computeNextSelection(['fr', 'it'], 'en', ['en', 'fr', 'it'], true);
+assert.strictEqual(resMineMatch, 'mine', 'Custom selection matching stored My languages array should switch to "mine"');
+
+// 9e: Deselecting last custom language returns to default
+const resEmpty = calendar.computeNextSelection(['en'], 'en', ['en', 'fr'], true);
+assert.strictEqual(resEmpty, 'mine', 'Deselecting last custom language returns to "mine" when explicit');
+
+const resEmptyNoMine = calendar.computeNextSelection(['en'], 'en', ['en'], false);
+assert.strictEqual(resEmptyNoMine, 'all', 'Deselecting last custom language returns to "all" when not explicit');
+
+console.log('✔ Passed computeNextSelection Transition tests.');
+
 console.log('\n=== ALL EVENT FILTER UNIT TESTS PASSED SUCCESSFULLY! ===\n');
