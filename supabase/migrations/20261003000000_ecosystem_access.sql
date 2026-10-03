@@ -578,36 +578,38 @@ CREATE POLICY "Session revisions select" ON public.session_revisions
   USING (public.is_founder());
 
 -- Table Grants
+-- Row Level Security (RLS) policies enforce row-level access (e.g. founder write permissions)
 REVOKE ALL ON TABLE public.profiles FROM anon, authenticated;
 GRANT SELECT, UPDATE ON TABLE public.profiles TO authenticated;
 GRANT ALL ON TABLE public.profiles TO service_role;
 
 REVOKE ALL ON TABLE public.teacher_languages FROM anon, authenticated;
-GRANT SELECT ON TABLE public.teacher_languages TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.teacher_languages TO authenticated;
 GRANT ALL ON TABLE public.teacher_languages TO service_role;
 
 REVOKE ALL ON TABLE public.access_grants FROM anon, authenticated;
-GRANT SELECT ON TABLE public.access_grants TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.access_grants TO authenticated;
 GRANT ALL ON TABLE public.access_grants TO service_role;
 
 REVOKE ALL ON TABLE public.session_grants FROM anon, authenticated;
-GRANT SELECT ON TABLE public.session_grants TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.session_grants TO authenticated;
 GRANT ALL ON TABLE public.session_grants TO service_role;
 
 REVOKE ALL ON TABLE public.session_catalog FROM anon, authenticated;
-GRANT SELECT ON TABLE public.session_catalog TO anon, authenticated;
+GRANT SELECT ON TABLE public.session_catalog TO anon;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.session_catalog TO authenticated;
 GRANT ALL ON TABLE public.session_catalog TO service_role;
 
 REVOKE ALL ON TABLE public.session_content FROM anon, authenticated;
-GRANT SELECT ON TABLE public.session_content TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.session_content TO authenticated;
 GRANT ALL ON TABLE public.session_content TO service_role;
 
 REVOKE ALL ON TABLE public.session_sources FROM anon, authenticated;
-GRANT SELECT ON TABLE public.session_sources TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.session_sources TO authenticated;
 GRANT ALL ON TABLE public.session_sources TO service_role;
 
 REVOKE ALL ON TABLE public.session_teacher_notes FROM anon, authenticated;
-GRANT SELECT ON TABLE public.session_teacher_notes TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.session_teacher_notes TO authenticated;
 GRANT ALL ON TABLE public.session_teacher_notes TO service_role;
 
 REVOKE ALL ON TABLE public.session_revisions FROM anon, authenticated;
