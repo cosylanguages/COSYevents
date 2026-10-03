@@ -104,11 +104,16 @@ BEGIN
     RAISE EXCEPTION 'Anon test failed: expected 7 published catalog rows, got %', v_cat_count;
   END IF;
 
-  -- Anon sees NO session content
-  SELECT count(*) INTO v_cnt_count FROM public.session_content;
-  IF v_cnt_count <> 0 THEN
-    RAISE EXCEPTION 'Anon test failed: expected 0 content rows, got %', v_cnt_count;
-  END IF;
+  -- Anon sees NO session content (table SELECT permission is revoked from anon)
+  BEGIN
+    SELECT count(*) INTO v_cnt_count FROM public.session_content;
+    IF v_cnt_count <> 0 THEN
+      RAISE EXCEPTION 'Anon test failed: expected 0 content rows, got %', v_cnt_count;
+    END IF;
+  EXCEPTION WHEN insufficient_privilege THEN
+    -- Permission denied for table session_content as expected
+    NULL;
+  END;
 END $$;
 
 -- Test 2: Student Exact Grant (en, B1, exact)
