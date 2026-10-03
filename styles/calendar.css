@@ -121,6 +121,19 @@
   line-height: 1;
 }
 
+.lang-chip .chip-label-short {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .lang-chip .chip-label-full {
+    display: none;
+  }
+  .lang-chip .chip-label-short {
+    display: inline;
+  }
+}
+
 /* ── Month Navigation Header ────────────────────────────────────────── */
 .month-nav-header {
   display: flex;

@@ -141,6 +141,43 @@
     return 'all';
   }
 
+  function areArraysEqual(arr1, arr2) {
+    if (!Array.isArray(arr1) || !Array.isArray(arr2)) return false;
+    if (arr1.length !== arr2.length) return false;
+    const s1 = [...arr1].sort();
+    const s2 = [...arr2].sort();
+    return s1.every((val, idx) => val === s2[idx]);
+  }
+
+  function computeNextSelection(currentSelection, clickedCode, storedMyLangs, myLangsExplicit) {
+    let baseLangs = [];
+    if (currentSelection === 'mine' && myLangsExplicit && Array.isArray(storedMyLangs) && storedMyLangs.length > 0) {
+      baseLangs = [...storedMyLangs];
+    } else if (Array.isArray(currentSelection)) {
+      baseLangs = [...currentSelection];
+    } else {
+      // 'all' preset or non-explicit 'mine'
+      return [clickedCode];
+    }
+
+    const idx = baseLangs.indexOf(clickedCode);
+    if (idx !== -1) {
+      baseLangs.splice(idx, 1);
+    } else {
+      baseLangs.push(clickedCode);
+    }
+
+    if (baseLangs.length === 0) {
+      return myLangsExplicit ? 'mine' : 'all';
+    }
+
+    if (myLangsExplicit && areArraysEqual(baseLangs, storedMyLangs)) {
+      return 'mine';
+    }
+
+    return baseLangs;
+  }
+
   function resolveSelection(selection, storedMyLangs, myLangsExplicit) {
     if (selection === 'all') return 'all';
     if (selection === 'mine') {
@@ -407,7 +444,8 @@
       const flag = LANG_FLAGS[code] || '';
       const localizedName = getLocalizedLangName(code);
       btn.setAttribute('aria-label', t('lang_chip_aria', { lang: localizedName }));
-      btn.innerHTML = `<span class="chip-flag" aria-hidden="true">${flag}</span> ${escapeHtml(localizedName)}`;
+      btn.setAttribute('title', localizedName);
+      btn.innerHTML = `<span class="chip-flag" aria-hidden="true">${flag}</span> <span class="chip-label-full">${escapeHtml(localizedName)}</span><span class="chip-label-short">${code.toUpperCase()}</span>`;
 
       btn.addEventListener('click', () => {
         toggleLanguageChip(code);
@@ -426,29 +464,9 @@
   }
 
   function toggleLanguageChip(code) {
-    let currentCustom = [];
-    if (Array.isArray(selectedLangSelection)) {
-      currentCustom = [...selectedLangSelection];
-    } else {
-      // Switching from preset to custom selection
-      currentCustom = [code];
-      setLanguageSelection(currentCustom);
-      return;
-    }
-
-    const idx = currentCustom.indexOf(code);
-    if (idx !== -1) {
-      currentCustom.splice(idx, 1);
-    } else {
-      currentCustom.push(code);
-    }
-
-    if (currentCustom.length === 0) {
-      const myInfo = getStoredMyLangs();
-      setLanguageSelection(myInfo.explicit ? 'mine' : 'all');
-    } else {
-      setLanguageSelection(currentCustom);
-    }
+    const myInfo = getStoredMyLangs();
+    const nextSel = computeNextSelection(selectedLangSelection, code, myInfo.langs, myInfo.explicit);
+    setLanguageSelection(nextSel);
   }
 
   function setupFilterListeners() {
@@ -1167,6 +1185,7 @@
     parseSelection,
     serializeSelection,
     resolveSelection,
+    computeNextSelection,
     eventMatches,
     getStoredMyLangs,
     initCalendar
