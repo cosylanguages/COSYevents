@@ -37,7 +37,15 @@
       type_game_evening: "Game Evening",
       type_long_read: "Long Reads",
       type_event: "Event",
-      event_ended_badge: "Event ended"
+      event_ended_badge: "Event ended",
+      event_languages_label: "Event languages:",
+      all_languages: "All",
+      my_languages: "My languages ({langs})",
+      filter_group_aria: "Filter by Event Language",
+      lang_chip_aria: "Toggle {lang} language filter",
+      my_languages_aria: "Show events in my chosen languages: {langs}",
+      show_all_languages: "Show all languages",
+      no_events_filter_msg: "No upcoming events match your selected language filter."
     },
     fr: {
       seats_left: "{n}/{total} places restantes",
@@ -66,7 +74,15 @@
       type_game_evening: "Soirée Jeux",
       type_long_read: "Lecture Longue",
       type_event: "Événement",
-      event_ended_badge: "Événement terminé"
+      event_ended_badge: "Événement terminé",
+      event_languages_label: "Langues de l'événement :",
+      all_languages: "Toutes",
+      my_languages: "Mes langues ({langs})",
+      filter_group_aria: "Filtrer par langue d'événement",
+      lang_chip_aria: "Basculez le filtre pour le {lang}",
+      my_languages_aria: "Afficher les événements dans mes langues choisies : {langs}",
+      show_all_languages: "Afficher toutes les langues",
+      no_events_filter_msg: "Aucun événement à venir ne correspond aux langues sélectionnées."
     },
     it: {
       seats_left: "{n}/{total} posti rimasti",
@@ -95,7 +111,15 @@
       type_game_evening: "Serata Giochi",
       type_long_read: "Letture Lunghe",
       type_event: "Evento",
-      event_ended_badge: "Evento terminato"
+      event_ended_badge: "Evento terminato",
+      event_languages_label: "Lingue dell'evento:",
+      all_languages: "Tutte",
+      my_languages: "Le mie lingue ({langs})",
+      filter_group_aria: "Filtra per lingua dell'evento",
+      lang_chip_aria: "Attiva/disattiva filtro lingua {lang}",
+      my_languages_aria: "Mostra eventi nelle mie lingue scelte: {langs}",
+      show_all_languages: "Mostra tutte le lingue",
+      no_events_filter_msg: "Nessun evento in arrivo corrisponde ai filtri di lingua selezionati."
     },
     ru: {
       seats_left: "Осталось {n}/{total} мест",
@@ -124,7 +148,15 @@
       type_game_evening: "Игровой Вечер",
       type_long_read: "Чтение",
       type_event: "Событие",
-      event_ended_badge: "Событие завершено"
+      event_ended_badge: "Событие завершено",
+      event_languages_label: "Языки событий:",
+      all_languages: "Все",
+      my_languages: "Мои языки ({langs})",
+      filter_group_aria: "Фильтр по языку событий",
+      lang_chip_aria: "Переключить фильтр языка: {lang}",
+      my_languages_aria: "Показать события на моих языках: {langs}",
+      show_all_languages: "Показать все языки",
+      no_events_filter_msg: "Нет предстоящих событий, соответствующих выбранному фильтру языков."
     },
     el: {
       seats_left: "{n}/{total} θέσεις απομένουν",
@@ -153,7 +185,15 @@
       type_game_evening: "Βραδιά Παιχνιδιών",
       type_long_read: "Εκτενής Ανάγνωση",
       type_event: "Εκδήλωση",
-      event_ended_badge: "Η εκδήλωση ολοκληρώθηκε"
+      event_ended_badge: "Η εκδήλωση ολοκληρώθηκε",
+      event_languages_label: "Γλώσσες εκδηλώσεων:",
+      all_languages: "Όλες",
+      my_languages: "Οι γλώσσες μου ({langs})",
+      filter_group_aria: "Φίλτρο ανά γλώσσα εκδήλωσης",
+      lang_chip_aria: "Εναλλαγή φίλτρου γλώσσας {lang}",
+      my_languages_aria: "Εμφάνιση εκδηλώσεων στις επιλεγμένες γλώσσες μου: {langs}",
+      show_all_languages: "Εμφάνιση όλων των γλωσσών",
+      no_events_filter_msg: "Δεν βρέθηκαν προσεχή συμβάντα για τις επιλεγμένες γλώσσες."
     }
   };
 }));

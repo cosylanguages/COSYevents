@@ -73,16 +73,11 @@
           <button class="filter-btn" data-type="teacher-session">Teacher Sessions</button>
         </div>
 
-        <div class="select-filter-group">
-          <label for="language-filter" class="select-filter-label">Event Language:</label>
-          <select id="language-filter" class="calendar-select">
-            <option value="all">All Languages</option>
-            <option value="English">English</option>
-            <option value="French">French</option>
-            <option value="Italian">Italian</option>
-            <option value="Russian">Russian</option>
-            <option value="Greek">Greek</option>
-          </select>
+        <div class="language-filters-group" role="group" aria-labelledby="lang-filter-label">
+          <span id="lang-filter-label" class="filter-group-label">Event languages:</span>
+          <div id="language-filter-chips" class="language-chips">
+            <button type="button" class="lang-chip active" data-lang="all" aria-pressed="true">All</button>
+          </div>
         </div>
 
       </div>

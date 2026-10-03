@@ -171,8 +171,17 @@
     return [defaultLang];
   }
 
+  function dispatchMyLangsEvent(langs) {
+    if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
+      try {
+        window.dispatchEvent(new CustomEvent('cosylang:mylangs', { detail: { langs: langs } }));
+      } catch (e) {}
+    }
+  }
+
   function setMyLangs(langs) {
     safeSetStorage('ce-langs', JSON.stringify(langs), false);
+    dispatchMyLangsEvent(langs);
   }
 
   function addMyLang(langKey) {
@@ -181,6 +190,8 @@
     if (current.indexOf(langKey) === -1) {
       current.push(langKey);
       setMyLangs(current);
+    } else {
+      dispatchMyLangsEvent(current);
     }
     safeSetStorage('ce-lang', langKey, false);
   }
