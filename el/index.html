@@ -71,16 +71,11 @@
           <button class="filter-btn" data-type="teacher-session">Για Καθηγητές</button>
         </div>
 
-        <div class="select-filter-group">
-          <label for="language-filter" class="select-filter-label">Γλώσσα εκδήλωσης:</label>
-          <select id="language-filter" class="calendar-select">
-            <option value="all">Όλες οι γλώσσες</option>
-            <option value="English">Αγγλικά</option>
-            <option value="French">Γαλλικά</option>
-            <option value="Italian">Ιταλικά</option>
-            <option value="Russian">Ρωσικά</option>
-            <option value="Greek">Ελληνικά</option>
-          </select>
+        <div class="language-filters-group" role="group" aria-labelledby="lang-filter-label">
+          <span id="lang-filter-label" class="filter-group-label">Γλώσσες εκδηλώσεων:</span>
+          <div id="language-filter-chips" class="language-chips">
+            <button type="button" class="lang-chip active" data-lang="all" aria-pressed="true">Όλες</button>
+          </div>
         </div>
       </div>
     </section>

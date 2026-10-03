@@ -10,6 +10,7 @@
     "check-i18n": "node scripts/build_localized_manifest.js --check",
     "test-lang": "node scripts/test_lang.js",
     "test-calendar-i18n": "node scripts/test_calendar_i18n.js",
+    "test-event-filter": "node scripts/test_event_filter.js",
     "test:private-export": "node scripts/test_private_export.js",
     "test:video-meetings": "bash scripts/test_video_meetings_schema.sh",
     "test:hubs": "node scripts/test_hubs_visual.js",
