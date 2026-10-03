@@ -36,9 +36,12 @@
 
   <header class="hub-header">
     <div class="hub-header-content">
-      <div class="hub-header-top-row">
-        <span class="hub-brand">COSYlanguages Ecosystem</span>
-        <div data-ce-lang-switcher></div>
+      <div class="hub-header-top-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
+        <span class="hub-brand" style="margin-bottom: 0;">COSYlanguages Ecosystem</span>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <div data-cosy-account></div>
+          <div data-ce-lang-switcher></div>
+        </div>
       </div>
       <h1 class="hub-title">COSYevents: live language events</h1>
       <p class="hub-subtitle">
@@ -290,6 +293,7 @@
   </footer>
 
   <script src="shared/js/cosyevents-lang.js" defer></script>
+  <script src="shared/js/cosy-auth.js" defer></script>
   <script src="shared/calendar/calendar-i18n.js"></script>
   <script src="shared/calendar/calendar.js"></script>
   <script>

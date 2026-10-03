@@ -34,9 +34,12 @@
 
   <header class="hub-header">
     <div class="hub-header-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
         <span class="hub-brand" style="margin-bottom: 0;">Écosystème COSYlanguages</span>
-        <div data-ce-lang-switcher></div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <div data-cosy-account></div>
+          <div data-ce-lang-switcher></div>
+        </div>
       </div>
       <h1 class="hub-title">Politique de confidentialité &amp; Mentions légales</h1>
       <p class="hub-subtitle">
@@ -74,7 +77,20 @@
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">3. Inscription et contacts via messagerie</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">3. Comptes optionnels</h2>
+        <p style="margin-bottom: 0.75rem;">Un système de compte partagé optionnel permet aux élèves inscrits et aux facilitateurs d'accéder aux contenus privés sur les différents sites de l'écosystème COSY.</p>
+        <p style="margin-bottom: 0.5rem;">Lorsqu'un compte est activé, il conserve :</p>
+        <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem;">
+          <li>Votre adresse e-mail, nom d'affichage optionnel et rôle attribué (élève, enseignant ou fondateur).</li>
+          <li>Vos accès par langue, niveau CEFR, cours et dates d'expiration.</li>
+          <li>Une session de connexion sécurisée enregistrée dans votre navigateur sous la clé <code>cosy-auth</code>.</li>
+        </ul>
+        <p style="margin-bottom: 0.75rem;"><strong>Sous-traitant :</strong> Les comptes et règles d'accès sont hébergés et traités par <strong>Supabase Inc.</strong> (base de données située dans la région UE choisie par le propriétaire du site). Les données de compte sont traitées uniquement pour authentifier les utilisateurs et accorder les droits d'accès correspondants.</p>
+        <p><strong>Statut désactivé :</strong> Les comptes partagés sont entièrement désactivés par défaut jusqu'à leur activation explicite par le propriétaire du site. Lorsqu'ils sont désactivés, aucun appel réseau, élément d'interface ou enregistrement local n'a lieu.</p>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">4. Inscription et contacts via messagerie</h2>
         <p style="margin-bottom: 0.75rem;">Les inscriptions aux événements, les pass et les demandes de renseignements s'effectuent directement via des liens vers des messageries instantanées tierces :</p>
         <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem;">
           <li><strong>WhatsApp</strong> (WhatsApp Ireland Limited / Meta Platforms, Inc.)</li>
@@ -86,19 +102,19 @@
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">4. Hébergement, données techniques &amp; contenus intégrés</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">5. Hébergement, données techniques &amp; contenus intégrés</h2>
         <p style="margin-bottom: 0.75rem;"><strong>Hébergement :</strong> Ce site est hébergé par <strong>GitHub Pages</strong> (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis). Lors de votre visite sur COSYevents, les serveurs de GitHub traitent automatiquement des données techniques de requête (telles que votre adresse IP, votre type de navigateur, l'URL référente, ainsi que la date et l'heure) nécessaires au service et à la sécurité de l'infrastructure.</p>
         <p style="margin-bottom: 0.75rem;"><strong>Polices de caractères :</strong> Les polices de caractères sont chargées depuis Google Fonts (<code>fonts.googleapis.com</code> et <code>fonts.gstatic.com</code>). Ce chargement implique une requête technique au cours de laquelle Google LLC reçoit votre adresse IP conformément à sa politique de confidentialité.</p>
         <p><strong>Médias intégrés &amp; Vidéos :</strong> Certaines pages de session (notamment les soirées Karaoké et Cinéma) intègrent des lecteurs vidéo YouTube (<code>youtube.com/embed/...</code>) ou des liens vers YouTube. L'interaction avec ces lecteurs intégrés permet à YouTube (Google LLC) de recevoir votre adresse IP et de traiter des données de visionnage conformément à la politique de confidentialité de Google.</p>
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">5. Liens externes</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">6. Liens externes</h2>
         <p>COSYevents contient des liens vers des sites et services externes, notamment WhatsApp, Telegram, YouTube, COSYplatform et d'autres produits de l'écosystème COSY. Nous n'exerçons aucun contrôle sur ces plateformes tierces dont les activités sont régies par leurs propres politiques de confidentialité.</p>
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">6. Vos droits au titre du RGPD</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">7. Vos droits au titre du RGPD</h2>
         <p style="margin-bottom: 0.75rem;">Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants concernant les données personnelles que vous nous transmettez via nos canaux de communication :</p>
         <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem;">
           <li>Droit d'accès (art. 15 du RGPD)</li>
@@ -114,7 +130,7 @@
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">7. Mentions légales</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">8. Mentions légales</h2>
         <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem;">
           <li><strong>Éditeur du site &amp; Directeur de la publication :</strong> &lt;legal name of the person or business running the site&gt;</li>
           <li><strong>Statut juridique :</strong> &lt;e.g. "individual, auto-entrepreneur, SIRET 123 456 789 00012" or "COSYlanguages SAS, RCS ..."&gt;</li>
@@ -139,5 +155,6 @@
   </footer>
 
   <script src="../shared/js/cosyevents-lang.js" defer></script>
+  <script src="../shared/js/cosy-auth.js" defer></script>
 </body>
 </html>

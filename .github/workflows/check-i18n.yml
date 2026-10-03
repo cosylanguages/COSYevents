@@ -18,3 +18,4 @@ jobs:
       - run: npm run test-lang
       - run: npm run test-calendar-i18n
       - run: npm run test-event-filter
+      - run: npm run test-auth

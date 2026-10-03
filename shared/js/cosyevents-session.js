@@ -50,12 +50,18 @@
     }
   })();
 
-  // Dynamically ensure cosyevents-lang.js is loaded
+  // Dynamically ensure cosyevents-lang.js and cosy-auth.js are loaded
   if (!window.CosyLang && !document.querySelector('script[src*="cosyevents-lang.js"]')) {
     var langScript = document.createElement('script');
     langScript.src = root + 'shared/js/cosyevents-lang.js';
     langScript.defer = true;
     document.head.appendChild(langScript);
+  }
+  if (!window.CosyAuth && !document.querySelector('script[src*="cosy-auth.js"]')) {
+    var authScript = document.createElement('script');
+    authScript.src = root + 'shared/js/cosy-auth.js';
+    authScript.defer = true;
+    document.head.appendChild(authScript);
   }
 
   var clubs = [
@@ -123,6 +129,7 @@
           '</div>' +
         '</div>' +
         '<div class="ce-nav-right">' +
+          '<div class="ce-nav-right-account" data-cosy-account></div>' +
           '<div class="ce-nav-right-switcher" data-ce-lang-switcher></div>' +
           '<button class="ce-theme-btn" type="button" aria-label="Toggle dark mode"></button>' +
         '</div>' +
