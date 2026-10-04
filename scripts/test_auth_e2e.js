@@ -233,7 +233,6 @@ async function main() {
       await injectFakeClient(page, { email: null, role: null, grants: [] });
 
       await page.goto(`${baseUrl}/login.html`, { waitUntil: 'networkidle' });
-      console.log('Current URL on login.html:', page.url());
       await page.waitForSelector('#login-step-1');
 
       // Screenshot 4: Login Page Light Mode
@@ -252,7 +251,7 @@ async function main() {
       // Submit invalid 6-digit code
       await page.fill('#input-code', '999999');
       await page.click('#btn-verify-code');
-      await page.waitForSelector('#login-status-msg', { state: 'visible' });
+      await page.waitForSelector('#login-status-msg:not([hidden])');
 
       const statusText = await page.textContent('#login-status-msg');
       if (!statusText.includes('Invalid or expired code')) {
@@ -319,6 +318,79 @@ async function main() {
       }
 
       console.log('✔ Keyboard operation and 390px mobile view verified.');
+      await context.close();
+    }
+
+    // ── Test Case 6: XSS Payloads Escaping & Security Verification ─────────
+    console.log('E2E Test 6: XSS Payloads Escaping & Security Verification');
+    {
+      const context = await browser.newContext({ viewport: { width: 1366, height: 768 } });
+      const page = await context.newPage();
+
+      // Listen for alert / confirm / prompt dialogs and fail if triggered
+      page.on('dialog', dialog => {
+        throw new Error(`XSS Vulnerability detected! Dialog fired with message: "${dialog.message()}"`);
+      });
+
+      const xssImgPayload = '<img src=x onerror=alert(1)>';
+      const xssScriptPayload = '"><script>alert(1)</script>';
+      const xssLinkPayload = 'javascript:alert(1)';
+
+      await injectFakeClient(page, {
+        email: xssScriptPayload,
+        displayName: xssImgPayload,
+        grants: [
+          { language: 'en', level: 'B1', course: xssLinkPayload, valid_until: '2027-01-01' }
+        ]
+      });
+
+      // 1. Check chip on index.html
+      await page.goto(`${baseUrl}/index.html`, { waitUntil: 'networkidle' });
+      await page.waitForSelector('.cosy-account-chip-btn');
+
+      const chipText = await page.textContent('.cosy-chip-name');
+      if (chipText !== xssImgPayload) {
+        throw new Error(`Expected chip text to equal literal payload, got: "${chipText}"`);
+      }
+
+      const injectedImg = await page.$('img[src="x"]');
+      if (injectedImg !== null) {
+        throw new Error('XSS Payload created an <img> element in the DOM!');
+      }
+
+      // 2. Check account.html
+      await page.goto(`${baseUrl}/account.html`, { waitUntil: 'networkidle' });
+      await page.waitForSelector('#grants-container table');
+
+      const emailText = await page.textContent('#account-email');
+      if (emailText !== xssScriptPayload) {
+        throw new Error(`Expected account email text to equal literal payload, got: "${emailText}"`);
+      }
+
+      const tableText = await page.textContent('#grants-container');
+      if (!tableText.includes(xssLinkPayload)) {
+        throw new Error(`Expected grants table to display course payload literally, got: "${tableText}"`);
+      }
+
+      const extraElementsInTable = await page.$$eval('#grants-container *', els =>
+        els.map(el => el.tagName.toLowerCase()).filter(tag => !['div', 'p', 'table', 'thead', 'tbody', 'tr', 'th', 'td'].includes(tag))
+      );
+      if (extraElementsInTable.length > 0) {
+        throw new Error(`Unexpected elements generated from XSS payload in grants table: ${extraElementsInTable.join(', ')}`);
+      }
+
+      // Screenshots at 1366px (Light and Dark)
+      await page.screenshot({ path: path.join(SCREENSHOT_DIR, 'account-xss-1366-light.png') });
+      await page.evaluate(() => document.documentElement.setAttribute('data-theme', 'dark'));
+      await page.screenshot({ path: path.join(SCREENSHOT_DIR, 'account-xss-1366-dark.png') });
+
+      // Screenshots at 390px (Light and Dark)
+      await page.setViewportSize({ width: 390, height: 844 });
+      await page.screenshot({ path: path.join(SCREENSHOT_DIR, 'account-xss-390-dark.png') });
+      await page.evaluate(() => document.documentElement.removeAttribute('data-theme'));
+      await page.screenshot({ path: path.join(SCREENSHOT_DIR, 'account-xss-390-light.png') });
+
+      console.log('✔ XSS Payloads rendered literally as text without firing dialogs or injecting DOM nodes; screenshots captured.');
       await context.close();
     }
 
