@@ -1,30 +1,29 @@
--- COSYevents security fixes. Apply AFTER 20261003000000_ecosystem_access.sql.
--- Fixes: (1) students could set their own role to founder; (2) students could read unpublished drafts.
--- Tested on PostgreSQL 16 against the repo suite and 7 attack scenarios.
+-- Migration: 20261003000100_security_fixes.sql
+-- Description: Security fixes for profile role privilege escalation and draft session leaks.
 
--- 1. Re-assert column-level privileges on profiles: the earlier table-wide GRANT undid them,
---    letting any signed-in user UPDATE their own role.
+-- ============================================================================
+-- 1. Column Privileges and Role Guard on public.profiles
+-- ============================================================================
+
 REVOKE INSERT, UPDATE, DELETE ON public.profiles FROM anon, authenticated;
 GRANT UPDATE (display_name, ui_lang) ON public.profiles TO authenticated;
 
--- 2. Defence in depth: id and role can only change through privileged roles or set_user_role().
-CREATE OR REPLACE FUNCTION public.guard_profile_columns()
-RETURNS trigger LANGUAGE plpgsql SET search_path = public AS $$
+CREATE OR REPLACE FUNCTION public.guard_profile_columns() RETURNS trigger LANGUAGE plpgsql SET search_path = public AS $$
 BEGIN
-  IF NEW.id IS DISTINCT FROM OLD.id THEN
-    RAISE EXCEPTION 'profiles.id is immutable';
-  END IF;
-  IF NEW.role IS DISTINCT FROM OLD.role
-     AND current_user NOT IN ('postgres', 'supabase_admin', 'service_role') THEN
+  IF NEW.id IS DISTINCT FROM OLD.id THEN RAISE EXCEPTION 'profiles.id is immutable'; END IF;
+  IF NEW.role IS DISTINCT FROM OLD.role AND current_user NOT IN ('postgres','supabase_admin','service_role') THEN
     RAISE EXCEPTION 'profiles.role can only be changed with set_user_role()';
   END IF;
   RETURN NEW;
 END $$;
-DROP TRIGGER IF EXISTS profiles_guard_columns ON public.profiles;
-CREATE TRIGGER profiles_guard_columns BEFORE UPDATE ON public.profiles
-  FOR EACH ROW EXECUTE FUNCTION public.guard_profile_columns();
 
--- 3. Students must not read unpublished (draft) sessions.
+DROP TRIGGER IF EXISTS profiles_guard_columns ON public.profiles;
+CREATE TRIGGER profiles_guard_columns BEFORE UPDATE ON public.profiles FOR EACH ROW EXECUTE FUNCTION public.guard_profile_columns();
+
+-- ============================================================================
+-- 2. Redefine public.can_read_session(text) to verify session catalog publication status
+-- ============================================================================
+
 CREATE OR REPLACE FUNCTION public.can_read_session(p_session_id text)
 RETURNS boolean
 LANGUAGE plpgsql
@@ -71,10 +70,7 @@ BEGIN
     END IF;
   END IF;
 
-  -- Students never see drafts: only published sessions
-  IF NOT coalesce(v_published, false) THEN
-    RETURN false;
-  END IF;
+  IF NOT coalesce(v_published, false) THEN RETURN false; END IF;
 
   -- 3. Student access
   -- Note: Sessions with NULL level_min or level_max are readable by founders and teachers only!
@@ -115,3 +111,6 @@ BEGIN
   RETURN false;
 END;
 $$;
+
+REVOKE EXECUTE ON FUNCTION public.can_read_session(text) FROM PUBLIC;
+GRANT EXECUTE ON FUNCTION public.can_read_session(text) TO authenticated;

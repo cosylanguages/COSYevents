@@ -1,5 +1,6 @@
 -- Migration: 20261003000000_ecosystem_access.sql
 -- Description: Core Ecosystem Access Control Design (Supabase Postgres + Auth + Storage)
+-- NOTE: Security fixes for profile role escalation and draft leaks are applied in 20261003000100_security_fixes.sql.
 --
 -- Supersedes earlier per-session entitlement schema in scripts/schema.sql.
 -- Enforces Row Level Security (RLS) for all private content based on user roles and access grants.

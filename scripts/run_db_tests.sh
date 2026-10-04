@@ -11,8 +11,11 @@ echo "==> Running COSYevents database access control tests..."
 echo "1. Applying plain Postgres stubs..."
 psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/tests/00_stubs_for_plain_postgres.sql
 
-echo "2. Applying database migration..."
-psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/migrations/20261003000000_ecosystem_access.sql
+echo "2. Applying database migrations in order..."
+for migration in $(ls supabase/migrations/*.sql | sort); do
+  echo "   Applying $migration..."
+  psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f "$migration"
+done
 
 echo "3. Running access rules test suite..."
 psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/tests/access_rules.sql
