@@ -27,11 +27,16 @@ This guide provides step-by-step setup instructions for configuring the single S
     - `https://cosylanguages.github.io/COSYplatform/*`
     - `http://localhost:*` (for local development)
 
-### 3. Apply Database Migration
+### 3. Apply Database Migrations
 - Open **SQL Editor** in the Supabase Dashboard.
-- Open file `supabase/migrations/20261003000000_ecosystem_access.sql`.
-- Paste the complete SQL contents into the SQL Editor and click **Run**.
+- All migration files inside `supabase/migrations/` must be applied in filename order (e.g. `20261003000000_ecosystem_access.sql`, then `20261003000100_security_fixes.sql`).
+- Paste the SQL contents of each file into the SQL Editor and click **Run**.
 - Verify that tables (`profiles`, `access_grants`, `session_catalog`, `session_content`, etc.) and RLS policies are created cleanly without errors.
+- Verification Query: Run the following verification query in the SQL Editor to ensure column privileges are properly restricted:
+```sql
+select has_column_privilege('authenticated','public.profiles','role','UPDATE');
+```
+This query must return `false`.
 
 ### 4. Provision Initial Founder User
 - Register the primary admin email via Auth UI or Dashboard **Authentication** -> **Users** -> **Add User**.

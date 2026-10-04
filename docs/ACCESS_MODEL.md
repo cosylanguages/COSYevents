@@ -14,7 +14,7 @@ Users in `public.profiles` have one of three roles in `profiles.role`:
 2. **`teacher`**: Granted language permissions in `teacher_languages`. Teachers can view all private session content and teacher notes for sessions in their assigned languages.
 3. **`founder`**: Administrative role. Founders can read and write all session content, catalog entries, grants, profiles, revisions, and storage files.
 
-> **Security Rule**: Roles can only be changed by a founder via `set_user_role(target_uuid, new_role)` or by the database `service_role`. Regular users cannot modify their own role.
+> **Security Rule**: Roles can only be changed with set_user_role (founder) or by privileged database roles. Regular users cannot modify their own role.
 
 ---
 
@@ -38,7 +38,7 @@ A student can view a session's private content (`session_content`, `session_sour
 3. **Level Match**:
    - Exact level (`include_lower = false`): `session.level_min <= rank(grant.level) <= session.level_max`.
    - Inclusive level (`include_lower = true`): `session.level_min <= rank(grant.level)`.
-   - *Note*: Unlevelled draft sessions (`level_min` or `level_max` is `NULL`) are accessible only to teachers of that language and founders, never to students.
+   - *Note*: Students never see unpublished sessions. Unlevelled draft sessions (`level_min` or `level_max` is `NULL`) are accessible only to teachers of that language and founders, never to students.
 4. **Course Match**: If `session.courses` is specified (not empty), `grant.course` must match one of the required course codes (`grant.course = ANY(session.courses)`).
 
 ---

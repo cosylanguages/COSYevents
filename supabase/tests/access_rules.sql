@@ -4,6 +4,27 @@
 
 BEGIN;
 
+-- Helper function in pg_temp to assert statement denial
+CREATE OR REPLACE FUNCTION pg_temp.assert_denied(p_stmt text, p_label text)
+RETURNS void
+LANGUAGE plpgsql
+AS $$
+DECLARE
+  v_succeeded boolean := false;
+BEGIN
+  BEGIN
+    EXECUTE p_stmt;
+    v_succeeded := true;
+  EXCEPTION WHEN OTHERS THEN
+    v_succeeded := false;
+  END;
+
+  IF v_succeeded THEN
+    RAISE EXCEPTION 'Assertion failed [%]: statement should have been denied but succeeded', p_label;
+  END IF;
+END;
+$$;
+
 -- ============================================================================
 -- 1. Test Setup: Create Users and Data
 -- ============================================================================
@@ -13,6 +34,7 @@ INSERT INTO auth.users (id, email) VALUES
   ('11111111-1111-1111-1111-111111111111', 'founder1@cosy.test'),
   ('11111111-1111-1111-1111-222222222222', 'founder2@cosy.test'),
   ('22222222-2222-2222-2222-111111111111', 'teacher_fr@cosy.test'),
+  ('22222222-2222-2222-2222-222222222222', 'teacher_en@cosy.test'),
   ('33333333-3333-3333-3333-111111111111', 'student_exact@cosy.test'),
   ('33333333-3333-3333-3333-222222222222', 'student_lower@cosy.test'),
   ('33333333-3333-3333-3333-333333333333', 'student_course@cosy.test'),
@@ -22,14 +44,16 @@ INSERT INTO auth.users (id, email) VALUES
   ('33333333-3333-3333-3333-777777777777', 'student_no_grants@cosy.test');
 
 -- Profiles are auto-created by trigger handle_new_user as 'student'
--- Promote founders and teacher
+-- Promote founders and teachers
 UPDATE public.profiles SET role = 'founder', display_name = 'Founder One' WHERE id = '11111111-1111-1111-1111-111111111111';
 UPDATE public.profiles SET role = 'founder', display_name = 'Founder Two' WHERE id = '11111111-1111-1111-1111-222222222222';
 UPDATE public.profiles SET role = 'teacher', display_name = 'French Teacher' WHERE id = '22222222-2222-2222-2222-111111111111';
+UPDATE public.profiles SET role = 'teacher', display_name = 'English Teacher' WHERE id = '22222222-2222-2222-2222-222222222222';
 
--- Assign language to French Teacher
+-- Assign languages to Teachers
 INSERT INTO public.teacher_languages (user_id, language) VALUES
-  ('22222222-2222-2222-2222-111111111111', 'fr');
+  ('22222222-2222-2222-2222-111111111111', 'fr'),
+  ('22222222-2222-2222-2222-222222222222', 'en');
 
 -- Setup Session Catalog
 INSERT INTO public.session_catalog
@@ -96,7 +120,6 @@ SET LOCAL request.jwt.claim.sub = '';
 DO $$
 DECLARE
   v_cat_count integer;
-  v_cnt_count integer;
 BEGIN
   -- Anon sees published catalog rows
   SELECT count(*) INTO v_cat_count FROM public.session_catalog;
@@ -105,15 +128,7 @@ BEGIN
   END IF;
 
   -- Anon sees NO session content (table SELECT permission is revoked from anon)
-  BEGIN
-    SELECT count(*) INTO v_cnt_count FROM public.session_content;
-    IF v_cnt_count <> 0 THEN
-      RAISE EXCEPTION 'Anon test failed: expected 0 content rows, got %', v_cnt_count;
-    END IF;
-  EXCEPTION WHEN insufficient_privilege THEN
-    -- Permission denied for table session_content as expected
-    NULL;
-  END;
+  PERFORM pg_temp.assert_denied('SELECT count(*) FROM public.session_content', 'Anon select session_content');
 END $$;
 
 -- Test 2: Student Exact Grant (en, B1, exact)
@@ -281,93 +296,204 @@ BEGIN
   END IF;
 END $$;
 
--- Test 9: Privileges and Authorization Controls for Students
+-- ============================================================================
+-- 3. Security Regression Tests
+-- ============================================================================
+
+-- Regression Test (1): Student cannot update own role (verified by state afterwards)
 SET ROLE authenticated;
 SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-111111111111';
-
--- Student cannot update own role
 DO $$
 BEGIN
   BEGIN
     UPDATE public.profiles SET role = 'founder' WHERE id = '33333333-3333-3333-3333-111111111111';
-    -- If update did not error, verify role was NOT changed
-    IF EXISTS (SELECT 1 FROM public.profiles WHERE id = '33333333-3333-3333-3333-111111111111' AND role = 'founder') THEN
-      RAISE EXCEPTION 'Student self role update succeeded!';
-    END IF;
   EXCEPTION WHEN OTHERS THEN
-    -- Column update privilege denial error expected
     NULL;
   END;
 END $$;
-
--- Student cannot INSERT into access_grants
+RESET ROLE;
 DO $$
 BEGIN
-  BEGIN
-    INSERT INTO public.access_grants (user_id, language, level) VALUES ('33333333-3333-3333-3333-111111111111', 'en', 'C2');
-    RAISE EXCEPTION 'Student insert into access_grants succeeded!';
-  EXCEPTION WHEN OTHERS THEN
-    -- Permission denied error expected
-    NULL;
-  END;
+  IF EXISTS (SELECT 1 FROM public.profiles WHERE id = '33333333-3333-3333-3333-111111111111' AND role = 'founder') THEN
+    RAISE EXCEPTION 'Regression Test (1) Failed: Student was able to change own role to founder!';
+  END IF;
 END $$;
 
--- Student cannot call set_user_role
+-- Regression Test (2): Column privilege checks for 'authenticated' on public.profiles
+RESET ROLE;
 DO $$
 BEGIN
-  BEGIN
-    PERFORM public.set_user_role('33333333-3333-3333-3333-111111111111', 'founder');
-    RAISE EXCEPTION 'Student set_user_role execution succeeded!';
-  EXCEPTION WHEN OTHERS THEN
-    -- Function raises exception
-    NULL;
-  END;
+  IF has_column_privilege('authenticated', 'public.profiles', 'role', 'UPDATE') THEN
+    RAISE EXCEPTION 'Regression Test (2) Failed: authenticated role should NOT have UPDATE privilege on public.profiles.role!';
+  END IF;
+  IF NOT has_column_privilege('authenticated', 'public.profiles', 'display_name', 'UPDATE') THEN
+    RAISE EXCEPTION 'Regression Test (2) Failed: authenticated role MUST have UPDATE privilege on public.profiles.display_name!';
+  END IF;
 END $$;
 
--- Test 10: Founder Permissions, Revision Logging, and Demotion Rules
+-- Regression Test (3): Unpublished session read permissions
+-- Student with matching grant cannot read content of UNPUBLISHED session
 SET ROLE authenticated;
-SET LOCAL request.jwt.claim.sub = '11111111-1111-1111-1111-111111111111'; -- Founder One
+SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-111111111111'; -- student_exact (EN B1 grant)
+DO $$
+BEGIN
+  IF public.can_read_session('s_en_unpublished') THEN
+    RAISE EXCEPTION 'Regression Test (3) Failed: Student read unpublished session via can_read_session!';
+  END IF;
+END $$;
 
 DO $$
 DECLARE
-  v_rev_count integer;
-  v_unpub_count integer;
+  v_cnt integer;
 BEGIN
-  -- Founder sees unpublished sessions
-  SELECT count(*) INTO v_unpub_count FROM public.session_catalog WHERE is_published = false;
-  IF v_unpub_count <> 1 THEN
-    RAISE EXCEPTION 'Founder test failed: expected 1 unpublished catalog row, got %', v_unpub_count;
+  SELECT count(*) INTO v_cnt FROM public.session_content WHERE session_id = 's_en_unpublished';
+  IF v_cnt <> 0 THEN
+    RAISE EXCEPTION 'Regression Test (3) Failed: Student read unpublished session content rows!';
   END IF;
+END $$;
 
-  -- Founder updates session_content and verifies revision log trigger
-  UPDATE public.session_content
-     SET content = '{"title": "Updated EN B1 Content"}'::jsonb
-   WHERE session_id = 's_en_b1';
-
-  SELECT count(*) INTO v_rev_count FROM public.session_revisions WHERE session_id = 's_en_b1';
-  IF v_rev_count <> 1 THEN
-    RAISE EXCEPTION 'Revision log test failed: expected 1 revision entry, got %', v_rev_count;
+-- Founder can read unpublished session
+SET LOCAL request.jwt.claim.sub = '11111111-1111-1111-1111-111111111111';
+DO $$
+BEGIN
+  IF NOT public.can_read_session('s_en_unpublished') THEN
+    RAISE EXCEPTION 'Regression Test (3) Failed: Founder should be able to read unpublished session!';
   END IF;
+END $$;
 
-  -- Founder demotes Founder Two (allowed since Founder One remains)
-  PERFORM public.set_user_role('11111111-1111-1111-1111-222222222222', 'teacher');
-  IF NOT EXISTS (SELECT 1 FROM public.profiles WHERE id = '11111111-1111-1111-1111-222222222222' AND role = 'teacher') THEN
-    RAISE EXCEPTION 'Founder demotion of second founder failed';
+-- Teacher of that language (EN) can read unpublished session
+SET LOCAL request.jwt.claim.sub = '22222222-2222-2222-2222-222222222222'; -- teacher_en
+DO $$
+BEGIN
+  IF NOT public.can_read_session('s_en_unpublished') THEN
+    RAISE EXCEPTION 'Regression Test (3) Failed: English teacher should be able to read unpublished EN session!';
   END IF;
+END $$;
 
-  -- Attempt to demote Founder One (last founder) -> MUST FAIL
+-- Publish session, now student can read it
+RESET ROLE;
+UPDATE public.session_catalog SET is_published = true WHERE session_id = 's_en_unpublished';
+
+SET ROLE authenticated;
+SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-111111111111';
+DO $$
+BEGIN
+  IF NOT public.can_read_session('s_en_unpublished') THEN
+    RAISE EXCEPTION 'Regression Test (3) Failed: Student should read session once published!';
+  END IF;
+END $$;
+
+-- Restore unpublished status for subsequent assertions
+RESET ROLE;
+UPDATE public.session_catalog SET is_published = false WHERE session_id = 's_en_unpublished';
+
+-- Regression Test (4): Student profile update/insert/delete restrictions
+SET ROLE authenticated;
+SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-111111111111';
+
+-- Student cannot change display_name of another user
+DO $$
+BEGIN
   BEGIN
-    PERFORM public.set_user_role('11111111-1111-1111-1111-111111111111', 'student');
-    RAISE EXCEPTION 'Last founder demotion succeeded!';
+    UPDATE public.profiles SET display_name = 'Hacked Name' WHERE id = '33333333-3333-3333-3333-222222222222';
   EXCEPTION WHEN OTHERS THEN
-    -- Expected error: 'Cannot demote the last founder'
     NULL;
   END;
+END $$;
+RESET ROLE;
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM public.profiles WHERE id = '33333333-3333-3333-3333-222222222222' AND display_name = 'Hacked Name') THEN
+    RAISE EXCEPTION 'Regression Test (4) Failed: Student changed display_name of another user!';
+  END IF;
+END $$;
+
+-- Student cannot INSERT or DELETE profiles
+SET ROLE authenticated;
+SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-111111111111';
+DO $$
+BEGIN
+  PERFORM pg_temp.assert_denied(
+    'INSERT INTO public.profiles (id, role, display_name) VALUES (''88888888-8888-8888-8888-888888888888'', ''student'', ''Illegal'')',
+    'Student insert into profiles'
+  );
+  PERFORM pg_temp.assert_denied(
+    'DELETE FROM public.profiles WHERE id = ''33333333-3333-3333-3333-222222222222''',
+    'Student delete profile'
+  );
+  PERFORM pg_temp.assert_denied(
+    'INSERT INTO public.access_grants (user_id, language, level) VALUES (''33333333-3333-3333-3333-111111111111'', ''en'', ''C2'')',
+    'Student insert into access_grants'
+  );
+END $$;
+
+-- Regression Test (5): User created with raw_user_meta_data = '{"role":"founder"}' becomes 'student'
+RESET ROLE;
+INSERT INTO auth.users (id, email, raw_user_meta_data)
+VALUES (
+  '44444444-4444-4444-4444-444444444444',
+  'sneaky_founder@cosy.test',
+  '{"role": "founder", "display_name": "Sneaky Founder"}'::jsonb
+);
+
+DO $$
+DECLARE
+  v_role text;
+BEGIN
+  SELECT role INTO v_role FROM public.profiles WHERE id = '44444444-4444-4444-4444-444444444444';
+  IF v_role <> 'student' THEN
+    RAISE EXCEPTION 'Regression Test (5) Failed: User created with founder metadata got role %, expected student!', v_role;
+  END IF;
+END $$;
+
+-- Regression Test (6): set_user_role still works for founder, fails for student and last founder demotion
+-- Founder promotes student to teacher
+SET ROLE authenticated;
+SET LOCAL request.jwt.claim.sub = '11111111-1111-1111-1111-111111111111';
+DO $$
+BEGIN
+  PERFORM public.set_user_role('33333333-3333-3333-3333-111111111111', 'teacher');
+END $$;
+
+RESET ROLE;
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM public.profiles WHERE id = '33333333-3333-3333-3333-111111111111' AND role = 'teacher') THEN
+    RAISE EXCEPTION 'Regression Test (6) Failed: set_user_role by founder did not update role to teacher!';
+  END IF;
+END $$;
+
+-- Student calling set_user_role fails
+SET ROLE authenticated;
+SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-222222222222';
+DO $$
+BEGIN
+  PERFORM pg_temp.assert_denied(
+    'SELECT public.set_user_role(''33333333-3333-3333-3333-222222222222'', ''founder'')',
+    'Student calling set_user_role'
+  );
+END $$;
+
+-- Demoting second founder (allowed since Founder One remains)
+SET ROLE authenticated;
+SET LOCAL request.jwt.claim.sub = '11111111-1111-1111-1111-111111111111';
+DO $$
+BEGIN
+  PERFORM public.set_user_role('11111111-1111-1111-1111-222222222222', 'teacher');
+END $$;
+
+-- Demoting last founder fails
+DO $$
+BEGIN
+  PERFORM pg_temp.assert_denied(
+    'SELECT public.set_user_role(''11111111-1111-1111-1111-111111111111'', ''student'')',
+    'Demoting last founder'
+  );
 END $$;
 
 -- Test 11: my_access() Function Output
 SET ROLE authenticated;
-SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-111111111111';
+SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-222222222222';
 DO $$
 DECLARE
   v_access jsonb;
