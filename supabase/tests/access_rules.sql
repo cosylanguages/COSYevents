@@ -507,4 +507,72 @@ BEGIN
   END IF;
 END $$;
 
+-- ============================================================================
+-- 4. Test 12: Input Limits & Sanitisation Tests
+-- ============================================================================
+RESET ROLE;
+INSERT INTO auth.users (id, email, raw_user_meta_data)
+VALUES (
+  '55555555-5555-5555-5555-111111111111',
+  'sanitize_test@cosy.test',
+  '{"display_name": "<b>x</b>", "ui_lang": "invalid_lang"}'::jsonb
+);
+
+DO $$
+DECLARE
+  v_name text;
+  v_lang text;
+BEGIN
+  SELECT display_name, ui_lang INTO v_name, v_lang
+  FROM public.profiles WHERE id = '55555555-5555-5555-5555-111111111111';
+
+  IF v_name <> 'bx/b' THEN
+    RAISE EXCEPTION 'Metadata display_name sanitisation test failed: expected "bx/b", got %', v_name;
+  END IF;
+
+  IF v_lang <> 'en' THEN
+    RAISE EXCEPTION 'Metadata ui_lang sanitisation test failed: expected "en", got %', v_lang;
+  END IF;
+END $$;
+
+-- UPDATE display_name to 61 characters is rejected
+SET ROLE authenticated;
+SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-111111111111';
+
+DO $$
+BEGIN
+  PERFORM pg_temp.assert_denied(
+    'UPDATE public.profiles SET display_name = ''1234567890123456789012345678901234567890123456789012345678901'' WHERE id = ''33333333-3333-3333-3333-111111111111''',
+    'UPDATE display_name to 61 characters'
+  );
+END $$;
+
+-- UPDATE invalid ui_lang is rejected
+DO $$
+BEGIN
+  PERFORM pg_temp.assert_denied(
+    'UPDATE public.profiles SET ui_lang = ''invalid_lang'' WHERE id = ''33333333-3333-3333-3333-111111111111''',
+    'UPDATE invalid ui_lang'
+  );
+END $$;
+
+-- Student can update display_name to a valid value (<= 60 chars)
+DO $$
+BEGIN
+  UPDATE public.profiles SET display_name = 'Valid Name' WHERE id = '33333333-3333-3333-3333-111111111111';
+END $$;
+
+RESET ROLE;
+DO $$
+DECLARE
+  v_updated_name text;
+BEGIN
+  SELECT display_name INTO v_updated_name
+  FROM public.profiles WHERE id = '33333333-3333-3333-3333-111111111111';
+
+  IF v_updated_name <> 'Valid Name' THEN
+    RAISE EXCEPTION 'Student valid display_name update failed: expected "Valid Name", got %', v_updated_name;
+  END IF;
+END $$;
+
 ROLLBACK;

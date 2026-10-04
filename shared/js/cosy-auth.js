@@ -159,6 +159,17 @@
     }
   };
 
+  function escapeHtml(val) {
+    if (val === null || val === undefined) return '';
+    if (typeof val !== 'string') val = String(val);
+    return val
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   function getTranslation(key, lang) {
     var dict = DICTIONARY[lang] || DICTIONARY.en;
     return dict[key] || DICTIONARY.en[key] || key;
@@ -170,7 +181,7 @@
     if (document.currentScript) {
       src = document.currentScript.getAttribute('src');
     }
-    if (!src) {
+    if (!src && document.scripts) {
       var scripts = document.scripts;
       for (var i = scripts.length - 1; i >= 0; i--) {
         var s = scripts[i].getAttribute('src') || '';
@@ -186,6 +197,17 @@
       return src.substring(0, idx);
     }
     return './';
+  }
+
+  function injectAuthCss() {
+    if (typeof document === 'undefined') return;
+    var existing = document.querySelector('link[href*="shared/css/auth.css"]');
+    if (!existing && document.head) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = getScriptBaseUrl() + 'shared/css/auth.css';
+      document.head.appendChild(link);
+    }
   }
 
   function safeStorageGet(key, isSession) {
@@ -552,6 +574,8 @@
   function renderAccountChips() {
     if (!state.enabled || typeof document === 'undefined') return;
 
+    injectAuthCss();
+
     var targets = document.querySelectorAll('[data-cosy-account]');
     if (targets.length === 0) return;
 
@@ -566,6 +590,8 @@
     if (userRole === 'founder') roleLabel = getTranslation('role_founder', pageLang);
 
     targets.forEach(function (container) {
+      container.textContent = ''; // clear
+
       if (!signedIn) {
         var loginUrl = state.baseUrl + 'login.html';
         if (typeof window !== 'undefined' && window.location) {
@@ -577,78 +603,100 @@
             loginUrl += '?next=' + encodeURIComponent(relPath);
           }
         }
-        container.innerHTML =
-          '<a class="cosy-account-login-btn" href="' + loginUrl + '" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0.4rem 0.85rem; font-size: 0.9rem; font-weight: 600; color: var(--cosy-primary-dark, #2d4f33); background: var(--cosy-surface-alt, #f0f4f1); border: 1px solid var(--cosy-border, #d1ddd3); border-radius: 8px; text-decoration: none; cursor: pointer; transition: all 0.2s ease;">' +
-            '👤 ' + getTranslation('login', pageLang) +
-          '</a>';
+
+        var loginBtn = document.createElement('a');
+        loginBtn.className = 'cosy-account-login-btn';
+        loginBtn.href = loginUrl;
+        loginBtn.textContent = '👤 ' + getTranslation('login', pageLang);
+        container.appendChild(loginBtn);
       } else {
         var accountUrl = state.baseUrl + 'account.html';
-        var html =
-          '<div class="cosy-account-chip-wrapper" style="position: relative; display: inline-block;">' +
-            '<button type="button" class="cosy-account-chip-btn" aria-expanded="false" aria-haspopup="true" style="display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; padding: 0.4rem 0.85rem; font-size: 0.9rem; font-weight: 600; color: var(--cosy-primary-dark, #2d4f33); background: var(--cosy-surface-alt, #f0f4f1); border: 1px solid var(--cosy-border, #d1ddd3); border-radius: 8px; cursor: pointer; transition: all 0.2s ease;">' +
-              '👤 <span class="cosy-chip-name" style="max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' + userDisplayName + '</span> ▾' +
-            '</button>' +
-            '<div class="cosy-account-menu" role="menu" hidden style="position: absolute; right: 0; top: calc(100% + 4px); min-width: 180px; background: var(--cosy-surface, #ffffff); border: 1px solid var(--cosy-border, #d1ddd3); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); padding: 0.5rem 0; z-index: 1000;">' +
-              '<div style="padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 700; color: var(--cosy-text-muted, #666); text-transform: uppercase; border-bottom: 1px solid var(--cosy-border, #eee); margin-bottom: 0.25rem;">' +
-                roleLabel +
-              '</div>' +
-              '<a href="' + accountUrl + '" class="cosy-account-menu-item" role="menuitem" style="display: block; min-height: 44px; line-height: 44px; padding: 0 0.85rem; font-size: 0.9rem; color: var(--cosy-text, #333); text-decoration: none;">' +
-                '📜 ' + getTranslation('my_access', pageLang) +
-              '</a>' +
-              '<button type="button" class="cosy-account-logout-btn" role="menuitem" style="display: block; width: 100%; text-align: left; min-height: 44px; padding: 0 0.85rem; font-size: 0.9rem; color: var(--cosy-error, #c53030); background: none; border: none; cursor: pointer;">' +
-                '🚪 ' + getTranslation('logout', pageLang) +
-              '</button>' +
-            '</div>' +
-          '</div>';
 
-        container.innerHTML = html;
+        var wrapper = document.createElement('div');
+        wrapper.className = 'cosy-account-chip-wrapper';
 
-        var chipBtn = container.querySelector('.cosy-account-chip-btn');
-        var menu = container.querySelector('.cosy-account-menu');
-        var logoutBtn = container.querySelector('.cosy-account-logout-btn');
+        var chipBtn = document.createElement('button');
+        chipBtn.type = 'button';
+        chipBtn.className = 'cosy-account-chip-btn';
+        chipBtn.setAttribute('aria-expanded', 'false');
+        chipBtn.setAttribute('aria-haspopup', 'true');
 
-        if (chipBtn && menu) {
-          var toggleMenu = function (show) {
-            var open = (typeof show === 'boolean') ? show : menu.hasAttribute('hidden');
-            if (open) {
-              menu.removeAttribute('hidden');
-              chipBtn.setAttribute('aria-expanded', 'true');
-            } else {
-              menu.setAttribute('hidden', '');
-              chipBtn.setAttribute('aria-expanded', 'false');
-            }
-          };
+        chipBtn.appendChild(document.createTextNode('👤 '));
+        var nameSpan = document.createElement('span');
+        nameSpan.className = 'cosy-chip-name';
+        nameSpan.textContent = userDisplayName;
+        chipBtn.appendChild(nameSpan);
+        chipBtn.appendChild(document.createTextNode(' ▾'));
 
-          chipBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            toggleMenu();
-          });
+        var menu = document.createElement('div');
+        menu.className = 'cosy-account-menu';
+        menu.setAttribute('role', 'menu');
+        menu.setAttribute('hidden', '');
 
-          document.addEventListener('click', function (e) {
-            if (!container.contains(e.target)) {
-              toggleMenu(false);
-            }
-          });
+        var menuHeader = document.createElement('div');
+        menuHeader.className = 'cosy-account-menu-header';
+        menuHeader.textContent = roleLabel;
 
-          container.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
-              toggleMenu(false);
-              chipBtn.focus();
-            }
-          });
-        }
+        var accessLink = document.createElement('a');
+        accessLink.href = accountUrl;
+        accessLink.className = 'cosy-account-menu-item';
+        accessLink.setAttribute('role', 'menuitem');
+        accessLink.textContent = '📜 ' + getTranslation('my_access', pageLang);
 
-        if (logoutBtn) {
-          logoutBtn.addEventListener('click', function () {
-            signOut();
-          });
-        }
+        var logoutBtn = document.createElement('button');
+        logoutBtn.type = 'button';
+        logoutBtn.className = 'cosy-account-logout-btn';
+        logoutBtn.setAttribute('role', 'menuitem');
+        logoutBtn.textContent = '🚪 ' + getTranslation('logout', pageLang);
+
+        menu.appendChild(menuHeader);
+        menu.appendChild(accessLink);
+        menu.appendChild(logoutBtn);
+
+        wrapper.appendChild(chipBtn);
+        wrapper.appendChild(menu);
+
+        container.appendChild(wrapper);
+
+        var toggleMenu = function (show) {
+          var open = (typeof show === 'boolean') ? show : menu.hasAttribute('hidden');
+          if (open) {
+            menu.removeAttribute('hidden');
+            chipBtn.setAttribute('aria-expanded', 'true');
+          } else {
+            menu.setAttribute('hidden', '');
+            chipBtn.setAttribute('aria-expanded', 'false');
+          }
+        };
+
+        chipBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          toggleMenu();
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!container.contains(e.target)) {
+            toggleMenu(false);
+          }
+        });
+
+        container.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            toggleMenu(false);
+            chipBtn.focus();
+          }
+        });
+
+        logoutBtn.addEventListener('click', function () {
+          signOut();
+        });
       }
     });
   }
 
   var api = {
     DICTIONARY: DICTIONARY,
+    escapeHtml: escapeHtml,
     init: init,
     autoInit: autoInit,
     getSession: getSession,

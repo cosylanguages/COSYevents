@@ -7,6 +7,7 @@
   <title>My Access — COSYevents</title>
   <link rel="stylesheet" href="shared/css/hub.css">
   <link rel="stylesheet" href="shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="shared/css/auth.css">
   <link rel="icon" href="shared/assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="shared/assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
@@ -28,9 +29,9 @@
 
   <header class="hub-header">
     <div class="hub-header-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
-        <span class="hub-brand" style="margin-bottom: 0;">COSYlanguages Ecosystem</span>
-        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+      <div class="auth-header-actions">
+        <span class="hub-brand">COSYlanguages Ecosystem</span>
+        <div class="auth-header-actions">
           <div data-cosy-account></div>
           <div data-ce-lang-switcher></div>
         </div>
@@ -42,17 +43,17 @@
     </div>
   </header>
 
-  <main class="hub-main" style="max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem;">
-    <article style="background: var(--cosy-surface, #fff); border: 1px solid var(--cosy-border, #eee); border-radius: var(--cosy-radius, 12px); padding: 2rem; box-shadow: var(--cosy-shadow, 0 4px 12px rgba(0,0,0,0.05)); display: flex; flex-direction: column; gap: 1.5rem;">
+  <main class="hub-main auth-main-container">
+    <article class="auth-card">
 
       <!-- User Banner -->
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--cosy-border, #eee); padding-bottom: 1rem;">
+      <div class="auth-user-banner">
         <div>
-          <span style="font-size: 0.8rem; font-weight: 700; color: var(--cosy-text-muted, #666); text-transform: uppercase;">Logged in as</span>
-          <div id="account-email" style="font-size: 1.2rem; font-weight: 700; color: var(--cosy-primary-dark, #233827);">...</div>
+          <span class="auth-user-label">Logged in as</span>
+          <div id="account-email" class="auth-user-email">...</div>
         </div>
         <div>
-          <span id="account-role-badge" style="display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; border-radius: 12px; background: var(--cosy-primary-light, #e8f0e9); color: var(--cosy-primary-dark, #233827);">
+          <span id="account-role-badge" class="auth-role-badge">
             Student
           </span>
         </div>
@@ -60,27 +61,27 @@
 
       <!-- Grants Section -->
       <div>
-        <h2 id="heading-access" style="font-size: 1.25rem; font-weight: 700; color: var(--cosy-primary-dark, #233827); margin-bottom: 1rem;">
+        <h2 id="heading-access" class="auth-section-title">
           Active Access Grants &amp; Passes
         </h2>
 
-        <div id="grants-container" style="overflow-x: auto;">
+        <div id="grants-container" class="grants-table-container">
           <!-- Table rendered dynamically -->
         </div>
       </div>
 
       <!-- Matching Event Hub Links -->
-      <div style="border-top: 1px solid var(--cosy-border, #eee); padding-top: 1.5rem;">
-        <h3 id="heading-hubs" style="font-size: 1.1rem; font-weight: 700; color: var(--cosy-primary-dark, #233827); margin-bottom: 0.85rem;">
+      <div class="auth-nav-section">
+        <h3 id="heading-hubs" class="auth-subsection-title">
           Explore Event Hubs
         </h3>
-        <nav style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <a href="speaking-clubs/index.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Speaking Clubs 💬</a>
-          <a href="cinema-nights/index.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Cinema 🎬</a>
-          <a href="karaoke-club.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Karaoke 🎤</a>
-          <a href="game-evenings.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Games 🎲</a>
-          <a href="long-reads.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Long Reads 📚</a>
-          <a href="teacher-led-sessions/index.html" class="hub-nav-link" style="color: var(--cosy-primary-dark, #233827); border-color: var(--cosy-border, #ccc);">Teacher Sessions 🍎</a>
+        <nav class="auth-nav-links">
+          <a href="speaking-clubs/index.html" class="hub-nav-link">Speaking Clubs 💬</a>
+          <a href="cinema-nights/index.html" class="hub-nav-link">Cinema 🎬</a>
+          <a href="karaoke-club.html" class="hub-nav-link">Karaoke 🎤</a>
+          <a href="game-evenings.html" class="hub-nav-link">Games 🎲</a>
+          <a href="long-reads.html" class="hub-nav-link">Long Reads 📚</a>
+          <a href="teacher-led-sessions/index.html" class="hub-nav-link">Teacher Sessions 🍎</a>
         </nav>
       </div>
 
@@ -89,7 +90,7 @@
 
   <footer class="hub-footer">
     <p>COSYevents &copy; COSYlanguages Ecosystem.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+    <p>
       <a href="privacy.html">Privacy &amp; legal notice</a>
     </p>
   </footer>
@@ -133,36 +134,44 @@
         document.getElementById('heading-access').textContent = t('my_access');
 
         var grantsContainer = document.getElementById('grants-container');
+        grantsContainer.textContent = ''; // clear
 
         var grants = (access && Array.isArray(access.grants)) ? access.grants : [];
         var teaches = (access && Array.isArray(access.teaches)) ? access.teaches : [];
 
         if (userRole === 'teacher' && teaches.length > 0) {
-          var tHtml = '<div style="margin-bottom: 1rem; font-weight: 600;">' + t('role_teacher') + ' languages: ' + teaches.map(function(l){ return l.toUpperCase(); }).join(', ') + '</div>';
+          var tInfo = document.createElement('div');
+          tInfo.className = 'teacher-languages-info';
+          tInfo.textContent = t('role_teacher') + ' languages: ' + teaches.map(function (l) { return l.toUpperCase(); }).join(', ');
+          grantsContainer.appendChild(tInfo);
           if (grants.length === 0) {
-            grantsContainer.innerHTML = tHtml;
             return;
           }
         }
 
         if (grants.length === 0 && teaches.length === 0) {
-          grantsContainer.innerHTML = '<p style="color: var(--cosy-text-muted, #666); font-style: italic;">' + t('no_grants') + '</p>';
+          var noGrantsP = document.createElement('p');
+          noGrantsP.className = 'auth-no-grants';
+          noGrantsP.textContent = t('no_grants');
+          grantsContainer.appendChild(noGrantsP);
           return;
         }
 
-        var html =
-          '<table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">' +
-            '<thead>' +
-              '<tr style="border-bottom: 2px solid var(--cosy-border, #ccc); color: var(--cosy-primary-dark, #233827);">' +
-                '<th style="padding: 0.6rem 0.5rem;">' + t('language') + '</th>' +
-                '<th style="padding: 0.6rem 0.5rem;">' + t('level') + '</th>' +
-                '<th style="padding: 0.6rem 0.5rem;">' + t('course') + '</th>' +
-                '<th style="padding: 0.6rem 0.5rem;">' + t('valid_until') + '</th>' +
-                '<th style="padding: 0.6rem 0.5rem;">Notes</th>' +
-              '</tr>' +
-            '</thead>' +
-            '<tbody>';
+        var table = document.createElement('table');
+        table.className = 'grants-table';
 
+        var thead = document.createElement('thead');
+        var headerRow = document.createElement('tr');
+        var headers = [t('language'), t('level'), t('course'), t('valid_until'), 'Notes'];
+        headers.forEach(function (hText) {
+          var th = document.createElement('th');
+          th.textContent = hText;
+          headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        var tbody = document.createElement('tbody');
         for (var i = 0; i < grants.length; i++) {
           var g = grants[i];
           var langName = g.language ? g.language.toUpperCase() : '-';
@@ -172,18 +181,34 @@
           var validUntil = g.valid_until ? g.valid_until : '∞';
           var noteStr = g.include_lower ? t('includes_lower') : '';
 
-          html +=
-            '<tr style="border-bottom: 1px solid var(--cosy-border, #eee);">' +
-              '<td style="padding: 0.6rem 0.5rem; font-weight: 700;">' + langName + '</td>' +
-              '<td style="padding: 0.6rem 0.5rem;">' + (g.level || '-') + '</td>' +
-              '<td style="padding: 0.6rem 0.5rem;">' + (g.course || 'General') + '</td>' +
-              '<td style="padding: 0.6rem 0.5rem;">' + validUntil + '</td>' +
-              '<td style="padding: 0.6rem 0.5rem; font-size: 0.85rem; color: var(--cosy-text-muted, #666);">' + noteStr + '</td>' +
-            '</tr>';
-        }
+          var row = document.createElement('tr');
 
-        html += '</tbody></table>';
-        grantsContainer.innerHTML = html;
+          var tdLang = document.createElement('td');
+          tdLang.className = 'cell-bold';
+          tdLang.textContent = langName;
+          row.appendChild(tdLang);
+
+          var tdLevel = document.createElement('td');
+          tdLevel.textContent = g.level || '-';
+          row.appendChild(tdLevel);
+
+          var tdCourse = document.createElement('td');
+          tdCourse.textContent = g.course || 'General';
+          row.appendChild(tdCourse);
+
+          var tdValid = document.createElement('td');
+          tdValid.textContent = validUntil;
+          row.appendChild(tdValid);
+
+          var tdNote = document.createElement('td');
+          tdNote.className = 'cell-note';
+          tdNote.textContent = noteStr;
+          row.appendChild(tdNote);
+
+          tbody.appendChild(row);
+        }
+        table.appendChild(tbody);
+        grantsContainer.appendChild(table);
       }
 
       if (window.CosyAuth) {

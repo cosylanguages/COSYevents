@@ -7,6 +7,7 @@
   <title>Log in — COSYevents</title>
   <link rel="stylesheet" href="shared/css/hub.css">
   <link rel="stylesheet" href="shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="shared/css/auth.css">
   <link rel="icon" href="shared/assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="shared/assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
@@ -28,9 +29,9 @@
 
   <header class="hub-header">
     <div class="hub-header-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
-        <span class="hub-brand" style="margin-bottom: 0;">COSYlanguages Ecosystem</span>
-        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+      <div class="auth-header-actions">
+        <span class="hub-brand">COSYlanguages Ecosystem</span>
+        <div class="auth-header-actions">
           <div data-cosy-account></div>
           <div data-ce-lang-switcher></div>
         </div>
@@ -42,45 +43,45 @@
     </div>
   </header>
 
-  <main class="hub-main" style="max-width: 480px; margin: 0 auto; padding: 2.5rem 1.5rem;">
-    <article style="background: var(--cosy-surface, #fff); border: 1px solid var(--cosy-border, #eee); border-radius: var(--cosy-radius, 12px); padding: 2rem; box-shadow: var(--cosy-shadow, 0 4px 12px rgba(0,0,0,0.05));">
+  <main class="hub-main login-main-container">
+    <article class="auth-card">
 
-      <div id="login-status-msg" role="status" aria-live="polite" style="display: none; padding: 0.85rem; border-radius: 8px; margin-bottom: 1.25rem; font-size: 0.9rem; font-weight: 600;"></div>
+      <div id="login-status-msg" class="auth-status-msg" role="status" aria-live="polite" hidden></div>
 
       <!-- Step 1: Request OTP -->
-      <form id="login-step-1" style="display: flex; flex-direction: column; gap: 1.25rem;">
+      <form id="login-step-1" class="auth-form-step">
         <div>
-          <label id="lbl-email" for="input-email" style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--cosy-text, #333);">
+          <label id="lbl-email" for="input-email" class="auth-form-label">
             Email address
           </label>
-          <input type="email" id="input-email" required placeholder="you@example.com" style="width: 100%; min-height: 44px; padding: 0.6rem 0.85rem; font-size: 1rem; border: 1px solid var(--cosy-border, #ccc); border-radius: 8px; background: var(--cosy-bg, #fff); color: var(--cosy-text, #333);" />
+          <input type="email" id="input-email" class="auth-input-text" required placeholder="you@example.com" />
         </div>
 
-        <button type="submit" id="btn-send-code" style="min-height: 44px; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 700; color: #fff; background: var(--cosy-primary, #416b49); border: none; border-radius: 8px; cursor: pointer; transition: background 0.2s ease;">
+        <button type="submit" id="btn-send-code" class="auth-btn-primary">
           Send login code
         </button>
       </form>
 
       <!-- Step 2: Verify Code -->
-      <form id="login-step-2" style="display: none; flex-direction: column; gap: 1.25rem;">
+      <form id="login-step-2" class="auth-form-step" hidden>
         <div>
-          <label id="lbl-code" for="input-code" style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--cosy-text, #333);">
+          <label id="lbl-code" for="input-code" class="auth-form-label">
             Enter 6-digit code
           </label>
-          <input type="text" id="input-code" pattern="[0-9]{6}" maxlength="6" inputmode="numeric" required placeholder="123456" style="width: 100%; min-height: 44px; padding: 0.6rem 0.85rem; font-size: 1.25rem; letter-spacing: 4px; text-align: center; border: 1px solid var(--cosy-border, #ccc); border-radius: 8px; background: var(--cosy-bg, #fff); color: var(--cosy-text, #333);" />
+          <input type="text" id="input-code" class="auth-input-code" pattern="[0-9]{6}" maxlength="6" inputmode="numeric" required placeholder="123456" />
         </div>
 
-        <button type="submit" id="btn-verify-code" style="min-height: 44px; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 700; color: #fff; background: var(--cosy-primary, #416b49); border: none; border-radius: 8px; cursor: pointer;">
+        <button type="submit" id="btn-verify-code" class="auth-btn-primary">
           Verify &amp; Log in
         </button>
 
-        <button type="button" id="btn-resend-code" style="min-height: 44px; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 600; color: var(--cosy-primary, #416b49); background: none; border: 1px solid var(--cosy-border, #ccc); border-radius: 8px; cursor: pointer;">
+        <button type="button" id="btn-resend-code" class="auth-btn-secondary">
           Resend code
         </button>
       </form>
 
-      <div style="margin-top: 1.5rem; text-align: center; border-top: 1px solid var(--cosy-border, #eee); padding-top: 1rem;">
-        <a id="link-home" href="index.html" style="color: var(--cosy-primary, #416b49); font-size: 0.9rem; text-decoration: none; font-weight: 600;">
+      <div class="auth-back-container">
+        <a id="link-home" href="index.html" class="auth-back-link">
           ← Back to home
         </a>
       </div>
@@ -90,7 +91,7 @@
 
   <footer class="hub-footer">
     <p>COSYevents &copy; COSYlanguages Ecosystem.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+    <p>
       <a href="privacy.html">Privacy &amp; legal notice</a>
     </p>
   </footer>
@@ -141,21 +142,18 @@
       var resendCooldown = 0;
 
       function showStatus(msg, isError) {
-        statusMsg.style.display = 'block';
+        statusMsg.hidden = false;
         statusMsg.textContent = msg;
         if (isError) {
-          statusMsg.style.background = 'var(--cosy-rose-light, #fcebeb)';
-          statusMsg.style.color = 'var(--cosy-rose, #a32d2d)';
-          statusMsg.style.border = '1px solid var(--cosy-rose, #a32d2d)';
+          statusMsg.className = 'auth-status-msg status-error';
         } else {
-          statusMsg.style.background = 'var(--cosy-primary-light, #e8f0e9)';
-          statusMsg.style.color = 'var(--cosy-primary-dark, #233827)';
-          statusMsg.style.border = '1px solid var(--cosy-primary, #416b49)';
+          statusMsg.className = 'auth-status-msg status-success';
         }
       }
 
       function hideStatus() {
-        statusMsg.style.display = 'none';
+        statusMsg.hidden = true;
+        statusMsg.textContent = '';
       }
 
       function startResendCooldown() {
@@ -220,8 +218,8 @@
                   showStatus(res.error.message || t('error_generic'), true);
                 }
               } else {
-                step1.style.display = 'none';
-                step2.style.display = 'flex';
+                step1.hidden = true;
+                step2.hidden = false;
                 showStatus(t('code_sent'), false);
                 codeInput.focus();
                 startResendCooldown();
