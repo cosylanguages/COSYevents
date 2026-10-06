@@ -50,7 +50,7 @@
     }
   })();
 
-  // Dynamically ensure cosyevents-lang.js and cosy-auth.js are loaded
+  // Dynamically ensure cosyevents-lang.js, cosy-auth.js, auth-sso.js, and cms-editor.js are loaded
   if (!window.CosyLang && !document.querySelector('script[src*="cosyevents-lang.js"]')) {
     var langScript = document.createElement('script');
     langScript.src = root + 'shared/js/cosyevents-lang.js';
@@ -62,6 +62,18 @@
     authScript.src = root + 'shared/js/cosy-auth.js';
     authScript.defer = true;
     document.head.appendChild(authScript);
+  }
+  if (!window.AuthSSO && !document.querySelector('script[src*="auth-sso.js"]')) {
+    var ssoScript = document.createElement('script');
+    ssoScript.src = root + 'shared/js/auth-sso.js';
+    ssoScript.defer = true;
+    document.head.appendChild(ssoScript);
+  }
+  if (!window.CMSEditor && !document.querySelector('script[src*="cms-editor.js"]')) {
+    var cmsScript = document.createElement('script');
+    cmsScript.src = root + 'shared/js/cms-editor.js';
+    cmsScript.defer = true;
+    document.head.appendChild(cmsScript);
   }
 
   var DICTIONARY = {
@@ -722,7 +734,7 @@
       return;
     }
     var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
+    script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1';
     script.onload = function () {
       if (window.supabase) {
         callback(window.supabase);

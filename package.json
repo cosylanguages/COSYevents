@@ -14,6 +14,7 @@
     "test-calendar-i18n": "node scripts/test_calendar_i18n.js",
     "test-event-filter": "node scripts/test_event_filter.js",
     "test-auth": "node scripts/test_auth.js",
+    "test-sso-cms": "node scripts/test_sso_cms.js",
     "test-db": "bash scripts/run_db_tests.sh",
     "test:private-export": "node scripts/test_private_export.js",
     "test:video-meetings": "bash scripts/test_video_meetings_schema.sh",

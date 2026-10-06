@@ -451,7 +451,25 @@
     });
   }
 
+  function ensureEcosystemScriptsLoaded() {
+    if (typeof document === 'undefined') return;
+    var baseUrl = getScriptBaseUrl();
+    if (!window.AuthSSO && !document.querySelector('script[src*="auth-sso.js"]')) {
+      var sso = document.createElement('script');
+      sso.src = baseUrl + 'shared/js/auth-sso.js';
+      sso.defer = true;
+      document.head.appendChild(sso);
+    }
+    if (!window.CMSEditor && !document.querySelector('script[src*="cms-editor.js"]')) {
+      var cms = document.createElement('script');
+      cms.src = baseUrl + 'shared/js/cms-editor.js';
+      cms.defer = true;
+      document.head.appendChild(cms);
+    }
+  }
+
   function autoInit() {
+    ensureEcosystemScriptsLoaded();
     init().catch(function () {});
   }
 
