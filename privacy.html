@@ -57,10 +57,10 @@
         <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">1. Who We Are (Data Controller)</h2>
         <p style="margin-bottom: 0.5rem;">The website <strong>COSYevents</strong> is published and operated by:</p>
         <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem;">
-          <li><strong>Data Controller:</strong> &lt;legal name of the person or business running the site&gt;</li>
-          <li><strong>Legal Status:</strong> &lt;e.g. "individual, auto-entrepreneur, SIRET 123 456 789 00012" or "COSYlanguages SAS, RCS ..."&gt;</li>
-          <li><strong>Location:</strong> &lt;city and country, e.g. "Brest, France"&gt;</li>
-          <li><strong>Contact Email:</strong> &lt;contact email for privacy requests&gt;</li>
+          <li><strong>Data Controller:</strong> <!-- TODO: needs content from owner --> [Owner Name / Business Entity]</li>
+          <li><strong>Legal Status:</strong> <!-- TODO: needs content from owner --> [Auto-entrepreneur / SAS / Legal Registration]</li>
+          <li><strong>Location:</strong> <!-- TODO: needs content from owner --> [City, Country]</li>
+          <li><strong>Contact Email:</strong> <!-- TODO: needs content from owner --> [Privacy Contact Email]</li>
         </ul>
       </section>
 
@@ -77,7 +77,20 @@
       </section>
 
       <section>
-        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">3. Optional Accounts</h2>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">3. Participant Magic Links &amp; Technical Requests</h2>
+        <p style="margin-bottom: 0.75rem;">Participants in live sessions receive a unique magic link containing a temporary access token fragment. When you open a magic link on COSYevents, a technical request is transmitted to Supabase Inc. (EU database region) to redeem session materials.</p>
+        <p style="margin-bottom: 0.5rem;">During this request:</p>
+        <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem;">
+          <li>Your IP address and browser user-agent are visible to Supabase infrastructure logs as part of standard HTTPS network delivery.</li>
+          <li>The database increments a non-personal usage counter (<code>use_count</code>) and updates a timestamp (<code>last_used_at</code>) on the link record to prevent link abuse and manage expiration.</li>
+          <li>No personal user account, password, or student profile is created or required for magic link participants.</li>
+        </ul>
+        <p style="margin-bottom: 0.5rem;"><strong>Data Retention for Link Usage:</strong></p>
+        <p style="margin-bottom: 0.75rem;"><!-- TODO: needs content from owner --> Link usage metrics (use_count and last_used_at) are retained for <strong>[insert retention period, e.g. 90 days / 12 months]</strong> after link expiration, after which link records are archived or deleted.</p>
+      </section>
+
+      <section>
+        <h2 style="font-size: 1.4rem; color: var(--cosy-primary-dark); margin-bottom: 0.75rem; border-bottom: 2px solid var(--cosy-primary-light); padding-bottom: 0.4rem;">4. Optional Accounts</h2>
         <p style="margin-bottom: 0.75rem;">An optional shared account system allows enrolled students and facilitators to access private session materials across COSY ecosystem sites.</p>
         <p style="margin-bottom: 0.5rem;">When enabled, an account stores:</p>
         <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem;">

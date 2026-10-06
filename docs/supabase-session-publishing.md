@@ -1,55 +1,70 @@
-# Supabase Session Publishing
+# Step-by-Step Supabase Session Publishing Guide
 
-## Access Model
+This guide details how authors and maintainers publish live speaking club sessions and gated event content to Supabase using the local publishing tooling.
 
-- `session_catalog` is the public catalogue. Its bibliography contains citations only, never source URLs.
-- `session_content` stores private vocabulary, rounds, optional grammar, and discussion prompts.
-- `session_sources` stores direct source URLs and optional private audio object paths.
-- `session_entitlements` grants access per user and session. The service role manages grants; students cannot grant access to themselves.
-- `session-source-audio` is a private Storage bucket. Source audio is readable only by entitled students, founders, and the assigned teachers.
+---
 
-## Export and Review
+## 🔒 Security Principles
 
-The exporter reads the existing session HTML and writes only into the ignored `private/` directory. It never publishes to Supabase.
+1. **Git Protection:** Private session JSON files, facilitator notes, and raw token strings MUST reside in local, gitignored directories (e.g. `private/`). The publishing script refuses execution if run on git-tracked files.
+2. **Service Role Key:** Publishing requires `SUPABASE_SERVICE_ROLE_KEY` defined in a local, gitignored `.env` file. Never commit `.env` or service role keys to source control.
+3. **Public Teaser Shells:** Public HTML pages in `sessions/**/*.html` contain only static teaser metadata (title, club, level, summary) and zero private prompt decks or notes.
 
-```sh
-npm run export:private-sessions
-npm run export:private-sessions -- --session sessions/karaoke-club/challenges/abba-challenge/index.html --write
-npm run export:private-sessions -- --write
-```
+---
 
-The first command is report-only. Each generated payload is marked `review_status: "needs_review"`. Check the vocabulary, discussion prompts, grammar, citations, and source URLs manually. The exporter deliberately does not copy full article text or song lyrics.
+## 🛠️ Step-by-Step Publishing Workflow
 
-With `--write`, the exporter also creates `private/session-exports/review.csv`. It contains one row per session with content counts and review warnings, but no direct source URLs.
-
-## Add Audio
-
-Place an audio file beside the payload or in a subdirectory under its directory, then add `audio_file` and an audio MIME type to the corresponding private source:
+### Step 1: Prepare Private Session Payload
+Create a private JSON payload file in `private/session-exports/<session_id>.json` using the standard structure:
 
 ```json
 {
-  "source_id": "article-1",
-  "source_title": "Article title",
-  "source_url": "https://example.org/article",
-  "audio_file": "audio/article-presentation.mp3",
-  "audio_content_type": "audio/mpeg"
+  "session_id": "session-mind-matters-example",
+  "public": {
+    "title": "Example Session",
+    "format": "Mind Matters",
+    "language": "English",
+    "level": "B1-B2",
+    "summary": "Short public teaser summary.",
+    "is_published": true
+  },
+  "content": {
+    "vocabulary": [
+      { "word": "Resilience", "definition": "Capacity to recover quickly.", "example": "Her resilience was inspiring." }
+    ],
+    "rounds": [
+      { "title": "Round 1", "items": [{ "main": "Discussion prompt question?" }] }
+    ],
+    "grammar": null,
+    "discussion": [],
+    "full_notes": "Facilitator private notes and timing guidance."
+  },
+  "teacher_notes": "Specific notes for language teachers."
 }
 ```
 
-The publisher rejects absolute paths, paths escaping the payload directory, and non-audio MIME types. It uploads the file to the private Storage bucket.
+### Step 2: Validate Payload Format
+Run `--validate-only` to ensure schema compliance before publishing:
 
-## Validate and Publish
-
-Validate a payload without Supabase credentials:
-
-```sh
-node scripts/publish_to_supabase.js --validate-only private/session-exports/<session-id>.json
+```bash
+node scripts/publish_to_supabase.js --validate-only private/session-exports/<session_id>.json
 ```
 
-Only after manual review, set `review_status` to `approved`. Keep `public.is_published` false until the public metadata is ready. Publishing requires `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in the local ignored `.env` file:
+### Step 3: Publish to Supabase and Build Public Shell
+Use the master helper command to publish content to Supabase database tables (`session_catalog`, `session_content`, `session_sources`, `session_teacher_notes`), generate the public teaser HTML shell page, and register the catalog item in `data/sessions.json`:
 
-```sh
-node scripts/publish_to_supabase.js private/session-exports/<session-id>.json
+```bash
+npm run session:new -- private/session-exports/<session_id>.json --club mind-matters --lang English
 ```
 
-The service-role key must never be placed in browser code or committed. Do not remove the existing public HTML session pages until the authenticated Supabase reader is deployed and verified; those pages currently expose their full contents independently of RLS.
+---
+
+## 🔑 Key Rotation & Security Procedures
+
+If `SUPABASE_SERVICE_ROLE_KEY` or `SUPABASE_ANON_KEY` is accidentally exposed or compromised:
+
+1. Log into the **Supabase Dashboard** -> Project Settings -> API.
+2. Click **Roll Key** / **Generate New Secret** for the service-role or anon key.
+3. Immediately update the new service-role key in your local gitignored `.env` file (`SUPABASE_SERVICE_ROLE_KEY=...`).
+4. Update `shared/config/supabase.json` with the new `anonKey`.
+5. Run `npm run verify:anon` to ensure anonymous REST API queries on private tables remain completely blocked.
