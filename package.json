@@ -19,7 +19,8 @@
     "export:private-sessions": "node scripts/export_private_sessions.js",
     "set-contact": "node scripts/set_contact.js",
     "check-contact": "node scripts/set_contact.js --check",
-    "publish:supabase": "node scripts/publish_to_supabase.js"
+    "publish:supabase": "node scripts/publish_to_supabase.js",
+    "verify:anon": "node scripts/verify_anon_access.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

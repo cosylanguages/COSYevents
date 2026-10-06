@@ -58,6 +58,30 @@ A student can view a session's private content (`session_content`, `session_sour
 
 ---
 
+## Participant Magic Links
+
+Participant magic links allow event participants to access specific session materials via tokenized URLs without requiring student user accounts or password sign-ins.
+
+### Storage & Token Security
+
+- **Plain Token Handling**: Plain secret tokens are generated as 24-character URL-safe strings (`gen_random_bytes(18)` encoded in base64url without padding) and returned exactly once to staff upon link creation (`create_session_access_link`). Plain tokens are **never** stored in the database.
+- **Hash Storage**: The table `public.session_access_links` stores only the hex-encoded SHA-256 hash (`encode(digest(token, 'sha256'), 'hex')`) along with expiration dates, validity windows (up to 400 days max), revocation status, and usage metrics (`use_count`, `last_used_at`).
+- **Table Security**: Direct table queries on `public.session_access_links` are disabled for `anon` and `authenticated` roles (`REVOKE ALL`). Staff interaction occurs exclusively through SECURITY DEFINER database functions.
+
+### Participant vs. Staff Role Views
+
+- **Participant Redemption (`redeem_session_access_link`)**:
+  - Accessible by `anon` and `authenticated` roles.
+  - Returns `{"status": "ok", "catalog": {...}, "content": {...}, "sources": [...], "valid_until": ...}` or status (`"invalid"`, `"expired"`, `"revoked"`).
+  - Includes `recording_url` **only** when `session_content.share_recording` is explicitly set to `true`.
+  - **Never** returns `full_notes`, `teacher_notes`, or internal `audio_storage_path` values.
+- **Staff Inspection & Management**:
+  - `staff_get_session(session_id)`: Allowed for founders and teachers assigned to the session's language. Returns full session content including `full_notes`, `teacher_notes`, and `recording_url`.
+  - `list_session_access_links(session_id)`: Allowed for founders and teachers of that language. Returns link IDs, labels, validity windows, usage metrics, and computed statuses (`active`, `expired`, `revoked`). **Never** exposes token hashes.
+  - `revoke_session_access_link(link_id)`: Allowed for founders and teachers of that language. Immediately marks a link as revoked (`revoked_at = now()`).
+
+---
+
 ## Founder SQL Management Snippets
 
 Founders can execute these SQL queries directly from the Supabase SQL Editor or admin interface.
