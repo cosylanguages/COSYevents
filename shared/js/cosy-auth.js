@@ -468,6 +468,14 @@
     var dir = currentPath.replace(/[^/]*$/, '');
     var redirectUrl = currentOrigin + dir + 'login.html';
 
+    if (typeof window !== 'undefined' && window.location && window.location.search) {
+      var params = new URLSearchParams(window.location.search);
+      var next = params.get('next');
+      if (next) {
+        redirectUrl += '?next=' + encodeURIComponent(next);
+      }
+    }
+
     return state.client.auth.signInWithOtp({
       email: email,
       options: {

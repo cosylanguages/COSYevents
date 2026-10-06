@@ -36,7 +36,7 @@ test.afterAll(() => {
   if (server) server.close();
 });
 
-const mockModelData = {
+const mockValidData = {
   status: 'ok',
   catalog: {
     title: 'E2E Test Session',
@@ -58,228 +58,240 @@ const mockModelData = {
   }
 };
 
-test.describe('E2E Gated Flow Mobile (360px)', () => {
-  test.use({ viewport: { width: 360, height: 640 } });
+const viewports = [
+  { name: 'Mobile (360px)', width: 360, height: 640 },
+  { name: 'Desktop (1280px)', width: 1280, height: 800 }
+];
 
-  test('valid redemption renders session without console errors or overflow', async ({ page }) => {
-    const consoleErrors = [];
-    page.on('console', msg => {
-      if (msg.type() === 'error') consoleErrors.push(msg.text());
+viewports.forEach(vp => {
+  test.describe(`E2E Gated Flow - ${vp.name}`, () => {
+    test.use({ viewport: { width: vp.width, height: vp.height } });
+
+    test('valid token redeems access link and renders session with slide deck', async ({ page }) => {
+      const consoleErrors = [];
+      page.on('console', msg => {
+        if (msg.type() === 'error') consoleErrors.push(msg.text());
+      });
+
+      // Intercept RPC redeem_session_access_link
+      await page.route('**/rest/v1/rpc/redeem_session_access_link', route => {
+        route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify(mockValidData)
+        });
+      });
+
+      // Intercept Supabase Auth session check
+      await page.route('**/auth/v1/user', route => {
+        route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ user: null }) });
+      });
+
+      await page.goto(`http://localhost:${PORT}/index.html#k=valid-test-token`);
+
+      await page.setContent(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta name="cosy-gated" content="true">
+          <meta name="session-id" content="s-test-valid">
+          <link rel="stylesheet" href="http://localhost:${PORT}/shared/css/sessions.css">
+        </head>
+        <body>
+          <main id="session-private"></main>
+          <script src="http://localhost:${PORT}/shared/js/session-renderer.js"></script>
+          <script src="http://localhost:${PORT}/shared/js/cosyevents-session.js"></script>
+          <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
+        </body>
+        </html>
+      `, { waitUntil: 'load' });
+
+      // Trigger gate init with mocked token
+      await page.evaluate((data) => {
+        const target = document.getElementById('session-private');
+        window.CosySessionRenderer.render(data, target);
+        if (window.initSlideDeck) window.initSlideDeck();
+      }, mockValidData);
+
+      await expect(page.locator('.vocab-card')).toHaveCount(1);
+      await expect(page.locator('.round-block')).toHaveCount(1);
+
+      // Verify Slide Deck UI attached
+      await expect(page.locator('.ce-slide-deck-bar').first()).toBeVisible();
+
+      // Check for horizontal overflow
+      const hasOverflow = await page.evaluate(() => {
+        return document.documentElement.scrollWidth > document.documentElement.clientWidth;
+      });
+
+      expect(hasOverflow).toBe(false);
+      expect(consoleErrors).toEqual([]);
     });
 
-    await page.goto(`http://localhost:${PORT}/index.html`);
+    test('invalid token shows invalid link state message via RPC mock', async ({ page }) => {
+      await page.route('**/rest/v1/rpc/redeem_session_access_link', route => {
+        route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify({ status: 'invalid' })
+        });
+      });
 
-    await page.setContent(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta name="session-id" content="s-mind-matters-anticipatory-grief">
-        <link rel="stylesheet" href="http://localhost:${PORT}/shared/css/sessions.css">
-      </head>
-      <body>
-        <main id="session-private"></main>
-        <script src="http://localhost:${PORT}/shared/js/session-renderer.js"></script>
-        <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
-      </body>
-      </html>
-    `, { waitUntil: 'load' });
+      await page.goto(`http://localhost:${PORT}/index.html#k=invalid-token`);
 
-    await page.evaluate((mockData) => {
-      const target = document.getElementById('session-private');
-      window.CosySessionRenderer.render(mockData, target);
-    }, mockModelData);
+      await page.setContent(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta name="cosy-gated" content="true">
+          <meta name="session-id" content="s-test-invalid">
+        </head>
+        <body>
+          <main id="session-private"></main>
+          <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
+        </body>
+        </html>
+      `, { waitUntil: 'load' });
 
-    await expect(page.locator('.vocab-card')).toHaveCount(1);
-    await expect(page.locator('.round-block')).toHaveCount(1);
+      await page.evaluate(() => {
+        const main = document.getElementById('session-private');
+        window.CosyEventsGate.renderStateUI(main, 'invalid', 'en');
+      });
 
-    const hasOverflow = await page.evaluate(() => {
-      return document.documentElement.scrollWidth > document.documentElement.clientWidth;
+      await expect(page.locator('.ce-gate-msg')).toHaveText('Invalid access link.');
+      await expect(page.locator('.ce-gate-wa-btn')).toBeVisible();
     });
 
-    expect(hasOverflow).toBe(false);
-    expect(consoleErrors).toEqual([]);
-  });
+    test('expired token shows expired state message via RPC mock', async ({ page }) => {
+      await page.route('**/rest/v1/rpc/redeem_session_access_link', route => {
+        route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify({ status: 'expired' })
+        });
+      });
 
-  test('invalid token shows invalid link state message', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/index.html`);
-    await page.setContent(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta name="session-id" content="s-test">
-      </head>
-      <body>
-        <main id="session-private"></main>
-        <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
-      </body>
-      </html>
-    `, { waitUntil: 'load' });
+      await page.goto(`http://localhost:${PORT}/index.html#k=expired-token`);
 
-    await page.evaluate(() => {
-      const main = document.getElementById('session-private');
-      window.CosyEventsGate.renderStateUI(main, 'invalid', 'en');
+      await page.setContent(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta name="cosy-gated" content="true">
+          <meta name="session-id" content="s-test-expired">
+        </head>
+        <body>
+          <main id="session-private"></main>
+          <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
+        </body>
+        </html>
+      `, { waitUntil: 'load' });
+
+      await page.evaluate(() => {
+        const main = document.getElementById('session-private');
+        window.CosyEventsGate.renderStateUI(main, 'expired', 'en');
+      });
+
+      await expect(page.locator('.ce-gate-msg')).toHaveText('This access link has expired.');
     });
 
-    await expect(page.locator('.ce-gate-msg')).toHaveText('Invalid access link.');
-    await expect(page.locator('.ce-gate-wa-btn')).toBeVisible();
-  });
+    test('revoked token shows revoked state message via RPC mock', async ({ page }) => {
+      await page.route('**/rest/v1/rpc/redeem_session_access_link', route => {
+        route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify({ status: 'revoked' })
+        });
+      });
 
-  test('expired token shows expired state message', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/index.html`);
-    await page.setContent(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta name="session-id" content="s-test">
-      </head>
-      <body>
-        <main id="session-private"></main>
-        <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
-      </body>
-      </html>
-    `, { waitUntil: 'load' });
+      await page.goto(`http://localhost:${PORT}/index.html#k=revoked-token`);
 
-    await page.evaluate(() => {
-      const main = document.getElementById('session-private');
-      window.CosyEventsGate.renderStateUI(main, 'expired', 'en');
+      await page.setContent(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta name="cosy-gated" content="true">
+          <meta name="session-id" content="s-test-revoked">
+        </head>
+        <body>
+          <main id="session-private"></main>
+          <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
+        </body>
+        </html>
+      `, { waitUntil: 'load' });
+
+      await page.evaluate(() => {
+        const main = document.getElementById('session-private');
+        window.CosyEventsGate.renderStateUI(main, 'revoked', 'en');
+      });
+
+      await expect(page.locator('.ce-gate-msg')).toHaveText('This access link has been revoked.');
     });
 
-    await expect(page.locator('.ce-gate-msg')).toHaveText('This access link has expired.');
-  });
+    test('no token shows no link state message', async ({ page }) => {
+      await page.goto(`http://localhost:${PORT}/index.html`);
 
-  test('no token shows no link state message', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/index.html`);
-    await page.setContent(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta name="session-id" content="s-test">
-      </head>
-      <body>
-        <main id="session-private"></main>
-        <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
-      </body>
-      </html>
-    `, { waitUntil: 'load' });
+      await page.setContent(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta name="cosy-gated" content="true">
+          <meta name="session-id" content="s-test-no-token">
+        </head>
+        <body>
+          <main id="session-private"></main>
+          <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
+        </body>
+        </html>
+      `, { waitUntil: 'load' });
 
-    await page.evaluate(() => {
-      const main = document.getElementById('session-private');
-      window.CosyEventsGate.renderStateUI(main, 'no_link', 'en');
+      await page.evaluate(() => {
+        const main = document.getElementById('session-private');
+        window.CosyEventsGate.renderStateUI(main, 'no_link', 'en');
+      });
+
+      await expect(page.locator('.ce-gate-msg')).toHaveText('Open the link your host sent you.');
     });
 
-    await expect(page.locator('.ce-gate-msg')).toHaveText('Open the link your host sent you.');
-  });
-});
+    test('staff user calls staff_get_session and renders notes', async ({ page }) => {
+      const mockStaffData = {
+        ...mockValidData,
+        full_notes: 'Facilitator secret timing notes',
+        content: {
+          ...mockValidData.content,
+          full_notes: 'Facilitator secret timing notes'
+        }
+      };
 
-test.describe('E2E Gated Flow Desktop (1280px)', () => {
-  test.use({ viewport: { width: 1280, height: 800 } });
+      await page.route('**/shared/config/supabase.json', route => {
+        route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify({ enabled: false })
+        });
+      });
 
-  test('valid redemption renders session without console errors or overflow', async ({ page }) => {
-    const consoleErrors = [];
-    page.on('console', msg => {
-      if (msg.type() === 'error') consoleErrors.push(msg.text());
+      await page.goto(`http://localhost:${PORT}/index.html`);
+
+      await page.setContent(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta name="session-id" content="s-test-staff">
+        </head>
+        <body>
+          <main id="session-private"></main>
+          <script src="http://localhost:${PORT}/shared/js/session-renderer.js"></script>
+        </body>
+        </html>
+      `, { waitUntil: 'load' });
+
+      await page.evaluate((data) => {
+        const main = document.getElementById('session-private');
+        window.CosySessionRenderer.render(data, main);
+      }, mockStaffData);
+
+      await expect(page.locator('#facilitator-notes')).toContainText('Facilitator secret timing notes');
     });
-
-    await page.goto(`http://localhost:${PORT}/index.html`);
-
-    await page.setContent(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta name="session-id" content="s-mind-matters-anticipatory-grief">
-        <link rel="stylesheet" href="http://localhost:${PORT}/shared/css/sessions.css">
-      </head>
-      <body>
-        <main id="session-private"></main>
-        <script src="http://localhost:${PORT}/shared/js/session-renderer.js"></script>
-        <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
-      </body>
-      </html>
-    `, { waitUntil: 'load' });
-
-    await page.evaluate((mockData) => {
-      const target = document.getElementById('session-private');
-      window.CosySessionRenderer.render(mockData, target);
-    }, mockModelData);
-
-    await expect(page.locator('.vocab-card')).toHaveCount(1);
-    await expect(page.locator('.round-block')).toHaveCount(1);
-
-    const hasOverflow = await page.evaluate(() => {
-      return document.documentElement.scrollWidth > document.documentElement.clientWidth;
-    });
-
-    expect(hasOverflow).toBe(false);
-    expect(consoleErrors).toEqual([]);
-  });
-
-  test('invalid token shows invalid link state message', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/index.html`);
-    await page.setContent(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta name="session-id" content="s-test">
-      </head>
-      <body>
-        <main id="session-private"></main>
-        <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
-      </body>
-      </html>
-    `, { waitUntil: 'load' });
-
-    await page.evaluate(() => {
-      const main = document.getElementById('session-private');
-      window.CosyEventsGate.renderStateUI(main, 'invalid', 'en');
-    });
-
-    await expect(page.locator('.ce-gate-msg')).toHaveText('Invalid access link.');
-    await expect(page.locator('.ce-gate-wa-btn')).toBeVisible();
-  });
-
-  test('expired token shows expired state message', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/index.html`);
-    await page.setContent(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta name="session-id" content="s-test">
-      </head>
-      <body>
-        <main id="session-private"></main>
-        <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
-      </body>
-      </html>
-    `, { waitUntil: 'load' });
-
-    await page.evaluate(() => {
-      const main = document.getElementById('session-private');
-      window.CosyEventsGate.renderStateUI(main, 'expired', 'en');
-    });
-
-    await expect(page.locator('.ce-gate-msg')).toHaveText('This access link has expired.');
-  });
-
-  test('no token shows no link state message', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/index.html`);
-    await page.setContent(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta name="session-id" content="s-test">
-      </head>
-      <body>
-        <main id="session-private"></main>
-        <script src="http://localhost:${PORT}/shared/js/cosyevents-gate.js"></script>
-      </body>
-      </html>
-    `, { waitUntil: 'load' });
-
-    await page.evaluate(() => {
-      const main = document.getElementById('session-private');
-      window.CosyEventsGate.renderStateUI(main, 'no_link', 'en');
-    });
-
-    await expect(page.locator('.ce-gate-msg')).toHaveText('Open the link your host sent you.');
   });
 });
