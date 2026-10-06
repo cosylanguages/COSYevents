@@ -20,4 +20,7 @@ done
 echo "3. Running access rules test suite..."
 psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/tests/access_rules.sql
 
+echo "4. Running magic links test suite..."
+psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/tests/magic_links.sql
+
 echo "==> All database access control tests passed successfully!"
