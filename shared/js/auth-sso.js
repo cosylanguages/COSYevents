@@ -139,6 +139,11 @@
         if (window.CosyAuth && typeof window.CosyAuth.init === 'function') {
           window.CosyAuth.init({ force: true });
         }
+        if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
+          try {
+            window.dispatchEvent(new CustomEvent('cosy:auth', { detail: { session: res.data.session } }));
+          } catch (e) {}
+        }
         return res;
       }).catch(function (err) {
         cleanUrlHash();
@@ -150,16 +155,29 @@
     return Promise.resolve(null);
   }
 
+  function isEcosystemLink(el) {
+    if (!el || el.tagName !== 'A') return false;
+    var href = el.getAttribute('href') || '';
+    if (!href) return false;
+    if (href.indexOf('COSY') !== -1 || href.indexOf('cosy') !== -1 || href.indexOf('cosylanguages') !== -1) {
+      return true;
+    }
+    if (el.className && typeof el.className === 'string' && el.className.indexOf('cosy-strip-link') !== -1) {
+      return true;
+    }
+    return false;
+  }
+
   function interceptEcosystemLinks() {
     if (typeof document === 'undefined') return;
 
     document.addEventListener('click', function (e) {
       var target = e.target;
-      var anchor = target.closest ? target.closest('a[href*="COSY"]') : null;
+      var anchor = target.closest ? target.closest('a[href*="COSY"], a[href*="cosy"], a[href*="cosylanguages"], .cosy-strip-link') : null;
       if (!anchor) {
         var curr = target;
         while (curr && curr !== document) {
-          if (curr.tagName === 'A' && curr.getAttribute('href') && curr.getAttribute('href').indexOf('COSY') !== -1) {
+          if (isEcosystemLink(curr)) {
             anchor = curr;
             break;
           }
@@ -167,7 +185,7 @@
         }
       }
 
-      if (!anchor) return;
+      if (!anchor || !isEcosystemLink(anchor)) return;
 
       var href = anchor.getAttribute('href');
       if (!href) return;
