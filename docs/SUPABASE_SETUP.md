@@ -71,6 +71,7 @@ This code will expire shortly. If you did not request this code, please ignore t
   1. `20261003000000_ecosystem_access.sql`
   2. `20261003000100_security_fixes.sql`
   3. `20261003000200_profile_input_limits.sql`
+  4. `20261010000000_magic_links.sql`
 - Paste the SQL contents of each file into the SQL Editor in order and click **Run**.
 - Any new migrations created in the future must also be applied strictly in filename order.
 - Verify that tables (`profiles`, `access_grants`, `session_catalog`, `session_content`, etc.) and RLS policies are created cleanly without errors.
@@ -99,14 +100,22 @@ UPDATE public.profiles
  );
 ```
 
-### 7. API Keys Configuration & Security Policies
+### 7. API Keys Configuration, Security Policies & Key Rotation
 - Navigate to **Project Settings** -> **API**.
 - Copy:
   - **Project URL**: (e.g., `https://xxxx.supabase.co`)
-  - **anon public key**: Safe to embed in frontend static scripts.
+  - **anon public key**: Safe to embed in frontend static scripts (`shared/config/supabase.json`).
 - **CRITICAL SECURITY REQUIREMENT**:
   - **NEVER** use or commit the `service_role` key in frontend client-side code or public git repositories.
-  - The `service_role` key bypasses Row Level Security (RLS) entirely and must only be used in secure backend scripts or server environment variables.
+  - The `service_role` key bypasses Row Level Security (RLS) entirely and must only reside in local gitignored `.env` files (`SUPABASE_SERVICE_ROLE_KEY`).
+
+#### Service Key Rotation Procedure
+If a service-role or anon key is ever exposed or needs scheduled rotation:
+1. Go to **Supabase Dashboard** -> Project Settings -> API.
+2. Click **Roll Key** for the target key.
+3. Update `SUPABASE_SERVICE_ROLE_KEY` in local gitignored `.env`.
+4. Update `anonKey` in `shared/config/supabase.json`.
+5. Run `npm run verify:anon` to confirm anonymous REST API security on private tables.
 
 ### 8. Enable Two-Factor Authentication (2FA)
 - Go to your Supabase Account Settings -> **Security**.
@@ -122,3 +131,16 @@ Before switching `"enabled": true` in `shared/config/supabase.json`, complete th
 2. **Custom SMTP Delivery Test**: Send a test login code to an external non-team email address to confirm delivery succeeds.
 3. **Admin 2FA Security**: Confirm Two-Factor Authentication (2FA) is active on all founder accounts.
 4. **Config Commit**: Update `shared/config/supabase.json` with `"enabled": true` and commit only when all steps above are verified.
+
+---
+
+## Anonymous REST API Access Verification
+
+To verify that private database tables (`session_content`, `session_teacher_notes`, `session_sources`, `session_access_links`, `session_grants`, `access_grants`, `profiles`) properly block anonymous REST API access on a live Supabase environment:
+
+1. Configure `shared/config/supabase.json` or export `SUPABASE_URL` and `SUPABASE_ANON_KEY` in your environment.
+2. Run the verification script:
+```bash
+npm run verify:anon
+```
+3. Confirm that all tested endpoints report 0 rows returned to the anonymous public key. Note: This script requires a live Supabase project instance and should be run manually during setup rather than in CI.

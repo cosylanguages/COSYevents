@@ -603,15 +603,90 @@ function buildMindMattersSessions() {
   buildSessionsForClub('mind-matters');
 }
 
-function buildAllSessions() {
+function generateGatedSessionHtml(data, clubSlug = 'mind-matters', sessionId = '') {
+  const templatePath = path.join(__dirname, '../templates/gated-session.html');
+  let html = fs.readFileSync(templatePath, 'utf8');
+
+  const config = CLUB_CONFIGS[clubSlug] || CLUB_CONFIGS['mind-matters'];
+  const pageTitle = data.page_title || `${data.title} : COSYlanguages`;
+  const themeClass = data.theme_class || 'theme-mind';
+  const heroStyle = data.hero_background ? ` style="background: ${data.hero_background};"` : '';
+  const clubTag = data.club_tag || config.tag;
+  const decoratorIcon = data.decorator_icon || '🎙️';
+  const breadcrumbCurrent = data.breadcrumbs_current || data.title;
+  const duration = data.duration || '60 minutes';
+  const languages = data.languages || '🇬🇧 English';
+  const topicKey = data.topic ? 'Topic' : (data.theme ? 'Theme' : (data.resources ? 'Resources' : 'Topic'));
+  const topicValue = data.topic || data.theme || data.resources || '';
+  const metaTopicHtml = topicValue ? `<div class="meta-item"><h4>${topicKey}</h4><p>${topicValue}</p></div>` : '';
+  const summary = (data.description || data.summary || '').replace(/<[^>]+>/g, '').trim();
+
+  const sid = sessionId || `session-${clubSlug}-${data.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+
+  html = html
+    .replace('{{LANG}}', 'en')
+    .replace('{{SESSION_ID}}', sid)
+    .replace('{{PAGE_TITLE}}', pageTitle)
+    .replace('{{CLUB_CSS}}', config.css)
+    .replace('{{THEME_CLASS}}', themeClass)
+    .replace('{{HERO_STYLE}}', heroStyle)
+    .replace(/{{CLUB_TAG}}/g, clubTag)
+    .replace('{{DECORATOR_ICON}}', decoratorIcon)
+    .replace('{{TITLE}}', data.title)
+    .replace('{{DATE}}', data.date || '')
+    .replace(/{{CLUB_HREF}}/g, config.href)
+    .replace('{{BREADCRUMB_CURRENT}}', breadcrumbCurrent)
+    .replace('{{DURATION}}', duration)
+    .replace('{{LANGUAGES}}', languages)
+    .replace('{{LEVEL}}', data.level || 'B1-B2')
+    .replace('{{META_TOPIC_HTML}}', metaTopicHtml)
+    .replace('{{SUMMARY}}', summary);
+
+  return html;
+}
+
+function buildSessionsForClub(clubSlug, isGated = false) {
+  const targetDir = path.join(__dirname, `../sessions/${clubSlug}`);
+  if (!fs.existsSync(targetDir)) return;
+
+  const files = fs.readdirSync(targetDir);
+  const mdFiles = files.filter(f => f.endsWith('.md'));
+
+  console.log(`Found ${mdFiles.length} Markdown session files in sessions/${clubSlug}/`);
+
+  for (const file of mdFiles) {
+    const slug = file.replace(/\.md$/, '');
+    const mdPath = path.join(targetDir, file);
+    const htmlPath = path.join(targetDir, `${slug}.html`);
+
+    try {
+      const data = parseMarkdownFile(mdPath);
+      const sid = `session-${clubSlug}-${slug}`;
+      const htmlContent = isGated
+        ? generateGatedSessionHtml(data, clubSlug, sid)
+        : generateSessionHtml(data, clubSlug);
+
+      fs.writeFileSync(htmlPath, htmlContent, 'utf8');
+      console.log(`[Generated ${isGated ? 'Gated' : 'Public'}] ${htmlPath}`);
+
+      updateCatalog(clubSlug, slug, data);
+      console.log(`[Catalog Updated] ${clubSlug}/${slug}`);
+    } catch (err) {
+      console.error(`Error processing ${file}:`, err);
+    }
+  }
+}
+
+function buildAllSessions(isGated = false) {
   const clubs = Object.keys(CLUB_CONFIGS);
   for (const clubSlug of clubs) {
-    buildSessionsForClub(clubSlug);
+    buildSessionsForClub(clubSlug, isGated);
   }
 }
 
 if (require.main === module) {
-  buildAllSessions();
+  const isGated = process.argv.includes('--gated');
+  buildAllSessions(isGated);
 }
 
 module.exports = {
@@ -620,5 +695,6 @@ module.exports = {
   buildSessionsForClub,
   buildMindMattersSessions,
   generateSessionHtml,
+  generateGatedSessionHtml,
   parseMarkdownFile
 };

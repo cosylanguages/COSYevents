@@ -1,5 +1,7 @@
 name: Convert Session & Propose Vocabulary PR to COSYdata
 
+# NOTE: The sessions/**/*.json folder remains empty in the public repository to prevent private session content leaks.
+# This workflow runs only if public vocabulary export JSON files are added for vocabulary proposal.
 on:
   push:
     paths:

@@ -58,7 +58,7 @@ function shouldIgnore(val, filePath) {
   if (filePath) {
     const relPath = path.relative(ROOT_DIR, filePath);
     const isTemplate = relPath.startsWith('templates' + path.sep) || relPath.startsWith('templates/');
-    if (isTemplate && /\[[^\]\/]+\]/.test(trimmed)) return true;
+    if (isTemplate) return true;
   }
   return false;
 }

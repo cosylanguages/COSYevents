@@ -26,14 +26,13 @@ COSYevents features two main categories of communicative events across English, 
 
 ---
 
-## 🔒 Public vs. Access-Gated Session Model
+## 🔒 Public Library & Participant Magic Link Access Model
 
-To respect participant privacy and host intellectual property without paid auth/BaaS overhead, COSYevents uses a **Public/Gated Split**:
+To respect participant privacy and host intellectual property without forcing participants to create user accounts, COSYevents uses a **Public Library + Magic Link Model**:
 
-- **Public Access (`events/index.html` & Per-Event Pages):** Anyone can view event names, themes, CEFR levels, public blurbs, and schedule times. No paid session materials, prompt decks, recordings, or past-session content are exposed publicly.
-- **Access Control (Unlisted Links):** Paid attendees and facilitators receive a unique unlisted session access link (a hard-to-guess URL string) after registration to access full session materials, recordings, and interactive prompt decks.
-
-*Note on Access Control Trade-off:* This unlisted URL approach relies on obscurity rather than full identity-based authentication. If strict access control is required in the future, a roster-based access check (similar to COSYmanuals) can be implemented.
+- **Public Library & Teaser Shells:** Anyone can browse the event calendar, session catalog, and public teaser pages (`sessions/**/*.html`). Teaser pages contain only static metadata (title, club, CEFR level, duration, topic) and are tagged with `<meta name="robots" content="noindex,nofollow">` and `<meta name="referrer" content="no-referrer">`. No private prompt decks, vocabulary lists, discussion rounds, facilitator notes, or session recordings are committed to the public repository (the `sessions/**/*.json` folder remains strictly empty in git).
+- **Participant Magic Links:** Paid session participants receive a unique single-use or timed magic link containing an access token fragment (`#k=<token>`). Upon opening the link, `shared/js/cosyevents-gate.js` extracts the token, stores it in `sessionStorage`, removes the hash from the URL bar (`history.replaceState`), redeems the token via Supabase RPC (`redeem_session_access_link`), and dynamically renders the full interactive session deck client-side using `shared/js/session-renderer.js`. No participant accounts or passwords are required.
+- **Staff Access:** Facilitators and founders sign in with COSYauth (`shared/js/cosy-auth.js`) on `admin/session-links.html` to generate, manage, and revoke participant magic links or access full facilitator notes via `staff_get_session`.
 
 ---
 

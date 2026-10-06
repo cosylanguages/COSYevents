@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="referrer" content="no-referrer"/>
+<title>Session Links Admin : COSYevents</title>
+<link href="../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../shared/css/sessions.css">
+<style>
+  body { font-family: 'DM Sans', sans-serif; background: #faf8f5; color: #2d2b2a; margin: 0; padding: 0; }
+  .admin-container { max-width: 900px; margin: 2rem auto; padding: 1.5rem; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); border: 1px solid #e8e4df; }
+  .admin-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f0ede8; padding-bottom: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+  .admin-title { font-size: 1.5rem; font-weight: 700; color: #1a1918; margin: 0; }
+  .form-group { margin-bottom: 1.25rem; }
+  label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4rem; color: #4a4744; }
+  select, input, button { font-family: inherit; font-size: 0.95rem; }
+  select, input[type="text"], input[type="datetime-local"] { width: 100%; padding: 0.65rem 0.8rem; border: 1.5px solid #d8d4ce; border-radius: 8px; box-sizing: border-box; background: #fff; }
+  .presets-group { display: flex; gap: 0.5rem; margin-top: 0.4rem; flex-wrap: wrap; }
+  .btn-preset { background: #f0ede8; border: 1px solid #d8d4ce; border-radius: 6px; padding: 0.4rem 0.75rem; cursor: pointer; font-weight: 500; }
+  .btn-preset:hover { background: #e2ded8; }
+  .btn-primary { background: #B84318; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 700; cursor: pointer; transition: background 0.2s; text-decoration: none; display: inline-block; }
+  .btn-primary:hover { background: #9c3612; }
+  .btn-secondary { background: #2d2b2a; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
+  .btn-wa { background: #25D366; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; cursor: pointer; }
+  .btn-revoke { background: #d9381e; color: #fff; border: none; padding: 0.35rem 0.75rem; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.85rem; }
+  .card-result { background: #fdf8f5; border: 1.5px solid #f3d2c6; border-radius: 10px; padding: 1.25rem; margin: 1.5rem 0; }
+  .warning-box { background: #fff3cd; border: 1px solid #ffe8a1; color: #856404; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.88rem; margin-bottom: 1rem; font-weight: 500; }
+  .access-box { max-width: 550px; margin: 4rem auto; padding: 2rem; background: #ffffff; border-radius: 12px; border: 1px solid #e8e4df; box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-align: center; }
+  .access-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem; color: #1a1918; }
+  .access-desc { color: #5a5652; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem; }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid #e8e4df; }
+  th { background: #f8f6f2; font-weight: 700; color: #5a5652; }
+  .status-active { color: #2e7d32; font-weight: 700; }
+  .status-expired { color: #d84315; font-weight: 600; }
+  .status-revoked { color: #c62828; font-weight: 600; }
+</style>
+</head>
+<body>
+<nav id="cosy-nav"></nav>
+
+<!-- Not Authenticated Screen -->
+<div id="unauth-box" class="access-box" style="display: none;">
+  <div class="access-title">🔒 Login Required</div>
+  <div class="access-desc">
+    You must be logged in as a Founder or Teacher to access the Participant Link Management Dashboard.
+  </div>
+  <a id="btn-login-redirect" href="../login.html?next=admin/session-links.html" class="btn-primary">
+    👤 Log in via Email Code
+  </a>
+</div>
+
+<!-- Logged in as Student (Role Escalation Info) Screen -->
+<div id="role-denied-box" class="access-box" style="display: none;">
+  <div class="access-title" style="color: #d9381e;">⚠️ Founder / Teacher Role Required</div>
+  <div class="access-desc">
+    You are signed in as <strong id="user-email-text"></strong> with role <strong id="user-role-text">student</strong>.<br/><br/>
+    This dashboard is reserved for <strong>Founders</strong> and assigned <strong>Teachers</strong>.<br/>
+    To grant founder privileges to your account, run the SQL query from <code>docs/SUPABASE_SETUP.md</code> (Step 6) in the Supabase Dashboard:
+    <div style="background: #f4f1ea; padding: 0.75rem; border-radius: 6px; font-family: monospace; font-size: 0.8rem; margin: 1rem 0; text-align: left; overflow-x: auto;">
+      UPDATE public.profiles SET role = 'founder' WHERE id = (SELECT id FROM auth.users WHERE email = '<span id="sql-email-span">your-email</span>');
+    </div>
+  </div>
+  <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+    <button type="button" class="btn-secondary" onclick="window.CosyAuth.signOut()">🚪 Log out / Switch Account</button>
+    <a href="../index.html" class="btn-preset" style="text-decoration: none; padding: 0.5rem 1rem;">Back to Home</a>
+  </div>
+</div>
+
+<!-- Admin Dashboard Screen -->
+<div id="admin-app" class="admin-container" style="display: none;">
+  <div class="admin-header">
+    <h1 class="admin-title">🔑 Participant Link Generator</h1>
+    <div data-cosy-account></div>
+  </div>
+
+  <div class="form-group">
+    <label for="session-select">Select Session</label>
+    <select id="session-select"><option value="">Loading session catalog...</option></select>
+  </div>
+
+  <div class="form-group">
+    <label for="link-label">Group / Participant Label (Optional)</label>
+    <input type="text" id="link-label" placeholder="e.g. Tuesday Evening Group / Anna K."/>
+  </div>
+
+  <div class="form-group">
+    <label for="expiry-date">Link Expiry Date & Time</label>
+    <input type="datetime-local" id="expiry-date"/>
+    <div class="presets-group">
+      <button type="button" class="btn-preset" onclick="setPresetDays(3)">+3 Days</button>
+      <button type="button" class="btn-preset" onclick="setPresetDays(7)">+7 Days (Default)</button>
+      <button type="button" class="btn-preset" onclick="setPresetDays(14)">+14 Days</button>
+    </div>
+  </div>
+
+  <div style="margin-top: 1.5rem;">
+    <button type="button" id="btn-create" class="btn-primary" onclick="createLink()">Create Magic Link</button>
+  </div>
+
+  <div id="result-box" style="display: none;" class="card-result">
+    <div class="warning-box">
+      🔒 <strong>Security Warning:</strong> This link contains the raw token. It will only be displayed <strong>ONCE</strong> and cannot be recovered after leaving this page!
+    </div>
+    <div style="margin-bottom: 1rem;">
+      <label>Magic Access Link</label>
+      <input type="text" id="magic-link-input" readonly onclick="this.select()"/>
+    </div>
+    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem;">
+      <button type="button" class="btn-secondary" onclick="copyMagicLink()">Copy Link</button>
+      <button type="button" class="btn-wa" onclick="copyWhatsAppMessage('en')">Copy WhatsApp (EN)</button>
+      <button type="button" class="btn-wa" onclick="copyWhatsAppMessage('fr')">Copy WhatsApp (FR)</button>
+      <button type="button" class="btn-wa" onclick="copyWhatsAppMessage('it')">Copy WhatsApp (IT)</button>
+      <button type="button" class="btn-wa" onclick="copyWhatsAppMessage('ru')">Copy WhatsApp (RU)</button>
+      <button type="button" class="btn-wa" onclick="copyWhatsAppMessage('el')">Copy WhatsApp (EL)</button>
+    </div>
+  </div>
+
+  <div style="margin-top: 2.5rem;">
+    <h3 style="margin-bottom: 0.5rem;">Active & Historic Access Links</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Label</th>
+          <th>Valid Until</th>
+          <th>Uses</th>
+          <th>Last Used</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="links-table-body">
+        <tr><td colspan="6" style="text-align: center; color: #777;">Select a session to view links.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="../shared/js/cosy-auth.js"></script>
+<script>
+  var currentSessionId = '';
+  var currentSessionTitle = '';
+  var currentSessionHref = '';
+  var activeCreatedLink = '';
+  var activeExpiryDate = '';
+
+  var WA_MESSAGES = {
+    en: "Here is your access link for {session}: {link} (Valid until {date})",
+    fr: "Voici votre lien d'accès pour {session} : {link} (Valable jusqu'au {date})",
+    it: "Ecco il tuo link di accesso per {session}: {link} (Valido fino al {date})",
+    ru: "Вот ваша ссылка доступа для {session}: {link} (Действительна до {date})",
+    el: "Ορίστε ο σύνδεσμος πρόσβασης για το {session}: {link} (Ισχύει έως {date})"
+  };
+
+  function setPresetDays(days) {
+    var d = new Date();
+    d.setDate(d.getDate() + days);
+    var iso = d.toISOString().slice(0, 16);
+    document.getElementById('expiry-date').value = iso;
+  }
+
+  // Set default preset +7 days
+  setPresetDays(7);
+
+  function sessionIdFromHref(href) {
+    return 'session-' + href.replace(/\.html?$/i, '').replace(/[^a-zA-Z0-9]+/g, '-').replace(/-+/g, '-').replace(/-$/g, '');
+  }
+
+  function initAdmin() {
+    window.CosyAuth.init().then(function (auth) {
+      var session = auth.getSession();
+
+      if (!session) {
+        document.getElementById('unauth-box').style.display = 'block';
+        // Auto redirect to login page with next parameter
+        setTimeout(function () {
+          window.location.href = '../login.html?next=admin/session-links.html';
+        }, 1500);
+        return;
+      }
+
+      var role = auth.role();
+      if (role !== 'founder' && role !== 'teacher') {
+        var userEmail = (session.user && session.user.email) ? session.user.email : 'user';
+        document.getElementById('user-email-text').textContent = userEmail;
+        document.getElementById('sql-email-span').textContent = userEmail;
+        document.getElementById('user-role-text').textContent = role || 'student';
+        document.getElementById('role-denied-box').style.display = 'block';
+        return;
+      }
+
+      document.getElementById('admin-app').style.display = 'block';
+
+      // Load session catalog
+      fetch('../data/sessions.json')
+        .then(function (res) { return res.json(); })
+        .then(function (catalog) {
+          var sel = document.getElementById('session-select');
+          sel.textContent = ''; // clear
+
+          var defaultOpt = document.createElement('option');
+          defaultOpt.value = '';
+          defaultOpt.textContent = '-- Choose a Session --';
+          sel.appendChild(defaultOpt);
+
+          var userLangs = auth.languages();
+
+          catalog.forEach(function (item) {
+            // Filter for teachers by language
+            if (role === 'teacher' && userLangs.length > 0) {
+              if (item.lang && userLangs.indexOf(item.lang) === -1) return;
+            }
+
+            var opt = document.createElement('option');
+            opt.value = item.href;
+            opt.textContent = '[' + (item.club || 'Club') + '] ' + item.title + ' (' + (item.lang || 'EN') + ')';
+            sel.appendChild(opt);
+          });
+
+          sel.addEventListener('change', function () {
+            currentSessionHref = sel.value;
+            if (!currentSessionHref) {
+              currentSessionId = '';
+              renderLinksTable([]);
+              return;
+            }
+            currentSessionId = sessionIdFromHref(currentSessionHref);
+            var selectedItem = catalog.find(function (i) { return i.href === currentSessionHref; });
+            currentSessionTitle = selectedItem ? selectedItem.title : 'Session';
+            loadSessionLinks(currentSessionId);
+          });
+        });
+    });
+  }
+
+  function loadSessionLinks(sid) {
+    var client = window.CosyAuth._state.client;
+    if (!client || !sid) return;
+
+    client.rpc('list_session_access_links', { p_session_id: sid })
+      .then(function (res) {
+        if (res && res.data) {
+          renderLinksTable(res.data);
+        }
+      });
+  }
+
+  function renderLinksTable(links) {
+    var tbody = document.getElementById('links-table-body');
+    tbody.textContent = ''; // clear
+
+    if (!links || links.length === 0) {
+      var tr = document.createElement('tr');
+      var td = document.createElement('td');
+      td.colSpan = 6;
+      td.style.textAlign = 'center';
+      td.style.color = '#777';
+      td.textContent = 'No access links created for this session yet.';
+      tr.appendChild(td);
+      tbody.appendChild(tr);
+      return;
+    }
+
+    links.forEach(function (link) {
+      var tr = document.createElement('tr');
+
+      var tdLabel = document.createElement('td');
+      tdLabel.textContent = link.label || '-';
+
+      var tdUntil = document.createElement('td');
+      tdUntil.textContent = link.valid_until ? new Date(link.valid_until).toLocaleString() : '-';
+
+      var tdUses = document.createElement('td');
+      tdUses.textContent = String(link.use_count || 0);
+
+      var tdLast = document.createElement('td');
+      tdLast.textContent = link.last_used_at ? new Date(link.last_used_at).toLocaleString() : 'Never';
+
+      var tdStatus = document.createElement('td');
+      tdStatus.textContent = link.status || 'active';
+      tdStatus.className = 'status-' + (link.status || 'active');
+
+      var tdAction = document.createElement('td');
+      if (link.status === 'active') {
+        var btnRevoke = document.createElement('button');
+        btnRevoke.className = 'btn-revoke';
+        btnRevoke.textContent = 'Revoke';
+        btnRevoke.addEventListener('click', function () {
+          revokeLink(link.id);
+        });
+        tdAction.appendChild(btnRevoke);
+      } else {
+        tdAction.textContent = '-';
+      }
+
+      tr.appendChild(tdLabel);
+      tr.appendChild(tdUntil);
+      tr.appendChild(tdUses);
+      tr.appendChild(tdLast);
+      tr.appendChild(tdStatus);
+      tr.appendChild(tdAction);
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  function createLink() {
+    if (!currentSessionId) {
+      alert('Please select a session first.');
+      return;
+    }
+
+    var expiryVal = document.getElementById('expiry-date').value;
+    if (!expiryVal) {
+      alert('Please select an expiry date.');
+      return;
+    }
+
+    var validUntilIso = new Date(expiryVal).toISOString();
+    var labelVal = document.getElementById('link-label').value.trim() || null;
+
+    var client = window.CosyAuth._state.client;
+    client.rpc('create_session_access_link', {
+      p_session_id: currentSessionId,
+      p_valid_until: validUntilIso,
+      p_label: labelVal
+    }).then(function (res) {
+      if (res.error) {
+        alert('Error creating link: ' + res.error.message);
+        return;
+      }
+
+      var row = res.data && res.data[0];
+      if (row && row.token) {
+        var origin = window.location.origin;
+        var fullLink = origin + '/COSYevents/' + currentSessionHref + '#k=' + encodeURIComponent(row.token);
+        activeCreatedLink = fullLink;
+        activeExpiryDate = new Date(row.valid_until).toLocaleDateString();
+
+        document.getElementById('magic-link-input').value = fullLink;
+        document.getElementById('result-box').style.display = 'block';
+
+        loadSessionLinks(currentSessionId);
+      }
+    });
+  }
+
+  function revokeLink(linkId) {
+    if (!confirm('Are you sure you want to revoke this access link?')) return;
+    var client = window.CosyAuth._state.client;
+    client.rpc('revoke_session_access_link', { p_link_id: linkId })
+      .then(function () {
+        loadSessionLinks(currentSessionId);
+      });
+  }
+
+  function copyMagicLink() {
+    var inp = document.getElementById('magic-link-input');
+    inp.select();
+    navigator.clipboard.writeText(inp.value).then(function () {
+      alert('Magic link copied to clipboard!');
+    });
+  }
+
+  function copyWhatsAppMessage(lang) {
+    var template = WA_MESSAGES[lang] || WA_MESSAGES.en;
+    var msg = template
+      .replace('{session}', currentSessionTitle)
+      .replace('{link}', activeCreatedLink)
+      .replace('{date}', activeExpiryDate);
+
+    navigator.clipboard.writeText(msg).then(function () {
+      alert('WhatsApp message (' + lang.toUpperCase() + ') copied to clipboard!');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAdmin);
+  } else {
+    initAdmin();
+  }
+</script>
+</body>
+</html>

@@ -873,6 +873,11 @@
     });
   }
 
+  window.initSlideDeck = initSlideDeck;
+  document.addEventListener('cosy:session-rendered', function () {
+    initSlideDeck();
+  });
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       checkEventConversion();
