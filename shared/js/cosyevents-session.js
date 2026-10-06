@@ -64,6 +64,157 @@
     document.head.appendChild(authScript);
   }
 
+  var DICTIONARY = {
+    en: {
+      clubs: 'Clubs',
+      overview: 'Overview',
+      vocabulary: 'Vocabulary',
+      slides_btn: '📺 Slides',
+      slides_title: 'Slide Presentation Mode',
+      scroll_btn: '📜 Scroll',
+      scroll_title: 'Scroll View Mode',
+      prev_btn: '← Previous',
+      next_btn: 'Next →',
+      fullscreen_btn: '⛶ Fullscreen',
+      fullscreen_title: 'Fullscreen Mode',
+      slide_counter_prefix: 'Slide',
+      slide_counter_of: 'of',
+      gated_notes_title: "Facilitator's Notes",
+      gated_rec_title: 'Session Recording',
+      gated_default_title: 'Exclusive Session Content',
+      gated_desc: 'Access to facilitator notes and session recordings is reserved for enrolled students and teachers.',
+      gated_btn: 'Register / Login via COSYlanguages 🔐',
+      privacy_text: 'Privacy &amp; legal notice',
+      ecosystem_note_part: 'Part of the',
+      ecosystem_note_explore: 'Explore',
+      lesson_converted: '🎓 This session became a full COSYplatform lesson &rarr;',
+      lesson_planned: '⏳ This topic is scheduled to become a lesson soon.'
+    },
+    fr: {
+      clubs: 'Clubs',
+      overview: 'Aperçu',
+      vocabulary: 'Vocabulaire',
+      slides_btn: '📺 Diapositives',
+      slides_title: 'Mode présentation par diapositives',
+      scroll_btn: '📜 Défilement',
+      scroll_title: 'Mode vue défilante',
+      prev_btn: '← Précédent',
+      next_btn: 'Suivant →',
+      fullscreen_btn: '⛶ Plein écran',
+      fullscreen_title: 'Mode plein écran',
+      slide_counter_prefix: 'Diapositive',
+      slide_counter_of: 'sur',
+      gated_notes_title: 'Notes de l’animateur',
+      gated_rec_title: 'Enregistrement de la session',
+      gated_default_title: 'Contenu réservé de la session',
+      gated_desc: 'L’accès aux notes de l’animateur et aux enregistrements est réservé aux élèves inscrits et aux enseignants.',
+      gated_btn: 'S’inscrire / Se connecter via COSYlanguages 🔐',
+      privacy_text: 'Politique de confidentialité &amp; mentions légales',
+      ecosystem_note_part: 'Fait partie de l’écosystème',
+      ecosystem_note_explore: 'Explorer',
+      lesson_converted: '🎓 Cette session est devenue une leçon complète COSYplatform &rarr;',
+      lesson_planned: '⏳ Ce sujet sera bientôt transformé en leçon.'
+    },
+    it: {
+      clubs: 'Club',
+      overview: 'Panoramica',
+      vocabulary: 'Vocabolario',
+      slides_btn: '📺 Diapositive',
+      slides_title: 'Modalità presentazione diapositive',
+      scroll_btn: '📜 Scorrimento',
+      scroll_title: 'Modalità vista a scorrimento',
+      prev_btn: '← Precedente',
+      next_btn: 'Successivo →',
+      fullscreen_btn: '⛶ Schermo intero',
+      fullscreen_title: 'Modalità schermo intero',
+      slide_counter_prefix: 'Diapositiva',
+      slide_counter_of: 'di',
+      gated_notes_title: 'Note del facilitatore',
+      gated_rec_title: 'Registrazione della sessione',
+      gated_default_title: 'Contenuto esclusivo della sessione',
+      gated_desc: 'L’accesso alle note del facilitatore e alle registrazioni è riservato agli studenti iscritti e agli insegnanti.',
+      gated_btn: 'Registrati / Accedi via COSYlanguages 🔐',
+      privacy_text: 'Informativa sulla privacy &amp; note legali',
+      ecosystem_note_part: 'Parte dell’ecosistema',
+      ecosystem_note_explore: 'Esplora',
+      lesson_converted: '🎓 Questa sessione è diventata una lezione completa su COSYplatform &rarr;',
+      lesson_planned: '⏳ Questo argomento diventerà presto una lezione.'
+    },
+    ru: {
+      clubs: 'Клубы',
+      overview: 'Обзор',
+      vocabulary: 'Словарь',
+      slides_btn: '📺 Слайды',
+      slides_title: 'Режим презентации слайдов',
+      scroll_btn: '📜 Прокрутка',
+      scroll_title: 'Режим непрерывного просмотра',
+      prev_btn: '← Назад',
+      next_btn: 'Вперед →',
+      fullscreen_btn: '⛶ Полноэкранный режим',
+      fullscreen_title: 'Полноэкранный режим',
+      slide_counter_prefix: 'Слайд',
+      slide_counter_of: 'из',
+      gated_notes_title: 'Заметки ведущего',
+      gated_rec_title: 'Запись сессии',
+      gated_default_title: 'Эксклюзивный контент сессии',
+      gated_desc: 'Доступ к заметкам ведущего и записям сессий ограничен зачисленными студентами и преподавателями.',
+      gated_btn: 'Зарегистрироваться / Войти через COSYlanguages 🔐',
+      privacy_text: 'Политика конфиденциальности и правовая информация',
+      ecosystem_note_part: 'Часть экосистемы',
+      ecosystem_note_explore: 'Исследовать',
+      lesson_converted: '🎓 Эта сессия стала полным уроком на COSYplatform &rarr;',
+      lesson_planned: '⏳ Скоро эта тема станет полноценным уроком.'
+    },
+    el: {
+      clubs: 'Λέσχες',
+      overview: 'Επισκόπηση',
+      vocabulary: 'Λεξιλόγιο',
+      slides_btn: '📺 Διαφάνειες',
+      slides_title: 'Λειτουργία παρουσίασης διαφανειών',
+      scroll_btn: '📜 Κύλιση',
+      scroll_title: 'Λειτουργία προβολής κύλισης',
+      prev_btn: '← Προηγούμενο',
+      next_btn: 'Επόμενο →',
+      fullscreen_btn: '⛶ Πλήρης οθόνη',
+      fullscreen_title: 'Λειτουργία πλήρους οθόνης',
+      slide_counter_prefix: 'Διαφάνεια',
+      slide_counter_of: 'από',
+      gated_notes_title: 'Σημειώσεις συντονιστή',
+      gated_rec_title: 'Βιντεοσκόπηση συνεδρίας',
+      gated_default_title: 'Αποκλειστικό περιεχόμενο συνεδρίας',
+      gated_desc: 'Η πρόσβαση στις σημειώσεις συντονιστή και στις εγγραφές προορίζεται αποκλειστικά για εγγεγραμμένους μαθητές και καθηγητές.',
+      gated_btn: 'Εγγραφή / Σύνδεση μέσω COSYlanguages 🔐',
+      privacy_text: 'Πολιτική απορρήτου &amp; νομική σημείωση',
+      ecosystem_note_part: 'Μέρος του οικοσυστήματος',
+      ecosystem_note_explore: 'Εξερευνήστε',
+      lesson_converted: '🎓 Αυτή η συνεδρία έγινε πλήρες μάθημα στο COSYplatform &rarr;',
+      lesson_planned: '⏳ Αυτό το θέμα προγραμματίζεται να γίνει μάθημα σύντομα.'
+    }
+  };
+
+  function getPageLang() {
+    var htmlLang = document.documentElement.getAttribute('lang') || 'en';
+    htmlLang = htmlLang.toLowerCase().substring(0, 2);
+    if (['en', 'fr', 'it', 'ru', 'el'].indexOf(htmlLang) !== -1) {
+      return htmlLang;
+    }
+    var currentPath = window.location.pathname;
+    if (window.CosyLang && window.CosyLang.detectPageLang) {
+      return window.CosyLang.detectPageLang(currentPath);
+    }
+    if (currentPath.indexOf('/fr/') !== -1) return 'fr';
+    if (currentPath.indexOf('/ru/') !== -1) return 'ru';
+    if (currentPath.indexOf('/it/') !== -1) return 'it';
+    if (currentPath.indexOf('/el/') !== -1) return 'el';
+    return 'en';
+  }
+
+  function t(key) {
+    var lang = getPageLang();
+    var dict = DICTIONARY[lang] || DICTIONARY.en;
+    return dict[key] || DICTIONARY.en[key] || '';
+  }
+
   var clubs = [
     ['Mind Matters', 'mind-matters.html'],
     ['The Greatest Quotes', 'the-greatest-quotes.html'],
@@ -80,30 +231,10 @@
     ['Intermediate Speaking Club', 'intermediate-speaking-club.html']
   ];
 
-  function getClubsButtonLabel(pageLang) {
-    if (pageLang === 'ru') return 'Клубы';
-    if (pageLang === 'el') return 'Λέσχες';
-    if (pageLang === 'it' || pageLang === 'fr') return 'Club';
-    return 'Clubs';
-  }
-
   var nav = document.getElementById('cosy-nav');
   if (nav) {
-    var currentPath = location.pathname;
-    var pageLang = 'en';
-    if (window.CosyLang && window.CosyLang.detectPageLang) {
-      pageLang = window.CosyLang.detectPageLang(currentPath);
-    } else if (currentPath.indexOf('/fr/') !== -1) {
-      pageLang = 'fr';
-    } else if (currentPath.indexOf('/ru/') !== -1) {
-      pageLang = 'ru';
-    } else if (currentPath.indexOf('/it/') !== -1) {
-      pageLang = 'it';
-    } else if (currentPath.indexOf('/el/') !== -1) {
-      pageLang = 'el';
-    }
-
-    var clubsLabel = getClubsButtonLabel(pageLang);
+    var pageLang = getPageLang();
+    var clubsLabel = t('clubs');
 
     var html =
       '<header class="ce-session-nav">' +
@@ -225,9 +356,9 @@
 
     if (status === 'converted') {
       var linkUrl = eventData.convertedLessonUrl || '#';
-      textSpan.innerHTML = '🎓 This session became a full COSYplatform lesson &rarr; <a href="' + linkUrl + '" target="_blank" rel="noopener" style="color: var(--cosy-color-amber-dark, #7d4d03); text-decoration: underline; font-weight: 700;">' + linkUrl + '</a>';
+      textSpan.innerHTML = t('lesson_converted') + ' <a href="' + linkUrl + '" target="_blank" rel="noopener" style="color: var(--cosy-color-amber-dark, #7d4d03); text-decoration: underline; font-weight: 700;">' + linkUrl + '</a>';
     } else if (status === 'planned') {
-      textSpan.innerHTML = '⏳ This topic is scheduled to become a lesson soon.';
+      textSpan.innerHTML = t('lesson_planned');
     }
 
     banner.appendChild(textSpan);
@@ -286,7 +417,7 @@
     if (explicitSections.length > 1) {
       explicitSections.forEach(function (el, idx) {
         var h = el.querySelector('h1, h2, h3, h4');
-        var title = h ? h.textContent.trim() : ('Slide ' + (idx + 1));
+        var title = h ? h.textContent.trim() : (t('slide_counter_prefix') + ' ' + (idx + 1));
         slides.push({
           element: el,
           title: title
@@ -324,14 +455,14 @@
           });
           slides.push({
             element: overviewWrapper,
-            title: 'Overview'
+            title: t('overview')
           });
         }
       }
 
       // Group 1: Vocabulary
       if (vocabSection) {
-        var vocabTitle = 'Vocabulary';
+        var vocabTitle = t('vocabulary');
         var parentSection = vocabSection.closest('section');
         var vocabSlideElem = parentSection || vocabSection;
         slides.push({
@@ -384,18 +515,18 @@
           '<div class="ce-slide-tabs">' + tabPillsHtml + '</div>' +
         '</div>' +
         '<div class="ce-slide-mode-toggle">' +
-          '<button type="button" class="ce-view-btn ce-btn-slides active" title="Slide Presentation Mode">📺 Slides</button>' +
-          '<button type="button" class="ce-view-btn ce-btn-scroll" title="Scroll View Mode">📜 Scroll</button>' +
+          '<button type="button" class="ce-view-btn ce-btn-slides active" title="' + t('slides_title') + '">' + t('slides_btn') + '</button>' +
+          '<button type="button" class="ce-view-btn ce-btn-scroll" title="' + t('scroll_title') + '">' + t('scroll_btn') + '</button>' +
         '</div>' +
       '</div>' +
       '<div class="ce-slide-progress-track">' +
         '<div class="ce-slide-progress-fill" style="width: ' + Math.round(1 / slides.length * 100) + '%;"></div>' +
       '</div>' +
       '<div class="ce-slide-deck-footer">' +
-        '<button type="button" class="ce-slide-nav-btn ce-prev-btn" disabled>← Previous</button>' +
-        '<span class="ce-slide-counter">Slide <strong class="ce-curr-num">1</strong> of ' + slides.length + '</span>' +
-        '<button type="button" class="ce-slide-nav-btn ce-next-btn">Next →</button>' +
-        '<button type="button" class="ce-slide-fs-btn" title="Fullscreen Mode">⛶ Fullscreen</button>' +
+        '<button type="button" class="ce-slide-nav-btn ce-prev-btn" disabled>' + t('prev_btn') + '</button>' +
+        '<span class="ce-slide-counter">' + t('slide_counter_prefix') + ' <strong class="ce-curr-num">1</strong> ' + t('slide_counter_of') + ' ' + slides.length + '</span>' +
+        '<button type="button" class="ce-slide-nav-btn ce-next-btn">' + t('next_btn') + '</button>' +
+        '<button type="button" class="ce-slide-fs-btn" title="' + t('fullscreen_title') + '">' + t('fullscreen_btn') + '</button>' +
       '</div>';
 
     // Insert controls above the container (or right below hero)
@@ -547,15 +678,14 @@
     if (!document.querySelector('.cosy-gated-ecosystem-note')) {
       var note = document.createElement('div');
       note.className = 'cosy-gated-ecosystem-note';
-      note.innerHTML = 'Part of the <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages</a> ecosystem &bull; Explore <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a> &bull; <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>';
+      note.innerHTML = t('ecosystem_note_part') + ' <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages</a> ecosystem &bull; ' + t('ecosystem_note_explore') + ' <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a> &bull; <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>';
       footer.appendChild(note);
     }
 
     if (!document.querySelector('.ce-privacy-footer-link')) {
-      var currentPath = window.location.pathname;
-      var pageLang = (window.CosyLang && window.CosyLang.detectPageLang) ? window.CosyLang.detectPageLang(currentPath) : (currentPath.indexOf('/fr/') !== -1 ? 'fr' : 'en');
+      var pageLang = getPageLang();
       var privacyUrl = (pageLang === 'fr') ? (root + 'fr/privacy.html') : (root + 'privacy.html');
-      var privacyText = (pageLang === 'fr') ? 'Politique de confidentialité &amp; mentions légales' : 'Privacy &amp; legal notice';
+      var privacyText = t('privacy_text');
 
       var linkContainer = document.createElement('div');
       linkContainer.className = 'ce-privacy-footer-link';
@@ -578,8 +708,13 @@
      SUPABASE AUTH-BASED SESSION CONTENT GATING
      Gates facilitator-notes and recording-url based on public.session_content & RLS
      ────────────────────────────────────────────────────────────── */
-  var SUPABASE_URL = 'https://xyxyxyxyxyxyxy.supabase.co'; // Placeholder Supabase Project URL
-  var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsYWNlaG9sZGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2MDA0MDAwMDAsImV4cCI6MTkyMzc2MDAwMH0.placeholderKey'; // Placeholder Anon Key
+  function loadSupabaseConfig(callback) {
+    var configUrl = root + 'shared/config/supabase.json';
+    fetch(configUrl)
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (cfg) { callback(cfg || { enabled: false }); })
+      .catch(function () { callback({ enabled: false }); });
+  }
 
   function loadSupabaseSdk(callback) {
     if (window.supabase) {
@@ -650,9 +785,9 @@
     container.classList.add('ce-gated-visible');
     container.innerHTML =
       '<div class="ce-gated-prompt">' +
-        '<h4>🔒 ' + (title || 'Exclusive Session Content') + '</h4>' +
-        '<p>Access to facilitator notes and session recordings is reserved for enrolled students and teachers.</p>' +
-        '<a class="ce-gated-btn" href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">Register / Login via COSYlanguages 🔐</a>' +
+        '<h4>🔒 ' + (title || t('gated_default_title')) + '</h4>' +
+        '<p>' + t('gated_desc') + '</p>' +
+        '<a class="ce-gated-btn" href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">' + t('gated_btn') + '</a>' +
       '</div>';
   }
 
@@ -679,53 +814,60 @@
     // If neither gated section exists on the page, do nothing
     if (!notesElem && !recElem) return;
 
-    // Hide gated sections by default
-    if (notesElem) notesElem.style.display = 'none';
-    if (recElem) recElem.style.display = 'none';
-
-    getSessionId(function (sessionId) {
-      if (!sessionId) {
-        if (notesElem) renderUnauthorizedPrompt(notesElem, "Facilitator's Notes");
-        if (recElem) renderUnauthorizedPrompt(recElem, "Session Recording");
+    loadSupabaseConfig(function (config) {
+      if (!config || !config.enabled || !config.url || !config.anonKey) {
+        // When enabled is false, do not load SDK and do not render sign-in prompts for gated blocks
         return;
       }
 
-      loadSupabaseSdk(function (supabaseLib) {
-        var supabaseClient = supabaseLib.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        supabaseClient.auth.getSession().then(function (sessionRes) {
-          var user = sessionRes && sessionRes.data && sessionRes.data.session ? sessionRes.data.session.user : null;
+      // Hide gated sections by default before loading content
+      if (notesElem) notesElem.style.display = 'none';
+      if (recElem) recElem.style.display = 'none';
 
-          supabaseClient
-            .from('session_content')
-            .select('full_notes, recording_url')
-            .eq('session_id', sessionId)
-            .maybeSingle()
-            .then(function (res) {
-              var data = res.data;
-              var error = res.error;
+      getSessionId(function (sessionId) {
+        if (!sessionId) {
+          if (notesElem) renderUnauthorizedPrompt(notesElem, t('gated_notes_title'));
+          if (recElem) renderUnauthorizedPrompt(recElem, t('gated_rec_title'));
+          return;
+        }
 
-              if (error || !data) {
-                if (notesElem) renderUnauthorizedPrompt(notesElem, "Facilitator's Notes");
-                if (recElem) renderUnauthorizedPrompt(recElem, "Session Recording");
-                return;
-              }
+        loadSupabaseSdk(function (supabaseLib) {
+          var supabaseClient = supabaseLib.createClient(config.url, config.anonKey);
+          supabaseClient.auth.getSession().then(function (sessionRes) {
+            var user = sessionRes && sessionRes.data && sessionRes.data.session ? sessionRes.data.session.user : null;
 
-              if (notesElem) {
-                if (data.full_notes) {
-                  renderGatedContent(notesElem, data.full_notes, false);
-                } else {
-                  renderUnauthorizedPrompt(notesElem, "Facilitator's Notes");
+            supabaseClient
+              .from('session_content')
+              .select('full_notes, recording_url')
+              .eq('session_id', sessionId)
+              .maybeSingle()
+              .then(function (res) {
+                var data = res.data;
+                var error = res.error;
+
+                if (error || !data) {
+                  if (notesElem) renderUnauthorizedPrompt(notesElem, t('gated_notes_title'));
+                  if (recElem) renderUnauthorizedPrompt(recElem, t('gated_rec_title'));
+                  return;
                 }
-              }
 
-              if (recElem) {
-                if (data.recording_url) {
-                  renderGatedContent(recElem, data.recording_url, true);
-                } else {
-                  renderUnauthorizedPrompt(recElem, "Session Recording");
+                if (notesElem) {
+                  if (data.full_notes) {
+                    renderGatedContent(notesElem, data.full_notes, false);
+                  } else {
+                    renderUnauthorizedPrompt(notesElem, t('gated_notes_title'));
+                  }
                 }
-              }
-            });
+
+                if (recElem) {
+                  if (data.recording_url) {
+                    renderGatedContent(recElem, data.recording_url, true);
+                  } else {
+                    renderUnauthorizedPrompt(recElem, t('gated_rec_title'));
+                  }
+                }
+              });
+          });
         });
       });
     });

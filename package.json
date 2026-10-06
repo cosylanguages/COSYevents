@@ -6,6 +6,8 @@
   "scripts": {
     "check-structure": "node scripts/check_page_structure.js",
     "check-links": "node scripts/check_links.js",
+    "check-ecosystem-links": "node scripts/check_ecosystem_links.js",
+    "check-names": "node scripts/check-names.js",
     "build-i18n": "node scripts/build_localized_manifest.js",
     "check-i18n": "node scripts/build_localized_manifest.js --check",
     "test-lang": "node scripts/test_lang.js",
