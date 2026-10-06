@@ -100,14 +100,22 @@ UPDATE public.profiles
  );
 ```
 
-### 7. API Keys Configuration & Security Policies
+### 7. API Keys Configuration, Security Policies & Key Rotation
 - Navigate to **Project Settings** -> **API**.
 - Copy:
   - **Project URL**: (e.g., `https://xxxx.supabase.co`)
-  - **anon public key**: Safe to embed in frontend static scripts.
+  - **anon public key**: Safe to embed in frontend static scripts (`shared/config/supabase.json`).
 - **CRITICAL SECURITY REQUIREMENT**:
   - **NEVER** use or commit the `service_role` key in frontend client-side code or public git repositories.
-  - The `service_role` key bypasses Row Level Security (RLS) entirely and must only be used in secure backend scripts or server environment variables.
+  - The `service_role` key bypasses Row Level Security (RLS) entirely and must only reside in local gitignored `.env` files (`SUPABASE_SERVICE_ROLE_KEY`).
+
+#### Service Key Rotation Procedure
+If a service-role or anon key is ever exposed or needs scheduled rotation:
+1. Go to **Supabase Dashboard** -> Project Settings -> API.
+2. Click **Roll Key** for the target key.
+3. Update `SUPABASE_SERVICE_ROLE_KEY` in local gitignored `.env`.
+4. Update `anonKey` in `shared/config/supabase.json`.
+5. Run `npm run verify:anon` to confirm anonymous REST API security on private tables.
 
 ### 8. Enable Two-Factor Authentication (2FA)
 - Go to your Supabase Account Settings -> **Security**.

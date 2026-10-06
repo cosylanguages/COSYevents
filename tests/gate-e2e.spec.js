@@ -73,7 +73,6 @@ test.describe('E2E Gated Flow Mobile (360px)', () => {
       <!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta name="cosy-gated" content="true">
         <meta name="session-id" content="s-mind-matters-anticipatory-grief">
         <link rel="stylesheet" href="http://localhost:${PORT}/shared/css/sessions.css">
       </head>
@@ -107,7 +106,6 @@ test.describe('E2E Gated Flow Mobile (360px)', () => {
       <!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta name="cosy-gated" content="true">
         <meta name="session-id" content="s-test">
       </head>
       <body>
@@ -132,7 +130,6 @@ test.describe('E2E Gated Flow Mobile (360px)', () => {
       <!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta name="cosy-gated" content="true">
         <meta name="session-id" content="s-test">
       </head>
       <body>
@@ -156,7 +153,6 @@ test.describe('E2E Gated Flow Mobile (360px)', () => {
       <!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta name="cosy-gated" content="true">
         <meta name="session-id" content="s-test">
       </head>
       <body>
@@ -190,7 +186,6 @@ test.describe('E2E Gated Flow Desktop (1280px)', () => {
       <!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta name="cosy-gated" content="true">
         <meta name="session-id" content="s-mind-matters-anticipatory-grief">
         <link rel="stylesheet" href="http://localhost:${PORT}/shared/css/sessions.css">
       </head>
@@ -224,7 +219,6 @@ test.describe('E2E Gated Flow Desktop (1280px)', () => {
       <!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta name="cosy-gated" content="true">
         <meta name="session-id" content="s-test">
       </head>
       <body>
@@ -249,7 +243,6 @@ test.describe('E2E Gated Flow Desktop (1280px)', () => {
       <!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta name="cosy-gated" content="true">
         <meta name="session-id" content="s-test">
       </head>
       <body>
@@ -273,7 +266,6 @@ test.describe('E2E Gated Flow Desktop (1280px)', () => {
       <!DOCTYPE html>
       <html lang="en">
       <head>
-        <meta name="cosy-gated" content="true">
         <meta name="session-id" content="s-test">
       </head>
       <body>

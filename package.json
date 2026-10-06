@@ -7,6 +7,7 @@
     "check-structure": "node scripts/check_page_structure.js",
     "check-links": "node scripts/check_links.js",
     "check:gated": "node scripts/check-gated-pages.js",
+    "session:new": "node scripts/session_new.js",
     "build-i18n": "node scripts/build_localized_manifest.js",
     "check-i18n": "node scripts/build_localized_manifest.js --check",
     "test-lang": "node scripts/test_lang.js",
