@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="referrer" content="no-referrer"/>
+<meta name="cosy-gated" content="true"/>
+<meta name="session-id" content="{{SESSION_ID}}"/>
+<title>{{PAGE_TITLE}}</title>
+<link href="../../shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../shared/css/sessions.css">
+<link rel="stylesheet" href="{{CLUB_CSS}}">
+</head>
+<body class="{{THEME_CLASS}}">
+<nav id="cosy-nav"></nav>
+<header class="session-hero"{{HERO_STYLE}}>
+<div class="club-tag">{{CLUB_TAG}}</div>
+<div class="session-decorator-icon">{{DECORATOR_ICON}}</div>
+<h1>{{TITLE}}</h1>
+<p class="session-date">{{DATE}}</p>
+</header>
+<main id="session-private" class="content-container">
+<nav class="cosy-breadcrumbs">
+<a href="../../index.html">Home</a> <span class="sep">/</span>
+<a href="../../">Events</a> <span class="sep">/</span>
+<a href="{{CLUB_HREF}}">{{CLUB_TAG}}</a> <span class="sep">/</span>
+<span class="current">{{BREADCRUMB_CURRENT}}</span>
+</nav>
+<a class="back-link" href="{{CLUB_HREF}}">← Back to Club</a>
+<div class="session-meta-grid">
+<div class="meta-item"><h4>Duration</h4><p>{{DURATION}}</p></div>
+<div class="meta-item"><h4>Languages</h4><p>{{LANGUAGES}}</p></div>
+<div class="meta-item"><h4>Level</h4><p>{{LEVEL}}</p></div>
+{{META_TOPIC_HTML}}
+</div>
+<div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+<p>{{SUMMARY}}</p>
+</div>
+<noscript>
+<div style="padding:1.5rem; background:#FFF3CD; border:1px solid #FFEBAA; border-radius:8px; color:#856404; text-align:center;">
+JavaScript is required to access private session content. Please enable JavaScript or contact your host on WhatsApp.
+</div>
+</noscript>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../../shared/images/logo.png"/>
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-translate-key="footer_h5_contact">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+</footer>
+<script src="../../shared/js/session-renderer.js"></script>
+<script src="../../shared/js/cosyevents-gate.js"></script>
+<script src="../../shared/js/cosyevents-session.js"></script>
+</body>
+</html>
