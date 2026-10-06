@@ -322,6 +322,23 @@
   min-width: 220px;
 }
 
+@media (max-width: 600px) {
+  .calc-card {
+    padding: 1.25rem 1rem;
+  }
+  .calc-result-box {
+    padding: 1.25rem 1rem;
+  }
+  .calc-result-left {
+    min-width: 0;
+    width: 100%;
+  }
+  .calc-result-right {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
 .calc-btn-wa {
   background: #25D366;
   color: #ffffff;

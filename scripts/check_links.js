@@ -71,8 +71,9 @@ function checkLinks() {
     const content = fs.readFileSync(filePath, 'utf8');
     const attrEntries = extractTagAttributes(content);
 
-    for (const { attr, val } of attrEntries) {
+    for (const { tag, attr, val } of attrEntries) {
       if (shouldIgnore(val, filePath)) continue;
+      if (tag === 'base') continue;
 
       // Strip query and hash
       let cleanUrl = val.split('?')[0].split('#')[0];
