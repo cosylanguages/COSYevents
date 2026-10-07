@@ -73,7 +73,7 @@ Create a JSON file under `events/<event-slug>/sessions/<session-slug>.json` adhe
   "language": "English",
   "level": "A2",
   "date": "2025-05-10",
-  "host": "James York",
+  "host": "COSY Facilitator",
   "summary": "Practice talking about morning routines using present tense.",
   "activities": [
     {

@@ -6,7 +6,9 @@
   "scripts": {
     "validate": "node scripts/validate-events.js",
     "build-public": "node scripts/build-public.js",
+    "publish": "node scripts/publish-events.js",
     "test": "node scripts/test-no-leak.js",
+    "test:rls": "node scripts/test-rls-rules.js",
     "check-structure": "node scripts/check_page_structure.js",
     "check-links": "node scripts/check_links.js",
     "check:gated": "node scripts/check-gated-pages.js",

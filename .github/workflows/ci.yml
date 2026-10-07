@@ -22,8 +22,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check forbidden names
+        run: node scripts/check-names.js
+
       - name: Validate events and sessions schema
         run: npm run validate
 
       - name: Build public data and run leak prevention tests
         run: npm run test
+
+      - name: Run RLS policy tests
+        run: npm run test:rls
