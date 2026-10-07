@@ -31,13 +31,13 @@
     <div class="meta-item"><h4>Resources & Media</h4><p>
       <a href="#" target="_blank" style="color:var(--teal); margin-right: 12px;">Original Research Article 📖</a>
       <a href="#" target="_blank" style="color:var(--teal); margin-right: 12px;">Summary & Podcast Script 📜</a>
-      <a href="#" target="_blank" style="color:var(--teal);">Podcast Audio / Video 🎙️</a>
+      <a href="#" target="_blank" style="color:var(--teal);">Podcast Audio / Video (Alternative Access) 🎙️</a>
     </p></div>
   </div>
 
   <div class="science-notice-box" style="margin-top: 1rem; margin-bottom: 1.5rem; padding: 1rem 1.25rem; background: #E1F5EE; border-left: 4px solid #0F6E56; border-radius: 6px; font-size: 0.95rem; color: #073b2d;">
     <strong style="display:block; margin-bottom: 0.25rem;">🔬 Mandatory Preparation Step:</strong>
-    Reading the research article or summary script is an obligatory step before joining the session. The discussion in Round 1 directly references the research, summary script, and podcast.
+    Reading or listening to the research source is an obligatory step before joining the session. The original research article, our written summary script, and the podcast audio represent the exact same core source material — the audio is provided for participants who prefer listening or cannot access the original text.
   </div>
 
   <!-- CROSS-CLUB CONNECTION (Optional): Uncomment and customize if this session is related to another club session -->
@@ -157,9 +157,15 @@
     </div>
   </section>
 
-  <!-- DISCUSSION STRUCTURE (6-PART CANONICAL FLOW) -->
-  <section id="structure" style="margin-top: 2rem;">
-    <h2 class="section-title">🎙️ Discussion Structure</h2>
+  <!-- DISCUSSION STRUCTURE (GATED FOR PAID/AUTHENTICATED MEMBERS IN FREE VERSION) -->
+  <section id="structure" class="ce-gated-section" style="margin-top: 2rem;">
+    <h2 class="section-title">🎙️ Discussion Structure (Exclusive Session Content)</h2>
+
+    <div class="vim-instruction">
+      <strong>Developer Topic Uniqueness Guidelines:</strong><br>
+      While this template provides generic placeholder structures for authoring guidance, <strong>each and every session is unique</strong>. All warm-ups, Round 1 analysis questions, intermediate grammar/synthesis tasks, Round 2 agree/disagree statements, and wrap-up reflections MUST specifically deal with and focus on the distinct research topic of that individual session.
+    </div>
+
     <div class="rounds-container">
 
       <!-- 1. WARM-UP -->
@@ -168,9 +174,9 @@
           <span>🟠 Warm-up</span><span class="round-toggle" tabindex="0" role="button">▲</span>
         </div>
         <div class="round-body" style="display:block;">
-          <div class="vim-instruction">Short introduction to the research topic and initial engagement questions.</div>
+          <div class="vim-instruction">Short introduction to the specific research topic and initial engagement questions.</div>
           <ul class="round-questions">
-            <li>Have you read or listened to the summary podcast for today's article?</li>
+            <li>Have you read the source article or listened to the podcast summary for today's research?</li>
             <li>What is your initial reaction to the research topic?</li>
           </ul>
         </div>
@@ -185,7 +191,7 @@
           <div class="round-type-badge">Article & Podcast Analysis</div>
           <div class="vim-instruction">
             <strong>Round 1 Structure Rules:</strong><br>
-            Focuses on the theoretical core of the source article, our written summary script, and the podcast.<br>
+            Focuses on the theoretical core of the source article, summary script, and podcast audio.<br>
             Each item MUST include a theoretical analysis question paired with a personal application question (<code>.round-item-main</code> + <code>.round-item-personal</code>).
           </div>
           <!-- 10 round items -->

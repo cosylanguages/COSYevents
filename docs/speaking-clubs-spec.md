@@ -9,8 +9,8 @@
   4. **Round 2:** Advanced discussion, debates, or future-focused statements.
   5. **Teacher's Note (Linguistic Corrections):** Review of linguistic mistakes made during the session.
 - **Role-Based Reality:**
-  - **Free Visitors:** See the club list, description, source media links, and free essential source-extracted vocabulary (10 units).
-  - **Students / Active Members:** See schedules, free source vocabulary, paid/gated expanded discussion vocabulary, and full past session history.
+  - **Free Visitors:** See the club list, description, source media links, and free essential source-extracted vocabulary (10 units). Everything after the free vocabulary section (paid vocabulary & discussion structure) is gated in the free version.
+  - **Students / Active Members:** See schedules, free source vocabulary, paid/gated expanded discussion vocabulary, full discussion rounds, and full past session history.
   - **Teachers:** See everything students see + preparation topics + active mistake notes area.
 - **Interactivity:** Toggles for Vocabulary, Rounds, and Mistake Notes.
 
@@ -31,10 +31,12 @@
   - Intermediate (`B1`, `B1+`)
   - Advanced (`C1`, `C1+`)
 - **Mandatory Step:** Reading the research article or summary script before the session is an **obligatory requirement**.
-- **Media Triad:** Each session integrates 3 reference media assets:
+- **Media Triad & Alternative Access:** Each session integrates 3 reference media assets:
   1. Original Research Article 📖
   2. Summary & Podcast Script (written in our words, serving as the script for the podcast) 📜
-  3. Podcast Audio / Video 🎙️
+  3. Podcast Audio / Video (Alternative Access) 🎙️
+  *Note:* The original research article, written summary script, and podcast audio represent the exact same core source material. The audio version is provided for participants who prefer listening or are unable to access the original article text.
+- **Session Uniqueness Rule:** While templates provide generic guidance, **each session is unique**. All warm-up questions, Round 1 analysis, intermediate tasks, Round 2 projections, and wrap-up activities MUST specifically address the unique research topic of that session.
 - **Round Requirements (Canonical 6-Part Flow):**
   1. **🟠 Warm-up:** Introduction to the research topic, initial engagement, and source material check.
   2. **🔵 Round 1 (Theoretical Research Analysis & Article Focus):** 10 theoretical items focusing on the article, summary script, and podcast. Every item MUST feature a core science/theoretical question paired with a personal application question (`.round-item-main` + `.round-item-personal`).
