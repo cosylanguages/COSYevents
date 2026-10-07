@@ -75,7 +75,10 @@
 <div id="admin-app" class="admin-container" style="display: none;">
   <div class="admin-header">
     <h1 class="admin-title">🔑 Participant Link Generator</h1>
-    <div data-cosy-account></div>
+    <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+      <button type="button" id="btn-admin-signout-global" class="btn-secondary" style="background: #a33117; color: #fff; padding: 0.4rem 0.8rem; font-size: 0.85rem; border: none; border-radius: 6px; cursor: pointer;" onclick="signOutGlobalAdmin()">🌐 Sign out on all devices</button>
+      <div data-cosy-account></div>
+    </div>
   </div>
 
   <div class="form-group">
@@ -376,6 +379,14 @@
     navigator.clipboard.writeText(msg).then(function () {
       alert('WhatsApp message (' + lang.toUpperCase() + ') copied to clipboard!');
     });
+  }
+
+  function signOutGlobalAdmin() {
+    if (window.CosyAuth && window.CosyAuth.signOut) {
+      window.CosyAuth.signOut({ scope: 'global' }).then(function () {
+        window.location.href = '../login.html';
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
