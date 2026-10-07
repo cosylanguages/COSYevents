@@ -1,0 +1,39 @@
+{
+  "slug": "daily-routines-and-habits",
+  "event": "english-a2-foundations",
+  "title": "Daily Routines and Habits",
+  "theme": "Everyday Life",
+  "language": "English",
+  "level": "A2",
+  "date": "2025-05-10",
+  "host": "COSY Facilitator",
+  "summary": "Practice talking about your morning and evening routines using simple present tense and frequency adverbs.",
+  "activities": [
+    {
+      "type": "icebreaker",
+      "title": "Morning Routine Check-in",
+      "instructions": "Pair up and describe three things you do every morning before 9 AM.",
+      "content": "Secret prompt: Discuss how coffee or tea changes your mood in the morning."
+    },
+    {
+      "type": "roleplay",
+      "title": "Scheduling a Weekend Activity",
+      "instructions": "In pairs, plan a Saturday schedule that includes brunch, exercise, and reading.",
+      "content": "Gated scenario instructions for facilitators: Ensure students use 'always', 'sometimes', and 'never'."
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "commute",
+      "translation": "trajet quotidien",
+      "example": "My daily commute takes thirty minutes by bus.",
+      "level": "A2"
+    },
+    {
+      "word": "routine",
+      "translation": "routine",
+      "example": "Having a healthy morning routine helps me start the day well.",
+      "level": "A2"
+    }
+  ]
+}

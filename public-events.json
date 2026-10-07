@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "english-a2-foundations",
+    "title": "English A2 Foundations",
+    "description": "Interactive foundation event focusing on practical everyday English conversation and essential vocabulary for elementary learners.",
+    "languages": [
+      "English"
+    ],
+    "status": "current",
+    "sessions": [
+      {
+        "title": "Daily Routines and Habits",
+        "theme": "Everyday Life",
+        "date": "2025-05-10",
+        "language": "English"
+      },
+      {
+        "title": "Ordering Food and Dining Out",
+        "theme": "Food & Socializing",
+        "date": "2025-05-17",
+        "language": "English"
+      }
+    ]
+  }
+]
