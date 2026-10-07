@@ -30,7 +30,7 @@
 <div class="session-meta-grid">
 <div class="meta-item"><h4>Duration</h4><p>60 minutes</p></div>
 <div class="meta-item"><h4>Languages</h4><p>🇬🇧 English</p></div>
-<div class="meta-item"><h4>Level</h4><p>Advanced (C1)</p></div>
+<div class="meta-item"><h4>Level</h4><p>Advanced (C1, C1+)</p></div>
 <div class="meta-item"><h4>Topic</h4><p>Media Studies / Creative Economy</p></div><div class="meta-item"><h4>Resources</h4><p><a href="https://youtu.be/-9y7OGNmqQw?is=eWcoEDp2xbB6-9-D" target="_blank">Watch Video Source 🎥</a></p></div>
 </div>
 <div class="science-journal-box">
@@ -65,7 +65,11 @@
 </details>
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">Democratization</div>
 <div class="vocab-def">the action of making something accessible to everyone.</div>
 <div class="vocab-example">The digitization of music recording software led to the democratization of music production.</div>
@@ -117,8 +121,16 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Craftsmanship', definition:'high-quality manual or artistic skill.', example:'Filters destroy genuine craftsmanship.'}, this)">Add to Dictionary</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
 </section>
-<section id="structure">
+<section id="structure" class="ce-gated-section">
 <h2 class="section-title">🎙️ Discussion Structure</h2>
 <div class="rounds-container">
 <div class="round-block warm-up open" id="s-warm">
@@ -182,7 +194,7 @@ Do you believe that the more connected humanity becomes, the more creative we ar
 </div>
 </div>
 <div class="round-block round-1 open" id="s-r1">
-<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;"><span>🔵 Round 1: Empirical Evidence Evaluation</span><span class="round-toggle">▲</span></div>
+<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;"><span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span></div>
 <div class="round-body" style="display:block;">
 <div class="round-type-badge">Evidence Evaluation</div>
 <div class="round-item"><div class="round-item-main">According to the video logs, how does the <strong>democratization</strong> of specialized software modify our collective creative output?</div>
@@ -252,7 +264,7 @@ Complete the following headlines based on future creative developments:
 </ul>
 </div>
 <div class="round-block round-2 open" id="s-r2">
-<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;"><span>🟢 Round 2: Future Projections</span><span class="round-toggle">▲</span></div>
+<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;"><span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span></div>
 <div class="round-body" style="display:block;">
 <div class="round-type-badge">Predictions</div>
 <div class="round-item"><div class="round-item-main">If future research continues to track decentralized creative outputs, the complete <strong>democratization</strong> of art will eventually lead to the disappearance of highly paid professional artists.</div>
@@ -297,6 +309,24 @@ Deliver a 1-minute talk explaining how the democratization of creative tools and
 💡 Pro-Tip: Use terms like <strong>democratization</strong>, <strong>curation</strong>, and <strong>craftsmanship</strong> to make your scientific pitch convincing!
 </p>
 </div>
+
+<div class="round-block wrap-up open" id="s-wrapup">
+<div class="round-header" onclick="COSY.toggleRound('s-wrapup')" style="background:#FEE2E2; border-left: 5px solid #DC2626;">
+<span>🎤 Wrap-up & Reflection : Homework & Additional Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Summarize your key scientific takeaways from today's session and prepare your post-session reflection or homework task.
+</p>
+<div style="background: rgba(220, 38, 38, 0.03); border: 1px dashed rgba(220, 38, 38, 0.3); padding: 1.25rem; border-radius: 12px;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #991B1B;">⚡ Reflection / Homework Challenge:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Prepare a 1-minute voice recording or short summary: <em>How will the research discussed today impact technology or society over the coming decade?</em>
+</p>
+</div>
+</div>
+</div>
+
 <div class="mistake-block open" id="s-mistakes">
 <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
 <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>

@@ -30,7 +30,7 @@
 <div class="session-meta-grid">
 <div class="meta-item"><h4>Duration</h4><p>60 minutes</p></div>
 <div class="meta-item"><h4>Languages</h4><p>🇬🇧 English</p></div>
-<div class="meta-item"><h4>Level</h4><p>Elementary (A2)</p></div>
+<div class="meta-item"><h4>Level</h4><p>Elementary (A2, A2+)</p></div>
 <div class="meta-item"><h4>Theme</h4><p>Body Language &amp; Health Habits</p></div>
 </div>
 <div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
@@ -38,7 +38,11 @@
 </div>
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">Sit ≠ stand</div>
 <div class="vocab-def">to rest your body on a chair.</div>
 <div class="vocab-example">Try to sit up straight while reading.</div>
@@ -90,8 +94,16 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Relax ≠ stress', definition:'to become less tense and more calm.', example:'Take a deep breath to relax your shoulders.'}, this)">Add to Dictionary</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
 </section>
-<section id="structure">
+<section id="structure" class="ce-gated-section">
 <h2 class="section-title">🎙️ Discussion Structure</h2>
 <div class="rounds-container">
 <div class="round-block warm-up open" id="s-warm">
@@ -155,7 +167,7 @@ Give your group partner three simple instructions for sitting comfortably.
 </div>
 <div class="round-block round-1 open" id="s-r1">
 <div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
-<span>🔵 Round 1 : Scientific Analysis</span><span class="round-toggle">▲</span>
+<span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">Do you usually <strong>sit</strong> at a desk all day or stand while working?</div><div class="round-item-personal">★ How many hours do you spend sitting every day?</div></div><div class="round-item"><div class="round-item-main">Is it easy for you to sit up <strong>straight</strong> when working at a computer?</div><div class="round-item-personal">★ Does your back hurt after a long work session?</div></div><div class="round-item"><div class="round-item-main">How does your body posture affect your daily <strong>mood</strong> and energy levels?</div><div class="round-item-personal">★ Do you feel more positive when standing tall?</div></div><div class="round-item"><div class="round-item-main">What exercise helps strengthen your upper <strong>back</strong> and shoulders?</div><div class="round-item-personal">★ Have you ever tried yoga or back stretches?</div></div><div class="round-item"><div class="round-item-main">Do you have an ergonomic office <strong>chair</strong> at home?</div><div class="round-item-personal">★ Is your workspace chair comfortable?</div></div><div class="round-item"><div class="round-item-main">How do you boost your physical <strong>energy</strong> when feeling sleepy at work?</div><div class="round-item-personal">★ Do you drink coffee or go for a short walk?</div></div><div class="round-item"><div class="round-item-main">What helps you maintain mental <strong>focus</strong> while reading a long document?</div><div class="round-item-personal">★ How do you avoid distractions while studying?</div></div><div class="round-item"><div class="round-item-main">How are the physical <strong>body</strong> and emotions connected in everyday life?</div><div class="round-item-personal">★ Do you notice physical tension when feeling stressed?</div></div><div class="round-item"><div class="round-item-main">Why is good posture important for long-term spine <strong>health</strong>?</div><div class="round-item-personal">★ Have you consulted a physical therapist about posture?</div></div><div class="round-item"><div class="round-item-main">What is your favorite way to <strong>relax</strong> your muscles after exercise?</div><div class="round-item-personal">★ Do you enjoy warm baths or gentle stretching?</div></div></div>
 </div>
@@ -169,10 +181,28 @@ Give your group partner three simple instructions for sitting comfortably.
 </div>
 <div class="round-block round-2 open" id="s-r2">
 <div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
-<span>🟢 Round 2 : Scientific Debate &amp; Future Impact</span><span class="round-toggle">▲</span>
+<span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">Sitting up <strong>straight</strong> immediately improves a person's mood and self-confidence. : Do you agree or disagree?</div><div class="round-item-personal">★ Do you notice a difference in mood when slouching versus sitting tall?</div></div><div class="round-item"><div class="round-item-main">Standing desks are much healthier than traditional <strong>sit</strong>-down desks. : Do you agree or disagree?</div><div class="round-item-personal">★ Would you like to use a standing desk at work?</div></div><div class="round-item"><div class="round-item-main">Maintaining good posture protects your lower <strong>back</strong> from chronic pain. : Do you agree or disagree?</div><div class="round-item-personal">★ Have you ever suffered from lower back pain?</div></div><div class="round-item"><div class="round-item-main">Investing in a high-quality office <strong>chair</strong> is essential for anyone working from home. : Do you agree or disagree?</div><div class="round-item-personal">★ Is expensive ergonomic furniture worth the cost?</div></div><div class="round-item"><div class="round-item-main">Physical body posture has a bigger effect on daily <strong>energy</strong> than caffeine. : Do you agree or disagree?</div><div class="round-item-personal">★ Would you try posture correction over drinking coffee?</div></div><div class="round-item"><div class="round-item-main">Slouching while working reduces mental <strong>focus</strong> and causes cognitive fatigue. : Do you agree or disagree?</div><div class="round-item-personal">★ Do you slouch when concentrating hard?</div></div><div class="round-item"><div class="round-item-main">Taking care of your physical <strong>body</strong> is the foundation of mental health. : Do you agree or disagree?</div><div class="round-item-personal">★ Do you prioritize physical exercise for mental clarity?</div></div><div class="round-item"><div class="round-item-main">Schools should teach children posture <strong>health</strong> starting in primary school. : Do you agree or disagree?</div><div class="round-item-personal">★ Were you reminded to sit up straight as a child?</div></div><div class="round-item"><div class="round-item-main">Taking a ten-minute break to <strong>relax</strong> and stretch every hour increases total work output. : Do you agree or disagree?</div><div class="round-item-personal">★ Do you take hourly breaks at work?</div></div><div class="round-item"><div class="round-item-main">Changing your daily posture is the easiest way to elevate your overall <strong>mood</strong>. : Do you agree or disagree?</div><div class="round-item-personal">★ Will you pay more attention to your posture today?</div></div></div>
 </div>
+
+<div class="round-block wrap-up open" id="s-wrapup">
+<div class="round-header" onclick="COSY.toggleRound('s-wrapup')" style="background:#FEE2E2; border-left: 5px solid #DC2626;">
+<span>🎤 Wrap-up & Reflection : Homework & Additional Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Summarize your key scientific takeaways from today's session and prepare your post-session reflection or homework task.
+</p>
+<div style="background: rgba(220, 38, 38, 0.03); border: 1px dashed rgba(220, 38, 38, 0.3); padding: 1.25rem; border-radius: 12px;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #991B1B;">⚡ Reflection / Homework Challenge:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Prepare a 1-minute voice recording or short summary: <em>How will the research discussed today impact technology or society over the coming decade?</em>
+</p>
+</div>
+</div>
+</div>
+
 <div class="mistake-block open" id="s-mistakes">
 <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
 <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>

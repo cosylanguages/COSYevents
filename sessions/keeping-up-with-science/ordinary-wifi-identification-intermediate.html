@@ -30,7 +30,7 @@
 <div class="session-meta-grid">
 <div class="meta-item"><h4>Duration</h4><p>60 minutes</p></div>
 <div class="meta-item"><h4>Languages</h4><p>🇬🇧 English</p></div>
-<div class="meta-item"><h4>Level</h4><p>Intermediate (B1)</p></div>
+<div class="meta-item"><h4>Level</h4><p>Intermediate (B1, B1+)</p></div>
 <div class="meta-item"><h4>Theme</h4><p>WiFi Tech, Biometrics, &amp; Privacy</p></div>
 </div>
 <div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
@@ -38,7 +38,11 @@
 </div>
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">WiFi signal ≠ cable</div>
 <div class="vocab-def">a facility allowing computers or smartphones to connect to the internet wirelessly.</div>
 <div class="vocab-example">Standard WiFi signals can bounce off human bodies to identify individuals.</div>
@@ -90,8 +94,16 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Passive ≠ active', definition:'accepting or allowing what happens without active response.', example:'Passive tracking requires no wearable devices or user action.'}, this)">Add to Dictionary</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
 </section>
-<section id="structure">
+<section id="structure" class="ce-gated-section">
 <h2 class="section-title">🎙️ Discussion Structure</h2>
 <div class="rounds-container">
 <div class="round-block warm-up open" id="s-warm">
@@ -154,7 +166,7 @@ Explain how an ordinary device in your house could be used for sensing.
 </div>
 <div class="round-block round-1 open" id="s-r1">
 <div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
-<span>🔵 Round 1 : Scientific Analysis</span><span class="round-toggle">▲</span>
+<span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">How can a ambient <strong>WiFi signal</strong> be used to reconstruct indoor human body posture?</div><div class="round-item-personal">★ Does the idea of spatial wave reflection tracking amaze or worry you?</div></div><div class="round-item"><div class="round-item-main">What level of mathematical <strong>accuracy</strong> is required for motion-sensing algorithms?</div><div class="round-item-personal">★ How reliable are your smart home motion sensors?</div></div><div class="round-item"><div class="round-item-main">How does early <strong>detection</strong> of unusual movement patterns assist elderly care?</div><div class="round-item-personal">★ Would you use non-camera motion sensors to keep elderly relatives safe?</div></div><div class="round-item"><div class="round-item-main">Why is gait analysis considered a unique <strong>biometric</strong> identifier like fingerprints?</div><div class="round-item-personal">★ How distinctive do you think your walking style is?</div></div><div class="round-item"><div class="round-item-main">What are the ethical implications of commercial <strong>surveillance</strong> using existing internet infrastructure?</div><div class="round-item-personal">★ Are you concerned about passive data collection in public spaces?</div></div><div class="round-item"><div class="round-item-main">How does physical wall <strong>distortion</strong> affect high-frequency radio wave reception?</div><div class="round-item-personal">★ Have you noticed signal drops near dense building materials?</div></div><div class="round-item"><div class="round-item-main">What is the role of a wireless signal <strong>receiver</strong> in processing reflected waves?</div><div class="round-item-personal">★ Are you interested in signal processing physics?</div></div><div class="round-item"><div class="round-item-main">How can smart homes prevent unauthorized digital <strong>intrusion</strong> through smart sensors?</div><div class="round-item-personal">★ What security measures do you use on your home network?</div></div><div class="round-item"><div class="round-item-main">Why is two-factor <strong>authentication</strong> crucial for network privacy?</div><div class="round-item-personal">★ Do you use 2FA on all your primary accounts?</div></div><div class="round-item"><div class="round-item-main">What is the advantage of <strong>passive</strong> sensing over active video camera monitoring?</div><div class="round-item-personal">★ Do you prefer radar-based motion detection over visible video cameras?</div></div></div>
 </div>
@@ -168,10 +180,28 @@ Explain how an ordinary device in your house could be used for sensing.
 </div>
 <div class="round-block round-2 open" id="s-r2">
 <div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
-<span>🟢 Round 2 : Scientific Debate &amp; Future Impact</span><span class="round-toggle">▲</span>
+<span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">Using ambient <strong>WiFi signal</strong> disturbance for spatial monitoring is superior to optical camera surveillance. : Do you agree or disagree?</div><div class="round-item-personal">★ Would you choose wave-based monitoring over video cameras?</div></div><div class="round-item"><div class="round-item-main">High algorithmic <strong>accuracy</strong> in movement tracking justifies minor privacy trade-offs. : Do you agree or disagree?</div><div class="round-item-personal">★ Willing to trade privacy for enhanced security?</div></div><div class="round-item"><div class="round-item-main">Automated falls <strong>detection</strong> in smart homes will transform eldercare globally. : Do you agree or disagree?</div><div class="round-item-personal">★ Would you install motion sensors for aging parents?</div></div><div class="round-item"><div class="round-item-main">Gait-based <strong>biometric</strong> recognition will soon replace traditional physical keys and passwords. : Do you agree or disagree?</div><div class="round-item-personal">★ Look forward to keyless biometric entry doors?</div></div><div class="round-item"><div class="round-item-main">Mass commercial <strong>surveillance</strong> via public Wi-Fi access points must be outlawed. : Do you agree or disagree?</div><div class="round-item-personal">★ Support strict laws against spatial tracking?</div></div><div class="round-item"><div class="round-item-main">Preventing wave <strong>distortion</strong> through solid walls is the main obstacle for indoor radar tech. : Do you agree or disagree?</div><div class="round-item-personal">★ Interested in architectural technology?</div></div><div class="round-item"><div class="round-item-main">Installing a sensitive signal <strong>receiver</strong> in every room will become standard in modern architecture. : Do you agree or disagree?</div><div class="round-item-personal">★ Want smart motion-sensing light switches in every room?</div></div><div class="round-item"><div class="round-item-main">Undetectable spatial <strong>intrusion</strong> poses a greater threat to personal privacy than camera leaks. : Do you agree or disagree?</div><div class="round-item-personal">★ Which feels more invasive : cameras or wave tracking?</div></div><div class="round-item"><div class="round-item-main">Multi-factor <strong>authentication</strong> should be legally mandated for all internet of things devices. : Do you agree or disagree?</div><div class="round-item-personal">★ Should hardware makers enforce strong default passwords?</div></div><div class="round-item"><div class="round-item-main">Deploying <strong>passive</strong> environmental monitoring will make smart homes significantly safer. : Do you agree or disagree?</div><div class="round-item-personal">★ Are smart security systems worth their cost?</div></div></div>
 </div>
+
+<div class="round-block wrap-up open" id="s-wrapup">
+<div class="round-header" onclick="COSY.toggleRound('s-wrapup')" style="background:#FEE2E2; border-left: 5px solid #DC2626;">
+<span>🎤 Wrap-up & Reflection : Homework & Additional Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Summarize your key scientific takeaways from today's session and prepare your post-session reflection or homework task.
+</p>
+<div style="background: rgba(220, 38, 38, 0.03); border: 1px dashed rgba(220, 38, 38, 0.3); padding: 1.25rem; border-radius: 12px;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #991B1B;">⚡ Reflection / Homework Challenge:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Prepare a 1-minute voice recording or short summary: <em>How will the research discussed today impact technology or society over the coming decade?</em>
+</p>
+</div>
+</div>
+</div>
+
 <div class="mistake-block open" id="s-mistakes">
 <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
 <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>

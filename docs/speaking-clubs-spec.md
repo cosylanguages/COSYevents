@@ -9,10 +9,42 @@
   4. **Round 2:** Advanced discussion, debates, or future-focused statements.
   5. **Teacher's Note (Linguistic Corrections):** Review of linguistic mistakes made during the session.
 - **Role-Based Reality:**
-  - **Free Visitors:** See the club list and description. Prompted to unlock.
-  - **Students:** See schedules, active session vocabulary, and full past session history.
+  - **Free Visitors:** See the club list, description, source media links, and free essential source-extracted vocabulary (10 units). Everything after the free vocabulary section (paid vocabulary & discussion structure) is gated in the free version.
+  - **Students / Active Members:** See schedules, free source vocabulary, paid/gated expanded discussion vocabulary, full discussion rounds, and full past session history.
   - **Teachers:** See everything students see + preparation topics + active mistake notes area.
 - **Interactivity:** Toggles for Vocabulary, Rounds, and Mistake Notes.
+
+## 1.1 Free vs. Paid Vocabulary Model
+- **Free Source Vocabulary:**
+  - Mandatory 10 vocabulary units extracted directly from reference sources (articles, videos, songs, films, books, summary podcasts).
+  - Purpose: Helps participants understand the primary material before attending the session.
+  - Open to all site visitors.
+- **Paid / Gated Vocabulary:**
+  - Advanced, precise vocabulary, collocations, and speaking expressions designed to expand speaking ability and discussion depth.
+  - Used actively across discussion rounds.
+  - Gated behind authentication/subscription (`shared/js/cosyevents-session.js` / Supabase auth).
+
+## 1.2 "Keeping Up with Science" Club Specification
+- **Focus:** Articles, scientific papers, research findings, and popular science podcasts.
+- **Target Levels (Strict 3-Tier Model):**
+  - **Elementary (`A2`, `A2+`)**
+  - **Intermediate (`B1`, `B1+`)**
+  - **Advanced (`C1`, `C1+`)**
+  *Note:* All sessions strictly adhere to these 3 canonical tiers. Legacy labels like 'Upper-Intermediate (B2)' are mapped to `Intermediate (B1, B1+)`, and 'Beginner / Starter (A2)' are mapped to `Elementary (A2, A2+)`.
+- **Mandatory Step:** Reading the research article or summary script before the session is an **obligatory requirement**.
+- **Media Triad & Alternative Access:** Each session integrates 3 reference media assets:
+  1. Original Research Article 📖
+  2. Summary & Podcast Script (written in our words, serving as the script for the podcast) 📜
+  3. Podcast Audio / Video (Alternative Access) 🎙️
+  *Note:* The original research article, written summary script, and podcast audio represent the exact same core source material. The audio version is provided for participants who prefer listening or are unable to access the original article text.
+- **Session Uniqueness Rule:** While templates provide generic guidance, **each session is unique**. All warm-up questions, Round 1 analysis, intermediate tasks, Round 2 projections, and wrap-up activities MUST specifically address the unique research topic of that session.
+- **Round Requirements (Canonical 6-Part Flow):**
+  1. **🟠 Warm-up:** Introduction to the research topic, initial engagement, and source material check.
+  2. **🔵 Round 1 (Theoretical Research Analysis & Article Focus):** 10 theoretical items focusing on the article, summary script, and podcast. Every item MUST feature a core science/theoretical question paired with a personal application question (`.round-item-main` + `.round-item-personal`).
+  3. **🟣 Intermediate Discussion (Grammar Practice & Collaborative Synthesis):** Interactive grammar exercise on target connectors (e.g. contrast/cause-effect), followed by visual diagram synthesis or scenario cards (Let's Speak Together / Scientific Thinking / Headline Game).
+  4. **🟢 Round 2 (Agree / Disagree Statements & Future Projections):** 10 agree/disagree statements and future/speculative projections. Every item MUST feature a statement/projection paired with a personal stance question (`.round-item-main` + `.round-item-personal`).
+  5. **🎤 Wrap-up & Reflection (Homework / Additional Discussion / Challenge):** Final synthesis, 1-minute TED Talk style presentation or reflection challenge for homework and post-session discussion.
+  6. **✏️ Teacher's Note:** Linguistic corrections following the 3-color error-type standard.
 
 ## 2. Visual Guidelines
 - **Typography:** Headers: `'Playfair Display'`, Body: `'DM Sans'`, Content: `'Nunito'`.

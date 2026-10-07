@@ -71,7 +71,11 @@
 </details>
 <section id="vocabulary">
 <h2 class="section-title">📖 Vocabulaire de la session</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">Frauduleux</div>
 <div class="vocab-def">obtenu ou effectué par tromperie, notamment dans un but criminel.</div>
 <div class="vocab-example">La banque a envoyé un avertissement concernant des e-mails frauduleux demandant nos codes d'accès.</div>
@@ -123,8 +127,16 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Vie privée', definition:'la sphère d\'existence personnelle qui doit être protégée de l\'intrusion publique ou numérique.', example:'Protéger sa vie privée sur les réseaux sociaux nécessite de configurer correctement ses paramètres.'}, this)">Ajouter au dictionnaire</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
 </section>
-<section id="structure">
+<section id="structure" class="ce-gated-section">
 <h2 class="section-title">🎙️ Structure de la discussion</h2>
 <div class="rounds-container">
 <div class="round-block warm-up open" id="s-warm">
@@ -190,7 +202,7 @@ Si vous étiez victime d'une usurpation d'identité en ligne, quelles mesures im
 </div>
 <div class="round-block round-1 open" id="s-r1">
 <div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
-<span>🔵 Round 1 : Discussion générale</span><span class="round-toggle">▲</span>
+<span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
 <div class="round-type-badge">Questions</div>
@@ -240,7 +252,7 @@ Si vous étiez victime d'une usurpation d'identité en ligne, quelles mesures im
 </div>
 <div class="round-block round-2 open" id="s-r2">
 <div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
-<span>🟢 Round 2 : Perspectives : D'accord ou Pas d'accord ?</span><span class="round-toggle">▲</span>
+<span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
 <div class="round-type-badge">Débat</div>
@@ -276,6 +288,24 @@ Si vous étiez victime d'une usurpation d'identité en ligne, quelles mesures im
 </div>
 </div>
 </div>
+
+<div class="round-block wrap-up open" id="s-wrapup">
+<div class="round-header" onclick="COSY.toggleRound('s-wrapup')" style="background:#FEE2E2; border-left: 5px solid #DC2626;">
+<span>🎤 Wrap-up & Reflection : Homework & Additional Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Summarize your key scientific takeaways from today's session and prepare your post-session reflection or homework task.
+</p>
+<div style="background: rgba(220, 38, 38, 0.03); border: 1px dashed rgba(220, 38, 38, 0.3); padding: 1.25rem; border-radius: 12px;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #991B1B;">⚡ Reflection / Homework Challenge:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Prepare a 1-minute voice recording or short summary: <em>How will the research discussed today impact technology or society over the coming decade?</em>
+</p>
+</div>
+</div>
+</div>
+
 <div class="mistake-block open" id="s-mistakes">
 <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
 <span>✏️ Note du professeur (Corrections linguistiques)</span><span class="round-toggle">▲</span>

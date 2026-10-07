@@ -30,7 +30,7 @@
 <div class="session-meta-grid">
 <div class="meta-item"><h4>Duration</h4><p>60 minutes</p></div>
 <div class="meta-item"><h4>Languages</h4><p>🇬🇧 English</p></div>
-<div class="meta-item"><h4>Level</h4><p>Advanced (C1)</p></div>
+<div class="meta-item"><h4>Level</h4><p>Advanced (C1, C1+)</p></div>
 <div class="meta-item"><h4>Topic</h4><p>Evolutionary Biology / Anthropology</p></div><div class="meta-item"><h4>Resources</h4><p><a href="https://youtu.be/iKLwzmjfcW4?is=1l2lHNLpRdMBvJjZ" target="_blank">Watch Video Source 🎥</a></p></div>
 </div>
 <div class="science-journal-box">
@@ -65,7 +65,11 @@
 </details>
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">Post-reproductive</div>
 <div class="vocab-def">relating to the period in a female's life after the capability to reproduce has ceased.</div>
 <div class="vocab-example">A long post-reproductive lifespan is an extremely rare biological trait among mammals.</div>
@@ -117,8 +121,16 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Sociobiology', definition:'study of biological aspects of social behavior.', example:'Sociobiology studies genetic survival.'}, this)">Add to Dictionary</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
 </section>
-<section id="structure">
+<section id="structure" class="ce-gated-section">
 <h2 class="section-title">🎙️ Discussion Structure</h2>
 <div class="rounds-container">
 <div class="round-block warm-up open" id="s-warm">
@@ -184,7 +196,7 @@ What personal or professional research topics have you been tracking or studying
 </div>
 </div>
 <div class="round-block round-1 open" id="s-r1">
-<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;"><span>🔵 Round 1: Theoretical Discussion</span><span class="round-toggle">▲</span></div>
+<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;"><span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span></div>
 <div class="round-body" style="display:block;">
 <div class="round-type-badge">Questions</div>
 <div class="round-item"><div class="round-item-main">According to the article, why might a long <strong>post-reproductive</strong> lifespan actually be an <strong>evolutionary</strong> advantage rather than a biological mistake?</div>
@@ -264,7 +276,7 @@ Imagine researchers publish a breaking science story about evolutionary anthropo
 </div>
 
 <div class="round-block round-2 open" id="s-r2">
-<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;"><span>🟢 Round 2: The Future: Agree or Disagree?</span><span class="round-toggle">▲</span></div>
+<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;"><span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span></div>
 <div class="round-body" style="display:block;">
 <div class="round-type-badge">Debate</div>
 <div class="round-item"><div class="round-item-main">If future research continues to support this <strong>hypothesis</strong>, how might textbooks rewrite our understanding of human <strong>evolutionary</strong> history?</div>

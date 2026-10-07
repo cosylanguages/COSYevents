@@ -30,7 +30,7 @@
 <div class="session-meta-grid">
 <div class="meta-item"><h4>Duration</h4><p>60 minutes</p></div>
 <div class="meta-item"><h4>Languages</h4><p>🇬🇧 English</p></div>
-<div class="meta-item"><h4>Level</h4><p>Intermediate (B1)</p></div>
+<div class="meta-item"><h4>Level</h4><p>Intermediate (B1, B1+)</p></div>
 <div class="meta-item"><h4>Theme</h4><p>Neuroscience, Motivation, &amp; Dopamine</p></div>
 </div>
 <div style="margin-bottom: 2rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
@@ -38,7 +38,11 @@
 </div>
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">Motivation ≠ apathy</div>
 <div class="vocab-def">the reason or desires that compel someone to act.</div>
 <div class="vocab-example">Scientists discovered brain cells that control daily motivation.</div>
@@ -90,8 +94,16 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Initiative ≠ passivity', definition:'the ability to assess and initiate things independently.', example:'Taking initiative requires strong neural activation.'}, this)">Add to Dictionary</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
 </section>
-<section id="structure">
+<section id="structure" class="ce-gated-section">
 <h2 class="section-title">🎙️ Discussion Structure</h2>
 <div class="rounds-container">
 <div class="round-block warm-up open" id="s-warm">
@@ -154,7 +166,7 @@ Describe a personal habit that keeps you motivated during work.
 </div>
 <div class="round-block round-1 open" id="s-r1">
 <div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
-<span>🔵 Round 1 : Scientific Analysis</span><span class="round-toggle">▲</span>
+<span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">How does intrinsic <strong>motivation</strong> drive long-term academic and professional success?</div><div class="round-item-personal">★ What project recently gave you a strong surge of motivation?</div></div><div class="round-item"><div class="round-item-main">What is the basic function of a <strong>neuron</strong> in transmitting chemical messages?</div><div class="round-item-personal">★ Did you enjoy learning biology at school?</div></div><div class="round-item"><div class="round-item-main">How does a neural <strong>circuit</strong> process external rewards and form daily habits?</div><div class="round-item-personal">★ What good daily habit have you built recently?</div></div><div class="round-item"><div class="round-item-main">Why is psychological <strong>perseverance</strong> essential when tackling difficult challenges?</div><div class="round-item-personal">★ How do you handle failure or unexpected setbacks?</div></div><div class="round-item"><div class="round-item-main">What role does <strong>dopamine</strong> release play in feeling satisfaction after completing a task?</div><div class="round-item-personal">★ What simple activities give you a quick feeling of accomplishment?</div></div><div class="round-item"><div class="round-item-main">How does an electrical <strong>discharge</strong> between neurons create sensory experiences?</div><div class="round-item-personal">★ Are you interested in brain science discoveries?</div></div><div class="round-item"><div class="round-item-main">What financial or personal <strong>incentive</strong> encourages you to work harder?</div><div class="round-item-personal">★ What reward system works best for your personal goals?</div></div><div class="round-item"><div class="round-item-main">How do you manage physical and mental <strong>fatigue</strong> after a hectic workday?</div><div class="round-item-personal">★ What is your favorite way to restore your energy levels?</div></div><div class="round-item"><div class="round-item-main">How does a positive visual <strong>stimulus</strong> trigger creative thinking in the brain?</div><div class="round-item-personal">★ What environment inspires your best ideas?</div></div><div class="round-item"><div class="round-item-main">Why is taking personal <strong>initiative</strong> important in modern competitive workplaces?</div><div class="round-item-personal">★ Do you prefer starting new projects or managing existing ones?</div></div></div>
 </div>
@@ -168,10 +180,28 @@ Describe a personal habit that keeps you motivated during work.
 </div>
 <div class="round-block round-2 open" id="s-r2">
 <div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
-<span>🟢 Round 2 : Scientific Debate &amp; Future Impact</span><span class="round-toggle">▲</span>
+<span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">Sustained personal <strong>motivation</strong> depends more on structured habits than on fleeting emotions. : Do you agree or disagree?</div><div class="round-item-personal">★ Do you rely on self-discipline or mood?</div></div><div class="round-item"><div class="round-item-main">Mapping every human <strong>neuron</strong> will allow scientists to cure procrastination. : Do you agree or disagree?</div><div class="round-item-personal">★ Would you participate in brain mapping studies?</div></div><div class="round-item"><div class="round-item-main">Rewiring a bad neural <strong>circuit</strong> takes at least one month of consistent practice. : Do you agree or disagree?</div><div class="round-item-personal">★ Have you successfully broken a bad habit?</div></div><div class="round-item"><div class="round-item-main">Grittiness and <strong>perseverance</strong> predict lifelong success better than high IQ score. : Do you agree or disagree?</div><div class="round-item-personal">★ Value hard work or raw talent more?</div></div><div class="round-item"><div class="round-item-main">Excessive digital stimulation overuses our <strong>dopamine</strong> pathways and reduces real-world joy. : Do you agree or disagree?</div><div class="round-item-personal">★ Have you ever tried a digital detox?</div></div><div class="round-item"><div class="round-item-main">Measuring neural <strong>discharge</strong> in real-time will change how we diagnose mental fatigue. : Do you agree or disagree?</div><div class="round-item-personal">★ Would you wear a smartwatch that monitors brain strain?</div></div><div class="round-item"><div class="round-item-main">Financial <strong>incentive</strong> alone is insufficient to keep employees truly engaged. : Do you agree or disagree?</div><div class="round-item-personal">★ Value workplace culture over higher salary?</div></div><div class="round-item"><div class="round-item-main">Overcoming chronic <strong>fatigue</strong> requires fundamental changes in sleep schedule and nutrition. : Do you agree or disagree?</div><div class="round-item-personal">★ How many hours of sleep do you average?</div></div><div class="round-item"><div class="round-item-main">Responding constructively to a stressful <strong>stimulus</strong> is a mark of high emotional intelligence. : Do you agree or disagree?</div><div class="round-item-personal">★ Keep calm under pressure?</div></div><div class="round-item"><div class="round-item-main">Taking individual <strong>initiative</strong> should be rewarded more than following routine instructions. : Do you agree or disagree?</div><div class="round-item-personal">★ Encourage proactive decision-making at work?</div></div></div>
 </div>
+
+<div class="round-block wrap-up open" id="s-wrapup">
+<div class="round-header" onclick="COSY.toggleRound('s-wrapup')" style="background:#FEE2E2; border-left: 5px solid #DC2626;">
+<span>🎤 Wrap-up & Reflection : Homework & Additional Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Summarize your key scientific takeaways from today's session and prepare your post-session reflection or homework task.
+</p>
+<div style="background: rgba(220, 38, 38, 0.03); border: 1px dashed rgba(220, 38, 38, 0.3); padding: 1.25rem; border-radius: 12px;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #991B1B;">⚡ Reflection / Homework Challenge:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Prepare a 1-minute voice recording or short summary: <em>How will the research discussed today impact technology or society over the coming decade?</em>
+</p>
+</div>
+</div>
+</div>
+
 <div class="mistake-block open" id="s-mistakes">
 <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
 <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>
