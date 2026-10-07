@@ -690,7 +690,7 @@
     if (!document.querySelector('.cosy-gated-ecosystem-note')) {
       var note = document.createElement('div');
       note.className = 'cosy-gated-ecosystem-note';
-      note.innerHTML = t('ecosystem_note_part') + ' <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages</a> ecosystem &bull; ' + t('ecosystem_note_explore') + ' <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a> &bull; <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>';
+      note.innerHTML = t('ecosystem_note_part') + ' <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages</a> (2020–2026) &bull; COSYevents (2024–2026) &bull; ' + t('ecosystem_note_explore') + ' <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a> &bull; <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>';
       footer.appendChild(note);
     }
 
