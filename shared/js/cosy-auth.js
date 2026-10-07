@@ -47,7 +47,8 @@
       includes_lower: "Includes lower levels",
       course: "Course",
       language: "Language",
-      level: "Level"
+      level: "Level",
+      sign_out_all: "Sign out on all devices"
     },
     fr: {
       login: "Se connecter",
@@ -74,7 +75,8 @@
       includes_lower: "Inclut les niveaux inférieurs",
       course: "Cours",
       language: "Langue",
-      level: "Niveau"
+      level: "Niveau",
+      sign_out_all: "Se déconnecter de tous les appareils"
     },
     it: {
       login: "Accedi",
@@ -101,7 +103,8 @@
       includes_lower: "Include livelli inferiori",
       course: "Corso",
       language: "Lingua",
-      level: "Livello"
+      level: "Livello",
+      sign_out_all: "Esci da tutti i dispositivi"
     },
     ru: {
       login: "Войти",
@@ -128,7 +131,8 @@
       includes_lower: "Включает нижние уровни",
       course: "Курс",
       language: "Язык",
-      level: "Уровень"
+      level: "Уровень",
+      sign_out_all: "Выйти со всех устройств"
     },
     el: {
       login: "Σύνδεση",
@@ -155,7 +159,8 @@
       includes_lower: "Περιλαμβάνει χαμηλότερα επίπεδα",
       course: "Μάθημα",
       language: "Γλώσσα",
-      level: "Επίπεδο"
+      level: "Επίπεδο",
+      sign_out_all: "Αποσύνδεση από όλες τις συσκευές"
     }
   };
 
@@ -523,16 +528,20 @@
     });
   }
 
-  function signOut() {
+  function signOut(options) {
     if (!state.enabled || !state.client) {
       return Promise.resolve();
     }
-    return state.client.auth.signOut().then(function () {
+    return state.client.auth.signOut(options).then(function () {
       state.session = null;
       state.access = null;
       notifyChange();
       renderAccountChips();
     });
+  }
+
+  function signOutGlobal() {
+    return signOut({ scope: 'global' });
   }
 
   function getAccess() {
@@ -729,6 +738,7 @@
     signInWithEmail: signInWithEmail,
     verifyCode: verifyCode,
     signOut: signOut,
+    signOutGlobal: signOutGlobal,
     getAccess: getAccess,
     role: role,
     languages: languages,

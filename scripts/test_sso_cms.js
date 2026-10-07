@@ -137,6 +137,8 @@ function createMockElement(tagName) {
 
 // Global DOM environment simulation
 global.window = {
+  setSessionCalled: 0,
+  replaceStateCalled: 0,
   addEventListener: function () {},
   removeEventListener: function () {},
   location: {
@@ -147,8 +149,9 @@ global.window = {
   },
   history: {
     replaceState: function (state, title, url) {
+      global.window.replaceStateCalled++;
       global.window.location.hash = '';
-      const split = url.split('#');
+      const split = (url || '').split('#');
       global.window.location.pathname = split[0];
     }
   },
@@ -161,6 +164,7 @@ global.window = {
       return {
         auth: {
           setSession: function (data) {
+            global.window.setSessionCalled++;
             return Promise.resolve({ data: { session: { user: { email: 'admin@cosy.com' }, access_token: data.access_token, refresh_token: data.refresh_token } }, error: null });
           },
           getSession: function () {
@@ -177,7 +181,7 @@ global.window = {
                 eq: function () {
                   return {
                     maybeSingle: function () {
-                      return Promise.resolve({ data: { content: { 'h1.hub-title': 'Overridden Title' } }, error: null });
+                      return Promise.resolve({ data: { content: { 'hub-title': 'Overridden Title' } }, error: null });
                     }
                   };
                 }
@@ -192,6 +196,30 @@ global.window = {
           return Promise.resolve({ data: { role: 'founder' }, error: null });
         }
       };
+    }
+  },
+  DOMPurify: {
+    _cosyHookAdded: false,
+    _hooks: [],
+    addHook: function(name, fn) {
+      this._hooks.push({ name: name, fn: fn });
+    },
+    sanitize: function(dirty, cfg) {
+      if (!dirty || typeof dirty !== 'string') return '';
+      let clean = dirty;
+      clean = clean.replace(/<script\b[^>]*>([\s\S]*?)<\/script>/gi, '');
+      clean = clean.replace(/<script\b[^>]*\/?>/gi, '');
+      clean = clean.replace(/<iframe\b[^>]*>([\s\S]*?)<\/iframe>/gi, '');
+      clean = clean.replace(/<iframe\b[^>]*\/?>/gi, '');
+      clean = clean.replace(/<svg\b[^>]*>([\s\S]*?)<\/svg>/gi, '');
+      clean = clean.replace(/<svg\b[^>]*\/?>/gi, '');
+      clean = clean.replace(/<img\b[^>]*\/?>/gi, '');
+      clean = clean.replace(/\s*on[a-z]+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, '');
+      clean = clean.replace(/href\s*=\s*(?:"javascript:[^"]*"|'javascript:[^']*'|javascript:[^\s>]+)/gi, '');
+      if (clean.includes('target="_blank"') && !clean.includes('rel="noopener noreferrer"')) {
+        clean = clean.replace(/<a\b([^>]*)\btarget="_blank"([^>]*)>/gi, '<a$1target="_blank" rel="noopener noreferrer"$2>');
+      }
+      return clean;
     }
   }
 };
@@ -272,10 +300,17 @@ setTimeout(() => {
   assert.strictEqual(saveBtn.textContent.includes('Save & Publish Live'), true);
   console.log('✔ Floating Founder CMS Toolbar Rendering Passed.\n');
 
-  // Test 4: Ecosystem Link Interception
-  console.log('Test 4: Intercept Clicks on Ecosystem Links');
+  // Test 4: Assert Ecosystem Links Are Never Modified & Tokens in Hash Stripped and Ignored
+  console.log('Test 4: Assert Ecosystem Links Unmodified & Tokens in Hash Stripped and Ignored');
+
+  // Verify hash was stripped by history.replaceState and setSession was NEVER called
+  assert.strictEqual(global.window.location.hash, '', 'Hash should be cleared');
+  assert.strictEqual(global.window.replaceStateCalled > 0, true, 'history.replaceState should have been called');
+  assert.strictEqual(global.window.setSessionCalled, 0, 'setSession should NEVER be called for URL tokens');
+
+  const initialHref = 'https://cosylanguages.github.io/COSYlanguages/';
   const link = createMockElement('a');
-  link.setAttribute('href', 'https://cosylanguages.github.io/COSYlanguages/');
+  link.setAttribute('href', initialHref);
   global.document.body.appendChild(link);
 
   AuthSSO.getState().session = { access_token: 'token123', refresh_token: 'ref456' };
@@ -285,15 +320,60 @@ setTimeout(() => {
     target: link
   };
 
-  // Dispatch click listener attached to document
-  const clickListeners = global.document.listeners ? global.document.listeners['click'] : [];
+  const clickListeners = (global.document.listeners && global.document.listeners['click']) ? global.document.listeners['click'] : [];
   clickListeners.forEach(fn => fn(clickEvent));
 
-  const updatedHref = link.getAttribute('href');
-  console.log('Updated href:', updatedHref);
-  assert.ok(updatedHref.includes('access_token=token123'), 'Link href should contain access_token');
-  assert.ok(updatedHref.includes('refresh_token=ref456'), 'Link href should contain refresh_token');
-  console.log('✔ Ecosystem Link Interception Passed.\n');
+  const resultingHref = link.getAttribute('href');
+  assert.strictEqual(resultingHref, initialHref, 'Link href must NOT be modified');
+  assert.ok(!resultingHref.includes('access_token'), 'Link href must not contain access_token');
+  assert.ok(!resultingHref.includes('refresh_token'), 'Link href must not contain refresh_token');
+  console.log('✔ No Ecosystem Link Modification Passed.\n');
+
+  // Test 5: CMS Renderer XSS Sanitization
+  console.log('Test 5: CMS Renderer XSS Sanitization');
+
+  // Key Validation Test
+  assert.strictEqual(CMSEditor.isValidOverrideKey('main-title'), true);
+  assert.strictEqual(CMSEditor.isValidOverrideKey('section_1'), true);
+  assert.strictEqual(CMSEditor.isValidOverrideKey('<script>'), false);
+  assert.strictEqual(CMSEditor.isValidOverrideKey('key with spaces'), false);
+  assert.strictEqual(CMSEditor.isValidOverrideKey('key;select*'), false);
+
+  // 1) <script>alert(1)</script> -> script removed
+  const payload1 = '<script>alert(1)</script>';
+  const clean1 = CMSEditor.sanitizeOverrideHtml(payload1);
+  assert.strictEqual(clean1.includes('<script>'), false, 'Scripts should be removed');
+  assert.strictEqual(clean1.includes('alert(1)'), false, 'Script contents should be removed');
+
+  // 2) <img src=x onerror=alert(1)> -> img and onerror removed
+  const payload2 = '<img src=x onerror=alert(1)>';
+  const clean2 = CMSEditor.sanitizeOverrideHtml(payload2);
+  assert.strictEqual(clean2.includes('onerror'), false, 'Event handlers should be removed');
+  assert.strictEqual(clean2.includes('<img'), false, 'Img tags should be removed');
+
+  // 3) <a href="javascript:alert(1)">x</a> -> javascript: href removed
+  const payload3 = '<a href="javascript:alert(1)">x</a>';
+  const clean3 = CMSEditor.sanitizeOverrideHtml(payload3);
+  assert.strictEqual(clean3.includes('javascript:'), false, 'javascript: href should be removed');
+
+  // 4) <iframe src="//evil.test"> -> iframe removed
+  const payload4 = '<iframe src="//evil.test">';
+  const clean4 = CMSEditor.sanitizeOverrideHtml(payload4);
+  assert.strictEqual(clean4.includes('<iframe'), false, 'iframe should be removed');
+
+  // 5) <svg onload=alert(1)> -> svg removed
+  const payload5 = '<svg onload=alert(1)>';
+  const clean5 = CMSEditor.sanitizeOverrideHtml(payload5);
+  assert.strictEqual(clean5.includes('<svg'), false, 'svg should be removed');
+  assert.strictEqual(clean5.includes('onload'), false, 'onload handler should be removed');
+
+  // 6) <a href="https://ok.test" target="_blank">x</a> -> safe link kept with rel="noopener noreferrer"
+  const payload6 = '<a href="https://ok.test" target="_blank">x</a>';
+  const clean6 = CMSEditor.sanitizeOverrideHtml(payload6);
+  assert.ok(clean6.includes('href="https://ok.test"'), 'Safe link href should be kept');
+  assert.ok(clean6.includes('rel="noopener noreferrer"'), 'rel="noopener noreferrer" must be added for target="_blank"');
+
+  console.log('✔ CMS Renderer XSS Sanitization Unit Tests Passed.\n');
 
   console.log('=== ALL SSO AND CMSEDITOR UNIT TESTS PASSED SUCCESSFULLY! ===');
 }, 50);

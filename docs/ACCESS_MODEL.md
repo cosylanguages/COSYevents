@@ -6,6 +6,14 @@ All access enforcement happens directly inside PostgreSQL via Row Level Security
 
 ---
 
+## Cross-Domain SSO & Session Sharing
+
+All ecosystem sites (COSYlanguages, COSYevents, COSYtools, COSYgames, etc.) share the same GitHub Pages origin (`cosylanguages.github.io`). Because they reside on the same origin, user sessions are automatically shared in browser storage using the common `storageKey: 'cosy-auth'`.
+
+Tokens (such as `access_token` and `refresh_token`) **must never be put in URLs or query/hash parameters** when linking between ecosystem sites. Any stray tokens in `location.hash` are automatically stripped from the address bar via `history.replaceState` and ignored.
+
+---
+
 ## Roles Overview
 
 Users in `public.profiles` have one of three roles in `profiles.role`:

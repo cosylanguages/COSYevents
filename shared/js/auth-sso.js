@@ -1,9 +1,8 @@
 /**
  * COSY Ecosystem Cross-Domain Single Sign-On (SSO) Handler (auth-sso.js)
  * - Ensures Supabase JS SDK (https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1) is loaded.
- * - Handles incoming session restoration from hash fragment (#access_token=...&refresh_token=...).
- * - Seamlessly cleans URL hash after session restoration.
- * - Intercepts clicks on ecosystem links (a[href*="COSY"]) to append session transfer tokens.
+ * - Strips any tokens in location.hash from address bar without restoring sessions via URL parameters.
+ * - Sessions are shared via common localStorage storageKey 'cosy-auth'.
  */
 (function () {
   'use strict';
@@ -118,107 +117,20 @@
     }
   }
 
-  function handleIncomingSSO(client) {
+  function handleIncomingSSO() {
     if (typeof window === 'undefined' || !window.location || !window.location.hash) {
-      return Promise.resolve(null);
+      return;
     }
 
     var params = parseHashParams(window.location.hash);
-    var accessToken = params.access_token;
-    var refreshToken = params.refresh_token;
-
-    if (accessToken && refreshToken) {
-      return client.auth.setSession({
-        access_token: accessToken,
-        refresh_token: refreshToken
-      }).then(function (res) {
-        cleanUrlHash();
-        if (res && res.data && res.data.session) {
-          ssoState.session = res.data.session;
-        }
-        if (window.CosyAuth && typeof window.CosyAuth.init === 'function') {
-          window.CosyAuth.init({ force: true });
-        }
-        if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
-          try {
-            window.dispatchEvent(new CustomEvent('cosy:auth', { detail: { session: res.data.session } }));
-          } catch (e) {}
-        }
-        return res;
-      }).catch(function (err) {
-        cleanUrlHash();
-        console.warn('AuthSSO: Error restoring session from hash:', err);
-        return null;
-      });
+    if (params.access_token || params.refresh_token) {
+      cleanUrlHash();
     }
-
-    return Promise.resolve(null);
-  }
-
-  function isEcosystemLink(el) {
-    if (!el || el.tagName !== 'A') return false;
-    var href = el.getAttribute('href') || '';
-    if (!href) return false;
-    if (href.indexOf('COSY') !== -1 || href.indexOf('cosy') !== -1 || href.indexOf('cosylanguages') !== -1) {
-      return true;
-    }
-    if (el.className && typeof el.className === 'string' && el.className.indexOf('cosy-strip-link') !== -1) {
-      return true;
-    }
-    return false;
-  }
-
-  function interceptEcosystemLinks() {
-    if (typeof document === 'undefined') return;
-
-    document.addEventListener('click', function (e) {
-      var target = e.target;
-      var anchor = target.closest ? target.closest('a[href*="COSY"], a[href*="cosy"], a[href*="cosylanguages"], .cosy-strip-link') : null;
-      if (!anchor) {
-        var curr = target;
-        while (curr && curr !== document) {
-          if (isEcosystemLink(curr)) {
-            anchor = curr;
-            break;
-          }
-          curr = curr.parentNode;
-        }
-      }
-
-      if (!anchor || !isEcosystemLink(anchor)) return;
-
-      var href = anchor.getAttribute('href');
-      if (!href) return;
-
-      // Obtain current session
-      var session = ssoState.session;
-      if (!session && window.CosyAuth && typeof window.CosyAuth.getSession === 'function') {
-        session = window.CosyAuth.getSession();
-      }
-
-      if (session && session.access_token && session.refresh_token) {
-        try {
-          var url = new URL(href, window.location.href);
-          var hashStr = url.hash ? url.hash.substring(1) : '';
-          var params = new URLSearchParams(hashStr);
-          params.set('access_token', session.access_token);
-          params.set('refresh_token', session.refresh_token);
-          url.hash = params.toString();
-          var updatedUrl = url.toString();
-          anchor.href = updatedUrl;
-          if (anchor.setAttribute) anchor.setAttribute('href', updatedUrl);
-        } catch (err) {
-          // Fallback string manipulation
-          var sep = href.indexOf('#') !== -1 ? '&' : '#';
-          var updatedUrl = href + sep + 'access_token=' + encodeURIComponent(session.access_token) + '&refresh_token=' + encodeURIComponent(session.refresh_token);
-          anchor.href = updatedUrl;
-          if (anchor.setAttribute) anchor.setAttribute('href', updatedUrl);
-        }
-      }
-    }, true);
   }
 
   function initSSO() {
+    handleIncomingSSO();
+
     loadConfig(function (config) {
       if (!config || !config.enabled) return;
 
@@ -234,22 +146,17 @@
           });
         }
 
-        // Restore session from hash if present
-        handleIncomingSSO(client).then(function () {
-          if (!ssoState.session && client.auth && client.auth.getSession) {
-            client.auth.getSession().then(function (res) {
-              if (res && res.data && res.data.session) {
-                ssoState.session = res.data.session;
-              }
-            });
-          }
-        });
+        if (!ssoState.session && client.auth && client.auth.getSession) {
+          client.auth.getSession().then(function (res) {
+            if (res && res.data && res.data.session) {
+              ssoState.session = res.data.session;
+            }
+          });
+        }
 
         ssoState.initialized = true;
       });
     });
-
-    interceptEcosystemLinks();
   }
 
   if (document.readyState === 'loading') {

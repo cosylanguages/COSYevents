@@ -52,10 +52,13 @@
           <span class="auth-user-label">Logged in as</span>
           <div id="account-email" class="auth-user-email">...</div>
         </div>
-        <div>
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
           <span id="account-role-badge" class="auth-role-badge">
             Student
           </span>
+          <button type="button" id="btn-sign-out-global" class="btn-secondary" style="background: #a33117; color: #fff; border: none; padding: 0.4rem 0.8rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer;">
+            🌐 Sign out on all devices
+          </button>
         </div>
       </div>
 
@@ -132,6 +135,16 @@
         document.getElementById('account-role-badge').textContent = roleLabel;
 
         document.getElementById('heading-access').textContent = t('my_access');
+
+        var btnGlobal = document.getElementById('btn-sign-out-global');
+        if (btnGlobal) {
+          btnGlobal.textContent = '🌐 ' + t('sign_out_all');
+          btnGlobal.onclick = function () {
+            window.CosyAuth.signOut({ scope: 'global' }).then(function () {
+              window.location.href = 'login.html';
+            });
+          };
+        }
 
         var grantsContainer = document.getElementById('grants-container');
         grantsContainer.textContent = ''; // clear

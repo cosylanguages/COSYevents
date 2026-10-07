@@ -1,15 +1,62 @@
 /**
  * COSY Founder Visual On-Page CMS Editor (cms-editor.js)
- * - Ensures Supabase JS SDK (https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1) is loaded.
+ * - Ensures Supabase JS SDK and local DOMPurify (shared/vendor/purify.min.js) are loaded.
  * - Detects if COSY_USER role is admin, founder, or owner.
  * - Renders a floating Founder CMS toolbar with '✏️ Edit Page Content' and '💾 Save & Publish Live'.
- * - Fetches live page content overrides from Supabase cms_page_overrides table (keyed by window.location.pathname) and applies them on load.
- * - Enables inline visual editing (contenteditable="true") and upserts edits to Supabase cms_page_overrides.
+ * - Fetches live page content overrides from Supabase cms_page_overrides table and applies sanitized overrides on render.
+ * - Enables inline visual editing (contenteditable="true") and upserts sanitized edits to Supabase cms_page_overrides.
+ * - Enforces key rejection for keys not matching ^[a-z0-9_-]+$ and DOMPurify HTML sanitization.
  */
 (function () {
   'use strict';
 
   var SUPABASE_SDK_URL = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1';
+
+  var DOMPURIFY_CONFIG = {
+    ALLOWED_TAGS: ['p', 'br', 'strong', 'b', 'em', 'i', 'u', 'span', 'a', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4'],
+    ALLOWED_ATTR: ['href', 'rel', 'target', 'class', 'lang'],
+    ALLOWED_URI_REGEXP: /^(?:(?:https?|mailto|tel):|[^a-z]|[a-z0-9+.-]+(?:[^a-z0-9+.-:]|$))/i
+  };
+
+  function getScriptBaseUrl() {
+    if (typeof document === 'undefined') return './';
+    var src = null;
+    if (document.currentScript) {
+      src = document.currentScript.getAttribute('src');
+    }
+    if (!src && document.scripts) {
+      for (var i = document.scripts.length - 1; i >= 0; i--) {
+        var s = document.scripts[i].getAttribute('src') || '';
+        if (s.indexOf('cms-editor.js') !== -1) {
+          src = s;
+          break;
+        }
+      }
+    }
+    if (!src) return './';
+    var idx = src.indexOf('shared/js/cms-editor.js');
+    if (idx !== -1) {
+      return src.substring(0, idx);
+    }
+    return './';
+  }
+
+  function loadDomPurify(callback) {
+    if (window.DOMPurify) {
+      if (callback) callback(window.DOMPurify);
+      return;
+    }
+    var script = document.createElement('script');
+    script.src = getScriptBaseUrl() + 'shared/vendor/purify.min.js';
+    script.onload = function () {
+      if (callback) callback(window.DOMPurify);
+    };
+    script.onerror = function () {
+      console.warn('CMSEditor: Failed to load local DOMPurify script');
+      if (callback) callback(null);
+    };
+    document.head.appendChild(script);
+  }
 
   function loadSupabaseSdk(callback) {
     if (window.supabase && window.supabase.createClient) {
@@ -34,27 +81,38 @@
     document.head.appendChild(script);
   }
 
-  function getScriptBaseUrl() {
-    if (typeof document === 'undefined') return './';
-    var src = null;
-    if (document.currentScript) {
-      src = document.currentScript.getAttribute('src');
-    }
-    if (!src && document.scripts) {
-      for (var i = document.scripts.length - 1; i >= 0; i--) {
-        var s = document.scripts[i].getAttribute('src') || '';
-        if (s.indexOf('cms-editor.js') !== -1) {
-          src = s;
-          break;
+  function isValidOverrideKey(key) {
+    if (typeof key !== 'string') return false;
+    return /^[a-z0-9_-]+$/i.test(key);
+  }
+
+  function sanitizeOverrideHtml(dirty) {
+    if (typeof dirty !== 'string') return '';
+    if (typeof window !== 'undefined' && window.DOMPurify) {
+      if (!window.DOMPurify._cosyHookAdded) {
+        if (typeof window.DOMPurify.addHook === 'function') {
+          window.DOMPurify.addHook('afterSanitizeElements', function (node) {
+            if (node.nodeType === 1 && node.tagName && node.tagName.toUpperCase() === 'A') {
+              if (node.getAttribute('target') === '_blank') {
+                node.setAttribute('rel', 'noopener noreferrer');
+              }
+            }
+          });
         }
+        window.DOMPurify._cosyHookAdded = true;
       }
+      var clean = window.DOMPurify.sanitize(dirty, DOMPURIFY_CONFIG);
+      if (typeof clean === 'string' && clean.indexOf('target="_blank"') !== -1 && clean.indexOf('rel="noopener noreferrer"') === -1) {
+        clean = clean.replace(/<a\b([^>]*)\btarget="_blank"([^>]*)>/gi, function (match, p1, p2) {
+          if (/rel=/i.test(match)) {
+            return match.replace(/rel="[^"]*"/i, 'rel="noopener noreferrer"').replace(/rel='[^']*'/i, 'rel="noopener noreferrer"');
+          }
+          return '<a' + p1 + 'target="_blank" rel="noopener noreferrer"' + p2 + '>';
+        });
+      }
+      return clean;
     }
-    if (!src) return './';
-    var idx = src.indexOf('shared/js/cms-editor.js');
-    if (idx !== -1) {
-      return src.substring(0, idx);
-    }
-    return './';
+    return dirty;
   }
 
   function loadConfig(callback) {
@@ -99,9 +157,7 @@
     }
     if (client && client.auth) {
       var session = client.auth.session ? client.auth.session() : null;
-      if (!session && client.auth.getSession) {
-        // Checked asynchronously
-      } else if (session && session.user) {
+      if (session && session.user) {
         var user = session.user;
         var appRole = user.app_metadata ? user.app_metadata.role : null;
         var metaRole = user.user_metadata ? user.user_metadata.role : null;
@@ -112,51 +168,39 @@
     return null;
   }
 
-  function getUniqueSelector(el) {
-    if (el.id) return '#' + el.id;
-    if (el.getAttribute('data-cms-id')) return '[data-cms-id="' + el.getAttribute('data-cms-id') + '"]';
+  function getOverrideKey(el) {
+    if (!el || el.nodeType !== 1) return null;
+    var cmsId = el.getAttribute('data-cms-id');
+    if (cmsId && isValidOverrideKey(cmsId)) return cmsId;
+    if (el.id && isValidOverrideKey(el.id)) return el.id;
     if (el.className && typeof el.className === 'string') {
       var classes = el.className.trim().split(/\s+/).filter(function (c) {
-        return c && !c.startsWith('cosy-cms-');
-      }).join('.');
-      if (classes) {
-        var selector = el.tagName.toLowerCase() + '.' + classes;
-        if (document.querySelectorAll(selector).length === 1) return selector;
-      }
+        return c && !c.startsWith('cosy-cms-') && isValidOverrideKey(c);
+      });
+      if (classes.length > 0) return classes[0];
     }
-    var path = [];
-    while (el && el.nodeType === Node.ELEMENT_NODE) {
-      var selector = el.nodeName.toLowerCase();
-      if (el.id) {
-        selector += '#' + el.id;
-        path.unshift(selector);
-        break;
-      } else {
-        var sib = el, nth = 1;
-        while (sib = sib.previousElementSibling) {
-          if (sib.nodeName.toLowerCase() === selector) nth++;
-        }
-        if (nth !== 1) selector += ':nth-of-type(' + nth + ')';
-      }
-      path.unshift(selector);
-      el = el.parentNode;
-    }
-    return path.join(' > ');
+    return null;
   }
 
   function applyOverrides(content) {
     if (!content || typeof content !== 'object') return;
     cmsState.overrides = content;
-    Object.keys(content).forEach(function (selector) {
-      var html = content[selector];
-      if (typeof html !== 'string') return;
+    Object.keys(content).forEach(function (key) {
+      if (!isValidOverrideKey(key)) {
+        console.warn('CMSEditor: Rejecting override key not matching ^[a-z0-9_-]+$:', key);
+        return;
+      }
+      var dirtyHtml = content[key];
+      if (typeof dirtyHtml !== 'string') return;
+      var cleanHtml = sanitizeOverrideHtml(dirtyHtml);
       try {
+        var selector = '[data-cms-id="' + key + '"], #' + key + ', .' + key;
         var elems = document.querySelectorAll(selector);
         elems.forEach(function (el) {
-          el.innerHTML = html;
+          el.innerHTML = cleanHtml;
         });
       } catch (e) {
-        console.warn('CMSEditor: Invalid selector override:', selector);
+        console.warn('CMSEditor: Invalid selector override for key:', key);
       }
     });
   }
@@ -256,8 +300,9 @@
         if (cmsState.isEditing) {
           el.setAttribute('contenteditable', 'true');
           el.classList.add('cosy-cms-editing');
-          if (!el.getAttribute('data-cms-id')) {
-            el.setAttribute('data-cms-id', getUniqueSelector(el));
+          if (!getOverrideKey(el)) {
+            var fallbackKey = 'cms-el-' + Math.random().toString(36).substring(2, 8);
+            el.setAttribute('data-cms-id', fallbackKey);
           }
         } else {
           el.removeAttribute('contenteditable');
@@ -284,8 +329,10 @@
       var overridesMap = {};
 
       editables.forEach(function (el) {
-        var key = el.getAttribute('data-cms-id') || getUniqueSelector(el);
-        overridesMap[key] = el.innerHTML;
+        var key = getOverrideKey(el);
+        if (!key || !isValidOverrideKey(key)) return;
+        var cleanHtml = sanitizeOverrideHtml(el.innerHTML);
+        overridesMap[key] = cleanHtml;
       });
 
       var pagePath = window.location.pathname;
@@ -316,63 +363,65 @@
     loadConfig(function (config) {
       if (!config || !config.enabled) return;
 
-      loadSupabaseSdk(function (supabaseLib) {
-        if (!supabaseLib) return;
-        var client = supabaseLib.createClient(config.url, config.anonKey, {
-          auth: {
-            persistSession: true,
-            autoRefreshToken: true,
-            detectSessionInUrl: true,
-            flowType: 'pkce',
-            storageKey: config.storageKey || 'cosy-auth'
+      loadDomPurify(function () {
+        loadSupabaseSdk(function (supabaseLib) {
+          if (!supabaseLib) return;
+          var client = supabaseLib.createClient(config.url, config.anonKey, {
+            auth: {
+              persistSession: true,
+              autoRefreshToken: true,
+              detectSessionInUrl: true,
+              flowType: 'pkce',
+              storageKey: config.storageKey || 'cosy-auth'
+            }
+          });
+
+          cmsState.client = client;
+
+          // Apply live page overrides for all visitors
+          fetchAndApplyOverrides(client);
+
+          // Check user role for rendering Founder CMS toolbar
+          var evaluateRole = function () {
+            var role = detectUserRole(client);
+            if (!role && client.auth && client.auth.getSession) {
+              client.auth.getSession().then(function (res) {
+                if (res && res.data && res.data.session && res.data.session.user) {
+                  var user = res.data.session.user;
+                  var appRole = user.app_metadata ? user.app_metadata.role : null;
+                  var metaRole = user.user_metadata ? user.user_metadata.role : null;
+                  var resolved = isAuthorizedRole(appRole) ? appRole : (isAuthorizedRole(metaRole) ? metaRole : null);
+                  if (resolved) {
+                    cmsState.userRole = resolved;
+                    renderFounderToolbar(client);
+                    return;
+                  }
+                }
+                // Try my_access RPC call
+                client.rpc('my_access').then(function (accRes) {
+                  if (accRes && accRes.data && isAuthorizedRole(accRes.data.role)) {
+                    cmsState.userRole = accRes.data.role;
+                    renderFounderToolbar(client);
+                  }
+                }).catch(function () {});
+              });
+            } else if (role) {
+              cmsState.userRole = role;
+              renderFounderToolbar(client);
+            }
+          };
+
+          evaluateRole();
+
+          if (window.CosyAuth && typeof window.CosyAuth.onChange === 'function') {
+            window.CosyAuth.onChange(function () {
+              evaluateRole();
+            });
+          }
+          if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+            window.addEventListener('cosy:auth', evaluateRole);
           }
         });
-
-        cmsState.client = client;
-
-        // Apply live page overrides for all visitors
-        fetchAndApplyOverrides(client);
-
-        // Check user role for rendering Founder CMS toolbar
-        var evaluateRole = function () {
-          var role = detectUserRole(client);
-          if (!role && client.auth && client.auth.getSession) {
-            client.auth.getSession().then(function (res) {
-              if (res && res.data && res.data.session && res.data.session.user) {
-                var user = res.data.session.user;
-                var appRole = user.app_metadata ? user.app_metadata.role : null;
-                var metaRole = user.user_metadata ? user.user_metadata.role : null;
-                var resolved = isAuthorizedRole(appRole) ? appRole : (isAuthorizedRole(metaRole) ? metaRole : null);
-                if (resolved) {
-                  cmsState.userRole = resolved;
-                  renderFounderToolbar(client);
-                  return;
-                }
-              }
-              // Try my_access RPC call
-              client.rpc('my_access').then(function (accRes) {
-                if (accRes && accRes.data && isAuthorizedRole(accRes.data.role)) {
-                  cmsState.userRole = accRes.data.role;
-                  renderFounderToolbar(client);
-                }
-              }).catch(function () {});
-            });
-          } else if (role) {
-            cmsState.userRole = role;
-            renderFounderToolbar(client);
-          }
-        };
-
-        evaluateRole();
-
-        if (window.CosyAuth && typeof window.CosyAuth.onChange === 'function') {
-          window.CosyAuth.onChange(function () {
-            evaluateRole();
-          });
-        }
-        if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
-          window.addEventListener('cosy:auth', evaluateRole);
-        }
       });
     });
   }
@@ -387,6 +436,9 @@
     init: checkAndInit,
     isAuthorizedRole: isAuthorizedRole,
     detectUserRole: detectUserRole,
+    isValidOverrideKey: isValidOverrideKey,
+    sanitizeOverrideHtml: sanitizeOverrideHtml,
+    applyOverrides: applyOverrides,
     getState: function () { return cmsState; }
   };
 })();

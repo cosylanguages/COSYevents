@@ -575,4 +575,82 @@ BEGIN
   END IF;
 END $$;
 
+-- ============================================================================
+-- 5. CMS Page Overrides Hardening Tests
+-- ============================================================================
+RESET ROLE;
+
+-- Setup Founder user for write test
+SET ROLE authenticated;
+SET LOCAL request.jwt.claim.sub = '11111111-1111-1111-1111-111111111111'; -- Founder One
+
+DO $$
+BEGIN
+  -- Founder insert valid override
+  INSERT INTO public.cms_page_overrides (page_path, content)
+  VALUES ('/index.html', '{"main-title": "<p>Hello</p>"}'::jsonb)
+  ON CONFLICT (page_path) DO UPDATE SET content = EXCLUDED.content;
+END $$;
+
+-- Check page_path invalid characters rejected
+DO $$
+BEGIN
+  PERFORM pg_temp.assert_denied(
+    'INSERT INTO public.cms_page_overrides (page_path, content) VALUES (''/index.html<script>'', ''{}''::jsonb)',
+    'CMS page_path invalid characters'
+  );
+END $$;
+
+-- Check page_path length > 200 rejected
+DO $$
+DECLARE
+  v_long_path text := '/' || repeat('a', 205);
+BEGIN
+  PERFORM pg_temp.assert_denied(
+    'INSERT INTO public.cms_page_overrides (page_path, content) VALUES (''' || v_long_path || ''', ''{}''::jsonb)',
+    'CMS page_path > 200 characters'
+  );
+END $$;
+
+-- Check content size > 200000 octets rejected
+DO $$
+DECLARE
+  v_large_json text := '{"data": "' || repeat('x', 200005) || '"}';
+BEGIN
+  PERFORM pg_temp.assert_denied(
+    'INSERT INTO public.cms_page_overrides (page_path, content) VALUES (''/large.html'', ''' || v_large_json || '''::jsonb)',
+    'CMS content size > 200000 octets'
+  );
+END $$;
+
+-- Student cannot write to cms_page_overrides
+SET LOCAL request.jwt.claim.sub = '33333333-3333-3333-3333-111111111111'; -- Student
+DO $$
+BEGIN
+  PERFORM pg_temp.assert_denied(
+    'INSERT INTO public.cms_page_overrides (page_path, content) VALUES (''/student.html'', ''{}''::jsonb)',
+    'Student insert into cms_page_overrides'
+  );
+END $$;
+
+-- Anon select checks: anon can select allowed columns
+SET ROLE anon;
+SET LOCAL request.jwt.claim.sub = '';
+
+DO $$
+DECLARE
+  v_path text;
+BEGIN
+  SELECT page_path INTO v_path FROM public.cms_page_overrides WHERE page_path = '/index.html';
+  IF v_path <> '/index.html' THEN
+    RAISE EXCEPTION 'Anon select cms_page_overrides failed: expected /index.html, got %', v_path;
+  END IF;
+
+  -- Anon reading updated_by is denied / column privilege check
+  PERFORM pg_temp.assert_denied(
+    'SELECT updated_by FROM public.cms_page_overrides',
+    'Anon select updated_by column'
+  );
+END $$;
+
 ROLLBACK;
