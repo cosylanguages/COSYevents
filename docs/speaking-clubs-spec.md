@@ -9,10 +9,38 @@
   4. **Round 2:** Advanced discussion, debates, or future-focused statements.
   5. **Teacher's Note (Linguistic Corrections):** Review of linguistic mistakes made during the session.
 - **Role-Based Reality:**
-  - **Free Visitors:** See the club list and description. Prompted to unlock.
-  - **Students:** See schedules, active session vocabulary, and full past session history.
+  - **Free Visitors:** See the club list, description, source media links, and free essential source-extracted vocabulary (10 units).
+  - **Students / Active Members:** See schedules, free source vocabulary, paid/gated expanded discussion vocabulary, and full past session history.
   - **Teachers:** See everything students see + preparation topics + active mistake notes area.
 - **Interactivity:** Toggles for Vocabulary, Rounds, and Mistake Notes.
+
+## 1.1 Free vs. Paid Vocabulary Model
+- **Free Source Vocabulary:**
+  - Mandatory 10 vocabulary units extracted directly from reference sources (articles, videos, songs, films, books, summary podcasts).
+  - Purpose: Helps participants understand the primary material before attending the session.
+  - Open to all site visitors.
+- **Paid / Gated Vocabulary:**
+  - Advanced, precise vocabulary, collocations, and speaking expressions designed to expand speaking ability and discussion depth.
+  - Used actively across discussion rounds.
+  - Gated behind authentication/subscription (`shared/js/cosyevents-session.js` / Supabase auth).
+
+## 1.2 "Keeping Up with Science" Club Specification
+- **Focus:** Articles, scientific papers, research findings, and popular science podcasts.
+- **Target Levels:**
+  - Elementary (`A2`, `A2+`)
+  - Intermediate (`B1`, `B1+`)
+  - Advanced (`C1`, `C1+`)
+- **Mandatory Step:** Reading the research article or summary script before the session is an **obligatory requirement**.
+- **Media Triad:** Each session integrates 3 reference media assets:
+  1. Original Research Article 📖
+  2. Summary & Podcast Script (written in our words, serving as the script for the podcast) 📜
+  3. Podcast Audio / Video 🎙️
+- **Round Requirements:**
+  - **Warm-up:** Introduction to the research topic and initial impression check.
+  - **Round 1 (Theoretical Research Analysis & Article Focus):** 10 theoretical items focusing on the article, summary script, and podcast. Every item MUST feature a core science/theoretical question paired with a personal application question (`.round-item-main` + `.round-item-personal`).
+  - **Let's Speak Together:** Collaborative visual or diagram-based synthesis task.
+  - **Round 2 (Agree / Disagree Statements & Future Projections):** 10 agree/disagree statements and future/speculative projections. Every item MUST feature a statement/projection paired with a personal stance question (`.round-item-main` + `.round-item-personal`).
+  - **Teacher's Note:** Linguistic corrections following the 3-color error-type standard.
 
 ## 2. Visual Guidelines
 - **Typography:** Headers: `'Playfair Display'`, Body: `'DM Sans'`, Content: `'Nunito'`.
