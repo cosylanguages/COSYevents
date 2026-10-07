@@ -26,10 +26,11 @@
 
 ## 1.2 "Keeping Up with Science" Club Specification
 - **Focus:** Articles, scientific papers, research findings, and popular science podcasts.
-- **Target Levels:**
-  - Elementary (`A2`, `A2+`)
-  - Intermediate (`B1`, `B1+`)
-  - Advanced (`C1`, `C1+`)
+- **Target Levels (Strict 3-Tier Model):**
+  - **Elementary (`A2`, `A2+`)**
+  - **Intermediate (`B1`, `B1+`)**
+  - **Advanced (`C1`, `C1+`)**
+  *Note:* All sessions strictly adhere to these 3 canonical tiers. Legacy labels like 'Upper-Intermediate (B2)' are mapped to `Intermediate (B1, B1+)`, and 'Beginner / Starter (A2)' are mapped to `Elementary (A2, A2+)`.
 - **Mandatory Step:** Reading the research article or summary script before the session is an **obligatory requirement**.
 - **Media Triad & Alternative Access:** Each session integrates 3 reference media assets:
   1. Original Research Article 📖
