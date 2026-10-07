@@ -38,7 +38,11 @@
 </div>
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">Posture ≠ slouching</div>
 <div class="vocab-def">the position in which someone holds their body when standing or sitting.</div>
 <div class="vocab-example">Good posture improves lung capacity and alertness.</div>
@@ -90,6 +94,14 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Mechanism ≠ chaos', definition:'a system of parts working together in a machine or process.', example:'The physiological mechanism involves hormone regulation and oxygen intake.'}, this)">Add to Dictionary</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
 </section>
 <section id="structure">
 <h2 class="section-title">🎙️ Discussion Structure</h2>
@@ -154,7 +166,7 @@ Explain how physical body language might influence your emotional state.
 </div>
 <div class="round-block round-1 open" id="s-r1">
 <div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
-<span>🔵 Round 1 : Scientific Analysis</span><span class="round-toggle">▲</span>
+<span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">How does maintaining an upright <strong>posture</strong> influence respiratory efficiency and oxygen intake?</div><div class="round-item-personal">★ Are you conscious of your spinal alignment while working?</div></div><div class="round-item"><div class="round-item-main">How does posture affect rapid executive <strong>decision-making</strong> under pressure?</div><div class="round-item-personal">★ Do you stand up during important phone calls or decisions?</div></div><div class="round-item"><div class="round-item-main">What is the connection between physical stance and complex <strong>cognitive</strong> performance?</div><div class="round-item-personal">★ Have you noticed mental fog when slouching for hours?</div></div><div class="round-item"><div class="round-item-main">Why is an <strong>upright</strong> sitting position associated with feelings of dominance and authority?</div><div class="round-item-personal">★ How does body language project confidence in business meetings?</div></div><div class="round-item"><div class="round-item-main">How does physical body alignment modulate psychological <strong>mood</strong> state during stressful tasks?</div><div class="round-item-personal">★ Do physical stretches help relieve bad mood days?</div></div><div class="round-item"><div class="round-item-main">What environmental factors increase mental <strong>alertness</strong> in an office space?</div><div class="round-item-personal">★ Does natural sunlight improve your work alertness?</div></div><div class="round-item"><div class="round-item-main">Why is proper spinal <strong>alignment</strong> essential for preventing long-term muscular strain?</div><div class="round-item-personal">★ Have you ever used posture tracking apps or wearable devices?</div></div><div class="round-item"><div class="round-item-main">What makes an office setup truly <strong>ergonomic</strong> for long computer sessions?</div><div class="round-item-personal">★ How have you customized your home desk setup?</div></div><div class="round-item"><div class="round-item-main">How does confident body language reinforce inner emotional <strong>confidence</strong>?</div><div class="round-item-personal">★ Do you practice power posing before public speaking?</div></div><div class="round-item"><div class="round-item-main">What neurobiological <strong>mechanism</strong> links spinal muscle contraction to emotion centers in the brain?</div><div class="round-item-personal">★ Are you intrigued by mind-body neurobiology research?</div></div></div>
 </div>
@@ -168,10 +180,28 @@ Explain how physical body language might influence your emotional state.
 </div>
 <div class="round-block round-2 open" id="s-r2">
 <div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
-<span>🟢 Round 2 : Scientific Debate &amp; Future Impact</span><span class="round-toggle">▲</span>
+<span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">Adopting an upright <strong>posture</strong> triggers measurable hormonal changes that reduce stress. : Do you agree or disagree?</div><div class="round-item-personal">★ Believe body language changes brain chemistry?</div></div><div class="round-item"><div class="round-item-main">Complex <strong>decision-making</strong> is faster and more accurate when standing or sitting tall. : Do you agree or disagree?</div><div class="round-item-personal">★ Prefer standing meetings over sitting discussions?</div></div><div class="round-item"><div class="round-item-main">Physical posture plays a direct role in sustaining peak <strong>cognitive</strong> focus. : Do you agree or disagree?</div><div class="round-item-personal">★ Notice your attention drop when slouching?</div></div><div class="round-item"><div class="round-item-main">Remaining in an <strong>upright</strong> position during negotiations communicates authority effectively. : Do you agree or disagree?</div><div class="round-item-personal">★ Conscious of your posture in meetings?</div></div><div class="round-item"><div class="round-item-main">Improving daily posture is a more effective long-term strategy for <strong>mood</strong> regulation than medication. : Do you agree or disagree?</div><div class="round-item-personal">★ Value physical alignment for emotional health?</div></div><div class="round-item"><div class="round-item-main">Maintaining high mental <strong>alertness</strong> throughout the day requires hourly movement breaks. : Do you agree or disagree?</div><div class="round-item-personal">★ Take movement breaks during work hours?</div></div><div class="round-item"><div class="round-item-main">Correcting spinal <strong>alignment</strong> early prevents debilitating chronic musculoskeletal disorders. : Do you agree or disagree?</div><div class="round-item-personal">★ See a physical therapist for checkups?</div></div><div class="round-item"><div class="round-item-main">Employers should provide fully adjustable <strong>ergonomic</strong> workstations for all desk employees. : Do you agree or disagree?</div><div class="round-item-personal">★ Should ergonomic furniture be mandatory in offices?</div></div><div class="round-item"><div class="round-item-main">Projecting nonverbal <strong>confidence</strong> through body language improves professional success. : Do you agree or disagree?</div><div class="round-item-personal">★ Judge people's confidence by their walk and posture?</div></div><div class="round-item"><div class="round-item-main">Understanding the neurobiological <strong>mechanism</strong> of embodied cognition will transform mental healthcare. : Do you agree or disagree?</div><div class="round-item-personal">★ Interested in embodied psychology research?</div></div></div>
 </div>
+
+<div class="round-block wrap-up open" id="s-wrapup">
+<div class="round-header" onclick="COSY.toggleRound('s-wrapup')" style="background:#FEE2E2; border-left: 5px solid #DC2626;">
+<span>🎤 Wrap-up & Reflection : Homework & Additional Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Summarize your key scientific takeaways from today's session and prepare your post-session reflection or homework task.
+</p>
+<div style="background: rgba(220, 38, 38, 0.03); border: 1px dashed rgba(220, 38, 38, 0.3); padding: 1.25rem; border-radius: 12px;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #991B1B;">⚡ Reflection / Homework Challenge:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Prepare a 1-minute voice recording or short summary: <em>How will the research discussed today impact technology or society over the coming decade?</em>
+</p>
+</div>
+</div>
+</div>
+
 <div class="mistake-block open" id="s-mistakes">
 <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
 <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>

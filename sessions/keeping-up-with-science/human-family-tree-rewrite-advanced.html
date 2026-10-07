@@ -40,7 +40,11 @@
 
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">Paleoanthropology ≠ Modern sociology</div>
 <div class="vocab-def">the branch of anthropology concerned with fossil hominids.</div>
 <div class="vocab-example">Paleoanthropology reshapes our understanding of human origins.</div>
@@ -92,6 +96,32 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Archaic', definition:'very old or old-fashioned; belonging to an earlier period.', example:'Archaic human populations possessed sophisticated tool-making skills.'}, this)">Add to Dictionary</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
+
+<div class="round-block wrap-up open" id="s-wrapup">
+<div class="round-header" onclick="COSY.toggleRound('s-wrapup')" style="background:#FEE2E2; border-left: 5px solid #DC2626;">
+<span>🎤 Wrap-up & Reflection : Homework & Additional Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Summarize your key scientific takeaways from today's session and prepare your post-session reflection or homework task.
+</p>
+<div style="background: rgba(220, 38, 38, 0.03); border: 1px dashed rgba(220, 38, 38, 0.3); padding: 1.25rem; border-radius: 12px;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #991B1B;">⚡ Reflection / Homework Challenge:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Prepare a 1-minute voice recording or short summary: <em>How will the research discussed today impact technology or society over the coming decade?</em>
+</p>
+</div>
+</div>
+</div>
+
 </section>
 
 <section id="structure">
@@ -117,7 +147,7 @@
 
 <div class="round-block round-1 open" id="s-r1">
 <div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
-<span>🔵 Round 1: Core Exploration (Units 1–5)</span><span class="round-toggle">▲</span>
+<span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
 <div class="round-item"><div class="round-item-main">How does ancient <strong>genome</strong> sequencing challenge traditional models of human <strong>lineage</strong>?</div>
@@ -140,7 +170,7 @@
 
 <div class="round-block round-2 open" id="s-r2">
 <div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
-<span>🟢 Round 2: Deep Speculation &amp; Future Horizon (Units 6–10)</span><span class="round-toggle">▲</span>
+<span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
 <div class="round-item"><div class="round-item-main">How will future discoveries in <strong>paleoanthropology</strong> alter our concept of human identity?</div>

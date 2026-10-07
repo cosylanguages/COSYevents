@@ -35,12 +35,13 @@
   1. Original Research Article 📖
   2. Summary & Podcast Script (written in our words, serving as the script for the podcast) 📜
   3. Podcast Audio / Video 🎙️
-- **Round Requirements:**
-  - **Warm-up:** Introduction to the research topic and initial impression check.
-  - **Round 1 (Theoretical Research Analysis & Article Focus):** 10 theoretical items focusing on the article, summary script, and podcast. Every item MUST feature a core science/theoretical question paired with a personal application question (`.round-item-main` + `.round-item-personal`).
-  - **Let's Speak Together:** Collaborative visual or diagram-based synthesis task.
-  - **Round 2 (Agree / Disagree Statements & Future Projections):** 10 agree/disagree statements and future/speculative projections. Every item MUST feature a statement/projection paired with a personal stance question (`.round-item-main` + `.round-item-personal`).
-  - **Teacher's Note:** Linguistic corrections following the 3-color error-type standard.
+- **Round Requirements (Canonical 6-Part Flow):**
+  1. **🟠 Warm-up:** Introduction to the research topic, initial engagement, and source material check.
+  2. **🔵 Round 1 (Theoretical Research Analysis & Article Focus):** 10 theoretical items focusing on the article, summary script, and podcast. Every item MUST feature a core science/theoretical question paired with a personal application question (`.round-item-main` + `.round-item-personal`).
+  3. **🟣 Intermediate Discussion (Grammar Practice & Collaborative Synthesis):** Interactive grammar exercise on target connectors (e.g. contrast/cause-effect), followed by visual diagram synthesis or scenario cards (Let's Speak Together / Scientific Thinking / Headline Game).
+  4. **🟢 Round 2 (Agree / Disagree Statements & Future Projections):** 10 agree/disagree statements and future/speculative projections. Every item MUST feature a statement/projection paired with a personal stance question (`.round-item-main` + `.round-item-personal`).
+  5. **🎤 Wrap-up & Reflection (Homework / Additional Discussion / Challenge):** Final synthesis, 1-minute TED Talk style presentation or reflection challenge for homework and post-session discussion.
+  6. **✏️ Teacher's Note:** Linguistic corrections following the 3-color error-type standard.
 
 ## 2. Visual Guidelines
 - **Typography:** Headers: `'Playfair Display'`, Body: `'DM Sans'`, Content: `'Nunito'`.

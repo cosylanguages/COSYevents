@@ -77,7 +77,11 @@
 
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">Dementia</div>
 <div class="vocab-def">a chronic mental disorder marked by memory failures.</div>
 <div class="vocab-example">Dementia is a challenging condition for aging families.</div>
@@ -129,6 +133,14 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Epidemiology', definition:'the branch of medicine dealing with disease incidence.', example:'Epidemiology studies help us identify national health trends.'}, this)">Add to Dictionary</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
 </section>
 <section id="structure">
 <h2 class="section-title">🎙️ Discussion Structure</h2>
@@ -193,7 +205,7 @@ Explain how the location where we live affects our health, using cause and effec
 </div>
 </div>
 <div class="round-block round-1 open" id="s-r1">
-<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;"><span>🔵 Round 1: Understand the Discovery</span><span class="round-toggle">▲</span></div>
+<div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;"><span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span></div>
 <div class="round-body" style="display:block;">
 <div class="round-type-badge">Discussion</div>
 <div class="round-item"><div class="round-item-main">According to the article, what environmental features make certain <strong>urban</strong> locations safer for senior citizens?</div>
@@ -241,7 +253,7 @@ Explain how the location where we live affects our health, using cause and effec
 </div>
 </div>
 <div class="round-block round-2 open" id="s-r2">
-<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;"><span>🟢 Round 2: The Future: Speculative Projections</span><span class="round-toggle">▲</span></div>
+<div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;"><span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span></div>
 <div class="round-body" style="display:block;">
 <div class="round-type-badge">Predictions</div>
 <div class="round-item"><div class="round-item-main">If future research continues to support this hypothesis, urban planning will outlaw any high-rise building that does not incorporate vertical <strong>greenery</strong>.</div>

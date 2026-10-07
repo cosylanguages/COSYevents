@@ -38,7 +38,11 @@
 </div>
 <section id="vocabulary">
 <h2 class="section-title">📖 Session Vocabulary</h2>
-<div class="vocab-grid-10">
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
+    <div class="vocab-grid-10">
 <div class="vocab-card"><div class="vocab-word">Theory ≠ fact</div>
 <div class="vocab-def">a formal idea or set of ideas intended to explain something.</div>
 <div class="vocab-example">Scientists are re-examining a 42-year-old childhood obesity theory.</div>
@@ -90,6 +94,14 @@
 <button class="btn-add-dict" onclick="COSY.addToDict({word:'Longitudinal ≠ snapshot', definition:'involving information about the same subjects over a long period of time.', example:'Longitudinal studies provide robust evidence across decades.'}, this)">Add to Dictionary</button>
 </div>
 </div>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
 </section>
 <section id="structure">
 <h2 class="section-title">🎙️ Discussion Structure</h2>
@@ -154,7 +166,7 @@ Speculate on why a long-standing scientific theory might have gone unchallenged 
 </div>
 <div class="round-block round-1 open" id="s-r1">
 <div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
-<span>🔵 Round 1 : Scientific Analysis</span><span class="round-toggle">▲</span>
+<span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">Why must a long-standing scientific <strong>theory</strong> be re-evaluated when new evidence emerges?</div><div class="round-item-personal">★ How do you react when a health belief you held turns out to be inaccurate?</div></div><div class="round-item"><div class="round-item-main">How does human basal <strong>metabolism</strong> adapt during periods of intense physical growth?</div><div class="round-item-personal">★ Are you conscious of your daily metabolic rate?</div></div><div class="round-item"><div class="round-item-main">What evidence is needed to transform a scientific <strong>hypothesis</strong> into established consensus?</div><div class="round-item-personal">★ Do you enjoy reading about medical science breakthroughs?</div></div><div class="round-item"><div class="round-item-main">How does daily caloric <strong>expenditure</strong> vary between active children and adults?</div><div class="round-item-personal">★ Do you track your physical activity using smart wearables?</div></div><div class="round-item"><div class="round-item-main">Why does confusing statistical <strong>correlation</strong> with direct causation lead to flawed health advice?</div><div class="round-item-personal">★ Have you noticed misleading health headlines in news media?</div></div><div class="round-item"><div class="round-item-main">What factors explain the growing <strong>prevalence</strong> of childhood metabolic disorders worldwide?</div><div class="round-item-personal">★ Are health habits in your country improving or worsening?</div></div><div class="round-item"><div class="round-item-main">How do ultra-processed foods affect total <strong>caloric</strong> intake and appetite regulation?</div><div class="round-item-personal">★ How carefully do you read nutrition labels on food packages?</div></div><div class="round-item"><div class="round-item-main">Why is a critical <strong>re-evaluation</strong> of public health guidelines necessary every decade?</div><div class="round-item-personal">★ Should dietary guidelines be updated more frequently?</div></div><div class="round-item"><div class="round-item-main">How damaging is a prolonged <strong>sedentary</strong> lifestyle for growing children?</div><div class="round-item-personal">★ How many hours a day do you spend sitting at a desk?</div></div><div class="round-item"><div class="round-item-main">What insights can a <strong>longitudinal</strong> medical study provide that short trials cannot?</div><div class="round-item-personal">★ Do long-term population studies interest you?</div></div></div>
 </div>
@@ -168,10 +180,28 @@ Speculate on why a long-standing scientific theory might have gone unchallenged 
 </div>
 <div class="round-block round-2 open" id="s-r2">
 <div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
-<span>🟢 Round 2 : Scientific Debate &amp; Future Impact</span><span class="round-toggle">▲</span>
+<span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;"><div class="round-item"><div class="round-item-main">A widely accepted medical <strong>theory</strong> should be challenged whenever contradictory data arises. : Do you agree or disagree?</div><div class="round-item-personal">★ Trust established medical consensus or new research more?</div></div><div class="round-item"><div class="round-item-main">Individual basal <strong>metabolism</strong> plays a bigger role in weight management than willpower. : Do you agree or disagree?</div><div class="round-item-personal">★ Is weight loss mostly genetics or lifestyle?</div></div><div class="round-item"><div class="round-item-main">Testing a controversial scientific <strong>hypothesis</strong> requires total transparency in research funding. : Do you agree or disagree?</div><div class="round-item-personal">★ Skeptical of pharmaceutical-sponsored studies?</div></div><div class="round-item"><div class="round-item-main">Measuring daily energy <strong>expenditure</strong> accurately is essential for designing childhood health programs. : Do you agree or disagree?</div><div class="round-item-personal">★ Should schools monitor children's fitness levels?</div></div><div class="round-item"><div class="round-item-main">Public health policies often mistake simple <strong>correlation</strong> for actual cause and effect. : Do you agree or disagree?</div><div class="round-item-personal">★ Can health advice in popular media be trusted?</div></div><div class="round-item"><div class="round-item-main">The increasing <strong>prevalence</strong> of sedentary lifestyles is the primary driver of modern health crises. : Do you agree or disagree?</div><div class="round-item-personal">★ Is modern technology making societies unhealthy?</div></div><div class="round-item"><div class="round-item-main">Regulating high <strong>caloric</strong> junk food advertising targeted at children is a government duty. : Do you agree or disagree?</div><div class="round-item-personal">★ Should fast food ads be banned on children's channels?</div></div><div class="round-item"><div class="round-item-main">A comprehensive <strong>re-evaluation</strong> of school lunch menus is urgently needed globally. : Do you agree or disagree?</div><div class="round-item-personal">★ Were school lunches healthy when you were young?</div></div><div class="round-item"><div class="round-item-main">Combating <strong>sedentary</strong> behavior in schools requires mandatory outdoor sports every day. : Do you agree or disagree?</div><div class="round-item-personal">★ Support mandatory daily PE classes for pupils?</div></div><div class="round-item"><div class="round-item-main">Conducting a 40-year <strong>longitudinal</strong> health study provides the gold standard of scientific truth. : Do you agree or disagree?</div><div class="round-item-personal">★ Value long-term data over quick health surveys?</div></div></div>
 </div>
+
+<div class="round-block wrap-up open" id="s-wrapup">
+<div class="round-header" onclick="COSY.toggleRound('s-wrapup')" style="background:#FEE2E2; border-left: 5px solid #DC2626;">
+<span>🎤 Wrap-up & Reflection : Homework & Additional Discussion</span><span class="round-toggle">▲</span>
+</div>
+<div class="round-body" style="display:block; padding:1.5rem 1.25rem;">
+<p style="margin-bottom: 1rem; line-height: 1.6; color: var(--ink-soft); font-size: 0.95rem;">
+Summarize your key scientific takeaways from today's session and prepare your post-session reflection or homework task.
+</p>
+<div style="background: rgba(220, 38, 38, 0.03); border: 1px dashed rgba(220, 38, 38, 0.3); padding: 1.25rem; border-radius: 12px;">
+<strong style="display: block; margin-bottom: 0.5rem; color: #991B1B;">⚡ Reflection / Homework Challenge:</strong>
+<p style="margin: 0; font-size: 0.95rem; color: var(--ink); line-height: 1.6;">
+Prepare a 1-minute voice recording or short summary: <em>How will the research discussed today impact technology or society over the coming decade?</em>
+</p>
+</div>
+</div>
+</div>
+
 <div class="mistake-block open" id="s-mistakes">
 <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
 <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▲</span>

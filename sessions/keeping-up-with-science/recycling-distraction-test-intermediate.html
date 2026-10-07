@@ -71,6 +71,10 @@
 
   <section id="vocabulary">
     <h2 class="section-title">📖 Session Vocabulary</h2>
+  <div id="vocabulary-free">
+    <div class="vim-instruction" style="margin-bottom: 1rem;">
+      <strong>📖 Essential Source Vocabulary (Free Access):</strong> Extracted directly from reference research articles, summary scripts, and podcasts to support source material comprehension.
+    </div>
     <div class="vocab-grid-10">
       <div class="vocab-card">
         <div class="vocab-word">Distraction</div>
@@ -133,7 +137,15 @@
         <button class="btn-add-dict" onclick="COSY.addToDict({word:'Infrastructure', definition:'the basic physical and organizational structures needed for the operation of a society.', example:'Our city lacks the basic sorting infrastructure required for efficient recycling.'}, this)">Add to Dictionary</button>
       </div>
     </div>
-  </section>
+  </div>
+
+  <div id="vocabulary-paid" class="ce-gated-section" style="margin-top: 2rem;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--indigo); margin-bottom: 0.75rem;">🔒 Advanced Discussion Vocabulary & Speaking Expressions (Gated / Paid Access)</h3>
+    <div class="vim-instruction">
+      Provides specific, precise, and high-impact vocabulary units designed to expand speaking ability, precision, and nuance during discussion rounds. Content dynamically rendered for active members.
+    </div>
+  </div>
+</section>
 
   <section id="structure">
     <h2 class="section-title">🎙️ Discussion Structure</h2>
@@ -152,7 +164,7 @@
 
       <div class="round-block round-1 open" id="s-r1">
         <div class="round-header" onclick="COSY.toggleRound('s-r1')" style="background:#E1F5EE;">
-          <span>🔵 Round 1 : Understand the Discovery</span><span class="round-toggle">▲</span>
+          <span>🔵 Round 1: Theoretical Research Analysis & Article Focus</span><span class="round-toggle">▲</span>
         </div>
         <div class="round-body" style="display:block;">
           <div class="round-type-badge">Questions</div>
@@ -214,7 +226,7 @@
 
       <div class="round-block round-2 open" id="s-r2">
         <div class="round-header" onclick="COSY.toggleRound('s-r2')" style="background:#EAF3DE;">
-          <span>🟢 Round 2 : The Future: Speculative Projections</span><span class="round-toggle">▲</span>
+          <span>🟢 Round 2: Agree / Disagree Statements & Future Projections</span><span class="round-toggle">▲</span>
         </div>
         <div class="round-body" style="display:block;">
           <div class="round-type-badge">Projections</div>
