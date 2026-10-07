@@ -1,0 +1,39 @@
+{
+  "slug": "ordering-food-and-dining-out",
+  "event": "english-a2-foundations",
+  "title": "Ordering Food and Dining Out",
+  "theme": "Food & Socializing",
+  "language": "English",
+  "level": "A2",
+  "date": "2025-05-17",
+  "host": "James York",
+  "summary": "Learn polite phrases for ordering food at a restaurant, asking for recommendations, and paying the bill.",
+  "activities": [
+    {
+      "type": "discussion",
+      "title": "Favorite Meals",
+      "instructions": "Discuss your favorite restaurant experience and what dishes you enjoy ordering.",
+      "content": "Secret note: Ask partner if they prefer dining in or takeaway."
+    },
+    {
+      "type": "simulation",
+      "title": "At the Bistro",
+      "instructions": "Roleplay a diner ordering lunch from a waiter using polite English expressions.",
+      "content": "Gated waiter menu prompt with hidden price calculation questions."
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "appetizer",
+      "translation": "entrée",
+      "example": "We ordered garlic bread as an appetizer.",
+      "level": "A2"
+    },
+    {
+      "word": "bill",
+      "translation": "l'addition",
+      "example": "Could we please have the bill when you are ready?",
+      "level": "A2"
+    }
+  ]
+}
