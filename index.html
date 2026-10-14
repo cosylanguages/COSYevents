@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COSYevents - Language Learning Events & Public Calendar</title>
   <meta name="description" content="Discover language-learning events and upcoming sessions across multiple languages and levels.">
+  <link rel="stylesheet" href="shared/css/tokens.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -27,6 +28,18 @@
   </script>
 </head>
 <body class="min-h-full flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-200">
+
+  <div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
+    <div class="cosy-strip-inner">
+      <span class="cosy-strip-brand">🌐 COSY Ecosystem:</span>
+      <ul class="cosy-strip-links">
+        <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
+        <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
+        <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
+        <li><a href="index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
+      </ul>
+    </div>
+  </div>
 
   <!-- Navigation Header -->
   <header class="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 backdrop-blur sticky top-0 z-10">
