@@ -111,11 +111,6 @@ lets_speak_together:
     <div class="lst-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
     <div class="lst-item" style="text-align:center; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; background: rgba(0,0,0,0.02);"><span style="font-size:2.5rem;">🚀</span><div style="font-weight:600; margin-top:0.5rem;">Kinetic Impactor</div><p style="font-size:0.85rem; color:var(--ink-soft); margin:5px 0 0 0;">Crashing a heavy rocket directly into the rock to shift its orbit.</p></div>
     <div class="lst-item" style="text-align:center; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; background: rgba(186, 117, 23, 0.05); border-color: rgba(186, 117, 23, 0.3);"><span style="font-size:2.5rem;">🛰️</span><div style="font-weight:600; margin-top:0.5rem; color: #5c390b;">Gravity Tractor</div><p style="font-size:0.85rem; color:var(--ink-soft); margin:5px 0 0 0;">Using a nearby satellite's gravity to gently pull the asteroid away.</p>
-    </div>
-    </div>
-    </div>
-    </div>
-
 round_2:
   title: 'Round 2 : Agree or Disagree: The Future'
   badge: Debate

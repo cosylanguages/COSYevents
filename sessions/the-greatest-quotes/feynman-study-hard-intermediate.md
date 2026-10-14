@@ -111,11 +111,6 @@ lets_speak_together:
     <div class="lst-item" onclick="this.style.background='#EEEDFE';" style="border: 1px solid #EEEDFE; padding: 1.25rem; border-radius: 12px; background: rgba(238, 237, 254, 0.2); transition: transform 0.2s; cursor: pointer;">
     <span style="font-size:2rem; display:block; margin-bottom:0.5rem;">🗣️ Learning a Language</span>
     <div style="font-size:0.9rem; line-height:1.5;">Watching foreign comedies and speaking in a messy, undisciplined manner without looking at any grammar books.
-    </div>
-    </div>
-    </div>
-    </div>
-
 round_2:
   title: 'Round 2 : Speculating on the Future'
   badge: ''

@@ -66,8 +66,6 @@ lets_speak_together:
                   <span style="font-size:2rem; display:block; margin-bottom:0.5rem;">📚</span>
                   <strong>the high-stakes prep</strong>
                   <p style="font-size:0.8rem; color:var(--muted); margin:0.5rem 0 0;">Structured sports, reading books, learning musical instruments, and early training for future adult accomplishments.</p>
-    </div>
-    </div>
 round_2:
   title: 'Round 2 : Speculative Analysis'
   badge: Projections

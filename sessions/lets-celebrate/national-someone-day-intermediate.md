@@ -125,11 +125,6 @@ lets_speak_together:
     <span style="font-size: 2rem;">🏡</span>
     <h5 style="margin: 0.5rem 0 0.25rem 0; font-size: 0.95rem;">A Caring Neighbor</h5>
     <p style="margin: 0; font-size: 0.8rem; color: var(--muted);">The neighbor <strong>who</strong> keeps your keys <strong>to protect</strong> your home when you travel.</p>
-    </div>
-    </div>
-    </div>
-    </div>
-
 round_2:
   title: 'Round 2 : Agree or Disagree: The Future'
   badge: Debate
