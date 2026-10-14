@@ -250,40 +250,7 @@
         <div class="mistake-header" onclick="COSY.toggleBlock('s-mistakes')">
           <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle" tabindex="0" role="button">▲</span>
         </div>
-        <div class="mistake-body" style="display:block;">
-          <div class="vim-instruction">
-            <strong>Developer Correction & Feedback Guidelines:</strong><br>
-            1. <strong>Do not cross out or strike through the whole sentence.</strong> Accentuate/highlight specific errors using the three error-type system below.<br>
-            2. <strong>1. Extra/Wrong Word:</strong> On the wrong side, wrap ONLY the erroneous word in <code>&lt;span class="mistake-flag-wrong"&gt;</code>. On the correct side, wrap the replacement in <code>&lt;span class="mistake-flag-right"&gt;</code> (or use <code>&lt;span class="mistake-null"&gt;X&lt;/span&gt;</code> for pure deletion).<br>
-            3. <strong>2. Missing Word:</strong> On the wrong side, place <code>&lt;span class="mistake-null"&gt;X&lt;/span&gt;</code> at the gap. On the correct side, wrap the inserted word in <code>&lt;span class="mistake-flag-right"&gt;</code>.<br>
-            4. <strong>3. Word Order / Structure:</strong> On BOTH sides, wrap matching sentence constituents in <code>mistake-part-subj</code> (Subject), <code>mistake-part-verb</code> (Verb), <code>mistake-part-obj</code> (Object), <code>mistake-part-mod</code> (Modifier), or <code>mistake-part-other</code> so reordering is visually traceable by color. Do not use flag or null classes in this mode.<br>
-            5. <strong>Level-Appropriate Diversification:</strong> Starter/Elementary (basic grammar/vocab swaps), Intermediate (word order/structure or collocations), Advanced (register/nuance adjustments or direct deletions).
-          </div>
-
-          <!-- Starter/Elementary Example (Extra/Wrong Word) -->
-          <div class="mistake-item">
-            <span class="mistake-wrong">He <span class="mistake-flag-wrong">have</span> went to Paris</span>
-            <span class="mistake-arrow">→</span>
-            <span class="mistake-right">He <span class="mistake-flag-right">has</span> gone to Paris</span>
-            <span class="mistake-note-text">(Wrong word: 'have' vs singular auxiliary 'has' for present perfect)</span>
-          </div>
-
-          <!-- Intermediate Example (Word Order / Structure) -->
-          <div class="mistake-item">
-            <span class="mistake-wrong"><span class="mistake-part-subj">We</span> <span class="mistake-part-verb">discussed</span> <span class="mistake-part-mod">yesterday</span> <span class="mistake-part-obj">the problem</span></span>
-            <span class="mistake-arrow">→</span>
-            <span class="mistake-right"><span class="mistake-part-subj">We</span> <span class="mistake-part-verb">discussed</span> <span class="mistake-part-obj">the problem</span> <span class="mistake-part-mod">yesterday</span></span>
-            <span class="mistake-note-text">(Word order: Verb + direct object + temporal adverbial modifier)</span>
-          </div>
-
-          <!-- Advanced Example (Deletion / Extra Word) -->
-          <div class="mistake-item">
-            <span class="mistake-wrong">We discussed <span class="mistake-flag-wrong">about</span> the problem</span>
-            <span class="mistake-arrow">→</span>
-            <span class="mistake-right">We discussed <span class="mistake-null">X</span> the problem</span>
-            <span class="mistake-note-text">(Extra word deletion: 'discuss' is transitive and takes a direct object without 'about')</span>
-          </div>
-        </div>
+        <div class="mistake-body" style="display:block;"></div>
       </div>
 
     </div>
