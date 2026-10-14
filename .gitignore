@@ -4,3 +4,5 @@ private/
 .env
 .env.local
 *.log
+verification/
+test-results/
