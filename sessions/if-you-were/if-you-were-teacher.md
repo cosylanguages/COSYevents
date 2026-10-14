@@ -66,6 +66,8 @@ lets_speak_together:
                   <span style="font-size:2rem; display:block; margin-bottom:0.5rem;">🔥</span>
                   <strong>the spark-igniter</strong>
                   <p style="font-size:0.8rem; color:var(--muted); margin:0.5rem 0 0;">Allowing creative chaos, letting kids co-design assignments, focusing heavily on emotional support and curiosity.</p>
+    </div>
+    </div>
 round_2:
   title: 'Round 2 : Speculative Analysis'
   badge: Projections

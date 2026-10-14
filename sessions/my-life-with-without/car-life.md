@@ -56,6 +56,9 @@ lets_speak_together:
   note: |-
     <div class="lst-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
     <div class="lst-item" style="text-align:center;"><span style="font-size:2.5rem;">🚗</span><div style="font-weight:600;">The Private Cabin (With)
+    </div>
+    </div>
+    </div>
 round_2:
   title: 'Round 2 : My Life Without a Car'
   badge: Speculative Adaptation

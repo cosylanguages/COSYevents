@@ -106,6 +106,11 @@ lets_speak_together:
     <p class="round-note">Visual comparison: High-powered boardroom vs Peaceful mountain retreat.</p>
     <div class="lst-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
     <div class="lst-item" style="text-align:center;"><span style="font-size:2.5rem;">💼</span><div style="font-weight:600;">Corporate Executive (High Income, 80-hour week)
+    </div>
+    </div>
+    </div>
+    </div>
+
 round_2:
   title: 'Round 2 : Disadvantages (A/B Ideas)'
   badge: Debate

@@ -97,6 +97,11 @@ lets_speak_together:
     <li>Independence</li>
     <li>Creative Freedom</li>
     </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+
 round_2:
   title: 'Round 2 : Disadvantages (A/B Ideas)'
   badge: Debate
