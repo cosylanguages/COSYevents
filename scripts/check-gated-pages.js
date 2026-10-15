@@ -80,26 +80,14 @@ function checkGatedPages() {
   for (const filePath of allHtml) {
     const relPath = path.relative(ROOT, filePath);
     const content = fs.readFileSync(filePath, 'utf8');
-    const isGated = content.includes('name="cosy-gated" content="true"');
 
-    if (isGated) {
-      gatedPagesCount++;
-
-      // Check meta noindex, nofollow
-      if (!content.includes('<meta name="robots" content="noindex,nofollow"/>') &&
-          !content.includes('<meta name="robots" content="noindex, nofollow"/>')) {
-        console.error(`[ERROR] ${relPath} missing noindex,nofollow meta tag`);
-        errors++;
-      }
-
-      // Check meta no-referrer
-      if (!content.includes('<meta name="referrer" content="no-referrer"/>')) {
-        console.error(`[ERROR] ${relPath} missing no-referrer meta tag`);
-        errors++;
-      }
+    if (!content.includes('name="cosy-gated" content="true"')) {
+      continue;
     }
 
-    // Check size of stripped (non-vocabulary) content < 15 KB across all HTML pages
+    gatedPagesCount++;
+
+    // Check size of stripped (non-vocabulary) content < 15 KB
     const strippedContent = stripVocabularyContent(content);
     const strippedSizeBytes = Buffer.byteLength(strippedContent, 'utf8');
     if (strippedSizeBytes >= MAX_STRIPPED_SIZE_BYTES) {
@@ -107,16 +95,27 @@ function checkGatedPages() {
       errors++;
     }
 
-    // Check for private content markers across all HTML pages
+    // Check meta noindex, nofollow
+    if (!content.includes('<meta name="robots" content="noindex,nofollow"/>') &&
+        !content.includes('<meta name="robots" content="noindex, nofollow"/>')) {
+      console.error(`[ERROR] ${relPath} missing noindex,nofollow meta tag`);
+      errors++;
+    }
+
+    // Check meta no-referrer
+    if (!content.includes('<meta name="referrer" content="no-referrer"/>')) {
+      console.error(`[ERROR] ${relPath} missing no-referrer meta tag`);
+      errors++;
+    }
+
+    // Check for private content markers
     for (const marker of PRIVATE_CONTENT_MARKERS) {
       if (content.includes(`class="${marker}`) ||
           content.includes(`class='${marker}`) ||
           content.includes(`id="${marker}`) ||
-          content.includes(`id='${marker}`) ||
-          content.includes(marker)) {
+          content.includes(`id='${marker}`)) {
         console.error(`[ERROR] ${relPath} contains private content marker: ${marker}`);
         errors++;
-        break;
       }
     }
   }
