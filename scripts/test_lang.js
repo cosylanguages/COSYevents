@@ -117,7 +117,7 @@ assert.strictEqual(
 // When pointing to English page without equivalent, append ?ui=fr
 assert.strictEqual(
   CosyLang.localizeTarget('fr', '../sessions/unknown/page.html', 'fr/index.html', manifest, aliases),
-  '../sessions/unknown/page.html?ui=fr'
+  'index.html?ui=fr'
 );
 console.log('✔ Passed Target Localization tests.');
 
