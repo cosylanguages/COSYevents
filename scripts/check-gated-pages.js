@@ -68,22 +68,38 @@ function checkGatedPages() {
     // If not a git repository or git command fails, continue
   }
 
-  // 2. Scan all HTML files for cosy-gated meta tag
-  const sessionsDir = path.join(ROOT, 'sessions');
-  const allHtml = getAllHtmlFiles(sessionsDir);
+  // 2. Scan all HTML files across sessions/, events/, el/, fr/, it/, ru/
+  const targetDirs = ['sessions', 'events', 'el', 'fr', 'it', 'ru'];
+  let allHtml = [];
+  targetDirs.forEach(dir => {
+    allHtml = allHtml.concat(getAllHtmlFiles(path.join(ROOT, dir)));
+  });
+
   let gatedPagesCount = 0;
 
   for (const filePath of allHtml) {
     const relPath = path.relative(ROOT, filePath);
     const content = fs.readFileSync(filePath, 'utf8');
+    const isGated = content.includes('name="cosy-gated" content="true"');
 
-    if (!content.includes('name="cosy-gated" content="true"')) {
-      continue;
+    if (isGated) {
+      gatedPagesCount++;
+
+      // Check meta noindex, nofollow
+      if (!content.includes('<meta name="robots" content="noindex,nofollow"/>') &&
+          !content.includes('<meta name="robots" content="noindex, nofollow"/>')) {
+        console.error(`[ERROR] ${relPath} missing noindex,nofollow meta tag`);
+        errors++;
+      }
+
+      // Check meta no-referrer
+      if (!content.includes('<meta name="referrer" content="no-referrer"/>')) {
+        console.error(`[ERROR] ${relPath} missing no-referrer meta tag`);
+        errors++;
+      }
     }
 
-    gatedPagesCount++;
-
-    // Check size of stripped (non-vocabulary) content < 15 KB
+    // Check size of stripped (non-vocabulary) content < 15 KB across all HTML pages
     const strippedContent = stripVocabularyContent(content);
     const strippedSizeBytes = Buffer.byteLength(strippedContent, 'utf8');
     if (strippedSizeBytes >= MAX_STRIPPED_SIZE_BYTES) {
@@ -91,32 +107,21 @@ function checkGatedPages() {
       errors++;
     }
 
-    // Check meta noindex, nofollow
-    if (!content.includes('<meta name="robots" content="noindex,nofollow"/>') &&
-        !content.includes('<meta name="robots" content="noindex, nofollow"/>')) {
-      console.error(`[ERROR] ${relPath} missing noindex,nofollow meta tag`);
-      errors++;
-    }
-
-    // Check meta no-referrer
-    if (!content.includes('<meta name="referrer" content="no-referrer"/>')) {
-      console.error(`[ERROR] ${relPath} missing no-referrer meta tag`);
-      errors++;
-    }
-
-    // Check for private content markers
+    // Check for private content markers across all HTML pages
     for (const marker of PRIVATE_CONTENT_MARKERS) {
       if (content.includes(`class="${marker}`) ||
           content.includes(`class='${marker}`) ||
           content.includes(`id="${marker}`) ||
-          content.includes(`id='${marker}`)) {
+          content.includes(`id='${marker}`) ||
+          content.includes(marker)) {
         console.error(`[ERROR] ${relPath} contains private content marker: ${marker}`);
         errors++;
+        break;
       }
     }
   }
 
-  console.log(`Scanned ${allHtml.length} total HTML pages. Found ${gatedPagesCount} gated pages.`);
+  console.log(`Scanned ${allHtml.length} total HTML pages across ${targetDirs.join(', ')}. Found ${gatedPagesCount} gated pages.`);
 
   if (errors > 0) {
     console.error(`\n[FAIL] Found ${errors} gated page violation(s).`);
