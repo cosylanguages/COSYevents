@@ -68,9 +68,13 @@ function checkGatedPages() {
     // If not a git repository or git command fails, continue
   }
 
-  // 2. Scan all HTML files for cosy-gated meta tag
-  const sessionsDir = path.join(ROOT, 'sessions');
-  const allHtml = getAllHtmlFiles(sessionsDir);
+  // 2. Scan all HTML files across sessions/, events/, el/, fr/, it/, ru/
+  const targetDirs = ['sessions', 'events', 'el', 'fr', 'it', 'ru'];
+  let allHtml = [];
+  targetDirs.forEach(dir => {
+    allHtml = allHtml.concat(getAllHtmlFiles(path.join(ROOT, dir)));
+  });
+
   let gatedPagesCount = 0;
 
   for (const filePath of allHtml) {
@@ -116,7 +120,7 @@ function checkGatedPages() {
     }
   }
 
-  console.log(`Scanned ${allHtml.length} total HTML pages. Found ${gatedPagesCount} gated pages.`);
+  console.log(`Scanned ${allHtml.length} total HTML pages across ${targetDirs.join(', ')}. Found ${gatedPagesCount} gated pages.`);
 
   if (errors > 0) {
     console.error(`\n[FAIL] Found ${errors} gated page violation(s).`);
