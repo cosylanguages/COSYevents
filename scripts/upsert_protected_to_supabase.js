@@ -75,7 +75,7 @@ async function upsertProtectedRecords(options = { validateOnly: false, filterSes
 
   let upsertedCount = 0;
   for (const record of records) {
-    const payload = {
+    const lessonMetadata = {
       id: record.id,
       language: record.language || 'en',
       cefr: record.cefr || 'b1',
@@ -83,23 +83,49 @@ async function upsertProtectedRecords(options = { validateOnly: false, filterSes
       slug: record.slug || record.id,
       title: record.title || '',
       summary: record.summary || null,
-      body: typeof record.body === 'string' ? record.body : JSON.stringify(record.body),
       updated_at: new Date().toISOString()
     };
 
-    const { error } = await supabase
-      .from('lessons')
-      .upsert(payload, { onConflict: 'id' });
+    const protectedPayload = {
+      lesson_id: record.id,
+      kind: 'session-body',
+      content: typeof record.body === 'string' ? record.body : JSON.stringify(record.body)
+    };
 
-    if (error) {
-      console.error(`[SUPABASE ERROR] Failed to upsert ${record.id}: ${error.message}`);
+    // Upsert metadata in lessons table
+    const { error: metaError } = await supabase
+      .from('lessons')
+      .upsert(lessonMetadata, { onConflict: 'id' });
+
+    if (metaError) {
+      console.error(`[SUPABASE ERROR] Failed to upsert metadata for ${record.id}: ${metaError.message}`);
       errorCount++;
+      continue;
+    }
+
+    // Upsert protected body content in lesson_protected table
+    const { error: protectedError } = await supabase
+      .from('lesson_protected')
+      .upsert(protectedPayload, { onConflict: 'lesson_id,kind' });
+
+    if (protectedError) {
+      // Fallback to lessons.body if lesson_protected table does not exist
+      const { error: fallbackError } = await supabase
+        .from('lessons')
+        .upsert({ ...lessonMetadata, body: protectedPayload.content }, { onConflict: 'id' });
+
+      if (fallbackError) {
+        console.error(`[SUPABASE ERROR] Failed to upsert protected body for ${record.id}: ${fallbackError.message}`);
+        errorCount++;
+      } else {
+        upsertedCount++;
+      }
     } else {
       upsertedCount++;
     }
   }
 
-  console.log(`[SUPABASE UPSERT] Successfully upserted ${upsertedCount} protected records to Supabase 'lessons' table.`);
+  console.log(`[SUPABASE UPSERT] Successfully upserted ${upsertedCount} protected records to Supabase.`);
   return { processedCount, errorCount, dbUpserted: upsertedCount };
 }
 
