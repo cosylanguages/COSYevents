@@ -623,6 +623,14 @@ function generateGatedSessionHtml(data, clubSlug = 'mind-matters', sessionId = '
 
   const sid = sessionId || `session-${clubSlug}-${data.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 
+  const vocabCardsHtml = (data.vocabulary || []).map(v => `
+<div class="vocab-card">
+<div class="vocab-word">${v.word}</div>
+<div class="vocab-def">${v.definition}</div>
+<div class="vocab-example">${v.example}</div>
+<button class="btn-add-dict" onclick="COSY.addToDict({word:'${escapeAttrSingleQuotes(v.word)}', definition:'${escapeAttrSingleQuotes(v.definition)}', example:'${escapeAttrSingleQuotes(v.example)}'}, this)">Add to Dictionary</button>
+</div>`).join('');
+
   html = html
     .replace('{{LANG}}', 'en')
     .replace('{{SESSION_ID}}', sid)
@@ -640,7 +648,8 @@ function generateGatedSessionHtml(data, clubSlug = 'mind-matters', sessionId = '
     .replace('{{LANGUAGES}}', languages)
     .replace('{{LEVEL}}', data.level || 'B1-B2')
     .replace('{{META_TOPIC_HTML}}', metaTopicHtml)
-    .replace('{{SUMMARY}}', summary);
+    .replace('{{SUMMARY}}', summary)
+    .replace('{{VOCABULARY_HTML}}', vocabCardsHtml);
 
   return html;
 }
