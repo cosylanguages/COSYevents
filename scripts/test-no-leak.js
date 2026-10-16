@@ -58,6 +58,9 @@ sessionFiles.forEach(sessionFile => {
       if (vocab.word) {
         leakedTerms.push({ source: sessionFile, field: `vocabulary[${i}].word`, text: vocab.word });
       }
+      if (vocab.definition) {
+        leakedTerms.push({ source: sessionFile, field: `vocabulary[${i}].definition`, text: vocab.definition });
+      }
       if (vocab.translation) {
         leakedTerms.push({ source: sessionFile, field: `vocabulary[${i}].translation`, text: vocab.translation });
       }

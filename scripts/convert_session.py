@@ -39,7 +39,7 @@ def convert_session(session_file, out_dir="output"):
       sys.exit(1)
     language = session.get("language", "en")
     summary = session.get("summary", "")
-    key_vocab = session.get("key_vocabulary", [])
+    key_vocab = session.get("key_vocabulary") or session.get("vocabulary") or []
     prompts = session.get("discussion_prompts", [])
     category = session.get("category", "General")
 
@@ -48,7 +48,7 @@ def convert_session(session_file, out_dir="output"):
     # 1. Generate COSYdata vocabulary entries
     vocab_entries = []
     for item in key_vocab:
-        term = item.get("term", "").strip()
+        term = (item.get("term") or item.get("word") or "").strip()
         if not term:
             continue
 
@@ -58,7 +58,7 @@ def convert_session(session_file, out_dir="output"):
 
         # COSYdata id scheme: lang:word:form
         vocab_id = f"{language}:{slugify(term)}:{form}"
-        translation = item.get("translation", "")
+        definition = item.get("definition") or item.get("translation") or term
         example = item.get("example", "")
 
         vocab_entry = {
@@ -68,7 +68,7 @@ def convert_session(session_file, out_dir="output"):
             "form": form,
             "level": level,
             "transcription": item.get("transcription", f"/{term}/"),
-            "definitions": [translation] if translation else [term],
+            "definitions": [definition],
             "examples": [example] if example else [],
             "tags": [category.lower().replace(" ", "-"), "cosyevents-export"]
         }
@@ -101,8 +101,8 @@ def convert_session(session_file, out_dir="output"):
           "title": "Key Vocabulary & High-Utility Expressions",
           "items": [
             {
-              "term": v.get("term", ""),
-              "translation": v.get("translation", ""),
+              "term": v.get("term") or v.get("word", ""),
+              "definition": v.get("definition") or v.get("translation", ""),
               "example": v.get("example", "")
             } for v in key_vocab
           ]

@@ -86,7 +86,7 @@ Create a JSON file under `events/<event-slug>/sessions/<session-slug>.json` adhe
   "vocabulary": [
     {
       "word": "commute",
-      "translation": "trajet quotidien",
+      "definition": "the regular journey to and from work or school",
       "example": "My daily commute takes 30 minutes.",
       "level": "A2"
     }
