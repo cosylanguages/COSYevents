@@ -73,10 +73,13 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["word", "translation", "example", "level"],
+        "required": ["word", "example", "level"],
         "additionalProperties": false,
         "properties": {
           "word": {
+            "type": "string"
+          },
+          "definition": {
             "type": "string"
           },
           "translation": {

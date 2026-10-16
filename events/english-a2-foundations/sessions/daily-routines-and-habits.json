@@ -25,13 +25,13 @@
   "vocabulary": [
     {
       "word": "commute",
-      "translation": "trajet quotidien",
+      "definition": "the regular journey to and from work or school",
       "example": "My daily commute takes thirty minutes by bus.",
       "level": "A2"
     },
     {
       "word": "routine",
-      "translation": "routine",
+      "definition": "a sequence of actions regularly followed",
       "example": "Having a healthy morning routine helps me start the day well.",
       "level": "A2"
     }

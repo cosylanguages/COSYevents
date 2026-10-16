@@ -25,13 +25,13 @@
   "vocabulary": [
     {
       "word": "appetizer",
-      "translation": "entrée",
+      "definition": "a small dish served before the main course",
       "example": "We ordered garlic bread as an appetizer.",
       "level": "A2"
     },
     {
       "word": "bill",
-      "translation": "l'addition",
+      "definition": "a printed statement of the money owed for goods or services",
       "example": "Could we please have the bill when you are ready?",
       "level": "A2"
     }
