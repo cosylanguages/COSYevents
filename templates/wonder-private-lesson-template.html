@@ -1,6 +1,8 @@
 <!--
-  WONDER PRIVATE LESSON TEMPLATE
-  =================================
+  🌌 I Couldn't Help But Wonder - Reusable PRIVATE LESSON (1-to-1) Template
+
+  HOW TO USE:
+  - This template defines the exact HTML layout and class structures for the 8-part teacher-led private session mode.
   - Insert this markup block inside the session's HTML file enclosed inside a `<div data-session-mode="private" style="display: none;">` wrapper.
   - Display or toggle this container based on '?mode=private'.
 
@@ -18,24 +20,28 @@
             <span style="font-size: 0.85rem; color: #7C6E52; font-family: monospace;">⏱️ 5–10 mins</span>
         </div>
 
+        <!-- Teacher Note Panel -->
         <div class="teacher-note-panel">
             <span class="tn-badge">📝 TEACHER GUIDE</span>
-            <div class="ce-gated-content"></div>
+            <p><strong>Goal:</strong> Activate schema and build personal connection. Do not correct mistakes heavily yet; focus on starting the flow.</p>
+            <p><strong>Expected Output:</strong> The learner should express personal viewpoints using subjective language (<em>"Personally," "From my experience..."</em>).</p>
+            <p><strong>Follow-Up Prompts:</strong> <em>"Why do you think that is?", "Has this always been the case for you?"</em></p>
         </div>
 
+        <!-- Student Content -->
         <div class="student-content-block" style="padding: 1.5rem 1rem;">
             <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 0 0 1rem 0; color: var(--ink);">🌱 Initial Spark</h4>
             <p style="font-size: 1rem; line-height: 1.6; color: var(--ink-soft); margin-bottom: 1.5rem;">
                 [Warm-up prompt contextualizing the theme of the session in Carrie's style.]
             </p>
             <ul class="round-questions" style="line-height: 1.8;">
-                <li>[Warm-up question 1?]</li>
-                <li>[Warm-up question 2?]</li>
+                <li>[Warm-up Question 1?]</li>
+                <li>[Warm-up Question 2?]</li>
             </ul>
         </div>
     </section>
 
-    <!-- ================= 2. VOCABULARY INTEGRATION ================= -->
+    <!-- ================= 2. VOCABULARY ================= -->
     <section class="private-step" id="p-step2" style="margin-bottom: 3rem;">
         <div class="private-step-header" style="background: #FAEEE8; padding: 1rem 1.5rem; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; border-left: 5px solid #E67E22;">
             <strong style="color: #BA5812; font-size: 1.1rem;">🟠 Step 2: Vocabulary Integration</strong>
@@ -44,33 +50,39 @@
 
         <div class="teacher-note-panel">
             <span class="tn-badge">📝 TEACHER GUIDE</span>
-            <div class="ce-gated-content"></div>
+            <p><strong>Goal:</strong> Introduce, check pronunciation, and encourage personalized use of core lexicon. Ensure spelling, antonyms, and secondary meanings are explained.</p>
+            <p><strong>Concept Checking Questions (CCQs):</strong> Ask targeted questions to verify deep understanding (e.g., <em>"Is this word formal or informal?", "If something is [Word], is it positive or negative?"</em>).</p>
         </div>
 
         <div class="student-content-block" style="padding: 1.5rem 1rem;">
-            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 0 0 1rem 0; color: var(--ink);">📖 Target Lexicon Focus</h4>
-            <div class="vocab-grid-10">
+            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 0 0 1rem 0; color: var(--ink);">📖 Vocabulary Catalyst (4 Selected Units)</h4>
+            <div class="vocab-grid-10" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                <!-- Word 1 -->
                 <div class="vocab-card">
-                    <div class="vocab-word">[Target Word 1]</div>
-                    <div class="vocab-def">[Definition]</div>
-                    <div class="vocab-example">[Example Sentence]</div>
-                    <div class="vocab-opp" style="margin-top:0.5rem; font-size:0.8rem; color:var(--muted);">
-                        <strong>Antonym / Contrast:</strong> <span class="vocab-opp-word">[Antonym]</span>
-                    </div>
+                    <div class="vocab-word">[WORD 1]</div>
+                    <div class="vocab-def">[definition.]</div>
+                    <div class="vocab-example">[Example sentence.]</div>
+                    <button class="btn-add-dict" onclick="COSY.addToDict({word:'[WORD 1]', definition:'[definition.]', example:'[Example sentence.]'}, this)">Add to Dictionary</button>
                 </div>
+                <!-- Word 2 -->
                 <div class="vocab-card">
-                    <div class="vocab-word">[Target Word 2]</div>
-                    <div class="vocab-def">[Definition]</div>
-                    <div class="vocab-example">[Example Sentence]</div>
-                    <div class="vocab-opp" style="margin-top:0.5rem; font-size:0.8rem; color:var(--muted);">
-                        <strong>Antonym / Contrast:</strong> <span class="vocab-opp-word">[Antonym]</span>
-                    </div>
+                    <div class="vocab-word">[WORD 2]</div>
+                    <div class="vocab-def">[definition.]</div>
+                    <div class="vocab-example">[Example sentence.]</div>
+                    <button class="btn-add-dict" onclick="COSY.addToDict({word:'[WORD 2]', definition:'[definition.]', example:'[Example sentence.]'}, this)">Add to Dictionary</button>
                 </div>
+            </div>
+
+            <div style="background: rgba(63, 43, 150, 0.03); padding: 1.25rem; border-radius: 12px; border-left: 3px solid #3F2B96;">
+                <strong style="color: #3F2B96; display: block; margin-bottom: 0.5rem; font-size: 0.95rem;">✍️ Personalization Task:</strong>
+                <p style="font-size: 0.9rem; line-height: 1.5; color: var(--ink-soft); margin: 0;">
+                    Construct exactly one meaningful sentence relating to your own professional or social life using at least one of the terms above.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- ================= 3. PHILOSOPHICAL STIMULUS ================= -->
+    <!-- ================= 3. STIMULUS ================= -->
     <section class="private-step" id="p-step3" style="margin-bottom: 3rem;">
         <div class="private-step-header" style="background: #E1F5EE; padding: 1rem 1.5rem; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; border-left: 5px solid #1A7A4A;">
             <strong style="color: #1A7A4A; font-size: 1.1rem;">🔵 Step 3: Philosophical Stimulus</strong>
@@ -79,22 +91,30 @@
 
         <div class="teacher-note-panel">
             <span class="tn-badge">📝 TEACHER GUIDE</span>
-            <div class="ce-gated-content"></div>
+            <p><strong>Goal:</strong> Present the core pensive theme. Focus on active reading/listening and analyzing the metaphorical comparison.</p>
+            <p><strong>Checking Understanding:</strong> Ask the learner to summarize the paragraph in their own words. Ensure they identify the key contrast or question being posed.</p>
         </div>
 
         <div class="student-content-block" style="padding: 1.5rem 1rem;">
-            <div style="background: #FAF7F2; border: 1px solid var(--border); border-left: 4px solid #BA5812; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
-                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin: 0 0 0.75rem 0; color: #BA5812; font-style: italic;">
-                    "I Couldn't Help But Wonder..."
-                </h4>
-                <p style="font-family: 'Playfair Display', serif; font-size: 1.05rem; line-height: 1.7; color: var(--ink); margin: 0;">
-                    [Central Pensive Quote or Narrative Excerpt]
+            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 0 0 1rem 0; color: var(--ink);">📰 Perspective Mirror &amp; Monologue</h4>
+
+            <div style="background: #FAF7F2; border-left: 4px solid #3F2B96; padding: 1.5rem; border-radius: 0 12px 12px 0; margin-bottom: 2rem;">
+                <h5 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-style: italic; margin-top: 0; margin-bottom: 0.75rem; color: #3F2B96;">"I couldn't help but wonder..."</h5>
+                <p style="font-size: 1rem; line-height: 1.6; font-style: italic; color: var(--ink-soft); margin: 0;">
+                    [Introspective Carrie Bradshaw style monologue outlining the main thought experiment or scenario.]
+                </p>
+            </div>
+
+            <div style="background: var(--cream-dark); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border);">
+                <strong style="color: var(--ink); display: block; margin-bottom: 0.5rem; font-size: 0.95rem;">💡 Reflective Contrast:</strong>
+                <p style="font-size: 0.9rem; line-height: 1.5; color: var(--ink-soft); margin: 0;">
+                    How do these two concepts clash in your opinion? Compare them directly before we move to discussion.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- ================= 4. GUIDED DISCUSSION SEQUENCE ================= -->
+    <!-- ================= 4. GUIDED DISCUSSION ================= -->
     <section class="private-step" id="p-step4" style="margin-bottom: 3rem;">
         <div class="private-step-header" style="background: #E1F5EE; padding: 1rem 1.5rem; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; border-left: 5px solid #1A7A4A;">
             <strong style="color: #1A7A4A; font-size: 1.1rem;">🔵 Step 4: Guided Discussion Sequence</strong>
@@ -103,18 +123,26 @@
 
         <div class="teacher-note-panel">
             <span class="tn-badge">📝 TEACHER GUIDE</span>
-            <div class="ce-gated-content"></div>
+            <p><strong>Goal:</strong> Guide the learner from simple analysis of the topic to more layered social criticism. Elicit longer responses.</p>
+            <p><strong>Key Language to Prompt:</strong> Ensure the learner employs target terms from Step 2 during their answers.</p>
+            <p><strong>Error Capture:</strong> Jot down 2-3 minor syntax or pronunciation slips for the correction block.</p>
         </div>
 
         <div class="student-content-block" style="padding: 1.5rem 1rem;">
-            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 0 0 1rem 0; color: var(--ink);">💭 Unpacking the Dilemma</h4>
+            <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 0 0 1rem 0; color: var(--ink);">🎙️ Dialogue Development</h4>
+            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 1.5rem 0;">Discuss these prompts sequentially, moving from accessible personal scenarios to complex group dynamics.</p>
+
             <div class="round-item">
-                <div class="round-item-main">[Analytical/Concept Question 1?]</div>
-                <div class="round-item-personal">★ [Personal/Deep follow-up?]</div>
+                <div class="round-item-main">[Accessible Concept Question 1?]</div>
+                <div class="round-item-personal">★ [Supporting Personal Question 1?]</div>
             </div>
             <div class="round-item">
-                <div class="round-item-main">[Analytical/Concept Question 2?]</div>
-                <div class="round-item-personal">★ [Personal/Deep follow-up?]</div>
+                <div class="round-item-main">[Accessible Concept Question 2?]</div>
+                <div class="round-item-personal">★ [Supporting Personal Question 2?]</div>
+            </div>
+            <div class="round-item">
+                <div class="round-item-main">[More Abstract/Complex Question 3?]</div>
+                <div class="round-item-personal">★ [Supporting Personal Question 3?]</div>
             </div>
         </div>
     </section>
@@ -128,7 +156,8 @@
 
         <div class="teacher-note-panel">
             <span class="tn-badge">📝 TEACHER GUIDE</span>
-            <div class="ce-gated-content"></div>
+            <p><strong>Goal:</strong> Formulate target grammar or functional structures. Keep rules context-focused and conversational.</p>
+            <p><strong>Expected Output:</strong> The learner should fill in gaps and then immediately practice generating a customized sentence with the grammar.</p>
         </div>
 
         <div class="student-content-block" style="padding: 1.5rem 1rem;">
@@ -171,7 +200,8 @@
 
         <div class="teacher-note-panel">
             <span class="tn-badge">📝 TEACHER GUIDE</span>
-            <div class="ce-gated-content"></div>
+            <p><strong>Goal:</strong> High-order philosophical evaluation. Push the learner to justify controversial, speculative, or highly abstract opinions.</p>
+            <p><strong>Linguistic Stretch:</strong> Push for advanced hypothetical structures (e.g. <em>"Had we not changed... we would never have..."</em>).</p>
         </div>
 
         <div class="student-content-block" style="padding: 1.5rem 1rem;">
@@ -198,7 +228,8 @@
 
         <div class="teacher-note-panel">
             <span class="tn-badge">📝 TEACHER GUIDE</span>
-            <div class="ce-gated-content"></div>
+            <p><strong>Goal:</strong> Bring the philosophical concepts back to the student's personal lifestyle, professional habits, or moral values.</p>
+            <p><strong>Speaking Prompt:</strong> Encourage the student to reflect deeply and vulnerably on their own behaviors.</p>
         </div>
 
         <div class="student-content-block" style="padding: 1.5rem 1rem;">
@@ -218,7 +249,8 @@
 
         <div class="teacher-note-panel">
             <span class="tn-badge">📝 TEACHER GUIDE</span>
-            <div class="ce-gated-content"></div>
+            <p><strong>Goal:</strong> Independent, unassisted speech production. Time the student for a continuous run without interrupting.</p>
+            <p><strong>Linguistic Criteria:</strong> Assess if they integrated vocabulary from Step 2, the grammar from Step 5, and the critical thinking from Step 6.</p>
         </div>
 
         <div class="student-content-block" style="padding: 1.5rem 1rem;">
