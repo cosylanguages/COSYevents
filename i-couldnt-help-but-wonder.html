@@ -156,8 +156,23 @@
 <header class="club-hero">
 <img alt="Wonder logo" src="images/icouldnthelpbutwonder.png" style="height: 100px; width: auto; margin-bottom: 1.5rem;"/>
 <h1>I Couldn't Help But Wonder</h1>
-<p>Inspired by the iconic, introspective relationship-column style of Carrie Bradshaw, we take the urban, speculative mindset to the natural world and social psychology. Random ideas, poetic metaphors, and deep philosophical speculation. A creative space for curious, quirky minds.</p>
+<p>Inspired by the iconic, introspective relationship-column style of Carrie Bradshaw, we take the urban, speculative mindset to the natural world and social psychology. Random ideas, poetic metaphors, and deep philosophical speculation — tailored for A2, B1-B2, and C1 levels. A creative space for curious, quirky minds.</p>
 </header>
+
+<div class="wonder-about-card" style="background: var(--cream); border: 1px solid var(--border); border-left: 5px solid #3F2B96; border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+  <h3 style="margin-top: 0; margin-bottom: 0.75rem; font-family: 'Playfair Display', serif; color: #3F2B96; display: flex; align-items: center; gap: 8px;">
+    <span>🌌</span> About I Couldn't Help But Wonder & Preparation Guidelines
+  </h3>
+  <p style="margin-bottom: 1rem; line-height: 1.6; font-size: 0.95rem; color: var(--ink);">
+    <strong>Who it's for & Content:</strong> This club is destined for <strong>A2</strong>, <strong>B1-B2</strong>, and <strong>C1</strong> language levels. It deals with reflection and various thoughts that come to the minds of <strong>JY</strong> and <strong>DM</strong>. It is especially useful for people who are keen on constant reflection, philosophy, and developing critical and creative thinking — though anyone curious to test whether a session is easy or challenging for them is always welcome!
+  </p>
+  <p style="margin-bottom: 1rem; line-height: 1.6; font-size: 0.95rem; color: var(--ink);">
+    <strong>Obligatory Pre-Session Preparation:</strong> Before attending a session, it is mandatory to check the session name and description, review the vocabulary, and engage in a little pre-reflection.
+  </p>
+  <div style="background: rgba(63, 43, 150, 0.06); padding: 0.85rem 1.1rem; border-radius: 10px; font-size: 0.9rem; color: #1F104D; line-height: 1.5;">
+    💡 <strong>Golden Rule:</strong> <em>No translations, try to explain!</em> If you have any difficulties with explaining concepts, you may check our blog post <a href="practice/index.html" style="color: #3F2B96; font-weight: 700; text-decoration: underline;">Stop Translating</a>.
+  </div>
+</div>
 <section class="container" style="padding: 2rem 1.5rem 5rem;">
 <a class="back-link" href="speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
 <div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
@@ -187,8 +202,8 @@
 </div>
 <div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
 <button class="filter-btn active" data-level="all">All Levels</button>
-<button class="filter-btn" data-level="b1">B1</button>
-<button class="filter-btn" data-level="b2">B2</button>
+<button class="filter-btn" data-level="a2">A2</button>
+<button class="filter-btn" data-level="b1 b2">B1-B2</button>
 <button class="filter-btn" data-level="c1">C1</button>
 </div>
 <div class="wonder-history-grid">
@@ -1032,10 +1047,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       const selectedLevel = btn.getAttribute('data-level');
+      const targetLevels = selectedLevel ? selectedLevel.split(' ') : [];
 
       sessions.forEach(sess => {
         const levels = (sess.getAttribute('data-level') || '').split(' ');
-        if (selectedLevel === 'all' || levels.includes(selectedLevel)) {
+        if (selectedLevel === 'all' || targetLevels.some(l => levels.includes(l))) {
           sess.style.display = 'flex';
         } else {
           sess.style.display = 'none';
