@@ -2,15 +2,23 @@
 
 ## 1. Core Principles
 - **Immersion First:** All session content (topics, questions, notes) should be in the target language where possible.
-- **The 5-Part Session Structure:** Every session (past or active) must follow this sequence:
-  1. **Warm-up:** Uses the `<vim-choice>` component for interactive vocabulary, grammar, and expressions.
-  2. **Round 1:** Core discussion questions or quick-fire activities.
-  3. **Let's Speak Together:** Visual/interactive element (image sets, choices).
-  4. **Round 2:** Advanced discussion, debates, or future-focused statements.
-  5. **Teacher's Note (Linguistic Corrections):** Review of linguistic mistakes made during the session.
+- **Public vs. Paid Content Boundary:**
+  - **Free / Public Content:** Session Name, Short Session Summary (introductory blurb), and Useful Vocabulary (10 source-extracted units).
+  - **Paid / Gated Session Structure:**
+    1. **Warm-up:** Short introduction and icebreaker questions.
+    2. **Round 1 (Theoretical Discussion & Analysis):**
+       - *Useful Language:* Level-adapted expressions/phrases for breakout room discussion.
+       - *Questions:* Theoretical discussion of main ideas from the article/source + personal application questions (`.round-item-main` & `.round-item-personal`).
+    3. **Interlude / Let's Speak Together:**
+       - Quick flash discussion together in the main room where participants vote (Option A vs. Option B).
+    4. **Round 2 (Future Speculation & Projections):**
+       - *Useful Language:* Level-adapted speculation/disagreement expressions for breakout rooms.
+       - *Questions:* Agree/disagree statements & future speculation + personal application questions.
+    5. **Outro & Mistakes Discussion (Teacher's Note):**
+       - Review of linguistic corrections and feedback recorded during the session.
 - **Role-Based Reality:**
-  - **Free Visitors:** See the club list and description. Prompted to unlock.
-  - **Students:** See schedules, active session vocabulary, and full past session history.
+  - **Free Visitors:** See the club list, description, session summary, and public vocabulary grid. Prompted to unlock gated structure.
+  - **Students:** See schedules, active session vocabulary, and full past session history structure.
   - **Teachers:** See everything students see + preparation topics + active mistake notes area.
 - **Interactivity:** Toggles for Vocabulary, Rounds, and Mistake Notes.
 
