@@ -98,8 +98,7 @@
 <div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
 <button class="filter-btn active" data-level="all">All Levels</button>
 <button class="filter-btn" data-level="a2">A2</button>
-<button class="filter-btn" data-level="b1">B1</button>
-<button class="filter-btn" data-level="b2">B2</button>
+<button class="filter-btn" data-level="b1 b2">B1-B2</button>
 <button class="filter-btn" data-level="c1">C1</button>
 </div>
 <div class="history-body" style="display: block; padding: 0; border: none;"><div class="science-history-grid" id="science-history-grid">
@@ -1649,10 +1648,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       const selectedLevel = btn.getAttribute('data-level');
+      const targetLevels = selectedLevel ? selectedLevel.split(' ') : [];
 
       sessions.forEach(sess => {
         const levels = (sess.getAttribute('data-level') || '').split(' ');
-        if (selectedLevel === 'all' || levels.includes(selectedLevel)) {
+        if (selectedLevel === 'all' || targetLevels.some(l => levels.includes(l))) {
           sess.style.display = 'flex';
         } else {
           sess.style.display = 'none';
