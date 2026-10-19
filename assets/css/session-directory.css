@@ -444,6 +444,19 @@
   text-align: left;
 }
 
+.sd-bookmark-btn {
+  color: #a0a0a0;
+}
+
+.sd-bookmark-btn:hover {
+  transform: scale(1.2);
+  color: #e59c00;
+}
+
+.sd-bookmark-btn.saved {
+  color: #e59c00;
+}
+
 .sd-card:hover {
   transform: translateY(-5px);
   border-color: var(--border-hover);
