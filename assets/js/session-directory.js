@@ -18,15 +18,38 @@
       this.sessions = [];
       this.filteredSessions = [];
 
+      // Wishlist State (stored by href)
+      this.savedHrefs = new Set();
+      this.loadSavedHrefs();
+
       // Filter State
       this.state = {
         searchQuery: '',
         selectedLang: 'ALL',
         selectedFormat: 'ALL',
-        selectedLevel: null // null means 'All Levels', string or Array for level filter
+        selectedLevel: null, // null means 'All Levels', string or Array for level filter
+        wishlistOnly: false
       };
 
       this.init();
+    }
+
+    loadSavedHrefs() {
+      try {
+        const raw = localStorage.getItem('ce_wishlist');
+        if (raw) {
+          const list = JSON.parse(raw);
+          if (Array.isArray(list)) {
+            this.savedHrefs = new Set(list);
+          }
+        }
+      } catch (e) {}
+    }
+
+    saveSavedHrefs() {
+      try {
+        localStorage.setItem('ce_wishlist', JSON.stringify([...this.savedHrefs]));
+      } catch (e) {}
     }
 
     async init() {
@@ -153,6 +176,15 @@
               >
                 Not specified
               </button>
+              <button
+                type="button"
+                class="sd-pill sd-pill-wishlist"
+                data-level="WISHLIST"
+                aria-pressed="false"
+                style="margin-left: auto; background: var(--honey-pale, #fff8e7); border-color: rgba(148, 94, 5, 0.25); color: var(--honey-dark, #7d4d03);"
+              >
+                ⭐ Saved (<span id="sd-wishlist-count">${this.savedHrefs.size}</span>)
+              </button>
             </div>
           </section>
 
@@ -201,13 +233,18 @@
           btn.addEventListener('click', () => {
             const targetLevel = btn.getAttribute('data-level');
 
-            if (targetLevel === 'ALL') {
+            if (targetLevel === 'WISHLIST') {
+              this.state.wishlistOnly = !this.state.wishlistOnly;
               this.state.selectedLevel = null;
+            } else if (targetLevel === 'ALL') {
+              this.state.selectedLevel = null;
+              this.state.wishlistOnly = false;
             } else if (this.state.selectedLevel === targetLevel) {
               // Toggle off if already selected
               this.state.selectedLevel = null;
             } else {
               this.state.selectedLevel = targetLevel;
+              this.state.wishlistOnly = false;
             }
 
             this.updatePillsUI();
@@ -311,7 +348,11 @@
         const lvl = btn.getAttribute('data-level');
         let isActive = false;
 
-        if (this.state.selectedLevel === null) {
+        if (lvl === 'WISHLIST') {
+          isActive = this.state.wishlistOnly;
+        } else if (this.state.wishlistOnly) {
+          isActive = false;
+        } else if (this.state.selectedLevel === null) {
           isActive = (lvl === 'ALL');
         } else if (Array.isArray(this.state.selectedLevel)) {
           isActive = this.state.selectedLevel.includes(lvl);
@@ -327,12 +368,21 @@
           btn.setAttribute('aria-pressed', 'false');
         }
       });
+
+      const countEl = document.getElementById('sd-wishlist-count');
+      if (countEl) {
+        countEl.textContent = this.savedHrefs.size;
+      }
     }
 
     applyFilters() {
-      const { searchQuery, selectedLang, selectedFormat, selectedLevel } = this.state;
+      const { searchQuery, selectedLang, selectedFormat, selectedLevel, wishlistOnly } = this.state;
 
       this.filteredSessions = this.sessions.filter(session => {
+        if (wishlistOnly && !this.savedHrefs.has(session.href)) {
+          return false;
+        }
+
         // Search query filter (title or club)
         if (searchQuery) {
           const matchTitle = session.title && session.title.toLowerCase().includes(searchQuery);
@@ -402,16 +452,49 @@
 
       this.cardsGrid.style.display = 'grid';
       this.cardsGrid.innerHTML = this.filteredSessions.map(session => this.renderCardHTML(session)).join('');
+
+      // Bind bookmark star toggle events
+      const bookmarkBtns = this.cardsGrid.querySelectorAll('.sd-bookmark-btn');
+      bookmarkBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const href = btn.getAttribute('data-href');
+          if (!href) return;
+
+          if (this.savedHrefs.has(href)) {
+            this.savedHrefs.delete(href);
+          } else {
+            this.savedHrefs.add(href);
+          }
+
+          this.saveSavedHrefs();
+          this.updatePillsUI();
+          this.applyFilters();
+        });
+      });
     }
 
     renderCardHTML(session) {
       const levelLabel = session.level ? session.level : 'All Levels';
       const langLabel = session.lang ? session.lang : 'Language N/A';
       const formatLabel = session.format ? session.format : 'Speaking Club';
+      const isBookmarked = this.savedHrefs.has(session.href);
 
       return `
         <article class="sd-card">
-          <div class="sd-card-badges">
+          <button
+            type="button"
+            class="sd-bookmark-btn ${isBookmarked ? 'saved' : ''}"
+            data-href="${this.escapeAttr(session.href)}"
+            aria-label="${isBookmarked ? 'Remove from saved wishlist' : 'Save to wishlist'}"
+            title="${isBookmarked ? 'Remove from saved' : 'Save session'}"
+            style="position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; font-size: 1.25rem; cursor: pointer; transition: transform 0.2s ease; z-index: 2;"
+          >
+            ${isBookmarked ? '★' : '☆'}
+          </button>
+
+          <div class="sd-card-badges" style="padding-right: 2rem;">
             <span class="sd-badge sd-badge-level">${this.escapeText(levelLabel)}</span>
             <span class="sd-badge sd-badge-format">${this.escapeText(formatLabel)}</span>
             <span class="sd-badge sd-badge-lang">${this.escapeText(langLabel)}</span>

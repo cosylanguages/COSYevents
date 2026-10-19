@@ -165,6 +165,93 @@
 </div>
 </section>
 
+<!-- Self-Assessment Quiz Section -->
+<section id="level-quiz-section" class="calc-section" style="max-width: 960px; margin: 2.5rem auto 1rem; padding: 0 1rem;">
+  <div class="calc-card" style="background: linear-gradient(135deg, #1e2f6b, #0c4e54); color: white; border-radius: 28px; padding: 2.5rem; box-shadow: var(--shadow-base);">
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+      <span class="calc-tag" style="background: rgba(255,255,255,0.2); color: #ffffff;">🎯 Level Self-Assessment</span>
+      <h2 style="font-family: var(--font-serif); font-size: 2rem; margin: 0.5rem 0; color: #ffffff;">Find Your Speaking Level in 10 Seconds</h2>
+      <p style="opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.5;">
+        Answer 3 quick questions to discover your recommended CEFR level, ideal speaking clubs, and matching pass.
+      </p>
+    </div>
+
+    <form id="level-quiz-form" style="display: flex; flex-direction: column; gap: 1.25rem; max-width: 720px; margin: 0 auto;">
+      <div style="background: rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15);">
+        <label style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.5rem; color: #ffffff;">
+          1. How easily can you express everyday thoughts in conversation?
+        </label>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem;">
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="q1" value="beginner" checked>
+            <span>🌱 I use simple words &amp; short phrases, needing time to construct sentences.</span>
+          </label>
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="q1" value="intermediate">
+            <span>🚀 I hold comfortable conversations on familiar topics with good flow.</span>
+          </label>
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="q1" value="advanced">
+            <span>🧠 I discuss complex, abstract, and nuanced ideas effortlessly.</span>
+          </label>
+        </div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15);">
+        <label style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.5rem; color: #ffffff;">
+          2. How do you handle unfamiliar words or complex grammar?
+        </label>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem;">
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="q2" value="beginner" checked>
+            <span>🌱 I prefer simple sentence structures and visual prompts.</span>
+          </label>
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="q2" value="intermediate">
+            <span>🚀 I can rephrase my thoughts when I forget a word and ask questions.</span>
+          </label>
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="q2" value="advanced">
+            <span>🧠 I seamlessly incorporate idiomatic expressions and debate complex opinions.</span>
+          </label>
+        </div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15);">
+        <label style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.5rem; color: #ffffff;">
+          3. What is your primary goal for joining COSYevents?
+        </label>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem;">
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="q3" value="beginner" checked>
+            <span>🌱 Build speaking confidence without fear of making mistakes.</span>
+          </label>
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="q3" value="intermediate">
+            <span>🚀 Expand vocabulary, improve spontaneous response, and debate real issues.</span>
+          </label>
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="q3" value="advanced">
+            <span>🧠 Engage in philosophical debates, science news, and long-form literature.</span>
+          </label>
+        </div>
+      </div>
+    </form>
+
+    <div id="quiz-result-box" style="margin-top: 1.5rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 1.5rem; text-align: center;">
+      <h3 id="quiz-result-title" style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">
+        🌱 Recommended Level: Beginner (A0–A1)
+      </h3>
+      <p id="quiz-result-desc" style="font-size: 0.9rem; opacity: 0.95; line-height: 1.5; margin-bottom: 1rem; max-width: 580px; margin-left: auto; margin-right: auto;">
+        We recommend starting with our <strong>Basic Speaking Club (A0–A1)</strong> or <strong>Let's Celebrate</strong>. You'll enjoy guided visual prompts and low-pressure conversation.
+      </p>
+      <button id="quiz-apply-btn" type="button" class="btn-primary" style="background: #25D366; color: #ffffff; font-weight: 800; border: none; padding: 0.75rem 1.5rem; border-radius: 100px; cursor: pointer;">
+        👉 Apply Level to Pricing Calculator Below
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- Tariff & Price Calculator Section -->
 <section id="tariff-calculator" class="calc-section" style="max-width: 960px; margin: 3rem auto; padding: 0 1rem;">
   <div class="calc-card" style="background: var(--warm-white); border: 1.5px solid var(--border); border-radius: 28px; padding: 2.5rem; box-shadow: var(--shadow-base);">
@@ -519,6 +606,53 @@ document.addEventListener('DOMContentLoaded', () => {
     levelSelect.addEventListener('change', updateCalculator);
     planSelect.addEventListener('change', updateCalculator);
     updateCalculator();
+  }
+
+  // Quiz Logic
+  const quizForm = document.getElementById('level-quiz-form');
+  const quizTitle = document.getElementById('quiz-result-title');
+  const quizDesc = document.getElementById('quiz-result-desc');
+  const quizApplyBtn = document.getElementById('quiz-apply-btn');
+
+  if (quizForm && quizTitle && quizDesc) {
+    let recommendedLevelVal = 'beginner';
+
+    function updateQuizResult() {
+      const formData = new FormData(quizForm);
+      const q1 = formData.get('q1');
+      const q2 = formData.get('q2');
+      const q3 = formData.get('q3');
+
+      let scores = { beginner: 0, intermediate: 0, advanced: 0 };
+      if (q1) scores[q1]++;
+      if (q2) scores[q2]++;
+      if (q3) scores[q3]++;
+
+      if (scores.advanced >= 2 || (scores.advanced === 1 && scores.intermediate === 1 && q1 === 'advanced')) {
+        recommendedLevelVal = 'advanced';
+        quizTitle.textContent = '🧠 Recommended Level: Advanced (C1–C2)';
+        quizDesc.innerHTML = 'We recommend <strong>Keeping Up with Science</strong>, <strong>Mind Matters</strong>, and <strong>I Couldn\'t Help But Wonder</strong>. Tackle spontaneous philosophical questions and high-level debate.';
+      } else if (scores.intermediate >= 2 || scores.advanced === 1) {
+        recommendedLevelVal = 'intermediate';
+        quizTitle.textContent = '🚀 Recommended Level: Intermediate (B1–B2)';
+        quizDesc.innerHTML = 'We recommend <strong>Debatable &amp; Relatable</strong>, <strong>My Life With/Without</strong>, and <strong>Cinema Nights</strong>. Great for idiom expansion and natural conversation flow.';
+      } else {
+        recommendedLevelVal = 'beginner';
+        quizTitle.textContent = '🌱 Recommended Level: Beginner (A0–A1)';
+        quizDesc.innerHTML = 'We recommend starting with our <strong>Basic Speaking Club (A0–A1)</strong> or <strong>Let\'s Celebrate</strong>. Enjoy guided visual prompts and low-pressure conversation.';
+      }
+    }
+
+    quizForm.addEventListener('change', updateQuizResult);
+
+    if (quizApplyBtn && levelSelect) {
+      quizApplyBtn.addEventListener('click', () => {
+        levelSelect.value = recommendedLevelVal;
+        levelSelect.dispatchEvent(new Event('change'));
+        const calcEl = document.getElementById('tariff-calculator');
+        if (calcEl) calcEl.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
   }
 });
 </script>

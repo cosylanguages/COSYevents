@@ -954,6 +954,25 @@
         gcalBtn.href = gCalUrl;
         gcalBtn.style.display = 'inline-flex';
       }
+
+      // ICS Calendar File Download Button
+      let icsBtn = overlay.querySelector('#modal-ics-btn');
+      if (!icsBtn && gcalBtn && gcalBtn.parentNode) {
+        icsBtn = document.createElement('button');
+        icsBtn.id = 'modal-ics-btn';
+        icsBtn.type = 'button';
+        icsBtn.className = 'btn-outline';
+        icsBtn.style.display = 'inline-flex';
+        icsBtn.style.alignItems = 'center';
+        icsBtn.style.gap = '6px';
+        icsBtn.style.cursor = 'pointer';
+        gcalBtn.parentNode.appendChild(icsBtn);
+      }
+      if (icsBtn) {
+        icsBtn.textContent = '📥 Download .ics File';
+        icsBtn.onclick = () => downloadIcsFile(evt);
+        icsBtn.style.display = 'inline-flex';
+      }
     }
 
     overlay.classList.add('active');
@@ -1134,6 +1153,61 @@
     const details = encodeURIComponent(descText + regNote);
 
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startIso}/${endIso}&details=${details}`;
+  }
+
+  function downloadIcsFile(evt) {
+    const startUtc = parseParisDateTime(evt.date, evt.time);
+    if (!startUtc) return;
+
+    const durationMin = evt.duration_minutes ? parseInt(evt.duration_minutes, 10) : 60;
+    const endUtc = new Date(startUtc.getTime() + durationMin * 60 * 1000);
+
+    function formatUtcISO(d) {
+      const y = d.getUTCFullYear();
+      const m = String(d.getUTCMonth() + 1).padStart(2, '0');
+      const day = String(d.getUTCDate()).padStart(2, '0');
+      const h = String(d.getUTCHours()).padStart(2, '0');
+      const min = String(d.getUTCMinutes()).padStart(2, '0');
+      const s = String(d.getUTCSeconds()).padStart(2, '0');
+      return `${y}${m}${day}T${h}${min}${s}Z`;
+    }
+
+    const startIso = formatUtcISO(startUtc);
+    const endIso = formatUtcISO(endUtc);
+    const nowIso = formatUtcISO(new Date());
+
+    const titleText = getEventField(evt, 'title') || 'COSYevents Session';
+    const descText = (getEventField(evt, 'description') || '').replace(/\n/g, '\\n');
+    const uid = `${evt.id || 'event'}-${Date.now()}@cosylanguages.github.io`;
+
+    const icsLines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//COSYlanguages//COSYevents Calendar//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      `UID:${uid}`,
+      `DTSTAMP:${nowIso}`,
+      `DTSTART:${startIso}`,
+      `DTEND:${endIso}`,
+      `SUMMARY:${titleText}`,
+      `DESCRIPTION:${descText}`,
+      'LOCATION:Online via COSYevents',
+      'STATUS:CONFIRMED',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ];
+
+    const icsContent = icsLines.join('\r\n');
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${evt.id || 'cosy-event'}.ics`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
   }
 
   function sanitizeUrl(url) {
