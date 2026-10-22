@@ -39,7 +39,7 @@ assert.ok(generatedPage.includes('../../events/english-a2-foundations/sessions/d
 assert.ok(generatedPage.includes('window.CosySessionRenderer.render'));
 assert.ok(generatedPage.includes('class="session-hero"'));
 assert.ok(generatedPage.includes('class="content-container"'));
-assert.equal((generatedPage.match(/<h1[\\s>]/gi) || []).length, 1);
+assert.equal((generatedPage.match(/<h1[\s>]/gi) || []).length, 1);
 assert.ok(!generatedPage.includes('SUPABASE_URL'));
 
 const publisherPath = path.join(rootDir, 'scripts/publish-events.js');
