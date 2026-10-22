@@ -37,6 +37,9 @@ assert.equal(generatedSession.recording_url, 'https://example.com/recording');
 const generatedPage = renderSessionPage(generatedSession, 'mind-matters', 'english-a2-foundations');
 assert.ok(generatedPage.includes('../../events/english-a2-foundations/sessions/demo.json'));
 assert.ok(generatedPage.includes('window.CosySessionRenderer.render'));
+assert.ok(generatedPage.includes('class="session-hero"'));
+assert.ok(generatedPage.includes('class="content-container"'));
+assert.equal((generatedPage.match(/<h1[\\s>]/gi) || []).length, 1);
 assert.ok(!generatedPage.includes('SUPABASE_URL'));
 
 const publisherPath = path.join(rootDir, 'scripts/publish-events.js');
