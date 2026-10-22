@@ -6,6 +6,15 @@ const rootDir = path.join(__dirname, '..');
 const eventsDir = path.join(rootDir, 'events');
 const publicJsonPath = path.join(rootDir, 'public-events.json');
 
+const sessionRuntimePath = path.join(rootDir, 'shared/js/cosyevents-session.js');
+const sessionRuntime = fs.readFileSync(sessionRuntimePath, 'utf8');
+
+if (/\.from\(['"]session_content['"]\)/.test(sessionRuntime) ||
+    /initGatedContent|loadSupabaseConfig|loadSupabaseSdk/.test(sessionRuntime)) {
+  console.error('FAIL: session runtime must not fetch or gate session content through Supabase.');
+  process.exit(1);
+}
+
 console.log('Building public event data...');
 execFileSync(process.execPath, [path.join(__dirname, 'build-public.js')], {
   cwd: rootDir,
