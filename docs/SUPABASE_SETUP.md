@@ -74,7 +74,7 @@ This code will expire shortly. If you did not request this code, please ignore t
   4. `20261010000000_magic_links.sql`
 - Paste the SQL contents of each file into the SQL Editor in order and click **Run**.
 - Any new migrations created in the future must also be applied strictly in filename order.
-- Verify that tables (`profiles`, `access_grants`, `session_catalog`, `session_content`, etc.) and RLS policies are created cleanly without errors.
+- Verify that shared account/auth tables and their RLS policies are created cleanly. Legacy session-content tables may exist for compatibility, but COSYevents does not use them to store or serve session bodies.
 - Verification Queries: Run the following verification queries in the SQL Editor to ensure security rules and check constraints are in place:
 ```sql
 -- 1. Check that role escalation via UPDATE is blocked for authenticated users:
