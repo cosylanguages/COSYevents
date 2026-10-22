@@ -54,6 +54,14 @@ Example:
 
 Create `events/<event-slug>/sessions/<session-slug>.json` matching `schemas/session.schema.json`. Commit the complete material, not just a title or pointer to a database record.
 
+If you have an existing session export JSON, you can create the repository JSON and a static page with:
+
+```bash
+npm run session:new -- private/session-exports/<session-export>.json --event <event-slug> --club <club-slug> --lang English
+```
+
+The event must already exist under `events/<event-slug>/event.json`. The command writes the full session JSON, a static page, updates `data/sessions.json`, and rebuilds `public-events.json`. Review all generated files before committing; they will be public.
+
 Example:
 
 ```json
