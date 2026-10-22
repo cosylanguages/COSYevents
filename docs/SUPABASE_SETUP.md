@@ -115,7 +115,7 @@ If a service-role or anon key is ever exposed or needs scheduled rotation:
 2. Click **Roll Key** for the target key.
 3. Update `SUPABASE_SERVICE_ROLE_KEY` in local gitignored `.env`.
 4. Update `anonKey` in `shared/config/supabase.json`.
-5. Run `npm run verify:anon` to confirm anonymous REST API security on private tables.
+5. Verify the authentication and profile policies required by the shared ecosystem application. COSYevents session content is not stored in Supabase.
 
 ### 8. Enable Two-Factor Authentication (2FA)
 - Go to your Supabase Account Settings -> **Security**.
@@ -134,13 +134,8 @@ Before switching `"enabled": true` in `shared/config/supabase.json`, complete th
 
 ---
 
-## Anonymous REST API Access Verification
+## COSYevents session content
 
-To verify that private database tables (`session_content`, `session_teacher_notes`, `session_sources`, `session_access_links`, `session_grants`, `access_grants`, `profiles`) properly block anonymous REST API access on a live Supabase environment:
+COSYevents session bodies, vocabulary, prompts, facilitator notes, and recording metadata are not published to or served from Supabase. The retired `verify:anon` check for COSYevents session tables has been removed. Validate shared authentication and profile policies using the test procedures maintained by the application that owns those features.
 
-1. Configure `shared/config/supabase.json` or export `SUPABASE_URL` and `SUPABASE_ANON_KEY` in your environment.
-2. Run the verification script:
-```bash
-npm run verify:anon
-```
-3. Confirm that all tested endpoints report 0 rows returned to the anonymous public key. Note: This script requires a live Supabase project instance and should be run manually during setup rather than in CI.
+Do not drop shared or legacy tables as part of this repository migration; other COSY ecosystem applications may depend on them.
