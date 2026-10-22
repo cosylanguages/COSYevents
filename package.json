@@ -8,7 +8,6 @@
     "build-public": "node scripts/build-public.js",
     "publish": "node scripts/publish-events.js",
     "test": "node scripts/test-no-leak.js",
-    "test:rls": "node scripts/test-rls-rules.js",
     "check-structure": "node scripts/check_page_structure.js",
     "check-links": "node scripts/check_links.js",
     "check:gated": "node scripts/check-gated-pages.js",
@@ -26,9 +25,7 @@
     "test:hubs": "node scripts/test_hubs_visual.js",
     "export:private-sessions": "node scripts/export_private_sessions.js",
     "set-contact": "node scripts/set_contact.js",
-    "check-contact": "node scripts/set_contact.js --check",
-    "publish:supabase": "node scripts/publish_to_supabase.js",
-    "verify:anon": "node scripts/verify_anon_access.js"
+    "check-contact": "node scripts/set_contact.js --check"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
@@ -36,7 +33,6 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@supabase/supabase-js": "2.39.0",
     "ajv": "^8.20.0",
     "cheerio": "^1.2.0",
     "playwright": "^1.63.0"
