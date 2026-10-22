@@ -41,9 +41,11 @@ This report serves as the consolidated single source of truth for the audit stat
 - **Total Catalog Entries in `data/sessions.json`:** 645 sessions (100% match, verified via `scripts/verify_catalog.js`).
 - **Master Calendar Records (`shared/calendar-data/events.json`):** 19 scheduled event entries.
 
-### Public / Gated Content Model
-- **Public Catalog Views:** Expose strictly event metadata, format, topic, CEFR level scope, and public blurbs. No interactive prompt decks or unlisted session materials are rendered publicly on catalog pages.
-- **Session Materials:** Interactive decks and prompt cards are served inside self-contained session pages (`sessions/`) accessed via unlisted URLs sent to registered attendees.
+### Repository-First Session Content Model
+- **Canonical source:** Complete session materials are stored as repository files, including the standalone HTML session pages under `sessions/`, `fr/sessions/`, and `ru/sessions/`, plus structured JSON under `events/<event-slug>/sessions/`.
+- **Static discovery index:** `public-events.json` is a lightweight listing index, not the authoritative store for full session content.
+- **No Supabase session body dependency:** Session page rendering must not read session bodies, vocabulary, facilitator notes, or prompts from Supabase. The legacy session-content tables may still exist in the shared project, but COSYevents no longer publishes to or reads from them.
+- **Public access warning:** This is a public repository. Committed files and Git history are publicly accessible; do not commit secrets, personal data, or material that is not authorized for public distribution.
 
 ---
 
