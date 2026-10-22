@@ -36,7 +36,14 @@
     },
     "level": {
       "type": "string",
-      "enum": ["A1", "A2", "B1", "B2", "C1", "C2"]
+      "enum": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
     },
     "date": {
       "type": "string"
@@ -51,7 +58,12 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["type", "title", "instructions", "content"],
+        "required": [
+          "type",
+          "title",
+          "instructions",
+          "content"
+        ],
         "additionalProperties": false,
         "properties": {
           "type": {
@@ -73,7 +85,11 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["word", "example", "level"],
+        "required": [
+          "word",
+          "example",
+          "level"
+        ],
         "additionalProperties": false,
         "properties": {
           "word": {
@@ -90,7 +106,39 @@
           },
           "level": {
             "type": "string",
-            "enum": ["A1", "A2", "B1", "B2", "C1", "C2"]
+            "enum": [
+              "A1",
+              "A2",
+              "B1",
+              "B2",
+              "C1",
+              "C2"
+            ]
+          }
+        }
+      }
+    },
+    "full_notes": {
+      "type": "string"
+    },
+    "recording_url": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_title",
+          "source_url"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "source_title": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
           }
         }
       }

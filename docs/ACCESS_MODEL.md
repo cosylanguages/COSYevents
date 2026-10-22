@@ -1,8 +1,10 @@
 # COSY Ecosystem Access Control Model
 
-This document outlines the security and access control model for the COSY ecosystem (COSYlanguages, COSYevents, COSYplatform, COSYmanuals, etc.).
+> **COSYevents session-content exception:** This document describes legacy/shared Supabase access features used by ecosystem applications. COSYevents session bodies, vocabulary, prompts, facilitator notes, and recordings are now stored in repository files and are not published to or fetched from Supabase. Because this repository is public, committed materials are publicly accessible; do not commit secrets, personal data, or unauthorized material. The database model below does not provide access control for repository-hosted COSYevents files.
 
-All access enforcement happens directly inside PostgreSQL via Row Level Security (RLS) policies.
+This document outlines shared Supabase authentication, profile, grant, and access-control features used by COSY ecosystem applications.
+
+All database access enforcement for applications that use these features happens through PostgreSQL Row Level Security (RLS) policies.
 
 ---
 

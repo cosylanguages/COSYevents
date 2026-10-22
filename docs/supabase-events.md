@@ -1,105 +1,29 @@
-# Supabase Events Database Architecture & RLS Specification
+# Supabase boundary for COSYevents
 
-This document details the database schema, Row Level Security (RLS) policies, and publishing mechanism for **COSYevents** on Supabase Postgres.
+**Session content is repository-first. This document replaces the retired Supabase session publishing/RLS design.**
 
----
+COSYevents does not use Supabase as a store or runtime source for event/session bodies. Complete session material belongs in version-controlled files and is deployed with the static site. The generated `public-events.json` file is only a discovery index.
 
-## 🏗️ Architecture & Database Tables
+## What remains in Supabase
 
-COSYevents shares the Supabase project and `profiles` table with **COSYplatform**. User roles are defined on `public.profiles`:
-- `founder` — Full system administrative access.
-- `teacher` — Event host / facilitator.
-- `student` — Enrolled learner.
+COSYlanguages ecosystem pages may continue using the shared Supabase project for unrelated features such as authentication, profiles, or access grants. Those features must not be used to fetch or gate COSYevents session activities, discussion prompts, vocabulary, facilitator notes, or session recordings.
 
-### 1. `public.events_public`
-Stores public metadata for language learning events.
-- **`slug`** (`text PRIMARY KEY`): Unique event identifier.
-- **`title`** (`text NOT NULL`): Event title.
-- **`description`** (`text NOT NULL`): Event summary.
-- **`languages`** (`text[] NOT NULL`): Array of target languages.
-- **`status`** (`text NOT NULL`): Event status (`upcoming`, `current`, `past`).
+## Legacy database objects
 
-### 2. `public.sessions_public`
-Stores public metadata for individual sessions within an event.
-- **`slug`** (`text PRIMARY KEY`): Unique session identifier.
-- **`event_slug`** (`text NOT NULL FK`): References `events_public(slug)`.
-- **`title`** (`text NOT NULL`): Session title.
-- **`theme`** (`text NOT NULL`): Topic/theme name.
-- **`language`** (`text NOT NULL`): Session language.
-- **`level`** (`text NOT NULL`): CEFR level (`A1`, `A2`, `B1`, `B2`, `C1`, `C2`).
-- **`date`** (`text NOT NULL`): Session date (`YYYY-MM-DD`).
+Existing Supabase projects may still contain tables or policies from the retired COSYevents session-access design, including `events_public`, `sessions_public`, `session_content`, `event_access`, and `event_hosts`. Their presence does not make them a source of truth. COSYevents code must not publish to or read session bodies from these tables.
 
-### 3. `public.session_content`
-Stores gated interactive session content (activities, instructions, secret prompts, and vocabulary lists).
-- **`session_slug`** (`text PRIMARY KEY FK`): References `sessions_public(slug)`.
-- **`event_slug`** (`text NOT NULL FK`): References `events_public(slug)`.
-- **`content`** (`jsonb NOT NULL`): JSON payload containing activities and vocabulary.
-- **`updated_at`** (`timestamptz NOT NULL`): Last update timestamp.
+Do not drop or alter shared database tables as part of this repository change: other COSY ecosystem applications may still depend on shared objects. Database cleanup should be separately reviewed with the owners of all connected applications.
 
-### 4. `public.event_access`
-Tracks participant access grants for events (paid or invited students).
-- **`user_id`** (`uuid FK`): References `auth.users(id)`.
-- **`event_slug`** (`text FK`): References `events_public(slug)`.
-- **`granted_by`** (`uuid FK`): References `auth.users(id)` (founder who granted access).
-- **`created_at`** (`timestamptz NOT NULL`): Grant timestamp.
-- **PRIMARY KEY:** `(user_id, event_slug)`
+## Publishing
 
-### 5. `public.event_hosts`
-Assigns host teachers/facilitators to specific events.
-- **`user_id`** (`uuid FK`): References `auth.users(id)`.
-- **`event_slug`** (`text FK`): References `events_public(slug)`.
-- **PRIMARY KEY:** `(user_id, event_slug)`
+Run the repository validation and static catalog build:
 
----
-
-## 🔒 Row Level Security (RLS) Rules
-
-All tables have Row Level Security enabled (`ALTER TABLE ... ENABLE ROW LEVEL SECURITY`).
-
-| Table | Role / Actor | Allowed Operations | Condition / Filter |
-| :--- | :--- | :--- | :--- |
-| **`events_public`** | Everyone (incl. anonymous) | `SELECT` | `true` |
-| | Founder | `ALL` | `is_founder()` |
-| **`sessions_public`** | Everyone (incl. anonymous) | `SELECT` | `true` |
-| | Founder | `ALL` | `is_founder()` |
-| **`session_content`** | Founder | `ALL` | `is_founder()` |
-| | Event Host | `SELECT`, `INSERT`, `UPDATE`, `DELETE` | Assigned in `event_hosts` for `event_slug` |
-| | Student (with `event_access`) | `SELECT` | Granted in `event_access` for `event_slug` (current & past) |
-| | Unassigned Student / Anonymous | **None** | Denied |
-| **`event_access`** | Founder | `SELECT`, `INSERT`, `DELETE` | `is_founder()` |
-| | Student | `SELECT` | `user_id = auth.uid()` |
-| | Anonymous / Non-founder write | **None** | Denied |
-| **`event_hosts`** | Founder | `ALL` | `is_founder()` |
-| | Host | `SELECT` | `user_id = auth.uid()` |
-| | Anonymous | **None** | Denied |
-
----
-
-## 🚀 Publishing Script (`scripts/publish-events.js`)
-
-Session content is deployed to Supabase using `scripts/publish-events.js`.
-
-### Security Note
-The publisher script uses the `SUPABASE_SERVICE_ROLE_KEY` to bypass RLS during build/deploy operations. **The service key is strictly used server-side, in CI workflows, or during local deployment scripts and must NEVER be exposed in client-side code.**
-
-### Usage
-```bash
-export SUPABASE_URL="https://your-project.supabase.co"
-export SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
-
+```sh
 npm run publish
 ```
 
----
+This validates event/session files and regenerates the static discovery index. It does not connect to Supabase or upload session content. GitHub Pages deployment is responsible for publishing the committed files.
 
-## 🧪 Testing RLS Rules
+## Public-repository and access note
 
-RLS policies are verified via `scripts/test-rls-rules.js`:
-```bash
-npm run test:rls
-```
-The test suite validates:
-1. Public select access on `events_public` and `sessions_public`.
-2. Gated denial of `session_content` for anonymous and ungranted users.
-3. Successful read access of `session_content` for assigned hosts and students with `event_access`.
-4. Strict enforcement allowing only founders to insert/delete `event_access`.
+This repository is public. Committed session files and Git history are publicly accessible. Do not commit credentials, personal data, or material that is not authorized for public distribution. GitHub Pages is not an access-control system for paid or per-user session materials.

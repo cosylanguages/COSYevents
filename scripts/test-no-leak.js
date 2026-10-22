@@ -1,93 +1,187 @@
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const { execFileSync } = require('node:child_process');
 
-console.log('Running build-public script to regenerate public output...');
-execSync('node scripts/build-public.js', { stdio: 'inherit' });
+const rootDir = path.join(__dirname, '..');
+const eventsDir = path.join(rootDir, 'events');
+const publicJsonPath = path.join(rootDir, 'public-events.json');
 
-const eventsDir = path.join(__dirname, '../events');
-const publicJsonPath = path.join(__dirname, '../public-events.json');
+const sessionRuntimePath = path.join(rootDir, 'shared/js/cosyevents-session.js');
+const sessionRuntime = fs.readFileSync(sessionRuntimePath, 'utf8');
 
-if (!fs.existsSync(publicJsonPath)) {
-  console.error('FAIL: public-events.json does not exist!');
+if (/\.from\(['"]session_content['"]\)/.test(sessionRuntime) ||
+    /initGatedContent|loadSupabaseConfig|loadSupabaseSdk/.test(sessionRuntime)) {
+  console.error('FAIL: session runtime must not fetch or gate session content through Supabase.');
   process.exit(1);
 }
 
-const publicJsonContent = fs.readFileSync(publicJsonPath, 'utf8');
+const { buildSession, renderSessionPage } = require('./session_new');
+const generatedSession = buildSession({
+  session_id: 'session-demo',
+  public: { title: 'Demo Session', format: 'Mind Matters', language: 'English', level: 'B1-B2', summary: 'A sample session.' },
+  content: {
+    rounds: [{ title: 'Round 1', items: [{ main: 'What do you think?' }] }],
+    vocabulary: [{ word: 'resilient', definition: 'Able to recover.', example: 'She is resilient.' }],
+    full_notes: 'Facilitator notes'
+  },
+  sources: [{ title: 'Reference', url: 'https://example.com/source' }],
+  recording_url: 'https://example.com/recording'
+}, 'english-a2-foundations', 'English');
+assert.equal(generatedSession.level, 'B1');
+assert.equal(generatedSession.activities[0].content, 'What do you think?');
+assert.equal(generatedSession.vocabulary[0].word, 'resilient');
+assert.equal(generatedSession.full_notes, 'Facilitator notes');
+assert.equal(generatedSession.sources[0].source_url, 'https://example.com/source');
+assert.equal(generatedSession.recording_url, 'https://example.com/recording');
+const generatedPage = renderSessionPage(generatedSession, 'mind-matters', 'english-a2-foundations');
+assert.ok(generatedPage.includes('../../events/english-a2-foundations/sessions/demo.json'));
+assert.ok(generatedPage.includes('window.CosySessionRenderer.render'));
+assert.ok(generatedPage.includes('class="session-hero"'));
+assert.ok(generatedPage.includes('class="content-container"'));
+assert.equal((generatedPage.match(/<h1[\s>]/gi) || []).length, 1);
+assert.ok(!generatedPage.includes('SUPABASE_URL'));
 
-function findFiles(dir, fileNamePattern) {
-  let results = [];
-  if (!fs.existsSync(dir)) return results;
-  const list = fs.readdirSync(dir);
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    if (stat && stat.isDirectory()) {
-      results = results.concat(findFiles(filePath, fileNamePattern));
-    } else if (fileNamePattern.test(file)) {
+const publisherPath = path.join(rootDir, 'scripts/publish-events.js');
+const publisherSource = fs.readFileSync(publisherPath, 'utf8');
+
+if (/createClient|session_content|SUPABASE_SERVICE_ROLE_KEY|@supabase\/supabase-js/i.test(publisherSource)) {
+  console.error('FAIL: npm run publish must build static repository data, not publish to Supabase.');
+  process.exit(1);
+}
+
+console.log('Building public event data...');
+execFileSync(process.execPath, [path.join(__dirname, 'build-public.js')], {
+  cwd: rootDir,
+  stdio: 'inherit'
+});
+
+function fail(message) {
+  console.error(`FAIL: ${message}`);
+  process.exitCode = 1;
+}
+
+if (!fs.existsSync(publicJsonPath)) {
+  fail('public-events.json was not generated.');
+  process.exit(1);
+}
+
+let publicEvents;
+try {
+  publicEvents = JSON.parse(fs.readFileSync(publicJsonPath, 'utf8'));
+} catch (error) {
+  fail(`public-events.json is not valid JSON (${error.message}).`);
+  process.exit(1);
+}
+
+if (!Array.isArray(publicEvents)) {
+  fail('Public output must be an array of events.');
+  process.exit(1);
+}
+
+// Treat the public export as an allowlist: new fields remain private by default.
+const allowedEventKeys = new Set([
+  'slug', 'title', 'description', 'languages', 'status', 'sessions'
+]);
+const allowedSessionKeys = new Set(['title', 'theme', 'date', 'language']);
+
+function checkAllowedKeys(value, allowedKeys, label) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    fail(`${label} must be an object.`);
+    return;
+  }
+
+  for (const key of Object.keys(value)) {
+    if (!allowedKeys.has(key)) {
+      // Do not print the value: it may be intended to remain private.
+      fail(`${label} contains unexpected field "${key}".`);
+    }
+  }
+}
+
+for (const [eventIndex, event] of publicEvents.entries()) {
+  const label = `event at index ${eventIndex}`;
+  checkAllowedKeys(event, allowedEventKeys, label);
+
+  if (!Array.isArray(event.sessions)) {
+    fail(`${label}.sessions must be an array.`);
+    continue;
+  }
+
+  for (const [sessionIndex, session] of event.sessions.entries()) {
+    checkAllowedKeys(session, allowedSessionKeys, `${label}, session ${sessionIndex}`);
+  }
+}
+
+function findFiles(directory, predicate, results = []) {
+  if (!fs.existsSync(directory)) return results;
+
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    const filePath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      findFiles(filePath, predicate, results);
+    } else if (entry.isFile() && predicate(entry.name, filePath)) {
       results.push(filePath);
     }
-  });
+  }
   return results;
 }
 
-const sessionFiles = findFiles(eventsDir, /\.json$/).filter(
-  filePath => !filePath.endsWith('event.json') && filePath.includes(path.join('sessions', ''))
+const sessionFiles = findFiles(
+  eventsDir,
+  (name, filePath) =>
+    name.endsWith('.json') &&
+    name !== 'event.json' &&
+    filePath.split(path.sep).includes('sessions')
 );
 
-let leakedTerms = [];
+const publicText = fs.readFileSync(publicJsonPath, 'utf8').toLocaleLowerCase('en');
+const possibleLeaks = [];
 
-sessionFiles.forEach(sessionFile => {
-  const sessionData = JSON.parse(fs.readFileSync(sessionFile, 'utf8'));
-
-  // Collect sensitive strings from activities
-  if (Array.isArray(sessionData.activities)) {
-    sessionData.activities.forEach((act, i) => {
-      if (act.instructions) {
-        leakedTerms.push({ source: sessionFile, field: `activity[${i}].instructions`, text: act.instructions });
-      }
-      if (act.content) {
-        leakedTerms.push({ source: sessionFile, field: `activity[${i}].content`, text: act.content });
-      }
-    });
+for (const sessionFile of sessionFiles) {
+  let sessionData;
+  try {
+    sessionData = JSON.parse(fs.readFileSync(sessionFile, 'utf8'));
+  } catch (error) {
+    fail(`Could not parse session JSON at ${path.relative(rootDir, sessionFile)} (${error.message}).`);
+    continue;
   }
 
-  // Collect sensitive strings from vocabulary
-  if (Array.isArray(sessionData.vocabulary)) {
-    sessionData.vocabulary.forEach((vocab, i) => {
-      if (vocab.word) {
-        leakedTerms.push({ source: sessionFile, field: `vocabulary[${i}].word`, text: vocab.word });
+  const sensitiveStrings = [];
+  function collectSensitiveStrings(value, keyPath = '') {
+    if (Array.isArray(value)) {
+      value.forEach((item, index) => collectSensitiveStrings(item, `${keyPath}[${index}]`));
+    } else if (value && typeof value === 'object') {
+      for (const [key, item] of Object.entries(value)) {
+        collectSensitiveStrings(item, keyPath ? `${keyPath}.${key}` : key);
       }
-      if (vocab.definition) {
-        leakedTerms.push({ source: sessionFile, field: `vocabulary[${i}].definition`, text: vocab.definition });
-      }
-      if (vocab.translation) {
-        leakedTerms.push({ source: sessionFile, field: `vocabulary[${i}].translation`, text: vocab.translation });
-      }
-      if (vocab.example) {
-        leakedTerms.push({ source: sessionFile, field: `vocabulary[${i}].example`, text: vocab.example });
-      }
-    });
-  }
-});
-
-console.log(`Checking ${leakedTerms.length} sensitive text entries from session files against public output...`);
-
-let testFailed = false;
-
-leakedTerms.forEach(item => {
-  // Check if text appears in public-events.json
-  if (item.text && item.text.trim().length > 0) {
-    if (publicJsonContent.includes(item.text)) {
-      console.error(`LEAK DETECTED! Text "${item.text}" from ${item.source} (${item.field}) was found in public-events.json!`);
-      testFailed = true;
+    } else if (typeof value === 'string' && /^(activities|vocabulary)(\.|\[|$)/.test(keyPath)) {
+      const normalized = value.trim().toLocaleLowerCase('en');
+      // Short strings often overlap public metadata. The allowlist above is the
+      // primary guard; this check catches longer accidental copies of private text.
+      if (normalized.length >= 12) sensitiveStrings.push({ field: keyPath, text: normalized });
     }
   }
-});
 
-if (testFailed) {
-  console.error('\nLeak Test FAILED: Gated content was exposed in public output!');
-  process.exit(1);
-} else {
-  console.log('\nLeak Test PASSED: No session activities or vocabulary detected in public-events.json.');
+  collectSensitiveStrings(sessionData);
+  for (const item of sensitiveStrings) {
+    if (publicText.includes(item.text)) {
+      possibleLeaks.push({ file: path.relative(rootDir, sessionFile), field: item.field });
+    }
+  }
 }
+
+if (possibleLeaks.length > 0) {
+  for (const leak of possibleLeaks) {
+    console.error(`POSSIBLE LEAK: content from ${leak.file} (${leak.field}) appears in public-events.json.`);
+  }
+  fail('Private session text was found in public output.');
+}
+
+if (process.exitCode) {
+  console.error('Public export safety checks FAILED.');
+  process.exit(1);
+}
+
+console.log(`PASS: public export uses allowlisted fields; checked ${publicEvents.length} events and ${sessionFiles.length} session files.`);
+console.log('PASS: no matching private activity or vocabulary text found in public output.');

@@ -17,7 +17,7 @@ function getPayload(href) {
   return extractSession(entry);
 }
 
-assert.equal(catalog.length, 645);
+assert.ok(catalog.length >= 645, 'Session catalog unexpectedly lost existing entries.');
 const sessionIds = new Set();
 let sourceCount = 0;
 let unknownLevelCount = 0;

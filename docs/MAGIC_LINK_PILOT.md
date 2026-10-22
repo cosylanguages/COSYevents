@@ -1,40 +1,19 @@
-# Participant Magic Link Pilot Checklist
+# Retired: Supabase-backed session magic-link pilot
 
-This checklist guides facilitators and test leads through running a live pilot with 2 sessions from one club (e.g. `mind-matters`).
+This pilot checklist belongs to the former gated-session architecture and is retained only as historical context. **Do not use it to create, publish, or serve COSYevents session materials.** The Supabase session publisher and anonymous session-table verification scripts have been removed.
 
----
+## Current workflow
 
-## 📋 Pre-Pilot Verification
+Create a complete session in the repository using the repository-first authoring command:
 
-- [ ] **1. Publish 2 Pilot Sessions**
-  - Select 2 sessions (e.g., `anticipatory-grief` and `the-power-of-habits`).
-  - Run validation: `node scripts/publish_to_supabase.js --validate-only private/session-exports/<session_id>.json`
-  - Publish to Supabase & generate shells: `npm run session:new -- private/session-exports/<session_id>.json --club mind-matters --lang English`
+```sh
+npm run session:new -- <session-export.json> --event <event-slug> --club <club-slug> --lang English
+```
 
-- [ ] **2. Create Magic Links via Admin Interface**
-  - Log into `admin/session-links.html` using a teacher or founder COSYauth account.
-  - Select the pilot session from the dropdown.
-  - Set expiration preset (e.g., +7 Days).
-  - Add label (e.g. `Pilot Test Group A`).
-  - Click **Create Magic Link**.
-  - Click **Copy Link** and **Copy WhatsApp (EN/FR/IT/RU/EL)**.
+The `--event` value must match an existing `events/<event-slug>/event.json`. The script writes a full session JSON file under `events/<event-slug>/sessions/`, generates a static page under `sessions/<club-slug>/`, updates the session catalog, and rebuilds the public discovery index.
 
-- [ ] **3. Mobile Phone Test**
-  - Open the generated magic link on a mobile smartphone web browser.
-  - Verify that token `#k=<token>` is stripped from the address bar immediately.
-  - Verify that session content (vocabulary, discussion rounds, slides) loads cleanly in `<main id="session-private">`.
-  - Check slide presentation controls, scroll view toggle, and dictionary copy buttons.
+All generated files become public when committed because this is a public repository. Never put credentials, personal data, or content that is not authorized for public distribution in the input or output. GitHub-hosted files do not provide paid or per-user access control.
 
-- [ ] **4. Expired Link Test**
-  - Create a test link set to expire in 1 minute.
-  - Wait for expiration and refresh/open the link.
-  - Confirm the page displays the localized expired message state ("This access link has expired.") and the WhatsApp button.
+## Legacy magic links
 
-- [ ] **5. Revocation Test**
-  - In `admin/session-links.html`, locate the active pilot link in the table and click **Revoke**.
-  - Attempt to open the revoked magic link.
-  - Confirm the page displays the localized revoked message state ("This access link has been revoked.").
-
-- [ ] **6. Anonymous Security Verification**
-  - Run `npm run verify:anon`.
-  - Confirm 0 rows are returned for `session_content`, `session_sources`, and `session_access_links` under the anonymous key.
+Shared ecosystem authentication or participant-link features may continue to exist in other applications, but they must not be treated as a source of COSYevents session content. Do not restore Supabase reads or writes for session bodies, vocabulary, prompts, facilitator notes, or recording metadata.

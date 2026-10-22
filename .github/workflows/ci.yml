@@ -31,5 +31,3 @@ jobs:
       - name: Build public data and run leak prevention tests
         run: npm run test
 
-      - name: Run RLS policy tests
-        run: npm run test:rls
