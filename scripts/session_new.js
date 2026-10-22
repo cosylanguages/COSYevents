@@ -94,7 +94,7 @@ function buildSession(payload, eventSlug, fallbackLang) {
   const publicData = payload.public || payload.catalog || {};
   const content = payload.content || {};
   const rawId = String(payload.session_id || payload.slug || publicData.slug || '');
-  const slugCandidate = String(publicData.slug || rawId.replace(/^session-/, '').replace(/^([a-z0-9-]+)-/, ''));
+  const slugCandidate = String(publicData.slug || rawId.replace(/^session-/, '').replace(/^sessions-/, ''));
   const slug = slugCandidate.toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '').replace(/-+/g, '-');
   if (!slug || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
     throw new Error('Could not derive a valid session slug from session_id/public.slug.');
