@@ -210,22 +210,22 @@ async function main() {
 
   const sessionDir = path.join(ROOT, 'events', event, 'sessions');
   const pageDir = path.join(ROOT, 'sessions', club);
-  fs.mkdirSync(sessionDir, { recursive: true });
-  fs.mkdirSync(pageDir, { recursive: true });
-
   const jsonPath = path.join(sessionDir, `${session.slug}.json`);
   const htmlPath = path.join(pageDir, `${session.slug}.html`);
   if (fs.existsSync(jsonPath) || fs.existsSync(htmlPath)) {
     throw new Error(`Session already exists (${session.slug}); refusing to overwrite repository content.`);
   }
 
-  fs.writeFileSync(jsonPath, JSON.stringify(session, null, 2) + '\n', 'utf8');
-  fs.writeFileSync(htmlPath, renderSessionPage(session, club, event), 'utf8');
-
   const catalogPath = path.join(ROOT, 'data/sessions.json');
   const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
   const href = `sessions/${club}/${session.slug}.html`;
   if (catalog.some(item => item.href === href)) throw new Error(`Catalog already contains ${href}.`);
+
+  fs.mkdirSync(sessionDir, { recursive: true });
+  fs.mkdirSync(pageDir, { recursive: true });
+  fs.writeFileSync(jsonPath, JSON.stringify(session, null, 2) + '\n', 'utf8');
+  fs.writeFileSync(htmlPath, renderSessionPage(session, club, event), 'utf8');
+
   catalog.push({
     title: `${session.title} : COSYlanguages`,
     href,
