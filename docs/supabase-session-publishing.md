@@ -26,3 +26,14 @@ npm test
 ```
 
 If a session page or directory is changed, also run the relevant page-structure, link, and session-directory tests available in `package.json`. Confirm the full session remains available from the repository without a database connection.
+
+
+## Create a new repository session
+
+For an existing session export, use:
+
+```sh
+npm run session:new -- <export.json> --event <event-slug> --club <club-slug> --lang English
+```
+
+The event must already exist. The command creates a complete repository JSON session and static HTML page, then validates event data and rebuilds the discovery index. Review generated files before committing because all committed content is public.
