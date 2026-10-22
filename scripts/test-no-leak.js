@@ -1,3 +1,4 @@
+const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
@@ -14,6 +15,29 @@ if (/\.from\(['"]session_content['"]\)/.test(sessionRuntime) ||
   console.error('FAIL: session runtime must not fetch or gate session content through Supabase.');
   process.exit(1);
 }
+
+const { buildSession, renderSessionPage } = require('./session_new');
+const generatedSession = buildSession({
+  session_id: 'session-demo',
+  public: { title: 'Demo Session', format: 'Mind Matters', language: 'English', level: 'B1-B2', summary: 'A sample session.' },
+  content: {
+    rounds: [{ title: 'Round 1', items: [{ main: 'What do you think?' }] }],
+    vocabulary: [{ word: 'resilient', definition: 'Able to recover.', example: 'She is resilient.' }],
+    full_notes: 'Facilitator notes'
+  },
+  sources: [{ title: 'Reference', url: 'https://example.com/source' }],
+  recording_url: 'https://example.com/recording'
+}, 'english-a2-foundations', 'English');
+assert.equal(generatedSession.level, 'B1');
+assert.equal(generatedSession.activities[0].content, 'What do you think?');
+assert.equal(generatedSession.vocabulary[0].word, 'resilient');
+assert.equal(generatedSession.full_notes, 'Facilitator notes');
+assert.equal(generatedSession.sources[0].source_url, 'https://example.com/source');
+assert.equal(generatedSession.recording_url, 'https://example.com/recording');
+const generatedPage = renderSessionPage(generatedSession, 'mind-matters', 'english-a2-foundations');
+assert.ok(generatedPage.includes('../../events/english-a2-foundations/sessions/demo.json'));
+assert.ok(generatedPage.includes('window.CosySessionRenderer.render'));
+assert.ok(!generatedPage.includes('SUPABASE_URL'));
 
 const publisherPath = path.join(rootDir, 'scripts/publish-events.js');
 const publisherSource = fs.readFileSync(publisherPath, 'utf8');
