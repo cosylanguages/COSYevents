@@ -15,6 +15,14 @@ if (/\.from\(['"]session_content['"]\)/.test(sessionRuntime) ||
   process.exit(1);
 }
 
+const publisherPath = path.join(rootDir, 'scripts/publish-events.js');
+const publisherSource = fs.readFileSync(publisherPath, 'utf8');
+
+if (/createClient|session_content|SUPABASE_SERVICE_ROLE_KEY|@supabase\/supabase-js/i.test(publisherSource)) {
+  console.error('FAIL: npm run publish must build static repository data, not publish to Supabase.');
+  process.exit(1);
+}
+
 console.log('Building public event data...');
 execFileSync(process.execPath, [path.join(__dirname, 'build-public.js')], {
   cwd: rootDir,
