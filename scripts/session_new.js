@@ -158,6 +158,10 @@ function renderSessionPage(session, clubSlug, eventSlug) {
   <link rel="stylesheet" href="../../shared/css/sessions.css">
 </head>
 <body>
+  <header class="session-hero">
+    <div class="club-tag">${clubSlug}</div>
+    <h1 id="session-title">Loading session…</h1>
+  </header>
   <main class="content-container">
     <div id="session-content" aria-live="polite">Loading session…</div>
   </main>
@@ -170,6 +174,7 @@ function renderSessionPage(session, clubSlug, eventSlug) {
         if (!response.ok) throw new Error('HTTP ' + response.status);
         return response.json();
       }).then(function (session) {
+        document.getElementById('session-title').textContent = session.title;
         var rounds = (session.activities || []).map(function (activity) {
           return {
             title: activity.title,
