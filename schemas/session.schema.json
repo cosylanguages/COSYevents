@@ -92,7 +92,14 @@
         ],
         "additionalProperties": false,
         "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z]{2}:[a-z0-9-]+:[a-z0-9-]+$"
+          },
           "word": {
+            "type": "string"
+          },
+          "pos": {
             "type": "string"
           },
           "definition": {
@@ -102,6 +109,12 @@
             "type": "string"
           },
           "example": {
+            "type": "string"
+          },
+          "primary_theme": {
+            "type": "string"
+          },
+          "sub_theme": {
             "type": "string"
           },
           "level": {

@@ -34,6 +34,11 @@
       "items": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z]{2}:[a-z0-9-]+:[a-z0-9-]+$",
+            "description": "Canonical ID matching <lang>:<slug>:<form>"
+          },
           "term": {
             "type": "string",
             "description": "Word or phrase in target language"
@@ -54,6 +59,14 @@
             "type": "string",
             "description": "Contextual usage sentence from the session"
           },
+          "primary_theme": {
+            "type": "string",
+            "description": "Canonical primary theme ID from taxonomy/themes.json"
+          },
+          "sub_theme": {
+            "type": "string",
+            "description": "Canonical sub-theme ID from taxonomy/themes.json"
+          },
           "tags": {
             "type": "array",
             "items": {
@@ -62,7 +75,7 @@
             "description": "Tags for categorizing in COSYdata (e.g. ['psychology', 'biases'])"
           }
         },
-        "required": ["term", "definition", "example"]
+        "required": ["id", "term", "definition", "example", "primary_theme", "sub_theme"]
       }
     }
   },

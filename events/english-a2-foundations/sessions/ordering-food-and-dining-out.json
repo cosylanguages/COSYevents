@@ -24,15 +24,23 @@
   ],
   "vocabulary": [
     {
+      "id": "en:appetizer:noun",
       "word": "appetizer",
+      "pos": "noun",
       "definition": "a small dish served before the main course",
       "example": "We ordered garlic bread as an appetizer.",
+      "primary_theme": "everyday-life",
+      "sub_theme": "dining-food",
       "level": "A2"
     },
     {
+      "id": "en:bill:noun",
       "word": "bill",
+      "pos": "noun",
       "definition": "a printed statement of the money owed for goods or services",
       "example": "Could we please have the bill when you are ready?",
+      "primary_theme": "everyday-life",
+      "sub_theme": "dining-food",
       "level": "A2"
     }
   ]

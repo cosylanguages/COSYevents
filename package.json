@@ -20,6 +20,8 @@
     "test-auth": "node scripts/test_auth.js",
     "test-sso-cms": "node scripts/test_sso_cms.js",
     "test-db": "bash scripts/run_db_tests.sh",
+    "export-vocab": "node scripts/export-vocab.js",
+    "test-vocab-export": "node scripts/test_vocab_export.js",
     "test:private-export": "node scripts/test_private_export.js",
     "test:video-meetings": "bash scripts/test_video_meetings_schema.sh",
     "test:hubs": "node scripts/test_hubs_visual.js",

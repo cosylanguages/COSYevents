@@ -1,0 +1,3947 @@
+[
+  {
+    "sessionId": "daily-routines-and-habits",
+    "sessionTitle": "Daily Routines and Habits",
+    "eventType": "speaking-club",
+    "language": "English",
+    "level": "A2",
+    "exportDate": "2025-05-10",
+    "vocabulary": [
+      {
+        "id": "en:commute:noun",
+        "term": "commute",
+        "pos": "noun",
+        "definition": "the regular journey to and from work or school",
+        "translation": "",
+        "example": "My daily commute takes thirty minutes by bus.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "A2"
+      },
+      {
+        "id": "en:routine:noun",
+        "term": "routine",
+        "pos": "noun",
+        "definition": "a sequence of actions regularly followed",
+        "translation": "",
+        "example": "Having a healthy morning routine helps me start the day well.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "A2"
+      }
+    ]
+  },
+  {
+    "sessionId": "ordering-food-and-dining-out",
+    "sessionTitle": "Ordering Food and Dining Out",
+    "eventType": "speaking-club",
+    "language": "English",
+    "level": "A2",
+    "exportDate": "2025-05-17",
+    "vocabulary": [
+      {
+        "id": "en:appetizer:noun",
+        "term": "appetizer",
+        "pos": "noun",
+        "definition": "a small dish served before the main course",
+        "translation": "",
+        "example": "We ordered garlic bread as an appetizer.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "dining-food",
+        "tags": [
+          "everyday-life",
+          "dining-food"
+        ],
+        "level": "A2"
+      },
+      {
+        "id": "en:bill:noun",
+        "term": "bill",
+        "pos": "noun",
+        "definition": "a printed statement of the money owed for goods or services",
+        "translation": "",
+        "example": "Could we please have the bill when you are ready?",
+        "primary_theme": "everyday-life",
+        "sub_theme": "dining-food",
+        "tags": [
+          "everyday-life",
+          "dining-food"
+        ],
+        "level": "A2"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-4-day-work-week",
+    "sessionTitle": "The 4-Day Work Week: Productivity vs. Tradition",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "20 August 2025",
+    "vocabulary": [
+      {
+        "id": "en:burnout:noun",
+        "term": "Burnout",
+        "pos": "noun",
+        "definition": "physical or mental collapse caused by overwork or stress.",
+        "translation": "",
+        "example": "Many employees are suffering from burnout due to long hours.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-ai-and-art",
+    "sessionTitle": "AI and Art: Can machines be truly creative?",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷",
+    "level": "Advanced (C1)",
+    "exportDate": "22 June 2025",
+    "vocabulary": [
+      {
+        "id": "en:originality:noun",
+        "term": "Originality",
+        "pos": "noun",
+        "definition": "the ability to think independently and creatively.",
+        "translation": "",
+        "example": "The designer's work is known for its originality.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-assisted-dying",
+    "sessionTitle": "Assisted Dying: Yes or No",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "16 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:autonomy:adjective",
+        "term": "Autonomy",
+        "pos": "adjective",
+        "definition": "the right of self-government or independence ≠ the act of bringing under complete control.",
+        "translation": "",
+        "example": "The artificial intelligence fought for complete autonomy, rejecting any form of human subjugation.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-chatting-with-ai-vs-human-elementary",
+    "sessionTitle": "Chatting with an AI vs Chatting with a Human (A2)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "15 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:chatbot:adjective",
+        "term": "Chatbot",
+        "pos": "adjective",
+        "definition": "a computer program designed to simulate conversation with human users.",
+        "translation": "",
+        "example": "The chatbot answered my questions instantly.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-chatting-with-ai-vs-human-intermediate",
+    "sessionTitle": "Chatting with an AI vs Chatting with a Human (B1-B2)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1/B2)",
+    "exportDate": "15 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:algorithm:adjective",
+        "term": "Algorithm",
+        "pos": "adjective",
+        "definition": "a process or set of rules to be followed in calculations.",
+        "translation": "",
+        "example": "The algorithm predicts what you want to read next.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-homework-ban",
+    "sessionTitle": "Homework should be banned",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "20 July 2025",
+    "vocabulary": [
+      {
+        "id": "en:mandatory:adjective",
+        "term": "Mandatory",
+        "pos": "adjective",
+        "definition": "required by law or rules ≠ done, given, or acting of one's own free will.",
+        "translation": "",
+        "example": "School attendance is mandatory, but participating in extracurricular sports is completely voluntary.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-human-cloning-intermediate",
+    "sessionTitle": "Human Cloning",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "10 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:cloning:noun",
+        "term": "Cloning",
+        "pos": "noun",
+        "definition": "the process of producing genetically identical copies of an organism.",
+        "translation": "",
+        "example": "Therapeutic cloning could help us cure various degenerative diseases.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-human-cloning-upper-intermediate",
+    "sessionTitle": "Human Cloning",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "10 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:cloning:noun",
+        "term": "Cloning",
+        "pos": "noun",
+        "definition": "the scientific replication of biological entities to create genetically identical individuals.",
+        "translation": "",
+        "example": "Therapeutic cloning allows researchers to grow personalized replacement tissues.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-living-with-family-vs-living-alone-elementary",
+    "sessionTitle": "Living with Family vs Living Alone (A2)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "21 August 2026",
+    "vocabulary": [
+      {
+        "id": "en:alone:adjective",
+        "term": "Alone",
+        "pos": "adjective",
+        "definition": "without other people around.",
+        "translation": "",
+        "example": "She lives alone in a small apartment.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-living-with-family-vs-living-alone-intermediate",
+    "sessionTitle": "Living with Family vs Living Alone (B1)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "22 August 2026",
+    "vocabulary": [
+      {
+        "id": "en:independence:adjective",
+        "term": "Independence",
+        "pos": "adjective",
+        "definition": "freedom from outside control or support.",
+        "translation": "",
+        "example": "Living alone fosters rapid personal independence.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-meta-subscriptions",
+    "sessionTitle": "Paid Subscriptions for Meta Platforms",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇮🇹",
+    "level": "Intermediate (B1)",
+    "exportDate": "05 July 2025",
+    "vocabulary": [
+      {
+        "id": "en:subscription:noun",
+        "term": "Subscription",
+        "pos": "noun",
+        "definition": "a regular payment to access a service or content.",
+        "translation": "",
+        "example": "Many platforms now use subscription models instead of free access.",
+        "primary_theme": "nature-science",
+        "sub_theme": "scientific-discoveries",
+        "tags": [
+          "nature-science",
+          "scientific-discoveries"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-money-vs-free-time-elementary",
+    "sessionTitle": "Money vs Free Time",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Beginner / Starter (A2)",
+    "exportDate": "10 March 2027",
+    "vocabulary": [
+      {
+        "id": "en:salary:noun",
+        "term": "Salary",
+        "pos": "noun",
+        "definition": "a fixed regular payment made by an employer to an employee.",
+        "translation": "",
+        "example": "She receives a very good monthly salary from her bank job.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-money-vs-free-time-intermediate",
+    "sessionTitle": "Money vs Free Time",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "10 March 2027",
+    "vocabulary": [
+      {
+        "id": "en:income:noun",
+        "term": "Income",
+        "pos": "noun",
+        "definition": "money received, especially on a regular basis, for work or through investments.",
+        "translation": "",
+        "example": "Getting a secondary source of income dramatically reduced her monthly stress.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-music-vs-songs-elementary",
+    "sessionTitle": "Instrumental Music vs Songs with Lyrics",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "10 March 2027",
+    "vocabulary": [
+      {
+        "id": "en:instrument:noun",
+        "term": "Instrument",
+        "pos": "noun",
+        "definition": "a tool used to make music sounds (like a piano or guitar).",
+        "translation": "",
+        "example": "Playing a physical instrument is a highly rewarding hobby.",
+        "primary_theme": "arts-entertainment",
+        "sub_theme": "music-lyrics",
+        "tags": [
+          "arts-entertainment",
+          "music-lyrics"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-music-vs-songs-intermediate",
+    "sessionTitle": "Instrumental Music vs Songs with Lyrics",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "10 March 2027",
+    "vocabulary": [
+      {
+        "id": "en:instrumental:noun",
+        "term": "Instrumental",
+        "pos": "noun",
+        "definition": "music enacted without human vocals or lyrics.",
+        "translation": "",
+        "example": "Purely instrumental tracks are highly effective for maintaining deep study focus.",
+        "primary_theme": "arts-entertainment",
+        "sub_theme": "music-lyrics",
+        "tags": [
+          "arts-entertainment",
+          "music-lyrics"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-pedagogy-and-practice",
+    "sessionTitle": "Pedagogy &amp; Practice: The Future of Learning",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "15 July 2025",
+    "vocabulary": [
+      {
+        "id": "en:scaffolding:noun",
+        "term": "Scaffolding",
+        "pos": "noun",
+        "definition": "instructional techniques used to move students toward stronger understanding.",
+        "translation": "",
+        "example": "The teacher provided scaffolding by giving the students a list of useful phrases before the debate.",
+        "primary_theme": "nature-science",
+        "sub_theme": "scientific-discoveries",
+        "tags": [
+          "nature-science",
+          "scientific-discoveries"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-retirement-is-it-worth-it-elementary",
+    "sessionTitle": "Retirement: Is It Worth It? (A2)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "14 August 2026",
+    "vocabulary": [
+      {
+        "id": "en:retirement:adjective",
+        "term": "Retirement",
+        "pos": "adjective",
+        "definition": "the period of life after stopping official work.",
+        "translation": "",
+        "example": "Many people plan their retirement carefully.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-retirement-is-it-worth-it-intermediate",
+    "sessionTitle": "Retirement: Is It Worth It? (B1)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 August 2026",
+    "vocabulary": [
+      {
+        "id": "en:retirement:adjective",
+        "term": "Retirement",
+        "pos": "adjective",
+        "definition": "the act of leaving one's job and ceasing to work permanently.",
+        "translation": "",
+        "example": "Early retirement requires disciplined financial planning.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-short-holiday-vs-long-holiday-elementary",
+    "sessionTitle": "Short Holiday vs Long Holiday",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "18 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:holiday:noun",
+        "term": "Holiday",
+        "pos": "noun",
+        "definition": "a day of festivity or recreation when no work is done.",
+        "translation": "",
+        "example": "I love to go to the beach during my summer holiday.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-short-holiday-vs-long-holiday-intermediate",
+    "sessionTitle": "Short Holiday vs Long Holiday",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "18 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:restorative:noun",
+        "term": "Restorative",
+        "pos": "noun",
+        "definition": "having the ability to restore health, strength, or well-being.",
+        "translation": "",
+        "example": "A silent weekend in the mountains offers a highly restorative escape from office stress.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-short-holiday-vs-long-holiday-upper-intermediate",
+    "sessionTitle": "Short Holiday vs Long Holiday",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "18 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:restorative:noun",
+        "term": "Restorative",
+        "pos": "noun",
+        "definition": "having the ability to restore health, strength, or a feeling of well-being.",
+        "translation": "",
+        "example": "A silent weekend in the mountains offers a highly restorative escape from office stress.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-the-future-proof-educator",
+    "sessionTitle": "The Future-Proof Educator: AI, Critical Thinking &amp; Diversity",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "22 July 2025",
+    "vocabulary": [
+      {
+        "id": "en:ai-literacy:expression",
+        "term": "AI Literacy",
+        "pos": "expression",
+        "definition": "the ability to understand, use, and critically evaluate AI technologies.",
+        "translation": "",
+        "example": "Teachers need to develop AI literacy to guide students in the ethical use of large language models.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-typing-vs-handwriting-elementary",
+    "sessionTitle": "Typing vs Handwriting",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Beginner / Starter (A2)",
+    "exportDate": "02 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:handwriting:noun",
+        "term": "Handwriting",
+        "pos": "noun",
+        "definition": "writing with a pen or pencil in your hand.",
+        "translation": "",
+        "example": "His handwriting is very neat and clean.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-typing-vs-handwriting-intermediate",
+    "sessionTitle": "Typing vs Handwriting",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "02 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:handwriting:noun",
+        "term": "Handwriting",
+        "pos": "noun",
+        "definition": "writing with a pen or pencil in the hand.",
+        "translation": "",
+        "example": "Many people believe that beautiful handwriting is a lost art.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-typing-vs-handwriting-upper-intermediate",
+    "sessionTitle": "Typing vs Handwriting",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "02 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:handwriting:noun",
+        "term": "Handwriting",
+        "pos": "noun",
+        "definition": "writing with a pen or pencil in the hand.",
+        "translation": "",
+        "example": "Many people believe that beautiful handwriting is a lost art.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "debatable-relatable-upbringing-old-vs-modern",
+    "sessionTitle": "Old Upbringing vs Modern Upbringing",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:resilience:adjective",
+        "term": "Resilience",
+        "pos": "adjective",
+        "definition": "the capacity to recover quickly from difficulties ≠ the quality of being easily broken or damaged.",
+        "translation": "",
+        "example": "True resilience is forged by understanding and accepting our own emotional fragility.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "if-you-were-if-you-were-blind",
+    "sessionTitle": "If You Were Blind",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "B2",
+    "exportDate": "25 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:acoustic:noun",
+        "term": "Acoustic",
+        "pos": "noun",
+        "definition": "Relating to sound or the sense of hearing.",
+        "translation": "",
+        "example": "We designed the new theater with excellent acoustic panels.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "perspectives",
+        "tags": [
+          "philosophy-ethics",
+          "perspectives"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "if-you-were-if-you-were-child-again",
+    "sessionTitle": "If You Were a Child Again",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "B1",
+    "exportDate": "18 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:carefree:adjective",
+        "term": "Carefree",
+        "pos": "adjective",
+        "definition": "Free from anxiety or responsibility.",
+        "translation": "",
+        "example": "Summer vacations should be a happy, carefree time for young kids.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "perspectives",
+        "tags": [
+          "philosophy-ethics",
+          "perspectives"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "if-you-were-if-you-were-deaf",
+    "sessionTitle": "If You Were Deaf",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "B2",
+    "exportDate": "28 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:vibrant:noun",
+        "term": "Vibrant",
+        "pos": "noun",
+        "definition": "Full of energy, life, or color.",
+        "translation": "",
+        "example": "She has a vibrant personality that brightens any room.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "perspectives",
+        "tags": [
+          "philosophy-ethics",
+          "perspectives"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "if-you-were-if-you-were-parent-to-yourself",
+    "sessionTitle": "If You Were a Parent to Yourself",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "C1",
+    "exportDate": "15 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:nurture:noun",
+        "term": "Nurture",
+        "pos": "noun",
+        "definition": "Care for and encourage the growth or development of.",
+        "translation": "",
+        "example": "We must nurture our creative ideas before sharing them with critics.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "perspectives",
+        "tags": [
+          "philosophy-ethics",
+          "perspectives"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "if-you-were-if-you-were-teacher",
+    "sessionTitle": "If You Were a Teacher",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "B1",
+    "exportDate": "22 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:inspire:noun",
+        "term": "Inspire",
+        "pos": "noun",
+        "definition": "Fill someone with the urge or ability to do or feel something.",
+        "translation": "",
+        "example": "A great story can inspire children to write their own poems.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "perspectives",
+        "tags": [
+          "philosophy-ethics",
+          "perspectives"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-cheap-flight-day",
+    "sessionTitle": "Cheap Flight Day (A1)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Starter (A1)",
+    "exportDate": "23 August 2026",
+    "vocabulary": [
+      {
+        "id": "en:flight:adjective",
+        "term": "Flight",
+        "pos": "adjective",
+        "definition": "a journey made by air in a plane.",
+        "translation": "",
+        "example": "I booked a cheap flight to Rome.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-diwali-festival",
+    "sessionTitle": "Diwali: The Festival of Lights",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "01 November 2025",
+    "vocabulary": [
+      {
+        "id": "en:diyas:noun",
+        "term": "Diyas",
+        "pos": "noun",
+        "definition": "small oil lamps made of clay, traditionally used during Diwali.",
+        "translation": "",
+        "example": "Lighting diyas symbolizes the victory of light over darkness.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-family-remittances-day",
+    "sessionTitle": "Family Remittances Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "16 June 2025",
+    "vocabulary": [
+      {
+        "id": "en:remittance:noun",
+        "term": "Remittance",
+        "pos": "noun",
+        "definition": "money sent to family in another country.",
+        "translation": "",
+        "example": "Many workers send remittances to support their parents back home.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-international-asteroid-day-intermediate",
+    "sessionTitle": "International Asteroid Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "30 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:asteroid:noun",
+        "term": "Asteroid",
+        "pos": "noun",
+        "definition": "a small, rocky object that travels around the Sun.",
+        "translation": "",
+        "example": "We can use strong telescopes to watch a distant asteroid move across the sky.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-international-asteroid-day-upper-intermediate",
+    "sessionTitle": "International Asteroid Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "30 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:asteroid:noun",
+        "term": "Asteroid",
+        "pos": "noun",
+        "definition": "a small rocky object that travels around the Sun.",
+        "translation": "",
+        "example": "Astronomers are tracking a massive asteroid that will pass relatively close to Earth next decade.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-international-homeless-animals-day",
+    "sessionTitle": "International Homeless Animals Day (A1)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Starter (A1)",
+    "exportDate": "16 August 2026",
+    "vocabulary": [
+      {
+        "id": "en:dog:adjective",
+        "term": "Dog",
+        "pos": "adjective",
+        "definition": "a common domestic animal kept as a pet.",
+        "translation": "",
+        "example": "He feeds his dog every morning.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-international-peace-love-day-intermediate",
+    "sessionTitle": "International Peace &amp; Love Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "07 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:harmony:adjective",
+        "term": "Harmony",
+        "pos": "adjective",
+        "definition": "a state of peaceful agreement and cooperation between people.",
+        "translation": "",
+        "example": "Living in harmony with your roommates makes home life much more comfortable.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-international-peace-love-day-upper-intermediate",
+    "sessionTitle": "International Peace &amp; Love Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "07 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:harmony:adjective",
+        "term": "Harmony",
+        "pos": "adjective",
+        "definition": "the state of being in agreement or concord.",
+        "translation": "",
+        "example": "Music has the unique power to bring people together in harmony.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-kiss-and-make-up-day-intermediate",
+    "sessionTitle": "Kiss and Make Up Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:reconciliation:adjective",
+        "term": "Reconciliation",
+        "pos": "adjective",
+        "definition": "the restoration of friendly relations.",
+        "translation": "",
+        "example": "Reconciliation requires willingness from both sides.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-lunar-new-year",
+    "sessionTitle": "Lunar New Year",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇮🇹 🇷🇺 🇬🇷",
+    "level": "Intermediate (B1)",
+    "exportDate": "10 February 2025",
+    "vocabulary": [
+      {
+        "id": "en:prosperity:adjective",
+        "term": "Prosperity",
+        "pos": "adjective",
+        "definition": "the state of being successful and flourishing.",
+        "translation": "",
+        "example": "The red colour symbolizes prosperity.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-mountain-day",
+    "sessionTitle": "Mountain Day (B1)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "11 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:peak:adjective",
+        "term": "Peak",
+        "pos": "adjective",
+        "definition": "the pointed top of a mountain.",
+        "translation": "",
+        "example": "Reaching the mountain peak required hours of steep climbing.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-national-aunt-and-uncle-day",
+    "sessionTitle": "National Aunt and Uncle Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Beginner / Starter (A2)",
+    "exportDate": "26 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:uncle:noun",
+        "term": "Uncle",
+        "pos": "noun",
+        "definition": "the brother of one's father or mother, or the husband of one's aunt.",
+        "translation": "",
+        "example": "My uncle John took me to my very first baseball game when I was ten.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-national-book-lovers-day",
+    "sessionTitle": "National Book Lovers Day (A1)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Starter (A1)",
+    "exportDate": "09 August 2026",
+    "vocabulary": [
+      {
+        "id": "en:book:adjective",
+        "term": "Book",
+        "pos": "adjective",
+        "definition": "a written work printed on paper or shown online.",
+        "translation": "",
+        "example": "I read a book every night before sleep.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-national-simplicity-day",
+    "sessionTitle": "National Simplicity Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Beginner (A1)",
+    "exportDate": "12 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:simple:adjective",
+        "term": "Simple",
+        "pos": "adjective",
+        "definition": "easy to do or understand ≠ not easy to do; needing effort.",
+        "translation": "",
+        "example": "The basic idea is simple and easy to understand.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-national-someone-day-intermediate",
+    "sessionTitle": "National Someone Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:gratitude:noun",
+        "term": "Gratitude",
+        "pos": "noun",
+        "definition": "the feeling of being thankful and showing appreciation.",
+        "translation": "",
+        "example": "Showing sincere gratitude can make a huge difference in your relationships.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-national-someone-day-upper-intermediate",
+    "sessionTitle": "National Someone Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "15 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:gratitude:noun",
+        "term": "Gratitude",
+        "pos": "noun",
+        "definition": "the feeling of being thankful and showing appreciation.",
+        "translation": "",
+        "example": "Cultivating deep gratitude in our daily lives has been shown to improve mental well-being.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-national-workaholics-day",
+    "sessionTitle": "National Workaholics Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Beginner (A1)",
+    "exportDate": "05 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:balance:noun",
+        "term": "Balance",
+        "pos": "noun",
+        "definition": "a state where different things are equal.",
+        "translation": "",
+        "example": "A good balance between work and sleep is important.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-pandemonium-day-intermediate",
+    "sessionTitle": "Pandemonium Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "14 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:chaos:adjective",
+        "term": "Chaos",
+        "pos": "adjective",
+        "definition": "complete disorder and confusion; a total lack of organization.",
+        "translation": "",
+        "example": "When we try to celebrate Pandemonium Day without plans, delightful chaos fills our home.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-pandemonium-day-upper-intermediate",
+    "sessionTitle": "Pandemonium Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "14 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:pandemonium:noun",
+        "term": "Pandemonium",
+        "pos": "noun",
+        "definition": "wild and noisy disorder or confusion; uproar.",
+        "translation": "",
+        "example": "Total pandemonium broke out when the participants of Pandemonium Day began greeting strangers with songs.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-single-working-womens-day",
+    "sessionTitle": "Single Working Women's Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:independence:adjective",
+        "term": "Independence",
+        "pos": "adjective",
+        "definition": "the state of being free from outside control ≠ relying on others for support.",
+        "translation": "",
+        "example": "Living alone taught her the value of financial independence over domestic dependence.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-urban-beekeeping-day-elementary",
+    "sessionTitle": "Urban Beekeeping Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "16 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:urban:noun",
+        "term": "Urban",
+        "pos": "noun",
+        "definition": "relating to a town or city.",
+        "translation": "",
+        "example": "We need to build more green parks in urban areas.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-urban-beekeeping-day-starter",
+    "sessionTitle": "Urban Beekeeping Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Starter / Beginner (A1)",
+    "exportDate": "16 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:bee:noun",
+        "term": "Bee",
+        "pos": "noun",
+        "definition": "a small yellow and black insect that makes honey.",
+        "translation": "",
+        "example": "I see a small bee on a flower.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "lets-celebrate-world-nature-conservation-day",
+    "sessionTitle": "World Nature Conservation Day",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "28 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:conservation:noun",
+        "term": "Conservation",
+        "pos": "noun",
+        "definition": "the action of protecting and conserving the natural environment.",
+        "translation": "",
+        "example": "Nature conservation is necessary to guarantee clean drinking water for the future.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "mind-matters-addicted-to-drama-intermediate",
+    "sessionTitle": "Are You Addicted to Drama? Why Some People Create Chaos in Their Lives",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "10 February 2027",
+    "vocabulary": [
+      {
+        "id": "en:adrenaline:noun",
+        "term": "Adrenaline",
+        "pos": "noun",
+        "definition": "a hormone released during stress, increasing heart rate and energy.",
+        "translation": "",
+        "example": "High-conflict arguments trigger a sudden rush of physical adrenaline in our bodies.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:addiction:noun",
+        "term": "Addiction",
+        "pos": "noun",
+        "definition": "the state of being enslaved to a habit or psychological dependency.",
+        "translation": "",
+        "example": "Many psychologists describe drama-seeking behavior as a form of emotional addiction.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:chaos:noun",
+        "term": "Chaos",
+        "pos": "noun",
+        "definition": "complete disorder and confusion.",
+        "translation": "",
+        "example": "Some people unconsciously create chaos in their relationships because peace feels boring to them.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:validation:noun",
+        "term": "Validation",
+        "pos": "noun",
+        "definition": "recognition or affirmation that a person's feelings are worthwhile.",
+        "translation": "",
+        "example": "Seeking validation through constant complaints is a common but unhealthy social habit.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:conflict:noun",
+        "term": "Conflict",
+        "pos": "noun",
+        "definition": "a serious disagreement, argument, or clash.",
+        "translation": "",
+        "example": "Unresolved childhood wounds can make us repeat the same relationship conflict as adults.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:subconscious:noun",
+        "term": "Subconscious",
+        "pos": "noun",
+        "definition": "relating to the part of the mind we are not fully aware of.",
+        "translation": "",
+        "example": "Our subconscious mind often seeks familiar patterns, even if those patterns are painful.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:instability:noun",
+        "term": "Instability",
+        "pos": "noun",
+        "definition": "the state of being unstable or lacking steady peace.",
+        "translation": "",
+        "example": "Growing up in household instability can condition a child to expect constant crisis.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:provoke:noun",
+        "term": "Provoke",
+        "pos": "noun",
+        "definition": "to stimulate or deliberately trigger a strong, angry reaction.",
+        "translation": "",
+        "example": "It is unhelpful to provoke an argument just to test your partner's loyalty.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:boredom:noun",
+        "term": "Boredom",
+        "pos": "noun",
+        "definition": "feeling weary and restless through lack of active interest.",
+        "translation": "",
+        "example": "To escape quiet boredom, some individuals initiate gossip or dramatic rumors.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:defense-mechanism:expression",
+        "term": "Defense mechanism",
+        "pos": "expression",
+        "definition": "an automatic mental reaction used to protect oneself from anxiety.",
+        "translation": "",
+        "example": "Blaming others for your mistakes is a primitive defense mechanism that prevents growth.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "mind-matters-anticipatory-grief",
+    "sessionTitle": "Anticipatory Grief : Mourning the Living",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "14 December 2025",
+    "vocabulary": [
+      {
+        "id": "en:anticipatory-grief:expression",
+        "term": "Anticipatory grief",
+        "pos": "expression",
+        "definition": "the emotional rehearsal of loss that occurs before the actual separation or death takes place.",
+        "translation": "",
+        "example": "Caregivers often experience intense anticipatory grief, mourning the living long before they are gone.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:terminal:noun",
+        "term": "Terminal",
+        "pos": "noun",
+        "definition": "predicted to lead to death, especially slowly; incurable.",
+        "translation": "",
+        "example": "The sudden reality of a terminal diagnosis changes the psychological timeline of the entire family.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:pre-emptive:noun",
+        "term": "Pre-emptive",
+        "pos": "noun",
+        "definition": "done to forestall or prepare for a future event, especially to shield oneself from trauma.",
+        "translation": "",
+        "example": "Her detachment was a pre-emptive defense mechanism designed to soften the coming blow of separation.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:somatic:noun",
+        "term": "Somatic",
+        "pos": "noun",
+        "definition": "relating to or affecting the body as distinct from the mind; physical manifestation of emotion.",
+        "translation": "",
+        "example": "Deep emotional distress often translates into somatic symptoms like chronic fatigue and chest tightness.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:bereavement:noun",
+        "term": "Bereavement",
+        "pos": "noun",
+        "definition": "the period of grief and mourning after the death or permanent departure of a loved one.",
+        "translation": "",
+        "example": "Understanding anticipatory mourning can make the subsequent bereavement period less disorienting.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:resilience:noun",
+        "term": "Resilience",
+        "pos": "noun",
+        "definition": "the capacity to recover from or adapt to difficult life transitions and psychological stress.",
+        "translation": "",
+        "example": "True emotional resilience is not about feeling no pain, but about integrating grief into one's life story.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:compassion-fatigue:expression",
+        "term": "Compassion fatigue",
+        "pos": "expression",
+        "definition": "physical and emotional exhaustion resulting from a prolonged exposure to others' trauma and caregiving.",
+        "translation": "",
+        "example": "Without self-directed empathy, the primary caregiver fell victim to severe compassion fatigue.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:existential:noun",
+        "term": "Existential",
+        "pos": "noun",
+        "definition": "relating to human existence, meaning, and the inevitable transience of life.",
+        "translation": "",
+        "example": "Facing the loss of a parent triggers a profound existential crisis, forcing us to question our own purpose.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:groundedness:noun",
+        "term": "Groundedness",
+        "pos": "noun",
+        "definition": "the state of being sensible, realistic, and psychologically connected to the present reality.",
+        "translation": "",
+        "example": "Mindfulness practices can help caregivers restore a sense of groundedness amidst chaotic hospital environments.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:transience:noun",
+        "term": "Transience",
+        "pos": "noun",
+        "definition": "the state of lasting only for a short time; impermanence.",
+        "translation": "",
+        "example": "Accepting the absolute transience of beautiful moments allows us to cherish them without clinging.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "mind-matters-aspiration-vs-inspiration-intermediate",
+    "sessionTitle": "Aspiration vs. Inspiration : The Fuel of the Mind",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "08 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:aspiration:noun",
+        "term": "Aspiration",
+        "pos": "noun",
+        "definition": "a hope, ambition, or future-focused goal of achieving a specific high-status target.",
+        "translation": "",
+        "example": "His main career aspiration was to lead a global environmental nonprofit organization.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:inspiration:noun",
+        "term": "Inspiration",
+        "pos": "noun",
+        "definition": "the spontaneous, emotionally driven spark of mental stimulation that triggers creative action.",
+        "translation": "",
+        "example": "She found her main artistic inspiration in the chaotic, vibrant street life of Paris.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:spontaneous:noun",
+        "term": "Spontaneous",
+        "pos": "noun",
+        "definition": "performed or occurring as a result of a sudden inner impulse, without pre-meditation.",
+        "translation": "",
+        "example": "Spontaneous ideas are often far more brilliant than those generated through forced brainstorming.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:anxiety:noun",
+        "term": "Anxiety",
+        "pos": "noun",
+        "definition": "the feeling of worry, nervousness, or unease about an uncertain future or performance.",
+        "translation": "",
+        "example": "The relentless pressure to achieve our aspirations can fuel chronic decision anxiety.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:authenticity:noun",
+        "term": "Authenticity",
+        "pos": "noun",
+        "definition": "the practice of aligning one's creative output and goals with their genuine core values.",
+        "translation": "",
+        "example": "Creative success requires us to trade commercial trends for raw, uncompromised authenticity.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:introspection:noun",
+        "term": "Introspection",
+        "pos": "noun",
+        "definition": "the focused, critical examination of one's own mental processes, goals, and emotional triggers.",
+        "translation": "",
+        "example": "A period of quiet introspection is essential for separating your true goals from societal pressure.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:satiation:noun",
+        "term": "Satiation",
+        "pos": "noun",
+        "definition": "the psychological state of being completely filled or satisfied, leading to a temporary loss of drive.",
+        "translation": "",
+        "example": "Immediate satiation of all goals can leave high-achievers feeling stagnant and unmotivated.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:evolve:noun",
+        "term": "Evolve",
+        "pos": "noun",
+        "definition": "to develop, adapt, and grow gradually over time to reflect changing internal and external realities.",
+        "translation": "",
+        "example": "Our personal goals must evolve as we acquire more life experience and wisdom.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:perspective:noun",
+        "term": "Perspective",
+        "pos": "noun",
+        "definition": "a cognitive lens, point of view, or attitude regarding personal growth and creative success.",
+        "translation": "",
+        "example": "Gaining a broader perspective allowed him to see that slow progress is still progress.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:resilience:noun",
+        "term": "Resilience",
+        "pos": "noun",
+        "definition": "the capacity of the mind to recover quickly from creative blocks, setbacks, and failures.",
+        "translation": "",
+        "example": "Nurturing emotional resilience is critical for surviving the unpredictable ups and downs of a creative career.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "mind-matters-benjamin-franklin-effect",
+    "sessionTitle": "The Benjamin Franklin Effect : The Psychology of Interpersonal Chemistry",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "05 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:interpersonal-chemistry:expression",
+        "term": "Interpersonal chemistry",
+        "pos": "expression",
+        "definition": "the psychological and emotional connection that develops between individuals.",
+        "translation": "",
+        "example": "They mistook their shared project struggles for a rare, organic interpersonal chemistry.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:cognitive-dissonance:expression",
+        "term": "Cognitive dissonance",
+        "pos": "expression",
+        "definition": "the mental discomfort that occurs when a person's behavior contradicts their beliefs.",
+        "translation": "",
+        "example": "Asking an adversary for a favor triggers cognitive dissonance, forcing them to re-evaluate their dislike.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:self-perception-theory:expression",
+        "term": "Self-perception theory",
+        "pos": "expression",
+        "definition": "the psychological model suggesting we determine our attitudes by observing our own behavior.",
+        "translation": "",
+        "example": "According to self-perception theory, we conclude we like someone because we chose to help them.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:reciprocity:noun",
+        "term": "Reciprocity",
+        "pos": "noun",
+        "definition": "the social norm of exchanging actions, kindness, or benefits for mutual advantage.",
+        "translation": "",
+        "example": "True connection transcends simple reciprocity; it reshapes our underlying emotional alignments.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:adversary:noun",
+        "term": "Adversary",
+        "pos": "noun",
+        "definition": "an opponent, competitor, or person who opposes or is hostile toward another.",
+        "translation": "",
+        "example": "Franklin successfully transformed a bitter political adversary into a lifelong, cooperative ally.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:attitude:noun",
+        "term": "Attitude",
+        "pos": "noun",
+        "definition": "a settled way of thinking or feeling about someone, typically reflected in behavior.",
+        "translation": "",
+        "example": "His hostile attitude softened immediately after he agreed to lend his rare book.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:favor:noun",
+        "term": "Favor",
+        "pos": "noun",
+        "definition": "an act of kindness or helpfulness beyond what is strictly required or expected.",
+        "translation": "",
+        "example": "Lending the rare book was a strategic favor designed to resolve political tension.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:connection:noun",
+        "term": "Connection",
+        "pos": "noun",
+        "definition": "an emotional or intellectual relationship characterized by deep mutual understanding.",
+        "translation": "",
+        "example": "A small, cooperative gesture can establish a profound, lasting connection between complete strangers.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:indebtedness:noun",
+        "term": "Indebtedness",
+        "pos": "noun",
+        "definition": "the state of feeling obliged or duty-bound to return a benefit or kindness.",
+        "translation": "",
+        "example": "He disliked the feeling of social indebtedness, preferring to keep his relationships strictly transactional.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:cooperate:noun",
+        "term": "Cooperate",
+        "pos": "noun",
+        "definition": "to work or act together with others to achieve shared goals or mutual benefits.",
+        "translation": "",
+        "example": "When forced to cooperate on a crisis, rivals often discover their shared humanity and values.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-airplane-life",
+    "sessionTitle": "Life With &amp; Without Airplanes",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 February 2027",
+    "vocabulary": [
+      {
+        "id": "en:aviation:noun",
+        "term": "Aviation",
+        "pos": "noun",
+        "definition": "the flying or operating of aircraft.",
+        "translation": "",
+        "example": "Modern aviation has made it possible to travel across continents in just a few hours.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-car-life",
+    "sessionTitle": "My Life With &amp; Without a Car",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "12 August 2025",
+    "vocabulary": [
+      {
+        "id": "en:mobility:noun",
+        "term": "Mobility",
+        "pos": "noun",
+        "definition": "the ability to move or be moved freely and easily.",
+        "translation": "",
+        "example": "Owning a car provides a great sense of personal mobility.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-celebrity-life",
+    "sessionTitle": "Life With &amp; Without Celebrities",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 June 2025",
+    "vocabulary": [
+      {
+        "id": "en:public-figure:expression",
+        "term": "Public figure",
+        "pos": "expression",
+        "definition": "a well-known person in society or media.",
+        "translation": "",
+        "example": "Being a public figure means constantly attracting attention.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-diversity-life",
+    "sessionTitle": "Life With &amp; Without Diversity",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "22 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:diversity:adjective",
+        "term": "Diversity",
+        "pos": "adjective",
+        "definition": "including people from a range of backgrounds ≠ the state of being entirely the same.",
+        "translation": "",
+        "example": "The school celebrated its cultural diversity, rejecting any form of forced uniformity.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-fast-food",
+    "sessionTitle": "My Life With &amp; My Life Without Fast Food (B1)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "18 August 2026",
+    "vocabulary": [
+      {
+        "id": "en:convenience:adjective",
+        "term": "Convenience",
+        "pos": "adjective",
+        "definition": "the state of being useful, easy, or quick to do.",
+        "translation": "",
+        "example": "Fast food offers unparalleled convenience during busy workdays.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-fridge-life",
+    "sessionTitle": "Life With &amp; Without a Fridge",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 July 2025",
+    "vocabulary": [
+      {
+        "id": "en:preserve:noun",
+        "term": "Preserve",
+        "pos": "noun",
+        "definition": "to keep food fresh for a longer time.",
+        "translation": "",
+        "example": "A fridge helps preserve meat and vegetables.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-hearing-abilities-life",
+    "sessionTitle": "My Life With & My Life Without Hearing Abilities",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1/B2)",
+    "exportDate": "15 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:auditory:adjective",
+        "term": "Auditory",
+        "pos": "adjective",
+        "definition": "relating to the sense of hearing.",
+        "translation": "",
+        "example": "Auditory processing helps us interpret music and speech.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-high-rise-skyscrapers-intermediate",
+    "sessionTitle": "My Life With &amp; Without Skyscrapers",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "28 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:skyscraper:noun",
+        "term": "Skyscraper",
+        "pos": "noun",
+        "definition": "a very tall building of many stories.",
+        "translation": "",
+        "example": "The city skyline is dominated by a newly built glass skyscraper.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-high-rise-skyscrapers-upper-intermediate",
+    "sessionTitle": "My Life With &amp; Without Skyscrapers",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "28 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:verticality:noun",
+        "term": "Verticality",
+        "pos": "noun",
+        "definition": "the state of being vertical or towering in height.",
+        "translation": "",
+        "example": "The verticality of Manhattan forces residents to live high above the noisy streets.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-holidays-vacations",
+    "sessionTitle": "My Life With &amp; Without Holidays",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "19 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:disconnect:noun",
+        "term": "Disconnect",
+        "pos": "noun",
+        "definition": "break the connection of; detach oneself from work or digital devices.",
+        "translation": "",
+        "example": "It is incredibly hard to completely disconnect from office emails during a summer holiday.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-italian-gestures",
+    "sessionTitle": "Italian Gestures &amp; Non-Verbal Expression",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:gesture:noun",
+        "term": "Gesture",
+        "pos": "noun",
+        "definition": "a movement of part of the body, especially a hand or the head, to express an idea.",
+        "translation": "",
+        "example": "Using a hand gesture can sometimes convey meaning faster than a whole sentence.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-my-life-with-without-ai",
+    "sessionTitle": "My Life With &amp; My Life Without AI (B1)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "25 August 2026",
+    "vocabulary": [
+      {
+        "id": "en:automation:adjective",
+        "term": "Automation",
+        "pos": "adjective",
+        "definition": "the use of automatic equipment in a process.",
+        "translation": "",
+        "example": "AI automation speeds up administrative paperwork.",
+        "primary_theme": "nature-science",
+        "sub_theme": "scientific-discoveries",
+        "tags": [
+          "nature-science",
+          "scientific-discoveries"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-obsolete-jobs-advanced",
+    "sessionTitle": "My Life With &amp; Without Obsolete Jobs",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Advanced (C1)",
+    "exportDate": "22 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:anachronistic:noun",
+        "term": "Anachronistic",
+        "pos": "noun",
+        "definition": "belonging or appropriate to a period other than that in which it exists, especially old-fashioned.",
+        "translation": "",
+        "example": "In our digital age, manual switchboards seem completely anachronistic.",
+        "primary_theme": "nature-science",
+        "sub_theme": "scientific-discoveries",
+        "tags": [
+          "nature-science",
+          "scientific-discoveries"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-obsolete-jobs-intermediate",
+    "sessionTitle": "My Life With &amp; Without Obsolete Jobs",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "22 July 2026",
+    "vocabulary": [
+      {
+        "id": "en:obsolete:adjective",
+        "term": "Obsolete",
+        "pos": "adjective",
+        "definition": "no longer produced or used; out of date ≠ belonging to the present time; happening or being used now.",
+        "translation": "",
+        "example": "While physical switchboards are completely obsolete today, smartphones remain current and ubiquitous.",
+        "primary_theme": "nature-science",
+        "sub_theme": "scientific-discoveries",
+        "tags": [
+          "nature-science",
+          "scientific-discoveries"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-pets-life",
+    "sessionTitle": "Life With &amp; Without Pets",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇩🇪 🇮🇹",
+    "level": "Intermediate (B1)",
+    "exportDate": "08 June 2025",
+    "vocabulary": [
+      {
+        "id": "en:emotional-support:expression",
+        "term": "Emotional support",
+        "pos": "expression",
+        "definition": "help that makes someone feel calmer or happier emotionally.",
+        "translation": "",
+        "example": "Pets often give emotional support when people feel stressed.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-private-cars-intermediate",
+    "sessionTitle": "My Life With &amp; Without Private Cars",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "24 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:mobility:noun",
+        "term": "Mobility",
+        "pos": "noun",
+        "definition": "the ability to move or be moved freely and easily.",
+        "translation": "",
+        "example": "Owning a private car offers unparalleled personal mobility.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-private-cars-upper-intermediate",
+    "sessionTitle": "My Life With &amp; Without Private Cars",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "24 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:automotive-dominance:expression",
+        "term": "Automotive dominance",
+        "pos": "expression",
+        "definition": "the absolute dominance of cars in determining city layouts and transportation options.",
+        "translation": "",
+        "example": "Cities are trying to break free from decades of automotive dominance by investing in bike lanes.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-series-soap-opera",
+    "sessionTitle": "Life With &amp; Without Series &amp; Soap Operas",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "10 March 2027",
+    "vocabulary": [
+      {
+        "id": "en:soap-opera:expression",
+        "term": "Soap opera",
+        "pos": "expression",
+        "definition": "a television drama series dealing with daily events in the lives of the same characters.",
+        "translation": "",
+        "example": "My grandmother watches her favorite Spanish soap opera every single afternoon.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "my-life-with-without-social-media-life",
+    "sessionTitle": "Life With &amp; Without Social Media",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇮🇹 🇷🇺 🇬🇷",
+    "level": "Intermediate (B1)",
+    "exportDate": "01 June 2025",
+    "vocabulary": [
+      {
+        "id": "en:doomscrolling:noun",
+        "term": "Doomscrolling",
+        "pos": "noun",
+        "definition": "spending excessive time scrolling through bad news online.",
+        "translation": "",
+        "example": "I spent the whole evening doomscrolling instead of sleeping.",
+        "primary_theme": "everyday-life",
+        "sub_theme": "routines",
+        "tags": [
+          "everyday-life",
+          "routines"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-ability-to-notice-beauty-quote",
+    "sessionTitle": "\"The amount of beautiful things in your life depends on your ability to notice them.\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "25 November 2026",
+    "vocabulary": [
+      {
+        "id": "en:appreciate:noun",
+        "term": "Appreciate",
+        "pos": "noun",
+        "definition": "to recognize the full worth, quality, or value of something deeply.",
+        "translation": "",
+        "example": "We must learn to slow down and appreciate the simple, quiet moments of our day.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-accept-gay-child",
+    "sessionTitle": "Accepting a Gay Child: Love vs. Tradition",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "30 November 2025",
+    "vocabulary": [
+      {
+        "id": "en:unconditional:noun",
+        "term": "Unconditional",
+        "pos": "noun",
+        "definition": "not subject to any conditions; absolute.",
+        "translation": "",
+        "example": "Unconditional love from parents is crucial for a child's well-being.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-ai-opposite-of-art-intermediate",
+    "sessionTitle": "AI is the Opposite of Art: The Risk of Creation",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "23 November 2025",
+    "vocabulary": [
+      {
+        "id": "en:risk-taking:noun",
+        "term": "Risk-taking",
+        "pos": "noun",
+        "definition": "the act or fact of doing something that involves danger or risk in order to achieve a goal.",
+        "translation": "",
+        "example": "True art often requires a level of emotional risk-taking that can be terrifying for the artist.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-ai-opposite-of-art-upper-intermediate",
+    "sessionTitle": "AI is the Opposite of Art: The Risk of Creation (B2)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "23 November 2025",
+    "vocabulary": [
+      {
+        "id": "en:audacity:noun",
+        "term": "Audacity",
+        "pos": "noun",
+        "definition": "a willingness to take bold risks.",
+        "translation": "",
+        "example": "His artistic audacity pushed him to paint a massive mural across the city hall.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-alisa-freindlich-inner-child-elementary",
+    "sessionTitle": "\"The longer we keep our inner child alive, the longer we keep the natural gifts we were born with.\": Alisa Freindlich",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English 🇷🇺 Russian",
+    "level": "Elementary (A2)",
+    "exportDate": "10 March 2027",
+    "vocabulary": [
+      {
+        "id": "en:inner-child:expression",
+        "term": "Inner child",
+        "pos": "expression",
+        "definition": "a person's childhood self, especially regarded as an active part of their adult personality.",
+        "translation": "",
+        "example": "Playing with blocks helps adults connect with their inner child.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-alisa-freindlich-inner-child-intermediate",
+    "sessionTitle": "\"The longer we keep our inner child alive, the longer we keep the natural gifts we were born with.\": Alisa Freindlich",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English 🇷🇺 Russian",
+    "level": "Intermediate (B1)",
+    "exportDate": "10 March 2027",
+    "vocabulary": [
+      {
+        "id": "en:inner-child:expression",
+        "term": "Inner child",
+        "pos": "expression",
+        "definition": "a person's childhood self, especially regarded as an active part of their adult personality.",
+        "translation": "",
+        "example": "Connecting with your inner child can provide deep insights during emotional therapy.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-amish-tripathi-quote",
+    "sessionTitle": "\"The opposite of love is not hate. The actual opposite of love is apathy.\": Amish Tripathi",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "12 July 2025",
+    "vocabulary": [
+      {
+        "id": "en:apathy:noun",
+        "term": "Apathy",
+        "pos": "noun",
+        "definition": "lack of interest, enthusiasm, or concern toward people or events.",
+        "translation": "",
+        "example": "Showing absolute apathy during an argument can hurt your partner far more than anger.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-barbra-streisand-quote",
+    "sessionTitle": "\"I knew that with a mouth like mine, I just hadda be a star or something.\": Barbra Streisand",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "10 July 2025",
+    "vocabulary": [
+      {
+        "id": "en:self-image:noun",
+        "term": "Self-image",
+        "pos": "noun",
+        "definition": "the way a person sees, values, and interprets their own appearance and character.",
+        "translation": "",
+        "example": "Refusing to get plastic surgery helped her maintain a highly healthy and proud self-image.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-brianna-pastor-proud-quote",
+    "sessionTitle": "\"Pay attention to who changes the subject when you try to talk about something you're proud of.\": Brianna Pastor",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "05 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:acceptance:noun",
+        "term": "Acceptance",
+        "pos": "noun",
+        "definition": "the action of consenting to receive or undertake something offered.",
+        "translation": "",
+        "example": "Finding true acceptance within one's family is a vital part of personal growth.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-compass-and-clock",
+    "sessionTitle": "\"The compass was invented before the clock because direction was more important than how long it took to get there.\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "25 June 2025",
+    "vocabulary": [
+      {
+        "id": "en:compass:noun",
+        "term": "Compass",
+        "pos": "noun",
+        "definition": "an instrument showing the direction of magnetic north; here, a metaphor for inner purpose and life direction.",
+        "translation": "",
+        "example": "Using your personal values as a compass helps you avoid following others' standards.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-dalai-lama-happier-minds-elementary",
+    "sessionTitle": "Dalai Lama: Happier Minds (A2)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "15 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:happiness:adjective",
+        "term": "Happiness",
+        "pos": "adjective",
+        "definition": "the state of being happy.",
+        "translation": "",
+        "example": "Happiness comes from positive choices.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-dalai-lama-happier-minds-intermediate",
+    "sessionTitle": "Dalai Lama: Happier Minds (B1)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:altruism:adjective",
+        "term": "Altruism",
+        "pos": "adjective",
+        "definition": "the belief in or practice of disinterested and selfless concern for the well-being of others.",
+        "translation": "",
+        "example": "Altruism creates strong, supportive communities.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-dangerous-blindness-perspective",
+    "sessionTitle": "Dangerous Blindness: The Limit of Perspective",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "28 December 2025",
+    "vocabulary": [
+      {
+        "id": "en:perspective:noun",
+        "term": "Perspective",
+        "pos": "noun",
+        "definition": "a particular attitude toward or way of regarding something.",
+        "translation": "",
+        "example": "Traveling abroad gives you a completely new perspective on your own culture.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-disappear-with-art-quote-elementary",
+    "sessionTitle": "\"The older you get the more you understand why people disappear with art, music, books and quiet living.\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "24 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:quiet:adjective",
+        "term": "Quiet",
+        "pos": "adjective",
+        "definition": "making little or no noise; peaceful and calm.",
+        "translation": "",
+        "example": "I enjoy a quiet morning with a cup of warm tea.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-disappear-with-art-quote-intermediate",
+    "sessionTitle": "\"The older you get the more you understand why people disappear with art, music, books and quiet living.\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "23 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:solitude:adjective",
+        "term": "Solitude",
+        "pos": "adjective",
+        "definition": "the state or situation of being alone, especially by choice.",
+        "translation": "",
+        "example": "Spending time in quiet solitude allows me to regain focus and energy.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-disappear-with-art-quote",
+    "sessionTitle": "\"The older you get the more you understand why people disappear with art, music, books and quiet living.\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "22 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:artistry:noun",
+        "term": "Artistry",
+        "pos": "noun",
+        "definition": "creative skill or ability in a fine art or literature.",
+        "translation": "",
+        "example": "The novel is praised for its exceptional prose and delicate artistry.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-dolto-difficult-child-quote",
+    "sessionTitle": "\"A child has the right to be difficult, that is the only way they learn to be themselves.\": Françoise Dolto",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "20 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:independent:noun",
+        "term": "Independent",
+        "pos": "noun",
+        "definition": "capable of thinking or acting on one's own without constant supervision.",
+        "translation": "",
+        "example": "Encouraging children to make their own choices builds a highly independent mind.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-dostoevsky-loving-power-quote",
+    "sessionTitle": "\"Loving someone means giving them the power to destroy you, but trusting they won't.\": Fedor Dostoevsky",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "01 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:acceptance:noun",
+        "term": "Acceptance",
+        "pos": "noun",
+        "definition": "the action of consenting to receive or undertake something offered.",
+        "translation": "",
+        "example": "Finding true acceptance within one's family is a vital part of personal growth.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-dostoevsky-politics-religion-quote",
+    "sessionTitle": "\"If you want to know a person, discuss politics, religion, and women with him.\": Fedor Dostoevsky",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "30 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:taboo:noun",
+        "term": "Taboo",
+        "pos": "noun",
+        "definition": "restricted by social custom or as a topic of polite conversation.",
+        "translation": "",
+        "example": "In many cultures, talking about salary or personal beliefs remains strictly taboo.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-einstein-passionately-curious-quote",
+    "sessionTitle": "\"I have no special talents, I am only passionately curious.\": Albert Einstein",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "05 November 2026",
+    "vocabulary": [
+      {
+        "id": "en:talent:noun",
+        "term": "Talent",
+        "pos": "noun",
+        "definition": "a natural ability to do something well.",
+        "translation": "",
+        "example": "She has a great talent for learning languages.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-favorite-days-not-happened",
+    "sessionTitle": "Favorite Days: That Never Happened",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "11 January 2026",
+    "vocabulary": [
+      {
+        "id": "en:idealized:noun",
+        "term": "Idealized",
+        "pos": "noun",
+        "definition": "regarded or represented as perfect or better than in reality.",
+        "translation": "",
+        "example": "Social media often presents an idealized version of people's lives that is far from the truth.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-feynman-education-quote",
+    "sessionTitle": "\"Never confuse education with intelligence.\": Richard Feynman",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 July 2025",
+    "vocabulary": [
+      {
+        "id": "en:confuse:noun",
+        "term": "Confuse",
+        "pos": "noun",
+        "definition": "to fail to distinguish between two different things, thinking they are the same.",
+        "translation": "",
+        "example": "People often confuse having many academic credentials with possessing deep wisdom.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-feynman-knowledge-isnt-free-elementary",
+    "sessionTitle": "\"Knowledge isn't free. You have to pay attention.\": Richard Feynman",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Beginner / Starter (A2)",
+    "exportDate": "22 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:knowledge:noun",
+        "term": "Knowledge",
+        "pos": "noun",
+        "definition": "information, skills, and understanding that you get through learning.",
+        "translation": "",
+        "example": "Reading books is an excellent way to get new knowledge.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-feynman-knowledge-isnt-free-intermediate",
+    "sessionTitle": "\"Knowledge isn't free. You have to pay attention.\": Richard Feynman",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "22 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:knowledge:noun",
+        "term": "Knowledge",
+        "pos": "noun",
+        "definition": "information, skills, and deep understanding acquired through systematic study or experience.",
+        "translation": "",
+        "example": "Getting raw facts online is easy, but converting them into real, structured knowledge requires effort.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-feynman-knowledge-isnt-free-upper-intermediate",
+    "sessionTitle": "\"Knowledge isn't free. You have to pay attention.\": Richard Feynman",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "22 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:inquisitiveness:noun",
+        "term": "Inquisitiveness",
+        "pos": "noun",
+        "definition": "having or showing an interest in learning things; curious.",
+        "translation": "",
+        "example": "His natural inquisitiveness drove him to take apart old watches to see how they worked.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-feynman-no-shame-knowing-quote",
+    "sessionTitle": "\"There is no shame in not knowing things! It's okay to say 'I don't know'. The one shame is to pretend that we know everything.\": Richard Feynman",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "31 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:curiosity:noun",
+        "term": "Curiosity",
+        "pos": "noun",
+        "definition": "a strong desire to know or learn something new.",
+        "translation": "",
+        "example": "Childhood curiosity should be nurtured and encouraged by every teacher.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-feynman-study-hard-intermediate",
+    "sessionTitle": "\"Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.\": Richard Feynman",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "18 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:undisciplined:noun",
+        "term": "Undisciplined",
+        "pos": "noun",
+        "definition": "ignoring strict rules, timetables, or formal academic structures; free-form.",
+        "translation": "",
+        "example": "Feynman loved an undisciplined approach to learning, focusing only on what captured his mind.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-feynman-study-hard",
+    "sessionTitle": "\"Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.\": Richard Feynman",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "18 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:unorthodox:noun",
+        "term": "Unorthodox",
+        "pos": "noun",
+        "definition": "contrary to what is usual, traditional, or accepted within academic institutions.",
+        "translation": "",
+        "example": "His unorthodox method of teaching physics involved playing bongo drums in class.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-home-is-a-time",
+    "sessionTitle": "Home is a Time: Not a Place",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "26 October 2025",
+    "vocabulary": [
+      {
+        "id": "en:belonging:noun",
+        "term": "Belonging",
+        "pos": "noun",
+        "definition": "a sense of being part of a particular group or place.",
+        "translation": "",
+        "example": "Finding a community where you feel a sense of belonging is essential for mental health.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-jim-kwik-quote",
+    "sessionTitle": "\"Don't take criticism from someone you wouldn't take advice from.\": Jim Kwik",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "22 June 2025",
+    "vocabulary": [
+      {
+        "id": "en:criticism:noun",
+        "term": "Criticism",
+        "pos": "noun",
+        "definition": "expression of disapproval, or analytical feedback about someone's performance or behavior.",
+        "translation": "",
+        "example": "Taking continuous criticism from strangers online can seriously damage your peace of mind.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-langle-suppressed-child-quote",
+    "sessionTitle": "\"If a child is always convenient, it means they have already suppressed a part of themselves.\": Alfried Längle",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "28 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:convenient:noun",
+        "term": "Convenient",
+        "pos": "noun",
+        "definition": "fitting in well with a person's needs, activities, and plans; causing little trouble or effort.",
+        "translation": "",
+        "example": "A quiet, quiet child is highly convenient for busy parents, but is it healthy for the child?",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-lover-with-or-without-a-lover",
+    "sessionTitle": "\"I am a lover with or without a lover, because love is who I am, not who I'm with.\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "08 January 2027",
+    "vocabulary": [
+      {
+        "id": "en:affection:adjective",
+        "term": "Affection",
+        "pos": "adjective",
+        "definition": "a gentle feeling of fondness, warmth, or care for someone or something.",
+        "translation": "",
+        "example": "Showing genuine affection to friends makes life richer and more meaningful.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-madonna-ai-art-quote-elementary",
+    "sessionTitle": "\"AI is the opposite of taking risks...\": Madonna",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Beginner / Starter (A2)",
+    "exportDate": "30 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:opposite:noun",
+        "term": "Opposite",
+        "pos": "noun",
+        "definition": "completely different from something else.",
+        "translation": "",
+        "example": "Happy is the natural opposite of sad.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-madonna-ai-art-quote-intermediate",
+    "sessionTitle": "\"Algorithms and AI are the opposite of taking risks...\": Madonna",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "30 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:algorithm:noun",
+        "term": "Algorithm",
+        "pos": "noun",
+        "definition": "a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.",
+        "translation": "",
+        "example": "Streaming platforms use an advanced algorithm to suggest new songs.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-madonna-ai-art-quote-upper-intermediate",
+    "sessionTitle": "\"Algorithms and AI are the opposite of taking risks...\": Madonna (B2)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "30 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:audacity:noun",
+        "term": "Audacity",
+        "pos": "noun",
+        "definition": "a willingness to take bold risks.",
+        "translation": "",
+        "example": "His artistic audacity pushed him to paint a massive mural across the city hall.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-memory-cards-storage-quote",
+    "sessionTitle": "\"They took memory cards from us and then made us pay for storage.\": Nithya Shri",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Advanced (C1)",
+    "exportDate": "05 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:subscription:noun",
+        "term": "Subscription",
+        "pos": "noun",
+        "definition": "a regular payment made to receive a service.",
+        "translation": "",
+        "example": "Paying a monthly subscription for digital cloud storage is very common now.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-must-die-first",
+    "sessionTitle": "You Must Die First: The Art of Rebirth",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "02 November 2025",
+    "vocabulary": [
+      {
+        "id": "en:transformation:noun",
+        "term": "Transformation",
+        "pos": "noun",
+        "definition": "a thorough or dramatic change in form or appearance.",
+        "translation": "",
+        "example": "The caterpillar's transformation into a butterfly is a classic symbol of rebirth.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-neufeld-resistance-quote",
+    "sessionTitle": "\"The real problems start not when a child resists, but when they stop resisting.\": Gordon Neufeld",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "25 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:cooperation:noun",
+        "term": "Cooperation",
+        "pos": "noun",
+        "definition": "the process of working together to achieve a shared end or goal.",
+        "translation": "",
+        "example": "True cooperation must be built on trust rather than fear of punishment.",
+        "primary_theme": "psychology-mind",
+        "sub_theme": "cognitive-biases",
+        "tags": [
+          "psychology-mind",
+          "cognitive-biases"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-rain-seller-umbrella-quote",
+    "sessionTitle": "\"The same rain that hurts the ice cream seller helps the umbrella seller.\": Proverb",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "10 November 2026",
+    "vocabulary": [
+      {
+        "id": "en:perspective:noun",
+        "term": "Perspective",
+        "pos": "noun",
+        "definition": "a particular attitude toward or way of regarding something; a cognitive standpoint.",
+        "translation": "",
+        "example": "Depending on your perspective, a rainy day can feel like a setback or a cozy opportunity.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-robin-williams-quote-intermediate",
+    "sessionTitle": "\"People don't fake depression, they fake being okay.\": Robin Williams",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "21 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:facade:noun",
+        "term": "Facade",
+        "pos": "noun",
+        "definition": "an outward appearance that conceals a less pleasant reality.",
+        "translation": "",
+        "example": "She maintained a cheerful facade despite her personal troubles.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-robin-williams-quote-upper-intermediate",
+    "sessionTitle": "\"People don't fake depression, they fake being okay.\": Robin Williams",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "21 June 2026",
+    "vocabulary": [
+      {
+        "id": "en:pretense:noun",
+        "term": "Pretense",
+        "pos": "noun",
+        "definition": "an attempt to make something that is not the case appear true.",
+        "translation": "",
+        "example": "He abandoned all pretense of being interested in the conversation.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-sadia-hakim-humanity-quote",
+    "sessionTitle": "\"People, people, people, an ocean of people, but I can't find even a drop of humanity.\": Sadia Hakim",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Advanced (C1)",
+    "exportDate": "01 November 2026",
+    "vocabulary": [
+      {
+        "id": "en:humanity:noun",
+        "term": "Humanity",
+        "pos": "noun",
+        "definition": "the quality of being humane, compassionate, or sympathetic.",
+        "translation": "",
+        "example": "Small acts of kindness restore our faith in the future of humanity.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-saudade",
+    "sessionTitle": "Saudade: The Presence of Absence",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "05 October 2025",
+    "vocabulary": [
+      {
+        "id": "en:longing:noun",
+        "term": "Longing",
+        "pos": "noun",
+        "definition": "a strong wish for something or someone.",
+        "translation": "",
+        "example": "He felt a deep longing to return to his childhood home.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-sonder",
+    "sessionTitle": "Sonder: The Lives of Others",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "12 October 2025",
+    "vocabulary": [
+      {
+        "id": "en:sonder:noun",
+        "term": "Sonder",
+        "pos": "noun",
+        "definition": "the profound feeling of realizing that everyone has a complex life.",
+        "translation": "",
+        "example": "Walking through the crowded station, he was struck by a sudden sense of sonder.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-stay-free-quote",
+    "sessionTitle": "\"None of us really have a choice in anything but we do have a choice to be ourselves. Stay free.\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "20 June 2025",
+    "vocabulary": [
+      {
+        "id": "en:choice:noun",
+        "term": "Choice",
+        "pos": "noun",
+        "definition": "the act of selecting or making a decision when faced with possibilities.",
+        "translation": "",
+        "example": "We might not choose where we are born, but we always have a choice to stay true to our values.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-steve-jobs-quote",
+    "sessionTitle": "\"Stay hungry, stay foolish.\": Steve Jobs",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇪🇸 🇮🇹 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "20 August 2025",
+    "vocabulary": [
+      {
+        "id": "en:hungry:noun",
+        "term": "Hungry",
+        "pos": "noun",
+        "definition": "having a strong, continuous desire or craving for something (like learning or goals).",
+        "translation": "",
+        "example": "To achieve great milestones, you must stay hungry for knowledge and never settle.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-think-for-yourself-quote",
+    "sessionTitle": "\"Do you think so, or were you told to think so?\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇷🇺",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 November 2026",
+    "vocabulary": [
+      {
+        "id": "en:influence:noun",
+        "term": "Influence",
+        "pos": "noun",
+        "definition": "the capacity or power to have an effect on the character, development, or behavior of someone.",
+        "translation": "",
+        "example": "Social media algorithms have a massive influence on the opinions of young teenagers.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-turn-off-ai-quote-elementary",
+    "sessionTitle": "Turn Off AI (A2)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Elementary (A2)",
+    "exportDate": "20 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:artificial:adjective",
+        "term": "Artificial",
+        "pos": "adjective",
+        "definition": "made by humans rather than occurring naturally.",
+        "translation": "",
+        "example": "AI programs can write simple texts very fast.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-turn-off-ai-quote",
+    "sessionTitle": "\"We should turn off AI for a week to see if people's brains still work.\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "12 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:artificial:noun",
+        "term": "Artificial",
+        "pos": "noun",
+        "definition": "made or produced by human beings rather than occurring naturally.",
+        "translation": "",
+        "example": "Relying on artificial intelligence might weaken our natural critical thinking.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-underpaid-politicians-teachers-quote",
+    "sessionTitle": "\"Maybe if we underpaid politicians and overpaid teachers, there would be smarter people and less stupid laws.\": Anonymous (often attributed to Morgan Freeman)",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Upper-Intermediate (B2)",
+    "exportDate": "30 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:prejudice:noun",
+        "term": "Prejudice",
+        "pos": "noun",
+        "definition": "preconceived opinion that is not based on reason or actual experience.",
+        "translation": "",
+        "example": "Overcoming deep-seated social prejudice requires education and exposure.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-virginia-woolf-trigger-quote",
+    "sessionTitle": "\"How many times have people used a pen or a paintbrush because they couldn't pull the trigger?\": Virginia Woolf",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Advanced (C1)",
+    "exportDate": "10 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:artistry:noun",
+        "term": "Artistry",
+        "pos": "noun",
+        "definition": "creative skill or ability in a fine art or literature.",
+        "translation": "",
+        "example": "The novel is praised for its exceptional prose and delicate artistry.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-voltaire-read-dance-quote",
+    "sessionTitle": "\"Let us read, and let us dance, those two amusements will never do any harm to the world.\": Voltaire",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷",
+    "level": "Intermediate (B1)",
+    "exportDate": "15 December 2026",
+    "vocabulary": [
+      {
+        "id": "en:artistry:noun",
+        "term": "Artistry",
+        "pos": "noun",
+        "definition": "creative skill or ability in a fine art or literature.",
+        "translation": "",
+        "example": "The novel is praised for its exceptional prose and delicate artistry.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-weird-people-dreams-quote",
+    "sessionTitle": "\"I will always prefer weird people with big dreams and poetic personalities.\": Anonymous",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "28 October 2026",
+    "vocabulary": [
+      {
+        "id": "en:weird:noun",
+        "term": "Weird",
+        "pos": "noun",
+        "definition": "very strange, unusual, or eccentric, but in a highly creative or fascinating way.",
+        "translation": "",
+        "example": "He had some weird habits, like writing poetry on train tickets, but everyone loved his spirit.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-wisdom-of-socrates",
+    "sessionTitle": "\"The only true wisdom is in knowing you know nothing.\": Socrates",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "15 June 2025",
+    "vocabulary": [
+      {
+        "id": "en:intellectual-humility:expression",
+        "term": "Intellectual humility",
+        "pos": "expression",
+        "definition": "a conscious awareness of the limitations of one's own knowledge.",
+        "translation": "",
+        "example": "Embracing intellectual humility is the first step toward genuine learning.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-women-mothers-tragedy",
+    "sessionTitle": "Women and Mothers: The Tragedy of Choice",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "09 November 2025",
+    "vocabulary": [
+      {
+        "id": "en:tragedy:noun",
+        "term": "Tragedy",
+        "pos": "noun",
+        "definition": "an event causing great suffering, destruction, and distress.",
+        "translation": "",
+        "example": "The real tragedy of the situation was the lack of communication between the two sisters.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
+    "sessionId": "the-greatest-quotes-you-are-a-soul",
+    "sessionTitle": "\"You don't have a soul. You are a soul. You have a body.\": C.S. Lewis",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 🇫🇷 🇷🇺",
+    "level": "Advanced (C1)",
+    "exportDate": "16 November 2025",
+    "vocabulary": [
+      {
+        "id": "en:essence:noun",
+        "term": "Essence",
+        "pos": "noun",
+        "definition": "the intrinsic, core nature or indispensable quality of a living being.",
+        "translation": "",
+        "example": "Many spiritual teachers believe that kindness is the true essence of the human soul.",
+        "primary_theme": "philosophy-ethics",
+        "sub_theme": "quotes-wisdom",
+        "tags": [
+          "philosophy-ethics",
+          "quotes-wisdom"
+        ],
+        "level": "B1"
+      }
+    ]
+  }
+]
