@@ -24,15 +24,23 @@
   ],
   "vocabulary": [
     {
+      "id": "en:commute:noun",
       "word": "commute",
+      "pos": "noun",
       "definition": "the regular journey to and from work or school",
       "example": "My daily commute takes thirty minutes by bus.",
+      "primary_theme": "everyday-life",
+      "sub_theme": "routines",
       "level": "A2"
     },
     {
+      "id": "en:routine:noun",
       "word": "routine",
+      "pos": "noun",
       "definition": "a sequence of actions regularly followed",
       "example": "Having a healthy morning routine helps me start the day well.",
+      "primary_theme": "everyday-life",
+      "sub_theme": "routines",
       "level": "A2"
     }
   ]
