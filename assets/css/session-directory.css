@@ -333,6 +333,29 @@
   flex: 0 1 auto;
 }
 
+.sd-speaking-clubs-wrapper {
+  animation: sdFadeInSlide 0.25s ease-out forwards;
+}
+
+.sd-speaking-clubs-wrapper.hidden {
+  display: none !important;
+}
+
+.sd-speaking-clubs-wrapper.visible {
+  display: block !important;
+}
+
+@keyframes sdFadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .sd-select {
   padding: 0.75rem 2.2rem 0.75rem 1rem;
   border: 1.5px solid var(--border);

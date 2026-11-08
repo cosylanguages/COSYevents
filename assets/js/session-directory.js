@@ -26,8 +26,8 @@
       this.state = {
         searchQuery: '',
         selectedLang: 'ALL',
-        selectedFormat: 'ALL',
-        selectedClub: 'ALL',
+        selectedType: 'ALL',
+        selectedSpeakingClub: 'ALL',
         selectedLevel: null, // null means 'All Levels', string or Array for level filter
         wishlistOnly: false
       };
@@ -102,10 +102,16 @@
     }
 
     renderUI() {
-      // Extract unique languages, clubs, and formats from sessions
+      // Extract unique languages and speaking clubs from sessions
       const languages = Array.from(new Set(this.sessions.map(s => s.lang).filter(Boolean))).sort();
-      const clubs = Array.from(new Set(this.sessions.map(s => s.club).filter(Boolean))).sort();
-      const formats = Array.from(new Set(this.sessions.map(s => s.format).filter(Boolean))).sort();
+      const speakingClubs = Array.from(
+        new Set(
+          this.sessions
+            .filter(s => s.format === 'Speaking Club')
+            .map(s => s.club)
+            .filter(Boolean)
+        )
+      ).sort();
       const levelGroups = [
         { label: 'A0–A1', value: 'A0-A1' },
         { label: 'A2', value: 'A2' },
@@ -132,11 +138,23 @@
                   />
                 </div>
 
-                <!-- Club Select -->
-                <div class="sd-select-wrapper">
-                  <select id="sd-club-select" class="sd-select" aria-label="Filter sessions by club">
-                    <option value="ALL">All Clubs</option>
-                    ${clubs.map(club => `<option value="${this.escapeAttr(club)}">${this.escapeText(club)}</option>`).join('')}
+                <!-- Event Type Unfolding Menu -->
+                <div class="sd-select-wrapper sd-type-wrapper">
+                  <select id="sd-type-select" class="sd-select" aria-label="Filter sessions by event type">
+                    <option value="ALL">All Event Types</option>
+                    <option value="Speaking Club">Speaking Clubs</option>
+                    <option value="Cinema Club">Cinema</option>
+                    <option value="Karaoke Club">Karaoke</option>
+                    <option value="Long Read">Long Reads</option>
+                    <option value="Games">Games</option>
+                  </select>
+                </div>
+
+                <!-- Conditional Speaking Clubs Sub-Selector -->
+                <div id="sd-speaking-clubs-wrapper" class="sd-select-wrapper sd-speaking-clubs-wrapper hidden" aria-hidden="true">
+                  <select id="sd-speaking-club-select" class="sd-select" aria-label="Select speaking club">
+                    <option value="ALL">All Speaking Clubs</option>
+                    ${speakingClubs.map(club => `<option value="${this.escapeAttr(club)}">${this.escapeText(club)}</option>`).join('')}
                   </select>
                 </div>
 
@@ -145,14 +163,6 @@
                   <select id="sd-lang-select" class="sd-select" aria-label="Filter sessions by language">
                     <option value="ALL">All Languages</option>
                     ${languages.map(lang => `<option value="${this.escapeAttr(lang)}">${this.escapeText(lang)}</option>`).join('')}
-                  </select>
-                </div>
-
-                <!-- Format Select -->
-                <div class="sd-select-wrapper">
-                  <select id="sd-format-select" class="sd-select" aria-label="Filter sessions by format">
-                    <option value="ALL">All Formats</option>
-                    ${formats.map(fmt => `<option value="${this.escapeAttr(fmt)}">${this.escapeText(fmt)}</option>`).join('')}
                   </select>
                 </div>
               </div>
@@ -211,9 +221,10 @@
 
       // Cache DOM references
       this.searchInput = this.container.querySelector('#sd-search');
-      this.clubSelect = this.container.querySelector('#sd-club-select');
+      this.typeSelect = this.container.querySelector('#sd-type-select');
+      this.speakingClubsWrapper = this.container.querySelector('#sd-speaking-clubs-wrapper');
+      this.speakingClubSelect = this.container.querySelector('#sd-speaking-club-select');
       this.langSelect = this.container.querySelector('#sd-lang-select');
-      this.formatSelect = this.container.querySelector('#sd-format-select');
       this.resultsCount = this.container.querySelector('#sd-results-count');
       this.cardsGrid = this.container.querySelector('#sd-cards-grid');
       this.pillButtons = this.container.querySelectorAll('.sd-pill');
@@ -228,26 +239,47 @@
         });
       }
 
+      // Event Type unfolding menu selection
+      if (this.typeSelect) {
+        this.typeSelect.addEventListener('change', (e) => {
+          const newType = e.target.value;
+          this.state.selectedType = newType;
+
+          if (newType === 'Speaking Club') {
+            if (this.speakingClubsWrapper) {
+              this.speakingClubsWrapper.classList.remove('hidden');
+              this.speakingClubsWrapper.classList.add('visible');
+              this.speakingClubsWrapper.setAttribute('aria-hidden', 'false');
+            }
+          } else {
+            // Fold/hide speaking clubs submenu and reset specific club
+            if (this.speakingClubsWrapper) {
+              this.speakingClubsWrapper.classList.remove('visible');
+              this.speakingClubsWrapper.classList.add('hidden');
+              this.speakingClubsWrapper.setAttribute('aria-hidden', 'true');
+            }
+            this.state.selectedSpeakingClub = 'ALL';
+            if (this.speakingClubSelect) {
+              this.speakingClubSelect.value = 'ALL';
+            }
+          }
+
+          this.applyFilters();
+        });
+      }
+
+      // Speaking Club selection
+      if (this.speakingClubSelect) {
+        this.speakingClubSelect.addEventListener('change', (e) => {
+          this.state.selectedSpeakingClub = e.target.value;
+          this.applyFilters();
+        });
+      }
+
       // Language selection
       if (this.langSelect) {
         this.langSelect.addEventListener('change', (e) => {
           this.state.selectedLang = e.target.value;
-          this.applyFilters();
-        });
-      }
-
-      // Club selection
-      if (this.clubSelect) {
-        this.clubSelect.addEventListener('change', (e) => {
-          this.state.selectedClub = e.target.value;
-          this.applyFilters();
-        });
-      }
-
-      // Format selection
-      if (this.formatSelect) {
-        this.formatSelect.addEventListener('change', (e) => {
-          this.state.selectedFormat = e.target.value;
           this.applyFilters();
         });
       }
@@ -402,7 +434,7 @@
     }
 
     applyFilters() {
-      const { searchQuery, selectedLang, selectedClub, selectedFormat, selectedLevel, wishlistOnly } = this.state;
+      const { searchQuery, selectedLang, selectedType, selectedSpeakingClub, selectedLevel, wishlistOnly } = this.state;
 
       this.filteredSessions = this.sessions.filter(session => {
         if (wishlistOnly && !this.savedHrefs.has(session.href)) {
@@ -416,19 +448,19 @@
           if (!matchTitle && !matchClub) return false;
         }
 
-        // Club filter
-        if (selectedClub && selectedClub !== 'ALL') {
-          if (session.club !== selectedClub) return false;
+        // Event Type filter
+        if (selectedType !== 'ALL') {
+          if (session.format !== selectedType) return false;
+
+          // If Speaking Club is chosen, apply specific speaking club filter if selected
+          if (selectedType === 'Speaking Club' && selectedSpeakingClub !== 'ALL') {
+            if (session.club !== selectedSpeakingClub) return false;
+          }
         }
 
         // Language filter
         if (selectedLang !== 'ALL') {
           if (session.lang !== selectedLang) return false;
-        }
-
-        // Format filter
-        if (selectedFormat !== 'ALL') {
-          if (session.format !== selectedFormat) return false;
         }
 
         // Level filter
@@ -554,15 +586,21 @@
       this.state = {
         searchQuery: '',
         selectedLang: 'ALL',
-        selectedClub: 'ALL',
-        selectedFormat: 'ALL',
-        selectedLevel: null
+        selectedType: 'ALL',
+        selectedSpeakingClub: 'ALL',
+        selectedLevel: null,
+        wishlistOnly: false
       };
 
       if (this.searchInput) this.searchInput.value = '';
-      if (this.clubSelect) this.clubSelect.value = 'ALL';
+      if (this.typeSelect) this.typeSelect.value = 'ALL';
+      if (this.speakingClubSelect) this.speakingClubSelect.value = 'ALL';
+      if (this.speakingClubsWrapper) {
+        this.speakingClubsWrapper.classList.remove('visible');
+        this.speakingClubsWrapper.classList.add('hidden');
+        this.speakingClubsWrapper.setAttribute('aria-hidden', 'true');
+      }
       if (this.langSelect) this.langSelect.value = 'ALL';
-      if (this.formatSelect) this.formatSelect.value = 'ALL';
 
       this.updatePillsUI();
       this.applyFilters();

@@ -2509,7 +2509,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Health & Medicine",
+    "topic_detail": "Childhood Obesity Theory",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260729051534.htm"
   },
   {
     "title": "AI And The Brain : COSYlanguages",
@@ -2517,7 +2521,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Synaptic vs AI Learning",
+    "article_url": "https://www.nature.com/articles/d41586-023-03975-y"
   },
   {
     "title": "AI And The Brain : COSYlanguages",
@@ -2525,7 +2533,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Synaptic vs AI Learning",
+    "article_url": "https://www.nature.com/articles/d41586-023-03975-y"
   },
   {
     "title": "AI: Reality or Delusion : COSYlanguages",
@@ -2533,7 +2545,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Quirky",
+    "sub_topic": "Curious Phenomena",
+    "topic_detail": "AI Chatbot Delusions",
+    "article_url": "https://www.sciencedaily.com/releases/2026/05/260509210652.htm"
   },
   {
     "title": "Ape Laughter and Human Speech : COSYlanguages",
@@ -2541,7 +2557,11 @@
     "level": "A2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Origins of Language",
+    "topic_detail": "Ape Laughter & Speech Origins",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260626124704.htm"
   },
   {
     "title": "Brain Cells That Keep You Motivated (B1) : COSYlanguages",
@@ -2549,7 +2569,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Motivation Neurons",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260805121045.htm"
   },
   {
     "title": "Brain Cells That Keep You Motivated (C1) : COSYlanguages",
@@ -2557,7 +2581,11 @@
     "level": "C1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Motivation Neurons",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260805121045.htm"
   },
   {
     "title": "Childhood Obesity Theory : COSYlanguages",
@@ -2565,7 +2593,11 @@
     "level": "A2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Health & Medicine",
+    "topic_detail": "Childhood Obesity Theory",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260729051534.htm"
   },
   {
     "title": "Childhood Obesity Theory Debunked : COSYlanguages",
@@ -2573,7 +2605,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Health & Medicine",
+    "topic_detail": "Childhood Obesity Theory",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260729051534.htm"
   },
   {
     "title": "Climate Scientist Report Debate : COSYlanguages",
@@ -2581,7 +2617,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Enviro",
+    "sub_topic": "Climate Science",
+    "topic_detail": "Climate Warming Controversy",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260625060214.htm"
   },
   {
     "title": "Climate Scientist Report Debate : COSYlanguages",
@@ -2589,7 +2629,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Enviro",
+    "sub_topic": "Climate Science",
+    "topic_detail": "Climate Warming Controversy",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260625060214.htm"
   },
   {
     "title": "Coffee Drinkers: Fat, Muscle, and Hormones : COSYlanguages",
@@ -2597,7 +2641,11 @@
     "level": "C1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Living Well",
+    "topic_detail": "Coffee, Fat & Muscle Hormones",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260826142010.htm"
   },
   {
     "title": "Culture Helps Your Body Stay Younger : COSYlanguages",
@@ -2605,7 +2653,11 @@
     "level": "A2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Living Well",
+    "topic_detail": "Culture & Physical Longevity",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260714225526.htm"
   },
   {
     "title": "Culture Promotes Physical Longevity : COSYlanguages",
@@ -2613,7 +2665,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Living Well",
+    "topic_detail": "Culture & Physical Longevity",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260714225526.htm"
   },
   {
     "title": "Culture Promotes Physical Longevity : COSYlanguages",
@@ -2621,7 +2677,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Living Well",
+    "topic_detail": "Culture & Physical Longevity",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260714225526.htm"
   },
   {
     "title": "Great Ape Laughter and Human Speech : COSYlanguages",
@@ -2629,7 +2689,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Origins of Language",
+    "topic_detail": "Ape Laughter & Speech Origins",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260626124704.htm"
   },
   {
     "title": "Human Right-Handedness : COSYlanguages",
@@ -2637,7 +2701,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Evolutionary Brain Asymmetry",
+    "article_url": "https://www.sciencedaily.com/releases/2026/05/260517211429.htm"
   },
   {
     "title": "Humans May Have Hidden Regenerative Powers : COSYlanguages",
@@ -2645,7 +2713,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Health & Medicine",
+    "topic_detail": "Regenerative Medicine",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260617032207.htm"
   },
   {
     "title": "Humans May Have Hidden Regenerative Powers : COSYlanguages",
@@ -2653,7 +2725,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Health & Medicine",
+    "topic_detail": "Regenerative Medicine",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260617032207.htm"
   },
   {
     "title": "Impersonation Accounts : COSYlanguages",
@@ -2661,7 +2737,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Tech",
+    "sub_topic": "Cybersecurity",
+    "topic_detail": "Digital Impersonation",
+    "article_url": "https://www.sciencedaily.com/releases/2026/05/260515112030.htm"
   },
   {
     "title": "Inside the Backrooms : COSYlanguages",
@@ -2669,7 +2749,11 @@
     "level": "A2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Quirky",
+    "sub_topic": "Internet Lore & Oddities",
+    "topic_detail": "The Backrooms Liminal Space",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260726015254.htm"
   },
   {
     "title": "Is Recycling a Distraction? : COSYlanguages",
@@ -2677,7 +2761,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Enviro",
+    "sub_topic": "Sustainability & Policy",
+    "topic_detail": "Recycling Policy Efficacy",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260724061437.htm"
   },
   {
     "title": "Losing Spoken Words : COSYlanguages",
@@ -2685,7 +2773,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Digital Communication",
+    "topic_detail": "Losing 338 Words a Day",
+    "article_url": "https://www.sciencefocus.com/news/losing-spoken-words"
   },
   {
     "title": "Mendelian Laws Broken : COSYlanguages",
@@ -2693,7 +2785,11 @@
     "level": "C1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Quirky",
+    "sub_topic": "Curious Phenomena",
+    "topic_detail": "Broken Laws of Genetics",
+    "article_url": "https://www.sciencedaily.com/releases/2026/05/260530053420.htm"
   },
   {
     "title": "Multilingual People Have Younger Brains (A2) : COSYlanguages",
@@ -2701,7 +2797,11 @@
     "level": "A2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Bilingual Cognitive Reserve",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260820091522.htm"
   },
   {
     "title": "Multilingual People Have Younger Brains (B1) : COSYlanguages",
@@ -2709,7 +2809,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Bilingual Cognitive Reserve",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260820091522.htm"
   },
   {
     "title": "Nervous System Networks and Pain : COSYlanguages",
@@ -2717,7 +2821,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Health & Medicine",
+    "topic_detail": "Sensory Pain Systems",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260709160641.htm"
   },
   {
     "title": "Nervous System Networks and Pain : COSYlanguages",
@@ -2725,7 +2833,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Health & Medicine",
+    "topic_detail": "Sensory Pain Systems",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260709160641.htm"
   },
   {
     "title": "Ordinary WiFi Can Identify You (A2) : COSYlanguages",
@@ -2733,7 +2845,11 @@
     "level": "A2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Tech",
+    "sub_topic": "Sensory & Wireless Tech",
+    "topic_detail": "WiFi Person Identification",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260812164015.htm"
   },
   {
     "title": "Ordinary WiFi Can Identify You (B1) : COSYlanguages",
@@ -2741,7 +2857,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Tech",
+    "sub_topic": "Sensory & Wireless Tech",
+    "topic_detail": "WiFi Person Identification",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260812164015.htm"
   },
   {
     "title": "Ozempic and the Obesity Revolution : COSYlanguages",
@@ -2749,7 +2869,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Health & Medicine",
+    "topic_detail": "Ozempic & Metabolic Health",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260619020504.htm"
   },
   {
     "title": "Ozempic and the Obesity Revolution : COSYlanguages",
@@ -2757,7 +2881,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Health & Medicine",
+    "topic_detail": "Ozempic & Metabolic Health",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260619020504.htm"
   },
   {
     "title": "Psychology of Liminal Spaces : COSYlanguages",
@@ -2765,7 +2893,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Quirky",
+    "sub_topic": "Internet Lore & Oddities",
+    "topic_detail": "The Backrooms Liminal Space",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260726015254.htm"
   },
   {
     "title": "Rewriting the Human Family Tree : COSYlanguages",
@@ -2773,7 +2905,11 @@
     "level": "C1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Human Origins",
+    "topic_detail": "Rewriting Human Family Tree",
+    "article_url": "https://www.nature.com/articles/s41586-024-07120-x"
   },
   {
     "title": "Scientists Tracked Kids for 8 Years: The Screen Time Result : COSYlanguages",
@@ -2781,7 +2917,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Living Well",
+    "topic_detail": "Child Screen Time & Development",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260826180519.htm"
   },
   {
     "title": "Sitting Up Straight May Improve Your Mood (A2) : COSYlanguages",
@@ -2789,7 +2929,11 @@
     "level": "A2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Living Well",
+    "topic_detail": "Posture & Mood Improvement",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260818103045.htm"
   },
   {
     "title": "Sitting Up Straight May Improve Your Mood (B1) : COSYlanguages",
@@ -2797,7 +2941,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Living Well",
+    "topic_detail": "Posture & Mood Improvement",
+    "article_url": "https://www.sciencedaily.com/releases/2026/08/260818103045.htm"
   },
   {
     "title": "Social Decisions &amp; the Brain : COSYlanguages",
@@ -2805,7 +2953,11 @@
     "level": "C1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Social Decision Circuits",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260602021629.htm"
   },
   {
     "title": "Spider-like Creatures and the Origins of Fatherhood : COSYlanguages",
@@ -2813,7 +2965,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Quirky",
+    "sub_topic": "Bizarre Animal Behaviors",
+    "topic_detail": "Spider Creatures & Fatherhood",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260712011737.htm"
   },
   {
     "title": "Spider-like Creatures and the Origins of Fatherhood : COSYlanguages",
@@ -2821,7 +2977,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Quirky",
+    "sub_topic": "Bizarre Animal Behaviors",
+    "topic_detail": "Spider Creatures & Fatherhood",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260712011737.htm"
   },
   {
     "title": "The Future of Fusion Energy : COSYlanguages",
@@ -2829,7 +2989,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Tech",
+    "sub_topic": "Clean Tech & Energy",
+    "topic_detail": "Nuclear Fusion Energy",
+    "article_url": "https://www.nature.com/articles/d41586-024-00122-w"
   },
   {
     "title": "The Grandmother Evolutionary Mystery : COSYlanguages",
@@ -2837,7 +3001,11 @@
     "level": "C1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Evolution & Family",
+    "topic_detail": "Evolutionary Grandmother Mystery",
+    "article_url": "https://youtu.be/iKLwzmjfcW4?is=1l2lHNLpRdMBvJjZ"
   },
   {
     "title": "The Most Creative Time Ever : COSYlanguages",
@@ -2845,7 +3013,11 @@
     "level": "C1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Creative Economy",
+    "topic_detail": "Creative Economy & Media",
+    "article_url": "https://youtu.be/-9y7OGNmqQw?is=eWcoEDp2xbB6-9-D"
   },
   {
     "title": "The Secret Language Behind Animal Cooperation : COSYlanguages",
@@ -2853,7 +3025,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Communication & Linguistics",
+    "topic_detail": "Animal Cooperation Language",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260619101328.htm"
   },
   {
     "title": "The Secret Language Behind Animal Cooperation : COSYlanguages",
@@ -2861,7 +3037,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Communication & Linguistics",
+    "topic_detail": "Animal Cooperation Language",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260619101328.htm"
   },
   {
     "title": "Watching TV Shrinks Midlife Brains : COSYlanguages",
@@ -2869,7 +3049,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "TV & Brain Volume",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260721000822.htm"
   },
   {
     "title": "Where You Live Shapes Your Dementia Risk : COSYlanguages",
@@ -2877,7 +3061,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Dementia Risk Factors",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260713000753.htm"
   },
   {
     "title": "Where You Live Shapes Your Dementia Risk : COSYlanguages",
@@ -2885,7 +3073,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Dementia Risk Factors",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260713000753.htm"
   },
   {
     "title": "Where You Live Shapes Your Dementia Risk : COSYlanguages",
@@ -2893,7 +3085,11 @@
     "level": "A2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Dementia Risk Factors",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260713000753.htm"
   },
   {
     "title": "Why 'Football' Beats 'Shamrock' : COSYlanguages",
@@ -2901,7 +3097,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Cognitive Linguistics",
+    "topic_detail": "Psycholinguistics & Word Recall",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260604101412.htm"
   },
   {
     "title": "Why 'Football' Beats 'Shamrock' : COSYlanguages",
@@ -2909,7 +3109,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Cognitive Linguistics",
+    "topic_detail": "Psycholinguistics & Word Recall",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260604101412.htm"
   },
   {
     "title": "Why Grandparents Matter : COSYlanguages",
@@ -2917,7 +3121,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Living Well",
+    "topic_detail": "Grandparents & Mental Health",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260613034206.htm"
   },
   {
     "title": "Your Brain Can Keep Improving Into Your 90s : COSYlanguages",
@@ -2925,7 +3133,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Neuroplasticity in 90s",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260613034222.htm"
   },
   {
     "title": "Your Brain Can Keep Improving Into Your 90s : COSYlanguages",
@@ -2933,7 +3145,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Neuroplasticity in 90s",
+    "article_url": "https://www.sciencedaily.com/releases/2026/06/260613034222.htm"
   },
   {
     "title": "Your Fingers Hold a Secret of Human Brain Evolution : COSYlanguages",
@@ -2941,7 +3157,11 @@
     "level": "B2",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Motor Cortex & Finger Evolution",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260717033350.htm"
   },
   {
     "title": "Your Fingers Hold a Secret of Human Brain Evolution : COSYlanguages",
@@ -2949,7 +3169,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Motor Cortex & Finger Evolution",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260717033350.htm"
   },
   {
     "title": "Your Gut and Brain Decide Memories : COSYlanguages",
@@ -2957,7 +3181,11 @@
     "level": "B1",
     "lang": "English",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Health",
+    "sub_topic": "Mind & Brain",
+    "topic_detail": "Gut-Brain Memory Axis",
+    "article_url": "https://www.sciencedaily.com/releases/2026/07/260729010713.htm"
   },
   {
     "title": "Cheap Flight Day (A1) : COSYlanguages",
@@ -4418,10 +4646,14 @@
   {
     "title": "Влияние пропаганды на детей : COSYlanguages",
     "href": "ru/sessions/keeping-up-with-science/vliyanie-propagandy-deti.html",
-    "level": "",
+    "level": "B1",
     "lang": "Russian",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Society",
+    "sub_topic": "Childhood & Social Psychology",
+    "topic_detail": "Propaganda & Children",
+    "article_url": "https://youtu.be/YMrSF8_OSGk?is=9-HrTRr3cV-lJcZd"
   },
   {
     "title": "День простоты (A1) : COSYlanguages",
@@ -4669,7 +4901,11 @@
     "level": "B1",
     "lang": "French",
     "club": "Keeping Up with Science",
-    "format": "Speaking Club"
+    "format": "Speaking Club",
+    "theme_area": "Tech",
+    "sub_topic": "Cybersecurity",
+    "topic_detail": "Digital Impersonation",
+    "article_url": "https://www.sciencedaily.com/releases/2026/05/260515112030.htm"
   },
   {
     "title": "Diwali (B1) : COSYlanguages",
@@ -5158,5 +5394,53 @@
     "lang": "English",
     "club": "Basic Speaking Club",
     "format": "Speaking Club"
+  },
+  {
+    "title": "Action Hero : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "A2-B2",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Battle of Wits : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "B1-C1",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Identity Mystery : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "A2-B1",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Story Chain : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "B1-C1",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Word Linker : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "A2-B2",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Lucky Numbers (Bingo) : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "A1-B1",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
   }
 ]
