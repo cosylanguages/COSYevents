@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="shared/css/cosy-icons.css">
   <link rel="stylesheet" href="styles/calendar.css">
   <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="assets/css/session-directory.css">
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -37,6 +38,7 @@
       </p>
       <div class="hero-cta-group">
         <a href="#calendar-controls" class="hero-btn hero-btn-primary">See the calendar</a>
+        <a href="#browse-directory" class="hero-btn hero-btn-outline">Browse all sessions 🔎</a>
         <a href="#tariff-calculator" class="hero-btn hero-btn-outline">Pricing</a>
         <a href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20a%20COSYevents%20session." target="_blank" rel="noopener" class="hero-btn hero-btn-wa">💬 Join on WhatsApp</a>
       </div>
@@ -47,6 +49,7 @@
         <a href="game-evenings.html" class="hub-nav-link">Games</a>
         <a href="long-reads.html" class="hub-nav-link">Long Reads</a>
         <a href="teacher-led-sessions/index.html" class="hub-nav-link">Teacher-Led Sessions</a>
+        <a href="#browse-directory" class="hub-nav-link">All Sessions 🔎</a>
       </nav>
     </div>
   </header>
@@ -107,12 +110,26 @@
     <!-- Public Event Catalog & Upcoming Sessions -->
     <section class="calendar-section">
       <h2 class="section-title section-title-wrap">
-        <span>Public Session Catalog &amp; Schedule</span>
-        <a href="browse.html" class="btn-outline">All sessions →</a>
+        <span>Public Session Schedule</span>
+        <a href="#browse-directory" class="btn-outline">Browse all 645 sessions ↓</a>
       </h2>
       <div id="upcoming-events-list" class="upcoming-events-grid">
         <!-- Rendered dynamically by calendar.js: title, date, level, and one-line summary always visible -->
       </div>
+    </section>
+
+    <!-- Master Session Directory -->
+    <section id="browse-directory" class="calendar-section">
+      <div class="month-nav-header" style="margin-bottom: 1.5rem; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2 class="month-title" style="margin: 0; text-align: left;">Explore All Sessions</h2>
+          <p style="margin: 0.25rem 0 0; font-size: 0.92rem; color: var(--cosy-text-soft, #4a4a4a);">
+            Search and filter all 645 speaking club and multimedia night sessions across languages and CEFR levels.
+          </p>
+        </div>
+        <a href="browse.html" class="btn-outline">Open Full Directory View ↗</a>
+      </div>
+      <div id="session-directory-root"></div>
     </section>
 
     <!-- Explore Event Types Section -->
@@ -375,6 +392,7 @@
   <script src="shared/js/cosyevents-lang.js" defer></script>
   <script src="shared/calendar/calendar-i18n.js"></script>
   <script src="shared/calendar/calendar.js"></script>
+  <script src="assets/js/session-directory.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const levelSelect = document.getElementById('calc-level-select');
