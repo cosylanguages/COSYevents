@@ -115,93 +115,163 @@
 <div class="section-header" style="margin-bottom: 1rem;">
 <h2 style="font-size: 1.5rem;">🕒 Past Sessions</h2>
 </div>
-<div class="club-filters-lang" style="justify-content: flex-start; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-<button class="filter-btn active" data-lang="all">All Languages</button>
-<button class="filter-btn" data-lang="en">🇬🇧 English</button>
+<div class="club-filters-wrapper" style="margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+  <!-- THEMATIC AREAS FILTER -->
+  <div>
+    <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.5rem;">🔬 Science Thematic Areas</div>
+    <div class="club-filters-area" id="science-area-filters" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+      <button class="filter-btn active" data-area="all">All Areas (57)</button>
+      <button class="filter-btn" data-area="health">🩺 Health (34)</button>
+      <button class="filter-btn" data-area="tech">💻 Tech (4)</button>
+      <button class="filter-btn" data-area="enviro">🌱 Enviro (3)</button>
+      <button class="filter-btn" data-area="society">🏛️ Society (10)</button>
+      <button class="filter-btn" data-area="quirky">✨ Quirky (6)</button>
+    </div>
+  </div>
+
+  <!-- HEALTH UNFOLDING SUB-TOPICS -->
+  <div id="science-health-subtopics-wrapper" style="background: rgba(15, 110, 86, 0.05); border: 1px solid rgba(15, 110, 86, 0.2); border-radius: 12px; padding: 0.85rem 1rem;">
+    <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #0F6E56; margin-bottom: 0.4rem;">🩺 Health Branches</div>
+    <div class="club-filters-subtopic" id="science-subtopic-filters" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+      <button class="filter-btn active" data-subtopic="all" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;">All Health Topics</button>
+      <button class="filter-btn" data-subtopic="health-medicine" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;">Health &amp; Medicine (9)</button>
+      <button class="filter-btn" data-subtopic="mind-brain" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;">Mind &amp; Brain (17)</button>
+      <button class="filter-btn" data-subtopic="living-well" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;">Living Well (8)</button>
+    </div>
+  </div>
+
+  <!-- LEVEL & LANGUAGE FILTERS -->
+  <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
+    <div>
+      <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.5rem;">🎯 CEFR Level</div>
+      <div class="club-filters-level" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="filter-btn active" data-level="all">All Levels</button>
+        <button class="filter-btn" data-level="a2">A2 Elementary</button>
+        <button class="filter-btn" data-level="b1 b2">B1-B2 Intermediate</button>
+        <button class="filter-btn" data-level="c1">C1 Advanced</button>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.5rem;">🌐 Language</div>
+      <div class="club-filters-lang" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="filter-btn active" data-lang="all">All Languages</button>
+        <button class="filter-btn" data-lang="en">🇬🇧 English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIVE FILTER SUMMARY -->
+  <div id="sc-active-counter" style="font-size: 0.88rem; font-weight: 600; color: #0F6E56;">Showing 57 sessions</div>
 </div>
-<div class="club-filters-level" style="justify-content: flex-start; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-<button class="filter-btn active" data-level="all">All Levels</button>
-<button class="filter-btn" data-level="a2">A2</button>
-<button class="filter-btn" data-level="b1 b2">B1-B2</button>
-<button class="filter-btn" data-level="c1">C1</button>
-</div>
-<div class="history-body" style="display: block; padding: 0; border: none;"><div class="science-history-grid" id="science-history-grid">
-<div class="science-card history-session" data-level="b1">
+
+<div class="history-body" style="display: block; padding: 0; border: none;">
+  <div class="science-history-grid" id="science-history-grid">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="living-well">
 <div class="science-ruler"></div>
 <div class="science-card-header">
-<div class="periodic-element"><span class="elem-num">1</span><span class="elem-symbol">B1</span><span class="elem-name">Int</span></div>
-<span class="science-lang-flag">🇬🇧</span>
+<div class="periodic-element"><span class="elem-num">1</span><span class="elem-symbol">B1</span><span class="elem-name">Int</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Living Well</span>
+</div>
 <h4 class="science-card-title">Scientists Tracked Kids for 8 Years — Screen Time Result</h4>
 <p class="science-card-desc">An 8-year longitudinal study followed children from early childhood into adolescence to examine how daily screen time alters attention spans and cognitive growth.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/screen-time-kids-8-years-intermediate.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260826180519.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/screen-time-kids-8-years-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-level="a2">
+<div class="science-card history-session" data-lang="en" data-level="a2" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
-<div class="periodic-element"><span class="elem-num">2</span><span class="elem-symbol">A2</span><span class="elem-name">Elem</span></div>
-<span class="science-lang-flag">🇬🇧</span>
+<div class="periodic-element"><span class="elem-num">2</span><span class="elem-symbol">A2</span><span class="elem-name">Elem</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Multilingual People Have Younger Brains (A2)</h4>
 <p class="science-card-desc">Discover how speaking more than one language keeps your brain active, healthy, and up to 13 years younger.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/multilingual-younger-brains-elementary.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260820091522.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/multilingual-younger-brains-elementary.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
-<div class="periodic-element"><span class="elem-num">3</span><span class="elem-symbol">B1</span><span class="elem-name">Int</span></div>
-<span class="science-lang-flag">🇬🇧</span>
+<div class="periodic-element"><span class="elem-num">3</span><span class="elem-symbol">B1</span><span class="elem-name">Int</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Multilingual People Have Younger Brains (B1)</h4>
 <p class="science-card-desc">Examine neuroimaging research demonstrating how bilingualism builds cognitive reserve and delays neural aging.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/multilingual-younger-brains-intermediate.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260820091522.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/multilingual-younger-brains-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-level="c1">
+<div class="science-card history-session" data-lang="en" data-level="c1" data-area="health" data-subtopic="living-well">
 <div class="science-ruler"></div>
 <div class="science-card-header">
-<div class="periodic-element"><span class="elem-num">4</span><span class="elem-symbol">C1</span><span class="elem-name">Adv</span></div>
-<span class="science-lang-flag">🇬🇧</span>
+<div class="periodic-element"><span class="elem-num">4</span><span class="elem-symbol">C1</span><span class="elem-name">Adv</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Living Well</span>
+</div>
 <h4 class="science-card-title">Coffee Drinkers: Fat, Muscle, and Hormones</h4>
 <p class="science-card-desc">Analyze endocrine research revealing favorable visceral fat profiles and preserved muscle mass in habitual coffee drinkers.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/coffee-fat-muscle-hormones-advanced.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260826142010.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/coffee-fat-muscle-hormones-advanced.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-level="c1">
+<div class="science-card history-session" data-lang="en" data-level="c1" data-area="society" data-subtopic="human-origins">
 <div class="science-ruler"></div>
 <div class="science-card-header">
-<div class="periodic-element"><span class="elem-num">5</span><span class="elem-symbol">C1</span><span class="elem-name">Adv</span></div>
-<span class="science-lang-flag">🇬🇧</span>
+<div class="periodic-element"><span class="elem-num">5</span><span class="elem-symbol">C1</span><span class="elem-name">Adv</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Human Origins</span>
+</div>
 <h4 class="science-card-title">Rewriting the Human Family Tree</h4>
 <p class="science-card-desc">Explore how recent hominin fossil discoveries and ancient DNA sequencing challenge traditional linear models of evolution.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/human-family-tree-rewrite-advanced.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.nature.com/articles/s41586-024-07120-x" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/human-family-tree-rewrite-advanced.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-level="c1">
+<div class="science-card history-session" data-lang="en" data-level="c1" data-area="society" data-subtopic="evolution-family">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -209,22 +279,23 @@
 <span class="elem-symbol">C1</span>
 <span class="elem-name">Adv</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Evolution & Family</span>
+</div>
 <h4 class="science-card-title">Why Your Grandmother Is an Evolutionary Mystery</h4>
 <p class="science-card-desc">Analyze the biological and evolutionary mystery of human grandmothers and the 'Grandmother Hypothesis'.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/grandmother-evolutionary-mystery.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/grandmother-evolutionary-mystery.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/grandmother-evolutionary-mystery.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">10 August 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://youtu.be/iKLwzmjfcW4?is=1l2lHNLpRdMBvJjZ" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/grandmother-evolutionary-mystery.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="c1">
+<div class="science-card history-session" data-lang="en" data-level="c1" data-area="society" data-subtopic="creative-economy">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -232,22 +303,23 @@
 <span class="elem-symbol">C1</span>
 <span class="elem-name">Adv</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Creative Economy</span>
+</div>
 <h4 class="science-card-title">We Are Living in the Most Creative Time Ever</h4>
 <p class="science-card-desc">Deconstruct collective human creativity, cultural scaling, and open-source innovation networks.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/living-most-creative-time.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/living-most-creative-time.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/living-most-creative-time.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">30 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://youtu.be/-9y7OGNmqQw?is=eWcoEDp2xbB6-9-D" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/living-most-creative-time.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -255,22 +327,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Your Fingers Hold a Secret of Human Brain Evolution</h4>
 <p class="science-card-desc">Explore how the anatomy of thumb opposition and precision grip accelerated early human tool-making.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">17 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260717033350.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -278,22 +351,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Your Fingers Hold a Secret of Human Brain Evolution</h4>
 <p class="science-card-desc">Deconstruct how precise hand opposition and motor dexterity co-evolved with speech and cognitive complexity.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">17 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260717033350.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="living-well">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -301,22 +375,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Living Well</span>
+</div>
 <h4 class="science-card-title">Culture Helps Your Body Stay Younger</h4>
 <p class="science-card-desc">Analyze how active cultural and artistic engagement helps reduce stress and promotes physical longevity.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">14 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260714225526.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="health" data-subtopic="living-well">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -324,22 +399,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Living Well</span>
+</div>
 <h4 class="science-card-title">Culture Helps Your Body Stay Younger</h4>
 <p class="science-card-desc">Examine the endocrine and somatic effects of regular museum and theater attendance on cortisol levels.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">14 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260714225526.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="a2">
+<div class="science-card history-session" data-lang="en" data-level="a2" data-area="health" data-subtopic="living-well">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -347,22 +423,23 @@
 <span class="elem-symbol">A2</span>
 <span class="elem-name">Elem</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Living Well</span>
+</div>
 <h4 class="science-card-title">Culture Helps Your Body Stay Younger</h4>
 <p class="science-card-desc">Learn how visiting museums, movies, and theater can keep our body and mind healthy and young.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-elementary.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-elementary.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-elementary.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">14 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260714225526.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/museums-movies-theater-stay-younger-elementary.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -370,22 +447,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Where You Live Shapes Your Dementia Risk</h4>
 <p class="science-card-desc">Discuss how local environmental factors and neighborhood greenery affect cognitive health.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">13 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260713000753.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -393,22 +471,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Where You Live Shapes Your Dementia Risk</h4>
 <p class="science-card-desc">Deconstruct the spatial epidemiology of cognitive decline and environmental neurology in cities.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">13 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260713000753.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="a2">
+<div class="science-card history-session" data-lang="en" data-level="a2" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -416,22 +495,23 @@
 <span class="elem-symbol">A2</span>
 <span class="elem-name">Elem</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Where You Live Shapes Your Dementia Risk</h4>
 <p class="science-card-desc">Learn how our neighborhoods and parks help protect our brains and keep our memory strong.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-elementary.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-elementary.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-elementary.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">13 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260713000753.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-elementary.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="quirky" data-subtopic="bizarre-animal-behaviors">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -439,22 +519,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Quirky</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Bizarre Animal Behaviors</span>
+</div>
 <h4 class="science-card-title">Spider-like Creatures and the Origins of Fatherhood</h4>
 <p class="science-card-desc">Analyze the unusual paternal care and nesting behaviors observed in harvestmen arachnids.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">12 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260712011737.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="quirky" data-subtopic="bizarre-animal-behaviors">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -462,22 +543,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Quirky</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Bizarre Animal Behaviors</span>
+</div>
 <h4 class="science-card-title">Spider-like Creatures and the Origins of Fatherhood</h4>
 <p class="science-card-desc">Deconstruct paternal investment, nesting territory defense, and behavioral ecology milestones.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">12 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260712011737.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="health-medicine">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -485,22 +567,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Health & Medicine</span>
+</div>
 <h4 class="science-card-title">Nervous System Networks &amp; Pain</h4>
 <p class="science-card-desc">Explore how our sensory nervous system transmits discomfort signals and pain sensitivity.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/sensory-system-pain-disease-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/sensory-system-pain-disease-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/sensory-system-pain-disease-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">09 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260709160641.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sensory-system-pain-disease-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="health" data-subtopic="health-medicine">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -508,22 +591,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Health & Medicine</span>
+</div>
 <h4 class="science-card-title">Nervous System Networks &amp; Pain</h4>
 <p class="science-card-desc">Deconstruct chronic pathological pain, synaptic transmission, and system network attenuation.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/sensory-system-pain-disease-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/sensory-system-pain-disease-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/sensory-system-pain-disease-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">09 July 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260709160641.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sensory-system-pain-disease-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="a2">
+<div class="science-card history-session" data-lang="en" data-level="a2" data-area="society" data-subtopic="origins-of-language">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -531,22 +615,23 @@
 <span class="elem-symbol">A2</span>
 <span class="elem-name">Elem</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Origins of Language</span>
+</div>
 <h4 class="science-card-title">Great Ape Laughter &amp; Human Speech</h4>
 <p class="science-card-desc">Learn how laughter in wild apes shows a fun connection to human language and speech.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-elementary.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-elementary.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-elementary.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">26 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260626124704.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-elementary.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="society" data-subtopic="origins-of-language">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -554,22 +639,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Origins of Language</span>
+</div>
 <h4 class="science-card-title">Great Ape Laughter &amp; Human Speech</h4>
 <p class="science-card-desc">Explore the comparative primatology of ape tickle-laughter and early phonetic evolution.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">26 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260626124704.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ape-laughter-speech-origin-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="enviro" data-subtopic="climate-science">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -577,22 +663,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Enviro</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Climate Science</span>
+</div>
 <h4 class="science-card-title">Climate Scientist Warming Controversy</h4>
 <p class="science-card-desc">Analyze the public debate and scientific consensus surrounding rising global temperatures.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/climate-scientist-warming-report-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/climate-scientist-warming-report-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/climate-scientist-warming-report-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">25 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260625060214.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/climate-scientist-warming-report-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="enviro" data-subtopic="climate-science">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -600,22 +687,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Enviro</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Climate Science</span>
+</div>
 <h4 class="science-card-title">Climate Scientist Warming Controversy</h4>
 <p class="science-card-desc">Examine self-censorship, socio-political pressures, and mitigation consensus in climate modeling.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/climate-scientist-warming-report-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/climate-scientist-warming-report-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/climate-scientist-warming-report-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">25 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260625060214.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/climate-scientist-warming-report-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="health-medicine">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -623,22 +711,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Health & Medicine</span>
+</div>
 <h4 class="science-card-title">Ozempic &amp; the Obesity Revolution</h4>
 <p class="science-card-desc">Discuss the weight loss hormone therapy taking the world by storm and its health results.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">19 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260619020504.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="health" data-subtopic="health-medicine">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -646,22 +735,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Health & Medicine</span>
+</div>
 <h4 class="science-card-title">Ozempic &amp; the Obesity Revolution</h4>
 <p class="science-card-desc">Deconstruct GLP-1 satiety agonists, hypothalamic reward circuitry, and metabolic endocrine therapy.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">19 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260619020504.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ozempic-obesity-revolution-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="society" data-subtopic="communication-linguistics">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -669,22 +759,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Communication & Linguistics</span>
+</div>
 <h4 class="science-card-title">The Secret Language Behind Animal Cooperation</h4>
 <p class="science-card-desc">Learn how meerkats, birds, and other animals use voice calls to cooperate and warn of danger.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/animal-cooperation-language-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/animal-cooperation-language-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/animal-cooperation-language-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">19 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260619101328.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/animal-cooperation-language-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="society" data-subtopic="communication-linguistics">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -692,22 +783,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Communication & Linguistics</span>
+</div>
 <h4 class="science-card-title">The Secret Language Behind Animal Cooperation</h4>
 <p class="science-card-desc">Examine predator-specific warning signals, contextual syntax, and cognitive communication syntax.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/animal-cooperation-language-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/animal-cooperation-language-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/animal-cooperation-language-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">19 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260619101328.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/animal-cooperation-language-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="health-medicine">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -715,22 +807,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Health & Medicine</span>
+</div>
 <h4 class="science-card-title">Humans May Have Hidden Regenerative Powers</h4>
 <p class="science-card-desc">Explore how our bodies heal skin wounds and our potential for biological regeneration.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/hidden-regenerative-powers-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/hidden-regenerative-powers-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/hidden-regenerative-powers-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">17 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260617032207.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/hidden-regenerative-powers-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="health" data-subtopic="health-medicine">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -738,22 +831,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Health & Medicine</span>
+</div>
 <h4 class="science-card-title">Humans May Have Hidden Regenerative Powers</h4>
 <p class="science-card-desc">Analyze blastema reactivation, cellular signaling cascades, and somatic growth-factor pathways.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/hidden-regenerative-powers-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/hidden-regenerative-powers-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/hidden-regenerative-powers-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">17 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260617032207.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/hidden-regenerative-powers-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -761,22 +855,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Your Brain Can Keep Improving Into Your 90s</h4>
 <p class="science-card-desc">Discuss how reading, puzzle-solving, and clean lifestyles help keep our memory sharp as we age.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/brain-improving-in-90s-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/brain-improving-in-90s-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/brain-improving-in-90s-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">14 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260613034222.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-improving-in-90s-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -784,22 +879,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Your Brain Can Keep Improving Into Your 90s</h4>
 <p class="science-card-desc">Analyze hippocampal neurogenesis, lifelong neuroplasticity, and cognitive reserve in nonagenarians.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/brain-improving-in-90s-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/brain-improving-in-90s-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/brain-improving-in-90s-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">14 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260613034222.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-improving-in-90s-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="living-well">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -807,22 +903,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Living Well</span>
+</div>
 <h4 class="science-card-title">Why Grandparents Matter</h4>
 <p class="science-card-desc">Examine how close intergenerational contact improves the mental health and stability of youngsters.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/grandparents-mental-health.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/grandparents-mental-health.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/grandparents-mental-health.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">13 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260613034206.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/grandparents-mental-health.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="c1">
+<div class="science-card history-session" data-lang="en" data-level="c1" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -830,22 +927,23 @@
 <span class="elem-symbol">C1</span>
 <span class="elem-name">Adv</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Social Decisions &amp; the Brain</h4>
 <p class="science-card-desc">Explore game theory, neuroeconomics, and amygdala responses during unfair resource negotiations.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/social-decisions-brain.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/social-decisions-brain.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/social-decisions-brain.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">02 June 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260602021629.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/social-decisions-brain.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="c1">
+<div class="science-card history-session" data-lang="en" data-level="c1" data-area="quirky" data-subtopic="curious-phenomena">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -853,22 +951,23 @@
 <span class="elem-symbol">C1</span>
 <span class="elem-name">Adv</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Quirky</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Curious Phenomena</span>
+</div>
 <h4 class="science-card-title">Mendelian Laws Broken</h4>
 <p class="science-card-desc">Deconstruct selfish gene drives and meiotic drive mechanisms bypassing classical Mendelian genetics.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/mendelian-laws-broken.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/mendelian-laws-broken.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/mendelian-laws-broken.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">30 May 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/05/260530053420.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/mendelian-laws-broken.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="society" data-subtopic="cognitive-linguistics">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -876,22 +975,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Cognitive Linguistics</span>
+</div>
 <h4 class="science-card-title">Why 'Football' Beats 'Shamrock'</h4>
 <p class="science-card-desc">Learn why concrete real nouns are much easier to store and recall than abstract symbols.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/football-beats-shamrock-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/football-beats-shamrock-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/football-beats-shamrock-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">20 May 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260604101412.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/football-beats-shamrock-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="society" data-subtopic="cognitive-linguistics">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -899,22 +999,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Cognitive Linguistics</span>
+</div>
 <h4 class="science-card-title">Why 'Football' Beats 'Shamrock'</h4>
 <p class="science-card-desc">Analyze recall latency, hierarchical semantic networking, and sensory-motor word retention.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/football-beats-shamrock-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/football-beats-shamrock-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/football-beats-shamrock-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">20 May 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/06/260604101412.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/football-beats-shamrock-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -922,22 +1023,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Human Right-Handedness</h4>
 <p class="science-card-desc">Explore neurological lateralization and why hand dominance exists stably in human populations.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/right-handedness.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/right-handedness.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/right-handedness.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">17 May 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/05/260517211429.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/right-handedness.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="quirky" data-subtopic="curious-phenomena">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -945,22 +1047,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Quirky</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Curious Phenomena</span>
+</div>
 <h4 class="science-card-title">AI: Reality or Delusion</h4>
 <p class="science-card-desc">Analyze statistical predictions, model hallucination rates, and semantic grounding in LLMs.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ai-reality-delusion.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ai-reality-delusion.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ai-reality-delusion.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">09 May 2026</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/05/260509210652.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ai-reality-delusion.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="tech" data-subtopic="cybersecurity">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -968,22 +1071,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Tech</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Cybersecurity</span>
+</div>
 <h4 class="science-card-title">Impersonation Accounts</h4>
 <p class="science-card-desc">Examine social media trust indicators, identity fraud, and online bot verification.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/impersonation-accounts.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/impersonation-accounts.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/impersonation-accounts.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">30 November 2025</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/05/260515112030.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/impersonation-accounts.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="tech" data-subtopic="clean-tech-energy">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -991,22 +1095,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Tech</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Clean Tech & Energy</span>
+</div>
 <h4 class="science-card-title">The Future of Fusion Energy</h4>
 <p class="science-card-desc">Discuss controlled thermonuclear fusion, Tokamaks, and laser ignition thresholds.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/fusion-energy.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/fusion-energy.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/fusion-energy.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">15 August 2025</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.nature.com/articles/d41586-024-00122-w" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/fusion-energy.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="society" data-subtopic="digital-communication">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1014,22 +1119,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Society</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Digital Communication</span>
+</div>
 <h4 class="science-card-title">Losing Spoken Words</h4>
 <p class="science-card-desc">Deconstruct lexical attrition, screen time saturation, and linguistic contraction in teenagers.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/losing-spoken-words.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/losing-spoken-words.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/losing-spoken-words.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">30 June 2025</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencefocus.com/news/losing-spoken-words" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/losing-spoken-words.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1037,22 +1143,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Intm</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">AI &amp; the Brain</h4>
 <p class="science-card-desc">Compare biological neural networks and digital learning systems from an energy standpoint.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ai-and-the-brain-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ai-and-the-brain-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ai-and-the-brain-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">12 May 2025</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.nature.com/articles/d41586-023-03975-y" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ai-and-the-brain-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-</div>
-<div class="science-card history-session" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1060,141 +1167,170 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Uppr</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">AI &amp; the Brain</h4>
 <p class="science-card-desc">Analyze backpropagation, sparse spike coding, and the thermodynamics of biological learning.</p>
-<div class="wonder-modes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 1rem;">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/ai-and-the-brain-upper-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/ai-and-the-brain-upper-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/ai-and-the-brain-upper-intermediate.html?mode=private">🎓 PRIVATE</a>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="science-date">12 May 2025</span>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.nature.com/articles/d41586-023-03975-y" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
 </div>
-<div class="science-card history-session" data-level="a2">
+<a class="science-card-view" href="sessions/keeping-up-with-science/ai-and-the-brain-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
+</div>
+</div>
+<div class="science-card history-session" data-lang="en" data-level="a2" data-area="quirky" data-subtopic="internet-lore-oddities">
+<div class="science-ruler"></div>
 <div class="science-card-header">
 <span class="badge-level badge-a2">A2</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Quirky</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Internet Lore & Oddities</span>
+</div>
 <h4 class="science-card-title">Inside the Backrooms (Elementary)</h4>
 <p class="science-card-desc">Explore creepypasta urban legends and liminal spaces in simplified language.</p>
-<div class="mode-access-grid">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/inside-the-backrooms-elementary.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/inside-the-backrooms-elementary.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/inside-the-backrooms-elementary.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260726015254.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/inside-the-backrooms-elementary.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="card-topic-tag">🔬 Science</span>
-</div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="quirky" data-subtopic="internet-lore-oddities">
+<div class="science-ruler"></div>
 <div class="science-card-header">
 <span class="badge-level badge-b1">B1</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Quirky</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Internet Lore & Oddities</span>
+</div>
 <h4 class="science-card-title">Inside the Backrooms (Intermediate)</h4>
 <p class="science-card-desc">Analyze liminal space psychology, architecture, and online mythmaking.</p>
-<div class="mode-access-grid">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/inside-the-backrooms-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/inside-the-backrooms-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/inside-the-backrooms-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260726015254.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/inside-the-backrooms-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="card-topic-tag">🔬 Science</span>
-</div>
-</div>
-<div class="science-card history-session" data-level="a2">
+<div class="science-card history-session" data-lang="en" data-level="a2" data-area="health" data-subtopic="health-medicine">
+<div class="science-ruler"></div>
 <div class="science-card-header">
 <span class="badge-level badge-a2">A2</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Health & Medicine</span>
+</div>
 <h4 class="science-card-title">Childhood Obesity Theory (Elementary)</h4>
 <p class="science-card-desc">Discuss simple health habits, nutrition, and lifestyle choices.</p>
-<div class="mode-access-grid">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/childhood-obesity-theory-elementary.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/childhood-obesity-theory-elementary.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/childhood-obesity-theory-elementary.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260729051534.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/childhood-obesity-theory-elementary.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="card-topic-tag">🔬 Science</span>
-</div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="health-medicine">
+<div class="science-ruler"></div>
 <div class="science-card-header">
 <span class="badge-level badge-b1">B1</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Health & Medicine</span>
+</div>
 <h4 class="science-card-title">Childhood Obesity Theory (Intermediate)</h4>
 <p class="science-card-desc">Deconstruct childhood health theories, systemic factors, and dietary habits.</p>
-<div class="mode-access-grid">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260729051534.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="card-topic-tag">🔬 Science</span>
-</div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="mind-brain">
+<div class="science-ruler"></div>
 <div class="science-card-header">
 <span class="badge-level badge-b1">B1</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">TV in Midlife Shrinks the Brain (Intermediate)</h4>
 <p class="science-card-desc">Examine neurological findings regarding sedentary lifestyle and brain volume.</p>
-<div class="mode-access-grid">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/tv-midlife-shrink-brain-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/tv-midlife-shrink-brain-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/tv-midlife-shrink-brain-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260721000822.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/tv-midlife-shrink-brain-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="card-topic-tag">🔬 Science</span>
-</div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="enviro" data-subtopic="sustainability-policy">
+<div class="science-ruler"></div>
 <div class="science-card-header">
 <span class="badge-level badge-b1">B1</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Enviro</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Sustainability & Policy</span>
+</div>
 <h4 class="science-card-title">Recycling Distraction Test (Intermediate)</h4>
 <p class="science-card-desc">Discuss environmental psychology and consumer recycling behavior.</p>
-<div class="mode-access-grid">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/recycling-distraction-test-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/recycling-distraction-test-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/recycling-distraction-test-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260724061437.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/recycling-distraction-test-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="card-topic-tag">🔬 Science</span>
-</div>
-</div>
-<div class="science-card history-session" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="mind-brain">
+<div class="science-ruler"></div>
 <div class="science-card-header">
 <span class="badge-level badge-b1">B1</span>
 </div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Gut-Brain Memory Connection (Intermediate)</h4>
 <p class="science-card-desc">Explore the microbiome-brain axis and its impact on memory and mood.</p>
-<div class="mode-access-grid">
-<a class="mode-btn btn-big" href="sessions/keeping-up-with-science/gut-brain-memory-intermediate.html">🗣️ BIG GROUP</a>
-<a class="mode-btn btn-mini" href="sessions/keeping-up-with-science/gut-brain-memory-intermediate.html?mode=mini">👥 MINI GROUP</a>
-<a class="mode-btn btn-private" href="sessions/keeping-up-with-science/gut-brain-memory-intermediate.html?mode=private">🎓 PRIVATE</a>
+</div>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260729010713.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/gut-brain-memory-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card-footer" style="margin-top: 1rem;">
-<span class="card-topic-tag">🔬 Science</span>
-</div>
-</div>
-</div>
-</div>
-<div class="science-card history-session" data-lang="en" data-level="c1">
+<div class="science-card history-session" data-lang="en" data-level="c1" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1202,18 +1338,23 @@
 <span class="elem-symbol">C1</span>
 <span class="elem-name">Adv</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Brain Cells That Keep You Motivated (C1)</h4>
 <p class="science-card-desc">An in-depth neurochemical analysis of neural circuitry, dopamine modulation, and volition in motivation.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-advanced.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260805121045.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-advanced.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="mind-brain">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1221,18 +1362,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Int</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Mind & Brain</span>
+</div>
 <h4 class="science-card-title">Brain Cells That Keep You Motivated (B1)</h4>
 <p class="science-card-desc">Exploring how neural circuits, dopamine release, and personal initiative maintain daily focus and perseverance.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-intermediate.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260805121045.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-lang="en" data-level="b2">
+<div class="science-card history-session" data-lang="en" data-level="b2" data-area="health" data-subtopic="health-medicine">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1240,18 +1386,23 @@
 <span class="elem-symbol">B2</span>
 <span class="elem-name">Upp</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Health & Medicine</span>
+</div>
 <h4 class="science-card-title">A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2)</h4>
 <p class="science-card-desc">Re-evaluating medical hypotheses, caloric expenditure, metabolism, and longitudinal health studies.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/childhood-obesity-theory-upper-intermediate.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/07/260729051534.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/childhood-obesity-theory-upper-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-lang="en" data-level="a2">
+<div class="science-card history-session" data-lang="en" data-level="a2" data-area="tech" data-subtopic="sensory-wireless-tech">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1259,18 +1410,23 @@
 <span class="elem-symbol">A2</span>
 <span class="elem-name">Elem</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Tech</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Sensory & Wireless Tech</span>
+</div>
 <h4 class="science-card-title">Ordinary WiFi Can Identify You (A2)</h4>
 <p class="science-card-desc">Discovering how radio signals, smart routers, and wave reflections track indoor human movement in elementary English.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-elementary.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260812164015.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-elementary.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="tech" data-subtopic="sensory-wireless-tech">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1278,18 +1434,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Int</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Tech</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Sensory & Wireless Tech</span>
+</div>
 <h4 class="science-card-title">Ordinary WiFi Can Identify You (B1)</h4>
 <p class="science-card-desc">Analyzing spatial signal disturbance, biometric gait analysis, non-camera detection, and privacy security.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-intermediate.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260812164015.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-lang="en" data-level="a2">
+<div class="science-card history-session" data-lang="en" data-level="a2" data-area="health" data-subtopic="living-well">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1297,18 +1458,23 @@
 <span class="elem-symbol">A2</span>
 <span class="elem-name">Elem</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Living Well</span>
+</div>
 <h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (A2)</h4>
 <p class="science-card-desc">Exploring physical body posture, mental focus, chair ergonomics, and mood elevation in basic English.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-elementary.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260818103045.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
+</div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-elementary.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<div class="science-card history-session" data-lang="en" data-level="b1">
+<div class="science-card history-session" data-lang="en" data-level="b1" data-area="health" data-subtopic="living-well">
 <div class="science-ruler"></div>
 <div class="science-card-header">
 <div class="periodic-element">
@@ -1316,300 +1482,23 @@
 <span class="elem-symbol">B1</span>
 <span class="elem-name">Int</span>
 </div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
 <div class="science-card-body">
+<div class="science-card-badges" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+  <span class="sc-area-badge" style="display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; padding:2px 8px; border-radius:12px; background:rgba(15,110,86,0.12); color:#0F6E56;">Health</span>
+  <span class="sc-subtopic-badge" style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:12px; background:rgba(0,0,0,0.06); color:var(--ink);">Living Well</span>
+</div>
 <h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (B1)</h4>
 <p class="science-card-desc">Investigating embodied cognition, spinal alignment, executive decision-making, and neurobiological stress mechanisms.</p>
 </div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-intermediate.html">Explore Session ➔</a>
+<div class="science-card-footer" style="display:flex; flex-direction:column; gap:8px; align-items:stretch;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <span class="science-card-date">26 August 2026</span>
+  <a class="science-card-article-link" href="https://www.sciencedaily.com/releases/2026/08/260818103045.htm" target="_blank" rel="noopener" style="font-size:0.8rem; font-weight:600; color:#0F6E56; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Original Article 📖</a>
 </div>
+<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-intermediate.html" style="text-align:center;">Explore Session ➔</a>
 </div>
 </div>
-<!-- Brain Cells That Keep You Motivated (C1) -->
-<div class="science-card history-session" data-lang="en" data-level="c1">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">10</span>
-<span class="elem-symbol">C1</span>
-<span class="elem-name">Adv</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Brain Cells That Keep You Motivated (C1)</h4>
-<p class="science-card-desc">An in-depth neurochemical analysis of neural circuitry, dopamine modulation, and volition in motivation.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-advanced.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Brain Cells That Keep You Motivated (B1) -->
-<div class="science-card history-session" data-lang="en" data-level="b1">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">9</span>
-<span class="elem-symbol">B1</span>
-<span class="elem-name">Int</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Brain Cells That Keep You Motivated (B1)</h4>
-<p class="science-card-desc">Exploring how neural circuits, dopamine release, and personal initiative maintain daily focus and perseverance.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-intermediate.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2) -->
-<div class="science-card history-session" data-lang="en" data-level="b2">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">8</span>
-<span class="elem-symbol">B2</span>
-<span class="elem-name">Upp</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2)</h4>
-<p class="science-card-desc">Re-evaluating medical hypotheses, caloric expenditure, metabolism, and longitudinal health studies.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/childhood-obesity-theory-upper-intermediate.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Ordinary WiFi Can Identify You (A2) -->
-<div class="science-card history-session" data-lang="en" data-level="a2">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">7</span>
-<span class="elem-symbol">A2</span>
-<span class="elem-name">Elem</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Ordinary WiFi Can Identify You (A2)</h4>
-<p class="science-card-desc">Discovering how radio signals, smart routers, and wave reflections track indoor human movement in elementary English.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-elementary.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Ordinary WiFi Can Identify You (B1) -->
-<div class="science-card history-session" data-lang="en" data-level="b1">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">6</span>
-<span class="elem-symbol">B1</span>
-<span class="elem-name">Int</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Ordinary WiFi Can Identify You (B1)</h4>
-<p class="science-card-desc">Analyzing spatial signal disturbance, biometric gait analysis, non-camera detection, and privacy security.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-intermediate.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Sitting Up Straight May Improve Your Mood (A2) -->
-<div class="science-card history-session" data-lang="en" data-level="a2">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">5</span>
-<span class="elem-symbol">A2</span>
-<span class="elem-name">Elem</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (A2)</h4>
-<p class="science-card-desc">Exploring physical body posture, mental focus, chair ergonomics, and mood elevation in basic English.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-elementary.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Sitting Up Straight May Improve Your Mood (B1) -->
-<div class="science-card history-session" data-lang="en" data-level="b1">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">4</span>
-<span class="elem-symbol">B1</span>
-<span class="elem-name">Int</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (B1)</h4>
-<p class="science-card-desc">Investigating embodied cognition, spinal alignment, executive decision-making, and neurobiological stress mechanisms.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-intermediate.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Brain Cells That Keep You Motivated (C1) -->
-<div class="science-card history-session" data-lang="en" data-level="c1">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">10</span>
-<span class="elem-symbol">C1</span>
-<span class="elem-name">Adv</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Brain Cells That Keep You Motivated (C1)</h4>
-<p class="science-card-desc">An in-depth neurochemical analysis of neural circuitry, dopamine modulation, and volition in motivation.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-advanced.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Brain Cells That Keep You Motivated (B1) -->
-<div class="science-card history-session" data-lang="en" data-level="b1">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">9</span>
-<span class="elem-symbol">B1</span>
-<span class="elem-name">Int</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Brain Cells That Keep You Motivated (B1)</h4>
-<p class="science-card-desc">Exploring how neural circuits, dopamine release, and personal initiative maintain daily focus and perseverance.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/brain-cells-motivation-intermediate.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2) -->
-<div class="science-card history-session" data-lang="en" data-level="b2">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">8</span>
-<span class="elem-symbol">B2</span>
-<span class="elem-name">Upp</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">A 42-Year-Old Childhood Obesity Theory May Be Wrong (B2)</h4>
-<p class="science-card-desc">Re-evaluating medical hypotheses, caloric expenditure, metabolism, and longitudinal health studies.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/childhood-obesity-theory-upper-intermediate.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Ordinary WiFi Can Identify You (A2) -->
-<div class="science-card history-session" data-lang="en" data-level="a2">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">7</span>
-<span class="elem-symbol">A2</span>
-<span class="elem-name">Elem</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Ordinary WiFi Can Identify You (A2)</h4>
-<p class="science-card-desc">Discovering how radio signals, smart routers, and wave reflections track indoor human movement in elementary English.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-elementary.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Ordinary WiFi Can Identify You (B1) -->
-<div class="science-card history-session" data-lang="en" data-level="b1">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">6</span>
-<span class="elem-symbol">B1</span>
-<span class="elem-name">Int</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Ordinary WiFi Can Identify You (B1)</h4>
-<p class="science-card-desc">Analyzing spatial signal disturbance, biometric gait analysis, non-camera detection, and privacy security.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/ordinary-wifi-identification-intermediate.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Sitting Up Straight May Improve Your Mood (A2) -->
-<div class="science-card history-session" data-lang="en" data-level="a2">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">5</span>
-<span class="elem-symbol">A2</span>
-<span class="elem-name">Elem</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (A2)</h4>
-<p class="science-card-desc">Exploring physical body posture, mental focus, chair ergonomics, and mood elevation in basic English.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-elementary.html">Explore Session ➔</a>
-</div>
-</div>
-<!-- Sitting Up Straight May Improve Your Mood (B1) -->
-<div class="science-card history-session" data-lang="en" data-level="b1">
-<div class="science-ruler"></div>
-<div class="science-card-header">
-<div class="periodic-element">
-<span class="elem-num">4</span>
-<span class="elem-symbol">B1</span>
-<span class="elem-name">Int</span>
-</div>
-<span class="science-lang-flag">🇬🇧</span>
-</div>
-<div class="science-card-body">
-<h4 class="science-card-title">Sitting Up Straight May Improve Your Mood (B1)</h4>
-<p class="science-card-desc">Investigating embodied cognition, spinal alignment, executive decision-making, and neurobiological stress mechanisms.</p>
-</div>
-<div class="science-card-footer">
-<span class="science-card-date">26 August 2026</span>
-<a class="science-card-view" href="sessions/keeping-up-with-science/sitting-up-straight-intermediate.html">Explore Session ➔</a>
-</div>
-</div>
-</div>
-</div>
+  </div>
 </div>
 </div>
 </div>
@@ -1663,27 +1552,122 @@
 </footer>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.filter-btn');
+  let selectedArea = 'all';
+  let selectedSubtopic = 'all';
+  let selectedLevel = 'all';
+  let selectedLang = 'all';
+
+  const areaBtns = document.querySelectorAll('#science-area-filters .filter-btn');
+  const subtopicBtns = document.querySelectorAll('#science-subtopic-filters .filter-btn');
+  const levelBtns = document.querySelectorAll('.club-filters-level .filter-btn');
+  const langBtns = document.querySelectorAll('.club-filters-lang .filter-btn');
+  const healthSubtopicsWrapper = document.getElementById('science-health-subtopics-wrapper');
+  const counterEl = document.getElementById('sc-active-counter');
   const sessions = document.querySelectorAll('.history-session');
 
-  buttons.forEach(btn => {
+  function updateFilterDisplay() {
+    let visibleCount = 0;
+    const targetLevels = selectedLevel === 'all' ? [] : selectedLevel.split(' ');
+
+    sessions.forEach(sess => {
+      const sessArea = (sess.getAttribute('data-area') || '').toLowerCase();
+      const sessSubtopic = (sess.getAttribute('data-subtopic') || '').toLowerCase();
+      const sessLevel = (sess.getAttribute('data-level') || '').toLowerCase();
+      const sessLang = (sess.getAttribute('data-lang') || '').toLowerCase();
+
+      // Area match
+      const areaMatch = (selectedArea === 'all') || (sessArea === selectedArea);
+
+      // Subtopic match: only enforced if Health is selected or if specific subtopic is not 'all'
+      let subtopicMatch = true;
+      if (selectedArea === 'health' && selectedSubtopic !== 'all') {
+        subtopicMatch = (sessSubtopic === selectedSubtopic);
+      } else if (selectedArea !== 'health' && selectedArea !== 'all') {
+        subtopicMatch = true;
+      } else if (selectedSubtopic !== 'all') {
+        subtopicMatch = (sessSubtopic === selectedSubtopic);
+      }
+
+      // Level match
+      const levelMatch = (selectedLevel === 'all') || targetLevels.some(l => sessLevel.includes(l));
+
+      // Lang match
+      const langMatch = (selectedLang === 'all') || (sessLang === selectedLang);
+
+      if (areaMatch && subtopicMatch && levelMatch && langMatch) {
+        sess.style.display = 'flex';
+        visibleCount++;
+      } else {
+        sess.style.display = 'none';
+      }
+    });
+
+    if (counterEl) {
+      counterEl.textContent = 'Showing ' + visibleCount + ' session' + (visibleCount === 1 ? '' : 's');
+    }
+  }
+
+  // Area button handler
+  areaBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
+      areaBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      selectedArea = btn.getAttribute('data-area') || 'all';
 
-      const selectedLevel = btn.getAttribute('data-level');
-      const targetLevels = selectedLevel ? selectedLevel.split(' ') : [];
+      // Unfold health subtopics when Health is selected (or hide when other non-health areas selected)
+      if (selectedArea === 'health' || selectedArea === 'all') {
+        healthSubtopicsWrapper.style.display = 'block';
+      } else {
+        healthSubtopicsWrapper.style.display = 'none';
+        selectedSubtopic = 'all';
+        subtopicBtns.forEach(b => b.classList.remove('active'));
+        if (subtopicBtns[0]) subtopicBtns[0].classList.add('active');
+      }
 
-      sessions.forEach(sess => {
-        const levels = (sess.getAttribute('data-level') || '').split(' ');
-        if (selectedLevel === 'all' || targetLevels.some(l => levels.includes(l))) {
-          sess.style.display = 'flex';
-        } else {
-          sess.style.display = 'none';
-        }
-      });
+      updateFilterDisplay();
     });
   });
+
+  // Subtopic button handler
+  subtopicBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      subtopicBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedSubtopic = btn.getAttribute('data-subtopic') || 'all';
+
+      // If a health subtopic is clicked while another area was active, switch to health
+      if (selectedSubtopic !== 'all' && selectedArea !== 'health') {
+        selectedArea = 'health';
+        areaBtns.forEach(b => b.classList.remove('active'));
+        const healthBtn = document.querySelector('#science-area-filters .filter-btn[data-area="health"]');
+        if (healthBtn) healthBtn.classList.add('active');
+      }
+
+      updateFilterDisplay();
+    });
+  });
+
+  // Level button handler
+  levelBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      levelBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedLevel = btn.getAttribute('data-level') || 'all';
+      updateFilterDisplay();
+    });
+  });
+
+  // Lang button handler
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      langBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedLang = btn.getAttribute('data-lang') || 'all';
+      updateFilterDisplay();
+    });
+  });
+
+  updateFilterDisplay();
 });
 </script><script src="shared/js/cosyevents-session.js"></script>
 </body>
