@@ -27,6 +27,7 @@
         searchQuery: '',
         selectedLang: 'ALL',
         selectedFormat: 'ALL',
+        selectedClub: 'ALL',
         selectedLevel: null, // null means 'All Levels', string or Array for level filter
         wishlistOnly: false
       };
@@ -101,10 +102,17 @@
     }
 
     renderUI() {
-      // Extract unique languages and formats from sessions
+      // Extract unique languages, clubs, and formats from sessions
       const languages = Array.from(new Set(this.sessions.map(s => s.lang).filter(Boolean))).sort();
+      const clubs = Array.from(new Set(this.sessions.map(s => s.club).filter(Boolean))).sort();
       const formats = Array.from(new Set(this.sessions.map(s => s.format).filter(Boolean))).sort();
-      const levels = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+      const levelGroups = [
+        { label: 'A0–A1', value: 'A0-A1' },
+        { label: 'A2', value: 'A2' },
+        { label: 'B1', value: 'B1' },
+        { label: 'B2', value: 'B2' },
+        { label: 'C1–C2', value: 'C1-C2' }
+      ];
 
       this.container.innerHTML = `
         <div class="sd-container">
@@ -118,10 +126,18 @@
                     type="text"
                     id="sd-search"
                     class="sd-search-input"
-                    placeholder="Search by title or club name..."
-                    aria-label="Search sessions by title or club name"
+                    placeholder="Search by title or topic..."
+                    aria-label="Search sessions by title or topic"
                     autocomplete="off"
                   />
+                </div>
+
+                <!-- Club Select -->
+                <div class="sd-select-wrapper">
+                  <select id="sd-club-select" class="sd-select" aria-label="Filter sessions by club">
+                    <option value="ALL">All Clubs</option>
+                    ${clubs.map(club => `<option value="${this.escapeAttr(club)}">${this.escapeText(club)}</option>`).join('')}
+                  </select>
                 </div>
 
                 <!-- Language Select -->
@@ -158,14 +174,14 @@
               >
                 All Levels
               </button>
-              ${levels.map(lvl => `
+              ${levelGroups.map(lg => `
                 <button
                   type="button"
                   class="sd-pill"
-                  data-level="${lvl}"
+                  data-level="${lg.value}"
                   aria-pressed="false"
                 >
-                  ${lvl}
+                  ${lg.label}
                 </button>
               `).join('')}
               <button
@@ -195,6 +211,7 @@
 
       // Cache DOM references
       this.searchInput = this.container.querySelector('#sd-search');
+      this.clubSelect = this.container.querySelector('#sd-club-select');
       this.langSelect = this.container.querySelector('#sd-lang-select');
       this.formatSelect = this.container.querySelector('#sd-format-select');
       this.resultsCount = this.container.querySelector('#sd-results-count');
@@ -215,6 +232,14 @@
       if (this.langSelect) {
         this.langSelect.addEventListener('change', (e) => {
           this.state.selectedLang = e.target.value;
+          this.applyFilters();
+        });
+      }
+
+      // Club selection
+      if (this.clubSelect) {
+        this.clubSelect.addEventListener('change', (e) => {
+          this.state.selectedClub = e.target.value;
           this.applyFilters();
         });
       }
@@ -355,7 +380,8 @@
         } else if (this.state.selectedLevel === null) {
           isActive = (lvl === 'ALL');
         } else if (Array.isArray(this.state.selectedLevel)) {
-          isActive = this.state.selectedLevel.includes(lvl);
+          const serialized = this.state.selectedLevel.join('-');
+          isActive = (lvl === serialized || (lvl === 'A0-A1' && serialized === 'A0-A1') || (lvl === 'C1-C2' && serialized === 'C1-C2'));
         } else {
           isActive = (lvl === this.state.selectedLevel);
         }
@@ -376,7 +402,7 @@
     }
 
     applyFilters() {
-      const { searchQuery, selectedLang, selectedFormat, selectedLevel, wishlistOnly } = this.state;
+      const { searchQuery, selectedLang, selectedClub, selectedFormat, selectedLevel, wishlistOnly } = this.state;
 
       this.filteredSessions = this.sessions.filter(session => {
         if (wishlistOnly && !this.savedHrefs.has(session.href)) {
@@ -388,6 +414,11 @@
           const matchTitle = session.title && session.title.toLowerCase().includes(searchQuery);
           const matchClub = session.club && session.club.toLowerCase().includes(searchQuery);
           if (!matchTitle && !matchClub) return false;
+        }
+
+        // Club filter
+        if (selectedClub && selectedClub !== 'ALL') {
+          if (session.club !== selectedClub) return false;
         }
 
         // Language filter
@@ -407,6 +438,10 @@
             : [];
           if (selectedLevel === 'UNSPECIFIED') {
             if (sessionLevels.length > 0) return false;
+          } else if (selectedLevel === 'A0-A1') {
+            if (!sessionLevels.some(l => l === 'A0' || l === 'A1')) return false;
+          } else if (selectedLevel === 'C1-C2') {
+            if (!sessionLevels.some(l => l === 'C1' || l === 'C2')) return false;
           } else if (Array.isArray(selectedLevel)) {
             if (!sessionLevels.some(level => selectedLevel.includes(level))) return false;
           } else {
@@ -519,11 +554,13 @@
       this.state = {
         searchQuery: '',
         selectedLang: 'ALL',
+        selectedClub: 'ALL',
         selectedFormat: 'ALL',
         selectedLevel: null
       };
 
       if (this.searchInput) this.searchInput.value = '';
+      if (this.clubSelect) this.clubSelect.value = 'ALL';
       if (this.langSelect) this.langSelect.value = 'ALL';
       if (this.formatSelect) this.formatSelect.value = 'ALL';
 

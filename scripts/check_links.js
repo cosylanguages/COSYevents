@@ -59,6 +59,8 @@ function shouldIgnore(val, filePath) {
     const relPath = path.relative(ROOT_DIR, filePath);
     const isTemplate = relPath.startsWith('templates' + path.sep) || relPath.startsWith('templates/');
     if (isTemplate) return true;
+    // Parent root ecosystem anchor in session templates
+    if (trimmed.includes('#languages') && trimmed.startsWith('../')) return true;
   }
   return false;
 }
