@@ -5158,5 +5158,53 @@
     "lang": "English",
     "club": "Basic Speaking Club",
     "format": "Speaking Club"
+  },
+  {
+    "title": "Action Hero : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "A2-B2",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Battle of Wits : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "B1-C1",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Identity Mystery : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "A2-B1",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Story Chain : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "B1-C1",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Word Linker : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "A2-B2",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
+  },
+  {
+    "title": "Lucky Numbers (Bingo) : COSYlanguages",
+    "href": "game-evenings.html",
+    "level": "A1-B1",
+    "lang": "English",
+    "club": "Game Evenings",
+    "format": "Games"
   }
 ]
