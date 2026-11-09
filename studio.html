@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSYevents Studio | Speaking Club &amp; Session Builder</title>
+  <meta name="description" content="Founder Studio for creating, editing, and publishing speaking club sessions in COSYevents.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="shared/assets/favicon-32.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+
+  <!-- Core & Studio Styles -->
+  <link rel="stylesheet" href="styles/studio.css">
+
+  <!-- Supabase JS Client SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1"></script>
+</head>
+<body class="studio-body" data-view="edit">
+
+  <!-- Header App Bar -->
+  <header class="studio-header">
+    <div class="studio-header-left">
+      <a class="studio-brand" href="index.html" title="Back to COSYevents Hub">
+        <span class="studio-brand-icon">🎭</span>
+        <span>COSYevents <span class="studio-brand-tag">Studio</span></span>
+      </a>
+      <span class="studio-header-sep" aria-hidden="true"></span>
+      <nav class="studio-crumbs" aria-label="Current session">
+        <span id="crumb-event" class="crumb-event">english-a2-foundations</span>
+        <span aria-hidden="true">/</span>
+        <span id="crumb-title" class="crumb-title">New Session</span>
+        <span id="studio-status-badge" class="status-badge draft">Draft</span>
+      </nav>
+    </div>
+
+    <div class="studio-header-right">
+      <!-- Session Switcher / Loader -->
+      <select id="session-picker-select" class="form-control" style="width: auto; padding: 5px 8px; font-size: 0.82rem;">
+        <option value="">Load Existing Session…</option>
+      </select>
+
+      <button type="button" id="btn-new-session" class="btn btn-sm" title="Create a blank session">
+        <span>+ New Session</span>
+      </button>
+
+      <!-- Export / Import Menu -->
+      <div class="menu-container">
+        <button type="button" id="btn-export-menu" class="btn btn-sm" aria-haspopup="menu" aria-expanded="false">
+          <span>Export ▾</span>
+        </button>
+        <div id="export-menu-panel" class="menu-panel" role="menu" hidden>
+          <button type="button" id="btn-download-json" class="menu-item" role="menuitem">
+            <span>💾 <strong>Download Session JSON</strong><small>Save to events/.../sessions/</small></span>
+          </button>
+          <button type="button" id="btn-copy-json" class="menu-item" role="menuitem">
+            <span>📋 <strong>Copy JSON</strong><small>To system clipboard</small></span>
+          </button>
+          <button type="button" id="btn-import-json-trigger" class="menu-item" role="menuitem">
+            <span>📂 <strong>Import Session JSON…</strong><small>Load local .json file</small></span>
+          </button>
+        </div>
+        <input type="file" id="input-import-json" accept=".json,application/json" hidden>
+      </div>
+
+      <!-- Save / Publish Button -->
+      <button type="button" id="btn-save-session" class="btn btn-save" title="Save session changes (Founder only)">
+        <span>Сохранить</span>
+      </button>
+
+      <!-- Theme Switcher -->
+      <button type="button" id="btn-theme-toggle" class="btn btn-ghost btn-icon" aria-label="Toggle dark mode" title="Toggle theme">
+        <span id="theme-icon">🌙</span>
+      </button>
+
+      <!-- Role / Account Indicator -->
+      <div id="account-container">
+        <button type="button" id="btn-account-pill" class="btn btn-ghost btn-sm role-pill role-guest">
+          <span id="role-pill-icon">👤</span>
+          <span id="role-pill-label">Guest</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Lock Notice Banner for non-founders -->
+  <div id="lock-banner" class="lock-banner" hidden>
+    <div class="lock-banner-text">
+      <span>🔒</span>
+      <span><strong>Founder Mode Required:</strong> Only founders can create, edit, modify, or save sessions. Studio is in read-only mode.</span>
+    </div>
+    <button type="button" id="btn-banner-login" class="btn btn-sm btn-primary">Sign in as Founder</button>
+  </div>
+
+  <!-- Main 3-Pane Studio Workspace -->
+  <div class="studio-workspace">
+
+    <!-- 1. Left Sidebar: Cards / Steps Navigation -->
+    <aside class="studio-sidebar" aria-label="Lesson Cards">
+      <div class="sidebar-header">
+        <div class="sidebar-title-group">
+          <h2 id="sidebar-session-title">Lesson Cards</h2>
+          <span id="sidebar-cards-count" class="sidebar-subtitle">2 cards</span>
+        </div>
+        <button type="button" id="btn-quick-validate" class="btn btn-ghost btn-sm" title="Validate JSON Schema">
+          ✓ Valid
+        </button>
+      </div>
+
+      <div id="cards-nav-list" class="sidebar-cards-list" role="list">
+        <!-- Rendered dynamically by shared/js/studio.js -->
+      </div>
+
+      <button type="button" id="btn-add-card" class="sidebar-add-card-btn" title="Add a new card / activity step">
+        <span>+ Add Activity Card</span>
+      </button>
+    </aside>
+
+    <!-- 2. Center Pane: Step & Session Editor -->
+    <main class="studio-center" aria-label="Card Content Editor">
+      <!-- Tabs -->
+      <nav class="center-tabs-bar" role="tablist">
+        <button type="button" class="center-tab-btn is-active" role="tab" id="tab-card-content" data-tab="card-content" aria-selected="true">
+          Card Content
+        </button>
+        <button type="button" class="center-tab-btn" role="tab" id="tab-session-details" data-tab="session-details" aria-selected="false">
+          Session Details
+        </button>
+        <button type="button" class="center-tab-btn" role="tab" id="tab-vocab-builder" data-tab="vocab-builder" aria-selected="false">
+          Vocabulary (<span id="vocab-tab-count">0</span>)
+        </button>
+        <button type="button" class="center-tab-btn" role="tab" id="tab-raw-json" data-tab="raw-json" aria-selected="false">
+          Raw JSON
+        </button>
+      </nav>
+
+      <div class="center-scrollable-area">
+
+        <!-- Tab 1: Active Card Content Editor -->
+        <section id="panel-card-content" class="tab-panel" role="tabpanel" aria-labelledby="tab-card-content">
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="input-card-title" class="form-label">Card Title</label>
+              <input type="text" id="input-card-title" class="form-control" placeholder="e.g. Introduzione / Morning Check-in">
+            </div>
+            <div class="form-group">
+              <label for="select-card-type" class="form-label">Activity Type</label>
+              <select id="select-card-type" class="form-control">
+                <option value="icebreaker">Icebreaker / Warm-up</option>
+                <option value="round_1">Round 1 (Theory &amp; Personal)</option>
+                <option value="interlude">Interlude (Flash debate &amp; Vote)</option>
+                <option value="round_2">Round 2 (Speculation &amp; Future)</option>
+                <option value="outro">Outro &amp; Teacher's Note</option>
+                <option value="roleplay">Roleplay / Simulation</option>
+                <option value="discussion">Open Discussion</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="textarea-card-instructions" class="form-label">Instructions (Shown to Facilitator &amp; Students)</label>
+            <textarea id="textarea-card-instructions" class="form-control" rows="3" placeholder="Describe the goal and steps for this breakout room or activity..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="textarea-card-content" class="form-label">Card Content &amp; Discussion Questions (HTML / Text)</label>
+            <textarea id="textarea-card-content" class="form-control" rows="11" placeholder="<ol>&#10;  <li>Question 1: <strong>How do you feel?</strong></li>&#10;  <li>Question 2: <em>Follow-up question...</em></li>&#10;</ol>"></textarea>
+            <small style="color: var(--st-ink-muted); display: block; margin-top: 4px;">Supports HTML tags (e.g., &lt;ol&gt;, &lt;li&gt;, &lt;strong&gt;, &lt;em&gt;) or plain text.</small>
+          </div>
+
+          <div class="card-actions-bar">
+            <div>
+              <button type="button" id="btn-move-card-up" class="btn btn-sm btn-ghost" title="Move card earlier">↑ Move Up</button>
+              <button type="button" id="btn-move-card-down" class="btn btn-sm btn-ghost" title="Move card later">↓ Move Down</button>
+            </div>
+            <button type="button" id="btn-delete-card" class="btn btn-sm" style="color: var(--st-danger);" title="Delete current card">
+              🗑 Delete Card
+            </button>
+          </div>
+        </section>
+
+        <!-- Tab 2: Session Details Metadata -->
+        <section id="panel-session-details" class="tab-panel" role="tabpanel" aria-labelledby="tab-session-details" hidden>
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="input-session-title" class="form-label">Session Title</label>
+              <input type="text" id="input-session-title" class="form-control" placeholder="e.g. Daily Routines and Habits">
+            </div>
+            <div class="form-group">
+              <label for="input-session-slug" class="form-label">Session Slug (kebab-case)</label>
+              <input type="text" id="input-session-slug" class="form-control" placeholder="e.g. daily-routines-and-habits">
+            </div>
+          </div>
+
+          <div class="form-group-row-3">
+            <div class="form-group">
+              <label for="input-session-event" class="form-label">Parent Event Slug</label>
+              <input type="text" id="input-session-event" class="form-control" placeholder="e.g. english-a2-foundations">
+            </div>
+            <div class="form-group">
+              <label for="select-session-lang" class="form-label">Language</label>
+              <select id="select-session-lang" class="form-control">
+                <option value="English">English</option>
+                <option value="Français">Français</option>
+                <option value="Italiano">Italiano</option>
+                <option value="Русский">Русский</option>
+                <option value="Ελληνικά">Ελληνικά</option>
+                <option value="Español">Español</option>
+                <option value="Deutsch">Deutsch</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="select-session-level" class="form-label">CEFR Level</label>
+              <select id="select-session-level" class="form-control">
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+                <option value="C1">C1</option>
+                <option value="C2">C2</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="input-session-theme" class="form-label">Theme</label>
+              <input type="text" id="input-session-theme" class="form-control" placeholder="e.g. Everyday Life / Philosophy">
+            </div>
+            <div class="form-group">
+              <label for="input-session-host" class="form-label">Host Facilitator</label>
+              <input type="text" id="input-session-host" class="form-control" placeholder="e.g. COSY Facilitator">
+            </div>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="input-session-date" class="form-label">Scheduled Date</label>
+              <input type="date" id="input-session-date" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="input-session-recording" class="form-label">Recording URL (Optional)</label>
+              <input type="url" id="input-session-recording" class="form-control" placeholder="https://...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="textarea-session-summary" class="form-label">Short Summary (Public)</label>
+            <textarea id="textarea-session-summary" class="form-control" rows="3" placeholder="Public summary describing the speaking club meeting..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="textarea-session-sources" class="form-label">Sources / Research Links (One per line: Title | URL)</label>
+            <textarea id="textarea-session-sources" class="form-control" rows="3" placeholder="Research Article | https://example.com/article"></textarea>
+          </div>
+        </section>
+
+        <!-- Tab 3: Vocabulary Builder -->
+        <section id="panel-vocab-builder" class="tab-panel" role="tabpanel" aria-labelledby="tab-vocab-builder" hidden>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <p style="margin: 0; font-size: 0.85rem; color: var(--st-ink-secondary);">Session vocabulary items with definition, example, and level.</p>
+            <button type="button" id="btn-add-vocab-item" class="btn btn-sm btn-primary">+ Add Word</button>
+          </div>
+
+          <div id="vocab-items-list" class="vocab-builder-list">
+            <!-- Dynamically populated -->
+          </div>
+        </section>
+
+        <!-- Tab 4: Raw JSON -->
+        <section id="panel-raw-json" class="tab-panel" role="tabpanel" aria-labelledby="tab-raw-json" hidden>
+          <div class="form-group">
+            <label for="textarea-raw-json" class="form-label">Validated Session JSON (Live)</label>
+            <textarea id="textarea-raw-json" class="form-control" rows="18" readonly></textarea>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- 3. Right Pane: Live Slide Presentation Preview -->
+    <aside class="studio-preview" aria-label="Live Presentation Preview">
+      <div class="preview-toolbar">
+        <span>Live Card Preview</span>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span>Slide</span>
+          <span id="preview-slide-indicator" class="preview-slide-num">1</span>
+          <span id="preview-slide-total" style="color: var(--st-ink-muted);">/ 2</span>
+        </div>
+      </div>
+
+      <div class="preview-stage">
+        <article class="slide-canvas" id="preview-slide-canvas">
+          <div class="slide-badge-row">
+            <span id="preview-card-type-tag" class="slide-type-tag">ICEBREAKER</span>
+            <span id="preview-session-level-tag" class="status-badge" style="background: var(--st-sunken);">A2</span>
+          </div>
+
+          <h1 id="preview-card-title" class="slide-h1">Morning Routine Check-in</h1>
+
+          <div id="preview-card-instructions" class="slide-instructions">
+            Pair up and describe three things you do every morning before 9 AM.
+          </div>
+
+          <div id="preview-card-content" class="slide-content-body">
+            <!-- Rendered content -->
+          </div>
+
+          <div id="preview-sources-box" class="slide-sources-box" hidden>
+            <strong>Sources:</strong> <span id="preview-sources-content"></span>
+          </div>
+        </article>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Sign In / Founder Access Modal -->
+  <div id="auth-modal" class="modal-backdrop" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+      <div class="modal-header">
+        <h3 id="auth-modal-title">👑 Founder Authentication</h3>
+        <button type="button" id="btn-close-auth-modal" class="btn btn-ghost btn-sm">✕</button>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--st-ink-secondary); margin-bottom: 16px;">
+        Access to create, edit, modify, and publish sessions is reserved for Founders and Admins.
+      </p>
+
+      <form id="form-founder-auth" onsubmit="return false;">
+        <div class="form-group">
+          <label for="input-auth-email" class="form-label">Founder Email</label>
+          <input type="email" id="input-auth-email" class="form-control" placeholder="founder@cosylanguages.com" required>
+        </div>
+        <div class="form-group" id="group-auth-code" hidden>
+          <label for="input-auth-code" class="form-label">6-digit Verification Code</label>
+          <input type="text" id="input-auth-code" class="form-control" placeholder="123456" maxlength="6">
+        </div>
+        <div id="auth-status-msg" style="font-size: 0.82rem; margin-bottom: 12px; font-weight: 600;"></div>
+        <div class="modal-footer">
+          <button type="button" id="btn-auth-cancel" class="btn">Cancel</button>
+          <button type="submit" id="btn-auth-submit" class="btn btn-primary">Send Login Code</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="shared/js/cosy-auth.js"></script>
+  <script src="shared/js/studio.js"></script>
+</body>
+</html>
