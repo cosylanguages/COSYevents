@@ -89,6 +89,12 @@
           <button type="button" id="btn-download-json" class="menu-item" role="menuitem">
             <span>💾 <strong>Download Session JSON</strong><small>Save to events/.../sessions/</small></span>
           </button>
+          <button type="button" id="btn-export-markdown" class="menu-item" role="menuitem">
+            <span>📝 <strong>Export Markdown (.md)</strong><small>With YAML frontmatter &amp; rounds</small></span>
+          </button>
+          <button type="button" id="btn-export-worksheet" class="menu-item" role="menuitem">
+            <span>🖨️ <strong>Printable Student Worksheet</strong><small>Clean HTML for PDF / print</small></span>
+          </button>
           <button type="button" id="btn-copy-json" class="menu-item" role="menuitem">
             <span>📋 <strong>Copy JSON</strong><small>To system clipboard</small></span>
           </button>
@@ -102,6 +108,11 @@
       <!-- Save / Publish Button -->
       <button type="button" id="btn-save-session" class="btn btn-save" title="Save session changes (Founder only)">
         <span>Сохранить</span>
+      </button>
+
+      <!-- Keyboard Shortcuts Cheatsheet Button -->
+      <button type="button" id="btn-shortcuts-helper" class="btn btn-ghost btn-icon" aria-label="Keyboard Shortcuts" title="Keyboard Shortcuts (?)">
+        <span>⌨️</span>
       </button>
 
       <!-- Theme Switcher -->
@@ -454,6 +465,28 @@
 
       <div class="presenter-bottom-tip">
         <span>💡 Facilitator Tip: Use <kbd>←</kbd> / <kbd>→</kbd> or <kbd>Space</kbd> to change pages. Press <kbd>Esc</kbd> to exit.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keyboard Shortcuts Cheatsheet Modal -->
+  <div id="studio-shortcuts-modal" class="modal-backdrop" hidden>
+    <div class="modal-card modal-card-md" role="dialog" aria-modal="true" aria-labelledby="shortcuts-modal-title">
+      <div class="modal-header">
+        <h3 id="shortcuts-modal-title">⌨️ Keyboard Shortcuts &amp; Facilitator Controls</h3>
+        <button type="button" id="btn-close-shortcuts-modal" class="btn btn-ghost btn-sm">✕</button>
+      </div>
+      <div class="shortcuts-grid">
+        <div class="shortcut-item"><kbd>Ctrl/Cmd</kbd> + <kbd>S</kbd><span>Save Session (Founder)</span></div>
+        <div class="shortcut-item"><kbd>Ctrl/Cmd</kbd> + <kbd>Z</kbd><span>Undo last edit</span></div>
+        <div class="shortcut-item"><kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd><span>Redo last edit</span></div>
+        <div class="shortcut-item"><kbd>Alt</kbd> + <kbd>→</kbd> / <kbd>←</kbd><span>Next / Previous page</span></div>
+        <div class="shortcut-item"><kbd>F</kbd><span>Enter Presenter Deck mode</span></div>
+        <div class="shortcut-item"><kbd>Space</kbd> / <kbd>→</kbd><span>Next slide in Presenter mode</span></div>
+        <div class="shortcut-item"><kbd>←</kbd><span>Previous slide in Presenter mode</span></div>
+        <div class="shortcut-item"><kbd>T</kbd><span>Start / Pause floating timer</span></div>
+        <div class="shortcut-item"><kbd>?</kbd><span>Toggle this shortcuts cheatsheet</span></div>
+        <div class="shortcut-item"><kbd>Esc</kbd><span>Close active modal / Exit deck</span></div>
       </div>
     </div>
   </div>

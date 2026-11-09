@@ -1221,6 +1221,57 @@ textarea.form-control {
   font-family: inherit;
 }
 
+/* Shortcuts Cheatsheet Grid */
+.shortcuts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+.shortcut-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--st-elevated);
+  border: 1px solid var(--st-border);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+}
+.shortcut-item kbd {
+  background: var(--st-surface);
+  border: 1px solid var(--st-border-strong);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.74rem;
+  color: var(--st-ink);
+}
+.shortcut-item span {
+  color: var(--st-ink-secondary);
+  font-weight: 500;
+}
+.btn-vocab-tts {
+  background: transparent;
+  border: 1px solid var(--st-border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+  color: var(--st-ink);
+}
+.btn-vocab-tts:hover {
+  background: rgba(65, 107, 73, 0.1);
+  border-color: var(--st-pine);
+  color: var(--st-pine-deep);
+}
+
 /* --------------------------------------------------------------------------
    Modal Dialogs (Auth / Login / Confirmation)
    -------------------------------------------------------------------------- */

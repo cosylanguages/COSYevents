@@ -894,7 +894,8 @@
         '  <div>' + escapeHtml(v.definition || '') + '</div>' +
         '  <div style="font-style: italic; color: var(--st-ink-muted); font-size: 0.78rem;">e.g. ' + escapeHtml(v.example || '') + '</div>' +
         '</div>' +
-        '<div>' +
+        '<div style="display: flex; align-items: center; gap: 6px;">' +
+        '  <button type="button" class="btn-vocab-tts btn-listen-vocab" data-word="' + escapeHtml(v.word) + '" title="Listen to pronunciation">🔊 Listen</button>' +
         '  <button type="button" class="btn btn-sm btn-ghost btn-del-vocab" data-index="' + idx + '" style="color: var(--st-danger); font-size: 0.8rem;">✕</button>' +
         '</div>';
 
@@ -911,6 +912,15 @@
         var i = parseInt(btn.getAttribute('data-index'), 10);
         state.session.vocabulary.splice(i, 1);
         syncFormFromState();
+      });
+    });
+
+    var ttsButtons = container.querySelectorAll('.btn-listen-vocab');
+    ttsButtons.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        var term = btn.getAttribute('data-word');
+        var lang = state.session.language || 'English';
+        speakVocabWord(term, lang);
       });
     });
   }
@@ -1726,11 +1736,28 @@
 
     // Global keyboard shortcuts (Ctrl+S / Cmd+S to save, Alt+Left/Right for pages, Esc for presenter)
     document.addEventListener('keydown', function (e) {
-      // Escape closes presenter modal or auth modal
+      // Escape closes presenter modal, shortcuts modal, catalog modal or auth modal
       if (e.key === 'Escape') {
         closePresenterDeck();
         var authModal = $('auth-modal');
         if (authModal) authModal.setAttribute('hidden', '');
+        var shortcutsModal = $('studio-shortcuts-modal');
+        if (shortcutsModal) shortcutsModal.setAttribute('hidden', '');
+        var catalogModal = $('studio-catalog-modal');
+        if (catalogModal) catalogModal.setAttribute('hidden', '');
+        return;
+      }
+
+      // '?' key or 'Cmd+/' to toggle shortcuts modal
+      if ((e.key === '?' || ((e.ctrlKey || e.metaKey) && e.key === '/')) &&
+          document.activeElement &&
+          ['input', 'textarea', 'select'].indexOf(document.activeElement.tagName.toLowerCase()) === -1) {
+        e.preventDefault();
+        var sModal = $('studio-shortcuts-modal');
+        if (sModal) {
+          if (sModal.hasAttribute('hidden')) sModal.removeAttribute('hidden');
+          else sModal.setAttribute('hidden', '');
+        }
         return;
       }
 
@@ -1800,6 +1827,23 @@
         }
       }
     });
+
+    // Shortcuts Helper Modal Handlers
+    var shortcutsModal = $('studio-shortcuts-modal');
+    var btnShortcutsHelper = $('btn-shortcuts-helper');
+    var btnCloseShortcuts = $('btn-close-shortcuts-modal');
+
+    if (btnShortcutsHelper && shortcutsModal) {
+      btnShortcutsHelper.addEventListener('click', function () {
+        if (shortcutsModal.hasAttribute('hidden')) shortcutsModal.removeAttribute('hidden');
+        else shortcutsModal.setAttribute('hidden', '');
+      });
+    }
+    if (btnCloseShortcuts && shortcutsModal) {
+      btnCloseShortcuts.addEventListener('click', function () {
+        shortcutsModal.setAttribute('hidden', '');
+      });
+    }
 
     // Catalog Browser Modal Handlers
     var catalogModal = $('studio-catalog-modal');
@@ -2002,6 +2046,162 @@
       });
     }
 
+  // SpeechSynthesis TTS Pronunciation helper
+  function speakVocabWord(term, langName) {
+    if (typeof window === 'undefined' || !window.speechSynthesis) {
+      alert('SpeechSynthesis TTS is not supported in this browser environment.');
+      return;
+    }
+    if (!term) return;
+    try {
+      window.speechSynthesis.cancel();
+      var utterance = new SpeechSynthesisUtterance(term);
+      var langCodeMap = {
+        'English': 'en-US',
+        'Français': 'fr-FR',
+        'Italiano': 'it-IT',
+        'Русский': 'ru-RU',
+        'Ελληνικά': 'el-GR',
+        'Español': 'es-ES',
+        'Deutsch': 'de-DE'
+      };
+      utterance.lang = langCodeMap[langName] || 'en-US';
+      utterance.rate = 0.9;
+      window.speechSynthesis.speak(utterance);
+    } catch (e) {
+      console.warn('SpeechSynthesis error:', e);
+    }
+  }
+
+  // Generate Markdown with YAML frontmatter from session object
+  function exportToMarkdown(session) {
+    var sess = session || state.session;
+    var lines = [];
+    lines.push('---');
+    lines.push('title: "' + (sess.title || '').replace(/"/g, '\\"') + '"');
+    lines.push('slug: "' + (sess.slug || '') + '"');
+    lines.push('event: "' + (sess.event || '') + '"');
+    lines.push('language: "' + (sess.language || 'English') + '"');
+    lines.push('level: "' + (sess.level || 'A2') + '"');
+    lines.push('theme: "' + (sess.theme || '') + '"');
+    lines.push('date: "' + (sess.date || new Date().toISOString().split('T')[0]) + '"');
+    if (sess.host) lines.push('host: "' + sess.host.replace(/"/g, '\\"') + '"');
+    if (sess.recording_url) lines.push('recording_url: "' + sess.recording_url + '"');
+    lines.push('---');
+    lines.push('');
+    lines.push('# ' + (sess.title || 'Session'));
+    lines.push('');
+    if (sess.summary) {
+      lines.push('## Summary');
+      lines.push(sess.summary);
+      lines.push('');
+    }
+
+    if (sess.vocabulary && sess.vocabulary.length > 0) {
+      lines.push('## Useful Vocabulary');
+      sess.vocabulary.forEach(function (v) {
+        lines.push('- **' + v.word + '** (' + (v.pos || '') + ', ' + (v.level || '') + '): ' + (v.definition || '') + ' _(e.g. ' + (v.example || '') + ')_');
+      });
+      lines.push('');
+    }
+
+    if (sess.activities && sess.activities.length > 0) {
+      lines.push('## Activities & Rounds');
+      sess.activities.forEach(function (act, idx) {
+        lines.push('### ' + (idx + 1) + '. ' + act.title + ' [' + (act.type || 'activity').toUpperCase() + ']');
+        if (act.instructions) {
+          lines.push('> ' + act.instructions);
+          lines.push('');
+        }
+        if (act.content) {
+          lines.push(act.content);
+          lines.push('');
+        }
+      });
+    }
+    return lines.join('\n');
+  }
+
+  // Generate printable Student Worksheet HTML
+  function exportToWorksheetHtml(session) {
+    var sess = session || state.session;
+    var html = [];
+    html.push('<!DOCTYPE html>');
+    html.push('<html lang="en">');
+    html.push('<head>');
+    html.push('<meta charset="UTF-8">');
+    html.push('<title>' + escapeHtml(sess.title || 'Session Worksheet') + ' - COSYevents Worksheet</title>');
+    html.push('<style>');
+    html.push('body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.5; color: #1c261e; max-width: 800px; margin: 40px auto; padding: 0 20px; }');
+    html.push('.header { border-bottom: 2px solid #233e28; padding-bottom: 12px; margin-bottom: 24px; }');
+    html.push('.brand { font-size: 0.85rem; font-weight: 700; color: #416b49; text-transform: uppercase; letter-spacing: 0.05em; }');
+    html.push('h1 { margin: 8px 0; font-size: 1.8rem; color: #233e28; }');
+    html.push('.meta { font-size: 0.9rem; color: #526055; display: flex; gap: 16px; margin-top: 6px; }');
+    html.push('.summary { background: #f3f5f3; border-left: 4px solid #416b49; padding: 12px 16px; border-radius: 4px; margin: 20px 0; font-style: italic; }');
+    html.push('.section-title { font-size: 1.25rem; color: #233e28; border-bottom: 1px solid #d4ddd5; padding-bottom: 6px; margin: 28px 0 14px; }');
+    html.push('.vocab-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }');
+    html.push('.vocab-table th, .vocab-table td { border: 1px solid #d4ddd5; padding: 8px 12px; text-align: left; font-size: 0.9rem; }');
+    html.push('.vocab-table th { background: #f3f5f3; }');
+    html.push('.card-box { border: 1px solid #d4ddd5; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; page-break-inside: avoid; }');
+    html.push('.card-type { font-size: 0.75rem; font-weight: 700; color: #416b49; text-transform: uppercase; }');
+    html.push('.card-inst { font-size: 0.88rem; color: #526055; margin: 6px 0 12px; }');
+    html.push('@media print { body { margin: 0; padding: 0; } .card-box { border: 1px solid #bbb; } }');
+    html.push('</style>');
+    html.push('</head>');
+    html.push('<body>');
+    html.push('<div class="header">');
+    html.push('  <div class="brand">🎭 COSYevents Speaking Club Worksheet</div>');
+    html.push('  <h1>' + escapeHtml(sess.title || 'Untitled Session') + '</h1>');
+    html.push('  <div class="meta">');
+    html.push('    <span><strong>Language:</strong> ' + escapeHtml(sess.language || 'English') + '</span>');
+    html.push('    <span><strong>Level:</strong> ' + escapeHtml(sess.level || 'A2') + '</span>');
+    html.push('    <span><strong>Theme:</strong> ' + escapeHtml(sess.theme || '') + '</span>');
+    if (sess.date) html.push('    <span><strong>Date:</strong> ' + escapeHtml(sess.date) + '</span>');
+    html.push('  </div>');
+    html.push('</div>');
+
+    if (sess.summary) {
+      html.push('<div class="summary">' + escapeHtml(sess.summary) + '</div>');
+    }
+
+    if (sess.vocabulary && sess.vocabulary.length > 0) {
+      html.push('<h2 class="section-title">Useful Vocabulary</h2>');
+      html.push('<table class="vocab-table">');
+      html.push('  <thead><tr><th>Term</th><th>Level</th><th>Definition</th><th>Example Context</th></tr></thead>');
+      html.push('  <tbody>');
+      sess.vocabulary.forEach(function (v) {
+        html.push('    <tr>');
+        html.push('      <td><strong>' + escapeHtml(v.word) + '</strong> (' + escapeHtml(v.pos || '') + ')</td>');
+        html.push('      <td>' + escapeHtml(v.level || '') + '</td>');
+        html.push('      <td>' + escapeHtml(v.definition || '') + '</td>');
+        html.push('      <td><em>' + escapeHtml(v.example || '') + '</em></td>');
+        html.push('    </tr>');
+      });
+      html.push('  </tbody>');
+      html.push('</table>');
+    }
+
+    if (sess.activities && sess.activities.length > 0) {
+      html.push('<h2 class="section-title">Activities &amp; Breakout Prompts</h2>');
+      sess.activities.forEach(function (act, idx) {
+        html.push('<div class="card-box">');
+        html.push('  <span class="card-type">Part ' + (idx + 1) + ': ' + escapeHtml(act.type || 'Activity') + '</span>');
+        html.push('  <h3 style="margin: 4px 0 8px;">' + escapeHtml(act.title) + '</h3>');
+        if (act.instructions) {
+          html.push('  <div class="card-inst">' + escapeHtml(act.instructions) + '</div>');
+        }
+        if (act.content) {
+          html.push('  <div class="card-body">' + act.content + '</div>');
+        }
+        html.push('</div>');
+      });
+    }
+
+    html.push('</body>');
+    html.push('</html>');
+    return html.join('\n');
+  }
+
     // Export: Download JSON
     if ($('btn-download-json')) {
       $('btn-download-json').addEventListener('click', function () {
@@ -2011,6 +2211,40 @@
         var a = document.createElement('a');
         a.href = url;
         a.download = (state.session.slug || 'session') + '.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        if (exportPanel) exportPanel.setAttribute('hidden', '');
+      });
+    }
+
+    // Export: Markdown (.md)
+    if ($('btn-export-markdown')) {
+      $('btn-export-markdown').addEventListener('click', function () {
+        var mdStr = exportToMarkdown(state.session);
+        var blob = new Blob([mdStr], { type: 'text/markdown;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = (state.session.slug || 'session') + '.md';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        if (exportPanel) exportPanel.setAttribute('hidden', '');
+      });
+    }
+
+    // Export: Printable Student Worksheet HTML
+    if ($('btn-export-worksheet')) {
+      $('btn-export-worksheet').addEventListener('click', function () {
+        var sheetHtml = exportToWorksheetHtml(state.session);
+        var blob = new Blob([sheetHtml], { type: 'text/html;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = (state.session.slug || 'session') + '-worksheet.html';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -2222,6 +2456,148 @@
     generateLinkBlock: generateLinkBlock,
     generateQuestionsBlock: generateQuestionsBlock,
     generateCalloutBlock: generateCalloutBlock,
+    exportToMarkdown: function (sess) {
+      var s = sess || state.session;
+      var lines = [];
+      lines.push('---');
+      lines.push('title: "' + (s.title || '').replace(/"/g, '\\"') + '"');
+      lines.push('slug: "' + (s.slug || '') + '"');
+      lines.push('event: "' + (s.event || '') + '"');
+      lines.push('language: "' + (s.language || 'English') + '"');
+      lines.push('level: "' + (s.level || 'A2') + '"');
+      lines.push('theme: "' + (s.theme || '') + '"');
+      lines.push('date: "' + (s.date || new Date().toISOString().split('T')[0]) + '"');
+      if (s.host) lines.push('host: "' + s.host.replace(/"/g, '\\"') + '"');
+      if (s.recording_url) lines.push('recording_url: "' + s.recording_url + '"');
+      lines.push('---');
+      lines.push('');
+      lines.push('# ' + (s.title || 'Session'));
+      lines.push('');
+      if (s.summary) {
+        lines.push('## Summary');
+        lines.push(s.summary);
+        lines.push('');
+      }
+      if (s.vocabulary && s.vocabulary.length > 0) {
+        lines.push('## Useful Vocabulary');
+        s.vocabulary.forEach(function (v) {
+          lines.push('- **' + v.word + '** (' + (v.pos || '') + ', ' + (v.level || '') + '): ' + (v.definition || '') + ' _(e.g. ' + (v.example || '') + ')_');
+        });
+        lines.push('');
+      }
+      if (s.activities && s.activities.length > 0) {
+        lines.push('## Activities & Rounds');
+        s.activities.forEach(function (act, idx) {
+          lines.push('### ' + (idx + 1) + '. ' + act.title + ' [' + (act.type || 'activity').toUpperCase() + ']');
+          if (act.instructions) {
+            lines.push('> ' + act.instructions);
+            lines.push('');
+          }
+          if (act.content) {
+            lines.push(act.content);
+            lines.push('');
+          }
+        });
+      }
+      return lines.join('\n');
+    },
+    exportToWorksheetHtml: function (sess) {
+      var s = sess || state.session;
+      var html = [];
+      html.push('<!DOCTYPE html>');
+      html.push('<html lang="en">');
+      html.push('<head>');
+      html.push('<meta charset="UTF-8">');
+      html.push('<title>' + escapeHtml(s.title || 'Session Worksheet') + ' - COSYevents Worksheet</title>');
+      html.push('<style>');
+      html.push('body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.5; color: #1c261e; max-width: 800px; margin: 40px auto; padding: 0 20px; }');
+      html.push('.header { border-bottom: 2px solid #233e28; padding-bottom: 12px; margin-bottom: 24px; }');
+      html.push('.brand { font-size: 0.85rem; font-weight: 700; color: #416b49; text-transform: uppercase; letter-spacing: 0.05em; }');
+      html.push('h1 { margin: 8px 0; font-size: 1.8rem; color: #233e28; }');
+      html.push('.meta { font-size: 0.9rem; color: #526055; display: flex; gap: 16px; margin-top: 6px; }');
+      html.push('.summary { background: #f3f5f3; border-left: 4px solid #416b49; padding: 12px 16px; border-radius: 4px; margin: 20px 0; font-style: italic; }');
+      html.push('.section-title { font-size: 1.25rem; color: #233e28; border-bottom: 1px solid #d4ddd5; padding-bottom: 6px; margin: 28px 0 14px; }');
+      html.push('.vocab-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }');
+      html.push('.vocab-table th, .vocab-table td { border: 1px solid #d4ddd5; padding: 8px 12px; text-align: left; font-size: 0.9rem; }');
+      html.push('.vocab-table th { background: #f3f5f3; }');
+      html.push('.card-box { border: 1px solid #d4ddd5; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; page-break-inside: avoid; }');
+      html.push('.card-type { font-size: 0.75rem; font-weight: 700; color: #416b49; text-transform: uppercase; }');
+      html.push('.card-inst { font-size: 0.88rem; color: #526055; margin: 6px 0 12px; }');
+      html.push('@media print { body { margin: 0; padding: 0; } .card-box { border: 1px solid #bbb; } }');
+      html.push('</style>');
+      html.push('</head>');
+      html.push('<body>');
+      html.push('<div class="header">');
+      html.push('  <div class="brand">🎭 COSYevents Speaking Club Worksheet</div>');
+      html.push('  <h1>' + escapeHtml(s.title || 'Untitled Session') + '</h1>');
+      html.push('  <div class="meta">');
+      html.push('    <span><strong>Language:</strong> ' + escapeHtml(s.language || 'English') + '</span>');
+      html.push('    <span><strong>Level:</strong> ' + escapeHtml(s.level || 'A2') + '</span>');
+      html.push('    <span><strong>Theme:</strong> ' + escapeHtml(s.theme || '') + '</span>');
+      if (s.date) html.push('    <span><strong>Date:</strong> ' + escapeHtml(s.date) + '</span>');
+      html.push('  </div>');
+      html.push('</div>');
+      if (s.summary) {
+        html.push('<div class="summary">' + escapeHtml(s.summary) + '</div>');
+      }
+      if (s.vocabulary && s.vocabulary.length > 0) {
+        html.push('<h2 class="section-title">Useful Vocabulary</h2>');
+        html.push('<table class="vocab-table">');
+        html.push('  <thead><tr><th>Term</th><th>Level</th><th>Definition</th><th>Example Context</th></tr></thead>');
+        html.push('  <tbody>');
+        s.vocabulary.forEach(function (v) {
+          html.push('    <tr>');
+          html.push('      <td><strong>' + escapeHtml(v.word) + '</strong> (' + escapeHtml(v.pos || '') + ')</td>');
+          html.push('      <td>' + escapeHtml(v.level || '') + '</td>');
+          html.push('      <td>' + escapeHtml(v.definition || '') + '</td>');
+          html.push('      <td><em>' + escapeHtml(v.example || '') + '</em></td>');
+          html.push('    </tr>');
+        });
+        html.push('  </tbody>');
+        html.push('</table>');
+      }
+      if (s.activities && s.activities.length > 0) {
+        html.push('<h2 class="section-title">Activities &amp; Breakout Prompts</h2>');
+        s.activities.forEach(function (act, idx) {
+          html.push('<div class="card-box">');
+          html.push('  <span class="card-type">Part ' + (idx + 1) + ': ' + escapeHtml(act.type || 'Activity') + '</span>');
+          html.push('  <h3 style="margin: 4px 0 8px;">' + escapeHtml(act.title) + '</h3>');
+          if (act.instructions) {
+            html.push('  <div class="card-inst">' + escapeHtml(act.instructions) + '</div>');
+          }
+          if (act.content) {
+            html.push('  <div class="card-body">' + act.content + '</div>');
+          }
+          html.push('</div>');
+        });
+      }
+      html.push('</body>');
+      html.push('</html>');
+      return html.join('\n');
+    },
+    speakVocabWord: function (term, langName) {
+      if (typeof window === 'undefined' || !window.speechSynthesis) return null;
+      if (!term) return null;
+      try {
+        window.speechSynthesis.cancel();
+        var utterance = new SpeechSynthesisUtterance(term);
+        var langCodeMap = {
+          'English': 'en-US',
+          'Français': 'fr-FR',
+          'Italiano': 'it-IT',
+          'Русский': 'ru-RU',
+          'Ελληνικά': 'el-GR',
+          'Español': 'es-ES',
+          'Deutsch': 'de-DE'
+        };
+        utterance.lang = langCodeMap[langName] || 'en-US';
+        utterance.rate = 0.9;
+        window.speechSynthesis.speak(utterance);
+        return utterance;
+      } catch (e) {
+        return null;
+      }
+    },
     KNOWN_SESSIONS: KNOWN_SESSIONS,
     getState: function () { return state; },
     init: init,
