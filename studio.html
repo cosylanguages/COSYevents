@@ -38,19 +38,42 @@
     </div>
 
     <div class="studio-header-right">
-      <!-- Quick Structure Presets -->
-      <button type="button" id="btn-preset-stages" class="btn btn-sm" title="Apply standard 5-stage speaking club structure (Warm-up, R1, Interlude, R2, Wrap-up)">
-        <span>⚡ 5-Stage Preset</span>
-      </button>
+      <!-- Multi-Club Presets Dropdown Menu -->
+      <div class="menu-container">
+        <button type="button" id="btn-presets-menu" class="btn btn-sm" aria-haspopup="menu" aria-expanded="false" title="Load pedagogical templates for Speaking Club, Science, Wonder, Cinema, or Debate">
+          <span>⚡ Presets ▾</span>
+        </button>
+        <div id="presets-menu-panel" class="menu-panel" role="menu" hidden>
+          <button type="button" id="btn-preset-standard-5" class="menu-item" role="menuitem">
+            <span>⚡ <strong>5-Stage Speaking Club</strong><small>Warm-up, R1, Interlude, R2, Wrap-up</small></span>
+          </button>
+          <button type="button" id="btn-preset-science" class="menu-item" role="menuitem">
+            <span>🔬 <strong>Keeping Up with Science</strong><small>Reading/Podcast + Journal Discussion</small></span>
+          </button>
+          <button type="button" id="btn-preset-wonder" class="menu-item" role="menuitem">
+            <span>💭 <strong>I Couldn't Help But Wonder</strong><small>Philosophy, Reflection &amp; Stop Translating</small></span>
+          </button>
+          <button type="button" id="btn-preset-cinema" class="menu-item" role="menuitem">
+            <span>🎬 <strong>Cinema Club</strong><small>Scene Study, Dialogue Analysis &amp; Roleplay</small></span>
+          </button>
+          <button type="button" id="btn-preset-debate" class="menu-item" role="menuitem">
+            <span>⚔️ <strong>Debate Duel</strong><small>Opening Statements, Rebuttal &amp; Live Voting</small></span>
+          </button>
+        </div>
+      </div>
 
       <!-- Presenter Fullscreen Mode -->
-      <button type="button" id="btn-present-mode" class="btn btn-sm" title="Launch Interactive Multi-Page Deck Presentation">
+      <button type="button" id="btn-present-mode" class="btn btn-sm" title="Launch Interactive Multi-Page Deck Presentation (F / Esc)">
         <span>📺 Present Deck</span>
       </button>
 
       <!-- Session Switcher / Loader -->
+      <button type="button" id="btn-open-catalog" class="btn btn-sm" title="Browse session catalog from data/sessions.json">
+        <span>📚 Catalog</span>
+      </button>
+
       <select id="session-picker-select" class="form-control" style="width: auto; padding: 5px 8px; font-size: 0.82rem;">
-        <option value="">Load Existing Session…</option>
+        <option value="">Quick Pick…</option>
       </select>
 
       <button type="button" id="btn-new-session" class="btn btn-sm" title="Create a blank session">
@@ -191,16 +214,28 @@
             </div>
             <div class="block-toolbar-actions">
               <button type="button" id="btn-insert-video" class="btn btn-sm btn-tool" title="Embed YouTube, Vimeo, or MP4 video clip">
-                🎬 <strong>+ Video Embed</strong>
+                🎬 <strong>+ Video</strong>
               </button>
               <button type="button" id="btn-insert-audio" class="btn btn-sm btn-tool" title="Embed audio player, podcast, or pronunciation stream">
-                🎧 <strong>+ Audio Player</strong>
+                🎧 <strong>+ Audio</strong>
+              </button>
+              <button type="button" id="btn-insert-timer" class="btn btn-sm btn-tool" title="Interactive breakout countdown timer (e.g. 05:00)">
+                ⏱ <strong>+ Timer</strong>
+              </button>
+              <button type="button" id="btn-insert-speakers" class="btn btn-sm btn-tool" title="Insert Speaker A &amp; Speaker B turn-taking cards">
+                👥 <strong>+ Speaker A/B</strong>
+              </button>
+              <button type="button" id="btn-insert-starters" class="btn btn-sm btn-tool" title="Insert clickable sentence starter pills">
+                🏷️ <strong>+ Starters</strong>
+              </button>
+              <button type="button" id="btn-insert-poll" class="btn btn-sm btn-tool" title="Insert live flash polling widget">
+                📊 <strong>+ Flash Poll</strong>
               </button>
               <button type="button" id="btn-insert-links" class="btn btn-sm btn-tool" title="Add curated resource and reading links">
-                🔗 <strong>+ Resource Links</strong>
+                🔗 <strong>+ Links</strong>
               </button>
-              <button type="button" id="btn-insert-questions" class="btn btn-sm btn-tool" title="Add numbered discussion questions with bold key phrases">
-                💬 <strong>+ Discussion Prompts</strong>
+              <button type="button" id="btn-insert-questions" class="btn btn-sm btn-tool" title="Add numbered discussion questions">
+                💬 <strong>+ Prompts</strong>
               </button>
               <button type="button" id="btn-insert-callout" class="btn btn-sm btn-tool" title="Add pedagogical callout / useful language card">
                 💡 <strong>+ Useful Language</strong>
@@ -388,9 +423,14 @@
           <!-- Page Pills (P1, P2, P3...) -->
         </div>
         <div class="presenter-bar-right">
+          <div class="presenter-live-timer" id="presenter-floating-timer">
+            <span id="presenter-timer-digits">05:00</span>
+            <button type="button" id="btn-presenter-timer-toggle" class="btn btn-xs btn-ghost" title="Start/Pause Timer">▶</button>
+          </div>
           <button type="button" id="btn-presenter-prev" class="btn btn-sm btn-ghost">← Previous</button>
           <span id="presenter-counter" class="presenter-counter">1 / 5</span>
           <button type="button" id="btn-presenter-next" class="btn btn-sm btn-primary">Next →</button>
+          <button type="button" id="btn-presenter-fullscreen" class="btn btn-sm btn-ghost" title="Toggle Fullscreen (F)">⛶</button>
           <button type="button" id="btn-close-presenter" class="btn btn-sm btn-ghost" title="Exit presentation (Esc)">✕ Exit</button>
         </div>
       </div>
@@ -414,6 +454,42 @@
 
       <div class="presenter-bottom-tip">
         <span>💡 Facilitator Tip: Use <kbd>←</kbd> / <kbd>→</kbd> or <kbd>Space</kbd> to change pages. Press <kbd>Esc</kbd> to exit.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Catalog Browser Modal -->
+  <div id="studio-catalog-modal" class="modal-backdrop" hidden>
+    <div class="modal-card modal-card-lg" role="dialog" aria-modal="true" aria-labelledby="catalog-modal-title">
+      <div class="modal-header">
+        <h3 id="catalog-modal-title">📚 Session Catalog Browser</h3>
+        <button type="button" id="btn-close-catalog-modal" class="btn btn-ghost btn-sm">✕</button>
+      </div>
+      <p style="font-size: 0.86rem; color: var(--st-ink-secondary); margin-bottom: 12px;">
+        Browse published speaking club sessions across all languages and levels from <code>data/sessions.json</code>.
+      </p>
+
+      <div class="catalog-filters-bar">
+        <input type="search" id="catalog-search-input" class="form-control" placeholder="Search sessions by title, theme, or topic..." style="flex: 1;">
+        <select id="catalog-club-filter" class="form-control" style="width: auto;">
+          <option value="all">All Clubs</option>
+          <option value="keeping-up-with-science">Keeping Up with Science</option>
+          <option value="i-couldnt-help-but-wonder">I Couldn't Help But Wonder</option>
+          <option value="cinema">Cinema Club</option>
+          <option value="games">Language Games</option>
+        </select>
+        <select id="catalog-level-filter" class="form-control" style="width: auto;">
+          <option value="all">All Levels</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+          <option value="C1">C1</option>
+        </select>
+      </div>
+
+      <div id="catalog-results-list" class="catalog-results-grid">
+        <p style="color: var(--st-ink-muted); font-size: 0.88rem;">Loading catalog sessions…</p>
       </div>
     </div>
   </div>

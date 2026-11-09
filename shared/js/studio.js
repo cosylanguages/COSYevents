@@ -136,6 +136,246 @@
     };
   }
 
+  // Preset: Keeping Up with Science (Cosyscience)
+  function createScienceClubSession() {
+    var today = new Date().toISOString().split('T')[0];
+    return {
+      slug: 'science-neuroplasticity-and-learning',
+      event: 'english-b2-science',
+      title: 'Keeping Up with Science: Neuroplasticity & Habit Rewiring',
+      theme: 'Mind & Brain',
+      language: 'English',
+      level: 'B2',
+      date: today,
+      host: 'COSY Facilitator',
+      summary: 'Explore cutting-edge neuroscience on how adult brains rewire neural pathways through deliberate practice and focused attention.',
+      activities: [
+        {
+          type: 'icebreaker',
+          title: 'Page 1: Pre-Session Science Warm-up',
+          instructions: 'Review the research hypothesis with your partner and test your intuition.',
+          content: '<div class="studio-prompt-card">\n  <span class="studio-speaker-badge speaker-a">👤 Speaker A</span>\n  <div style="font-weight:600; margin-bottom: 0.35rem;">How quickly do you think the adult brain forms a new physical synaptic connection?</div>\n  <span class="studio-starter-chip">My initial hypothesis is...</span>\n  <span class="studio-starter-chip">Based on experience...</span>\n</div>\n\n<div class="studio-prompt-card">\n  <span class="studio-speaker-badge speaker-b">👥 Speaker B</span>\n  <div style="font-weight:600; margin-bottom: 0.35rem;">Have you ever successfully unlearned an ingrained automatic habit?</div>\n  <span class="studio-starter-chip">It took conscious effort to...</span>\n  <span class="studio-starter-chip">The main trigger was...</span>\n</div>'
+        },
+        {
+          type: 'round_1',
+          title: 'Page 2: Research Study Analysis',
+          instructions: 'Debate the research findings and discuss whether deliberate struggle accelerates retention.',
+          content: '<div class="card-links-box">\n  <a class="card-link-item" href="https://www.nature.com/articles/neuroscience-example" target="_blank" rel="noopener noreferrer">\n    <div class="card-link-meta">\n      <span class="card-link-title">📄 Nature Neuroscience Publication</span>\n      <span class="card-link-desc">Primary Study: Synaptic remodeling during language acquisition</span>\n    </div>\n    <span style="font-size: 0.8rem; color: var(--st-accent);">↗</span>\n  </a>\n</div>\n\n<ol>\n  <li>What was the key independent variable in the neuroimaging study?</li>\n  <li>Why does frustration during learning signal neurochemical priming rather than failure?</li>\n</ol>'
+        },
+        {
+          type: 'round_2',
+          title: 'Page 3: Practical Laboratory Takeaway',
+          instructions: 'Apply the research to your personal language routine. Formulate a 21-day experiment.',
+          content: '<ol>\n  <li>Design an optimal 20-minute daily micro-routine that leverages active recall.</li>\n  <li>How can you embrace error-correction without emotional friction?</li>\n</ol>\n\n<div class="card-callout-box">\n  <div class="card-callout-title">🔬 Science Takeaway Principle</div>\n  <p style="margin: 0; line-height: 1.5;">\n    Neuroplasticity in adults requires high alertness followed by deep rest (sleep or NSDR) where synaptic consolidation actually occurs.\n  </p>\n</div>'
+        }
+      ],
+      vocabulary: [
+        {
+          id: 'en:neuroplasticity:noun',
+          word: 'neuroplasticity',
+          pos: 'noun',
+          definition: 'the ability of the brain to form and reorganize synaptic connections, especially in response to learning or experience',
+          example: 'Neuroplasticity proves that adult brains remain adaptable throughout life.',
+          primary_theme: 'science',
+          sub_theme: 'neuroscience',
+          level: 'B2'
+        },
+        {
+          id: 'en:synaptic:adjective',
+          word: 'synaptic',
+          pos: 'adjective',
+          definition: 'relating to a synapse or synapses between nerve cells',
+          example: 'Deep sleep enhances synaptic consolidation after intense study.',
+          primary_theme: 'science',
+          sub_theme: 'biology',
+          level: 'B2'
+        }
+      ],
+      sources: [
+        { source_title: 'Nature Neuroscience 2024', source_url: 'https://nature.com/example' }
+      ]
+    };
+  }
+
+  // Preset: I Couldn't Help But Wonder
+  function createWonderClubSession() {
+    var today = new Date().toISOString().split('T')[0];
+    return {
+      slug: 'wonder-authenticity-and-social-masks',
+      event: 'english-c1-wonder',
+      title: "I Couldn't Help But Wonder: Authenticity & Social Masks",
+      theme: 'Philosophy and Modern Living',
+      language: 'English',
+      level: 'C1',
+      date: today,
+      host: 'COSY Facilitator',
+      summary: 'A philosophical reflection session on Carl Jung\'s persona, social expectations, and staying authentic in an era of personal branding. Golden rule: No translations, try to explain!',
+      activities: [
+        {
+          type: 'icebreaker',
+          title: "Page 1: The Wonder Column Hook",
+          instructions: 'Golden Rule: No translations, try to explain! Read the central dilemma and reflect in pairs.',
+          content: '<div class="card-callout-box">\n  <div class="card-callout-title">💭 The Carrie Bradshaw Hook</div>\n  <p style="margin: 0; font-style: italic; line-height: 1.5;">\n    "As I watched everyone curate their perfectly effortless lives, I couldn\'t help but wonder: Are our social masks protecting who we really are, or slowly replacing us?"\n  </p>\n</div>\n\n<ol>\n  <li>When did you last realize you were wearing a "persona" rather than speaking entirely candidly?</li>\n  <li>Is total radical honesty ever truly desirable in civilized society?</li>\n</ol>'
+        },
+        {
+          type: 'round_1',
+          title: 'Page 2: Dialectical Inquiry',
+          instructions: 'Explore the tension between belonging and genuine self-expression.',
+          content: '<div class="studio-prompt-card">\n  <span class="studio-speaker-badge speaker-a">👤 Speaker A</span>\n  <div style="font-weight:600; margin-bottom: 0.35rem;">Can a person have a stable core identity if their behavior shifts across contexts?</div>\n  <span class="studio-starter-chip">I would argue that...</span>\n  <span class="studio-starter-chip">Far from being hypocritical...</span>\n</div>\n\n<div class="studio-prompt-card">\n  <span class="studio-speaker-badge speaker-b">👥 Speaker B</span>\n  <div style="font-weight:600; margin-bottom: 0.35rem;">Does digital curation make authenticity an impossible paradox?</div>\n  <span class="studio-starter-chip">It strikes me as...</span>\n  <span class="studio-starter-chip">The moment it becomes performative...</span>\n</div>'
+        },
+        {
+          type: 'outro',
+          title: "Page 3: Philosopher's Ledger & Personal Reflection",
+          instructions: 'Synthesize your insight and record your parting thought.',
+          content: '<ol>\n  <li>What is one uncomfortable truth you encountered during today\'s exploration?</li>\n  <li>One nuance or refined expression you adopted:</li>\n</ol>\n\n<div class="card-callout-box">\n  <div class="card-callout-title">🪞 Perspective Mirror</div>\n  <p style="margin: 0; line-height: 1.5;">\n    Remember our ecosystem essay on "Stop Translating": when you lack a direct word, circumlocution is your greatest intellectual asset!\n  </p>\n</div>'
+        }
+      ],
+      vocabulary: [
+        {
+          id: 'en:persona:noun',
+          word: 'persona',
+          pos: 'noun',
+          definition: 'the aspect of someone\'s character that is presented to or perceived by others',
+          example: 'His public persona differed greatly from his private introspective nature.',
+          primary_theme: 'philosophy',
+          sub_theme: 'identity',
+          level: 'C1'
+        },
+        {
+          id: 'en:performative:adjective',
+          word: 'performative',
+          pos: 'adjective',
+          definition: 'done for show, effect, or social approval rather than genuine conviction',
+          example: 'Online outrage often borders on being purely performative.',
+          primary_theme: 'society',
+          sub_theme: 'culture',
+          level: 'C1'
+        }
+      ],
+      sources: [
+        { source_title: 'Jungian Psychology: Archetypes and the Persona', source_url: 'https://example.com/jung-persona' }
+      ]
+    };
+  }
+
+  // Preset: Cinema Club
+  function createCinemaClubSession() {
+    var today = new Date().toISOString().split('T')[0];
+    return {
+      slug: 'cinema-unreliable-narrator',
+      event: 'english-b2-cinema',
+      title: 'Cinema Club: The Art of the Unreliable Narrator',
+      theme: 'Cinema and Storytelling',
+      language: 'English',
+      level: 'B2',
+      date: today,
+      host: 'COSY Facilitator',
+      summary: 'Analyze cinematic techniques of subjective storytelling, plot twists, and character psychology in psychological thrillers.',
+      activities: [
+        {
+          type: 'icebreaker',
+          title: 'Page 1: Scene Hook & Visual Atmosphere',
+          instructions: 'Watch the selected opening sequence and discuss the cinematography.',
+          content: '<div class="card-video-box">\n  <div class="card-video-responsive">\n    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Film Clip" allowfullscreen></iframe>\n  </div>\n  <div class="card-video-disclaimer">🎬 Film Sequence: Notice camera angle, lighting, and ambient sound cues.</div>\n</div>\n\n<ol>\n  <li>What emotions does the opening lighting palette evoke?</li>\n  <li>Do you trust the protagonist from the very first frame? Why or why not?</li>\n</ol>'
+        },
+        {
+          type: 'roleplay',
+          title: 'Page 2: Scene Re-enactment & Subtext Analysis',
+          instructions: 'Partner up: perform the dialogue below, then analyze the unspoken emotional subtext.',
+          content: '<div class="studio-prompt-card">\n  <span class="studio-speaker-badge speaker-a">🎭 Character A (Detective)</span>\n  <div style="font-weight:600; margin-bottom: 0.35rem;">"You remember the exact time, don\'t you? Or is your memory just playing tricks on you?"</div>\n  <span class="studio-starter-chip">I have to press you on this because...</span>\n</div>\n\n<div class="studio-prompt-card">\n  <span class="studio-speaker-badge speaker-b">🎭 Character B (Witness)</span>\n  <div style="font-weight:600; margin-bottom: 0.35rem;">"Memory isn\'t a tape recorder. Sometimes what we feel is truer than what happened."</div>\n  <span class="studio-starter-chip">Look at the bigger picture...</span>\n</div>'
+        },
+        {
+          type: 'outro',
+          title: 'Page 3: Director\'s Cut Takeaway',
+          instructions: 'Debrief the narrative devices and cinema vocabulary used in today\'s critique.',
+          content: '<ol>\n  <li>Favorite film with an unreliable narrator:</li>\n  <li>How does sound design alter audience perception?</li>\n</ol>'
+        }
+      ],
+      vocabulary: [
+        {
+          id: 'en:cinematography:noun',
+          word: 'cinematography',
+          pos: 'noun',
+          definition: 'the art or technique of movie photography, including camera angles and lighting',
+          example: 'The film earned acclaim for its moody, chiaroscuro cinematography.',
+          primary_theme: 'arts',
+          sub_theme: 'cinema',
+          level: 'B2'
+        },
+        {
+          id: 'en:subtext:noun',
+          word: 'subtext',
+          pos: 'noun',
+          definition: 'an underlying and often distinct theme or meaning in a conversation or piece of writing',
+          example: 'The dialogue was polite, but the dramatic subtext was intense.',
+          primary_theme: 'arts',
+          sub_theme: 'literature',
+          level: 'B2'
+        }
+      ],
+      sources: []
+    };
+  }
+
+  // Preset: Debate Duel
+  function createDebateClubSession() {
+    var today = new Date().toISOString().split('T')[0];
+    return {
+      slug: 'debate-four-day-workweek',
+      event: 'english-b2-debate',
+      title: 'Debate Duel: The 32-Hour Four-Day Workweek',
+      theme: 'Society & Economics',
+      language: 'English',
+      level: 'B2',
+      date: today,
+      host: 'COSY Facilitator',
+      summary: 'A fast-paced structured parliamentary debate duel on adopting a mandatory 4-day workweek without pay reductions.',
+      activities: [
+        {
+          type: 'icebreaker',
+          title: 'Page 1: The Motion & Stance Assignment',
+          instructions: 'House Motion: "This House Would Legislate a 4-Day Workweek with 100% Salary Protection."',
+          content: '<div class="studio-prompt-card">\n  <span class="studio-speaker-badge speaker-a">🏛 Affirmative (Proposition)</span>\n  <div style="font-weight:600; margin-bottom: 0.35rem;">Argue why productivity gains and mental wellbeing justify fewer hours.</div>\n  <span class="studio-starter-chip">We maintain that...</span>\n  <span class="studio-starter-chip">The empirical trials indicate...</span>\n</div>\n\n<div class="studio-prompt-card">\n  <span class="studio-speaker-badge speaker-b">⚖️ Opposition</span>\n  <div style="font-weight:600; margin-bottom: 0.35rem;">Argue why small businesses and customer service sectors would struggle.</div>\n  <span class="studio-starter-chip">While well-intentioned, this overlooks...</span>\n  <span class="studio-starter-chip">The economic friction would...</span>\n</div>'
+        },
+        {
+          type: 'round_1',
+          title: 'Page 2: Cross-Examination & Rebuttal',
+          instructions: '2-minute timed rounds. Point of Information (POI) allowed after the first 30 seconds.',
+          content: '<ol>\n  <li>Speaker 1: Constructive arguments (2 mins).</li>\n  <li>Speaker 2: Rebuttal & Point of Information response (2 mins).</li>\n</ol>\n\n<div class="card-callout-box">\n  <div class="card-callout-title">⚔️ Debate Etiquette & Formulations</div>\n  <p style="margin: 0; line-height: 1.5;">\n    • "With all due respect to the proposition, that premise collapses when..."<br>\n    • "Our opponents fail to account for the disproportionate burden on..."\n  </p>\n</div>'
+        },
+        {
+          type: 'interlude',
+          title: 'Page 3: Floor Division & Live Vote',
+          instructions: 'Facilitator calls for the vote. Count Ayes vs Noes.',
+          content: '<ol>\n  <li>Ayes: Support the motion.</li>\n  <li>Noes: Oppose the motion.</li>\n</ol>'
+        }
+      ],
+      vocabulary: [
+        {
+          id: 'en:motion:noun',
+          word: 'motion',
+          pos: 'noun',
+          definition: 'a formal proposal put to a legislature or debating assembly for decision',
+          example: 'The house passed the motion by a slim majority.',
+          primary_theme: 'society',
+          sub_theme: 'politics',
+          level: 'B2'
+        },
+        {
+          id: 'en:rebuttal:noun',
+          word: 'rebuttal',
+          pos: 'noun',
+          definition: 'a refutation or contradiction of an argument or accusation',
+          example: 'Her rebuttal effectively dismantled the opposing argument.',
+          primary_theme: 'debate',
+          sub_theme: 'rhetoric',
+          level: 'B2'
+        }
+      ],
+      sources: []
+    };
+  }
+
   // Preloaded sample sessions for quick editing in studio
   var KNOWN_SESSIONS = [
     {
@@ -236,8 +476,67 @@
     isFounder: false,
     filterPage: 'all', // 'all' or specific 0-based page index
     authStep: 'email', // email or code
-    authEmail: ''
+    authEmail: '',
+    historyStack: [],
+    futureStack: []
   };
+
+  function pushHistory() {
+    try {
+      var snapshot = JSON.stringify(state.session);
+      if (state.historyStack.length > 0 && state.historyStack[state.historyStack.length - 1] === snapshot) {
+        return;
+      }
+      state.historyStack.push(snapshot);
+      if (state.historyStack.length > 30) state.historyStack.shift();
+      state.futureStack = [];
+      saveDraftToStorage();
+    } catch (e) {}
+  }
+
+  function undo() {
+    if (state.historyStack.length <= 1) return;
+    var current = state.historyStack.pop();
+    state.futureStack.push(current);
+    var prev = state.historyStack[state.historyStack.length - 1];
+    if (prev) {
+      state.session = JSON.parse(prev);
+      syncFormFromState();
+    }
+  }
+
+  function redo() {
+    if (state.futureStack.length === 0) return;
+    var next = state.futureStack.pop();
+    state.historyStack.push(next);
+    state.session = JSON.parse(next);
+    syncFormFromState();
+  }
+
+  function saveDraftToStorage() {
+    if (typeof window === 'undefined' || !window.localStorage) return;
+    try {
+      var payload = {
+        timestamp: Date.now(),
+        session: state.session
+      };
+      window.localStorage.setItem('ce_studio_draft', JSON.stringify(payload));
+    } catch (e) {}
+  }
+
+  function loadDraftFromStorage() {
+    if (typeof window === 'undefined' || !window.localStorage) return false;
+    try {
+      var raw = window.localStorage.getItem('ce_studio_draft');
+      if (!raw) return false;
+      var parsed = JSON.parse(raw);
+      if (parsed && parsed.session && parsed.session.title) {
+        state.session = parsed.session;
+        return true;
+      }
+    } catch (e) {}
+    return false;
+  }
 
   // Safe DOM helper
   function $(id) {
@@ -272,6 +571,78 @@
       'title="Video Material" allowfullscreen></iframe>\n' +
       '  </div>\n' +
       '  <div class="card-video-disclaimer">🎬 Educational video clip for discussion. Pause to answer comprehension prompts.</div>\n' +
+      '</div>'
+    );
+  }
+
+  function generateTimerBlock(minutes) {
+    var mins = minutes || 5;
+    var mm = mins < 10 ? '0' + mins : '' + mins;
+    return (
+      '<div class="edv-timer-widget" data-duration="' + (mins * 60) + '">\n' +
+      '  <div class="edv-timer-display">\n' +
+      '    <span class="edv-timer-icon">⏱</span>\n' +
+      '    <span class="edv-timer-digits">' + mm + ':00</span>\n' +
+      '  </div>\n' +
+      '  <div class="edv-timer-controls">\n' +
+      '    <button type="button" class="edv-timer-btn edv-timer-start">Start</button>\n' +
+      '    <button type="button" class="edv-timer-btn edv-timer-reset">Reset</button>\n' +
+      '  </div>\n' +
+      '</div>'
+    );
+  }
+
+  function generateSpeakersBlock() {
+    return (
+      '<div class="studio-prompt-card">\n' +
+      '  <span class="edv-speaker-chip speaker-a">👤 Speaker A</span>\n' +
+      '  <div style="font-weight:600; margin-bottom: 0.35rem;">What is one belief you held five years ago that you have now completely abandoned?</div>\n' +
+      '  <span class="edv-starter-chip" data-copy="I used to believe that...">I used to believe that...</span>\n' +
+      '  <span class="edv-starter-chip" data-copy="What shifted my thinking was...">What shifted my thinking was...</span>\n' +
+      '</div>\n\n' +
+      '<div class="studio-prompt-card">\n' +
+      '  <span class="edv-speaker-chip speaker-b">👥 Speaker B</span>\n' +
+      '  <div style="font-weight:600; margin-bottom: 0.35rem;">How easy is it for you to admit when you were mistaken in a debate?</div>\n' +
+      '  <span class="edv-starter-chip" data-copy="To be quite honest with you...">To be quite honest with you...</span>\n' +
+      '  <span class="edv-starter-chip" data-copy="It depends primarily on...">It depends primarily on...</span>\n' +
+      '</div>'
+    );
+  }
+
+  function generateStartersBlock() {
+    return (
+      '<div style="margin: 0.8rem 0;">\n' +
+      '  <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--st-ink-muted); margin-bottom:4px; font-weight:700;">Click to copy sentence starter:</div>\n' +
+      '  <div style="display:flex; flex-wrap:wrap; gap:6px;">\n' +
+      '    <span class="edv-starter-chip" data-copy="In all honesty,...">In all honesty,...</span>\n' +
+      '    <span class="edv-starter-chip" data-copy="If you look at the evidence,...">If you look at the evidence,...</span>\n' +
+      '    <span class="edv-starter-chip" data-copy="I would nuance that by adding...">I would nuance that by adding...</span>\n' +
+      '    <span class="edv-starter-chip" data-copy="That raises an interesting question...">That raises an interesting question...</span>\n' +
+      '  </div>\n' +
+      '</div>'
+    );
+  }
+
+  function generatePollBlock(question, optA, optB) {
+    var q = question || 'Which learning format produces faster fluency?';
+    var a = optA || 'Daily 15-minute micro-sessions';
+    var b = optB || 'Weekly 2-hour immersive deep-dives';
+    return (
+      '<div class="edv-poll-card" data-poll-id="poll-' + Date.now() + '">\n' +
+      '  <div class="edv-poll-header">\n' +
+      '    <span class="edv-poll-badge">📊 Flash Poll</span>\n' +
+      '    <span class="edv-poll-title">' + escapeHtml(q) + '</span>\n' +
+      '  </div>\n' +
+      '  <div class="edv-poll-options">\n' +
+      '    <button type="button" class="edv-poll-btn" data-choice="a">\n' +
+      '      <span class="edv-poll-btn-label">A: ' + escapeHtml(a) + '</span>\n' +
+      '      <span class="edv-poll-bar" style="width: 50%;"></span>\n' +
+      '    </button>\n' +
+      '    <button type="button" class="edv-poll-btn" data-choice="b">\n' +
+      '      <span class="edv-poll-btn-label">B: ' + escapeHtml(b) + '</span>\n' +
+      '      <span class="edv-poll-bar" style="width: 50%;"></span>\n' +
+      '    </button>\n' +
+      '  </div>\n' +
       '</div>'
     );
   }
@@ -614,6 +985,10 @@
   }
 
   // Fullscreen Multi-Page Presenter Deck System
+  var presenterTimerInterval = null;
+  var presenterSecondsRemaining = 300; // 5 mins
+  var isPresenterTimerRunning = false;
+
   function openPresenterDeck(initialIndex) {
     var modal = $('presenter-modal');
     if (!modal) return;
@@ -625,6 +1000,54 @@
   function closePresenterDeck() {
     var modal = $('presenter-modal');
     if (modal) modal.setAttribute('hidden', '');
+    if (presenterTimerInterval) {
+      clearInterval(presenterTimerInterval);
+      presenterTimerInterval = null;
+      isPresenterTimerRunning = false;
+    }
+  }
+
+  function togglePresenterTimer() {
+    var digits = $('presenter-timer-digits');
+    var toggleBtn = $('btn-presenter-timer-toggle');
+    if (isPresenterTimerRunning) {
+      clearInterval(presenterTimerInterval);
+      presenterTimerInterval = null;
+      isPresenterTimerRunning = false;
+      if (toggleBtn) toggleBtn.textContent = '▶';
+    } else {
+      isPresenterTimerRunning = true;
+      if (toggleBtn) toggleBtn.textContent = '⏸';
+      presenterTimerInterval = setInterval(function () {
+        if (presenterSecondsRemaining > 0) {
+          presenterSecondsRemaining--;
+          var m = Math.floor(presenterSecondsRemaining / 60);
+          var s = presenterSecondsRemaining % 60;
+          if (digits) {
+            digits.textContent = (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+          }
+        } else {
+          clearInterval(presenterTimerInterval);
+          presenterTimerInterval = null;
+          isPresenterTimerRunning = false;
+          if (toggleBtn) toggleBtn.textContent = '▶';
+        }
+      }, 1000);
+    }
+  }
+
+  function togglePresenterFullscreen() {
+    var modal = $('presenter-modal');
+    if (!modal) return;
+    if (!document.fullscreenElement) {
+      if (modal.requestFullscreen) {
+        modal.requestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
   }
 
   function renderPresenterSlide() {
@@ -1132,6 +1555,36 @@
       });
     }
 
+    if ($('btn-insert-timer')) {
+      $('btn-insert-timer').addEventListener('click', function () {
+        var mins = prompt('Enter timer duration in minutes (e.g. 3, 5, 10):', '5');
+        var parsed = parseInt(mins, 10) || 5;
+        appendBlockToActiveCard(generateTimerBlock(parsed));
+      });
+    }
+
+    if ($('btn-insert-speakers')) {
+      $('btn-insert-speakers').addEventListener('click', function () {
+        appendBlockToActiveCard(generateSpeakersBlock());
+      });
+    }
+
+    if ($('btn-insert-starters')) {
+      $('btn-insert-starters').addEventListener('click', function () {
+        appendBlockToActiveCard(generateStartersBlock());
+      });
+    }
+
+    if ($('btn-insert-poll')) {
+      $('btn-insert-poll').addEventListener('click', function () {
+        var q = prompt('Enter flash poll question:', 'Which learning format produces faster fluency?');
+        if (!q) return;
+        var a = prompt('Option A:', 'Daily 15-minute micro-sessions') || 'Option A';
+        var b = prompt('Option B:', 'Weekly 2-hour immersive deep-dives') || 'Option B';
+        appendBlockToActiveCard(generatePollBlock(q, a, b));
+      });
+    }
+
     if ($('btn-insert-links')) {
       $('btn-insert-links').addEventListener('click', function () {
         appendBlockToActiveCard(generateLinkBlock());
@@ -1150,16 +1603,68 @@
       });
     }
 
-    // 5-Stage Speaking Club Preset button
-    if ($('btn-preset-stages')) {
-      $('btn-preset-stages').addEventListener('click', function () {
-        if (!state.isFounder) { alertFounderRequired(); return; }
-        if (confirm('Load 5-Stage Speaking Club template? Current session content will be replaced.')) {
-          state.session = createStandardFiveStageSession();
-          state.activeCardIndex = 0;
-          state.filterPage = 'all';
-          syncFormFromState();
+    // Presets Dropdown Menu handling
+    var presetsBtn = $('btn-presets-menu');
+    var presetsPanel = $('presets-menu-panel');
+    if (presetsBtn && presetsPanel) {
+      presetsBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isHidden = presetsPanel.hasAttribute('hidden');
+        if (isHidden) {
+          presetsPanel.removeAttribute('hidden');
+          presetsBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          presetsPanel.setAttribute('hidden', '');
+          presetsBtn.setAttribute('aria-expanded', 'false');
         }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!presetsBtn.contains(e.target) && !presetsPanel.contains(e.target)) {
+          presetsPanel.setAttribute('hidden', '');
+          presetsBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    function applyPreset(presetFn, name) {
+      if (!state.isFounder) { alertFounderRequired(); return; }
+      if (confirm('Load ' + name + ' preset? Any unsaved edits will be replaced.')) {
+        state.session = presetFn();
+        state.activeCardIndex = 0;
+        state.filterPage = 'all';
+        syncFormFromState();
+        if (presetsPanel) presetsPanel.setAttribute('hidden', '');
+      }
+    }
+
+    if ($('btn-preset-standard-5')) {
+      $('btn-preset-standard-5').addEventListener('click', function () {
+        applyPreset(createStandardFiveStageSession, '5-Stage Speaking Club');
+      });
+    }
+
+    if ($('btn-preset-science')) {
+      $('btn-preset-science').addEventListener('click', function () {
+        applyPreset(createScienceClubSession, 'Keeping Up with Science');
+      });
+    }
+
+    if ($('btn-preset-wonder')) {
+      $('btn-preset-wonder').addEventListener('click', function () {
+        applyPreset(createWonderClubSession, "I Couldn't Help But Wonder");
+      });
+    }
+
+    if ($('btn-preset-cinema')) {
+      $('btn-preset-cinema').addEventListener('click', function () {
+        applyPreset(createCinemaClubSession, 'Cinema Club');
+      });
+    }
+
+    if ($('btn-preset-debate')) {
+      $('btn-preset-debate').addEventListener('click', function () {
+        applyPreset(createDebateClubSession, 'Debate Duel');
       });
     }
 
@@ -1172,6 +1677,12 @@
 
     if ($('btn-close-presenter')) {
       $('btn-close-presenter').addEventListener('click', closePresenterDeck);
+    }
+    if ($('btn-presenter-timer-toggle')) {
+      $('btn-presenter-timer-toggle').addEventListener('click', togglePresenterTimer);
+    }
+    if ($('btn-presenter-fullscreen')) {
+      $('btn-presenter-fullscreen').addEventListener('click', togglePresenterFullscreen);
     }
 
     if ($('btn-presenter-prev')) {
@@ -1240,7 +1751,29 @@
             state.presenterIndex--;
             renderPresenterSlide();
           }
+        } else if (e.key.toLowerCase() === 'f') {
+          e.preventDefault();
+          togglePresenterFullscreen();
+        } else if (e.key.toLowerCase() === 't') {
+          e.preventDefault();
+          togglePresenterTimer();
         }
+        return;
+      }
+
+      // Cmd+Z for Undo, Cmd+Shift+Z / Cmd+Y for Redo
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
+        e.preventDefault();
+        if (e.shiftKey) {
+          redo();
+        } else {
+          undo();
+        }
+        return;
+      }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'y') {
+        e.preventDefault();
+        redo();
         return;
       }
 
@@ -1267,6 +1800,150 @@
         }
       }
     });
+
+    // Catalog Browser Modal Handlers
+    var catalogModal = $('studio-catalog-modal');
+    var catalogList = $('catalog-results-list');
+    var catalogSearch = $('catalog-search-input');
+    var catalogClubFilter = $('catalog-club-filter');
+    var catalogLevelFilter = $('catalog-level-filter');
+    var catalogSessions = [];
+
+    function openCatalogModal() {
+      if (!catalogModal) return;
+      catalogModal.removeAttribute('hidden');
+      if (catalogSessions.length === 0) {
+        fetch('data/sessions.json')
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            catalogSessions = Array.isArray(data) ? data : (data.sessions || []);
+            renderCatalogSessions();
+          })
+          .catch(function () {
+            // Fallback to KNOWN_SESSIONS if running in offline test environment
+            catalogSessions = KNOWN_SESSIONS.map(function (s) {
+              return {
+                title: s.title,
+                slug: s.slug,
+                level: s.level,
+                theme_area: s.theme,
+                sub_topic: 'Speaking Club',
+                club_id: 'speaking-club',
+                short_summary: s.summary
+              };
+            });
+            renderCatalogSessions();
+          });
+      } else {
+        renderCatalogSessions();
+      }
+    }
+
+    function closeCatalogModal() {
+      if (catalogModal) catalogModal.setAttribute('hidden', '');
+    }
+
+    function renderCatalogSessions() {
+      if (!catalogList) return;
+      var q = catalogSearch ? catalogSearch.value.trim().toLowerCase() : '';
+      var club = catalogClubFilter ? catalogClubFilter.value : 'all';
+      var level = catalogLevelFilter ? catalogLevelFilter.value : 'all';
+
+      var filtered = catalogSessions.filter(function (item) {
+        if (level !== 'all' && (item.level || '').toUpperCase() !== level.toUpperCase()) return false;
+        if (club !== 'all' && item.club_id !== club && !(item.slug || '').includes(club)) return false;
+        if (q) {
+          var haystack = ((item.title || '') + ' ' + (item.theme_area || '') + ' ' + (item.sub_topic || '') + ' ' + (item.short_summary || '')).toLowerCase();
+          if (!haystack.includes(q)) return false;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        catalogList.innerHTML = '<p style="color:var(--st-ink-muted); font-size:0.88rem; padding: 12px;">No sessions found matching filters.</p>';
+        return;
+      }
+
+      catalogList.innerHTML = '';
+      filtered.slice(0, 30).forEach(function (sess) {
+        var card = document.createElement('div');
+        card.className = 'catalog-card-item';
+
+        var top = document.createElement('div');
+        var meta = document.createElement('div');
+        meta.className = 'catalog-item-meta';
+        meta.innerHTML = '<span class="status-badge" style="background:var(--st-sunken);">' + escapeHtml(sess.level || 'B1') + '</span> ' +
+                         '<span style="color:var(--st-ink-muted);">' + escapeHtml(sess.theme_area || sess.sub_topic || 'Club') + '</span>';
+
+        var title = document.createElement('div');
+        title.className = 'catalog-item-title';
+        title.textContent = sess.title || sess.slug;
+
+        var desc = document.createElement('div');
+        desc.className = 'catalog-item-desc';
+        desc.textContent = sess.short_summary || sess.topic_detail || 'Speaking club session topic.';
+
+        top.appendChild(meta);
+        top.appendChild(title);
+        top.appendChild(desc);
+
+        var loadBtn = document.createElement('button');
+        loadBtn.type = 'button';
+        loadBtn.className = 'btn btn-sm btn-primary';
+        loadBtn.textContent = 'Load into Studio';
+        loadBtn.addEventListener('click', function () {
+          if (!state.isFounder) {
+            alertFounderRequired();
+            return;
+          }
+          // Populate session template
+          state.session = {
+            slug: sess.slug || 'session-' + Date.now(),
+            event: (sess.club_id || 'english') + '-' + (sess.level ? sess.level.toLowerCase() : 'b1'),
+            title: sess.title || 'Loaded Session',
+            theme: sess.theme_area || 'General',
+            language: sess.language || 'English',
+            level: sess.level || 'B1',
+            date: new Date().toISOString().split('T')[0],
+            host: 'COSY Facilitator',
+            summary: sess.short_summary || 'Speaking session.',
+            activities: [
+              {
+                type: 'icebreaker',
+                title: 'Warm-up: ' + (sess.title || 'Discussion'),
+                instructions: 'Greet your breakout partner and answer the opening question.',
+                content: '<ol>\n  <li>What is your initial thought on ' + escapeHtml(sess.title || 'this topic') + '?</li>\n</ol>'
+              },
+              {
+                type: 'round_1',
+                title: 'Round 1: Deep Dive',
+                instructions: 'In small groups, debate and analyze key perspectives.',
+                content: '<ol>\n  <li>How does this relate to your daily experience?</li>\n</ol>'
+              }
+            ],
+            vocabulary: [],
+            sources: []
+          };
+          state.activeCardIndex = 0;
+          syncFormFromState();
+          closeCatalogModal();
+        });
+
+        card.appendChild(top);
+        card.appendChild(loadBtn);
+        catalogList.appendChild(card);
+      });
+    }
+
+    if ($('btn-open-catalog')) {
+      $('btn-open-catalog').addEventListener('click', openCatalogModal);
+    }
+    if ($('btn-close-catalog-modal')) {
+      $('btn-close-catalog-modal').addEventListener('click', closeCatalogModal);
+    }
+    if (catalogSearch) catalogSearch.addEventListener('input', renderCatalogSessions);
+    if (catalogClubFilter) catalogClubFilter.addEventListener('change', renderCatalogSessions);
+    if (catalogLevelFilter) catalogLevelFilter.addEventListener('change', renderCatalogSessions);
 
     // Session Switcher / Loader
     var picker = $('session-picker-select');
@@ -1509,6 +2186,8 @@
   function init() {
     bindEvents();
     checkAuthRole();
+    loadDraftFromStorage();
+    pushHistory();
     syncFormFromState();
 
     if (typeof window !== 'undefined') {
@@ -1530,8 +2209,16 @@
     isFounderRole: isFounderRole,
     createDefaultSession: createDefaultSession,
     createStandardFiveStageSession: createStandardFiveStageSession,
+    createScienceClubSession: createScienceClubSession,
+    createWonderClubSession: createWonderClubSession,
+    createCinemaClubSession: createCinemaClubSession,
+    createDebateClubSession: createDebateClubSession,
     generateVideoBlock: generateVideoBlock,
     generateAudioBlock: generateAudioBlock,
+    generateTimerBlock: generateTimerBlock,
+    generateSpeakersBlock: generateSpeakersBlock,
+    generateStartersBlock: generateStartersBlock,
+    generatePollBlock: generatePollBlock,
     generateLinkBlock: generateLinkBlock,
     generateQuestionsBlock: generateQuestionsBlock,
     generateCalloutBlock: generateCalloutBlock,

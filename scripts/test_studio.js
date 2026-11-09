@@ -57,7 +57,20 @@ if (!isValidFiveStage) {
 }
 assert.strictEqual(isValidFiveStage, true, '5-Stage multi-page preset session conforms to session.schema.json');
 assert.strictEqual(fiveStageSession.activities.length, 5, '5-stage preset has exactly 5 pages');
-console.log('PASS: All studio session templates strictly conform to session.schema.json.\n');
+
+// Validate Multi-Club Presets: Science, Wonder, Cinema, Debate
+const scienceSession = Studio.createScienceClubSession();
+assert.strictEqual(validate(scienceSession), true, 'Science club preset conforms to session.schema.json: ' + JSON.stringify(validate.errors));
+
+const wonderSession = Studio.createWonderClubSession();
+assert.strictEqual(validate(wonderSession), true, 'Wonder club preset conforms to session.schema.json: ' + JSON.stringify(validate.errors));
+
+const cinemaSession = Studio.createCinemaClubSession();
+assert.strictEqual(validate(cinemaSession), true, 'Cinema club preset conforms to session.schema.json: ' + JSON.stringify(validate.errors));
+
+const debateSession = Studio.createDebateClubSession();
+assert.strictEqual(validate(debateSession), true, 'Debate duel preset conforms to session.schema.json: ' + JSON.stringify(validate.errors));
+console.log('PASS: All multi-club presets strictly conform to session.schema.json.\n');
 
 // 3. Media & Interactive Block Generators Validation
 console.log('Test 3: Media and Block Generators Validation');
@@ -79,9 +92,21 @@ assert.ok(questionsBlock.includes('<ol>'), 'questions block contains numbered li
 const calloutBlock = Studio.generateCalloutBlock();
 assert.ok(calloutBlock.includes('card-callout-box'), 'callout block contains callout box');
 
+const timerBlock = Studio.generateTimerBlock(5);
+assert.ok(timerBlock.includes('edv-timer-widget'), 'timer block contains edv-timer-widget');
+
+const speakersBlock = Studio.generateSpeakersBlock();
+assert.ok(speakersBlock.includes('edv-speaker-chip speaker-a'), 'speakers block contains speaker-a chip');
+
+const startersBlock = Studio.generateStartersBlock();
+assert.ok(startersBlock.includes('edv-starter-chip'), 'starters block contains starter chip');
+
+const pollBlock = Studio.generatePollBlock('Speed vs Depth', 'Speed', 'Depth');
+assert.ok(pollBlock.includes('edv-poll-card'), 'poll block contains edv-poll-card');
+
 // Test that session with all media blocks inserted still passes schema validation
 const richSession = Studio.createDefaultSession();
-richSession.activities[0].content = `${richSession.activities[0].content}\n\n${videoBlock}\n\n${audioBlock}\n\n${linkBlock}\n\n${calloutBlock}`;
+richSession.activities[0].content = `${richSession.activities[0].content}\n\n${videoBlock}\n\n${audioBlock}\n\n${linkBlock}\n\n${calloutBlock}\n\n${timerBlock}\n\n${speakersBlock}\n\n${startersBlock}\n\n${pollBlock}`;
 const isRichValid = validate(richSession);
 if (!isRichValid) {
   console.error('Schema validation error for rich media session:', validate.errors);
@@ -98,7 +123,12 @@ assert.ok(htmlContent.includes('id="btn-save-session"'), 'studio.html contains s
 assert.ok(htmlContent.includes('id="btn-insert-video"'), 'studio.html contains insert video button');
 assert.ok(htmlContent.includes('id="btn-insert-audio"'), 'studio.html contains insert audio button');
 assert.ok(htmlContent.includes('id="btn-insert-links"'), 'studio.html contains insert links button');
-assert.ok(htmlContent.includes('id="btn-preset-stages"'), 'studio.html contains 5-stage preset button');
+assert.ok(htmlContent.includes('id="btn-insert-timer"'), 'studio.html contains insert timer button');
+assert.ok(htmlContent.includes('id="btn-insert-speakers"'), 'studio.html contains insert speakers button');
+assert.ok(htmlContent.includes('id="btn-insert-poll"'), 'studio.html contains insert poll button');
+assert.ok(htmlContent.includes('id="btn-presets-menu"'), 'studio.html contains presets menu button');
+assert.ok(htmlContent.includes('id="btn-open-catalog"'), 'studio.html contains open catalog button');
+assert.ok(htmlContent.includes('id="studio-catalog-modal"'), 'studio.html contains catalog modal');
 assert.ok(htmlContent.includes('id="btn-present-mode"'), 'studio.html contains present deck button');
 assert.ok(htmlContent.includes('id="presenter-modal"'), 'studio.html contains presenter modal');
 assert.ok(htmlContent.includes('id="sidebar-page-pills"'), 'studio.html contains page pills switcher');
