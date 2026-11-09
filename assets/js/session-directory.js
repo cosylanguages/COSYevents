@@ -441,11 +441,13 @@
           return false;
         }
 
-        // Search query filter (title or club)
+        // Search query filter (title, club, theme_area, or sub_topic)
         if (searchQuery) {
           const matchTitle = session.title && session.title.toLowerCase().includes(searchQuery);
           const matchClub = session.club && session.club.toLowerCase().includes(searchQuery);
-          if (!matchTitle && !matchClub) return false;
+          const matchTheme = session.theme_area && session.theme_area.toLowerCase().includes(searchQuery);
+          const matchSub = session.sub_topic && session.sub_topic.toLowerCase().includes(searchQuery);
+          if (!matchTitle && !matchClub && !matchTheme && !matchSub) return false;
         }
 
         // Event Type filter
@@ -561,10 +563,12 @@
             ${isBookmarked ? '★' : '☆'}
           </button>
 
-          <div class="sd-card-badges" style="padding-right: 2rem;">
+          <div class="sd-card-badges" style="padding-right: 2rem; display: flex; flex-wrap: wrap; gap: 4px;">
             <span class="sd-badge sd-badge-level">${this.escapeText(levelLabel)}</span>
             <span class="sd-badge sd-badge-format">${this.escapeText(formatLabel)}</span>
             <span class="sd-badge sd-badge-lang">${this.escapeText(langLabel)}</span>
+            ${session.theme_area ? `<span class="sd-badge sd-badge-theme" style="background: rgba(15, 110, 86, 0.1); color: #0F6E56; font-weight: 600;">${this.escapeText(session.theme_area)}</span>` : ""}
+            ${session.sub_topic ? `<span class="sd-badge sd-badge-subtopic" style="background: rgba(0, 0, 0, 0.05); color: var(--ink-soft); font-size: 0.75rem;">${this.escapeText(session.sub_topic)}</span>` : ""}
           </div>
 
           <p class="sd-card-club">${this.escapeText(session.club)}</p>
