@@ -48,6 +48,15 @@ for (const sample of Studio.KNOWN_SESSIONS) {
   }
   assert.strictEqual(isValidSample, true, `Sample session ${sample.slug} must conform to session.schema.json`);
 }
+
+// Validate 5-Stage multi-page preset session
+const fiveStageSession = Studio.createStandardFiveStageSession();
+const isValidFiveStage = validate(fiveStageSession);
+if (!isValidFiveStage) {
+  console.error('Schema validation errors for 5-stage multi-page session:', validate.errors);
+}
+assert.strictEqual(isValidFiveStage, true, '5-Stage multi-page preset session conforms to session.schema.json');
+assert.strictEqual(fiveStageSession.activities.length, 5, '5-stage preset has exactly 5 pages');
 console.log('PASS: All studio session templates strictly conform to session.schema.json.\n');
 
 // 3. Media & Interactive Block Generators Validation
@@ -89,6 +98,11 @@ assert.ok(htmlContent.includes('id="btn-save-session"'), 'studio.html contains s
 assert.ok(htmlContent.includes('id="btn-insert-video"'), 'studio.html contains insert video button');
 assert.ok(htmlContent.includes('id="btn-insert-audio"'), 'studio.html contains insert audio button');
 assert.ok(htmlContent.includes('id="btn-insert-links"'), 'studio.html contains insert links button');
+assert.ok(htmlContent.includes('id="btn-preset-stages"'), 'studio.html contains 5-stage preset button');
+assert.ok(htmlContent.includes('id="btn-present-mode"'), 'studio.html contains present deck button');
+assert.ok(htmlContent.includes('id="presenter-modal"'), 'studio.html contains presenter modal');
+assert.ok(htmlContent.includes('id="sidebar-page-pills"'), 'studio.html contains page pills switcher');
+assert.ok(htmlContent.includes('id="btn-duplicate-card"'), 'studio.html contains duplicate page button');
 assert.ok(htmlContent.includes('id="cards-nav-list"'), 'studio.html contains cards outline list');
 assert.ok(htmlContent.includes('id="preview-slide-canvas"'), 'studio.html contains live preview canvas');
 assert.ok(htmlContent.includes('id="lock-banner"'), 'studio.html contains lock notice banner');

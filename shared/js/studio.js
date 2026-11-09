@@ -63,6 +63,79 @@
     };
   }
 
+  // Standard 5-Stage Speaking Club Multi-Page preset structure
+  function createStandardFiveStageSession() {
+    var today = new Date().toISOString().split('T')[0];
+    return {
+      slug: 'interactive-5-stage-speaking-club',
+      event: 'english-b1-intermediate',
+      title: '5-Stage Speaking Club: Technology & Daily Life',
+      theme: 'Technology and Modern Living',
+      language: 'English',
+      level: 'B1',
+      date: today,
+      host: 'COSY Facilitator',
+      summary: 'A structured 5-page interactive speaking session: Warm-up check-in, Round 1 core prompts, Interlude flash debate, Round 2 future speculation, and Wrap-up takeaways.',
+      activities: [
+        {
+          type: 'icebreaker',
+          title: 'Page 1: Warm-up Check-in',
+          instructions: 'Greet your breakout partner and answer the icebreaker questions below.',
+          content: '<ol>\n  <li>What is the first digital device you look at in the morning?</li>\n  <li>If you had to unplug completely for 24 hours, how would you feel?</li>\n</ol>\n\n<div class="card-callout-box">\n  <div class="card-callout-title">💡 Useful Language for Breakouts</div>\n  <p style="margin: 0; line-height: 1.5;">\n    • <strong>To be honest,...</strong> / <em>I must admit that...</em><br>\n    • <strong>I tend to check my notifications as soon as I wake up.</strong>\n  </p>\n</div>'
+        },
+        {
+          type: 'round_1',
+          title: 'Page 2: Round 1 — Core Discussion',
+          instructions: 'In small breakout rooms of 3 students, discuss how technology affects relationships.',
+          content: '<ol>\n  <li>Has digital communication made friendships stronger or more superficial?</li>\n  <li>How do you set healthy boundaries with messaging apps and work emails?</li>\n</ol>\n\n<div class="card-audio-box">\n  <div class="card-audio-header">\n    <span class="card-audio-title">🎧 Native Speaker Perspective (60s)</span>\n    <span class="card-audio-badge">Audio Stream</span>\n  </div>\n  <audio class="card-audio-player" controls preload="metadata">\n    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">\n  </audio>\n</div>'
+        },
+        {
+          type: 'interlude',
+          title: 'Page 3: Interlude — Flash Debate & Vote',
+          instructions: 'Vote A or B! Choose your stance in 30 seconds and defend it to the group.',
+          content: '<ol>\n  <li><strong>Option A:</strong> Strictly ban phones during family meals and dinners.</li>\n  <li><strong>Option B:</strong> Allow flexible use as long as people are engaged.</li>\n</ol>\n\n<div class="card-links-box">\n  <a class="card-link-item" href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener noreferrer">\n    <div class="card-link-meta">\n      <span class="card-link-title">🔗 COSY Debate Guideline & Voting Etiquette</span>\n      <span class="card-link-desc">Tips on respectful disagreement and persuasive phrasing</span>\n    </div>\n    <span style="font-size: 0.8rem; color: var(--st-accent);">↗</span>\n  </a>\n</div>'
+        },
+        {
+          type: 'round_2',
+          title: 'Page 4: Round 2 — Future Speculation',
+          instructions: 'Speculate on how AI and automation will transform work and learning in the next 10 years.',
+          content: '<ol>\n  <li>Which daily task do you hope AI completely replaces first?</li>\n  <li>Will language learning become obsolete because of real-time earpiece translation? Why or why not?</li>\n</ol>\n\n<div class="card-video-box">\n  <div class="card-video-responsive">\n    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Material" allowfullscreen></iframe>\n  </div>\n  <div class="card-video-disclaimer">🎬 Educational video clip for discussion. Pause to answer comprehension prompts.</div>\n</div>'
+        },
+        {
+          type: 'outro',
+          title: 'Page 5: Wrap-up & Teacher Note',
+          instructions: 'Group debrief, linguistic feedback, and personal takeaway sharing.',
+          content: '<ol>\n  <li>One new phrase or expression you used successfully today:</li>\n  <li>One goal for next week\'s speaking session:</li>\n</ol>\n\n<div class="card-callout-box">\n  <div class="card-callout-title">🌟 Facilitator Debrief Note</div>\n  <p style="margin: 0; line-height: 1.5;">\n    Great use of conditional clauses (<em>If I had to..., I would...</em>). Remember to watch subject-verb agreement with collective nouns!\n  </p>\n</div>'
+        }
+      ],
+      vocabulary: [
+        {
+          id: 'en:boundaries:noun',
+          word: 'boundaries',
+          pos: 'noun',
+          definition: 'guidelines or limits that a person creates to identify safe and permissible ways for people to behave around them',
+          example: 'Setting healthy digital boundaries helps prevent burnout.',
+          primary_theme: 'everyday-life',
+          sub_theme: 'wellbeing',
+          level: 'B1'
+        },
+        {
+          id: 'en:unplug:verb',
+          word: 'unplug',
+          pos: 'verb',
+          definition: 'disconnect from digital technology and social media for a period of time',
+          example: 'It is refreshing to unplug for an entire weekend in nature.',
+          primary_theme: 'technology',
+          sub_theme: 'lifestyle',
+          level: 'B1'
+        }
+      ],
+      sources: [
+        { source_title: 'Digital Wellness Research', source_url: 'https://example.com/wellness' }
+      ]
+    };
+  }
+
   // Preloaded sample sessions for quick editing in studio
   var KNOWN_SESSIONS = [
     {
@@ -157,9 +230,11 @@
   var state = {
     session: createDefaultSession(),
     activeCardIndex: 0,
+    presenterIndex: 0,
     userRole: 'guest',
     userEmail: null,
     isFounder: false,
+    filterPage: 'all', // 'all' or specific 0-based page index
     authStep: 'email', // email or code
     authEmail: ''
   };
@@ -264,6 +339,9 @@
   function syncFormFromState() {
     if (typeof document === 'undefined') return;
 
+    var numCards = state.session.activities ? state.session.activities.length : 0;
+    var estMinutes = Math.max(15, numCards * 12); // ~12-15 mins per page/breakout
+
     // Header crumbs
     var crumbEvent = $('crumb-event');
     if (crumbEvent) crumbEvent.textContent = state.session.event || 'events';
@@ -271,10 +349,10 @@
     if (crumbTitle) crumbTitle.textContent = state.session.title || 'Untitled Session';
 
     var sidebarTitle = $('sidebar-session-title');
-    if (sidebarTitle) sidebarTitle.textContent = state.session.title || 'Lesson Cards';
+    if (sidebarTitle) sidebarTitle.textContent = state.session.title || 'Session Pages';
 
     var cardsCount = $('sidebar-cards-count');
-    if (cardsCount) cardsCount.textContent = (state.session.activities ? state.session.activities.length : 0) + ' cards';
+    if (cardsCount) cardsCount.textContent = numCards + ' pages • ' + estMinutes + ' min';
 
     // Details Tab
     if ($('input-session-title')) $('input-session-title').value = state.session.title || '';
@@ -329,14 +407,50 @@
     renderLivePreview();
   }
 
-  // Render left sidebar cards list
+  // Render left sidebar cards list & page filter pills
   function renderCardsList() {
     var container = $('cards-nav-list');
+    var pillsContainer = $('sidebar-page-pills');
     if (!container) return;
     container.innerHTML = '';
 
     var acts = state.session.activities || [];
+
+    // Render Quick Page Pills (All, P1, P2, P3...)
+    if (pillsContainer) {
+      pillsContainer.innerHTML = '';
+
+      var allPill = document.createElement('button');
+      allPill.type = 'button';
+      allPill.className = 'page-pill-btn' + (state.filterPage === 'all' ? ' is-active' : '');
+      allPill.textContent = 'All';
+      allPill.title = 'Show all session pages';
+      allPill.addEventListener('click', function () {
+        state.filterPage = 'all';
+        renderCardsList();
+      });
+      pillsContainer.appendChild(allPill);
+
+      acts.forEach(function (act, idx) {
+        var pill = document.createElement('button');
+        pill.type = 'button';
+        pill.className = 'page-pill-btn' + (state.filterPage === idx ? ' is-active' : '');
+        pill.textContent = 'P' + (idx + 1);
+        pill.title = 'Jump to Page ' + (idx + 1) + ': ' + (act.title || 'Page');
+        pill.addEventListener('click', function () {
+          state.filterPage = idx;
+          state.activeCardIndex = idx;
+          syncFormFromState();
+        });
+        pillsContainer.appendChild(pill);
+      });
+    }
+
     acts.forEach(function (act, idx) {
+      if (state.filterPage !== 'all' && state.filterPage !== idx) {
+        return; // Filter out if viewing specific page
+      }
+
       var item = document.createElement('div');
       item.className = 'card-thumb-item' + (idx === state.activeCardIndex ? ' is-active' : '');
       item.setAttribute('data-index', idx);
@@ -347,11 +461,11 @@
 
       var titleSpan = document.createElement('span');
       titleSpan.className = 'card-thumb-title';
-      titleSpan.textContent = act.title || 'Card ' + (idx + 1);
+      titleSpan.textContent = act.title || 'Page ' + (idx + 1);
 
       var numSpan = document.createElement('span');
       numSpan.className = 'card-thumb-num';
-      numSpan.textContent = (idx + 1);
+      numSpan.textContent = 'Page ' + (idx + 1);
 
       top.appendChild(titleSpan);
       top.appendChild(numSpan);
@@ -441,6 +555,19 @@
     var slideTotal = $('preview-slide-total');
     if (slideTotal) slideTotal.textContent = '/ ' + totalCards;
 
+    // Progress bar fill
+    var progressFill = $('preview-progress-fill');
+    if (progressFill) {
+      var pct = totalCards > 0 ? Math.round(((state.activeCardIndex + 1) / totalCards) * 100) : 0;
+      progressFill.style.width = pct + '%';
+    }
+
+    // Previous / Next button states
+    var prevBtn = $('btn-preview-prev');
+    var nextBtn = $('btn-preview-next');
+    if (prevBtn) prevBtn.disabled = state.activeCardIndex <= 0;
+    if (nextBtn) nextBtn.disabled = state.activeCardIndex >= totalCards - 1;
+
     var levelTag = $('preview-session-level-tag');
     if (levelTag) levelTag.textContent = state.session.level || 'A2';
 
@@ -484,6 +611,93 @@
         sourcesBox.setAttribute('hidden', '');
       }
     }
+  }
+
+  // Fullscreen Multi-Page Presenter Deck System
+  function openPresenterDeck(initialIndex) {
+    var modal = $('presenter-modal');
+    if (!modal) return;
+    modal.removeAttribute('hidden');
+    state.presenterIndex = typeof initialIndex === 'number' ? initialIndex : state.activeCardIndex;
+    renderPresenterSlide();
+  }
+
+  function closePresenterDeck() {
+    var modal = $('presenter-modal');
+    if (modal) modal.setAttribute('hidden', '');
+  }
+
+  function renderPresenterSlide() {
+    var acts = state.session.activities || [];
+    var total = acts.length;
+    if (total === 0) return;
+
+    if (state.presenterIndex < 0) state.presenterIndex = 0;
+    if (state.presenterIndex >= total) state.presenterIndex = total - 1;
+
+    var cur = acts[state.presenterIndex];
+
+    var deckTitle = $('presenter-deck-title');
+    if (deckTitle) deckTitle.textContent = state.session.title || 'Session Deck';
+
+    var counter = $('presenter-counter');
+    if (counter) counter.textContent = (state.presenterIndex + 1) + ' / ' + total;
+
+    var fill = $('presenter-progress-fill');
+    if (fill) {
+      var pct = Math.round(((state.presenterIndex + 1) / total) * 100);
+      fill.style.width = pct + '%';
+    }
+
+    // Pills
+    var pillsBox = $('presenter-page-pills');
+    if (pillsBox) {
+      pillsBox.innerHTML = '';
+      acts.forEach(function (act, idx) {
+        var pill = document.createElement('button');
+        pill.type = 'button';
+        pill.className = 'page-pill-btn' + (idx === state.presenterIndex ? ' is-active' : '');
+        pill.textContent = 'P' + (idx + 1);
+        pill.title = act.title || 'Page ' + (idx + 1);
+        pill.addEventListener('click', function () {
+          state.presenterIndex = idx;
+          renderPresenterSlide();
+        });
+        pillsBox.appendChild(pill);
+      });
+    }
+
+    var typeTag = $('presenter-type-tag');
+    if (typeTag) typeTag.textContent = (cur.type || 'ROUND').toUpperCase();
+
+    var levelTag = $('presenter-level-tag');
+    if (levelTag) levelTag.textContent = state.session.level || 'A2';
+
+    var pageTag = $('presenter-page-tag');
+    if (pageTag) pageTag.textContent = 'Page ' + (state.presenterIndex + 1) + ' of ' + total;
+
+    var title = $('presenter-title');
+    if (title) title.textContent = cur.title || 'Page ' + (state.presenterIndex + 1);
+
+    var instr = $('presenter-instructions');
+    if (instr) {
+      if (cur.instructions) {
+        instr.textContent = cur.instructions;
+        instr.style.display = 'block';
+      } else {
+        instr.style.display = 'none';
+      }
+    }
+
+    var content = $('presenter-content');
+    if (content) {
+      content.innerHTML = cur.content || '';
+    }
+
+    var prevBtn = $('btn-presenter-prev');
+    var nextBtn = $('btn-presenter-next');
+    if (prevBtn) prevBtn.disabled = state.presenterIndex <= 0;
+    if (nextBtn) nextBtn.disabled = state.presenterIndex >= total - 1;
   }
 
   // Alert founder requirement when a non-founder attempts to modify
@@ -647,6 +861,20 @@
           renderCardsList();
           renderLivePreview();
         }
+      });
+    }
+
+    // Duplicate Card button
+    if ($('btn-duplicate-card')) {
+      $('btn-duplicate-card').addEventListener('click', function () {
+        if (!state.isFounder) { alertFounderRequired(); return; }
+        var cur = state.session.activities && state.session.activities[state.activeCardIndex];
+        if (!cur) return;
+        var clone = JSON.parse(JSON.stringify(cur));
+        clone.title = (clone.title || 'Page') + ' (Copy)';
+        state.session.activities.splice(state.activeCardIndex + 1, 0, clone);
+        state.activeCardIndex += 1;
+        syncFormFromState();
       });
     }
 
@@ -922,6 +1150,124 @@
       });
     }
 
+    // 5-Stage Speaking Club Preset button
+    if ($('btn-preset-stages')) {
+      $('btn-preset-stages').addEventListener('click', function () {
+        if (!state.isFounder) { alertFounderRequired(); return; }
+        if (confirm('Load 5-Stage Speaking Club template? Current session content will be replaced.')) {
+          state.session = createStandardFiveStageSession();
+          state.activeCardIndex = 0;
+          state.filterPage = 'all';
+          syncFormFromState();
+        }
+      });
+    }
+
+    // Present Deck button
+    if ($('btn-present-mode')) {
+      $('btn-present-mode').addEventListener('click', function () {
+        openPresenterDeck(state.activeCardIndex);
+      });
+    }
+
+    if ($('btn-close-presenter')) {
+      $('btn-close-presenter').addEventListener('click', closePresenterDeck);
+    }
+
+    if ($('btn-presenter-prev')) {
+      $('btn-presenter-prev').addEventListener('click', function () {
+        if (state.presenterIndex > 0) {
+          state.presenterIndex--;
+          renderPresenterSlide();
+        }
+      });
+    }
+
+    if ($('btn-presenter-next')) {
+      $('btn-presenter-next').addEventListener('click', function () {
+        var total = state.session.activities ? state.session.activities.length : 0;
+        if (state.presenterIndex < total - 1) {
+          state.presenterIndex++;
+          renderPresenterSlide();
+        }
+      });
+    }
+
+    // Live preview page navigation buttons
+    if ($('btn-preview-prev')) {
+      $('btn-preview-prev').addEventListener('click', function () {
+        if (state.activeCardIndex > 0) {
+          state.activeCardIndex--;
+          syncFormFromState();
+        }
+      });
+    }
+
+    if ($('btn-preview-next')) {
+      $('btn-preview-next').addEventListener('click', function () {
+        var total = state.session.activities ? state.session.activities.length : 0;
+        if (state.activeCardIndex < total - 1) {
+          state.activeCardIndex++;
+          syncFormFromState();
+        }
+      });
+    }
+
+    // Global keyboard shortcuts (Ctrl+S / Cmd+S to save, Alt+Left/Right for pages, Esc for presenter)
+    document.addEventListener('keydown', function (e) {
+      // Escape closes presenter modal or auth modal
+      if (e.key === 'Escape') {
+        closePresenterDeck();
+        var authModal = $('auth-modal');
+        if (authModal) authModal.setAttribute('hidden', '');
+        return;
+      }
+
+      var modal = $('presenter-modal');
+      var isPresenterOpen = modal && !modal.hasAttribute('hidden');
+
+      if (isPresenterOpen) {
+        if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+          e.preventDefault();
+          var total = state.session.activities ? state.session.activities.length : 0;
+          if (state.presenterIndex < total - 1) {
+            state.presenterIndex++;
+            renderPresenterSlide();
+          }
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          if (state.presenterIndex > 0) {
+            state.presenterIndex--;
+            renderPresenterSlide();
+          }
+        }
+        return;
+      }
+
+      // Cmd+S or Ctrl+S to save session
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        var saveBtn = $('btn-save-session');
+        if (saveBtn) saveBtn.click();
+      }
+
+      // Alt+ArrowRight / Alt+ArrowLeft to switch pages in editor
+      if (e.altKey && e.key === 'ArrowRight') {
+        e.preventDefault();
+        var total = state.session.activities ? state.session.activities.length : 0;
+        if (state.activeCardIndex < total - 1) {
+          state.activeCardIndex++;
+          syncFormFromState();
+        }
+      } else if (e.altKey && e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (state.activeCardIndex > 0) {
+          state.activeCardIndex--;
+          syncFormFromState();
+        }
+      }
+    });
+
     // Session Switcher / Loader
     var picker = $('session-picker-select');
     if (picker) {
@@ -1183,6 +1529,7 @@
   return {
     isFounderRole: isFounderRole,
     createDefaultSession: createDefaultSession,
+    createStandardFiveStageSession: createStandardFiveStageSession,
     generateVideoBlock: generateVideoBlock,
     generateAudioBlock: generateAudioBlock,
     generateLinkBlock: generateLinkBlock,
@@ -1192,6 +1539,8 @@
     getState: function () { return state; },
     init: init,
     syncFormFromState: syncFormFromState,
-    applyRolePermissions: applyRolePermissions
+    applyRolePermissions: applyRolePermissions,
+    openPresenterDeck: openPresenterDeck,
+    closePresenterDeck: closePresenterDeck
   };
 });

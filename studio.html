@@ -38,6 +38,16 @@
     </div>
 
     <div class="studio-header-right">
+      <!-- Quick Structure Presets -->
+      <button type="button" id="btn-preset-stages" class="btn btn-sm" title="Apply standard 5-stage speaking club structure (Warm-up, R1, Interlude, R2, Wrap-up)">
+        <span>⚡ 5-Stage Preset</span>
+      </button>
+
+      <!-- Presenter Fullscreen Mode -->
+      <button type="button" id="btn-present-mode" class="btn btn-sm" title="Launch Interactive Multi-Page Deck Presentation">
+        <span>📺 Present Deck</span>
+      </button>
+
       <!-- Session Switcher / Loader -->
       <select id="session-picker-select" class="form-control" style="width: auto; padding: 5px 8px; font-size: 0.82rem;">
         <option value="">Load Existing Session…</option>
@@ -98,24 +108,32 @@
   <!-- Main 3-Pane Studio Workspace -->
   <div class="studio-workspace">
 
-    <!-- 1. Left Sidebar: Cards / Steps Navigation -->
-    <aside class="studio-sidebar" aria-label="Lesson Cards">
+    <!-- 1. Left Sidebar: Pages & Cards Navigation -->
+    <aside class="studio-sidebar" aria-label="Session Pages & Cards">
       <div class="sidebar-header">
         <div class="sidebar-title-group">
-          <h2 id="sidebar-session-title">Lesson Cards</h2>
-          <span id="sidebar-cards-count" class="sidebar-subtitle">2 cards</span>
+          <h2 id="sidebar-session-title">Session Pages</h2>
+          <span id="sidebar-cards-count" class="sidebar-subtitle">2 pages • 45 min</span>
         </div>
         <button type="button" id="btn-quick-validate" class="btn btn-ghost btn-sm" title="Validate JSON Schema">
           ✓ Valid
         </button>
       </div>
 
+      <!-- Quick Page Filter / Switcher Bar -->
+      <div class="sidebar-page-filter-bar">
+        <span class="page-filter-label">Pages:</span>
+        <div id="sidebar-page-pills" class="sidebar-page-pills">
+          <!-- Filled dynamically: All, P1, P2, P3... -->
+        </div>
+      </div>
+
       <div id="cards-nav-list" class="sidebar-cards-list" role="list">
         <!-- Rendered dynamically by shared/js/studio.js -->
       </div>
 
-      <button type="button" id="btn-add-card" class="sidebar-add-card-btn" title="Add a new card / activity step">
-        <span>+ Add Activity Card</span>
+      <button type="button" id="btn-add-card" class="sidebar-add-card-btn" title="Add a new page / card">
+        <span>+ Add Next Page</span>
       </button>
     </aside>
 
@@ -200,12 +218,13 @@
           </div>
 
           <div class="card-actions-bar">
-            <div>
-              <button type="button" id="btn-move-card-up" class="btn btn-sm btn-ghost" title="Move card earlier">↑ Move Up</button>
-              <button type="button" id="btn-move-card-down" class="btn btn-sm btn-ghost" title="Move card later">↓ Move Down</button>
+            <div style="display: flex; gap: 6px;">
+              <button type="button" id="btn-move-card-up" class="btn btn-sm btn-ghost" title="Move page earlier">↑ Move Up</button>
+              <button type="button" id="btn-move-card-down" class="btn btn-sm btn-ghost" title="Move page later">↓ Move Down</button>
+              <button type="button" id="btn-duplicate-card" class="btn btn-sm btn-ghost" title="Duplicate current page">📋 Duplicate Page</button>
             </div>
-            <button type="button" id="btn-delete-card" class="btn btn-sm" style="color: var(--st-danger);" title="Delete current card">
-              🗑 Delete Card
+            <button type="button" id="btn-delete-card" class="btn btn-sm" style="color: var(--st-danger);" title="Delete current page">
+              🗑 Delete Page
             </button>
           </div>
         </section>
@@ -312,12 +331,22 @@
     <!-- 3. Right Pane: Live Slide Presentation Preview -->
     <aside class="studio-preview" aria-label="Live Presentation Preview">
       <div class="preview-toolbar">
-        <span>Live Card Preview</span>
+        <span>Live Page Preview</span>
         <div style="display: flex; align-items: center; gap: 8px;">
-          <span>Slide</span>
-          <span id="preview-slide-indicator" class="preview-slide-num">1</span>
-          <span id="preview-slide-total" style="color: var(--st-ink-muted);">/ 2</span>
+          <div class="preview-page-nav-btns">
+            <button type="button" id="btn-preview-prev" class="btn btn-xs btn-ghost" title="Previous Page (Alt+Left)">← Prev</button>
+            <span class="preview-slide-counter-box">
+              <span id="preview-slide-indicator" class="preview-slide-num">1</span>
+              <span id="preview-slide-total" style="color: var(--st-ink-muted);">/ 2</span>
+            </span>
+            <button type="button" id="btn-preview-next" class="btn btn-xs btn-ghost" title="Next Page (Alt+Right)">Next →</button>
+          </div>
         </div>
+      </div>
+
+      <!-- Page Progress Track -->
+      <div class="preview-progress-track">
+        <div id="preview-progress-fill" class="preview-progress-fill" style="width: 50%;"></div>
       </div>
 
       <div class="preview-stage">
@@ -344,6 +373,49 @@
       </div>
     </aside>
 
+  </div>
+
+  <!-- Fullscreen Interactive Multi-Page Deck Presentation Modal -->
+  <div id="presenter-modal" class="modal-backdrop" hidden>
+    <div class="presenter-container" role="dialog" aria-modal="true" aria-label="Interactive Session Presentation Deck">
+      <div class="presenter-deck-bar">
+        <div class="presenter-bar-left">
+          <span class="presenter-brand">🎭 COSYevents Deck</span>
+          <span class="presenter-sep">/</span>
+          <span id="presenter-deck-title" class="presenter-deck-title">Session Deck</span>
+        </div>
+        <div class="presenter-bar-center" id="presenter-page-pills">
+          <!-- Page Pills (P1, P2, P3...) -->
+        </div>
+        <div class="presenter-bar-right">
+          <button type="button" id="btn-presenter-prev" class="btn btn-sm btn-ghost">← Previous</button>
+          <span id="presenter-counter" class="presenter-counter">1 / 5</span>
+          <button type="button" id="btn-presenter-next" class="btn btn-sm btn-primary">Next →</button>
+          <button type="button" id="btn-close-presenter" class="btn btn-sm btn-ghost" title="Exit presentation (Esc)">✕ Exit</button>
+        </div>
+      </div>
+
+      <div class="presenter-progress-line">
+        <div id="presenter-progress-fill" class="presenter-progress-fill"></div>
+      </div>
+
+      <div class="presenter-stage">
+        <article class="presenter-slide-card" id="presenter-slide-card">
+          <div class="slide-badge-row">
+            <span id="presenter-type-tag" class="slide-type-tag">ICEBREAKER</span>
+            <span id="presenter-level-tag" class="status-badge">A2</span>
+            <span id="presenter-page-tag" class="status-badge" style="background: rgba(65,107,73,0.12); color: var(--st-pine-deep);">Page 1 of 5</span>
+          </div>
+          <h1 id="presenter-title" class="slide-h1">Card Title</h1>
+          <div id="presenter-instructions" class="slide-instructions"></div>
+          <div id="presenter-content" class="slide-content-body"></div>
+        </article>
+      </div>
+
+      <div class="presenter-bottom-tip">
+        <span>💡 Facilitator Tip: Use <kbd>←</kbd> / <kbd>→</kbd> or <kbd>Space</kbd> to change pages. Press <kbd>Esc</kbd> to exit.</span>
+      </div>
+    </div>
   </div>
 
   <!-- Sign In / Founder Access Modal -->
