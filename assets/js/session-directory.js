@@ -544,14 +544,58 @@
       });
     }
 
+    getStructureSignature(session) {
+      const club = session.club || '';
+      const format = session.format || '';
+
+      if (format === 'Cinema Club' || club === 'Cinema Club') {
+        return { icon: '🎬', label: 'Scene Screening & Cultural Analysis' };
+      }
+      if (format === 'Karaoke Club' || club === 'Karaoke Club') {
+        return { icon: '🎵', label: 'Lyric Deconstruction & Rhythm Practice' };
+      }
+      if (format === 'Long Read' || club === 'Long Reads') {
+        return { icon: '📖', label: 'Literary Parlor Ledger & Extended Text' };
+      }
+      if (format === 'Games' || club === 'Game Evenings') {
+        return { icon: '🎲', label: 'Parlor Play & Boardgame Immersion' };
+      }
+      if (club === 'Keeping Up with Science') {
+        return { icon: '🔬', label: 'Peer-Reviewed Research & Future Speculation' };
+      }
+      if (club === "I Couldn't Help But Wonder") {
+        return { icon: '💭', label: 'Philosophical Dilemmas & Introspection' };
+      }
+      if (club === 'Debatable & Relatable') {
+        return { icon: '⚖️', label: 'Structured Debates & Flash Voting' };
+      }
+      if (club === 'Mind Matters') {
+        return { icon: '🧠', label: 'Subconscious Profiles & Behavioral Prompts' };
+      }
+      if (club === 'The Greatest Quotes') {
+        return { icon: '☕', label: "Café Debates & Philosophers' Ledger" };
+      }
+      if (club === "Let's Celebrate") {
+        return { icon: '🎉', label: 'Festivity Traditions & Cultural Customs' };
+      }
+      if (club === 'My Life With & Without') {
+        return { icon: '🪞', label: 'Life Ledger & Counterfactual Reflections' };
+      }
+      if (club === 'If You Were') {
+        return { icon: '✨', label: 'Perspective Mirror & Role Immersions' };
+      }
+      return { icon: '💬', label: 'Warm-up · Theoretical Rounds · Fluency Outro' };
+    }
+
     renderCardHTML(session) {
       const levelLabel = session.level ? session.level : 'All Levels';
       const langLabel = session.lang ? session.lang : 'Language N/A';
       const formatLabel = session.format ? session.format : 'Speaking Club';
       const isBookmarked = this.savedHrefs.has(session.href);
+      const signature = this.getStructureSignature(session);
 
       return `
-        <article class="sd-card">
+        <article class="sd-card" data-club="${this.escapeAttr(session.club || '')}" data-format="${this.escapeAttr(formatLabel)}">
           <button
             type="button"
             class="sd-bookmark-btn ${isBookmarked ? 'saved' : ''}"
@@ -571,11 +615,16 @@
             ${session.sub_topic ? `<span class="sd-badge sd-badge-subtopic" style="background: rgba(0, 0, 0, 0.05); color: var(--ink-soft); font-size: 0.75rem;">${this.escapeText(session.sub_topic)}</span>` : ""}
           </div>
 
-          <p class="sd-card-club">${this.escapeText(session.club)}</p>
+          <p class="sd-card-club">${signature.icon} ${this.escapeText(session.club)}</p>
 
           <h3 class="sd-card-title">
             <a href="${this.escapeAttr(session.href)}">${this.escapeText(session.title)}</a>
           </h3>
+
+          <div class="sd-structure-tag">
+            <span>${signature.icon}</span>
+            <span>${this.escapeText(signature.label)}</span>
+          </div>
 
           <div class="sd-card-footer">
             <a href="${this.escapeAttr(session.href)}" class="sd-card-link-btn" aria-label="Explore session: ${this.escapeAttr(session.title)}">

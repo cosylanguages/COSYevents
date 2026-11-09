@@ -262,3 +262,23 @@ mistakes:
     note: "Level-appropriate explanation note."
 ---
 ```
+
+## 7. Master Product Architecture & Visual Signature Matrix
+
+All COSYevents offerings exist as specialized product lines of the overarching ecosystem. Each event type and sub-club maintains distinct visual styling, thematic tokens, and specialized pedagogical structures:
+
+| Event Type / Sub-Club | Visual Identity & Palette | Structural Accent | Signature Pedagogical Structure |
+| :--- | :--- | :--- | :--- |
+| **Cinema Club** | Chalk & Gold / Film Noir (`#d97706`) | Clapperboard slates, scene stamps | Scene Screening, Film Trivia, Dialogue Deconstruction |
+| **Karaoke Club** | Vintage Plum & Cassette (`#8b5cf6`) | Cassette tape liners, lyric boxes | Lyric Translation, Rhyme & Pronunciation Drills, Song Analysis |
+| **Long Reads** | Literary Parlor Burgundy (`#7a1c1c`) | Parchment ledger, double borders | Dialogue Ledger, Extended Literary Passage, Philosophical Debates |
+| **Game Evenings** | Vibrant Emerald Boardgame (`#059669`) | Dice tokens, interactive prompt cards | Parlor Play Rules, Round Robin Mechanics, Interactive Gameplay |
+| **Keeping Up with Science** | Deep Emerald Science Journal (`#0F6E56`) | Lab monograph border, publication badges | Original Research Paper, Data Speculation, Health/Tech Thematics |
+| **I Couldn't Help But Wonder** | Introspective Terracotta/Violet (`#7c2d12`) | Reflection mirror, dilemma cards | Philosophical Dilemma, Introspective Horizon, 'Stop Translating' Rule |
+| **Debatable & Relatable** | Balanced Clay & Terracotta (`#993C1D`) | Scales watermark, point-counterpoint grids | Formal Pro/Con Debates, Structured Rebuttals, A vs B Flash Voting |
+| **Mind Matters** | Subconscious Rose & Plum (`#993556`) | Profile dossiers, neuroscience insights | Behavioral Prompts, Case Scenarios, Emotional Intelligence Reflection |
+| **The Greatest Quotes** | Parisian Café Espresso (`#534AB7`) | Napkin & coaster borders, vintage typography | Philosophers' Ledger, Epigram Deconstruction, Historical Context |
+| **Let's Celebrate** | Festive Amber & Gold (`#BA7517`) | Gift tags, ribbon banners | Cultural Customs, Celebration Traditions, Holiday Reflection |
+| **My Life With & Without** | Counterfactual Sage (`#3B6D11`) | Life ledger balance sheets | Dual-Reality Comparisons, Habit Experiments, Counterfactual Prompts |
+| **If You Were** | Imaginative Cerulean (`#2563EB`) | Perspective mirror boxes | Role Immersion, Empathy Projection, Alternative Persona Scenarios |
+| **Basic Speaking Club** | Clear Pedagogical Teal (`#0D9488`) | High-clarity flashcards, guided speech frames | Foundation Warm-up, Guided Conversational Scaffolding, Vocabulary Expansion |
