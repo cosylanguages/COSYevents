@@ -394,6 +394,32 @@
   border: 1px solid var(--border);
 }
 
+.sd-active-reset-btn {
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid rgba(192, 57, 43, 0.25);
+  color: #b02a1a;
+  font-family: inherit;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.sd-active-reset-btn:hover {
+  background: rgba(192, 57, 43, 0.16);
+  border-color: #b02a1a;
+  transform: translateY(-1px);
+}
+
+.sd-active-reset-btn.hidden {
+  display: none !important;
+}
+
 /* Level Pills Row */
 .sd-pills-row {
   display: flex;
@@ -458,6 +484,7 @@
 .sd-card {
   background: var(--warm-white);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--cosy-color-sage, #416b49);
   border-radius: var(--r-lg, 22px);
   padding: 1.5rem;
   display: flex;
@@ -465,6 +492,148 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   position: relative;
   text-align: left;
+}
+
+/* ─── Product Identity & Visual Variations by Event Format & Club ─── */
+/* 1. Cinema Club */
+.sd-card[data-club="Cinema Club"],
+.sd-card[data-format="Cinema Club"] {
+  border-top-color: #d97706;
+  background: linear-gradient(180deg, rgba(217, 119, 6, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="Cinema Club"] .sd-card-club,
+.sd-card[data-format="Cinema Club"] .sd-card-club {
+  color: #b45309;
+}
+
+/* 2. Karaoke Club */
+.sd-card[data-club="Karaoke Club"],
+.sd-card[data-format="Karaoke Club"] {
+  border-top-color: #8b5cf6;
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="Karaoke Club"] .sd-card-club,
+.sd-card[data-format="Karaoke Club"] .sd-card-club {
+  color: #7c3aed;
+}
+
+/* 3. Long Reads */
+.sd-card[data-club="Long Reads"],
+.sd-card[data-format="Long Read"] {
+  border-top-color: #7a1c1c;
+  background: linear-gradient(180deg, rgba(122, 28, 28, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="Long Reads"] .sd-card-club,
+.sd-card[data-format="Long Read"] .sd-card-club {
+  color: #7a1c1c;
+}
+
+/* 4. Game Evenings */
+.sd-card[data-club="Game Evenings"],
+.sd-card[data-format="Games"] {
+  border-top-color: #059669;
+  background: linear-gradient(180deg, rgba(5, 150, 105, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="Game Evenings"] .sd-card-club,
+.sd-card[data-format="Games"] .sd-card-club {
+  color: #059669;
+}
+
+/* 5. Keeping Up with Science */
+.sd-card[data-club="Keeping Up with Science"] {
+  border-top-color: #0F6E56;
+  background: linear-gradient(180deg, rgba(15, 110, 86, 0.04) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="Keeping Up with Science"] .sd-card-club {
+  color: #0F6E56;
+}
+
+/* 6. I Couldn't Help But Wonder */
+.sd-card[data-club="I Couldn't Help But Wonder"] {
+  border-top-color: #7c2d12;
+  background: linear-gradient(180deg, rgba(124, 45, 18, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="I Couldn't Help But Wonder"] .sd-card-club {
+  color: #9a3412;
+}
+
+/* 7. Debatable & Relatable */
+.sd-card[data-club="Debatable & Relatable"] {
+  border-top-color: #993C1D;
+  background: linear-gradient(180deg, rgba(153, 60, 29, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="Debatable & Relatable"] .sd-card-club {
+  color: #993C1D;
+}
+
+/* 8. Mind Matters */
+.sd-card[data-club="Mind Matters"] {
+  border-top-color: #993556;
+  background: linear-gradient(180deg, rgba(153, 53, 86, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="Mind Matters"] .sd-card-club {
+  color: #993556;
+}
+
+/* 9. The Greatest Quotes */
+.sd-card[data-club="The Greatest Quotes"] {
+  border-top-color: #534AB7;
+  background: linear-gradient(180deg, rgba(83, 74, 183, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="The Greatest Quotes"] .sd-card-club {
+  color: #534AB7;
+}
+
+/* 10. Let's Celebrate */
+.sd-card[data-club="Let's Celebrate"] {
+  border-top-color: #BA7517;
+  background: linear-gradient(180deg, rgba(186, 117, 23, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="Let's Celebrate"] .sd-card-club {
+  color: #BA7517;
+}
+
+/* 11. My Life With & Without */
+.sd-card[data-club="My Life With & Without"] {
+  border-top-color: #3B6D11;
+  background: linear-gradient(180deg, rgba(59, 109, 17, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="My Life With & Without"] .sd-card-club {
+  color: #3B6D11;
+}
+
+/* 12. If You Were */
+.sd-card[data-club="If You Were"] {
+  border-top-color: #2563EB;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="If You Were"] .sd-card-club {
+  color: #1d4ed8;
+}
+
+/* 13. Basic Speaking Club */
+.sd-card[data-club="Basic Speaking Club"] {
+  border-top-color: #0D9488;
+  background: linear-gradient(180deg, rgba(13, 148, 136, 0.03) 0%, var(--warm-white) 40%);
+}
+.sd-card[data-club="Basic Speaking Club"] .sd-card-club {
+  color: #0f766e;
+}
+
+/* Structural Pill Tag */
+.sd-structure-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--ink-soft);
+  margin-top: 0.35rem;
+  margin-bottom: 0.8rem;
+  width: fit-content;
 }
 
 .sd-bookmark-btn {

@@ -123,4 +123,27 @@ const wonderB1 = filterSessions(sessions, { selectedType: 'Speaking Club', selec
 assert.ok(wonderB1.length > 0, 'Wonder club with B1 level mismatch');
 assert.ok(wonderB1.every(s => s.club === "I Couldn't Help But Wonder" && /\bB1\b/.test(s.level)));
 
+// 5. Test URL param parsing and serialization simulation
+function parseUrlParams(queryString) {
+  const params = new URLSearchParams(queryString);
+  const state = {
+    searchQuery: params.get('q') ? params.get('q').trim().toLowerCase() : '',
+    selectedType: params.get('format') || 'ALL',
+    selectedSpeakingClub: params.get('club') || 'ALL',
+    selectedLang: params.get('lang') || 'ALL',
+    selectedLevel: params.has('level') && params.get('level') !== 'ALL' ? params.get('level') : null,
+    wishlistOnly: params.get('saved') === 'true'
+  };
+  return state;
+}
+
+const parsedState = parseUrlParams('?format=Speaking+Club&club=Keeping+Up+with+Science&level=B2');
+assert.strictEqual(parsedState.selectedType, 'Speaking Club');
+assert.strictEqual(parsedState.selectedSpeakingClub, 'Keeping Up with Science');
+assert.strictEqual(parsedState.selectedLevel, 'B2');
+
+const scienceB2 = filterSessions(sessions, parsedState);
+assert.ok(scienceB2.length > 0);
+assert.ok(scienceB2.every(s => s.club === 'Keeping Up with Science' && /\bB2\b/.test(s.level)));
+
 console.log('✅ All session directory filter tests passed successfully!');
