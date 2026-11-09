@@ -6726,3 +6726,411 @@ body.theme-dark .session-jump-link.active {
   transform: translateY(-1px);
   opacity: 0.95;
 }
+
+/* ──────────────────────────────────────────────────────────────
+   🎓 MODERN CLASSROOM UI (Skyeng / Edvibe / Preply Style)
+   Interactive student-teacher widgets, timers, speaker chips,
+   turn-taking cards, sentence starters, and interactive flash polls.
+   ────────────────────────────────────────────────────────────── */
+
+/* Stage header & Lesson progression bar */
+.edv-stage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--cosy-color-sage-light, #e8f0e9);
+  color: var(--cosy-color-sage-deep, #233827);
+  border: 1px solid rgba(65, 107, 73, 0.2);
+}
+
+.edv-stage-badge.warm-up   { background: #faeee8; color: #B84318; border-color: rgba(184, 67, 24, 0.25); }
+.edv-stage-badge.round-1   { background: #e8ecf5; color: #1e2f6b; border-color: rgba(30, 47, 107, 0.25); }
+.edv-stage-badge.interlude { background: #f5ede0; color: #7a5c3a; border-color: rgba(122, 92, 58, 0.25); }
+.edv-stage-badge.round-2   { background: #e5f4ec; color: #4a6b50; border-color: rgba(74, 107, 80, 0.25); }
+.edv-stage-badge.outro     { background: #fcebeb; color: #d66161; border-color: rgba(214, 97, 97, 0.25); }
+
+/* Interactive Classroom Timer Widget */
+.edv-timer-widget {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--cosy-color-surface, #ffffff);
+  border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.2));
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-family: var(--cosy-font-mono, monospace);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cosy-color-ink, #2a2a2a);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  user-select: none;
+}
+
+.edv-timer-display {
+  min-width: 42px;
+  text-align: center;
+  color: var(--cosy-color-sage-dark, #375742);
+}
+
+.edv-timer-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  font-size: 0.85rem;
+  line-height: 1;
+  color: var(--cosy-color-ink-soft, #4a4a4a);
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.edv-timer-btn:hover {
+  background: var(--cosy-color-sage-light, #e8f0e9);
+  color: var(--cosy-color-sage-deep, #233827);
+}
+
+.edv-timer-btn.active {
+  color: #d66161;
+}
+
+/* Turn-Taking & Speaker Badges */
+.edv-speaker-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.edv-speaker-chip.speaker-a {
+  background: #eef1fb;
+  color: #3a5298;
+  border: 1px solid rgba(58, 82, 152, 0.25);
+}
+
+.edv-speaker-chip.speaker-b {
+  background: #faeee8;
+  color: #B84318;
+  border: 1px solid rgba(184, 67, 24, 0.25);
+}
+
+.edv-speaker-chip.group-mode {
+  background: #e5f4ec;
+  color: #4a6b50;
+  border: 1px solid rgba(74, 107, 80, 0.25);
+}
+
+/* Modern Card Layout for Discussion Items */
+.edv-prompt-card {
+  background: var(--cosy-color-surface, #ffffff);
+  border: 1.5px solid var(--cosy-color-border, rgba(74, 107, 80, 0.15));
+  border-radius: 16px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.edv-prompt-card:hover {
+  border-color: var(--cosy-color-sage, #416b49);
+  box-shadow: 0 6px 18px rgba(65, 107, 73, 0.08);
+  transform: translateY(-2px);
+}
+
+.edv-prompt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.edv-prompt-num {
+  font-family: var(--cosy-font-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--cosy-color-ink-muted, #5c5957);
+  background: var(--cosy-color-cream-dark, #f5ede0);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.edv-prompt-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cosy-color-ink, #2a2a2a);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.edv-prompt-personal {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--cosy-color-ink-muted, #5c5957);
+  background: var(--cosy-color-cream, #fdfcf8);
+  border-left: 3px solid var(--cosy-color-amber, #945e05);
+  padding: 0.6rem 0.9rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 0.6rem;
+}
+
+/* Sentence Starters & Useful Language Pill Bars */
+.edv-starters-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--cosy-color-border, rgba(74, 107, 80, 0.15));
+}
+
+.edv-starters-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--cosy-color-ink-muted, #5c5957);
+  letter-spacing: 0.04em;
+  margin-right: 0.2rem;
+}
+
+.edv-starter-chip {
+  background: var(--cosy-color-sage-light, #e8f0e9);
+  color: var(--cosy-color-sage-dark, #375742);
+  border: 1px solid rgba(65, 107, 73, 0.2);
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.edv-starter-chip:hover {
+  background: var(--cosy-color-sage, #416b49);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Interactive Flash Poll & Vote Section */
+.edv-poll-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+@media (max-width: 640px) {
+  .edv-poll-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.edv-poll-card {
+  background: var(--cosy-color-surface, #ffffff);
+  border: 2px solid var(--cosy-color-border, rgba(74, 107, 80, 0.15));
+  border-radius: 16px;
+  padding: 1.25rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.edv-poll-card:hover {
+  border-color: var(--cosy-color-sage, #416b49);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(65, 107, 73, 0.12);
+}
+
+.edv-poll-card.selected {
+  border-color: var(--cosy-color-sage-deep, #233827);
+  background: var(--cosy-color-sage-mist, #f0f5f1);
+  box-shadow: 0 4px 14px rgba(65, 107, 73, 0.15);
+}
+
+.edv-poll-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--cosy-color-cream-dark, #f5ede0);
+  color: var(--cosy-color-ink-soft, #4a4a4a);
+  margin-bottom: 0.5rem;
+}
+
+.edv-poll-card.selected .edv-poll-tag {
+  background: var(--cosy-color-sage, #416b49);
+  color: #ffffff;
+}
+
+.edv-poll-title {
+  font-family: var(--cosy-font-sans, sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cosy-color-ink, #2a2a2a);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.edv-poll-bar-track {
+  width: 100%;
+  height: 6px;
+  background: var(--cosy-color-cream-dark, #f5ede0);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 0.75rem;
+}
+
+.edv-poll-bar-fill {
+  height: 100%;
+  background: var(--cosy-color-sage, #416b49);
+  width: 50%;
+  transition: width 0.4s ease;
+}
+
+.edv-poll-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cosy-color-ink-muted, #5c5957);
+  margin-top: 0.4rem;
+}
+
+/* Floating / Expandable Useful Phrases & Frames Drawer */
+.edv-phrases-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 5.5rem;
+  z-index: 1040;
+  background: var(--cosy-color-credible-navy, #1e2f6b);
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 18px;
+  font-family: var(--cosy-font-sans, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(30, 47, 107, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edv-phrases-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 47, 107, 0.35);
+}
+
+.edv-phrases-drawer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: min(420px, 100vw);
+  max-height: 70vh;
+  background: var(--cosy-color-surface, #ffffff);
+  border-left: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.2));
+  border-top: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.2));
+  border-radius: 20px 0 0 0;
+  box-shadow: -6px 0 30px rgba(0, 0, 0, 0.12);
+  z-index: 1045;
+  transform: translateY(105%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.edv-phrases-drawer.open {
+  transform: translateY(0);
+}
+
+.edv-drawer-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.15));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--cosy-color-cream, #fdfcf8);
+  border-radius: 20px 0 0 0;
+}
+
+.edv-drawer-title {
+  font-family: var(--cosy-font-serif, serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cosy-color-credible-navy, #1e2f6b);
+  margin: 0;
+}
+
+.edv-drawer-close {
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  color: var(--cosy-color-ink-muted, #5c5957);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.edv-drawer-body {
+  padding: 1.25rem;
+  overflow-y: auto;
+  flex: 1;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.edv-drawer-group {
+  margin-bottom: 1.25rem;
+}
+
+.edv-drawer-group h5 {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--cosy-color-ink-muted, #5c5957);
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5rem 0;
+}
+
+.edv-drawer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.edv-drawer-item {
+  background: var(--cosy-color-cream, #fdfcf8);
+  border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.1));
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.edv-drawer-item:hover {
+  background: var(--cosy-color-sage-light, #e8f0e9);
+  color: var(--cosy-color-sage-deep, #233827);
+  transform: translateX(3px);
+}

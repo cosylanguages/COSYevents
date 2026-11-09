@@ -1278,3 +1278,71 @@ textarea.form-control {
     border-bottom: 1px solid var(--st-line);
   }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   🎓 MODERN CLASSROOM UI FOR STUDIO (Skyeng / Edvibe / Preply Style)
+   ────────────────────────────────────────────────────────────── */
+
+.studio-prompt-card {
+  background: var(--st-card-bg);
+  border: 1.5px solid var(--st-line);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  transition: all 0.2s ease;
+}
+
+.studio-prompt-card:hover {
+  border-color: var(--st-accent);
+  box-shadow: 0 4px 14px rgba(45, 125, 111, 0.1);
+}
+
+.studio-speaker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 100px;
+  margin-bottom: 0.4rem;
+}
+
+.studio-speaker-badge.speaker-a {
+  background: #eef1fb;
+  color: #3a5298;
+}
+
+.studio-speaker-badge.speaker-b {
+  background: #faeee8;
+  color: #B84318;
+}
+
+.studio-starter-chip {
+  background: #e8f0e9;
+  color: #233827;
+  border: 1px solid rgba(65, 107, 73, 0.2);
+  border-radius: 100px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+.studio-classroom-timer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--st-bg-surface);
+  border: 1px solid var(--st-line);
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-family: monospace;
+  font-size: 0.82rem;
+  font-weight: bold;
+  color: var(--st-accent);
+}

@@ -719,15 +719,349 @@
 
   // Session materials are repository-hosted; no database fetch or auth gate is used here.
 
+  /* ──────────────────────────────────────────────────────────────
+     MODERN CLASSROOM ENGINE (Skyeng / Edvibe / Preply Style)
+     Interactive countdown timers, turn-taking speaker tags,
+     sentence starter expanders, flash poll voters, and phrases drawer.
+     ────────────────────────────────────────────────────────────── */
+  function initClassroomWidgets() {
+    var container = document.querySelector('.content-container') ||
+                    document.querySelector('.session-container') ||
+                    document.querySelector('main');
+    if (!container) return;
+
+    // 1. Upgrade discussion round items into modern prompt cards if not already converted
+    var roundItems = container.querySelectorAll('.round-item:not(.edv-converted)');
+    roundItems.forEach(function (item, idx) {
+      item.classList.add('edv-converted');
+      var mainTextEl = item.querySelector('.round-item-main');
+      var personalEl = item.querySelector('.round-item-personal');
+
+      var promptCard = document.createElement('div');
+      promptCard.className = 'edv-prompt-card';
+
+      // Header with Turn-taking Speaker chip and Question Number
+      var header = document.createElement('div');
+      header.className = 'edv-prompt-header';
+
+      var speakerChip = document.createElement('span');
+      var isSpeakerA = idx % 2 === 0;
+      speakerChip.className = 'edv-speaker-chip ' + (isSpeakerA ? 'speaker-a' : 'speaker-b');
+      speakerChip.textContent = isSpeakerA ? '👤 Speaker A' : '👥 Speaker B';
+
+      var numBadge = document.createElement('span');
+      numBadge.className = 'edv-prompt-num';
+      numBadge.textContent = 'Q' + (idx + 1);
+
+      header.appendChild(speakerChip);
+      header.appendChild(numBadge);
+      promptCard.appendChild(header);
+
+      if (mainTextEl) {
+        var textDiv = document.createElement('div');
+        textDiv.className = 'edv-prompt-text';
+        textDiv.textContent = mainTextEl.textContent.trim();
+        promptCard.appendChild(textDiv);
+      }
+
+      if (personalEl) {
+        var pDiv = document.createElement('div');
+        pDiv.className = 'edv-prompt-personal';
+        pDiv.textContent = personalEl.textContent.trim();
+        promptCard.appendChild(pDiv);
+      }
+
+      // Sentence Starter suggestions
+      var startersWrap = document.createElement('div');
+      startersWrap.className = 'edv-starters-wrap';
+      var startersLabel = document.createElement('span');
+      startersLabel.className = 'edv-starters-label';
+      startersLabel.textContent = 'Starters:';
+      startersWrap.appendChild(startersLabel);
+
+      var sampleStarters = isSpeakerA
+        ? ['In my opinion...', 'As far as I know...', 'Speaking from experience...']
+        : ['I see your point, but...', 'Adding to what you said...', 'From another angle...'];
+
+      sampleStarters.forEach(function (starter) {
+        var chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = 'edv-starter-chip';
+        chip.textContent = starter;
+        chip.addEventListener('click', function () {
+          try {
+            navigator.clipboard.writeText(starter + ' ');
+            chip.textContent = '✓ Copied!';
+            setTimeout(function () { chip.textContent = starter; }, 1500);
+          } catch (e) {}
+        });
+        startersWrap.appendChild(chip);
+      });
+
+      promptCard.appendChild(startersWrap);
+
+      item.textContent = '';
+      item.appendChild(promptCard);
+    });
+
+    // 2. Attach Interactive Countdown Timers to Slide Deck & Round Headers
+    var deckFooter = document.querySelector('.ce-slide-deck-footer');
+    if (deckFooter && !deckFooter.querySelector('.edv-timer-widget')) {
+      var timerWidget = document.createElement('div');
+      timerWidget.className = 'edv-timer-widget';
+
+      var timeRemaining = 60; // 60s default timer
+      var timerInterval = null;
+
+      var display = document.createElement('span');
+      display.className = 'edv-timer-display';
+      display.textContent = '01:00';
+
+      var playBtn = document.createElement('button');
+      playBtn.type = 'button';
+      playBtn.className = 'edv-timer-btn';
+      playBtn.textContent = '▶';
+      playBtn.title = 'Start / Pause Timer';
+
+      var resetBtn = document.createElement('button');
+      resetBtn.type = 'button';
+      resetBtn.className = 'edv-timer-btn';
+      resetBtn.textContent = '↺';
+      resetBtn.title = 'Reset Timer';
+
+      function formatTime(s) {
+        var m = Math.floor(s / 60);
+        var sec = s % 60;
+        return (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
+      }
+
+      playBtn.addEventListener('click', function () {
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+          playBtn.textContent = '▶';
+          playBtn.classList.remove('active');
+        } else {
+          playBtn.textContent = '⏸';
+          playBtn.classList.add('active');
+          timerInterval = setInterval(function () {
+            if (timeRemaining > 0) {
+              timeRemaining--;
+              display.textContent = formatTime(timeRemaining);
+            } else {
+              clearInterval(timerInterval);
+              timerInterval = null;
+              playBtn.textContent = '▶';
+              playBtn.classList.remove('active');
+              display.textContent = '00:00';
+            }
+          }, 1000);
+        }
+      });
+
+      resetBtn.addEventListener('click', function () {
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        timeRemaining = 60;
+        display.textContent = '01:00';
+        playBtn.textContent = '▶';
+        playBtn.classList.remove('active');
+      });
+
+      timerWidget.appendChild(display);
+      timerWidget.appendChild(playBtn);
+      timerWidget.appendChild(resetBtn);
+
+      deckFooter.insertBefore(timerWidget, deckFooter.lastElementChild);
+    }
+
+    // 3. Transform Interlude Flash Debate & Vote into Interactive Poll Widget
+    var lstBlock = document.querySelector('#s-lst .round-body');
+    if (lstBlock && !lstBlock.querySelector('.edv-poll-container')) {
+      var optADiv = null;
+      var optBDiv = null;
+      var gridChild = lstBlock.querySelector('div[style*="grid"]');
+      if (gridChild && gridChild.children.length >= 2) {
+        optADiv = gridChild.children[0];
+        optBDiv = gridChild.children[1];
+      }
+
+      var textA = optADiv ? optADiv.textContent.replace(/^Option\s*A:?\s*/i, '').trim() : 'Option A';
+      var textB = optBDiv ? optBDiv.textContent.replace(/^Option\s*B:?\s*/i, '').trim() : 'Option B';
+
+      var pollWrap = document.createElement('div');
+      pollWrap.className = 'edv-poll-container';
+
+      var votesA = 4;
+      var votesB = 3;
+
+      function createPollCard(letter, text, votes, isA) {
+        var card = document.createElement('div');
+        card.className = 'edv-poll-card';
+
+        var tag = document.createElement('span');
+        tag.className = 'edv-poll-tag';
+        tag.textContent = 'Option ' + letter;
+
+        var title = document.createElement('div');
+        title.className = 'edv-poll-title';
+        title.textContent = text;
+
+        var track = document.createElement('div');
+        track.className = 'edv-poll-bar-track';
+        var fill = document.createElement('div');
+        fill.className = 'edv-poll-bar-fill';
+        track.appendChild(fill);
+
+        var meta = document.createElement('div');
+        meta.className = 'edv-poll-meta';
+        var voteCount = document.createElement('span');
+        voteCount.className = 'vote-count-text';
+        var percent = document.createElement('span');
+        percent.className = 'percent-text';
+        meta.appendChild(voteCount);
+        meta.appendChild(percent);
+
+        card.appendChild(tag);
+        card.appendChild(title);
+        card.appendChild(track);
+        card.appendChild(meta);
+
+        return { card: card, fill: fill, voteCount: voteCount, percent: percent, isA: isA };
+      }
+
+      var cardObjA = createPollCard('A', textA, votesA, true);
+      var cardObjB = createPollCard('B', textB, votesB, false);
+
+      function updatePollUI() {
+        var total = votesA + votesB;
+        var pctA = total > 0 ? Math.round((votesA / total) * 100) : 50;
+        var pctB = 100 - pctA;
+
+        cardObjA.fill.style.width = pctA + '%';
+        cardObjA.voteCount.textContent = votesA + ' votes';
+        cardObjA.percent.textContent = pctA + '%';
+
+        cardObjB.fill.style.width = pctB + '%';
+        cardObjB.voteCount.textContent = votesB + ' votes';
+        cardObjB.percent.textContent = pctB + '%';
+      }
+
+      cardObjA.card.addEventListener('click', function () {
+        if (!cardObjA.card.classList.contains('selected')) {
+          votesA++;
+          if (cardObjB.card.classList.contains('selected')) votesB--;
+          cardObjA.card.classList.add('selected');
+          cardObjB.card.classList.remove('selected');
+          updatePollUI();
+        }
+      });
+
+      cardObjB.card.addEventListener('click', function () {
+        if (!cardObjB.card.classList.contains('selected')) {
+          votesB++;
+          if (cardObjA.card.classList.contains('selected')) votesA--;
+          cardObjB.card.classList.add('selected');
+          cardObjA.card.classList.remove('selected');
+          updatePollUI();
+        }
+      });
+
+      updatePollUI();
+      pollWrap.appendChild(cardObjA.card);
+      pollWrap.appendChild(cardObjB.card);
+
+      if (gridChild) {
+        gridChild.replaceWith(pollWrap);
+      } else {
+        lstBlock.appendChild(pollWrap);
+      }
+    }
+
+    // 4. Mount Floating Useful Phrases & Sentence Frames Drawer
+    if (!document.querySelector('.edv-phrases-fab')) {
+      var fab = document.createElement('button');
+      fab.type = 'button';
+      fab.className = 'edv-phrases-fab';
+      fab.innerHTML = '<span>💬 Phrases</span>';
+
+      var drawer = document.createElement('div');
+      drawer.className = 'edv-phrases-drawer';
+      drawer.innerHTML =
+        '<div class="edv-drawer-header">' +
+          '<h4 class="edv-drawer-title">💬 Speaking Toolkit &amp; Frames</h4>' +
+          '<button type="button" class="edv-drawer-close" aria-label="Close drawer">&times;</button>' +
+        '</div>' +
+        '<div class="edv-drawer-body">' +
+          '<div class="edv-drawer-group">' +
+            '<h5>Agreeing &amp; Adding Points</h5>' +
+            '<ul class="edv-drawer-list">' +
+              '<li class="edv-drawer-item">I completely agree because...</li>' +
+              '<li class="edv-drawer-item">That makes total sense, especially when...</li>' +
+              '<li class="edv-drawer-item">Building on what you just said...</li>' +
+            '</ul>' +
+          '</div>' +
+          '<div class="edv-drawer-group">' +
+            '<h5>Disagreeing Diplomatically</h5>' +
+            '<ul class="edv-drawer-list">' +
+              '<li class="edv-drawer-item">I see your point, but on the flip side...</li>' +
+              '<li class="edv-drawer-item">That\'s one way to look at it, however...</li>' +
+              '<li class="edv-drawer-item">I\'m not entirely convinced that...</li>' +
+            '</ul>' +
+          '</div>' +
+          '<div class="edv-drawer-group">' +
+            '<h5>Buying Time &amp; Asking Follow-ups</h5>' +
+            '<ul class="edv-drawer-list">' +
+              '<li class="edv-drawer-item">That\'s a fascinating question. Let me reflect...</li>' +
+              '<li class="edv-drawer-item">What led you to that conclusion?</li>' +
+              '<li class="edv-drawer-item">Could you give a concrete example of that?</li>' +
+            '</ul>' +
+          '</div>' +
+        '</div>';
+
+      document.body.appendChild(fab);
+      document.body.appendChild(drawer);
+
+      fab.addEventListener('click', function () {
+        drawer.classList.toggle('open');
+      });
+
+      var closeBtn = drawer.querySelector('.edv-drawer-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+          drawer.classList.remove('open');
+        });
+      }
+
+      var drawerItems = drawer.querySelectorAll('.edv-drawer-item');
+      drawerItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+          var text = item.textContent;
+          try {
+            navigator.clipboard.writeText(text);
+            item.textContent = '✓ Copied to clipboard!';
+            setTimeout(function () { item.textContent = text; }, 1200);
+          } catch (e) {}
+        });
+      });
+    }
+  }
+
   window.initSlideDeck = initSlideDeck;
+  window.initClassroomWidgets = initClassroomWidgets;
+
   document.addEventListener('cosy:session-rendered', function () {
     initSlideDeck();
+    initClassroomWidgets();
   });
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       checkEventConversion();
       initSlideDeck();
+      initClassroomWidgets();
       renderGatedFooterNote();
       checkWonderVoiceover();
 
@@ -735,6 +1069,7 @@
   } else {
     checkEventConversion();
     initSlideDeck();
+    initClassroomWidgets();
     renderGatedFooterNote();
     checkWonderVoiceover();
 
