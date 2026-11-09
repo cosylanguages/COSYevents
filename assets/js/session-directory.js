@@ -32,6 +32,8 @@
         wishlistOnly: false
       };
 
+      this.readUrlParams();
+
       this.init();
     }
 
@@ -53,6 +55,43 @@
       } catch (e) {}
     }
 
+    readUrlParams() {
+      if (typeof window === 'undefined' || !window.location) return;
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('q')) this.state.searchQuery = params.get('q').trim().toLowerCase();
+        if (params.has('format')) this.state.selectedType = params.get('format');
+        if (params.has('club')) this.state.selectedSpeakingClub = params.get('club');
+        if (params.has('lang')) this.state.selectedLang = params.get('lang');
+        if (params.has('level')) {
+          const lvl = params.get('level');
+          this.state.selectedLevel = lvl === 'ALL' ? null : lvl;
+        }
+        if (params.has('saved') && params.get('saved') === 'true') {
+          this.state.wishlistOnly = true;
+        }
+      } catch (e) {}
+    }
+
+    updateUrlParams() {
+      if (typeof window === 'undefined' || !window.history || !window.location) return;
+      try {
+        const params = new URLSearchParams();
+        if (this.state.searchQuery) params.set('q', this.state.searchQuery);
+        if (this.state.selectedType !== 'ALL') params.set('format', this.state.selectedType);
+        if (this.state.selectedSpeakingClub !== 'ALL') params.set('club', this.state.selectedSpeakingClub);
+        if (this.state.selectedLang !== 'ALL') params.set('lang', this.state.selectedLang);
+        if (this.state.selectedLevel) {
+          params.set('level', Array.isArray(this.state.selectedLevel) ? this.state.selectedLevel.join('-') : this.state.selectedLevel);
+        }
+        if (this.state.wishlistOnly) params.set('saved', 'true');
+
+        const newSearch = params.toString();
+        const newUrl = window.location.pathname + (newSearch ? '?' + newSearch : '') + window.location.hash;
+        window.history.replaceState(null, '', newUrl);
+      } catch (e) {}
+    }
+
     async init() {
       this.renderSkeleton();
       await this.loadData();
@@ -61,6 +100,7 @@
       this.bindBackToTopEvents();
       this.bindScrollspyEvents();
       this.bindQuickStartLinks();
+      this.syncControlsWithState();
       this.applyFilters();
     }
 
@@ -167,9 +207,20 @@
                 </div>
               </div>
 
-              <!-- Result Count -->
-              <div id="sd-results-count" class="sd-results-count" aria-live="polite">
-                Showing ${this.sessions.length} sessions
+              <!-- Result Count and Reset Button -->
+              <div class="sd-results-wrapper" style="display: flex; align-items: center; gap: 0.75rem;">
+                <div id="sd-results-count" class="sd-results-count" aria-live="polite">
+                  Showing ${this.sessions.length} sessions
+                </div>
+                <button
+                  type="button"
+                  id="sd-active-reset-btn"
+                  class="sd-active-reset-btn hidden"
+                  aria-label="Reset all active filters"
+                  title="Clear all active filters"
+                >
+                  ✕ Reset Filters
+                </button>
               </div>
             </div>
 
@@ -226,11 +277,42 @@
       this.speakingClubSelect = this.container.querySelector('#sd-speaking-club-select');
       this.langSelect = this.container.querySelector('#sd-lang-select');
       this.resultsCount = this.container.querySelector('#sd-results-count');
+      this.activeResetBtn = this.container.querySelector('#sd-active-reset-btn');
       this.cardsGrid = this.container.querySelector('#sd-cards-grid');
       this.pillButtons = this.container.querySelectorAll('.sd-pill');
     }
 
+    syncControlsWithState() {
+      if (this.searchInput && this.state.searchQuery) {
+        this.searchInput.value = this.state.searchQuery;
+      }
+      if (this.typeSelect && this.state.selectedType !== 'ALL') {
+        this.typeSelect.value = this.state.selectedType;
+      }
+      if (this.state.selectedType === 'Speaking Club') {
+        if (this.speakingClubsWrapper) {
+          this.speakingClubsWrapper.classList.remove('hidden');
+          this.speakingClubsWrapper.classList.add('visible');
+          this.speakingClubsWrapper.setAttribute('aria-hidden', 'false');
+        }
+        if (this.speakingClubSelect && this.state.selectedSpeakingClub !== 'ALL') {
+          this.speakingClubSelect.value = this.state.selectedSpeakingClub;
+        }
+      }
+      if (this.langSelect && this.state.selectedLang !== 'ALL') {
+        this.langSelect.value = this.state.selectedLang;
+      }
+      this.updatePillsUI();
+    }
+
     bindEvents() {
+      // Active reset button
+      if (this.activeResetBtn) {
+        this.activeResetBtn.addEventListener('click', () => {
+          this.resetFilters();
+        });
+      }
+
       // Live search input
       if (this.searchInput) {
         this.searchInput.addEventListener('input', (e) => {
@@ -433,7 +515,30 @@
       }
     }
 
+    isAnyFilterActive() {
+      return (
+        !!this.state.searchQuery ||
+        this.state.selectedLang !== 'ALL' ||
+        this.state.selectedType !== 'ALL' ||
+        this.state.selectedSpeakingClub !== 'ALL' ||
+        this.state.selectedLevel !== null ||
+        this.state.wishlistOnly
+      );
+    }
+
     applyFilters() {
+      this.updateUrlParams();
+
+      if (this.activeResetBtn) {
+        if (this.isAnyFilterActive()) {
+          this.activeResetBtn.classList.remove('hidden');
+          this.activeResetBtn.classList.add('visible');
+        } else {
+          this.activeResetBtn.classList.remove('visible');
+          this.activeResetBtn.classList.add('hidden');
+        }
+      }
+
       const { searchQuery, selectedLang, selectedType, selectedSpeakingClub, selectedLevel, wishlistOnly } = this.state;
 
       this.filteredSessions = this.sessions.filter(session => {

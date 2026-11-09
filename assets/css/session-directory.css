@@ -394,6 +394,32 @@
   border: 1px solid var(--border);
 }
 
+.sd-active-reset-btn {
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid rgba(192, 57, 43, 0.25);
+  color: #b02a1a;
+  font-family: inherit;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.sd-active-reset-btn:hover {
+  background: rgba(192, 57, 43, 0.16);
+  border-color: #b02a1a;
+  transform: translateY(-1px);
+}
+
+.sd-active-reset-btn.hidden {
+  display: none !important;
+}
+
 /* Level Pills Row */
 .sd-pills-row {
   display: flex;
