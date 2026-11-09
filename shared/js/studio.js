@@ -187,6 +187,79 @@
     return html.replace(/<[^>]*>?/gm, '').trim();
   }
 
+  // Block generation templates
+  function generateVideoBlock(videoUrl) {
+    var url = videoUrl || 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    return (
+      '<div class="card-video-box">\n' +
+      '  <div class="card-video-responsive">\n' +
+      '    <iframe src="' + (url.includes('youtube') ? url.replace('watch?v=', 'embed/') : url) + '" ' +
+      'title="Video Material" allowfullscreen></iframe>\n' +
+      '  </div>\n' +
+      '  <div class="card-video-disclaimer">🎬 Educational video clip for discussion. Pause to answer comprehension prompts.</div>\n' +
+      '</div>'
+    );
+  }
+
+  function generateAudioBlock(audioUrl, title) {
+    var src = audioUrl || 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+    var trackTitle = title || 'Target Pronunciation & Listening Clip';
+    return (
+      '<div class="card-audio-box">\n' +
+      '  <div class="card-audio-header">\n' +
+      '    <span class="card-audio-title">🎧 ' + trackTitle + '</span>\n' +
+      '    <span class="card-audio-badge">Audio Stream</span>\n' +
+      '  </div>\n' +
+      '  <audio class="card-audio-player" controls preload="metadata">\n' +
+      '    <source src="' + src + '" type="audio/mpeg">\n' +
+      '    Your browser does not support audio playback.\n' +
+      '  </audio>\n' +
+      '</div>'
+    );
+  }
+
+  function generateLinkBlock(links) {
+    var items = links || [
+      { title: 'BBC Learning English Article', url: 'https://www.bbc.co.uk/learningenglish', desc: 'Pre-session reading and background context' },
+      { title: 'COSYlanguages Vocabulary Guide', url: 'https://cosylanguages.github.io/COSYlanguages/', desc: 'Grammar and expression reference' }
+    ];
+    var html = '<div class="card-links-box">\n';
+    items.forEach(function (item) {
+      html +=
+        '  <a class="card-link-item" href="' + item.url + '" target="_blank" rel="noopener noreferrer">\n' +
+        '    <div class="card-link-meta">\n' +
+        '      <span class="card-link-title">🔗 ' + item.title + '</span>\n' +
+        '      <span class="card-link-desc">' + item.desc + '</span>\n' +
+        '    </div>\n' +
+        '    <span style="font-size: 0.8rem; color: var(--st-accent);">↗</span>\n' +
+        '  </a>\n';
+    });
+    html += '</div>';
+    return html;
+  }
+
+  function generateQuestionsBlock() {
+    return (
+      '<ol>\n' +
+      '  <li>How often do you encounter this situation in your <strong>daily routine</strong>?</li>\n' +
+      '  <li>What is the most <em>effective strategy</em> you have used to overcome it?</li>\n' +
+      '  <li>In pairs, share one <strong>personal experience</strong> and one piece of advice.</li>\n' +
+      '</ol>'
+    );
+  }
+
+  function generateCalloutBlock() {
+    return (
+      '<div class="card-callout-box">\n' +
+      '  <div class="card-callout-title">💡 Useful Language for Breakouts</div>\n' +
+      '  <p style="margin: 0; line-height: 1.5;">\n' +
+      '    • <strong>In my experience,...</strong> / <em>From my perspective,...</em><br>\n' +
+      '    • <strong>I completely agree because...</strong> / <em>I see your point, but on the other hand...</em>\n' +
+      '  </p>\n' +
+      '</div>'
+    );
+  }
+
   // Sync inputs with state
   function syncFormFromState() {
     if (typeof document === 'undefined') return;
@@ -793,6 +866,62 @@
       });
     }
 
+    // Block Inserter Toolbar Handlers
+    function appendBlockToActiveCard(blockHtml) {
+      if (!state.isFounder) {
+        alertFounderRequired();
+        return;
+      }
+      var activeCard = state.session.activities && state.session.activities[state.activeCardIndex];
+      if (!activeCard) return;
+
+      var currentContent = activeCard.content || '';
+      if (currentContent.trim()) {
+        activeCard.content = currentContent + '\n\n' + blockHtml;
+      } else {
+        activeCard.content = blockHtml;
+      }
+
+      if ($('textarea-card-content')) {
+        $('textarea-card-content').value = activeCard.content;
+      }
+      renderCardsList();
+      renderLivePreview();
+    }
+
+    if ($('btn-insert-video')) {
+      $('btn-insert-video').addEventListener('click', function () {
+        var videoUrl = prompt('Enter YouTube, Vimeo, or Video URL (leave blank for demo):') || '';
+        appendBlockToActiveCard(generateVideoBlock(videoUrl));
+      });
+    }
+
+    if ($('btn-insert-audio')) {
+      $('btn-insert-audio').addEventListener('click', function () {
+        var audioUrl = prompt('Enter Audio / Podcast MP3 URL (leave blank for demo):') || '';
+        var title = prompt('Enter Track / Audio Title:') || 'Target Listening Clip';
+        appendBlockToActiveCard(generateAudioBlock(audioUrl, title));
+      });
+    }
+
+    if ($('btn-insert-links')) {
+      $('btn-insert-links').addEventListener('click', function () {
+        appendBlockToActiveCard(generateLinkBlock());
+      });
+    }
+
+    if ($('btn-insert-questions')) {
+      $('btn-insert-questions').addEventListener('click', function () {
+        appendBlockToActiveCard(generateQuestionsBlock());
+      });
+    }
+
+    if ($('btn-insert-callout')) {
+      $('btn-insert-callout').addEventListener('click', function () {
+        appendBlockToActiveCard(generateCalloutBlock());
+      });
+    }
+
     // Session Switcher / Loader
     var picker = $('session-picker-select');
     if (picker) {
@@ -1054,6 +1183,11 @@
   return {
     isFounderRole: isFounderRole,
     createDefaultSession: createDefaultSession,
+    generateVideoBlock: generateVideoBlock,
+    generateAudioBlock: generateAudioBlock,
+    generateLinkBlock: generateLinkBlock,
+    generateQuestionsBlock: generateQuestionsBlock,
+    generateCalloutBlock: generateCalloutBlock,
     KNOWN_SESSIONS: KNOWN_SESSIONS,
     getState: function () { return state; },
     init: init,

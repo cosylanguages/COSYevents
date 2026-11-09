@@ -50,18 +50,55 @@ for (const sample of Studio.KNOWN_SESSIONS) {
 }
 console.log('PASS: All studio session templates strictly conform to session.schema.json.\n');
 
-// 3. Verify HTML & CSS files exist and contain required markers
+// 3. Media & Interactive Block Generators Validation
+console.log('Test 3: Media and Block Generators Validation');
+const videoBlock = Studio.generateVideoBlock('https://www.youtube.com/watch?v=example');
+assert.ok(videoBlock.includes('card-video-box'), 'video block contains card-video-box');
+assert.ok(videoBlock.includes('iframe'), 'video block contains responsive iframe');
+
+const audioBlock = Studio.generateAudioBlock('https://example.com/audio.mp3', 'Listening Quiz');
+assert.ok(audioBlock.includes('card-audio-box'), 'audio block contains card-audio-box');
+assert.ok(audioBlock.includes('<audio class="card-audio-player"'), 'audio block contains audio element');
+
+const linkBlock = Studio.generateLinkBlock();
+assert.ok(linkBlock.includes('card-links-box'), 'link block contains card-links-box');
+assert.ok(linkBlock.includes('card-link-item'), 'link block contains clickable links');
+
+const questionsBlock = Studio.generateQuestionsBlock();
+assert.ok(questionsBlock.includes('<ol>'), 'questions block contains numbered list');
+
+const calloutBlock = Studio.generateCalloutBlock();
+assert.ok(calloutBlock.includes('card-callout-box'), 'callout block contains callout box');
+
+// Test that session with all media blocks inserted still passes schema validation
+const richSession = Studio.createDefaultSession();
+richSession.activities[0].content = `${richSession.activities[0].content}\n\n${videoBlock}\n\n${audioBlock}\n\n${linkBlock}\n\n${calloutBlock}`;
+const isRichValid = validate(richSession);
+if (!isRichValid) {
+  console.error('Schema validation error for rich media session:', validate.errors);
+}
+assert.strictEqual(isRichValid, true, 'Session with rich media blocks conforms to session.schema.json');
+console.log('PASS: Media blocks generated properly and schema valid.\n');
+
+// 4. Verify HTML & CSS files exist and contain required markers
 console.log('Test 3: Studio HTML & CSS Asset Integrity');
 const htmlContent = fs.readFileSync(path.join(__dirname, '../studio.html'), 'utf8');
 assert.ok(htmlContent.includes('styles/studio.css'), 'studio.html links to styles/studio.css');
 assert.ok(htmlContent.includes('shared/js/studio.js'), 'studio.html loads shared/js/studio.js');
 assert.ok(htmlContent.includes('id="btn-save-session"'), 'studio.html contains save session button');
+assert.ok(htmlContent.includes('id="btn-insert-video"'), 'studio.html contains insert video button');
+assert.ok(htmlContent.includes('id="btn-insert-audio"'), 'studio.html contains insert audio button');
+assert.ok(htmlContent.includes('id="btn-insert-links"'), 'studio.html contains insert links button');
 assert.ok(htmlContent.includes('id="cards-nav-list"'), 'studio.html contains cards outline list');
 assert.ok(htmlContent.includes('id="preview-slide-canvas"'), 'studio.html contains live preview canvas');
 assert.ok(htmlContent.includes('id="lock-banner"'), 'studio.html contains lock notice banner');
 
 const cssContent = fs.readFileSync(path.join(__dirname, '../styles/studio.css'), 'utf8');
 assert.ok(cssContent.includes('.studio-workspace'), 'styles/studio.css styles workspace 3-pane layout');
+assert.ok(cssContent.includes('.card-video-box'), 'styles/studio.css styles card-video-box');
+assert.ok(cssContent.includes('.card-audio-box'), 'styles/studio.css styles card-audio-box');
+assert.ok(cssContent.includes('.card-links-box'), 'styles/studio.css styles card-links-box');
+assert.ok(cssContent.includes('.block-toolbar-box'), 'styles/studio.css styles block-toolbar-box');
 assert.ok(cssContent.includes('.card-thumb-item'), 'styles/studio.css styles card thumbnails');
 assert.ok(cssContent.includes('.slide-canvas'), 'styles/studio.css styles preview slide canvas');
 assert.ok(cssContent.includes('.lock-banner'), 'styles/studio.css styles lock banner');

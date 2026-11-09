@@ -613,6 +613,57 @@ body.has-lock-banner .studio-workspace {
   display: none !important;
 }
 
+/* Block Inserter Toolbar */
+.block-toolbar-box {
+  background: var(--st-sunken);
+  border: 1px solid var(--st-line);
+  border-radius: var(--st-radius);
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+
+.block-toolbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.block-toolbar-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--st-ink-secondary);
+}
+
+.block-toolbar-hint {
+  font-size: 0.72rem;
+  color: var(--st-ink-muted);
+}
+
+.block-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.btn-tool {
+  background: var(--st-surface);
+  border: 1px solid var(--st-line-strong);
+  padding: 5px 9px;
+  font-size: 0.78rem;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.btn-tool:hover:not(:disabled) {
+  background: var(--st-primary-soft);
+  border-color: var(--st-primary);
+  color: var(--st-primary-ink);
+  transform: translateY(-1px);
+}
+
 /* Form controls inside center editor */
 .form-group {
   margin-bottom: 14px;
@@ -801,6 +852,148 @@ textarea.form-control {
 
 .slide-content-body strong {
   color: var(--st-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Rich Media & Pedagogical Blocks inside Live Preview
+   -------------------------------------------------------------------------- */
+.card-video-box {
+  margin: 14px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000000;
+  border: 1px solid var(--st-line);
+  box-shadow: var(--st-shadow-sm);
+}
+
+.card-video-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+}
+
+.card-video-responsive iframe,
+.card-video-responsive video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.card-video-disclaimer {
+  padding: 6px 10px;
+  background: var(--st-chrome);
+  font-size: 0.72rem;
+  color: var(--st-ink-muted);
+  font-style: italic;
+  border-top: 1px solid var(--st-line);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-audio-box {
+  margin: 14px 0;
+  background: var(--st-primary-soft);
+  border: 1.5px solid var(--st-primary);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.card-audio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-audio-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--st-primary-ink);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-audio-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: var(--st-primary);
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.card-audio-player {
+  width: 100%;
+  height: 36px;
+  outline: none;
+}
+
+.card-links-box {
+  margin: 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--st-surface);
+  border: 1px solid var(--st-line);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--st-ink);
+  transition: all 0.15s ease;
+}
+
+.card-link-item:hover {
+  border-color: var(--st-accent);
+  background: var(--st-accent-soft);
+  transform: translateX(2px);
+}
+
+.card-link-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-link-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--st-accent);
+}
+
+.card-link-desc {
+  font-size: 0.74rem;
+  color: var(--st-ink-muted);
+}
+
+.card-callout-box {
+  margin: 14px 0;
+  padding: 12px 14px;
+  background: var(--st-warn-soft);
+  border-left: 4px solid var(--st-warn-border);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.88rem;
+}
+
+.card-callout-title {
+  font-weight: 700;
+  color: var(--st-warn-ink);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .slide-sources-box {

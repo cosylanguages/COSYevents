@@ -162,13 +162,41 @@
 
           <div class="form-group">
             <label for="textarea-card-instructions" class="form-label">Instructions (Shown to Facilitator &amp; Students)</label>
-            <textarea id="textarea-card-instructions" class="form-control" rows="3" placeholder="Describe the goal and steps for this breakout room or activity..."></textarea>
+            <textarea id="textarea-card-instructions" class="form-control" rows="2" placeholder="Describe the goal and steps for this breakout room or activity..."></textarea>
+          </div>
+
+          <!-- Professional Block Inserter Toolbar -->
+          <div class="block-toolbar-box">
+            <div class="block-toolbar-header">
+              <span class="block-toolbar-title">⚡ Insert Useful Blocks:</span>
+              <span class="block-toolbar-hint">Click to append ready-to-use pedagogical blocks into this card</span>
+            </div>
+            <div class="block-toolbar-actions">
+              <button type="button" id="btn-insert-video" class="btn btn-sm btn-tool" title="Embed YouTube, Vimeo, or MP4 video clip">
+                🎬 <strong>+ Video Embed</strong>
+              </button>
+              <button type="button" id="btn-insert-audio" class="btn btn-sm btn-tool" title="Embed audio player, podcast, or pronunciation stream">
+                🎧 <strong>+ Audio Player</strong>
+              </button>
+              <button type="button" id="btn-insert-links" class="btn btn-sm btn-tool" title="Add curated resource and reading links">
+                🔗 <strong>+ Resource Links</strong>
+              </button>
+              <button type="button" id="btn-insert-questions" class="btn btn-sm btn-tool" title="Add numbered discussion questions with bold key phrases">
+                💬 <strong>+ Discussion Prompts</strong>
+              </button>
+              <button type="button" id="btn-insert-callout" class="btn btn-sm btn-tool" title="Add pedagogical callout / useful language card">
+                💡 <strong>+ Useful Language</strong>
+              </button>
+            </div>
           </div>
 
           <div class="form-group">
-            <label for="textarea-card-content" class="form-label">Card Content &amp; Discussion Questions (HTML / Text)</label>
-            <textarea id="textarea-card-content" class="form-control" rows="11" placeholder="<ol>&#10;  <li>Question 1: <strong>How do you feel?</strong></li>&#10;  <li>Question 2: <em>Follow-up question...</em></li>&#10;</ol>"></textarea>
-            <small style="color: var(--st-ink-muted); display: block; margin-top: 4px;">Supports HTML tags (e.g., &lt;ol&gt;, &lt;li&gt;, &lt;strong&gt;, &lt;em&gt;) or plain text.</small>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+              <label for="textarea-card-content" class="form-label" style="margin-bottom: 0;">Card Content &amp; Media Blocks (HTML / Text)</label>
+              <span style="font-size: 0.74rem; color: var(--st-ink-muted);">Auto-rendered in Live Preview →</span>
+            </div>
+            <textarea id="textarea-card-content" class="form-control" rows="12" placeholder="<ol>&#10;  <li>Question 1: <strong>How do you feel?</strong></li>&#10;  <li>Question 2: <em>Follow-up question...</em></li>&#10;</ol>"></textarea>
+            <small style="color: var(--st-ink-muted); display: block; margin-top: 4px;">Supports videos (&lt;div class=&quot;card-video-box&quot;&gt;), audios (&lt;audio controls&gt;), resource links, callouts, and questions.</small>
           </div>
 
           <div class="card-actions-bar">
