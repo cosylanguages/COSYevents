@@ -3944,7 +3944,7 @@
     "theme_area": "Society",
     "sub_topic": "Evolution & Family",
     "topic_detail": "Evolutionary Grandmother Mystery",
-    "article_url": "https://youtu.be/iKLwzmjfcW4?is=1l2lHNLpRdMBvJjZ"
+    "article_url": "https://doi.org/10.1038/s41586-024-07159-9"
   },
   {
     "title": "The Most Creative Time Ever : COSYlanguages",
@@ -3956,7 +3956,7 @@
     "theme_area": "Society",
     "sub_topic": "Creative Economy",
     "topic_detail": "Creative Economy & Media",
-    "article_url": "https://youtu.be/-9y7OGNmqQw?is=eWcoEDp2xbB6-9-D"
+    "article_url": "https://www.sciencedaily.com/releases/2026/01/260125083356.htm"
   },
   {
     "title": "The Secret Language Behind Animal Cooperation : COSYlanguages",
@@ -6130,15 +6130,14 @@
   },
   {
     "title": "Влияние пропаганды на детей : COSYlanguages",
-    "href": "ru/sessions/keeping-up-with-science/vliyanie-propagandy-deti.html",
-    "level": "B1",
+    "href": "ru/sessions/mind-matters/vliyanie-propagandy-deti.html",
+    "level": "C1",
     "lang": "Russian",
-    "club": "Keeping Up with Science",
+    "club": "Mind Matters",
     "format": "Speaking Club",
-    "theme_area": "Society",
-    "sub_topic": "Childhood & Social Psychology",
-    "topic_detail": "Propaganda & Children",
-    "article_url": "https://youtu.be/YMrSF8_OSGk?is=9-HrTRr3cV-lJcZd"
+    "theme_area": "Cognition & Behavior",
+    "sub_topic": "Social Psychology & Media",
+    "topic_detail": "Propaganda & Children"
   },
   {
     "title": "День простоты (A1) : COSYlanguages",
@@ -6469,18 +6468,6 @@
     "theme_area": "Identity & Self",
     "sub_topic": "Self-Reflection & Soul",
     "topic_detail": "Existential Inquiries"
-  },
-  {
-    "title": "Comptes d'usurpation d'identité : COSYlanguages",
-    "href": "fr/sessions/keeping-up-with-science/impersonation-accounts.html",
-    "level": "B1",
-    "lang": "French",
-    "club": "Keeping Up with Science",
-    "format": "Speaking Club",
-    "theme_area": "Tech",
-    "sub_topic": "Cybersecurity",
-    "topic_detail": "Digital Impersonation",
-    "article_url": "https://www.sciencedaily.com/releases/2026/05/260515112030.htm"
   },
   {
     "title": "Diwali (B1) : COSYlanguages",

@@ -80,9 +80,18 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.html'))) {
   const linkRegex = /<a\s+[^>]*href=\"([^\"]+)\"[^>]*>([\s\S]*?)<\/a>/gi;
   let m;
   while ((m = linkRegex.exec(content)) !== null) {
-    if (m[1].includes('sciencedaily.com') || m[1].includes('nature.com') || m[1].includes('sciencefocus.com') || m[1].includes('youtu')) {
+    if (m[1].includes('sciencedaily.com') || m[1].includes('nature.com') || m[1].includes('sciencefocus.com') || m[1].includes('doi.org')) {
       articleUrls[f] = m[1];
       break;
+    }
+  }
+  if (!articleUrls[f]) {
+    linkRegex.lastIndex = 0;
+    while ((m = linkRegex.exec(content)) !== null) {
+      if (m[1].includes('youtu')) {
+        articleUrls[f] = m[1];
+        break;
+      }
     }
   }
 }
