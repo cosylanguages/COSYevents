@@ -2291,13 +2291,7 @@
           alertFounderRequired();
           return;
         }
-        // Save session locally / prompt confirmation
-        var statusBadge = $('studio-status-badge');
-        if (statusBadge) {
-          statusBadge.textContent = 'Saved';
-          statusBadge.className = 'status-badge published';
-        }
-        alert('Session saved successfully! You can download the session JSON to commit to events/' + (state.session.event || 'event') + '/sessions/' + (state.session.slug || 'slug') + '.json');
+        openPublishDialog();
       });
     }
 
@@ -2412,6 +2406,7 @@
 
   function init() {
     bindEvents();
+    bindPublishDialog();
     checkAuthRole();
     if (typeof window !== 'undefined' && window.CosyAuth && typeof window.CosyAuth.onChange === 'function') {
       window.CosyAuth.onChange(onAuthChanged);
@@ -2427,6 +2422,294 @@
     }
   }
 
+
+  // ---- Repository publishing -------------------------------------------
+  // The public session renderer shows text only (textContent), and every
+  // committed file is public. So publishing converts the studio's rich HTML to
+  // plain lines, keeps only schema fields, and reports anything that blocks it.
+
+  var CEFR_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+  var SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+  var VOCAB_ID_RE = /^[a-z]{2}:[a-z0-9-]+:[a-z0-9-]+$/;
+
+  function decodeEntities(text) {
+    return String(text)
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;|&apos;/g, "'")
+      .replace(/&amp;/g, '&');
+  }
+
+  function httpsUrlsIn(html) {
+    var urls = [];
+    var re = /\b(?:href|src)\s*=\s*"(https:\/\/[^"\s]+)"/gi;
+    var m;
+    while ((m = re.exec(html)) !== null) {
+      var u = decodeEntities(m[1]);
+      if (urls.indexOf(u) === -1) urls.push(u);
+    }
+    return urls;
+  }
+
+  /**
+   * Studio HTML -> plain text lines. Block elements and list items become
+   * lines, every other tag is dropped, and https media/link URLs are kept as
+   * "Link: <url>" lines because the public page cannot embed them.
+   */
+  function htmlToPlainText(html) {
+    if (typeof html !== 'string' || !html.trim()) return '';
+    var urls = httpsUrlsIn(html);
+    var text = html
+      .replace(/<(script|style)[\s\S]*?<\/\1>/gi, '')
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/<\/(p|div|li|ol|ul|h[1-6]|tr|section|article|blockquote)>/gi, '\n')
+      .replace(/<(li|p|div|h[1-6]|tr|section|article|blockquote)(\s[^>]*)?>/gi, '\n')
+      .replace(/<[^>]*>/g, '');
+    var lines = decodeEntities(text)
+      .split('\n')
+      .map(function (l) { return l.replace(/\s+/g, ' ').trim(); })
+      .filter(Boolean);
+    urls.forEach(function (u) { lines.push('Link: ' + u); });
+    return lines.join('\n');
+  }
+
+  function cleanHttpsUrl(value) {
+    if (typeof value !== 'string' || !value.trim()) return null;
+    try {
+      var u = new URL(value.trim());
+      return u.protocol === 'https:' ? u.href : null;
+    } catch (e) { return null; }
+  }
+
+  /**
+   * Problems that block publishing. Returns [{ level: 'error'|'warn', field, message }].
+   * Errors must be fixed; warnings are shown but do not block.
+   */
+  function validateForPublish(session) {
+    var out = [];
+    var err = function (field, message) { out.push({ level: 'error', field: field, message: message }); };
+    var warn = function (field, message) { out.push({ level: 'warn', field: field, message: message }); };
+    if (!session || typeof session !== 'object') { err('session', 'There is no session to publish.'); return out; }
+
+    if (!SLUG_RE.test(String(session.slug || ''))) err('slug', 'Slug must be lowercase letters, numbers and single hyphens.');
+    if (!SLUG_RE.test(String(session.event || ''))) err('event', 'Choose the event this session belongs to.');
+    if (!String(session.title || '').trim()) err('title', 'Add a title.');
+    if (!String(session.summary || '').trim()) err('summary', 'Add a short summary.');
+    if (!String(session.host || '').trim()) err('host', 'Add a host.');
+    if (!String(session.theme || '').trim()) err('theme', 'Add a theme.');
+    if (!String(session.language || '').trim()) err('language', 'Add a language.');
+    if (CEFR_LEVELS.indexOf(String(session.level || '').toUpperCase()) === -1) err('level', 'Level must be one of A1, A2, B1, B2, C1, C2.');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(String(session.date || '')) || isNaN(Date.parse(session.date))) err('date', 'Pick a valid date.');
+
+    var acts = Array.isArray(session.activities) ? session.activities : [];
+    if (!acts.length) err('activities', 'Add at least one activity.');
+    acts.forEach(function (a, i) {
+      var n = i + 1;
+      if (!a || !String(a.title || '').trim()) err('activities', 'Activity ' + n + ' needs a title.');
+      if (a && !htmlToPlainText(a.content || '') && !String(a.instructions || '').trim()) {
+        err('activities', 'Activity ' + n + ' has no content.');
+      }
+      if (a && /<(iframe|audio|video)\b/i.test(a.content || '')) {
+        warn('activities', 'Activity ' + n + ' has embedded media. The public page shows it as a link, not a player.');
+      }
+    });
+
+    var vocab = Array.isArray(session.vocabulary) ? session.vocabulary : [];
+    vocab.forEach(function (v, i) {
+      if (!v || !String(v.word || '').trim()) err('vocabulary', 'Vocabulary item ' + (i + 1) + ' needs a word.');
+      else if (!String(v.example || '').trim()) err('vocabulary', 'Vocabulary item "' + v.word + '" needs an example sentence.');
+    });
+    if (!vocab.length) warn('vocabulary', 'No vocabulary yet.');
+
+    if (/soundhelix\.com|dQw4w9WgXcQ/i.test(JSON.stringify(session))) {
+      warn('content', 'Contains demo media from a template (SoundHelix audio or the placeholder video). Replace it before publishing.');
+    }
+    var tagged = JSON.stringify(session).match(/(secret|gated|facilitator[- ]only|do not publish)/i);
+    if (tagged) warn('content', 'The text mentions "' + tagged[0] + '". Everything published is public. Check nothing private is included.');
+    return out;
+  }
+
+  /**
+   * The repository form of a studio session: exactly the schema's fields,
+   * plain-text activity content, valid vocabulary ids, https-only URLs.
+   * Call validateForPublish first; this assumes the session passes.
+   */
+  function toRepositorySession(session) {
+    var s = session || {};
+    var level = String(s.level || '').toUpperCase();
+    var lang = String(s.language || 'English');
+    var out = {
+      slug: String(s.slug || ''),
+      event: String(s.event || ''),
+      title: String(s.title || '').trim(),
+      theme: String(s.theme || '').trim(),
+      language: lang,
+      level: level,
+      date: String(s.date || ''),
+      host: String(s.host || '').trim(),
+      summary: String(s.summary || '').trim(),
+      activities: (s.activities || []).map(function (a, i) {
+        return {
+          type: String(a.type || 'activity'),
+          title: String(a.title || 'Activity ' + (i + 1)).trim(),
+          instructions: String(a.instructions || '').trim(),
+          content: htmlToPlainText(a.content || '')
+        };
+      }),
+      vocabulary: (s.vocabulary || []).map(function (v) {
+        var vl = String(v.level || level).toUpperCase();
+        var item = {
+          word: String(v.word || '').trim(),
+          example: String(v.example || '').trim(),
+          level: CEFR_LEVELS.indexOf(vl) === -1 ? level : vl
+        };
+        if (typeof v.id === 'string' && VOCAB_ID_RE.test(v.id)) item.id = v.id;
+        ['pos', 'definition', 'translation', 'primary_theme', 'sub_theme'].forEach(function (k) {
+          if (typeof v[k] === 'string' && v[k].trim()) item[k] = v[k].trim();
+        });
+        return item;
+      })
+    };
+    if (typeof s.full_notes === 'string' && s.full_notes.trim()) out.full_notes = s.full_notes;
+    var rec = cleanHttpsUrl(s.recording_url);
+    if (rec) out.recording_url = rec;
+    var sources = (Array.isArray(s.sources) ? s.sources : []).map(function (src) {
+      var url = cleanHttpsUrl(src && (src.source_url || src.url));
+      return url ? { source_title: String((src.source_title || src.title || url)), source_url: url } : null;
+    }).filter(Boolean);
+    if (sources.length) out.sources = sources;
+    return out;
+  }
+
+
+  // ---- Publish dialog ----------------------------------------------------
+
+  var WORKFLOW_INPUT_LIMIT = 60000; // GitHub caps a workflow input at about 65,000 characters
+
+  function currentSessionJson() {
+    return JSON.stringify(state.session, null, 2);
+  }
+
+  function setPublishStatus(text, isError) {
+    var el = $('publish-status');
+    if (!el) return;
+    el.textContent = text || '';
+    el.style.color = isError ? 'var(--st-err-ink, #b42318)' : 'var(--st-ok-ink)';
+  }
+
+  function copyText(text) {
+    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      document.body.removeChild(ta);
+      ok ? resolve() : reject(new Error('copy failed'));
+    });
+  }
+
+  function downloadSessionJson() {
+    var blob = new Blob([currentSessionJson()], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = (state.session.slug || 'session') + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  function renderPublishChecks(problems) {
+    var list = $('publish-checks');
+    if (!list) return;
+    while (list.firstChild) list.removeChild(list.firstChild);
+    if (!problems.length) {
+      var ok = document.createElement('li');
+      ok.textContent = '✓ Ready to publish. No problems found.';
+      ok.style.color = 'var(--st-ok-ink)';
+      list.appendChild(ok);
+      return;
+    }
+    problems.forEach(function (p) {
+      var li = document.createElement('li');
+      li.textContent = (p.level === 'error' ? '✕ ' : '! ') + p.message;
+      li.style.color = p.level === 'error' ? 'var(--st-err-ink, #b42318)' : 'var(--st-warn-ink)';
+      li.style.marginBottom = '4px';
+      list.appendChild(li);
+    });
+  }
+
+  function updatePublishCli() {
+    var club = ($('input-publish-club') && $('input-publish-club').value.trim()) || '<club>';
+    var cli = $('publish-cli');
+    if (cli) cli.textContent = 'npm run session:publish -- ' + (state.session.slug || 'session') + '.json --club ' + club;
+  }
+
+  function openPublishDialog() {
+    var modal = $('publish-modal');
+    if (!modal) return;
+    var problems = validateForPublish(state.session);
+    var blocked = problems.some(function (p) { return p.level === 'error'; });
+    renderPublishChecks(problems);
+    setPublishStatus('');
+
+    var steps = $('publish-steps');
+    if (steps) { if (blocked) steps.setAttribute('hidden', ''); else steps.removeAttribute('hidden'); }
+    var copyBtn = $('btn-publish-copy');
+    var dlBtn = $('btn-publish-download');
+    if (copyBtn) copyBtn.disabled = blocked;
+    if (dlBtn) dlBtn.disabled = blocked;
+
+    var note = $('publish-size-note');
+    if (note) {
+      var tooBig = !blocked && currentSessionJson().length > WORKFLOW_INPUT_LIMIT;
+      note.textContent = tooBig
+        ? 'This session is too large to paste into GitHub. Download the JSON and use the terminal command instead.'
+        : '';
+      if (tooBig) note.removeAttribute('hidden'); else note.setAttribute('hidden', '');
+      if (copyBtn && tooBig) copyBtn.disabled = true;
+    }
+    updatePublishCli();
+    modal.removeAttribute('hidden');
+  }
+
+  function closePublishDialog() {
+    var modal = $('publish-modal');
+    if (modal) modal.setAttribute('hidden', '');
+  }
+
+  function bindPublishDialog() {
+    if ($('btn-close-publish-modal')) $('btn-close-publish-modal').addEventListener('click', closePublishDialog);
+    if ($('publish-modal')) {
+      $('publish-modal').addEventListener('click', function (e) { if (e.target === $('publish-modal')) closePublishDialog(); });
+    }
+    if ($('input-publish-club')) $('input-publish-club').addEventListener('input', updatePublishCli);
+    if ($('btn-publish-download')) $('btn-publish-download').addEventListener('click', function () {
+      if (!state.isFounder) { alertFounderRequired(); return; }
+      downloadSessionJson();
+      setPublishStatus('Downloaded ' + (state.session.slug || 'session') + '.json');
+    });
+    if ($('btn-publish-copy')) $('btn-publish-copy').addEventListener('click', function () {
+      if (!state.isFounder) { alertFounderRequired(); return; }
+      copyText(currentSessionJson()).then(function () {
+        setPublishStatus('Copied. Paste it into the GitHub workflow.');
+      }).catch(function () {
+        setPublishStatus('Could not copy. Use Download JSON instead.', true);
+      });
+    });
+  }
+
   if (typeof document !== 'undefined') {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', init);
@@ -2437,6 +2720,9 @@
 
   return {
     isFounderRole: isFounderRole,
+    htmlToPlainText: htmlToPlainText,
+    validateForPublish: validateForPublish,
+    toRepositorySession: toRepositorySession,
     createDefaultSession: createDefaultSession,
     createStandardFiveStageSession: createStandardFiveStageSession,
     createScienceClubSession: createScienceClubSession,

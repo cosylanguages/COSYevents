@@ -106,7 +106,7 @@
       </div>
 
       <!-- Save / Publish Button -->
-      <button type="button" id="btn-save-session" class="btn btn-save" title="Save session changes (Founder only)">
+      <button type="button" id="btn-save-session" class="btn btn-save" title="Publish session (Founder only)">
         <span>Сохранить</span>
       </button>
 
@@ -553,6 +553,42 @@
           <button type="submit" id="btn-auth-submit" class="btn btn-primary">Send Login Code</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Publish Session Modal -->
+  <div id="publish-modal" class="modal-backdrop" hidden>
+    <div class="modal-card modal-card-lg" role="dialog" aria-modal="true" aria-labelledby="publish-modal-title">
+      <div class="modal-header">
+        <h3 id="publish-modal-title">Publish session</h3>
+        <button type="button" id="btn-close-publish-modal" class="btn btn-ghost btn-sm" aria-label="Close">✕</button>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--st-ink-secondary); margin-bottom: 12px;">
+        Sessions are published through the repository, so they are reviewed before going live.
+        Everything published is public.
+      </p>
+      <ul id="publish-checks" style="list-style: none; padding: 0; margin: 0 0 14px; font-size: 0.88rem;"></ul>
+      <div id="publish-steps" hidden>
+        <div class="form-group">
+          <label for="input-publish-club" class="form-label">Club folder (under sessions/)</label>
+          <input type="text" id="input-publish-club" class="form-control" placeholder="mind-matters" autocomplete="off">
+        </div>
+        <ol style="font-size: 0.88rem; padding-left: 20px; margin: 0 0 12px; line-height: 1.6;">
+          <li><strong>Copy session JSON</strong> below.</li>
+          <li>Open <a id="link-publish-workflow" href="https://github.com/cosylanguages/cosyevents/actions/workflows/publish-session.yml" target="_blank" rel="noopener">Publish Studio Session</a> on GitHub, choose <em>Run workflow</em>, paste the JSON and the club folder.</li>
+          <li>Review and merge the pull request it opens.</li>
+        </ol>
+        <p id="publish-size-note" style="font-size: 0.82rem; color: var(--st-warn-ink); margin: 0 0 10px;" hidden></p>
+        <details style="font-size: 0.82rem; margin-bottom: 8px;">
+          <summary>Prefer the terminal?</summary>
+          <code id="publish-cli" style="display: block; margin-top: 6px; word-break: break-all;"></code>
+        </details>
+      </div>
+      <div id="publish-status" role="status" style="font-size: 0.82rem; font-weight: 600; min-height: 1.2em; margin-bottom: 10px;"></div>
+      <div class="modal-footer">
+        <button type="button" id="btn-publish-download" class="btn" disabled>Download JSON</button>
+        <button type="button" id="btn-publish-copy" class="btn btn-primary" disabled>Copy session JSON</button>
+      </div>
     </div>
   </div>
 
