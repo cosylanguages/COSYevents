@@ -63,35 +63,35 @@ function filterSessions(data, { searchQuery = '', selectedLang = 'ALL', selected
 
 // 1. Test Event Types
 const allTypes = filterSessions(sessions, { selectedType: 'ALL' });
-assert.strictEqual(allTypes.length, 651, 'All types should return all sessions');
+assert.strictEqual(allTypes.length, sessions.length, 'All types should return all sessions');
 
 const speakingClubs = filterSessions(sessions, { selectedType: 'Speaking Club' });
-assert.strictEqual(speakingClubs.length, 386, 'Speaking Club count mismatch');
+assert.strictEqual(speakingClubs.length, sessions.filter(s => s.format === 'Speaking Club').length, 'Speaking Club count mismatch');
 assert.ok(speakingClubs.every(s => s.format === 'Speaking Club'), 'Every item must be Speaking Club');
 
 const cinema = filterSessions(sessions, { selectedType: 'Cinema Club' });
-assert.strictEqual(cinema.length, 113, 'Cinema Club count mismatch');
+assert.strictEqual(cinema.length, sessions.filter(s => s.format === 'Cinema Club').length, 'Cinema Club count mismatch');
 assert.ok(cinema.every(s => s.format === 'Cinema Club'), 'Every item must be Cinema Club');
 
 const karaoke = filterSessions(sessions, { selectedType: 'Karaoke Club' });
-assert.strictEqual(karaoke.length, 142, 'Karaoke Club count mismatch');
+assert.strictEqual(karaoke.length, sessions.filter(s => s.format === 'Karaoke Club').length, 'Karaoke Club count mismatch');
 assert.ok(karaoke.every(s => s.format === 'Karaoke Club'), 'Every item must be Karaoke Club');
 
 const longReads = filterSessions(sessions, { selectedType: 'Long Read' });
-assert.strictEqual(longReads.length, 4, 'Long Read count mismatch');
+assert.strictEqual(longReads.length, sessions.filter(s => s.format === 'Long Read').length, 'Long Read count mismatch');
 assert.ok(longReads.every(s => s.format === 'Long Read'), 'Every item must be Long Read');
 
 const games = filterSessions(sessions, { selectedType: 'Games' });
-assert.strictEqual(games.length, 6, 'Games count mismatch');
+assert.strictEqual(games.length, sessions.filter(s => s.format === 'Games').length, 'Games count mismatch');
 assert.ok(games.every(s => s.format === 'Games'), 'Every item must be Games');
 
 // 2. Test Speaking Club Sub-selection
 const scienceClub = filterSessions(sessions, { selectedType: 'Speaking Club', selectedSpeakingClub: 'Keeping Up with Science' });
-assert.strictEqual(scienceClub.length, 59, 'Keeping Up with Science count mismatch');
+assert.strictEqual(scienceClub.length, sessions.filter(s => s.format === 'Speaking Club' && s.club === 'Keeping Up with Science').length, 'Keeping Up with Science count mismatch');
 assert.ok(scienceClub.every(s => s.club === 'Keeping Up with Science'), 'Every item must be Keeping Up with Science');
 
 const wonderClub = filterSessions(sessions, { selectedType: 'Speaking Club', selectedSpeakingClub: "I Couldn't Help But Wonder" });
-assert.strictEqual(wonderClub.length, 60, "I Couldn't Help But Wonder count mismatch");
+assert.strictEqual(wonderClub.length, sessions.filter(s => s.format === 'Speaking Club' && s.club === "I Couldn't Help But Wonder").length, "I Couldn't Help But Wonder count mismatch");
 
 // 3. Test Level Filtering
 const a0a1 = filterSessions(sessions, { selectedLevel: 'A0-A1' });
@@ -116,7 +116,7 @@ assert.ok(c1c2.every(s => /\b(C1|C2)\b/.test(s.level)), 'C1-C2 level regex check
 
 // 4. Test Combinations: Games + Level
 const gamesA2 = filterSessions(sessions, { selectedType: 'Games', selectedLevel: 'A2' });
-assert.strictEqual(gamesA2.length, 3, 'Games with A2 level mismatch');
+assert.strictEqual(gamesA2.length, sessions.filter(s => s.format === 'Games' && /\bA2\b/.test(s.level)).length, 'Games with A2 level mismatch');
 
 // Speaking Club + Wonder + B1
 const wonderB1 = filterSessions(sessions, { selectedType: 'Speaking Club', selectedSpeakingClub: "I Couldn't Help But Wonder", selectedLevel: 'B1' });
