@@ -170,4 +170,12 @@ assert.ok(cssContent.includes('.slide-canvas'), 'styles/studio.css styles previe
 assert.ok(cssContent.includes('.lock-banner'), 'styles/studio.css styles lock banner');
 console.log('PASS: Studio HTML & CSS files are complete and properly configured.\n');
 
+// Auth regression: founder access must never come from the browser or a failed login.
+console.log('Test: studio never grants founder access from localStorage or a simulated login');
+const studioSrc = fs.readFileSync(path.join(__dirname, '../shared/js/studio.js'), 'utf8');
+assert.ok(!/simulateFounderLogin/.test(studioSrc), 'no simulated founder login');
+assert.ok(!/localStorage\.(get|set)Item\(\s*['"]cosy_user/.test(studioSrc), 'studio must not read or write a role in localStorage');
+assert.ok(!/userRole\s*=\s*['"]founder['"]/.test(studioSrc), 'founder role must never be assigned as a literal');
+console.log('PASS: studio auth is session-verified only.\n');
+
 console.log('All COSYevents Studio tests passed successfully! ✅');
