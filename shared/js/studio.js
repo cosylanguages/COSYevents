@@ -1216,7 +1216,7 @@
     });
   }
 
-  // Detect and synchronize user role from CosyAuth, Supabase, or localStorage
+  // Detect and synchronize user role from the verified CosyAuth session
   function checkAuthRole() {
     if (typeof window === 'undefined') return;
 
@@ -1236,26 +1236,10 @@
       }
     }
 
-    // 2. Check localStorage (cosy_user / cosy_user_role)
-    try {
-      var localRole = window.localStorage.getItem('cosy_user_role');
-      if (localRole && isFounderRole(localRole)) {
-        state.userRole = localRole;
-        applyRolePermissions();
-        return;
-      }
-      var rawUser = window.localStorage.getItem('cosy_user');
-      if (rawUser) {
-        var parsed = JSON.parse(rawUser);
-        if (parsed && isFounderRole(parsed.role)) {
-          state.userRole = parsed.role;
-          applyRolePermissions();
-          return;
-        }
-      }
-    } catch (e) {}
+    // No browser-stored role: localStorage can be written by anyone, so only the
+    // verified CosyAuth session may grant founder access.
 
-    // 3. Fallback to guest
+    // Fallback to guest
     state.userRole = 'guest';
     applyRolePermissions();
   }
@@ -2371,55 +2355,67 @@
               $('btn-auth-submit').textContent = 'Verify & Enter Studio';
               statusMsg.textContent = 'Code sent! Check your inbox.';
               statusMsg.style.color = 'var(--st-ok-ink)';
-            }).catch(function (err) {
-              // Dev/Offline simulated founder sign in for demo/testing
-              simulateFounderLogin(email);
+            }).catch(function () {
+              statusMsg.textContent = 'Could not send the login code. Check the address and try again.';
+              statusMsg.style.color = 'var(--st-err-ink, #b42318)';
             });
           } else {
-            simulateFounderLogin(email);
+            statusMsg.textContent = 'Sign-in is unavailable right now. Reload the page and try again.';
+            statusMsg.style.color = 'var(--st-err-ink, #b42318)';
           }
         } else {
           // Verify code
           var codeInput = $('input-auth-code');
           var code = codeInput ? codeInput.value.trim() : '';
+          var codeStatus = $('auth-status-msg');
           if (window.CosyAuth && typeof window.CosyAuth.verifyCode === 'function') {
             window.CosyAuth.verifyCode(state.authEmail, code).then(function () {
-              state.userRole = 'founder';
-              applyRolePermissions();
-              var modal = $('auth-modal');
-              if (modal) modal.setAttribute('hidden', '');
+              // The role is whatever the server says it is, never assumed here.
+              // The account role loads just after the code is accepted; the
+              // CosyAuth.onChange listener (see init) unlocks the studio, or
+              // reports a non-founder account, once it arrives.
+              if (codeStatus) {
+                codeStatus.textContent = 'Code accepted. Checking your account…';
+                codeStatus.style.color = 'var(--st-accent)';
+              }
+              checkAuthRole();
             }).catch(function () {
-              simulateFounderLogin(state.authEmail);
+              if (codeStatus) {
+                codeStatus.textContent = 'That code did not work. Check it and try again.';
+                codeStatus.style.color = 'var(--st-err-ink, #b42318)';
+              }
             });
-          } else {
-            simulateFounderLogin(state.authEmail);
+          } else if (codeStatus) {
+            codeStatus.textContent = 'Sign-in is unavailable right now. Reload the page and try again.';
+            codeStatus.style.color = 'var(--st-err-ink, #b42318)';
           }
         }
       });
     }
-
-    function simulateFounderLogin(email) {
-      state.userRole = 'founder';
-      state.userEmail = email;
-      try {
-        window.localStorage.setItem('cosy_user_role', 'founder');
-        window.localStorage.setItem('cosy_user', JSON.stringify({ email: email, role: 'founder' }));
-      } catch (e) {}
-      applyRolePermissions();
-      var modal = $('auth-modal');
-      if (modal) modal.setAttribute('hidden', '');
-      var statusBadge = $('studio-status-badge');
-      if (statusBadge) {
-        statusBadge.textContent = 'Founder Access Active';
-        statusBadge.className = 'status-badge published';
-      }
-    }
   }
 
   // Initialize studio
+  function onAuthChanged() {
+    var wasFounder = state.isFounder;
+    checkAuthRole();
+    var modal = $('auth-modal');
+    var msg = $('auth-status-msg');
+    if (state.isFounder) {
+      if (modal) modal.setAttribute('hidden', '');
+    } else if (modal && !modal.hasAttribute('hidden') && state.authStep === 'code' &&
+               window.CosyAuth && typeof window.CosyAuth.role === 'function' && window.CosyAuth.role() && msg) {
+      msg.textContent = 'You are signed in, but this account is not a founder account.';
+      msg.style.color = 'var(--st-err-ink, #b42318)';
+    }
+    return wasFounder;
+  }
+
   function init() {
     bindEvents();
     checkAuthRole();
+    if (typeof window !== 'undefined' && window.CosyAuth && typeof window.CosyAuth.onChange === 'function') {
+      window.CosyAuth.onChange(onAuthChanged);
+    }
     loadDraftFromStorage();
     pushHistory();
     syncFormFromState();
