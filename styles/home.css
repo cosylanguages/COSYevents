@@ -154,6 +154,244 @@
   text-decoration: underline;
 }
 
+/* Daily Spotlights Section */
+.daily-spotlights-section {
+  max-width: 1100px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 0 1rem;
+}
+
+.daily-spotlights-container {
+  background: var(--cosy-color-surface, #ffffff);
+  border: 1.5px solid var(--cosy-color-border, rgba(74, 107, 80, 0.16));
+  border-radius: var(--cosy-radius-xl, 28px);
+  padding: 2rem 2.25rem;
+  box-shadow: var(--cosy-shadow-sm, 0 2px 14px rgba(46, 74, 51, 0.06));
+}
+
+.daily-spotlights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.14));
+}
+
+.daily-spotlights-header-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.daily-spotlights-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cosy-color-sage, #416b49);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.daily-spotlights-heading {
+  font-family: var(--cosy-font-serif, serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
+  color: var(--cosy-color-ink, #2a2a2a);
+}
+
+.daily-spotlights-sub {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--cosy-color-muted, #5c5957);
+}
+
+.daily-spotlights-date-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--cosy-color-sage-mist, #f0f5f1);
+  color: var(--cosy-color-sage-deep, #233827);
+  border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.2));
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--cosy-radius-full, 100px);
+}
+
+.daily-spotlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 992px) {
+  .daily-spotlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .daily-spotlights-grid {
+    grid-template-columns: 1fr;
+  }
+  .daily-spotlights-container {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.daily-spotlight-card {
+  background: var(--cosy-color-surface, #ffffff);
+  border: 1.5px solid var(--cosy-color-border, rgba(74, 107, 80, 0.14));
+  border-radius: var(--cosy-radius-base, 18px);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.daily-spotlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--cosy-shadow-base, 0 6px 20px rgba(46, 74, 51, 0.10));
+}
+
+/* Category Accent Styles */
+.spotlight-card-celebration {
+  border-top: 4px solid #ba7517;
+}
+
+.spotlight-card-science {
+  border-top: 4px solid #1a7a4a;
+}
+
+.spotlight-card-music {
+  border-top: 4px solid #b83280;
+}
+
+.spotlight-card-film {
+  border-top: 4px solid #2b6cb0;
+}
+
+.spotlight-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.spotlight-category-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: nowrap;
+}
+
+.spotlight-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.spotlight-category-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cosy-color-ink, #2a2a2a);
+  white-space: nowrap;
+}
+
+.spotlight-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.spotlight-year-badge {
+  background: var(--cosy-color-sage-mist, #f0f5f1);
+  color: var(--cosy-color-sage-deep, #233827);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: var(--cosy-radius-xs, 4px);
+  border: 1px solid rgba(74, 107, 80, 0.2);
+}
+
+.spotlight-badge {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--cosy-color-muted, #5c5957);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--cosy-radius-xs, 4px);
+}
+
+.spotlight-card-body {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.spotlight-title {
+  font-family: var(--cosy-font-serif, serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cosy-color-ink, #2a2a2a);
+  margin: 0 0 0.4rem 0;
+  line-height: 1.35;
+}
+
+.spotlight-desc {
+  font-size: 0.86rem;
+  color: var(--cosy-color-muted, #5c5957);
+  line-height: 1.45;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.spotlight-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.10));
+}
+
+.spotlight-club-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cosy-color-sage, #416b49);
+  text-decoration: none;
+}
+
+.spotlight-club-link:hover {
+  color: var(--cosy-color-sage-dark, #375742);
+  text-decoration: underline;
+}
+
+.spotlight-source {
+  font-size: 0.75rem;
+  color: var(--cosy-color-muted, #8a8886);
+  text-decoration: none;
+}
+
+.spotlight-source:hover {
+  text-decoration: underline;
+  color: var(--cosy-color-ink, #2a2a2a);
+}
+
 /* Tariff & Price Calculator Tokenised Styles */
 .calc-section {
   max-width: 1040px;
