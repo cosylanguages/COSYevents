@@ -1,0 +1,41 @@
+name: Daily Spotlights Update
+
+on:
+  schedule:
+    # Run every day at 04:00 UTC
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-daily-spotlights:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch today's cultural and science spotlights
+        run: node scripts/fetch_daily_spotlights.js
+
+      - name: Commit and push if updated
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/daily-spotlights.json
+          if git diff --staged --quiet; then
+            echo "No changes in daily spotlights."
+          else
+            git commit -m "chore(daily): update daily spotlights for $(date -u +'%Y-%m-%d')"
+            git push
+          fi

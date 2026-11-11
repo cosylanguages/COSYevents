@@ -1,0 +1,56 @@
+{
+  "updated_at": "2026-11-11T15:33:43.733Z",
+  "display_date": "November 11, 2026",
+  "day": 11,
+  "month": 11,
+  "items": {
+    "celebration": {
+      "category": "celebration",
+      "categoryTitle": "Holiday of the Day",
+      "title": "Birthday of King Jigme Singye Wangchuck",
+      "badge": "Celebration",
+      "description": "Public holidays in Bhutan consist of both national holidays and local festivals or tshechus. While national holidays are observed throughout Bhutan, tsechus are only observed in their areas. Bhutan uses its own calendar, a variant of the lunisolar Tibetan calendar. Because it is a lunisolar calendar, dates of some national holidays and most tshechus change from year to year. For example, the new year, Losar, generally falls between February and March.",
+      "details": "Birthday of King Jigme Singye Wangchuck (Bhutan)",
+      "clubLink": "lets-celebrate.html",
+      "clubName": "Let's Celebrate",
+      "source": "International & Cultural Observances",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events"
+    },
+    "science": {
+      "category": "science",
+      "categoryTitle": "Today in Science",
+      "title": "Oldest insect fossils",
+      "year": "1988",
+      "badge": "Research & Discovery",
+      "description": "In 1988, the oldest known insect fossils (390 million yrs) were reported in Science.",
+      "clubLink": "keeping-up-with-science.html",
+      "clubName": "Keeping Up with Science",
+      "source": "Today in Science History",
+      "sourceUrl": "https://todayinsci.com/11/11_11.htm"
+    },
+    "music": {
+      "category": "music",
+      "categoryTitle": "Today in Music",
+      "title": "Jeux d'eau",
+      "year": "1901",
+      "badge": "Music History",
+      "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
+      "clubLink": "karaoke-club.html",
+      "clubName": "Karaoke Club",
+      "source": "On This Day - Today in Music",
+      "sourceUrl": "https://www.onthisday.com/music/"
+    },
+    "film": {
+      "category": "film",
+      "categoryTitle": "Today in Film & TV",
+      "title": "Gentlemen's Agreement",
+      "year": "1947",
+      "badge": "Cinema & Screen",
+      "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
+      "clubLink": "cinema-nights/index.html",
+      "clubName": "Cinema Nights",
+      "source": "On This Day - Today in Film & TV",
+      "sourceUrl": "https://www.onthisday.com/film-tv/"
+    }
+  }
+}
