@@ -218,8 +218,14 @@
     var clubName = (i18n.clubs && i18n.clubs[key]) || item.clubName || 'Club';
 
     var yearBadge = item.year ? '<span class="spotlight-year-badge">' + sanitizeHtml(item.year) + '</span>' : '';
-    var title = sanitizeHtml(item.title || '');
-    var desc = sanitizeHtml(item.description || '');
+
+    // Resolve localized content from i18n field if present, else fallback to top-level
+    var locItem = (item.i18n && (item.i18n[lang] || item.i18n.en)) || item;
+    var rawTitle = locItem.title || item.title || '';
+    var rawDesc = locItem.description || item.description || '';
+
+    var title = sanitizeHtml(rawTitle);
+    var desc = sanitizeHtml(rawDesc);
 
     var rawLink = item.clubLink || '#';
     var clubLink = pathPrefix + rawLink;

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T15:33:43.733Z",
+  "updated_at": "2026-11-11T16:53:54.982Z",
   "display_date": "November 11, 2026",
   "day": 11,
   "month": 11,
@@ -7,14 +7,36 @@
     "celebration": {
       "category": "celebration",
       "categoryTitle": "Holiday of the Day",
-      "title": "Birthday of King Jigme Singye Wangchuck",
+      "title": "Armistice & Global Peace Day",
       "badge": "Celebration",
-      "description": "Public holidays in Bhutan consist of both national holidays and local festivals or tshechus. While national holidays are observed throughout Bhutan, tsechus are only observed in their areas. Bhutan uses its own calendar, a variant of the lunisolar Tibetan calendar. Because it is a lunisolar calendar, dates of some national holidays and most tshechus change from year to year. For example, the new year, Losar, generally falls between February and March.",
-      "details": "Birthday of King Jigme Singye Wangchuck (Bhutan)",
+      "description": "Commemorating the cessation of hostilities on November 11, celebrated as a day of remembrance, reflection, and peace across Europe, the Commonwealth, and globally.",
+      "details": "Armistice & Global Peace Day",
       "clubLink": "lets-celebrate.html",
       "clubName": "Let's Celebrate",
       "source": "International & Cultural Observances",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events"
+      "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "i18n": {
+        "en": {
+          "title": "Armistice & Global Peace Day",
+          "description": "Commemorating the cessation of hostilities on November 11, celebrated as a day of remembrance, reflection, and peace across Europe, the Commonwealth, and globally."
+        },
+        "fr": {
+          "title": "Jour de l’Armistice & Fête de la Paix",
+          "description": "Commémoration de la signature de l’armistice de 1918. En France et dans toute l’Europe, cette journée honore la paix, la mémoire collective et la concorde entre les peuples."
+        },
+        "it": {
+          "title": "Giorno dell’Armistizio e della Concordia",
+          "description": "Celebrazione della pace e della fine dei conflitti in Europa, dedicata al ricordo condiviso, alla riconciliazione e alla fratellanza internazionale."
+        },
+        "ru": {
+          "title": "День окончания Первой мировой войны и мира",
+          "description": "День памяти, посвящённый окончанию Первой мировой войны, символизирующий ценность мира, историческое осмысление и международное взаимопонимание."
+        },
+        "el": {
+          "title": "Ημέρα Ανακωχής και Παγκόσμιας Ειρήνης",
+          "description": "Επέτειος της ανακωχής του 1918 και ημέρα μνήμης αφιερωμένη στην παγκόσμια ειρήνη, την αλληλεγγύη και τη διεθνή συνεργασία των λαών."
+        }
+      }
     },
     "science": {
       "category": "science",
@@ -26,7 +48,29 @@
       "clubLink": "keeping-up-with-science.html",
       "clubName": "Keeping Up with Science",
       "source": "Today in Science History",
-      "sourceUrl": "https://todayinsci.com/11/11_11.htm"
+      "sourceUrl": "https://todayinsci.com/11/11_11.htm",
+      "i18n": {
+        "en": {
+          "title": "Oldest insect fossils",
+          "description": "In 1988, the oldest known insect fossils (390 million yrs) were reported in Science."
+        },
+        "fr": {
+          "title": "Les plus anciens fossiles d'insectes",
+          "description": "En 1988, les plus anciens fossiles d’insectes connus (390 millions d’années) ont été signalés dans la revue Science."
+        },
+        "it": {
+          "title": "I più antichi fossili di insetti",
+          "description": "Nel 1988, sulla rivista Science furono segnalati i più antichi fossili di insetti conosciuti (390 milioni di anni)."
+        },
+        "ru": {
+          "title": "Самые древние окаменелости насекомых",
+          "description": "В 1988 году в журнале Science были описаны самые древние из известных окаменелостей насекомых (возрастом 390 миллионов лет)."
+        },
+        "el": {
+          "title": "Τα αρχαιότερα απολιθώματα εντόμων",
+          "description": "Το 1988, τα παλαιότερα γνωστά απολιθώματα εντόμων (390 εκατομμυρίων ετών) αναφέρθηκαν στο περιοδικό Science."
+        }
+      }
     },
     "music": {
       "category": "music",
@@ -38,7 +82,29 @@
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
-      "sourceUrl": "https://www.onthisday.com/music/"
+      "sourceUrl": "https://www.onthisday.com/music/",
+      "i18n": {
+        "en": {
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+        },
+        "fr": {
+          "title": "Jeux d'eau",
+          "description": "Création de la composition pour piano « Jeux d'eau » de Maurice Ravel"
+        },
+        "it": {
+          "title": "Jeux d'eau",
+          "description": "Prima esecuzione della composizione per pianoforte \"Jeux d'eau\" di Maurice Ravel"
+        },
+        "ru": {
+          "title": "Jeux d'eau",
+          "description": "Состоялась премьера фортепианной композиции Мориса Равеля «Игра воды»"
+        },
+        "el": {
+          "title": "Jeux d'eau",
+          "description": "Πρώτη εκτέλεση της σύνθεσης για πιάνο του Μωρίς Ραβέλ «Jeux d'eau»"
+        }
+      }
     },
     "film": {
       "category": "film",
@@ -50,7 +116,29 @@
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
-      "sourceUrl": "https://www.onthisday.com/film-tv/"
+      "sourceUrl": "https://www.onthisday.com/film-tv/",
+      "i18n": {
+        "en": {
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+        },
+        "fr": {
+          "title": "\"gentlemen's agreement\"",
+          "description": "« Gentlemen's Agreement », réalisé par Elia Kazan, avec Gregory Peck et Dorothy McGuire, sort en première à New York (meilleur film en 1948)"
+        },
+        "it": {
+          "title": "Gentlemen’s Agreement",
+          "description": "A New York viene proiettato per la prima volta \"Gente di rispetto\", diretto da Elia Kazan e interpretato da Gregory Peck e Dorothy McGuire (Miglior film nel 1948)"
+        },
+        "ru": {
+          "title": "Джентльменское соглашение",
+          "description": "В Нью-Йорке состоялась премьера фильма «Джентльменское соглашение» режиссера Элиа Казана с Грегори Пеком и Дороти Макгуайр в главных ролях (лучший фильм 1948 года)."
+        },
+        "el": {
+          "title": "Συμφωνία κυρίων!",
+          "description": "Πρεμιέρα στη Νέα Υόρκη της ταινίας «Συμφωνία Κυρίων» σε σκηνοθεσία του Ηλία Καζάν, με πρωταγωνιστές τον Γκρέγκορι Πεκ και τη Ντόροθι ΜακΓκουάιρ (Καλύτερη Ταινία 1948)"
+        }
+      }
     }
   }
 }

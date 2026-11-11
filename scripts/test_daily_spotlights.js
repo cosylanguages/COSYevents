@@ -85,21 +85,44 @@ const mockItem = {
   sourceUrl: 'https://todayinsci.com/'
 };
 
+// Test with i18n field
+const mockMultilingualItem = {
+  categoryTitle: 'Today in Science',
+  title: 'Discovery of X-Rays',
+  year: '1895',
+  badge: 'Physics',
+  description: 'Wilhelm Röntgen discovers X-rays.',
+  clubLink: 'keeping-up-with-science.html',
+  clubName: 'Keeping Up with Science',
+  source: 'Science History',
+  sourceUrl: 'https://todayinsci.com/',
+  i18n: {
+    en: { title: 'Discovery of X-Rays', description: 'Wilhelm Röntgen discovers X-rays.' },
+    fr: { title: 'Découverte des rayons X', description: 'Wilhelm Röntgen découvre les rayons X.' },
+    it: { title: 'Scoperta dei raggi X', description: 'Wilhelm Röntgen scopre i raggi X.' },
+    ru: { title: 'Открытие рентгеновских лучей', description: 'Вильгельм Рентген открывает рентгеновские лучи.' },
+    el: { title: 'Ανακάλυψη των ακτίνων Χ', description: 'Ο Βίλχελμ Ρέντγκεν ανακαλύπτει τις ακτίνες Χ.' }
+  }
+};
+
 // French test
-const frCard = renderCard('science', mockItem, 'fr', '../');
+const frCard = renderCard('science', mockMultilingualItem, 'fr', '../');
 assert(frCard.includes('Aujourd&#39;hui dans les Sciences'), 'FR title missing');
 assert(frCard.includes('Recherche &amp; Découverte'), 'FR badge missing');
+assert(frCard.includes('Découverte des rayons X'), 'FR translated content missing');
 assert(frCard.includes('Discuter dans Keeping Up with Science'), 'FR discuss action missing');
 assert(frCard.includes('href="../keeping-up-with-science.html"'), 'FR relative path prefix missing');
 
 // Russian test
-const ruCard = renderCard('celebration', mockItem, 'ru', '../');
+const ruCard = renderCard('celebration', mockMultilingualItem, 'ru', '../');
 assert(ruCard.includes('Праздник дня'), 'RU category missing');
+assert(ruCard.includes('Открытие рентгеновских лучей'), 'RU translated content missing');
 assert(ruCard.includes('Обсудить в Let&#39;s Celebrate'), 'RU discuss action missing');
 
 // Greek test
-const elCard = renderCard('music', mockItem, 'el', '../');
+const elCard = renderCard('music', mockMultilingualItem, 'el', '../');
 assert(elCard.includes('Σήμερα στη Μουσική'), 'EL category missing');
+assert(elCard.includes('Ανακάλυψη των ακτίνων Χ'), 'EL translated content missing');
 assert(elCard.includes('Συζητήστε στο Karaoke Club'), 'EL discuss action missing');
 
 console.log('  PASS: Cards correctly render localized labels, actions, and relative links.\n');

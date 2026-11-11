@@ -4,12 +4,14 @@
  * scripts/fetch_daily_spotlights.js
  *
  * Fetches and extracts 4 daily elements:
- * 1. Celebration / Holiday of the Day (Curated blend)
+ * 1. Celebration / Holiday of the Day (Curated & culturally adapted blend)
  * 2. Today in Science / Research (from https://todayinsci.com/ focusing on EVENTS – Science events on)
  * 3. Today in Music (from https://www.onthisday.com/ focusing on Today in Music)
  * 4. Today in Film & TV (from https://www.onthisday.com/ focusing on Today in Film & TV)
  *
- * Generates `data/daily-spotlights.json` with a single featured highlight for each.
+ * Generates `data/daily-spotlights.json` with a single featured highlight for each,
+ * localized and culturally adapted for English (en), French (fr), Italian (it),
+ * Russian (ru), and Greek (el).
  */
 
 const fs = require('fs');
@@ -41,40 +43,143 @@ async function fetchWithTimeout(url, options = {}, timeoutMs = 12000) {
 }
 
 /**
+ * Helper to translate/adapt short text chunks via MyMemory with timeout and graceful fallback
+ */
+async function translateText(text, targetLang) {
+  if (!text || targetLang === 'en') return text;
+  try {
+    const encoded = encodeURIComponent(text.trim());
+    const url = `https://api.mymemory.translated.net/get?q=${encoded}&langpair=en|${targetLang}`;
+    const res = await fetchWithTimeout(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, 4500);
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.responseData && data.responseData.translatedText) {
+        let clean = data.responseData.translatedText.trim();
+        // Discard if translation response looks like an error message
+        if (!clean.toUpperCase().includes('MYMEMORY') && !clean.toUpperCase().includes('QUERY LENGTH LIMIT')) {
+          return clean;
+        }
+      }
+    }
+  } catch (err) {
+    // Non-fatal, fallback to adapted/original
+  }
+  return text;
+}
+
+/**
+ * Curated calendar of notable cultural celebrations across target cultures
+ * (key: MM-DD)
+ */
+const CULTURAL_CALENDAR = {
+  '11-11': {
+    en: {
+      title: 'Armistice & Global Peace Day',
+      description: 'Commemorating the cessation of hostilities on November 11, celebrated as a day of remembrance, reflection, and peace across Europe, the Commonwealth, and globally.'
+    },
+    fr: {
+      title: 'Jour de l’Armistice & Fête de la Paix',
+      description: 'Commémoration de la signature de l’armistice de 1918. En France et dans toute l’Europe, cette journée honore la paix, la mémoire collective et la concorde entre les peuples.'
+    },
+    it: {
+      title: 'Giorno dell’Armistizio e della Concordia',
+      description: 'Celebrazione della pace e della fine dei conflitti in Europa, dedicata al ricordo condiviso, alla riconciliazione e alla fratellanza internazionale.'
+    },
+    ru: {
+      title: 'День окончания Первой мировой войны и мира',
+      description: 'День памяти, посвящённый окончанию Первой мировой войны, символизирующий ценность мира, историческое осмысление и международное взаимопонимание.'
+    },
+    el: {
+      title: 'Ημέρα Ανακωχής και Παγκόσμιας Ειρήνης',
+      description: 'Επέτειος της ανακωχής του 1918 και ημέρα μνήμης αφιερωμένη στην παγκόσμια ειρήνη, την αλληλεγγύη και τη διεθνή συνεργασία των λαών.'
+    }
+  }
+};
+
+/**
  * 1. Celebration / Holiday of the Day
- * Curated blend using international observances from Wikipedia API with fallback to curated cultural days.
+ * Curated blend using international observances with cultural adaptation for fr, it, ru, el.
  */
 async function fetchCelebration(month, day) {
+  const mm = String(month).padStart(2, '0');
+  const dd = String(day).padStart(2, '0');
+  const key = `${mm}-${dd}`;
+
+  // If we have a culturally curated entry for this specific date, use it
+  if (CULTURAL_CALENDAR[key]) {
+    const c = CULTURAL_CALENDAR[key];
+    return {
+      category: 'celebration',
+      categoryTitle: 'Holiday of the Day',
+      title: c.en.title,
+      badge: 'Celebration',
+      description: c.en.description,
+      details: c.en.title,
+      clubLink: 'lets-celebrate.html',
+      clubName: "Let's Celebrate",
+      source: 'International & Cultural Observances',
+      sourceUrl: 'https://en.wikipedia.org/wiki/Portal:Current_events',
+      i18n: {
+        en: { title: c.en.title, description: c.en.description },
+        fr: { title: c.fr.title, description: c.fr.description },
+        it: { title: c.it.title, description: c.it.description },
+        ru: { title: c.ru.title, description: c.ru.description },
+        el: { title: c.el.title, description: c.el.description }
+      }
+    };
+  }
+
   try {
-    const paddedMonth = String(month).padStart(2, '0');
-    const paddedDay = String(day).padStart(2, '0');
-    const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/holidays/${paddedMonth}/${paddedDay}`;
+    const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/holidays/${mm}/${dd}`;
     const res = await fetchWithTimeout(url, {}, 8000);
     if (res.ok) {
       const data = await res.json();
       if (Array.isArray(data.holidays) && data.holidays.length > 0) {
-        // Find an appealing, secular/cultural or international holiday
         const filtered = data.holidays.filter(h => {
           const t = (h.text || '').toLowerCase();
           return !t.startsWith('christian feast day') && !t.includes('martyrologium');
         });
         const chosen = filtered.length > 0 ? filtered[0] : data.holidays[0];
-        let title = chosen.text || '';
-        let desc = '';
+        let enTitle = (chosen.text || '').replace(/\s*\([^)]*\)\s*$/, '').trim();
+        let enDesc = '';
         if (chosen.pages && chosen.pages.length > 0) {
-          desc = chosen.pages[0].extract || '';
+          enDesc = chosen.pages[0].extract || '';
         }
+        if (!enDesc) enDesc = chosen.text || enTitle;
+
+        // Fetch translations for fr, it, ru, el
+        const [frTitle, itTitle, ruTitle, elTitle] = await Promise.all([
+          translateText(enTitle, 'fr'),
+          translateText(enTitle, 'it'),
+          translateText(enTitle, 'ru'),
+          translateText(enTitle, 'el')
+        ]);
+
+        const [frDesc, itDesc, ruDesc, elDesc] = await Promise.all([
+          translateText(enDesc.slice(0, 260), 'fr'),
+          translateText(enDesc.slice(0, 260), 'it'),
+          translateText(enDesc.slice(0, 260), 'ru'),
+          translateText(enDesc.slice(0, 260), 'el')
+        ]);
+
         return {
           category: 'celebration',
           categoryTitle: 'Holiday of the Day',
-          title: title.replace(/\s*\([^)]*\)\s*$/, '').trim(),
+          title: enTitle,
           badge: 'Celebration',
-          description: desc || title,
-          details: title,
+          description: enDesc,
+          details: chosen.text || enTitle,
           clubLink: 'lets-celebrate.html',
           clubName: "Let's Celebrate",
           source: 'International & Cultural Observances',
-          sourceUrl: 'https://en.wikipedia.org/wiki/Portal:Current_events'
+          sourceUrl: 'https://en.wikipedia.org/wiki/Portal:Current_events',
+          i18n: {
+            en: { title: enTitle, description: enDesc },
+            fr: { title: frTitle || enTitle, description: frDesc || enDesc },
+            it: { title: itTitle || enTitle, description: itDesc || enDesc },
+            ru: { title: ruTitle || enTitle, description: ruDesc || enDesc },
+            el: { title: elTitle || enTitle, description: elDesc || enDesc }
+          }
         };
       }
     }
@@ -88,12 +193,34 @@ async function fetchCelebration(month, day) {
     categoryTitle: 'Holiday of the Day',
     title: 'World Kindness & Cultural Exchange Day',
     badge: 'Celebration',
-    description: 'A global occasion celebrating unity, cross-cultural appreciation, and community traditions.',
+    description: 'A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.',
     details: 'International Day of Global Friendship & Cultural Understanding',
     clubLink: 'lets-celebrate.html',
     clubName: "Let's Celebrate",
     source: 'Global Traditions & Festivals',
-    sourceUrl: 'https://cosylanguages.github.io/COSYevents/lets-celebrate.html'
+    sourceUrl: 'https://cosylanguages.github.io/COSYevents/lets-celebrate.html',
+    i18n: {
+      en: {
+        title: 'World Kindness & Cultural Exchange Day',
+        description: 'A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.'
+      },
+      fr: {
+        title: 'Journée mondiale de la bienveillance et des échanges culturels',
+        description: 'Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays.'
+      },
+      it: {
+        title: 'Giornata mondiale della gentilezza e dello scambio culturale',
+        description: 'Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità.'
+      },
+      ru: {
+        title: 'Всемирный день доброты и культурного обмена',
+        description: 'Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира.'
+      },
+      el: {
+        title: 'Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής',
+        description: 'Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις.'
+      }
+    }
   };
 }
 
@@ -107,13 +234,16 @@ async function fetchScienceEvent(month, day) {
   const paddedDay = String(day).padStart(2, '0');
   const url = `https://todayinsci.com/${month}/${month}_${paddedDay}.htm`;
 
+  let enTitle = 'Oldest insect fossils';
+  let enYear = '1988';
+  let enDesc = 'In 1988, the oldest known insect fossils (390 million yrs) were reported in Science.';
+
   try {
     const res = await fetchWithTimeout(url, {}, 10000);
     if (res.ok) {
       const html = await res.text();
       const $ = cheerio.load(html);
 
-      // Locate anchor name="event" or text matching "EVENTS – Science events on"
       const eventAnchor = $('a[name=event], a[NAME=event]');
       let subHeading = null;
       if (eventAnchor.length) {
@@ -132,28 +262,17 @@ async function fetchScienceEvent(month, day) {
           if (curr.hasClass('daynameheading')) {
             const headline = curr.text().replace(/\s+/g, ' ').trim();
             const bodyDiv = curr.next();
-            // Clean up text
             let bodyText = bodyDiv.text().replace(/\s+/g, ' ').trim();
-            // Strip trailing quotes or formatting markers
             bodyText = bodyText.replace(/«|»/g, '').trim();
 
-            // Extract year if present
             const yearMatch = bodyText.match(/^In\s+(\d{4}),?/i) || headline.match(/\b(\d{4})\b/);
             const year = yearMatch ? yearMatch[1] : '';
 
             if (headline && bodyText) {
-              return {
-                category: 'science',
-                categoryTitle: 'Today in Science',
-                title: headline,
-                year: year,
-                badge: 'Research & Discovery',
-                description: bodyText,
-                clubLink: 'keeping-up-with-science.html',
-                clubName: 'Keeping Up with Science',
-                source: 'Today in Science History',
-                sourceUrl: url
-              };
+              enTitle = headline;
+              enYear = year;
+              enDesc = bodyText;
+              break;
             }
           }
           curr = curr.next();
@@ -164,17 +283,39 @@ async function fetchScienceEvent(month, day) {
     console.warn('Notice: Could not fetch Today in Science:', err.message);
   }
 
+  // Multilingual adaptation
+  const [frTitle, itTitle, ruTitle, elTitle] = await Promise.all([
+    translateText(enTitle, 'fr'),
+    translateText(enTitle, 'it'),
+    translateText(enTitle, 'ru'),
+    translateText(enTitle, 'el')
+  ]);
+
+  const [frDesc, itDesc, ruDesc, elDesc] = await Promise.all([
+    translateText(enDesc.slice(0, 280), 'fr'),
+    translateText(enDesc.slice(0, 280), 'it'),
+    translateText(enDesc.slice(0, 280), 'ru'),
+    translateText(enDesc.slice(0, 280), 'el')
+  ]);
+
   return {
     category: 'science',
     categoryTitle: 'Today in Science',
-    title: 'Breakthrough in Substratosphere Exploration',
-    year: '1935',
+    title: enTitle,
+    year: enYear,
     badge: 'Research & Discovery',
-    description: 'Explorer II sealed gondola reaches record altitude in the stratosphere to analyze ozone atmospheric composition and cosmic radiation.',
+    description: enDesc,
     clubLink: 'keeping-up-with-science.html',
     clubName: 'Keeping Up with Science',
     source: 'Today in Science History',
-    sourceUrl: 'https://todayinsci.com/'
+    sourceUrl: url,
+    i18n: {
+      en: { title: enTitle, description: enDesc },
+      fr: { title: frTitle || enTitle, description: frDesc || enDesc },
+      it: { title: itTitle || enTitle, description: itDesc || enDesc },
+      ru: { title: ruTitle || enTitle, description: ruDesc || enDesc },
+      el: { title: elTitle || enTitle, description: elDesc || enDesc }
+    }
   };
 }
 
@@ -188,6 +329,11 @@ async function fetchMusicEvent() {
     'https://www.onthisday.com/'
   ];
 
+  let enTitle = "Jeux d'eau";
+  let enYear = '1901';
+  let enDesc = "Maurice Ravel's piano composition \"Jeux d'eau\" premieres";
+  let foundUrl = 'https://www.onthisday.com/music/';
+
   for (const url of candidateUrls) {
     try {
       const res = await fetchWithTimeout(url, {}, 10000);
@@ -196,7 +342,6 @@ async function fetchMusicEvent() {
         const $ = cheerio.load(html);
 
         let eventText = '';
-        let year = '';
 
         if (url.includes('/music/')) {
           const firstUl = $('ul.event-list').first();
@@ -219,11 +364,10 @@ async function fetchMusicEvent() {
           const yearMatch = eventText.match(/^(\d{4})\s+(.*)$/);
           let desc = eventText;
           if (yearMatch) {
-            year = yearMatch[1];
+            enYear = yearMatch[1];
             desc = yearMatch[2];
           }
 
-          // Try to extract a clean title from quotes or before the verb, or use short headline
           let title = '';
           const quoteMatch = desc.match(/"([^"]+)"/);
           if (quoteMatch) {
@@ -234,18 +378,10 @@ async function fetchMusicEvent() {
             if (words.length > 6) title += '...';
           }
 
-          return {
-            category: 'music',
-            categoryTitle: 'Today in Music',
-            title: title,
-            year: year,
-            badge: 'Music History',
-            description: desc,
-            clubLink: 'karaoke-club.html',
-            clubName: 'Karaoke Club',
-            source: 'On This Day - Today in Music',
-            sourceUrl: url
-          };
+          enTitle = title;
+          enDesc = desc;
+          foundUrl = url;
+          break;
         }
       }
     } catch (err) {
@@ -253,17 +389,39 @@ async function fetchMusicEvent() {
     }
   }
 
+  // Multilingual adaptation
+  const [frTitle, itTitle, ruTitle, elTitle] = await Promise.all([
+    translateText(enTitle, 'fr'),
+    translateText(enTitle, 'it'),
+    translateText(enTitle, 'ru'),
+    translateText(enTitle, 'el')
+  ]);
+
+  const [frDesc, itDesc, ruDesc, elDesc] = await Promise.all([
+    translateText(enDesc.slice(0, 280), 'fr'),
+    translateText(enDesc.slice(0, 280), 'it'),
+    translateText(enDesc.slice(0, 280), 'ru'),
+    translateText(enDesc.slice(0, 280), 'el')
+  ]);
+
   return {
     category: 'music',
     categoryTitle: 'Today in Music',
-    title: 'Louis Armstrong & His Hot Five Recording Session',
-    year: '1925',
+    title: enTitle,
+    year: enYear,
     badge: 'Music History',
-    description: 'Louis Armstrong and his Hot Five begin their legendary first recording sessions at Okeh Records in Chicago, defining modern jazz improvisation.',
+    description: enDesc,
     clubLink: 'karaoke-club.html',
     clubName: 'Karaoke Club',
     source: 'On This Day - Today in Music',
-    sourceUrl: 'https://www.onthisday.com/music/'
+    sourceUrl: foundUrl,
+    i18n: {
+      en: { title: enTitle, description: enDesc },
+      fr: { title: frTitle || enTitle, description: frDesc || enDesc },
+      it: { title: itTitle || enTitle, description: itDesc || enDesc },
+      ru: { title: ruTitle || enTitle, description: ruDesc || enDesc },
+      el: { title: elTitle || enTitle, description: elDesc || enDesc }
+    }
   };
 }
 
@@ -277,6 +435,11 @@ async function fetchFilmTvEvent() {
     'https://www.onthisday.com/'
   ];
 
+  let enTitle = "Gentlemen's Agreement";
+  let enYear = '1947';
+  let enDesc = '"Gentlemen\'s Agreement" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)';
+  let foundUrl = 'https://www.onthisday.com/film-tv/';
+
   for (const url of candidateUrls) {
     try {
       const res = await fetchWithTimeout(url, {}, 10000);
@@ -285,7 +448,6 @@ async function fetchFilmTvEvent() {
         const $ = cheerio.load(html);
 
         let eventText = '';
-        let year = '';
 
         if (url.includes('/film-tv/')) {
           const firstUl = $('ul.event-list').first();
@@ -308,7 +470,7 @@ async function fetchFilmTvEvent() {
           const yearMatch = eventText.match(/^(\d{4})\s+(.*)$/);
           let desc = eventText;
           if (yearMatch) {
-            year = yearMatch[1];
+            enYear = yearMatch[1];
             desc = yearMatch[2];
           }
 
@@ -322,18 +484,10 @@ async function fetchFilmTvEvent() {
             if (words.length > 6) title += '...';
           }
 
-          return {
-            category: 'film',
-            categoryTitle: 'Today in Film & TV',
-            title: title,
-            year: year,
-            badge: 'Cinema & Screen',
-            description: desc,
-            clubLink: 'cinema-nights/index.html',
-            clubName: 'Cinema Nights',
-            source: 'On This Day - Today in Film & TV',
-            sourceUrl: url
-          };
+          enTitle = title;
+          enDesc = desc;
+          foundUrl = url;
+          break;
         }
       }
     } catch (err) {
@@ -341,17 +495,39 @@ async function fetchFilmTvEvent() {
     }
   }
 
+  // Multilingual adaptation
+  const [frTitle, itTitle, ruTitle, elTitle] = await Promise.all([
+    translateText(enTitle, 'fr'),
+    translateText(enTitle, 'it'),
+    translateText(enTitle, 'ru'),
+    translateText(enTitle, 'el')
+  ]);
+
+  const [frDesc, itDesc, ruDesc, elDesc] = await Promise.all([
+    translateText(enDesc.slice(0, 280), 'fr'),
+    translateText(enDesc.slice(0, 280), 'it'),
+    translateText(enDesc.slice(0, 280), 'ru'),
+    translateText(enDesc.slice(0, 280), 'el')
+  ]);
+
   return {
     category: 'film',
     categoryTitle: 'Today in Film & TV',
-    title: 'Gentlemen\'s Agreement Premieres in New York',
-    year: '1947',
+    title: enTitle,
+    year: enYear,
     badge: 'Cinema & Screen',
-    description: 'Elia Kazan\'s acclaimed drama "Gentlemen\'s Agreement" starring Gregory Peck premieres, later winning the 1948 Academy Award for Best Picture.',
+    description: enDesc,
     clubLink: 'cinema-nights/index.html',
     clubName: 'Cinema Nights',
     source: 'On This Day - Today in Film & TV',
-    sourceUrl: 'https://www.onthisday.com/film-tv/'
+    sourceUrl: foundUrl,
+    i18n: {
+      en: { title: enTitle, description: enDesc },
+      fr: { title: frTitle || enTitle, description: frDesc || enDesc },
+      it: { title: itTitle || enTitle, description: itDesc || enDesc },
+      ru: { title: ruTitle || enTitle, description: ruDesc || enDesc },
+      el: { title: elTitle || enTitle, description: elDesc || enDesc }
+    }
   };
 }
 
@@ -394,7 +570,6 @@ async function main() {
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2), 'utf-8');
   console.log(`✅ Daily spotlights successfully written to ${OUTPUT_PATH}`);
-  console.log(JSON.stringify(output, null, 2));
 }
 
 if (require.main === module) {
@@ -408,5 +583,6 @@ module.exports = {
   fetchCelebration,
   fetchScienceEvent,
   fetchMusicEvent,
-  fetchFilmTvEvent
+  fetchFilmTvEvent,
+  translateText
 };
