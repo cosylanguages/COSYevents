@@ -94,7 +94,96 @@ ${grammarHtml}
   return lst.note || '';
 }
 
-function renderFormatProfile(data) {
+let quotesPeopleData = null;
+function getQuotesPeopleData() {
+  if (!quotesPeopleData) {
+    const p = path.join(__dirname, '../data/quotes-people.json');
+    if (fs.existsSync(p)) {
+      quotesPeopleData = JSON.parse(fs.readFileSync(p, 'utf8'));
+    } else {
+      quotesPeopleData = {};
+    }
+  }
+  return quotesPeopleData;
+}
+
+function resolveQuotesPersonKey(slug, data) {
+  if (data.author_key) return data.author_key;
+  const s = (slug || '').toLowerCase();
+  if (s.includes('einstein')) return 'albert-einstein';
+  if (s.includes('steve-jobs') || s.includes('jobs')) return 'steve-jobs';
+  if (s.includes('feynman')) return 'richard-feynman';
+  if (s.includes('socrates')) return 'socrates';
+  if (s.includes('voltaire')) return 'voltaire';
+  if (s.includes('dostoevsky')) return 'fedor-dostoevsky';
+  if (s.includes('dolto')) return 'francoise-dolto';
+  if (s.includes('robin-williams')) return 'robin-williams';
+  if (s.includes('madonna') || s.includes('ai-opposite-of-art')) return 'madonna';
+  if (s.includes('alisa-freindlich')) return 'alisa-freindlich';
+  if (s.includes('langle')) return 'alfried-langle';
+  if (s.includes('neufeld')) return 'gordon-neufeld';
+  if (s.includes('you-are-a-soul') || s.includes('cs-lewis')) return 'cs-lewis';
+  if (s.includes('women-mothers-tragedy') || s.includes('wilde')) return 'oscar-wilde';
+  if (s.includes('barbra-streisand')) return 'barbra-streisand';
+  if (s.includes('virginia-woolf')) return 'virginia-woolf';
+  if (s.includes('amish-tripathi')) return 'amish-tripathi';
+  if (s.includes('jim-kwik')) return 'jim-kwik';
+  if (s.includes('brianna-pastor')) return 'brianna-pastor';
+  if (s.includes('sadia-hakim')) return 'sadia-hakim';
+  if (s.includes('sonder') || s.includes('john-koenig')) return 'john-koenig';
+  if (s.includes('prishvin')) return 'mikhail-prishvin';
+  if (s.includes('sukhomlinsky')) return 'vasily-sukhomlinsky';
+  if (s.includes('dalai-lama')) return 'dalai-lama';
+  if (s.includes('memory-cards-storage') || s.includes('nithya-shri')) return 'nithya-shri';
+  if (s.includes('saudade')) return 'fernando-pessoa';
+  if (s.includes('rain-seller-umbrella')) return 'proverb';
+  return 'anonymous';
+}
+
+function renderQuoteAuthorProfile(data, slug, lang = 'en') {
+  const people = getQuotesPeopleData();
+  const key = resolveQuotesPersonKey(slug, data);
+  const person = people[key] || people['anonymous'];
+  if (!person) return '';
+
+  const loc = (lang !== 'en' && person.i18n && person.i18n[lang]) ? person.i18n[lang] : {};
+  const name = loc.name || person.name;
+  const years = loc.years || person.years;
+  const job = loc.job || person.job;
+  const achievements = loc.achievements || person.achievements;
+  const firstIn = loc.first_in || person.first_in;
+  const imagePath = `../../${person.image}`;
+
+  const labels = {
+    en: { achievements: 'Achievements:', firstIn: 'The First in:' },
+    fr: { achievements: 'Réalisations :', firstIn: 'Pionnier / Premier dans :' },
+    ru: { achievements: 'Достижения:', firstIn: 'Первопроходец в:' }
+  };
+  const l = labels[lang] || labels.en;
+
+  return `
+<div class="quote-author-profile">
+<div class="quote-author-avatar-wrap">
+<img src="${imagePath}" alt="${name}" class="quote-author-avatar">
+</div>
+<div class="quote-author-details">
+<div class="quote-author-header">
+<h3 class="quote-author-name">${name}</h3>
+<span class="quote-author-years">${years}</span>
+</div>
+<div class="quote-author-job">${job}</div>
+<div class="quote-author-facts">
+<div class="quote-author-fact"><span class="quote-author-fact-label">${l.achievements}</span> <span>${achievements}</span></div>
+<div class="quote-author-fact quote-author-fact-first"><span class="quote-author-fact-label">${l.firstIn}</span> <span>${firstIn}</span></div>
+</div>
+</div>
+</div>`;
+}
+
+function renderFormatProfile(data, clubSlug = '', slug = '') {
+  if (clubSlug === 'the-greatest-quotes') {
+    return renderQuoteAuthorProfile(data, slug, 'en');
+  }
   if (data.mind_profile) {
     return `
 <div class="mind-profile-box">
@@ -300,7 +389,7 @@ ${noteText ? `<span class="mistake-note-text">${noteText}</span>` : ''}
 </div>`;
 }
 
-function generateSessionHtml(data, clubSlug = 'mind-matters') {
+function generateSessionHtml(data, clubSlug = 'mind-matters', sessionSlug = '') {
   const config = CLUB_CONFIGS[clubSlug] || CLUB_CONFIGS['mind-matters'];
   const pageTitle = data.page_title || `${data.title} : COSYlanguages`;
   const themeClass = data.theme_class || 'theme-mind';
@@ -324,7 +413,7 @@ function generateSessionHtml(data, clubSlug = 'mind-matters') {
     }
   }
 
-  const profileHtml = renderFormatProfile(data);
+  const profileHtml = renderFormatProfile(data, clubSlug, sessionSlug);
 
   let sensitiveTopicHtml = '';
   const warningNote = data.sensitive_topic_warning || data.sensitive_topic_note;
@@ -571,7 +660,7 @@ function updateCatalog(clubSlug, slug, sessionData) {
   }
 }
 
-function buildSessionsForClub(clubSlug) {
+function buildSessionsForClub(clubSlug, isGated = false) {
   const targetDir = path.join(__dirname, `../sessions/${clubSlug}`);
   if (!fs.existsSync(targetDir)) return;
 
@@ -587,7 +676,10 @@ function buildSessionsForClub(clubSlug) {
 
     try {
       const data = parseMarkdownFile(mdPath);
-      const htmlContent = generateSessionHtml(data, clubSlug);
+      const sid = `session-${clubSlug}-${slug}`;
+      const htmlContent = isGated
+        ? generateGatedSessionHtml(data, clubSlug, sid)
+        : generateSessionHtml(data, clubSlug, slug);
       fs.writeFileSync(htmlPath, htmlContent, 'utf8');
       console.log(`[Generated] ${htmlPath}`);
 
@@ -652,38 +744,6 @@ function generateGatedSessionHtml(data, clubSlug = 'mind-matters', sessionId = '
     .replace('{{VOCABULARY_HTML}}', vocabCardsHtml);
 
   return html;
-}
-
-function buildSessionsForClub(clubSlug, isGated = false) {
-  const targetDir = path.join(__dirname, `../sessions/${clubSlug}`);
-  if (!fs.existsSync(targetDir)) return;
-
-  const files = fs.readdirSync(targetDir);
-  const mdFiles = files.filter(f => f.endsWith('.md'));
-
-  console.log(`Found ${mdFiles.length} Markdown session files in sessions/${clubSlug}/`);
-
-  for (const file of mdFiles) {
-    const slug = file.replace(/\.md$/, '');
-    const mdPath = path.join(targetDir, file);
-    const htmlPath = path.join(targetDir, `${slug}.html`);
-
-    try {
-      const data = parseMarkdownFile(mdPath);
-      const sid = `session-${clubSlug}-${slug}`;
-      const htmlContent = isGated
-        ? generateGatedSessionHtml(data, clubSlug, sid)
-        : generateSessionHtml(data, clubSlug);
-
-      fs.writeFileSync(htmlPath, htmlContent, 'utf8');
-      console.log(`[Generated ${isGated ? 'Gated' : 'Public'}] ${htmlPath}`);
-
-      updateCatalog(clubSlug, slug, data);
-      console.log(`[Catalog Updated] ${clubSlug}/${slug}`);
-    } catch (err) {
-      console.error(`Error processing ${file}:`, err);
-    }
-  }
 }
 
 function buildAllSessions(isGated = false) {

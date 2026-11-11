@@ -498,3 +498,150 @@ body[class*="theme-quotes"]::after {
   pointer-events: none;
   z-index: -1;
 }
+
+/* ─── Quote Author Biographical Profile Card ─── */
+.quote-author-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--surface-color, #FFFDF9);
+  border: 1px solid var(--border, #E2D9CF);
+  border-left: 4px solid #5D4037;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0 2rem;
+  box-shadow: var(--shadow-sm, 0 2px 6px rgba(0, 0, 0, 0.04));
+  box-sizing: border-box;
+}
+
+.quote-author-avatar-wrap {
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #8D6E63;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #F5EBE6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-author-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.quote-author-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.quote-author-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink, #3E2723);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.quote-author-years {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted, #8D6E63);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.quote-author-job {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft, #5D4037);
+  line-height: 1.4;
+}
+
+.quote-author-fact {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink, #3E2723);
+  margin: 0.2rem 0 0;
+}
+
+.quote-author-fact strong {
+  color: #5D4037;
+  font-weight: 700;
+}
+
+.quote-author-fact-first {
+  padding-top: 0.35rem;
+  border-top: 1px dashed var(--border, #E2D9CF);
+}
+
+.quote-author-fact-first strong {
+  color: #2E7D32;
+}
+
+/* Dark mode support */
+html[data-theme="dark"] .quote-author-profile {
+  background: var(--surface-color, #2D1E1B);
+  border-color: #5D4037;
+  border-left-color: #8D6E63;
+}
+
+html[data-theme="dark"] .quote-author-avatar-wrap {
+  border-color: #8D6E63;
+  background: #1F1513;
+}
+
+html[data-theme="dark"] .quote-author-name {
+  color: #F5EBE6;
+}
+
+html[data-theme="dark"] .quote-author-years {
+  color: #D7CCC8;
+}
+
+html[data-theme="dark"] .quote-author-job {
+  color: #EFEBE9;
+}
+
+html[data-theme="dark"] .quote-author-fact {
+  color: #D7CCC8;
+}
+
+html[data-theme="dark"] .quote-author-fact strong {
+  color: #F5EBE6;
+}
+
+html[data-theme="dark"] .quote-author-fact-first strong {
+  color: #81C784;
+}
+
+html[data-theme="dark"] .quote-author-fact-first {
+  border-top-color: #5D4037;
+}
+
+@media (max-width: 640px) {
+  .quote-author-profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .quote-author-avatar-wrap {
+    width: 90px;
+    height: 90px;
+  }
+  .quote-author-fact-first {
+    border-top: 1px dashed var(--border, #E2D9CF);
+  }
+}
