@@ -1,142 +1,142 @@
 {
-  "updated_at": "2026-11-11T16:53:54.982Z",
-  "display_date": "November 11, 2026",
-  "day": 11,
+  "updated_at": "2026-11-12T11:59:46.092Z",
+  "display_date": "November 12, 2026",
+  "day": 12,
   "month": 11,
   "items": {
     "celebration": {
       "category": "celebration",
       "categoryTitle": "Holiday of the Day",
-      "title": "Armistice & Global Peace Day",
+      "title": "Birth of Sun Yat-Sen, also Doctors' Day and Cultural Renaissance Day.",
       "badge": "Celebration",
-      "description": "Commemorating the cessation of hostilities on November 11, celebrated as a day of remembrance, reflection, and peace across Europe, the Commonwealth, and globally.",
-      "details": "Armistice & Global Peace Day",
+      "description": "The following are considered public holidays in Taiwan. Some are official holidays, and some are not.",
+      "details": "Birth of Sun Yat-Sen, also Doctors' Day and Cultural Renaissance Day. (Republic of China)",
       "clubLink": "lets-celebrate.html",
       "clubName": "Let's Celebrate",
       "source": "International & Cultural Observances",
       "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
       "i18n": {
         "en": {
-          "title": "Armistice & Global Peace Day",
-          "description": "Commemorating the cessation of hostilities on November 11, celebrated as a day of remembrance, reflection, and peace across Europe, the Commonwealth, and globally."
+          "title": "Birth of Sun Yat-Sen, also Doctors' Day and Cultural Renaissance Day.",
+          "description": "The following are considered public holidays in Taiwan. Some are official holidays, and some are not."
         },
         "fr": {
-          "title": "Jour de l’Armistice & Fête de la Paix",
-          "description": "Commémoration de la signature de l’armistice de 1918. En France et dans toute l’Europe, cette journée honore la paix, la mémoire collective et la concorde entre les peuples."
+          "title": "Naissance de Sun Yat-sen, également Journée des médecins et Journée de la renaissance culturelle.",
+          "description": "Les jours suivants sont considérés comme des jours fériés à Taïwan. Certains sont des jours fériés officiels, d'autres non."
         },
         "it": {
-          "title": "Giorno dell’Armistizio e della Concordia",
-          "description": "Celebrazione della pace e della fine dei conflitti in Europa, dedicata al ricordo condiviso, alla riconciliazione e alla fratellanza internazionale."
+          "title": "Nascita di Sun Yat-Sen, Giornata dei Medici e Giornata della Rinascita Culturale.",
+          "description": "Le seguenti date sono considerate giorni festivi a Taiwan. Alcune sono festività ufficiali, altre no."
         },
         "ru": {
-          "title": "День окончания Первой мировой войны и мира",
-          "description": "День памяти, посвящённый окончанию Первой мировой войны, символизирующий ценность мира, историческое осмысление и международное взаимопонимание."
+          "title": "День рождения Сунь Ятсена, а также День врача и День культурного возрождения.",
+          "description": "Следующие дни считаются государственными праздниками на Тайване. Некоторые из них являются официальными праздниками, а некоторые — нет."
         },
         "el": {
-          "title": "Ημέρα Ανακωχής και Παγκόσμιας Ειρήνης",
-          "description": "Επέτειος της ανακωχής του 1918 και ημέρα μνήμης αφιερωμένη στην παγκόσμια ειρήνη, την αλληλεγγύη και τη διεθνή συνεργασία των λαών."
+          "title": "Γέννηση του Σουν Γιατ-Σεν, επίσης Ημέρα των Ιατρών και Ημέρα της Πολιτιστικής Αναγέννησης.",
+          "description": "Οι ακόλουθες ημέρες θεωρούνται αργίες στην Ταϊβάν. Ορισμένες είναι επίσημες αργίες και ορισμένες όχι."
         }
       }
     },
     "science": {
       "category": "science",
       "categoryTitle": "Today in Science",
-      "title": "Oldest insect fossils",
-      "year": "1988",
+      "title": "Polypropylene",
+      "year": "",
       "badge": "Research & Discovery",
-      "description": "In 1988, the oldest known insect fossils (390 million yrs) were reported in Science.",
+      "description": "(source) In 1999, in Bartlesville, Oklahoma, a plaque was placed on the site of the laboratory where the polymer polypropylene was invented, designating it a National Historic Chemical Landmark by the American Chemical Society. The first commercially successful use of the new material was in the Hula Hoop®. In 1951, J. Paul Hogan and Robert L. Banks, research chemists working for Phillips Petroleum Company, discovered the polymer unexpectedly during experiments with catalysts while trying to convert the natural gas components ethylene and propylene into compounds useful for gasoline. Later, they also developed a new catalytic process for making high-density polyethylene. Phillips soon invested in new plastic manufacturing plants.",
       "clubLink": "keeping-up-with-science.html",
       "clubName": "Keeping Up with Science",
       "source": "Today in Science History",
-      "sourceUrl": "https://todayinsci.com/11/11_11.htm",
+      "sourceUrl": "https://todayinsci.com/11/11_12.htm",
       "i18n": {
         "en": {
-          "title": "Oldest insect fossils",
-          "description": "In 1988, the oldest known insect fossils (390 million yrs) were reported in Science."
+          "title": "Polypropylene",
+          "description": "(source) In 1999, in Bartlesville, Oklahoma, a plaque was placed on the site of the laboratory where the polymer polypropylene was invented, designating it a National Historic Chemical Landmark by the American Chemical Society. The first commercially successful use of the new material was in the Hula Hoop®. In 1951, J. Paul Hogan and Robert L. Banks, research chemists working for Phillips Petroleum Company, discovered the polymer unexpectedly during experiments with catalysts while trying to convert the natural gas components ethylene and propylene into compounds useful for gasoline. Later, they also developed a new catalytic process for making high-density polyethylene. Phillips soon invested in new plastic manufacturing plants."
         },
         "fr": {
-          "title": "Les plus anciens fossiles d'insectes",
-          "description": "En 1988, les plus anciens fossiles d’insectes connus (390 millions d’années) ont été signalés dans la revue Science."
+          "title": "Polypropylène",
+          "description": "(source) En 1999, à Bartlesville, dans l'Oklahoma, une plaque a été apposée sur le site du laboratoire où le polymère polypropylène a été inventé, le désignant comme un site chimique historique national par l'American Chemical Society. La première utilisation commercialement réussie du nouveau matériau"
         },
         "it": {
-          "title": "I più antichi fossili di insetti",
-          "description": "Nel 1988, sulla rivista Science furono segnalati i più antichi fossili di insetti conosciuti (390 milioni di anni)."
+          "title": "Polipropilene",
+          "description": "(fonte) Nel 1999, a Bartlesville, in Oklahoma, è stata apposta una targa sul sito del laboratorio in cui è stato inventato il polimero polipropilene, che è stato dichiarato National Historic Chemical Landmark (Sito storico nazionale della chimica) dall'American Chemical Society. Il primo utilizzo commercialmente di successo del nuovo materiale"
         },
         "ru": {
-          "title": "Самые древние окаменелости насекомых",
-          "description": "В 1988 году в журнале Science были описаны самые древние из известных окаменелостей насекомых (возрастом 390 миллионов лет)."
+          "title": "Полипропилен",
+          "description": "(источник) В 1999 году в Бартлсвилле, штат Оклахома, на месте лаборатории, где был изобретен полимер полипропилен, была установлена мемориальная доска, обозначающая его как Национальный исторический химический памятник Американского химического общества. Первое коммерчески успешное применение нового материала"
         },
         "el": {
-          "title": "Τα αρχαιότερα απολιθώματα εντόμων",
-          "description": "Το 1988, τα παλαιότερα γνωστά απολιθώματα εντόμων (390 εκατομμυρίων ετών) αναφέρθηκαν στο περιοδικό Science."
+          "title": "Πολυπροπυλένιο",
+          "description": "(πηγή) Το 1999, στο Μπάρτλεσβιλ της Οκλαχόμα, τοποθετήθηκε μια αναμνηστική πλάκα στον χώρο του εργαστηρίου όπου εφευρέθηκε το πολυμερές πολυπροπυλένιο, με την οποία αναγνωρίζεται ως Εθνικό Ιστορικό Χημικό Μνημείο από την Αμερικανική Χημική Εταιρεία. Η πρώτη εμπορικά επιτυχημένη χρήση του νέου υλικού"
         }
       }
     },
     "music": {
       "category": "music",
       "categoryTitle": "Today in Music",
-      "title": "Jeux d'eau",
-      "year": "1901",
+      "title": "Lady of Shalott",
+      "year": "1931",
       "badge": "Music History",
-      "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
+      "description": "Jean Sibelius and Ashton's ballet \"Lady of Shalott\" premieres in London",
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
       "sourceUrl": "https://www.onthisday.com/music/",
       "i18n": {
         "en": {
-          "title": "Jeux d'eau",
-          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+          "title": "Lady of Shalott",
+          "description": "Jean Sibelius and Ashton's ballet \"Lady of Shalott\" premieres in London"
         },
         "fr": {
-          "title": "Jeux d'eau",
-          "description": "Création de la composition pour piano « Jeux d'eau » de Maurice Ravel"
+          "title": "À la dame de Shalott.'",
+          "description": "Création à Londres du ballet « La Dame de Shalott » de Jean Sibelius et Ashton"
         },
         "it": {
-          "title": "Jeux d'eau",
-          "description": "Prima esecuzione della composizione per pianoforte \"Jeux d'eau\" di Maurice Ravel"
+          "title": "La dama di Shalott",
+          "description": "Il balletto \"La dama di Shalott\" di Jean Sibelius e Ashton debutta a Londra"
         },
         "ru": {
-          "title": "Jeux d'eau",
-          "description": "Состоялась премьера фортепианной композиции Мориса Равеля «Игра воды»"
+          "title": "3 месяца",
+          "description": "Премьера балета Яна Сибелиуса и Фредерика Аштона «Леди из Шалотта» в Лондоне"
         },
         "el": {
-          "title": "Jeux d'eau",
-          "description": "Πρώτη εκτέλεση της σύνθεσης για πιάνο του Μωρίς Ραβέλ «Jeux d'eau»"
+          "title": "Η Κυρά του Σαλότ",
+          "description": "Πρεμιέρα του μπαλέτου «Η Κυρά του Σαλότ» του Jean Sibelius και του Frederick Ashton στο Λονδίνο"
         }
       }
     },
     "film": {
       "category": "film",
       "categoryTitle": "Today in Film & TV",
-      "title": "Gentlemen's Agreement",
-      "year": "1947",
+      "title": "First possible movie stunt: A man...",
+      "year": "1910",
       "badge": "Cinema & Screen",
-      "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
+      "description": "First possible movie stunt: A man jumps into the Hudson River from a burning balloon",
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
       "sourceUrl": "https://www.onthisday.com/film-tv/",
       "i18n": {
         "en": {
-          "title": "Gentlemen's Agreement",
-          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+          "title": "First possible movie stunt: A man...",
+          "description": "First possible movie stunt: A man jumps into the Hudson River from a burning balloon"
         },
         "fr": {
-          "title": "\"gentlemen's agreement\"",
-          "description": "« Gentlemen's Agreement », réalisé par Elia Kazan, avec Gregory Peck et Dorothy McGuire, sort en première à New York (meilleur film en 1948)"
+          "title": "Première cascade de film possible : un homme...",
+          "description": "Première cascade cinématographique possible : un homme saute dans le fleuve Hudson depuis une montgolfière en feu"
         },
         "it": {
-          "title": "Gentlemen’s Agreement",
-          "description": "A New York viene proiettato per la prima volta \"Gente di rispetto\", diretto da Elia Kazan e interpretato da Gregory Peck e Dorothy McGuire (Miglior film nel 1948)"
+          "title": "Prima possibile scena d'azione cinematografica: un uomo...",
+          "description": "Prima possibile scena d'azione cinematografica: un uomo si tuffa nel fiume Hudson da una mongolfiera in fiamme"
         },
         "ru": {
-          "title": "Джентльменское соглашение",
-          "description": "В Нью-Йорке состоялась премьера фильма «Джентльменское соглашение» режиссера Элиа Казана с Грегори Пеком и Дороти Макгуайр в главных ролях (лучший фильм 1948 года)."
+          "title": "Первый возможный трюк для фильма: мужчина...",
+          "description": "Первый возможный трюк для фильма: мужчина прыгает в реку Гудзон с горящего воздушного шара"
         },
         "el": {
-          "title": "Συμφωνία κυρίων!",
-          "description": "Πρεμιέρα στη Νέα Υόρκη της ταινίας «Συμφωνία Κυρίων» σε σκηνοθεσία του Ηλία Καζάν, με πρωταγωνιστές τον Γκρέγκορι Πεκ και τη Ντόροθι ΜακΓκουάιρ (Καλύτερη Ταινία 1948)"
+          "title": "Πρώτο πιθανό ακροβατικό ταινίας: Ένας άνδρας...",
+          "description": "Πρώτο πιθανό ακροβατικό ταινίας: Ένας άνδρας πηδάει στον ποταμό Χάντσον από ένα φλεγόμενο αερόστατο"
         }
       }
     }
