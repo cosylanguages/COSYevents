@@ -28,6 +28,15 @@ jobs:
       - name: Validate events and sessions schema
         run: npm run validate
 
+      - name: Verify master session catalog matches disk
+        run: node scripts/verify_catalog.js
+
+      - name: Check orphan CSS classes
+        run: npm run check-orphans
+
+      - name: Verify sitemap is up to date
+        run: npm run check-sitemap
+
       - name: Build public data and run leak prevention tests
         run: npm run test
 

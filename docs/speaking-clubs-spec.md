@@ -166,7 +166,7 @@ Place inside `.history-body` of a club card.
 
 ## 6. Markdown Frontmatter Session Schema (Stage 3 Refined)
 
-The Markdown frontmatter format (`sessions/<club>/*.md`) serves as the structured content source for session static generation and PagesCMS editing.
+The Markdown frontmatter format (`sessions/<club>/*.md`) serves as the structured content source for session static generation.
 
 ### Frontmatter Schema Definition
 ```yaml
@@ -237,7 +237,7 @@ round_1:
 
 lets_speak_together:
   title: "Let's Speak Together"
-  # Structured subfields option (recommended for PagesCMS):
+  # Structured subfields option (recommended):
   task_title: "The Roleplay / Synthesis Task"
   task_description: "Scenario description for participants."
   grammar_requirements:

@@ -4,9 +4,11 @@ const path = require('path');
 const cssFiles = [
   'shared/css/hub.css',
   'shared/css/cosy-icons.css',
-  'styles/calendar.css',
   'shared/css/lang.css',
-  'shared/css/tokens.css'
+  'shared/css/tokens.css',
+  'shared/css/sessions.css',
+  'styles/calendar.css',
+  'styles/home.css'
 ];
 
 let allCssText = '';

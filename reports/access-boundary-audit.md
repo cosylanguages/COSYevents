@@ -130,7 +130,7 @@ The following files and folders contain public navigation, schedule metadata, fo
 7. **Authoring Templates, Specifications & System Configurations**
    * `templates/` (`session-template.html`, `sample-session.json`, `vocabulary-export.json`, etc.)
    * `docs/` (`speaking-clubs-spec.md`, `session-conversion-spec.md`, `passport-schema.md`, etc.)
-   * Configuration & Tooling: `package.json`, `manifest.json`, `.pages.yml`, `CONTRIBUTING.md`, `AUDIT.md`, `README.md`
+   * Configuration & Tooling: `package.json`, `manifest.json`, `robots.txt`, `sitemap.xml`, `CONTRIBUTING.md`, `AUDIT.md`, `README.md`
 
 ---
 

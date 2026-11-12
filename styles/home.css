@@ -665,3 +665,85 @@
   font-size: 0.85rem;
   color: var(--cosy-color-muted, #5c5957);
 }
+
+/* Localized hub pages: explore grid extras and grouped footer */
+.explore-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.explore-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--cosy-color-sage-dark, #375742);
+  background: var(--cosy-color-sage-pale, rgba(74, 107, 80, 0.12));
+}
+
+.explore-card-footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--cosy-color-sage, #416b49);
+}
+
+.explore-card:hover .explore-card-footer .arrow {
+  transform: translateX(4px);
+}
+
+.explore-card-footer .arrow {
+  transition: transform 0.2s ease;
+}
+
+.past-events-prompt {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--cosy-color-muted, #5c5957);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-brand-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--cosy-color-sage-deep, #233827);
+}
+
+.footer-brand-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--cosy-color-muted, #5c5957);
+  max-width: 320px;
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-brand-desc {
+    margin: 0 auto;
+  }
+}
