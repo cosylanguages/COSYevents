@@ -407,6 +407,8 @@
         var relEq = relativeUrl(currentPath, eq);
         return relEq + (query ? '?' + query : '') + hash;
       } else {
+        // Do not send learners to an untranslated English page when the target-language
+        // equivalent is unavailable. Return to that language's hub instead.
         var qParams = query ? query.split('&') : [];
         var hasUi = false;
         for (var q = 0; q < qParams.length; q++) {
@@ -420,7 +422,8 @@
           qParams.push('ui=' + targetLang);
         }
         var newQuery = qParams.join('&');
-        return cleanPath + (newQuery ? '?' + newQuery : '') + hash;
+        var relHub = relativeUrl(currentPath, hub);
+        return relHub + (newQuery ? '?' + newQuery : '') + hash;
       }
     }
 
