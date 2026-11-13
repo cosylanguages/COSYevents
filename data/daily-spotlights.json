@@ -1,142 +1,142 @@
 {
-  "updated_at": "2026-11-12T11:59:46.092Z",
-  "display_date": "November 12, 2026",
-  "day": 12,
+  "updated_at": "2026-11-13T11:45:42.068Z",
+  "display_date": "November 13, 2026",
+  "day": 13,
   "month": 11,
   "items": {
     "celebration": {
       "category": "celebration",
       "categoryTitle": "Holiday of the Day",
-      "title": "Birth of Sun Yat-Sen, also Doctors' Day and Cultural Renaissance Day.",
+      "title": "Sadie Hawkins Day",
       "badge": "Celebration",
-      "description": "The following are considered public holidays in Taiwan. Some are official holidays, and some are not.",
-      "details": "Birth of Sun Yat-Sen, also Doctors' Day and Cultural Renaissance Day. (Republic of China)",
+      "description": "Sadie Hawkins Day is an American folk event and pseudo-holiday originated by Al Capp's hillbilly comic strip Li'l Abner (1934–1977). The annual comic strip storyline inspired real-world Sadie Hawkins events, the premise of which is that women ask men for a date or dancing. \"Sadie Hawkins Day\" was introduced in the comic strip on November 15, 1937; the storyline ran until the beginning of December. The storyline was revisited the following October/November, and inspired a fad on college campuses. By 1939, Life reported that 201 colleges in 188 cities held a Sadie Hawkins Day event.",
+      "details": "Sadie Hawkins Day (United States)",
       "clubLink": "lets-celebrate.html",
       "clubName": "Let's Celebrate",
       "source": "International & Cultural Observances",
       "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
       "i18n": {
         "en": {
-          "title": "Birth of Sun Yat-Sen, also Doctors' Day and Cultural Renaissance Day.",
-          "description": "The following are considered public holidays in Taiwan. Some are official holidays, and some are not."
+          "title": "Sadie Hawkins Day",
+          "description": "Sadie Hawkins Day is an American folk event and pseudo-holiday originated by Al Capp's hillbilly comic strip Li'l Abner (1934–1977). The annual comic strip storyline inspired real-world Sadie Hawkins events, the premise of which is that women ask men for a date or dancing. \"Sadie Hawkins Day\" was introduced in the comic strip on November 15, 1937; the storyline ran until the beginning of December. The storyline was revisited the following October/November, and inspired a fad on college campuses. By 1939, Life reported that 201 colleges in 188 cities held a Sadie Hawkins Day event."
         },
         "fr": {
-          "title": "Naissance de Sun Yat-sen, également Journée des médecins et Journée de la renaissance culturelle.",
-          "description": "Les jours suivants sont considérés comme des jours fériés à Taïwan. Certains sont des jours fériés officiels, d'autres non."
+          "title": "Journée Sadie Hawkins",
+          "description": "Le Sadie Hawkins Day est un événement folklorique américain et une pseudo-fête née de la bande dessinée hillbilly Li'l Abner (1934-1977) d'Al Capp. L'intrigue annuelle de la bande dessinée a inspiré des événements Sadie Hawkins dans le monde réel, dont le principe est que les femmes invitent les hommes à sortir avec elles."
         },
         "it": {
-          "title": "Nascita di Sun Yat-Sen, Giornata dei Medici e Giornata della Rinascita Culturale.",
-          "description": "Le seguenti date sono considerate giorni festivi a Taiwan. Alcune sono festività ufficiali, altre no."
+          "title": "Festa di Sadie Hawkins",
+          "description": "La Giornata di Sadie Hawkins è un evento folcloristico americano e una pseudo-festa nata dal fumetto hillbilly di Al Capp, Li'l Abner (1934–1977). La trama annuale della striscia a fumetti ha ispirato gli eventi Sadie Hawkins nel mondo reale, il cui presupposto è che le donne chiedano agli uomini un appuntamento."
         },
         "ru": {
-          "title": "День рождения Сунь Ятсена, а также День врача и День культурного возрождения.",
-          "description": "Следующие дни считаются государственными праздниками на Тайване. Некоторые из них являются официальными праздниками, а некоторые — нет."
+          "title": "День Сэди Хокинс",
+          "description": "День Сэди Хокинс — это американский народный праздник и неофициальный праздник, возникший благодаря комиксу Эла Каппа о деревенских жителях «Малыш Эбнер» (1934–1977). Сюжет ежегодного комикса вдохновил на проведение реальных мероприятий, посвященных Дню Сэди Хокинс, суть которых заключается в том, что женщины приглашают мужчин на свидание."
         },
         "el": {
-          "title": "Γέννηση του Σουν Γιατ-Σεν, επίσης Ημέρα των Ιατρών και Ημέρα της Πολιτιστικής Αναγέννησης.",
-          "description": "Οι ακόλουθες ημέρες θεωρούνται αργίες στην Ταϊβάν. Ορισμένες είναι επίσημες αργίες και ορισμένες όχι."
+          "title": "Ημέρα Sadie Hawkins",
+          "description": "Η Ημέρα της Σάντι Χόκινς είναι μια αμερικανική λαϊκή εκδήλωση και ψευδο-αργία που προέρχεται από το κόμικ στριπ Li'l Abner (1934–1977) του Αλ Καπ, το οποίο διαδραματίζεται σε μια αγροτική περιοχή. Η ετήσια πλοκή του κόμικ εμπνέυσε τις πραγματικές εκδηλώσεις Sadie Hawkins, η βασική ιδέα των οποίων είναι ότι οι γυναίκες ζητούν από τους άνδρες να βγουν ραντεβού."
         }
       }
     },
     "science": {
       "category": "science",
       "categoryTitle": "Today in Science",
-      "title": "Polypropylene",
+      "title": "1,000th pulsar",
       "year": "",
       "badge": "Research & Discovery",
-      "description": "(source) In 1999, in Bartlesville, Oklahoma, a plaque was placed on the site of the laboratory where the polymer polypropylene was invented, designating it a National Historic Chemical Landmark by the American Chemical Society. The first commercially successful use of the new material was in the Hula Hoop®. In 1951, J. Paul Hogan and Robert L. Banks, research chemists working for Phillips Petroleum Company, discovered the polymer unexpectedly during experiments with catalysts while trying to convert the natural gas components ethylene and propylene into compounds useful for gasoline. Later, they also developed a new catalytic process for making high-density polyethylene. Phillips soon invested in new plastic manufacturing plants.",
+      "description": "(source) In 1998, the discovery of the 1,000th pulsar in our galaxy was announced in a press release by the Jodrell Bank Observatory, University of Manchester, using the 64-meter Parkes Radio Telescope in New South Wales, Australia. A “multibeam” receiver was installed on the telescope in early 1997. This allowed the astronomers from England, Australia, United States, and Italy to find pulsars much faster than before. On average, they found a new pulsar in every hour of observing. By this date, the researchers had found more than 200 pulsars and they expected to find another 600 more before the survey ended. The “multibeam” receiver used consists of 13 hexagonally arranged receivers that allow simultaneous observations.",
       "clubLink": "keeping-up-with-science.html",
       "clubName": "Keeping Up with Science",
       "source": "Today in Science History",
-      "sourceUrl": "https://todayinsci.com/11/11_12.htm",
+      "sourceUrl": "https://todayinsci.com/11/11_13.htm",
       "i18n": {
         "en": {
-          "title": "Polypropylene",
-          "description": "(source) In 1999, in Bartlesville, Oklahoma, a plaque was placed on the site of the laboratory where the polymer polypropylene was invented, designating it a National Historic Chemical Landmark by the American Chemical Society. The first commercially successful use of the new material was in the Hula Hoop®. In 1951, J. Paul Hogan and Robert L. Banks, research chemists working for Phillips Petroleum Company, discovered the polymer unexpectedly during experiments with catalysts while trying to convert the natural gas components ethylene and propylene into compounds useful for gasoline. Later, they also developed a new catalytic process for making high-density polyethylene. Phillips soon invested in new plastic manufacturing plants."
+          "title": "1,000th pulsar",
+          "description": "(source) In 1998, the discovery of the 1,000th pulsar in our galaxy was announced in a press release by the Jodrell Bank Observatory, University of Manchester, using the 64-meter Parkes Radio Telescope in New South Wales, Australia. A “multibeam” receiver was installed on the telescope in early 1997. This allowed the astronomers from England, Australia, United States, and Italy to find pulsars much faster than before. On average, they found a new pulsar in every hour of observing. By this date, the researchers had found more than 200 pulsars and they expected to find another 600 more before the survey ended. The “multibeam” receiver used consists of 13 hexagonally arranged receivers that allow simultaneous observations."
         },
         "fr": {
-          "title": "Polypropylène",
-          "description": "(source) En 1999, à Bartlesville, dans l'Oklahoma, une plaque a été apposée sur le site du laboratoire où le polymère polypropylène a été inventé, le désignant comme un site chimique historique national par l'American Chemical Society. La première utilisation commercialement réussie du nouveau matériau"
+          "title": "1 000e pulsar",
+          "description": "(source) En 1998, la découverte du 1 000e pulsar de notre galaxie a été annoncée dans un communiqué de presse par l'observatoire de Jodrell Bank, de l'Université de Manchester, à l'aide du radiotélescope de Parkes de 64 mètres, situé en Nouvelle-Galles du Sud, en Australie. Un récepteur « multifaisceaux » a été installé sur le télescope."
         },
         "it": {
-          "title": "Polipropilene",
-          "description": "(fonte) Nel 1999, a Bartlesville, in Oklahoma, è stata apposta una targa sul sito del laboratorio in cui è stato inventato il polimero polipropilene, che è stato dichiarato National Historic Chemical Landmark (Sito storico nazionale della chimica) dall'American Chemical Society. Il primo utilizzo commercialmente di successo del nuovo materiale"
+          "title": "Millesima pulsar",
+          "description": "(fonte) Nel 1998, la scoperta della millesima pulsar nella nostra galassia è stata annunciata in un comunicato stampa dall'Osservatorio di Jodrell Bank dell'Università di Manchester, utilizzando il radiotelescopio Parkes da 64 metri nel Nuovo Galles del Sud, in Australia. Sul telescopio è stato installato un ricevitore \"multibeam\"."
         },
         "ru": {
-          "title": "Полипропилен",
-          "description": "(источник) В 1999 году в Бартлсвилле, штат Оклахома, на месте лаборатории, где был изобретен полимер полипропилен, была установлена мемориальная доска, обозначающая его как Национальный исторический химический памятник Американского химического общества. Первое коммерчески успешное применение нового материала"
+          "title": "1000-й пульсар",
+          "description": "(источник) В 1998 году в пресс-релизе обсерватории Джодрелл-Бэнк Манчестерского университета было объявлено об открытии 1000-го пульсара в нашей галактике, сделанном с помощью 64-метрового радиотелескопа Паркса в Новом Южном Уэльсе, Австралия. На телескопе был установлен многолучевой приемник."
         },
         "el": {
-          "title": "Πολυπροπυλένιο",
-          "description": "(πηγή) Το 1999, στο Μπάρτλεσβιλ της Οκλαχόμα, τοποθετήθηκε μια αναμνηστική πλάκα στον χώρο του εργαστηρίου όπου εφευρέθηκε το πολυμερές πολυπροπυλένιο, με την οποία αναγνωρίζεται ως Εθνικό Ιστορικό Χημικό Μνημείο από την Αμερικανική Χημική Εταιρεία. Η πρώτη εμπορικά επιτυχημένη χρήση του νέου υλικού"
+          "title": "1.000ός πάλσαρ",
+          "description": "(πηγή) Το 1998, η ανακάλυψη του 1.000ού πάλσαρ στον γαλαξία μας ανακοινώθηκε σε δελτίο Τύπου από το Αστεροσκοπείο Jodrell Bank του Πανεπιστημίου του Μάντσεστερ, με τη χρήση του ραδιοτηλεσκοπίου Parkes των 64 μέτρων στη Νέα Νότια Ουαλία της Αυστραλίας. Στο τηλεσκόπιο εγκαταστάθηκε ένας δέκτης «πολλαπλών δεσμών»."
         }
       }
     },
     "music": {
       "category": "music",
       "categoryTitle": "Today in Music",
-      "title": "Lady of Shalott",
-      "year": "1931",
+      "title": "'The 49ers",
+      "year": "1922",
       "badge": "Music History",
-      "description": "Jean Sibelius and Ashton's ballet \"Lady of Shalott\" premieres in London",
+      "description": "Marc Connelly and George Kaufman's revue \"'The 49ers\" opens at Puch and Judy Theatre, NYC; runs for 16 performances",
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
       "sourceUrl": "https://www.onthisday.com/music/",
       "i18n": {
         "en": {
-          "title": "Lady of Shalott",
-          "description": "Jean Sibelius and Ashton's ballet \"Lady of Shalott\" premieres in London"
+          "title": "'The 49ers",
+          "description": "Marc Connelly and George Kaufman's revue \"'The 49ers\" opens at Puch and Judy Theatre, NYC; runs for 16 performances"
         },
         "fr": {
-          "title": "À la dame de Shalott.'",
-          "description": "Création à Londres du ballet « La Dame de Shalott » de Jean Sibelius et Ashton"
+          "title": "« Les 49ers »",
+          "description": "La revue « The 49ers » de Marc Connelly et George Kaufman est présentée au Puch and Judy Theatre, à New York ; elle est jouée 16 fois."
         },
         "it": {
-          "title": "La dama di Shalott",
-          "description": "Il balletto \"La dama di Shalott\" di Jean Sibelius e Ashton debutta a Londra"
+          "title": "\"I 49ers\"",
+          "description": "La rivista \"'The 49ers\" di Marc Connelly e George Kaufman debutta al Puch and Judy Theatre di New York; va in scena per 16 rappresentazioni"
         },
         "ru": {
-          "title": "3 месяца",
-          "description": "Премьера балета Яна Сибелиуса и Фредерика Аштона «Леди из Шалотта» в Лондоне"
+          "title": "«49-е»",
+          "description": "В театре «Панч и Джуди» в Нью-Йорке состоялась премьера ревю «Золотоискатели» Марка Коннелли и Джорджа Кофмана; всего было дано 16 представлений."
         },
         "el": {
-          "title": "Η Κυρά του Σαλότ",
-          "description": "Πρεμιέρα του μπαλέτου «Η Κυρά του Σαλότ» του Jean Sibelius και του Frederick Ashton στο Λονδίνο"
+          "title": "«Οι 49ers",
+          "description": "Η επιθεώρηση των Μαρκ Κόνελι και Τζορτζ Κάουφμαν «Οι 49άρηδες» κάνει πρεμιέρα στο θέατρο Puch and Judy, στη Νέα Υόρκη. Παίζεται για 16 παραστάσεις."
         }
       }
     },
     "film": {
       "category": "film",
       "categoryTitle": "Today in Film & TV",
-      "title": "First possible movie stunt: A man...",
-      "year": "1910",
+      "title": "Little Nellie Kelly",
+      "year": "1922",
       "badge": "Cinema & Screen",
-      "description": "First possible movie stunt: A man jumps into the Hudson River from a burning balloon",
+      "description": "George M. Cohan's musical \"Little Nellie Kelly\" opens at the Liberty Theatre, NYC; runs for 276 performances",
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
       "sourceUrl": "https://www.onthisday.com/film-tv/",
       "i18n": {
         "en": {
-          "title": "First possible movie stunt: A man...",
-          "description": "First possible movie stunt: A man jumps into the Hudson River from a burning balloon"
+          "title": "Little Nellie Kelly",
+          "description": "George M. Cohan's musical \"Little Nellie Kelly\" opens at the Liberty Theatre, NYC; runs for 276 performances"
         },
         "fr": {
-          "title": "Première cascade de film possible : un homme...",
-          "description": "Première cascade cinématographique possible : un homme saute dans le fleuve Hudson depuis une montgolfière en feu"
+          "title": "Little Nellie Kelly",
+          "description": "La comédie musicale « Little Nellie Kelly » de George M. Cohan est créée au Liberty Theatre de New York ; elle est jouée 276 fois."
         },
         "it": {
-          "title": "Prima possibile scena d'azione cinematografica: un uomo...",
-          "description": "Prima possibile scena d'azione cinematografica: un uomo si tuffa nel fiume Hudson da una mongolfiera in fiamme"
+          "title": "La piccola Nellie Kelly",
+          "description": "Il musical di George M. Cohan \"Little Nellie Kelly\" debutta al Liberty Theatre di New York e va in scena per 276 rappresentazioni"
         },
         "ru": {
-          "title": "Первый возможный трюк для фильма: мужчина...",
-          "description": "Первый возможный трюк для фильма: мужчина прыгает в реку Гудзон с горящего воздушного шара"
+          "title": "Малышка Нелли Келли",
+          "description": "В театре «Либерти» в Нью-Йорке состоялась премьера мюзикла Джорджа М. Когана «Маленькая Нелли Келли»; всего было сыграно 276 представлений."
         },
         "el": {
-          "title": "Πρώτο πιθανό ακροβατικό ταινίας: Ένας άνδρας...",
-          "description": "Πρώτο πιθανό ακροβατικό ταινίας: Ένας άνδρας πηδάει στον ποταμό Χάντσον από ένα φλεγόμενο αερόστατο"
+          "title": "Μικρή Νέλι Κέλι",
+          "description": "Το μιούζικαλ του Τζορτζ Μ. Κόχαν «Little Nellie Kelly» κάνει πρεμιέρα στο θέατρο Liberty της Νέας Υόρκης και ανεβαίνει για 276 παραστάσεις"
         }
       }
     }
