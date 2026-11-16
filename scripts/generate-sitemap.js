@@ -107,7 +107,11 @@ function main() {
 
   if (check) {
     const existing = fs.existsSync(target) ? fs.readFileSync(target, 'utf8') : '';
-    if (existing !== xml) {
+    // Compare the URL set only. `lastmod` is stamped with the build date, so a
+    // byte-exact compare would fail on any day after the sitemap was generated
+    // even when no page changed.
+    const strip = (s) => s.replace(/<lastmod>[^<]*<\/lastmod>/g, '');
+    if (strip(existing) !== strip(xml)) {
       console.error('❌ sitemap.xml is out of date. Run: npm run build-sitemap');
       process.exit(1);
     }
