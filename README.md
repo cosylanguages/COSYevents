@@ -115,6 +115,23 @@ npm test
 
 The generated index is only for discovery. Full session content remains in the repository and should be available through repository-hosted session files. Session publishing and retrieval must not depend on Supabase.
 
+## Daily spotlights
+
+`index.html` shows the daily spotlights (holiday of the day, today in science, today in music, today
+in film & TV). This repository owns those spotlights; the other daily elements live where they belong
+and the page links out to them.
+
+| Element | Owner |
+|---|---|
+| Cultural spotlights (holiday, science, music, film & TV) | COSYevents (`shared/js/daily-spotlights.js`, date-keyed spotlight data) |
+| Word, verb, verb + preposition, phrasal verb and idiom of the day | [COSYdata](https://github.com/cosylanguages/COSYdata) |
+| Speaking and writing prompts, Daily Challenge | [COSYpractice](https://github.com/cosylanguages/COSYpractice) |
+| Fun fact and the hub daily strip | [COSYlanguages](https://github.com/cosylanguages/COSYlanguages) |
+
+`scripts/fetch_daily_spotlights.js` (run by the `daily-spotlights` workflow) rotates the spotlight
+data daily. The page mounts the shared directory from COSYlanguages with
+`<div data-daily-directory data-self="events">`.
+
 ## COSYlanguages ecosystem
 
 - [COSYlanguages](https://cosylanguages.github.io/COSYlanguages/) — Main portal and core curriculum.

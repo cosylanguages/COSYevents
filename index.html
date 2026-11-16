@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/calendar.css">
   <link rel="stylesheet" href="styles/home.css">
   <link rel="stylesheet" href="assets/css/session-directory.css">
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/daily-directory.css">
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -61,6 +62,9 @@
     <section class="daily-spotlights-section">
       <div id="daily-spotlights-root"></div>
     </section>
+
+    <!-- Daily directory: link out to every repo's daily surface, keeping each element in its owner. -->
+    <div data-daily-directory data-self="events" data-lang="en"></div>
 
     <!-- Filter Controls -->
     <section class="calendar-controls">
@@ -400,6 +404,7 @@
   <script src="shared/calendar/calendar.js"></script>
   <script src="assets/js/session-directory.js"></script>
   <script src="shared/js/daily-spotlights.js"></script>
+  <script src="https://cosylanguages.github.io/COSYlanguages/js/daily-directory.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const levelSelect = document.getElementById('calc-level-select');
