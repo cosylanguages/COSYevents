@@ -272,13 +272,34 @@
     goToSlide(0);
   }
 
+  // A mount with `data-club-reviews=""` shows every review (the hub carousel). A mount with a club
+  // slug shows only that club's reviews, so each club page can carry its own.
+  function reviewsForMount(reviews, slug) {
+    if (!slug) return reviews;
+    return reviews.filter(function (review) { return review.club === slug; });
+  }
+
+  function mountSlug(element) {
+    var value = element.getAttribute('data-club-reviews');
+    return (value || '').trim();
+  }
+
+  // An optional wrapper marked `data-club-reviews-shell` is hidden along with the mount, so an empty
+  // filtered block leaves no padding gap on the page.
+  function shellFor(element) {
+    return element.closest ? element.closest('[data-club-reviews-shell]') : null;
+  }
+
   function render(element, reviews, lang) {
+    var shell = shellFor(element);
     if (!reviews || reviews.length === 0) {
       element.innerHTML = '';
       element.style.display = 'none';
+      if (shell) shell.style.display = 'none';
       return;
     }
     element.style.display = '';
+    if (shell) shell.style.display = '';
     element.innerHTML = renderSection(reviews, lang);
     wireCarousel(element);
   }
@@ -299,7 +320,7 @@
       .then(function (data) {
         var reviews = (data && data.reviews) || [];
         for (var i = 0; i < mounts.length; i++) {
-          render(mounts[i], reviews, lang);
+          render(mounts[i], reviewsForMount(reviews, mountSlug(mounts[i])), lang);
         }
       })
       .catch(function (err) {
@@ -327,6 +348,7 @@
       stars: stars,
       clubLabel: clubLabel,
       localized: localized,
+      reviewsForMount: reviewsForMount,
       initClubReviews: initClubReviews,
       REVIEWS_I18N: REVIEWS_I18N,
       CLUB_LABELS: CLUB_LABELS

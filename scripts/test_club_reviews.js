@@ -22,6 +22,7 @@ const {
   stars,
   clubLabel,
   localized,
+  reviewsForMount,
   REVIEWS_I18N,
   CLUB_LABELS
 } = require('../shared/js/club-reviews.js');
@@ -131,6 +132,18 @@ assert.strictEqual(localized({ author: 'A', text: 'T', i18n: { fr: { text: 'FR' 
 assert(stars(0).includes('is-on') === false, 'zero rating should have no filled stars');
 console.log('  PASS: Helpers behave as expected.\n');
 
+// Test 5b: Per-club filtering
+console.log('Test 5b: Verifying per-club filtering...');
+const filterSample = [
+  { id: 'a', club: 'mind-matters' },
+  { id: 'b', club: 'cinema-club' },
+  { id: 'c', club: 'mind-matters' }
+];
+assert.deepStrictEqual(reviewsForMount(filterSample, '').map(r => r.id), ['a', 'b', 'c'], 'empty slug shows every review');
+assert.deepStrictEqual(reviewsForMount(filterSample, 'mind-matters').map(r => r.id), ['a', 'c'], 'slug filters to that club');
+assert.deepStrictEqual(reviewsForMount(filterSample, 'no-such-club'), [], 'unknown slug yields no reviews');
+console.log('  PASS: Per-club filtering selects the right reviews.\n');
+
 // Test 6: Host page carries the mount + assets
 console.log('Test 6: Verifying host page mounts the component...');
 const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
@@ -138,5 +151,42 @@ assert(/<div id="reviews" data-club-reviews><\/div>/.test(indexHtml), 'index.htm
 assert(indexHtml.includes('shared/js/club-reviews.js'), 'index.html: missing component script');
 assert(indexHtml.includes('shared/css/club-reviews.css'), 'index.html: missing component stylesheet');
 console.log('  PASS: index.html mounts the component with the right assets.\n');
+
+// Test 7: Localized hubs mount the component
+console.log('Test 7: Verifying localized hubs mount the component...');
+for (const lang of ['fr', 'it', 'ru', 'el']) {
+  const hub = fs.readFileSync(path.join(ROOT, lang, 'index.html'), 'utf8');
+  assert(/data-club-reviews/.test(hub), `${lang}/index.html: missing reviews mount`);
+  assert(hub.includes('../shared/js/club-reviews.js'), `${lang}/index.html: missing component script`);
+  assert(hub.includes('../shared/css/club-reviews.css'), `${lang}/index.html: missing component stylesheet`);
+}
+console.log('  PASS: All localized hubs mount the component.\n');
+
+// Test 8: Club pages mount a filtered block with a known slug
+console.log('Test 8: Verifying club pages mount a filtered block...');
+const CLUB_PAGES = {
+  'basic-speaking-club.html': 'basic-speaking-club',
+  'intermediate-speaking-club.html': 'intermediate-speaking-club',
+  'keeping-up-with-science.html': 'keeping-up-with-science',
+  'lets-celebrate.html': 'lets-celebrate',
+  'the-greatest-quotes.html': 'the-greatest-quotes',
+  'mind-matters.html': 'mind-matters',
+  'my-life-with-without.html': 'my-life-with-without',
+  'debatable-relatable.html': 'debatable-and-relatable',
+  'i-couldnt-help-but-wonder.html': 'i-couldnt-help-but-wonder',
+  'if-you-were.html': 'if-you-were',
+  'long-reads.html': 'long-reads',
+  'cinema-club.html': 'cinema-club',
+  'karaoke-club.html': 'karaoke-club',
+  'game-evenings.html': 'game-evenings'
+};
+for (const [file, slug] of Object.entries(CLUB_PAGES)) {
+  assert(CLUB_LABELS[slug], `${file}: slug "${slug}" must be a known club`);
+  const html = fs.readFileSync(path.join(ROOT, file), 'utf8');
+  assert(html.includes(`data-club-reviews="${slug}"`), `${file}: missing filtered reviews mount`);
+  assert(html.includes('shared/js/club-reviews.js'), `${file}: missing component script`);
+  assert(html.includes('shared/css/club-reviews.css'), `${file}: missing component stylesheet`);
+}
+console.log(`  PASS: All ${Object.keys(CLUB_PAGES).length} club pages mount a filtered block.\n`);
 
 console.log('🎉 All Club Reviews tests passed successfully!');
