@@ -12,6 +12,18 @@
       "date": "2026",
       "featured": true,
       "text": "I really love your clubs and usually try to do my best not to miss them. For me your clubs are a combination of an interesting (educative topic), challenging expression of my ideas, new words and phrases, your priceless explanations of our mistakes and new insights in grammar or idioms. Last Saturday I was missing you :)"
+    },
+    {
+      "id": "cr-inter-003",
+      "club": "intermediate-speaking-club",
+      "club_name": "Intermediate Speaking Club",
+      "author": "Elena",
+      "language": "English",
+      "level": "B1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "I just wanted to share how much I enjoy your conversation classes. You have a real talent for making learning feel effortless and engaging. Your classes are always lively, relaxed, and full of meaningful interaction, making you forget you’re actually learning and simply enjoy the conversation. It’s a wonderful combination of expertise, enthusiasm, and an ability to bring people into the learning process. I think that’s a truly special quality. Thank you for your time and dedication!"
     }
   ]
 }
