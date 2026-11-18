@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COSYevents : Живые языковые события</title>
-                        <link rel="stylesheet" href="../shared/css/hub.css">
+                        <script src="../shared/js/cosy-theme.js"></script>
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/fonts.css">
+  <link rel="stylesheet" href="../shared/css/hub.css">
   <link rel="stylesheet" href="../shared/css/cosy-icons.css">
   <link rel="stylesheet" href="../styles/calendar.css">
   <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/hero.css">
   <meta name="description" content="Разговорные клубы, киновечера и интерактивные языковые сессии на английском, французском, итальянском, русском и греческом языках.">
   <link rel="icon" href="../shared/assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="../shared/assets/apple-touch-icon.png">
@@ -35,32 +38,51 @@
     </div>
   </div>
 
-  <header class="hub-header">
-    <div class="hub-header-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
-        <span class="hub-brand" style="margin-bottom: 0;">Экосистема COSYlanguages</span>
-        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-          <div data-cosy-account></div>
-          <div data-ce-lang-switcher></div>
+  <div class="ev-topbar">
+    <a class="ev-brand" href="index.html" aria-label="COSYevents — главная">
+      <img src="../images/logo.png" alt="" width="30" height="30">
+      <span>COSYevents</span>
+    </a>
+    <div class="ev-topbar-tools">
+      <div data-cosy-account></div>
+      <div data-ce-lang-switcher></div>
+      <button type="button" class="ev-theme-btn" data-cosy-theme-toggle aria-label="Switch theme">🌙</button>
+    </div>
+  </div>
+
+  <header class="ev-hero" id="top">
+    <div class="ev-hero-inner">
+      <div class="ev-hero-copy">
+        <p class="ev-eyebrow">🎉 Живые языковые события</p>
+        <h1 class="ev-title">Говорите с другими — <em>вживую.</em></h1>
+        <p class="ev-sub">
+          Разговорные клубы, киновечера и интерактивные языковые сессии на английском, французском, итальянском, русском и греческом языках.
+        </p>
+        <div class="ev-actions">
+          <a href="#calendar-controls" class="ev-btn ev-btn-primary">Смотреть календарь</a>
+          <a href="https://wa.me/330766784195?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D0%B5%D1%85%D0%BE%D1%82%D0%B5%D0%BB%28%D0%B0%29%20%D0%B1%D1%8B%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%81%D0%B5%D1%81%D1%81%D0%B8%D1%8E%20COSYevents." target="_blank" rel="noopener" class="ev-btn ev-btn-secondary">💬 Записаться в WhatsApp</a>
+          <a href="../browse.html" class="ev-link">Все сессии →</a>
         </div>
+        <nav class="ev-chips" aria-label="Категории событий">
+          <a href="speaking-clubs.html" class="ev-chip">💬 Разговорные клубы</a>
+          <a href="../cinema-nights/index.html" class="ev-chip">🎬 Киноклуб</a>
+          <a href="../karaoke-club.html" class="ev-chip">🎤 Караоке</a>
+          <a href="../game-evenings.html" class="ev-chip">🎲 Игры</a>
+          <a href="../long-reads.html" class="ev-chip">📚 Чтение</a>
+          <a href="../teacher-led-sessions/index.html" class="ev-chip">🍎 Учительские сессии</a>
+        </nav>
       </div>
-      <h1 class="hub-title">COSYevents</h1>
-      <p class="hub-subtitle">
-        Разговорные клубы, киновечера и интерактивные языковые сессии на английском, французском, итальянском, русском и греческом языках.
-      </p>
-      <div class="hero-cta-group">
-        <a href="#calendar-controls" class="hero-btn hero-btn-primary">Смотреть календарь ↓</a>
-        <a href="https://wa.me/330766784195?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D0%B5%D1%85%D0%BE%D1%82%D0%B5%D0%BB%28%D0%B0%29%20%D0%B1%D1%8B%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%81%D0%B5%D1%81%D1%81%D0%B8%D1%8E%20COSYevents." target="_blank" rel="noopener" class="hero-btn hero-btn-wa">💬 Записаться в WhatsApp</a>
-      </div>
-      <nav class="hub-nav-links" aria-label="Категории событий">
-        <a href="speaking-clubs.html" class="hub-nav-link">Разговорные клубы 💬</a>
-        <a href="../cinema-nights/index.html" class="hub-nav-link">Киноклуб 🎬</a>
-        <a href="../karaoke-club.html" class="hub-nav-link">Караоке 🎤</a>
-        <a href="../game-evenings.html" class="hub-nav-link">Игры 🎲</a>
-        <a href="../long-reads.html" class="hub-nav-link">Чтение 📚</a>
-        <a href="../teacher-led-sessions/index.html" class="hub-nav-link">Учительские сессии 🍎</a>
-        <a href="../browse.html" class="hub-nav-link">Все сессии 🔎</a>
-      </nav>
+
+      <aside class="ev-next" aria-labelledby="ev-next-title">
+        <div class="ev-next-head">
+          <span class="ev-next-icon" aria-hidden="true">🎟️</span>
+          <h2 id="ev-next-title">Ближайшие</h2>
+        </div>
+        <ul class="ev-next-list" data-next-events aria-live="polite">
+          <li class="ev-next-empty">…</li>
+        </ul>
+        <a href="#calendar-controls" class="ev-next-foot">Открыть весь календарь →</a>
+      </aside>
     </div>
   </header>
 
@@ -275,5 +297,6 @@
   <script src="../shared/calendar/calendar-i18n.js"></script>
   <script src="../shared/calendar/calendar.js"></script>
   <script src="../shared/js/daily-spotlights.js"></script>
+  <script src="../shared/js/hero-next.js" defer></script>
 </body>
 </html>

@@ -60,6 +60,8 @@
     --cosy-shadow-hover:   0 8px 24px rgba(0, 0, 0, 0.08);
     --cosy-radius:         12px;
     --cosy-font-family:    var(--font-sans);
+    --cosy-font-sans:      'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --cosy-font-serif:     'Fraunces', 'Literata', Georgia, 'Times New Roman', serif;
 }
 
 html[data-theme="dark"], body.theme-dark {

@@ -8,7 +8,8 @@ const cssFiles = [
   'shared/css/tokens.css',
   'shared/css/sessions.css',
   'styles/calendar.css',
-  'styles/home.css'
+  'styles/home.css',
+  'styles/hero.css'
 ];
 
 let allCssText = '';
