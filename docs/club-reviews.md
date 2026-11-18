@@ -26,7 +26,6 @@ Open `data/club-reviews.json` and add an object to the `reviews` array:
 {
   "id": "cr-mind-002",
   "club": "mind-matters",
-  "club_name": "Mind Matters",
   "author": "Ines",
   "language": "English",
   "level": "B2",
@@ -44,16 +43,25 @@ Field rules (enforced by `npm run test-club-reviews`):
 
 - `id` — unique, any stable string.
 - `club` — must be one of the club slugs in `CLUB_LABELS` in
-  `shared/js/club-reviews.js` (for example `keeping-up-with-science`).
-- `club_name` — the name shown under the quote.
+  `shared/js/club-reviews.js` (for example `keeping-up-with-science`). The club
+  name shown under the quote is looked up from `CLUB_LABELS`, so no separate name
+  field is needed.
 - `author` — display name only; never a full legal name.
 - `rating` — integer 1–5, shown as stars.
 - `date` — the year only (`YYYY`). Rendered as just the year; the month and day are not shown.
 - `text` — the review. At least 20 characters.
 - `i18n` — optional. Add localized `text` (and optionally `author`) for any of
   `fr`, `it`, `ru`, `el`. Missing languages fall back to the top-level `text`.
+- `featured` — optional. `true` floats the review above the others of its year.
 
-The `featured` flag is reserved for future ordering; it is not required.
+### Order
+
+Reviews render newest first by `date` (the year). A `featured: true` review is
+shown before the others of the same year. Entries that share a year keep the order
+they have in the data file, so you can hand-tune a tie by reordering the array.
+
+`club_name` is accepted as an optional override for the club name, but it is
+normally omitted: `CLUB_LABELS` is the single source of truth for those names.
 
 ## Where it appears
 

@@ -272,11 +272,27 @@
     goToSlide(0);
   }
 
+  // Reviews render newest first; `featured: true` floats to the top of its year. The sort is stable,
+  // so entries with the same year keep the order they have in the data file.
+  function sortReviews(reviews) {
+    return reviews.map(function (review, index) { return { review: review, index: index }; })
+      .sort(function (a, b) {
+        var fa = a.review.featured ? 1 : 0;
+        var fb = b.review.featured ? 1 : 0;
+        if (fa !== fb) return fb - fa;
+        var ya = parseInt(a.review.date, 10) || 0;
+        var yb = parseInt(b.review.date, 10) || 0;
+        if (ya !== yb) return yb - ya;
+        return a.index - b.index;
+      })
+      .map(function (entry) { return entry.review; });
+  }
+
   // A mount with `data-club-reviews=""` shows every review (the hub carousel). A mount with a club
   // slug shows only that club's reviews, so each club page can carry its own.
   function reviewsForMount(reviews, slug) {
-    if (!slug) return reviews;
-    return reviews.filter(function (review) { return review.club === slug; });
+    var selected = slug ? reviews.filter(function (review) { return review.club === slug; }) : reviews;
+    return sortReviews(selected);
   }
 
   function mountSlug(element) {
@@ -349,6 +365,7 @@
       clubLabel: clubLabel,
       localized: localized,
       reviewsForMount: reviewsForMount,
+      sortReviews: sortReviews,
       initClubReviews: initClubReviews,
       REVIEWS_I18N: REVIEWS_I18N,
       CLUB_LABELS: CLUB_LABELS
