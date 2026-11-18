@@ -15,20 +15,11 @@
   <link rel="stylesheet" href="styles/hero.css">
   <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/daily-directory.css">
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/ecosystem-strip.css">
 </head>
 <body>
 
-  <div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
-    <div class="cosy-strip-inner">
-      <span class="cosy-strip-brand">🌐 COSY Ecosystem:</span>
-      <ul class="cosy-strip-links">
-        <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
-        <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
-        <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
-        <li><a href="index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
-      </ul>
-    </div>
-  </div>
+  <div data-ecosystem-strip data-self="events"></div>
 
   <div class="ev-topbar">
     <a class="ev-brand" href="index.html" aria-label="COSYevents home">
@@ -526,5 +517,6 @@
       }
     });
   </script>
+  <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
 </body>
 </html>
