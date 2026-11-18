@@ -134,7 +134,7 @@ console.log('  PASS: Helpers behave as expected.\n');
 // Test 6: Host page carries the mount + assets
 console.log('Test 6: Verifying host page mounts the component...');
 const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-assert(indexHtml.includes('<div data-club-reviews></div>'), 'index.html: missing reviews mount');
+assert(/<div id="reviews" data-club-reviews><\/div>/.test(indexHtml), 'index.html: missing reviews mount');
 assert(indexHtml.includes('shared/js/club-reviews.js'), 'index.html: missing component script');
 assert(indexHtml.includes('shared/css/club-reviews.css'), 'index.html: missing component stylesheet');
 console.log('  PASS: index.html mounts the component with the right assets.\n');
