@@ -261,6 +261,63 @@
     );
   }
 
+  function directorySlotHTML(lang) {
+    // data-directory="true" on the mount adds one compact line of links to the other COSY daily
+    // surfaces under the cards, mirroring the hub strip. data-self="events" marks this repo's card.
+    return '<div class="daily-spotlights-directory" data-daily-directory data-compact="true" data-self="events" data-lang="' +
+      sanitizeHtml(lang) + '"></div>';
+  }
+
+  // Pure builder for the container markup so it can be unit-tested without a DOM.
+  // opts.directory adds the compact ecosystem-directory line (main page only).
+  function renderContainer(data, lang, pathPrefix, opts) {
+    opts = opts || {};
+    var i18n = SPOTLIGHT_I18N[lang] || SPOTLIGHT_I18N.en;
+    var localizedDate = formatDisplayDate(data, lang);
+    var subText = (i18n.sub || '').replace('{date}', localizedDate);
+    var items = data.items;
+
+    return (
+      '<div class="daily-spotlights-container">' +
+        '<div class="daily-spotlights-header">' +
+          '<div class="daily-spotlights-header-text">' +
+            '<span class="daily-spotlights-tag">' + sanitizeHtml(i18n.tag) + '</span>' +
+            '<h2 class="daily-spotlights-heading">' + sanitizeHtml(i18n.heading) + '</h2>' +
+            '<p class="daily-spotlights-sub">' +
+              sanitizeHtml(subText) +
+            '</p>' +
+          '</div>' +
+          '<span class="daily-spotlights-date-badge">📅 ' + sanitizeHtml(localizedDate) + '</span>' +
+        '</div>' +
+        '<div class="daily-spotlights-grid">' +
+          renderCard('celebration', items.celebration, lang, pathPrefix) +
+          renderCard('science', items.science, lang, pathPrefix) +
+          renderCard('music', items.music, lang, pathPrefix) +
+          renderCard('film', items.film, lang, pathPrefix) +
+        '</div>' +
+        (opts.directory ? directorySlotHTML(lang) : '') +
+      '</div>'
+    );
+  }
+
+  // Renders the compact directory into its slot once the shared daily-directory.js is available.
+  // If that script has not run yet, its own initAll() picks the slot up on DOMContentLoaded.
+  function mountDirectory(container, lang) {
+    if (!container || typeof container.querySelector !== 'function') return;
+    var slot = container.querySelector('[data-daily-directory]');
+    if (!slot) return;
+    var tries = 0;
+    (function attempt() {
+      var dir = typeof window !== 'undefined' && window.COSY_DailyDirectory;
+      if (dir && typeof dir.renderCompact === 'function') {
+        slot.setAttribute('data-lang', lang);
+        dir.renderCompact(slot);
+        return;
+      }
+      if (++tries < 20 && typeof setTimeout === 'function') setTimeout(attempt, 100);
+    })();
+  }
+
   function initDailySpotlights() {
     var root = document.getElementById('daily-spotlights-root');
     if (!root) return;
@@ -268,7 +325,7 @@
     var lang = detectLanguage();
     var pathPrefix = getPathPrefix();
     var dataUrl = pathPrefix + 'data/daily-spotlights.json';
-    var i18n = SPOTLIGHT_I18N[lang] || SPOTLIGHT_I18N.en;
+    var includeDirectory = root.getAttribute('data-directory') === 'true';
 
     fetch(dataUrl)
       .then(function (res) {
@@ -283,32 +340,8 @@
           return;
         }
 
-        var localizedDate = formatDisplayDate(data, lang);
-        var subText = (i18n.sub || '').replace('{date}', localizedDate);
-        var items = data.items;
-
-        var html = (
-          '<div class="daily-spotlights-container">' +
-            '<div class="daily-spotlights-header">' +
-              '<div class="daily-spotlights-header-text">' +
-                '<span class="daily-spotlights-tag">' + sanitizeHtml(i18n.tag) + '</span>' +
-                '<h2 class="daily-spotlights-heading">' + sanitizeHtml(i18n.heading) + '</h2>' +
-                '<p class="daily-spotlights-sub">' +
-                  sanitizeHtml(subText) +
-                '</p>' +
-              '</div>' +
-              '<span class="daily-spotlights-date-badge">📅 ' + sanitizeHtml(localizedDate) + '</span>' +
-            '</div>' +
-            '<div class="daily-spotlights-grid">' +
-              renderCard('celebration', items.celebration, lang, pathPrefix) +
-              renderCard('science', items.science, lang, pathPrefix) +
-              renderCard('music', items.music, lang, pathPrefix) +
-              renderCard('film', items.film, lang, pathPrefix) +
-            '</div>' +
-          '</div>'
-        );
-
-        root.innerHTML = html;
+        root.innerHTML = renderContainer(data, lang, pathPrefix, { directory: includeDirectory });
+        if (includeDirectory) mountDirectory(root, lang);
       })
       .catch(function (err) {
         console.warn('Daily spotlights failed to render:', err.message);
@@ -328,6 +361,9 @@
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
       renderCard: renderCard,
+      renderContainer: renderContainer,
+      directorySlotHTML: directorySlotHTML,
+      mountDirectory: mountDirectory,
       sanitizeHtml: sanitizeHtml,
       initDailySpotlights: initDailySpotlights,
       detectLanguage: detectLanguage,

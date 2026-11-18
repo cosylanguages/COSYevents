@@ -16,6 +16,8 @@ const path = require('path');
 const SPOTLIGHTS_PATH = path.join(__dirname, '..', 'data', 'daily-spotlights.json');
 const {
   renderCard,
+  renderContainer,
+  directorySlotHTML,
   sanitizeHtml,
   formatDisplayDate,
   SPOTLIGHT_I18N
@@ -144,6 +146,39 @@ assert.strictEqual(sanitizeHtml('<b>Hello</b> & "World"'), '&lt;b&gt;Hello&lt;/b
 assert.strictEqual(sanitizeHtml(null), '');
 assert.strictEqual(sanitizeHtml(undefined), '');
 console.log('  PASS: sanitizeHtml handles special characters and falsy inputs.\n');
+
+// Test 5b: Ecosystem directory embedded in the container (mirrors the hub strip)
+console.log('Test 5b: Verifying the embedded "Daily across the COSY ecosystem" line...');
+const realData = data; // the on-disk spotlights payload
+const withDir = renderContainer(realData, 'en', '', { directory: true });
+assert(withDir.includes('data-daily-directory'), 'directory slot missing when opted in');
+assert(withDir.includes('data-compact="true"'), 'directory slot must be the compact form');
+assert(withDir.includes('data-self="events"'), 'directory slot must mark COSYevents as "You are here"');
+assert(withDir.includes('daily-spotlights-directory'), 'directory slot needs its layout class');
+assert(withDir.indexOf('daily-spotlights-directory') > withDir.indexOf('daily-spotlights-grid'), 'directory line must follow the cards');
+
+const withoutDir = renderContainer(realData, 'en', '', {});
+assert(!withoutDir.includes('data-daily-directory'), 'directory slot must be absent by default');
+
+const localizedDir = renderContainer(realData, 'fr', '', { directory: true });
+assert(localizedDir.includes('data-lang="fr"'), 'directory slot must carry the page language');
+assert(directorySlotHTML('ru').includes('data-lang="ru"'), 'directorySlotHTML localises the lang attribute');
+console.log('  PASS: The compact ecosystem directory embeds inside the container only when opted in.\n');
+
+// Test 5c: Host page wiring
+console.log('Test 5c: Verifying the main page mounts the strip with the directory, and only there...');
+const INDEX_HTML = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
+assert(INDEX_HTML.includes('id="daily-spotlights-root" data-directory="true"'), 'index.html: spotlights root must opt into the directory');
+assert(!/data-daily-directory[^>]*data-self="events"/.test(INDEX_HTML), 'index.html: the standalone full directory block should be gone');
+
+const LOCALIZED_PAGES = ['fr/index.html', 'it/index.html', 'ru/index.html', 'el/index.html'];
+for (const rel of LOCALIZED_PAGES) {
+  const page = fs.readFileSync(path.join(__dirname, '..', rel), 'utf8');
+  assert(page.includes('id="daily-spotlights-root"'), `${rel}: spotlights root missing`);
+  assert(!page.includes('data-directory="true"'), `${rel}: localized pages must not show the ecosystem directory`);
+  assert(!page.includes('data-daily-directory'), `${rel}: localized pages must not mount the directory`);
+}
+console.log('  PASS: The directory line is on the main page only.\n');
 
 // Test 6: Extractor Functions Resilience
 console.log('Test 6: Verifying fetch functions return valid structured objects...');
