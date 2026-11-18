@@ -24,7 +24,6 @@ const HUB_INDEXES = [
   'events/index.html',
   'speaking-clubs/index.html',
   'cinema-nights/index.html',
-  'teacher-led-sessions/index.html',
   'special-events/index.html'
 ];
 

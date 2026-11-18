@@ -9,7 +9,6 @@ const HUBS = [
   { route: '/speaking-clubs/', type: 'speaking-club' },
   { route: '/cinema-nights/', type: 'cinema-night' },
   { route: '/special-events/', type: 'special-event' },
-  { route: '/teacher-led-sessions/', type: 'teacher-session' }
 ];
 const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 1000 },

@@ -1237,7 +1237,6 @@
     switch (type) {
       case 'speaking-club': return t('type_speaking_club');
       case 'cinema-night': return t('type_cinema_night');
-      case 'teacher-session': return t('type_teacher_session');
       case 'special-event': return t('type_special_event');
       case 'karaoke': return t('type_karaoke');
       case 'game-evening': return t('type_game_evening');

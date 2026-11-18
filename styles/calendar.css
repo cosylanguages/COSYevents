@@ -305,7 +305,6 @@
 /* Event Type Color Badges */
 .badge-speaking-club { background-color: var(--cosy-track-general, #416b49); }
 .badge-cinema-night  { background-color: var(--cosy-track-spoken, #B84318); }
-.badge-teacher-session { background-color: var(--cosy-track-professional, #1e2f6b); }
 .badge-special-event { background-color: var(--cosy-track-relocation, #d66161); }
 
 /* ── Section Container ─────────────────────────────────────────────── */

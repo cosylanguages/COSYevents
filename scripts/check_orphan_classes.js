@@ -29,7 +29,7 @@ while ((match = cssClassRegex.exec(allCssText)) !== null) {
 const jsIgnoredClasses = new Set([
   'today', 'other-month', 'converted', 'planned', 'active', 'open',
   'seat-pill-ok', 'seat-pill-low', 'seat-pill-medium', 'badge-speaking-club',
-  'badge-cinema-night', 'badge-special-event', 'badge-teacher-session', 'is-current',
+  'badge-cinema-night', 'badge-special-event', 'is-current',
   'view-details-btn', 'cosy-strip-link'
 ]);
 

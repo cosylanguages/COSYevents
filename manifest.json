@@ -1,7 +1,7 @@
 {
   "name": "COSYevents",
   "short_name": "COSYevents",
-  "description": "Public calendar and catalog for COSYevents — speaking clubs, cinema nights, karaoke, games, and teacher-led sessions.",
+  "description": "Public calendar and catalog for COSYevents — speaking clubs, cinema nights, karaoke, games, and long reads.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
