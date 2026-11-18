@@ -57,8 +57,8 @@ The `featured` flag is reserved for future ordering; it is not required.
 
 ## Where it appears
 
-Like the course reviews on COSYlanguages, the club reviews live in one place: the
-main `index.html`, showing every review in a single carousel.
+Like the course reviews on COSYlanguages, the club reviews live in one place:
+the main `index.html`, showing every review in a single carousel.
 
 ```html
 <!-- index.html -->
@@ -67,6 +67,24 @@ main `index.html`, showing every review in a single carousel.
 
 The language is detected from the page, so the same markup works on the localized
 hub pages. The component hides itself when there are no reviews.
+
+### Per-club reviews
+
+Each club page carries the reviews for that club only, by naming the club slug on
+the mount. The slug must be one of the keys in `CLUB_LABELS`.
+
+```html
+<!-- e.g. mind-matters.html -->
+<div data-club-reviews="mind-matters"></div>
+```
+
+- `data-club-reviews` with no value (or empty) shows every review — this is what
+  the main hub carousel uses.
+- `data-club-reviews="<slug>"` shows only that club's reviews, and the section
+  hides itself when the club has none yet.
+
+The localized hubs (`fr/`, `it/`, `ru/`, `el/`) mount the same carousel as the
+English home page and translate the interface automatically.
 
 ## Languages
 

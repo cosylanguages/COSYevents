@@ -48,19 +48,11 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://cosylanguages.github.io/COSYevents/lets-celebrate.html">
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/ecosystem-strip.css">
+  <link rel="stylesheet" href="shared/css/club-reviews.css">
 </head>
 <body class="theme-celebrate">
-<div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
-  <div class="cosy-strip-inner">
-    <span class="cosy-strip-brand">🌐 COSY Ecosystem:</span>
-    <ul class="cosy-strip-links">
-      <li><a href="https://cosylanguages.github.io/COSYlanguages/" class="cosy-strip-link">COSYlanguages</a></li>
-      <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
-      <li><a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener" class="cosy-strip-link">COSYgames 🎮</a></li>
-      <li><a href="index.html" class="cosy-strip-link active">COSYevents 🎉</a></li>
-    </ul>
-  </div>
-</div>
+<div data-ecosystem-strip data-self="events"></div>
 
 <nav id="cosy-nav"></nav>
 <header class="club-hero">
@@ -471,6 +463,12 @@
 </div>
 <!-- /grid -->
 </section>
+
+  <!-- Club Reviews Section -->
+  <section class="container" data-club-reviews-shell style="padding: 2rem 1.5rem 5rem;">
+    <div id="reviews" data-club-reviews="lets-celebrate"></div>
+  </section>
+
 <footer>
 <div class="footer-inner">
 <div class="footer-brand">
@@ -533,5 +531,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script><script src="shared/js/cosyevents-session.js"></script>
+  <script src="shared/js/club-reviews.js"></script>
+  <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
 </body>
 </html>
