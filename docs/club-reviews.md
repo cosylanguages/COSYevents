@@ -31,7 +31,7 @@ Open `data/club-reviews.json` and add an object to the `reviews` array:
   "language": "English",
   "level": "B2",
   "rating": 5,
-  "date": "2026-11-02",
+  "date": "2026",
   "featured": true,
   "text": "The review text goes here.",
   "i18n": {
@@ -48,7 +48,7 @@ Field rules (enforced by `npm run test-club-reviews`):
 - `club_name` — the name shown under the quote.
 - `author` — display name only; never a full legal name.
 - `rating` — integer 1–5, shown as stars.
-- `date` — `YYYY-MM-DD`, rendered as "Month Year" in the page language.
+- `date` — the year only (`YYYY`). Rendered as just the year; the month and day are not shown.
 - `text` — the review. At least 20 characters.
 - `i18n` — optional. Add localized `text` (and optionally `author`) for any of
   `fr`, `it`, `ru`, `el`. Missing languages fall back to the top-level `text`.
@@ -70,9 +70,10 @@ hub pages. The component hides itself when there are no reviews.
 
 ## Languages
 
-The interface (heading, sub-heading, share button, dates) is translated for
+The interface (heading, sub-heading, share button) is translated for
 `en`, `fr`, `it`, `ru`, `el` in `REVIEWS_I18N` inside `shared/js/club-reviews.js`.
-Review text is only translated when a review provides an `i18n` entry.
+Review text is only translated when a review provides an `i18n` entry. The review
+year is shown as-is (no localized month name).
 
 ## Tests
 

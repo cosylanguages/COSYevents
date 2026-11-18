@@ -47,7 +47,7 @@ for (const review of data.reviews) {
   assert(typeof review.author === 'string' && review.author.length > 0, `${review.id}: author is required`);
   assert(typeof review.text === 'string' && review.text.trim().length >= 20, `${review.id}: text is required`);
   assert(Number.isInteger(review.rating) && review.rating >= 1 && review.rating <= 5, `${review.id}: rating must be 1-5`);
-  assert(/^\d{4}-\d{2}-\d{2}$/.test(review.date), `${review.id}: date must be YYYY-MM-DD`);
+  assert(/^\d{4}$/.test(review.date), `${review.id}: date must be a 4-digit year`);
   if (review.i18n) {
     for (const lang of Object.keys(review.i18n)) {
       assert(LANGS.includes(lang), `${review.id}: i18n has unsupported language "${lang}"`);
@@ -111,13 +111,14 @@ const multi = renderSection([sample, sample], 'en');
 assert(multi.includes('data-reviews-prev') && multi.includes('data-reviews-next'), 'multiple reviews should render nav');
 console.log('  PASS: Rendering localizes, escapes, and toggles nav correctly.\n');
 
-// Test 4: Date formatting
-console.log('Test 4: Verifying formatDate across locales...');
-assert(formatDate('2026-09-19', 'en').includes('September'), 'EN month missing');
-assert(formatDate('2026-09-19', 'fr').toLowerCase().includes('septembre'), 'FR month missing');
-assert(formatDate('2026-09-19', 'ru').toLowerCase().includes('сентябр'), 'RU month missing');
+// Test 4: Date formatting (year only)
+console.log('Test 4: Verifying formatDate renders the year only...');
+assert.strictEqual(formatDate('2026-09-19', 'en'), '2026', 'full date should render just the year');
+assert.strictEqual(formatDate('2026', 'en'), '2026', 'year-only input should render the year');
+assert.strictEqual(formatDate('2026-09-19', 'fr'), '2026', 'year should be locale-independent');
 assert.strictEqual(formatDate('', 'en'), '', 'empty date should render empty');
-console.log('  PASS: Dates localize correctly.\n');
+assert.strictEqual(formatDate('no-year', 'en'), '', 'unparseable date should render empty');
+console.log('  PASS: Dates render as the year only.\n');
 
 // Test 5: Helpers
 console.log('Test 5: Verifying helpers...');
