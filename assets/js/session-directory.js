@@ -7,14 +7,26 @@
   'use strict';
 
   class SessionDirectory {
-    constructor(containerId = 'session-directory-root', dataPath = 'data/sessions.json') {
+    constructor(containerId = 'session-directory-root', options = {}) {
+      if (typeof options === 'string') {
+        // Backwards-compatible signature: new SessionDirectory(id, dataPath)
+        options = { dataPath: options };
+      }
+
       this.container = document.getElementById(containerId);
       if (!this.container) {
         console.error(`SessionDirectory: Element #${containerId} not found.`);
         return;
       }
 
-      this.dataPath = dataPath;
+      const el = this.container;
+      // Prefix used to resolve data + session hrefs from the host page ('' at root, '../' in a subfolder).
+      this.basePath = options.basePath || el.getAttribute('data-base-path') || '';
+      this.dataPath = this.basePath + (options.dataPath || el.getAttribute('data-data-path') || 'data/sessions.json');
+      // When a scope format is set the directory only ever shows that event type
+      // (e.g. only songs on the karaoke page) and the type filter is hidden.
+      this.scopedFormat = options.format || el.getAttribute('data-format') || '';
+
       this.sessions = [];
       this.filteredSessions = [];
 
@@ -26,7 +38,7 @@
       this.state = {
         searchQuery: '',
         selectedLang: 'ALL',
-        selectedType: 'ALL',
+        selectedType: this.scopedFormat || 'ALL',
         selectedSpeakingClub: 'ALL',
         selectedLevel: null, // null means 'All Levels', string or Array for level filter
         wishlistOnly: false
@@ -60,7 +72,8 @@
       try {
         const params = new URLSearchParams(window.location.search);
         if (params.has('q')) this.state.searchQuery = params.get('q').trim().toLowerCase();
-        if (params.has('format')) this.state.selectedType = params.get('format');
+        // A scoped directory is pinned to its format, so the URL cannot widen it.
+        if (params.has('format') && !this.scopedFormat) this.state.selectedType = params.get('format');
         if (params.has('club')) this.state.selectedSpeakingClub = params.get('club');
         if (params.has('lang')) this.state.selectedLang = params.get('lang');
         if (params.has('level')) {
@@ -178,7 +191,8 @@
                   />
                 </div>
 
-                <!-- Event Type Unfolding Menu -->
+                <!-- Event Type Unfolding Menu (hidden when the directory is scoped to one format) -->
+                ${this.scopedFormat ? '' : `
                 <div class="sd-select-wrapper sd-type-wrapper">
                   <select id="sd-type-select" class="sd-select" aria-label="Filter sessions by event type">
                     <option value="ALL">All Event Types</option>
@@ -188,15 +202,16 @@
                     <option value="Long Read">Long Reads</option>
                     <option value="Games">Games</option>
                   </select>
-                </div>
+                </div>`}
 
-                <!-- Conditional Speaking Clubs Sub-Selector -->
+                <!-- Conditional Speaking Clubs Sub-Selector (only meaningful for speaking clubs) -->
+                ${(!this.scopedFormat || this.scopedFormat === 'Speaking Club') ? `
                 <div id="sd-speaking-clubs-wrapper" class="sd-select-wrapper sd-speaking-clubs-wrapper hidden" aria-hidden="true">
                   <select id="sd-speaking-club-select" class="sd-select" aria-label="Select speaking club">
                     <option value="ALL">All Speaking Clubs</option>
                     ${speakingClubs.map(club => `<option value="${this.escapeAttr(club)}">${this.escapeText(club)}</option>`).join('')}
                   </select>
-                </div>
+                </div>` : ''}
 
                 <!-- Language Select -->
                 <div class="sd-select-wrapper">
@@ -519,7 +534,8 @@
       return (
         !!this.state.searchQuery ||
         this.state.selectedLang !== 'ALL' ||
-        this.state.selectedType !== 'ALL' ||
+        // A scoped format is the page's default, not a user filter.
+        (!this.scopedFormat && this.state.selectedType !== 'ALL') ||
         this.state.selectedSpeakingClub !== 'ALL' ||
         this.state.selectedLevel !== null ||
         this.state.wishlistOnly
@@ -698,6 +714,7 @@
       const formatLabel = session.format ? session.format : 'Speaking Club';
       const isBookmarked = this.savedHrefs.has(session.href);
       const signature = this.getStructureSignature(session);
+      const href = this.basePath + session.href;
 
       return `
         <article class="sd-card" data-club="${this.escapeAttr(session.club || '')}" data-format="${this.escapeAttr(formatLabel)}">
@@ -723,7 +740,7 @@
           <p class="sd-card-club">${signature.icon} ${this.escapeText(session.club)}</p>
 
           <h3 class="sd-card-title">
-            <a href="${this.escapeAttr(session.href)}">${this.escapeText(session.title)}</a>
+            <a href="${this.escapeAttr(href)}">${this.escapeText(session.title)}</a>
           </h3>
 
           <div class="sd-structure-tag">
@@ -732,7 +749,7 @@
           </div>
 
           <div class="sd-card-footer">
-            <a href="${this.escapeAttr(session.href)}" class="sd-card-link-btn" aria-label="Explore session: ${this.escapeAttr(session.title)}">
+            <a href="${this.escapeAttr(href)}" class="sd-card-link-btn" aria-label="Explore session: ${this.escapeAttr(session.title)}">
               Explore Session ➔
             </a>
           </div>
@@ -744,14 +761,14 @@
       this.state = {
         searchQuery: '',
         selectedLang: 'ALL',
-        selectedType: 'ALL',
+        selectedType: this.scopedFormat || 'ALL',
         selectedSpeakingClub: 'ALL',
         selectedLevel: null,
         wishlistOnly: false
       };
 
       if (this.searchInput) this.searchInput.value = '';
-      if (this.typeSelect) this.typeSelect.value = 'ALL';
+      if (this.typeSelect) this.typeSelect.value = this.scopedFormat || 'ALL';
       if (this.speakingClubSelect) this.speakingClubSelect.value = 'ALL';
       if (this.speakingClubsWrapper) {
         this.speakingClubsWrapper.classList.remove('visible');

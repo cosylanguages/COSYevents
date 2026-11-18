@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cinema Nights - COSYlanguages Events</title>
   <link rel="stylesheet" href="../shared/css/hub.css">
+  <link rel="stylesheet" href="../assets/css/session-directory.css">
   <link rel="stylesheet" href="../shared/css/cosy-icons.css">
   <link rel="stylesheet" href="../styles/calendar.css">
-  <meta name="description" content="Public calendar and catalog for COSYevents — speaking clubs, cinema nights, karaoke, games, and teacher-led sessions.">
+  <meta name="description" content="Public calendar and catalog for COSYevents — speaking clubs, cinema nights, karaoke, games, and long reads.">
   <link rel="icon" href="../shared/assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="../shared/assets/apple-touch-icon.png">
   <link rel="manifest" href="../manifest.json">
   <meta name="theme-color" content="#416b49">
   <meta property="og:title" content="Cinema Nights - COSYlanguages Events">
-  <meta property="og:description" content="Public calendar and catalog for COSYevents — speaking clubs, cinema nights, karaoke, games, and teacher-led sessions.">
+  <meta property="og:description" content="Public calendar and catalog for COSYevents — speaking clubs, cinema nights, karaoke, games, and long reads.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://cosylanguages.github.io/COSYevents/shared/assets/og-image.png">
   <meta property="og:locale" content="en_US">
@@ -54,8 +55,6 @@
         <a href="../karaoke-club.html" class="hub-nav-link">Karaoke 🎤</a>
         <a href="../game-evenings.html" class="hub-nav-link">Games 🎲</a>
         <a href="../long-reads.html" class="hub-nav-link">Long Reads 📚</a>
-        <a href="../teacher-led-sessions/index.html" class="hub-nav-link">Teacher-Led Sessions 🍎</a>
-        <a href="../browse.html" class="hub-nav-link">All Sessions 🔎</a>
       </nav>
     </div>
   </header>
@@ -144,6 +143,12 @@
         </div>
       </div>
     </section>
+    <!-- Scoped session archive (only this event type) -->
+    <section class="calendar-section" id="session-archive">
+      <h2 class="section-title">All Cinema Night Sessions</h2>
+      <p style="color: var(--ink-soft, #5f5e58); margin-bottom: 1.5rem;">Search and filter every cinema night by language, film or series, and CEFR level.</p>
+      <div id="session-directory-root" data-format="Cinema Club" data-base-path="../"></div>
+    </section>
   </main>
 
     <footer class="hub-footer">
@@ -157,5 +162,6 @@
   <script src="../shared/js/cosyevents-lang.js" defer></script>
   <script src="../shared/js/cosy-auth.js" defer></script>
   <script src="../shared/js/upcoming-events.js" defer></script>
+  <script src="../assets/js/session-directory.js" defer></script>
 </body>
 </html>

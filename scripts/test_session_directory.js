@@ -146,4 +146,57 @@ const scienceB2 = filterSessions(sessions, parsedState);
 assert.ok(scienceB2.length > 0);
 assert.ok(scienceB2.every(s => s.club === 'Keeping Up with Science' && /\bB2\b/.test(s.level)));
 
+// 6. Scoped directories: each event page embeds the directory pinned to one format.
+// A scoped directory must never show another format, even if the URL asks for one.
+const SCOPES = {
+  'Speaking Club': 'speaking-clubs/index.html',
+  'Cinema Club': 'cinema-nights/index.html',
+  'Karaoke Club': 'karaoke-club.html',
+  'Games': 'game-evenings.html',
+  'Long Read': 'long-reads.html'
+};
+
+const fs2 = require('fs');
+const path2 = require('path');
+
+for (const [format, page] of Object.entries(SCOPES)) {
+  const scoped = filterSessions(sessions, { selectedType: format });
+  assert.ok(scoped.length > 0, `Scoped "${format}" should have sessions`);
+  assert.ok(
+    scoped.every(s => s.format === format),
+    `Scoped "${format}" must only contain ${format} sessions`
+  );
+
+  // The page must declare its scope so the type filter can be hidden.
+  const html = fs2.readFileSync(path2.join(__dirname, '..', page), 'utf8');
+  assert.ok(
+    html.includes(`data-format="${format}"`),
+    `${page} must embed a scoped session directory (data-format="${format}")`
+  );
+  assert.ok(
+    html.includes('session-directory.js'),
+    `${page} must load session-directory.js`
+  );
+}
+
+// Scoped pages pin the format regardless of the URL parameter.
+function scopeState(scopedFormat, queryString) {
+  const params = new URLSearchParams(queryString);
+  return {
+    searchQuery: '',
+    selectedType: scopedFormat || params.get('format') || 'ALL',
+    selectedSpeakingClub: 'ALL',
+    selectedLang: 'ALL',
+    selectedLevel: null,
+    wishlistOnly: false
+  };
+}
+
+const pinned = scopeState('Karaoke Club', '?format=Speaking+Club');
+assert.strictEqual(pinned.selectedType, 'Karaoke Club', 'URL must not widen a scoped directory');
+assert.ok(
+  filterSessions(sessions, pinned).every(s => s.format === 'Karaoke Club'),
+  'Scoped karaoke must stay karaoke even with a format param'
+);
+
 console.log('✅ All session directory filter tests passed successfully!');

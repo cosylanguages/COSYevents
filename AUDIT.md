@@ -17,7 +17,7 @@ This report serves as the consolidated single source of truth for the audit stat
 
 ### Single Source of Truth Catalog Architecture
 - **Root Format & Topic Catalogs (`<topic>.html`):** The primary interactive catalog pages reside at the repository root (`speaking-clubs.html`, `cinema-club.html`, `karaoke-club.html`, `game-evenings.html`, `long-reads.html`, `basic-speaking-club.html`, `debatable-relatable.html`, `i-couldnt-help-but-wonder.html`, `if-you-were.html`, `keeping-up-with-science.html`, `lets-celebrate.html`, `mind-matters.html`, `my-life-with-without.html`, `the-greatest-quotes.html`).
-- **Category Hubs (`<category>/index.html`):** Filter hubs for calendar views (`speaking-clubs/index.html`, `cinema-nights/index.html`, `teacher-led-sessions/index.html`, `special-events/index.html`).
+- **Category Hubs (`<category>/index.html`):** Filter hubs for calendar views (`speaking-clubs/index.html`, `cinema-nights/index.html`, `special-events/index.html`).
 - **Taxonomy Subfolder Index Routes (`events/speaking-clubs/*/index.html` and `events/multimedia-nights/*/index.html`):** The 12 subfolder index pages act as client-side redirect routes pointing seamlessly to their canonical root catalog pages (`../../../<topic>.html`), ensuring URL compatibility across sibling ecosystem repositories (`cosylanguages`, `cosydata`, `cosyplatform`).
 
 ### Site Configuration

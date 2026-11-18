@@ -1,6 +1,6 @@
 # COSYevents 🎭 Calendar & Event Hub
 
-**COSYevents** is the public calendar, event directory, and complete session-material repository for the **COSYlanguages** ecosystem. It hosts speaking-club prompt decks, cinema immersion guides, teacher-led masterclasses, multimedia nights, and event archives.
+**COSYevents** is the public calendar, event directory, and complete session-material repository for the **COSYlanguages** ecosystem. It hosts speaking-club prompt decks, cinema immersion guides, karaoke and long-read material, multimedia nights, and event archives.
 
 ## Source of truth: this repository
 

@@ -40,24 +40,6 @@
     "synopsis": "A royal princess escapes her guardians and falls in love with an American newsman in Rome."
   },
   {
-    "id": "evt-2025-003",
-    "title": "French Pronunciation & Phonetics Masterclass",
-    "type": "teacher-session",
-    "language": "French",
-    "level": "A2",
-    "date": "2025-05-16",
-    "time": "17:00",
-    "timezone": "CET",
-    "host": "JY DM",
-    "host_bio": "COSYlanguages Lead Facilitator.",
-    "description": "Interactive 60-minute workshop on mastering French liaison, mute 'e' patterns, and authentic conversational cadence.",
-    "registration_link": "https://t.me/cosylanguagesproject?text=Book%20Teacher%20Session%20evt-2025-003",
-    "materials": "https://cosylanguages.github.io/COSYevents/shared/materials/french-phonetics-guide.pdf",
-    "poster": null,
-    "subtitles_info": null,
-    "synopsis": null
-  },
-  {
     "id": "evt-2025-004",
     "title": "Polyglot Language Exchange & Trivia Night",
     "type": "special-event",
@@ -112,24 +94,6 @@
     "poster": "https://cosylanguages.github.io/COSYevents/assets/ratatouille-poster.jpg",
     "subtitles_info": "French Audio + French Subtitles",
     "synopsis": "A rat who can cook makes an unusual alliance with a young kitchen worker at a prominent restaurant."
-  },
-  {
-    "id": "evt-2025-007",
-    "title": "Russian Idioms & Conversational Metaphors",
-    "type": "teacher-session",
-    "language": "Russian",
-    "level": "B1",
-    "date": "2025-05-25",
-    "time": "17:30",
-    "timezone": "CET",
-    "host": "JY DM",
-    "host_bio": "COSYlanguages Lead Facilitator.",
-    "description": "Deconstruct native Russian idiomatics, colloquial expressions, and mental models for fluid speaking.",
-    "registration_link": "https://t.me/cosylanguagesproject?text=Book%20Russian%20Session%20evt-2025-007",
-    "materials": "https://cosylanguages.github.io/COSYevents/shared/materials/russian-idioms.pdf",
-    "poster": null,
-    "subtitles_info": null,
-    "synopsis": null
   },
   {
     "id": "evt-2025-008",
@@ -254,21 +218,6 @@
     "description": "A immersive cultural evening exploring Italian regional cuisine vocabulary, wine tasting notes, and social conversation.",
     "registration_link": "https://wa.me/330766784195?text=Register%20Gastronomy%20evt-2026-004",
     "materials": "https://cosylanguages.github.io/COSYevents/sessions/lets-celebrate/italian-gastronomy.html"
-  },
-  {
-    "id": "evt-2026-005",
-    "title": "Russian Idioms & Everyday Conversational Nuances",
-    "type": "teacher-session",
-    "language": "Russian",
-    "level": "B1",
-    "date": "2026-09-22",
-    "time": "17:30",
-    "timezone": "CET",
-    "host": "JY DM",
-    "host_bio": "COSYlanguages Lead Facilitator.",
-    "description": "Deconstruct native Russian idiomatics, colloquial expressions, and mental models for fluid speaking.",
-    "registration_link": "https://t.me/cosylanguagesproject?text=Book%20Russian%20Session%20evt-2026-005",
-    "materials": "https://cosylanguages.github.io/COSYevents/shared/materials/russian-idioms.pdf"
   },
   {
     "id": "evt-2026-006",

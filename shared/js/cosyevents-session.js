@@ -241,7 +241,6 @@
     ['Long Reads', 'long-reads.html'],
     ['Basic Speaking Club', 'basic-speaking-club.html'],
     ['Intermediate Speaking Club', 'intermediate-speaking-club.html'],
-    ['Master Directory 🔎', 'browse.html']
   ];
 
   var nav = document.getElementById('cosy-nav');
