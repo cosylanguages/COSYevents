@@ -82,13 +82,11 @@
   <main class="hub-main">
     <div data-ce-lang-resume></div>
 
-    <!-- Daily Spotlights Section -->
+    <!-- Daily Spotlights Section. data-directory="true" appends the compact "Daily across the COSY
+         ecosystem" line inside the container, mirroring the hub daily strip. -->
     <section class="daily-spotlights-section">
-      <div id="daily-spotlights-root"></div>
+      <div id="daily-spotlights-root" data-directory="true"></div>
     </section>
-
-    <!-- Daily directory: link out to every repo's daily surface, keeping each element in its owner. -->
-    <div data-daily-directory data-self="events" data-lang="en"></div>
 
     <!-- Filter Controls -->
     <section class="calendar-controls">

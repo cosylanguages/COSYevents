@@ -233,6 +233,12 @@
   }
 }
 
+/* Compact "Daily across the COSY ecosystem" line, appended inside the container on the main page.
+   The chips themselves are styled by COSYlanguages' shared/css/daily-directory.css. */
+.daily-spotlights-directory {
+  margin-top: 1.5rem;
+}
+
 @media (max-width: 600px) {
   .daily-spotlights-grid {
     grid-template-columns: 1fr;

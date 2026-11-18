@@ -129,8 +129,19 @@ and the page links out to them.
 | Fun fact and the hub daily strip | [COSYlanguages](https://github.com/cosylanguages/COSYlanguages) |
 
 `scripts/fetch_daily_spotlights.js` (run by the `daily-spotlights` workflow) rotates the spotlight
-data daily. The page mounts the shared directory from COSYlanguages with
-`<div data-daily-directory data-self="events">`.
+data daily.
+
+As on the COSYlanguages hub strip, the main page ends the daily container with a compact
+"🌐 Daily across the COSY ecosystem" line of chips linking to the other daily surfaces. It comes from
+the shared directory component mounted from COSYlanguages; COSYevents only marks its own card as
+"You are here". The main page opts in by putting `data-directory="true"` on the mount:
+
+```html
+<div id="daily-spotlights-root" data-directory="true"></div>
+```
+
+The line appears on `index.html` only; the localized hub pages (`fr/`, `it/`, `ru/`, `el/`) render
+the spotlights without it.
 
 ## Club reviews
 
