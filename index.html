@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COSYevents: live language events</title>
   <meta name="description" content="Speaking clubs, cinema nights, karaoke and games in English, French, Italian, Russian and Greek. Check the calendar, pick your level, and join on WhatsApp or Telegram.">
+  <script src="shared/js/cosy-theme.js"></script>
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/fonts.css">
   <link rel="stylesheet" href="shared/css/hub.css">
   <link rel="stylesheet" href="shared/css/cosy-icons.css">
   <link rel="stylesheet" href="styles/calendar.css">
   <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/hero.css">
   <link rel="stylesheet" href="assets/css/session-directory.css">
   <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/daily-directory.css">
   <link rel="manifest" href="manifest.json">
@@ -27,31 +30,51 @@
     </div>
   </div>
 
-  <header class="hub-header">
-    <div class="hub-header-content">
-      <div class="hub-header-top-row">
-        <span class="hub-brand">COSYlanguages Ecosystem</span>
-        <div data-ce-lang-switcher></div>
+  <div class="ev-topbar">
+    <a class="ev-brand" href="index.html" aria-label="COSYevents home">
+      <img src="images/logo.png" alt="" width="30" height="30">
+      <span>COSYevents</span>
+    </a>
+    <div class="ev-topbar-tools">
+      <div data-ce-lang-switcher></div>
+      <button type="button" class="ev-theme-btn" data-cosy-theme-toggle aria-label="Switch theme">🌙</button>
+    </div>
+  </div>
+
+  <header class="ev-hero" id="top">
+    <div class="ev-hero-inner">
+      <div class="ev-hero-copy">
+        <p class="ev-eyebrow">🎉 Live language events</p>
+        <h1 class="ev-title">Speak with others, <em>live.</em></h1>
+        <p class="ev-sub">
+          Speaking clubs, cinema nights, karaoke and games in English, French, Italian, Russian and Greek. Check the calendar, pick your level, and join on WhatsApp or Telegram.
+        </p>
+        <div class="ev-actions">
+          <a href="#calendar-controls" class="ev-btn ev-btn-primary">See the calendar</a>
+          <a href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20a%20COSYevents%20session." target="_blank" rel="noopener" class="ev-btn ev-btn-secondary">💬 Join on WhatsApp</a>
+          <a href="#browse-directory" class="ev-link">Browse all sessions →</a>
+          <a href="#tariff-calculator" class="ev-link">Pricing</a>
+        </div>
+        <nav class="ev-chips" aria-label="Event categories">
+          <a href="speaking-clubs/index.html" class="ev-chip">🗣️ Speaking Clubs</a>
+          <a href="cinema-nights/index.html" class="ev-chip">🎬 Cinema</a>
+          <a href="karaoke-club.html" class="ev-chip">🎤 Karaoke</a>
+          <a href="game-evenings.html" class="ev-chip">🎲 Games</a>
+          <a href="long-reads.html" class="ev-chip">📚 Long Reads</a>
+          <a href="teacher-led-sessions/index.html" class="ev-chip">🎓 Teacher-Led</a>
+        </nav>
       </div>
-      <h1 class="hub-title">COSYevents: live language events</h1>
-      <p class="hub-subtitle">
-        Speaking clubs, cinema nights, karaoke and games in English, French, Italian, Russian and Greek. Check the calendar, pick your level, and join on WhatsApp or Telegram.
-      </p>
-      <div class="hero-cta-group">
-        <a href="#calendar-controls" class="hero-btn hero-btn-primary">See the calendar</a>
-        <a href="#browse-directory" class="hero-btn hero-btn-outline">Browse all sessions 🔎</a>
-        <a href="#tariff-calculator" class="hero-btn hero-btn-outline">Pricing</a>
-        <a href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20a%20COSYevents%20session." target="_blank" rel="noopener" class="hero-btn hero-btn-wa">💬 Join on WhatsApp</a>
-      </div>
-      <nav class="hub-nav-links" aria-label="Event Categories">
-        <a href="speaking-clubs/index.html" class="hub-nav-link">Speaking Clubs</a>
-        <a href="cinema-nights/index.html" class="hub-nav-link">Cinema</a>
-        <a href="karaoke-club.html" class="hub-nav-link">Karaoke</a>
-        <a href="game-evenings.html" class="hub-nav-link">Games</a>
-        <a href="long-reads.html" class="hub-nav-link">Long Reads</a>
-        <a href="teacher-led-sessions/index.html" class="hub-nav-link">Teacher-Led Sessions</a>
-        <a href="#browse-directory" class="hub-nav-link">All Sessions 🔎</a>
-      </nav>
+
+      <aside class="ev-next" aria-labelledby="ev-next-title">
+        <div class="ev-next-head">
+          <span class="ev-next-icon" aria-hidden="true">🎟️</span>
+          <h2 id="ev-next-title">Next up</h2>
+        </div>
+        <ul class="ev-next-list" data-next-events aria-live="polite">
+          <li class="ev-next-empty">Loading the schedule…</li>
+        </ul>
+        <a href="#calendar-controls" class="ev-next-foot">Open the full calendar →</a>
+      </aside>
     </div>
   </header>
 
@@ -404,6 +427,7 @@
   <script src="shared/calendar/calendar.js"></script>
   <script src="assets/js/session-directory.js"></script>
   <script src="shared/js/daily-spotlights.js"></script>
+  <script src="shared/js/hero-next.js" defer></script>
   <script src="https://cosylanguages.github.io/COSYlanguages/js/daily-directory.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {

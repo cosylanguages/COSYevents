@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COSYevents : Événements linguistiques en direct</title>
-                        <link rel="stylesheet" href="../shared/css/hub.css">
+                        <script src="../shared/js/cosy-theme.js"></script>
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/fonts.css">
+  <link rel="stylesheet" href="../shared/css/hub.css">
   <link rel="stylesheet" href="../shared/css/cosy-icons.css">
   <link rel="stylesheet" href="../styles/calendar.css">
   <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/hero.css">
   <meta name="description" content="Clubs de conversation, soirées cinéma et activités linguistiques interactives en anglais, français, italien, russe et grec.">
   <link rel="icon" href="../shared/assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="../shared/assets/apple-touch-icon.png">
@@ -35,32 +38,51 @@
     </div>
   </div>
 
-  <header class="hub-header">
-    <div class="hub-header-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
-        <span class="hub-brand" style="margin-bottom: 0;">Écosystème COSYlanguages</span>
-        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-          <div data-cosy-account></div>
-          <div data-ce-lang-switcher></div>
+  <div class="ev-topbar">
+    <a class="ev-brand" href="index.html" aria-label="Accueil COSYevents">
+      <img src="../images/logo.png" alt="" width="30" height="30">
+      <span>COSYevents</span>
+    </a>
+    <div class="ev-topbar-tools">
+      <div data-cosy-account></div>
+      <div data-ce-lang-switcher></div>
+      <button type="button" class="ev-theme-btn" data-cosy-theme-toggle aria-label="Switch theme">🌙</button>
+    </div>
+  </div>
+
+  <header class="ev-hero" id="top">
+    <div class="ev-hero-inner">
+      <div class="ev-hero-copy">
+        <p class="ev-eyebrow">🎉 Événements linguistiques en direct</p>
+        <h1 class="ev-title">Parlez avec d’autres, <em>en direct.</em></h1>
+        <p class="ev-sub">
+          Clubs de conversation, soirées cinéma et activités linguistiques interactives en anglais, français, italien, russe et grec.
+        </p>
+        <div class="ev-actions">
+          <a href="#calendar-controls" class="ev-btn ev-btn-primary">Voir le calendrier</a>
+          <a href="https://wa.me/330766784195?text=Bonjour%21%20Je%20souhaite%20m%27inscrire%20%C3%A0%20une%20session%20COSYevents." target="_blank" rel="noopener" class="ev-btn ev-btn-secondary">💬 S'inscrire sur WhatsApp</a>
+          <a href="../browse.html" class="ev-link">Toutes les sessions →</a>
         </div>
+        <nav class="ev-chips" aria-label="Catégories d'événements">
+          <a href="speaking-clubs.html" class="ev-chip">💬 Clubs de conversation</a>
+          <a href="../cinema-nights/index.html" class="ev-chip">🎬 Cinéma</a>
+          <a href="../karaoke-club.html" class="ev-chip">🎤 Karaoké</a>
+          <a href="../game-evenings.html" class="ev-chip">🎲 Jeux</a>
+          <a href="../long-reads.html" class="ev-chip">📚 Lectures longues</a>
+          <a href="../teacher-led-sessions/index.html" class="ev-chip">🍎 Sessions enseignant</a>
+        </nav>
       </div>
-      <h1 class="hub-title">COSYevents</h1>
-      <p class="hub-subtitle">
-        Clubs de conversation, soirées cinéma et activités linguistiques interactives en anglais, français, italien, russe et grec.
-      </p>
-      <div class="hero-cta-group">
-        <a href="#calendar-controls" class="hero-btn hero-btn-primary">Voir le calendrier ↓</a>
-        <a href="https://wa.me/330766784195?text=Bonjour%21%20Je%20souhaite%20m%27inscrire%20%C3%A0%20une%20session%20COSYevents." target="_blank" rel="noopener" class="hero-btn hero-btn-wa">💬 S'inscrire sur WhatsApp</a>
-      </div>
-      <nav class="hub-nav-links" aria-label="Catégories d'événements">
-        <a href="speaking-clubs.html" class="hub-nav-link">Clubs de conversation 💬</a>
-        <a href="../cinema-nights/index.html" class="hub-nav-link">Cinéma 🎬</a>
-        <a href="../karaoke-club.html" class="hub-nav-link">Karaoké 🎤</a>
-        <a href="../game-evenings.html" class="hub-nav-link">Jeux 🎲</a>
-        <a href="../long-reads.html" class="hub-nav-link">Lectures longues 📚</a>
-        <a href="../teacher-led-sessions/index.html" class="hub-nav-link">Sessions enseignant 🍎</a>
-        <a href="../browse.html" class="hub-nav-link">Toutes les sessions 🔎</a>
-      </nav>
+
+      <aside class="ev-next" aria-labelledby="ev-next-title">
+        <div class="ev-next-head">
+          <span class="ev-next-icon" aria-hidden="true">🎟️</span>
+          <h2 id="ev-next-title">À venir</h2>
+        </div>
+        <ul class="ev-next-list" data-next-events aria-live="polite">
+          <li class="ev-next-empty">…</li>
+        </ul>
+        <a href="#calendar-controls" class="ev-next-foot">Ouvrir le calendrier complet →</a>
+      </aside>
     </div>
   </header>
 
@@ -249,5 +271,6 @@
   <script src="../shared/calendar/calendar-i18n.js"></script>
   <script src="../shared/calendar/calendar.js"></script>
   <script src="../shared/js/daily-spotlights.js"></script>
+  <script src="../shared/js/hero-next.js" defer></script>
 </body>
 </html>
