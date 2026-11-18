@@ -132,6 +132,13 @@ and the page links out to them.
 data daily. The page mounts the shared directory from COSYlanguages with
 `<div data-daily-directory data-self="events">`.
 
+## Club reviews
+
+Learner reviews of the speaking clubs live in `data/club-reviews.json` and render through
+`shared/js/club-reviews.js` + `shared/css/club-reviews.css`. As on COSYlanguages, they show in a
+single carousel on the main `index.html`. Reviews are written by hand; the share button opens a
+public Google Form. See [docs/club-reviews.md](docs/club-reviews.md) to add one.
+
 ## COSYlanguages ecosystem
 
 - [COSYlanguages](https://cosylanguages.github.io/COSYlanguages/) — Main portal and core curriculum.
