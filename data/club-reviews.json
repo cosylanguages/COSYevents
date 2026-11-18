@@ -2,90 +2,16 @@
   "updated_at": "2026-11-18",
   "reviews": [
     {
-      "id": "cr-inter-001",
+      "id": "cr-inter-002",
       "club": "intermediate-speaking-club",
       "club_name": "Intermediate Speaking Club",
-      "author": "Marta",
-      "language": "English",
-      "level": "B2",
-      "rating": 5,
-      "date": "2026-10-04",
-      "featured": true,
-      "text": "I joined the intermediate club to stop freezing up in meetings. Six weeks later I led a project update in English without writing a script first. The debate rounds push you just past your comfort zone, then the facilitator pulls you back and shows you the phrase you were reaching for.",
-      "i18n": {
-        "fr": {
-          "text": "J'ai rejoint le club intermédiaire pour arrêter de bloquer en réunion. Six semaines plus tard, j'ai animé un point projet en anglais sans écrire de script. Les débats vous poussent juste au-delà de votre zone de confort, puis l'animateur vous ramène et vous montre la phrase que vous cherchiez."
-        },
-        "it": {
-          "text": "Mi sono unita al club intermedio per smettere di bloccarmi durante le riunioni. Sei settimane dopo ho condotto l'aggiornamento di un progetto in inglese senza preparare un copione. I dibattiti ti spingono appena oltre la zona di comfort, poi il facilitatore ti riporta indietro e ti mostra la frase che cercavi."
-        },
-        "ru": {
-          "text": "Я пришла в клуб для среднего уровня, чтобы перестать теряться на встречах. Через шесть недель я провела отчёт по проекту на английском без заготовленного текста. Дискуссии выводят чуть за пределы зоны комфорта, а потом ведущий помогает найти нужную фразу."
-        },
-        "el": {
-          "text": "Μπήκα στο ενδιάμεσο κλαμπ για να σταματήσω να κολλάω στις συναντήσεις. Έξι εβδομάδες αργότερα παρουσίασα μια ενημέρωση έργου στα αγγλικά χωρίς έτοιμο κείμενο. Οι συζητήσεις σε σπρώχνουν λίγο πιο έξω από τη ζώνη άνεσής σου και μετά ο συντονιστής σε βοηθά να βρεις τη φράση που έψαχνες."
-        }
-      }
-    },
-    {
-      "id": "cr-science-001",
-      "club": "keeping-up-with-science",
-      "club_name": "Keeping Up with Science",
-      "author": "Daniel",
-      "language": "English",
-      "level": "C1",
-      "rating": 5,
-      "date": "2026-09-19",
-      "featured": true,
-      "text": "I read the news in English every day but rarely had anyone to argue about it with. Here a single study turns into an hour of hypothesis, counter-argument and vocabulary I actually keep. It is the closest thing to a science seminar in a language class I have found."
-    },
-    {
-      "id": "cr-mind-001",
-      "club": "mind-matters",
-      "club_name": "Mind Matters",
-      "author": "Sofia",
-      "language": "English",
-      "level": "B2",
-      "rating": 5,
-      "date": "2026-09-02",
-      "featured": false,
-      "text": "A quiet, thoughtful group. We talk about habits, stress and identity, and somehow the language follows. I left every session with a new word for a feeling I could not name before, in any language."
-    },
-    {
-      "id": "cr-celebrate-001",
-      "club": "lets-celebrate",
-      "club_name": "Let's Celebrate",
-      "author": "Yuki",
+      "author": "Yana",
       "language": "English",
       "level": "B1",
-      "rating": 4,
-      "date": "2026-08-21",
-      "featured": false,
-      "text": "Festivals from every corner of the world, told by the people who actually celebrate them. I learned more about culture here than from any textbook. Only wish the sessions were longer."
-    },
-    {
-      "id": "cr-basic-001",
-      "club": "basic-speaking-club",
-      "club_name": "Basic Speaking Club",
-      "author": "Ravi",
-      "language": "English",
-      "level": "A1",
       "rating": 5,
-      "date": "2026-08-09",
-      "featured": false,
-      "text": "I was terrified of speaking at all. The beginner group is genuinely safe, no one rushes you, and the sentence frames on the board mean you always have something to say. Six months in and I can hold a simple conversation."
-    },
-    {
-      "id": "cr-quotes-001",
-      "club": "the-greatest-quotes",
-      "club_name": "The Greatest Quotes",
-      "author": "Elena",
-      "language": "English",
-      "level": "C1",
-      "rating": 5,
-      "date": "2026-07-15",
-      "featured": false,
-      "text": "One quote, a whole café debate. I came for the language practice and stayed for the arguments about Marcus Aurelius and Oscar Wilde. Best hour of my week."
+      "date": "2026",
+      "featured": true,
+      "text": "I really love your clubs and usually try to do my best not to miss them. For me your clubs are a combination of an interesting (educative topic), challenging expression of my ideas, new words and phrases, your priceless explanations of our mistakes and new insights in grammar or idioms. Last Saturday I was missing you :)"
     }
   ]
 }

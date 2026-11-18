@@ -118,11 +118,11 @@
   function formatDate(iso, lang) {
     if (!iso) return '';
     try {
-      var parts = String(iso).split('-');
-      var dateObj = new Date(Date.UTC(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2])));
+      var match = String(iso).match(/(\d{4})/);
+      if (!match) return '';
+      var dateObj = new Date(Date.UTC(Number(match[1]), 0, 1));
       if (isNaN(dateObj.getTime())) return '';
       return new Intl.DateTimeFormat(INTL_LOCALES[lang] || 'en-US', {
-        month: 'long',
         year: 'numeric'
       }).format(dateObj);
     } catch (e) {
