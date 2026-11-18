@@ -152,6 +152,14 @@ assert(indexHtml.includes('shared/js/club-reviews.js'), 'index.html: missing com
 assert(indexHtml.includes('shared/css/club-reviews.css'), 'index.html: missing component stylesheet');
 console.log('  PASS: index.html mounts the component with the right assets.\n');
 
+// Test 6b: The speaking-clubs hub carries the carousel
+console.log('Test 6b: Verifying the speaking-clubs hub mounts the carousel...');
+const clubsHub = fs.readFileSync(path.join(ROOT, 'speaking-clubs.html'), 'utf8');
+assert(/<div data-club-reviews><\/div>/.test(clubsHub), 'speaking-clubs.html: missing reviews mount');
+assert(clubsHub.includes('shared/js/club-reviews.js'), 'speaking-clubs.html: missing component script');
+assert(clubsHub.includes('shared/css/club-reviews.css'), 'speaking-clubs.html: missing component stylesheet');
+console.log('  PASS: speaking-clubs.html mounts the carousel.\n');
+
 // Test 7: Localized hubs mount the component
 console.log('Test 7: Verifying localized hubs mount the component...');
 for (const lang of ['fr', 'it', 'ru', 'el']) {
