@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="shared/css/sessions.css">
 <!DOCTYPE html>
 
 <html lang="en">
@@ -6,6 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Speaking Clubs 🎙️ : COSYlanguages</title>
+<link rel="stylesheet" href="shared/css/sessions.css">
+<link rel="stylesheet" href="shared/css/club-reviews.css">
 <link href="shared/images/logo.png" rel="icon"/>
 <link href="manifest.json" rel="manifest"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -459,6 +460,11 @@
 </div>
 </section>
 
+<!-- Section: Member reviews -->
+<section id="reviews" class="reviews-section" style="margin-top: 2rem;">
+  <div data-club-reviews></div>
+</section>
+
 <!-- Section 5: CTA -->
 <section id="join">
 <div class="cta-section">
@@ -648,6 +654,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <script src="shared/js/cosyevents-session.js"></script>
+<script src="shared/js/club-reviews.js"></script>
   <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
 </body>
 </html>

@@ -65,6 +65,9 @@ the main `index.html`, showing every review in a single carousel.
 <div data-club-reviews></div>
 ```
 
+The speaking-clubs hub (`speaking-clubs.html`), where visitors choose a club,
+mounts the same all-reviews carousel under its own `#reviews` anchor.
+
 The language is detected from the page, so the same markup works on the localized
 hub pages. The component hides itself when there are no reviews.
 
