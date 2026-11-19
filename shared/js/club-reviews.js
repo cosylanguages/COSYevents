@@ -58,6 +58,7 @@
   var CLUB_LABELS = {
     'basic-speaking-club': 'Basic Speaking Club',
     'intermediate-speaking-club': 'Intermediate Speaking Club',
+    'french-speaking-club': 'French Speaking Club',
     'keeping-up-with-science': 'Keeping Up with Science',
     'lets-celebrate': "Let's Celebrate",
     'the-greatest-quotes': 'The Greatest Quotes',
@@ -70,6 +71,77 @@
     'cinema-club': 'Cinema Club',
     'karaoke-club': 'Karaoke Club',
     'game-evenings': 'Game Evenings'
+  };
+
+  var CLUB_LABELS_I18N = {
+    fr: {
+      'basic-speaking-club': 'Club de conversation débutant',
+      'intermediate-speaking-club': 'Club de conversation intermédiaire',
+      'french-speaking-club': 'Club de conversation en français',
+      'keeping-up-with-science': 'Keeping Up with Science',
+      'lets-celebrate': "Let's Celebrate",
+      'the-greatest-quotes': 'The Greatest Quotes',
+      'mind-matters': 'Mind Matters',
+      'my-life-with-without': 'My Life With & Without',
+      'debatable-and-relatable': 'Debatable & Relatable',
+      'i-couldnt-help-but-wonder': "I Couldn't Help But Wonder",
+      'if-you-were': 'If You Were',
+      'long-reads': 'Long Reads',
+      'cinema-club': 'Club cinéma',
+      'karaoke-club': 'Club karaoké',
+      'game-evenings': 'Soirées jeux'
+    },
+    it: {
+      'basic-speaking-club': 'Club di conversazione base',
+      'intermediate-speaking-club': 'Club di conversazione intermedio',
+      'french-speaking-club': 'Club di conversazione in francese',
+      'keeping-up-with-science': 'Keeping Up with Science',
+      'lets-celebrate': "Let's Celebrate",
+      'the-greatest-quotes': 'The Greatest Quotes',
+      'mind-matters': 'Mind Matters',
+      'my-life-with-without': 'My Life With & Without',
+      'debatable-and-relatable': 'Debatable & Relatable',
+      'i-couldnt-help-but-wonder': "I Couldn't Help But Wonder",
+      'if-you-were': 'If You Were',
+      'long-reads': 'Long Reads',
+      'cinema-club': 'Club cinema',
+      'karaoke-club': 'Club karaoke',
+      'game-evenings': 'Serate giochi'
+    },
+    ru: {
+      'basic-speaking-club': 'Базовый разговорный клуб',
+      'intermediate-speaking-club': 'Разговорный клуб среднего уровня',
+      'french-speaking-club': 'Разговорный клуб французского',
+      'keeping-up-with-science': 'Keeping Up with Science',
+      'lets-celebrate': "Let's Celebrate",
+      'the-greatest-quotes': 'The Greatest Quotes',
+      'mind-matters': 'Mind Matters',
+      'my-life-with-without': 'My Life With & Without',
+      'debatable-and-relatable': 'Debatable & Relatable',
+      'i-couldnt-help-but-wonder': "I Couldn't Help But Wonder",
+      'if-you-were': 'If You Were',
+      'long-reads': 'Long Reads',
+      'cinema-club': 'Киноклуб',
+      'karaoke-club': 'Караоке-клуб',
+      'game-evenings': 'Игровые вечера'
+    },
+    el: {
+      'basic-speaking-club': 'Κλαμπ συζήτησης αρχαρίων',
+      'intermediate-speaking-club': 'Κλαμπ συζήτησης μέσου επιπέδου',
+      'french-speaking-club': 'Κλαμπ συζήτησης γαλλικών',
+      'keeping-up-with-science': 'Keeping Up with Science',
+      'lets-celebrate': "Let's Celebrate",
+      'the-greatest-quotes': 'The Greatest Quotes',
+      'mind-matters': 'Mind Matters',
+      'my-life-with-without': 'My Life With & Without',
+      'debatable-and-relatable': 'Debatable & Relatable',
+      'i-couldnt-help-but-wonder': "I Couldn't Help But Wonder",
+      'if-you-were': 'If You Were',
+      'long-reads': 'Long Reads',
+      'cinema-club': 'Κλαμπ σινεμά',
+      'karaoke-club': 'Κλαμπ καραόκε',
+      'game-evenings': 'Βραδιές παιχνιδιών'
+    }
   };
 
   // Public Google Form where members share a club experience.
@@ -87,9 +159,16 @@
 
   function detectLanguage() {
     if (typeof window !== 'undefined') {
+      // The page language wins: whichever language the visitor picked (or landed
+      // on) is the language every review is shown in. The URL is read first
+      // because CosyLang may not have initialised yet when this runs.
       if (window.CosyLang && typeof window.CosyLang.detectPageLang === 'function') {
         var pLang = window.CosyLang.detectPageLang(window.location.pathname);
         if (pLang && REVIEWS_I18N[pLang]) return pLang;
+      }
+      if (window.CosyLang && window.CosyLang.state && window.CosyLang.state.pageLang) {
+        var stateLang = window.CosyLang.state.pageLang;
+        if (REVIEWS_I18N[stateLang]) return stateLang;
       }
       var htmlLang = (document.documentElement.lang || '').slice(0, 2).toLowerCase();
       if (htmlLang && REVIEWS_I18N[htmlLang]) return htmlLang;
@@ -103,14 +182,17 @@
     return 'en';
   }
 
+  // Reviews are fetched relative to the page, so a page in any subdirectory
+  // (language hubs, /speaking-clubs/, ...) needs one `../` per level.
   function getPathPrefix() {
     if (typeof window === 'undefined') return '';
     var clean = decodeURIComponent(window.location.pathname.split('?')[0].split('#')[0]);
     if (clean.charAt(0) === '/') clean = clean.substring(1);
     if (clean.indexOf('COSYevents/') === 0) clean = clean.substring('COSYevents/'.length);
-    var first = clean.split('/')[0];
-    if (['fr', 'it', 'ru', 'el'].indexOf(first) !== -1) return '../';
-    return '';
+    var segments = clean.split('/');
+    segments.pop();
+    var depth = segments.filter(function (s) { return s && s !== '.'; }).length;
+    return depth > 0 ? new Array(depth + 1).join('../') : '';
   }
 
   var INTL_LOCALES = { en: 'en-US', fr: 'fr-FR', it: 'it-IT', ru: 'ru-RU', el: 'el-GR' };
@@ -130,7 +212,9 @@
     }
   }
 
-  function clubLabel(review) {
+  function clubLabel(review, lang) {
+    var dict = CLUB_LABELS_I18N[lang] || {};
+    if (dict[review.club]) return dict[review.club];
     if (review.club_name) return review.club_name;
     if (CLUB_LABELS[review.club]) return CLUB_LABELS[review.club];
     if (review.club) {
@@ -160,7 +244,7 @@
 
   function renderCard(review, lang, index, total) {
     var loc = localized(review, lang);
-    var label = clubLabel(review);
+    var label = clubLabel(review, lang);
     var dateStr = formatDate(review.date, lang);
 
     var meta = [];
@@ -272,20 +356,14 @@
     goToSlide(0);
   }
 
-  // A mount with `data-club-reviews=""` shows every review (the hub carousel). A mount with a club
-  // slug shows only that club's reviews, so each club page can carry its own.
-  function reviewsForMount(reviews, slug) {
-    if (!slug) return reviews;
-    return reviews.filter(function (review) { return review.club === slug; });
-  }
-
-  function mountSlug(element) {
-    var value = element.getAttribute('data-club-reviews');
-    return (value || '').trim();
+  // All reviews live in one carousel. Every mount shows the whole set, so the
+  // same reviews appear together wherever the component is placed.
+  function reviewsForMount(reviews) {
+    return reviews;
   }
 
   // An optional wrapper marked `data-club-reviews-shell` is hidden along with the mount, so an empty
-  // filtered block leaves no padding gap on the page.
+  // block leaves no padding gap on the page.
   function shellFor(element) {
     return element.closest ? element.closest('[data-club-reviews-shell]') : null;
   }
@@ -320,7 +398,7 @@
       .then(function (data) {
         var reviews = (data && data.reviews) || [];
         for (var i = 0; i < mounts.length; i++) {
-          render(mounts[i], reviewsForMount(reviews, mountSlug(mounts[i])), lang);
+          render(mounts[i], reviewsForMount(reviews), lang);
         }
       })
       .catch(function (err) {
@@ -351,7 +429,8 @@
       reviewsForMount: reviewsForMount,
       initClubReviews: initClubReviews,
       REVIEWS_I18N: REVIEWS_I18N,
-      CLUB_LABELS: CLUB_LABELS
+      CLUB_LABELS: CLUB_LABELS,
+      CLUB_LABELS_I18N: CLUB_LABELS_I18N
     };
   }
 })();

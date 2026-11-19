@@ -1,0 +1,101 @@
+{
+  "note": "Redirect stubs keep legacy URLs working on GitHub Pages, which cannot serve 301s. Run `npm run check-redirects -- --update` after intentionally adding or removing one.",
+  "count": 19,
+  "stubs": [
+    {
+      "path": "cinema-club/index.html",
+      "target": "../cinema-club.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/multimedia-nights/cinema-club/index.html",
+      "target": "../../../cinema-club.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/multimedia-nights/game-evening/index.html",
+      "target": "../../../game-evenings.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/multimedia-nights/karaoke-club/index.html",
+      "target": "../../../karaoke-club.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/multimedia-nights/long-reads/index.html",
+      "target": "../../../long-reads.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/speaking-clubs/debatable-relatable/index.html",
+      "target": "../../../debatable-relatable.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/speaking-clubs/i-couldnt-help-but-wonder/index.html",
+      "target": "../../../i-couldnt-help-but-wonder.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/speaking-clubs/if-you-were/index.html",
+      "target": "../../../if-you-were.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/speaking-clubs/keeping-up-with-science/index.html",
+      "target": "../../../keeping-up-with-science.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/speaking-clubs/lets-celebrate/index.html",
+      "target": "../../../lets-celebrate.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/speaking-clubs/mind-matters/index.html",
+      "target": "../../../mind-matters.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/speaking-clubs/my-life-with-without/index.html",
+      "target": "../../../my-life-with-without.html",
+      "kind": "internal"
+    },
+    {
+      "path": "events/speaking-clubs/the-greatest-quotes/index.html",
+      "target": "../../../the-greatest-quotes.html",
+      "kind": "internal"
+    },
+    {
+      "path": "game-evening/index.html",
+      "target": "../game-evenings.html",
+      "kind": "internal"
+    },
+    {
+      "path": "game-evenings/index.html",
+      "target": "../game-evenings.html",
+      "kind": "internal"
+    },
+    {
+      "path": "games/index.html",
+      "target": "https://cosylanguages.github.io/COSYgames/",
+      "kind": "external"
+    },
+    {
+      "path": "karaoke-club/index.html",
+      "target": "../karaoke-club.html",
+      "kind": "internal"
+    },
+    {
+      "path": "long-reads/index.html",
+      "target": "../long-reads.html",
+      "kind": "internal"
+    },
+    {
+      "path": "practice/index.html",
+      "target": "https://cosylanguages.github.io/COSYlanguages/",
+      "kind": "external"
+    }
+  ]
+}

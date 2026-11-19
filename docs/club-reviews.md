@@ -35,7 +35,10 @@ Open `data/club-reviews.json` and add an object to the `reviews` array:
   "featured": true,
   "text": "The review text goes here.",
   "i18n": {
-    "fr": { "text": "Le texte de l'avis." }
+    "fr": { "text": "Le texte de l'avis." },
+    "it": { "text": "Il testo della recensione." },
+    "ru": { "text": "Текст отзыва." },
+    "el": { "text": "Το κείμενο της κριτικής." }
   }
 }
 ```
@@ -45,56 +48,50 @@ Field rules (enforced by `npm run test-club-reviews`):
 - `id` — unique, any stable string.
 - `club` — must be one of the club slugs in `CLUB_LABELS` in
   `shared/js/club-reviews.js` (for example `keeping-up-with-science`).
-- `club_name` — the name shown under the quote.
+- `club_name` — the English name, used as a fallback when a club has no entry in
+  `CLUB_LABELS_I18N`.
 - `author` — display name only; never a full legal name.
 - `rating` — integer 1–5, shown as stars.
 - `date` — the year only (`YYYY`). Rendered as just the year; the month and day are not shown.
-- `text` — the review. At least 20 characters.
-- `i18n` — optional. Add localized `text` (and optionally `author`) for any of
-  `fr`, `it`, `ru`, `el`. Missing languages fall back to the top-level `text`.
+- `text` — the English review. At least 20 characters.
+- `i18n` — **required for `fr`, `it`, `ru` and `el`.** The carousel switches
+  wholesale with the site language, so every review needs every language; a
+  missing locale leaves an untranslated quote on a translated page. `author` can
+  be localized too.
 
 The `featured` flag is reserved for future ordering; it is not required.
 
 ## Where it appears
 
-Like the course reviews on COSYlanguages, the club reviews live in one place:
-the main `index.html`, showing every review in a single carousel.
+Like the course reviews on COSYlanguages, the club reviews live in one place and
+are never split up: one carousel holding every review.
 
 ```html
 <!-- index.html -->
 <div data-club-reviews></div>
 ```
 
-The speaking-clubs hub (`speaking-clubs.html`), where visitors choose a club,
-mounts the same all-reviews carousel under its own `#reviews` anchor.
+The speaking-clubs hub (`speaking-clubs.html`) mounts the same all-reviews
+carousel under its own `#reviews` anchor, and so do the localized hubs (`fr/`,
+`it/`, `ru/`, `el/`), the nav's Speaking Clubs hub (`speaking-clubs/index.html`)
+and the localized club hubs (`fr/speaking-clubs.html`, `ru/speaking-clubs.html`).
+Club pages do not carry their own copy — the reviews stay together in one list.
 
 The language is detected from the page, so the same markup works on the localized
 hub pages. The component hides itself when there are no reviews.
 
-### Per-club reviews
-
-Each club page carries the reviews for that club only, by naming the club slug on
-the mount. The slug must be one of the keys in `CLUB_LABELS`.
-
-```html
-<!-- e.g. mind-matters.html -->
-<div data-club-reviews="mind-matters"></div>
-```
-
-- `data-club-reviews` with no value (or empty) shows every review — this is what
-  the main hub carousel uses.
-- `data-club-reviews="<slug>"` shows only that club's reviews, and the section
-  hides itself when the club has none yet.
-
-The localized hubs (`fr/`, `it/`, `ru/`, `el/`) mount the same carousel as the
-English home page and translate the interface automatically.
+The data path is resolved from the page's own depth, so the same mount works at
+the site root, one level down (`fr/index.html`) or in a nested hub directory
+(`speaking-clubs/index.html`).
 
 ## Languages
 
-The interface (heading, sub-heading, share button) is translated for
-`en`, `fr`, `it`, `ru`, `el` in `REVIEWS_I18N` inside `shared/js/club-reviews.js`.
-Review text is only translated when a review provides an `i18n` entry. The review
-year is shown as-is (no localized month name).
+The interface (heading, sub-heading, share button) and the club names are
+translated for `en`, `fr`, `it`, `ru`, `el` in `REVIEWS_I18N` and
+`CLUB_LABELS_I18N` inside `shared/js/club-reviews.js`. Every review carries its
+own text in all five languages, so the carousel is fully translated as soon as
+the visitor picks a language. The review year is shown as-is (no localized month
+name).
 
 ## Tests
 

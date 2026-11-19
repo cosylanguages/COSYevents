@@ -10,6 +10,7 @@
  */
 
 const assert = require('assert');
+const vm = require('vm');
 const fs = require('fs');
 const path = require('path');
 
@@ -24,7 +25,8 @@ const {
   localized,
   reviewsForMount,
   REVIEWS_I18N,
-  CLUB_LABELS
+  CLUB_LABELS,
+  CLUB_LABELS_I18N
 } = require('../shared/js/club-reviews.js');
 
 const LANGS = ['en', 'fr', 'it', 'ru', 'el'];
@@ -54,6 +56,16 @@ for (const review of data.reviews) {
       assert(LANGS.includes(lang), `${review.id}: i18n has unsupported language "${lang}"`);
       assert(review.i18n[lang].text, `${review.id}: i18n.${lang}.text is required`);
     }
+  }
+  // Every review must be readable in every site language: the carousel switches
+  // wholesale when the visitor changes language, so a missing locale would leave
+  // a stray English (or French) quote in an otherwise translated page.
+  for (const lang of LANGS) {
+    if (lang === 'en') continue;
+    assert(
+      review.i18n && review.i18n[lang] && review.i18n[lang].text,
+      `${review.id}: missing i18n.${lang}.text — every review needs all site languages`
+    );
   }
 }
 console.log(`  PASS: ${data.reviews.length} reviews are well-formed.\n`);
@@ -126,23 +138,23 @@ console.log('Test 5: Verifying helpers...');
 assert.strictEqual(sanitizeHtml('<b>&"\'</b>'), '&lt;b&gt;&amp;&quot;&#39;&lt;/b&gt;');
 assert.strictEqual(sanitizeHtml(null), '');
 assert.strictEqual(clubLabel({ club: 'mind-matters' }), 'Mind Matters');
+assert.strictEqual(clubLabel({ club: 'mind-matters' }, 'fr'), 'Mind Matters');
+assert.strictEqual(clubLabel({ club: 'cinema-club' }, 'ru'), 'Киноклуб', 'club names follow the site language');
 assert.strictEqual(clubLabel({ club: 'unknown-club', club_name: 'Custom Name' }), 'Custom Name');
 assert.strictEqual(localized({ author: 'A', text: 'T' }, 'fr').text, 'T', 'falls back to top-level text');
 assert.strictEqual(localized({ author: 'A', text: 'T', i18n: { fr: { text: 'FR' } } }, 'fr').text, 'FR');
 assert(stars(0).includes('is-on') === false, 'zero rating should have no filled stars');
 console.log('  PASS: Helpers behave as expected.\n');
 
-// Test 5b: Per-club filtering
-console.log('Test 5b: Verifying per-club filtering...');
+// Test 5b: One shared carousel
+console.log('Test 5b: Verifying every mount shows the whole review set...');
 const filterSample = [
   { id: 'a', club: 'mind-matters' },
   { id: 'b', club: 'cinema-club' },
   { id: 'c', club: 'mind-matters' }
 ];
-assert.deepStrictEqual(reviewsForMount(filterSample, '').map(r => r.id), ['a', 'b', 'c'], 'empty slug shows every review');
-assert.deepStrictEqual(reviewsForMount(filterSample, 'mind-matters').map(r => r.id), ['a', 'c'], 'slug filters to that club');
-assert.deepStrictEqual(reviewsForMount(filterSample, 'no-such-club'), [], 'unknown slug yields no reviews');
-console.log('  PASS: Per-club filtering selects the right reviews.\n');
+assert.deepStrictEqual(reviewsForMount(filterSample).map(r => r.id), ['a', 'b', 'c'], 'all reviews are always together');
+console.log('  PASS: Reviews are never split by club.\n');
 
 // Test 6: Host page carries the mount + assets
 console.log('Test 6: Verifying host page mounts the component...');
@@ -160,6 +172,42 @@ assert(clubsHub.includes('shared/js/club-reviews.js'), 'speaking-clubs.html: mis
 assert(clubsHub.includes('shared/css/club-reviews.css'), 'speaking-clubs.html: missing component stylesheet');
 console.log('  PASS: speaking-clubs.html mounts the carousel.\n');
 
+// Test 6c: The hub page the site nav links to also carries the carousel
+console.log('Test 6c: Verifying the speaking-clubs/ hub page mounts the carousel...');
+const clubsIndex = fs.readFileSync(path.join(ROOT, 'speaking-clubs', 'index.html'), 'utf8');
+assert(/<div data-club-reviews><\/div>/.test(clubsIndex), 'speaking-clubs/index.html: missing reviews mount');
+assert(clubsIndex.includes('../shared/js/club-reviews.js'), 'speaking-clubs/index.html: missing component script');
+assert(clubsIndex.includes('../shared/css/club-reviews.css'), 'speaking-clubs/index.html: missing component stylesheet');
+console.log('  PASS: speaking-clubs/index.html mounts the carousel.\n');
+
+// Test 6d: Localized club hubs carry the carousel too
+console.log('Test 6d: Verifying localized club hubs mount the carousel...');
+for (const lang of ['fr', 'ru']) {
+  const hub = fs.readFileSync(path.join(ROOT, lang, 'speaking-clubs.html'), 'utf8');
+  assert(/data-club-reviews/.test(hub), `${lang}/speaking-clubs.html: missing reviews mount`);
+  assert(hub.includes('../shared/js/club-reviews.js'), `${lang}/speaking-clubs.html: missing component script`);
+  assert(hub.includes('../shared/css/club-reviews.css'), `${lang}/speaking-clubs.html: missing component stylesheet`);
+}
+console.log('  PASS: Localized club hubs mount the carousel.\n');
+
+// Test 6e: The reviews fetch path resolves from every mount depth
+console.log('Test 6e: Verifying the reviews path prefix resolves at every depth...');
+for (const [pathname, expected] of [
+  ['/index.html', ''],
+  ['/speaking-clubs.html', ''],
+  ['/fr/index.html', '../'],
+  ['/speaking-clubs/index.html', '../'],
+  ['/fr/speaking-clubs.html', '../'],
+  ['/COSYevents/speaking-clubs/index.html', '../']
+]) {
+  const sandbox = { window: { location: { pathname } }, document: undefined, module: { exports: {} } };
+  vm.createContext(sandbox);
+  vm.runInContext(fs.readFileSync(path.join(ROOT, 'shared', 'js', 'club-reviews.js'), 'utf8'), sandbox);
+  const actual = sandbox.module.exports.getPathPrefix();
+  assert.strictEqual(actual, expected, `${pathname}: expected prefix "${expected}", got "${actual}"`);
+}
+console.log('  PASS: The data path resolves from every mount depth.\n');
+
 // Test 7: Localized hubs mount the component
 console.log('Test 7: Verifying localized hubs mount the component...');
 for (const lang of ['fr', 'it', 'ru', 'el']) {
@@ -170,31 +218,49 @@ for (const lang of ['fr', 'it', 'ru', 'el']) {
 }
 console.log('  PASS: All localized hubs mount the component.\n');
 
-// Test 8: Club pages mount a filtered block with a known slug
-console.log('Test 8: Verifying club pages mount a filtered block...');
-const CLUB_PAGES = {
-  'basic-speaking-club.html': 'basic-speaking-club',
-  'intermediate-speaking-club.html': 'intermediate-speaking-club',
-  'keeping-up-with-science.html': 'keeping-up-with-science',
-  'lets-celebrate.html': 'lets-celebrate',
-  'the-greatest-quotes.html': 'the-greatest-quotes',
-  'mind-matters.html': 'mind-matters',
-  'my-life-with-without.html': 'my-life-with-without',
-  'debatable-relatable.html': 'debatable-and-relatable',
-  'i-couldnt-help-but-wonder.html': 'i-couldnt-help-but-wonder',
-  'if-you-were.html': 'if-you-were',
-  'long-reads.html': 'long-reads',
-  'cinema-club.html': 'cinema-club',
-  'karaoke-club.html': 'karaoke-club',
-  'game-evenings.html': 'game-evenings'
-};
-for (const [file, slug] of Object.entries(CLUB_PAGES)) {
-  assert(CLUB_LABELS[slug], `${file}: slug "${slug}" must be a known club`);
+// Test 8: Club pages do not carry their own review carousel
+console.log('Test 8: Verifying club pages have no separate review carousel...');
+const CLUB_PAGES = [
+  'basic-speaking-club.html',
+  'intermediate-speaking-club.html',
+  'keeping-up-with-science.html',
+  'lets-celebrate.html',
+  'the-greatest-quotes.html',
+  'mind-matters.html',
+  'my-life-with-without.html',
+  'debatable-relatable.html',
+  'i-couldnt-help-but-wonder.html',
+  'if-you-were.html',
+  'long-reads.html',
+  'cinema-club.html',
+  'karaoke-club.html',
+  'game-evenings.html'
+];
+for (const file of CLUB_PAGES) {
   const html = fs.readFileSync(path.join(ROOT, file), 'utf8');
-  assert(html.includes(`data-club-reviews="${slug}"`), `${file}: missing filtered reviews mount`);
-  assert(html.includes('shared/js/club-reviews.js'), `${file}: missing component script`);
-  assert(html.includes('shared/css/club-reviews.css'), `${file}: missing component stylesheet`);
+  assert(!/data-club-reviews/.test(html), `${file}: reviews must live only in the shared carousel`);
+  assert(!html.includes('shared/js/club-reviews.js'), `${file}: should not load the reviews component`);
+  assert(!html.includes('shared/css/club-reviews.css'), `${file}: should not load the reviews stylesheet`);
 }
-console.log(`  PASS: All ${Object.keys(CLUB_PAGES).length} club pages mount a filtered block.\n`);
+console.log(`  PASS: All ${CLUB_PAGES.length} club pages leave reviews to the shared carousel.\n`);
+
+// Test 9: Every mount renders every review, in every site language
+console.log('Test 9: Verifying all reviews render together in every language...');
+for (const lang of LANGS) {
+  const html = renderSection(data.reviews, lang);
+  for (const review of data.reviews) {
+    const expected = sanitizeHtml(localized(review, lang).text).slice(0, 40);
+    assert(html.includes(expected), `${lang}: ${review.id} missing from carousel`);
+  }
+  const slideCount = (html.match(/class="club-review-slide/g) || []).length;
+  assert(slideCount === data.reviews.length, `${lang}: expected ${data.reviews.length} slides, got ${slideCount}`);
+  const counter = `1/${data.reviews.length}`;
+  assert(html.includes(counter), `${lang}: expected counter ${counter}`);
+}
+assert(
+  reviewsForMount(data.reviews).length === data.reviews.length,
+  'reviewsForMount must return every review'
+);
+console.log(`  PASS: All ${data.reviews.length} reviews render together in all ${LANGS.length} languages.\n`);
 
 console.log('🎉 All Club Reviews tests passed successfully!');

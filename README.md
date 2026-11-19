@@ -16,21 +16,32 @@
 
 ```text
 COSYevents/
+├── *.html                            # Event pages: one hub per club/format
+│                                     #   (cinema-club, karaoke-club, mind-matters, …)
+├── index.html                        # Main landing page
+├── fr/ it/ ru/ el/                   # Localized hub pages
 ├── events/
+│   ├── index.html                    # Events portal
 │   └── <event-slug>/
 │       ├── event.json                # Event definition and metadata
 │       └── sessions/
 │           └── <session-slug>.json   # Complete session content
-├── sessions/                         # Session materials in web-friendly formats
+├── sessions/                         # Session pages, one folder per club,
+│                                     #   with per-language subfolders
+├── data/                             # Hand-maintained and generated datasets
+│                                     #   (sessions.json, club-reviews.json, …)
+├── shared/                           # Shared JS, CSS, i18n, audio and images
+├── styles/  assets/  images/         # Page styles and artwork
 ├── schemas/                          # JSON Schemas for validation
-├── scripts/
-│   ├── validate-events.js            # Schema and slug consistency checks
-│   ├── build-public.js               # Builds the calendar discovery index
-│   └── test-no-leak.js               # Checks generated public index shape
-├── index.html                        # Main landing page
+├── supabase/                         # Migrations and DB tests
+├── scripts/                          # Build, check, test and ops tooling
+├── docs/                             # Specifications, guides and their index
+├── reports/                          # Audit write-ups and findings
 ├── public-events.json                # Generated event/session discovery index
 └── package.json                      # NPM scripts and dependencies
 ```
+
+Some old paths survive as redirect stubs — see [Legacy URLs and redirect stubs](#legacy-urls-and-redirect-stubs). Tooling is indexed in [`scripts/README.md`](scripts/README.md) and specifications in [`docs/README.md`](docs/README.md).
 
 ## Add an event or session
 
@@ -149,6 +160,22 @@ Learner reviews of the speaking clubs live in `data/club-reviews.json` and rende
 `shared/js/club-reviews.js` + `shared/css/club-reviews.css`. As on COSYlanguages, they show in a
 single carousel on the main `index.html`. Reviews are written by hand; the share button opens a
 public Google Form. See [docs/club-reviews.md](docs/club-reviews.md) to add one.
+
+## Legacy URLs and redirect stubs
+
+GitHub Pages cannot serve 301s, so pages that moved keep a small client-side redirect stub at their
+old path — for example `cinema-club/index.html` redirects to `cinema-club.html`, and
+`events/speaking-clubs/<club>/index.html` redirects to `../../../<club>.html`. These stubs look
+unused from inside the repo, because their job is to catch links arriving from outside it. Do not
+delete one just because nothing internal points at it.
+
+`npm run check-redirects` verifies that every stub's target still resolves and that the inventory
+matches `data/redirect-stubs.json`. After intentionally adding or retiring a stub, refresh the
+baseline with:
+
+```bash
+npm run check-redirects -- --update
+```
 
 ## COSYlanguages ecosystem
 
