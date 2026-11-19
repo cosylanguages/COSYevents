@@ -2295,17 +2295,7 @@
       });
     }
 
-    // Theme toggle
-    if ($('btn-theme-toggle')) {
-      $('btn-theme-toggle').addEventListener('click', function () {
-        var html = document.documentElement;
-        var current = html.getAttribute('data-theme');
-        var next = current === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', next);
-        var icon = $('theme-icon');
-        if (icon) icon.textContent = next === 'dark' ? '☀️' : '🌙';
-      });
-    }
+    // Theme toggle: handled by cosy-theme.js (the button carries data-cosy-theme-toggle)
 
     // Account pill click -> trigger sign-in modal
     if ($('btn-account-pill') || $('btn-banner-login')) {

@@ -155,6 +155,7 @@ function renderSessionPage(session, clubSlug, eventSlug) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${session.slug} — COSYevents</title>
   <meta name="description" content="Complete repository-hosted session materials.">
+  <script src="../../shared/js/cosy-theme.js"></script>
   <link rel="stylesheet" href="../../shared/css/sessions.css">
 </head>
 <body>

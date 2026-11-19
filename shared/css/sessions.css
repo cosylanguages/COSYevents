@@ -7143,3 +7143,57 @@ body.theme-dark .session-jump-link.active {
   color: var(--cosy-color-sage-deep, #233827);
   transform: translateX(3px);
 }
+
+/* ─── Dark mode repairs for club pages ───────────────────────────────────────────────────────
+   Club hub pages carry brand colours as inline styles and a few club sheets hard-code a light page
+   (karaoke). In dark mode those dark-on-dark / light-on-light pairs were unreadable. Audited with
+   a computed-contrast check across one page per club. */
+.join-btn { background: #1a7f45; }   /* white on WhatsApp green was 2:1 in both themes */
+.join-btn:hover { background: #146637; }
+
+html[data-theme="dark"] body.theme-karaoke {
+  background: radial-gradient(circle at top right, rgba(214, 170, 195, 0.10), transparent), #1b1318 !important;
+  color: #f3e4ec !important;
+  --ink: #f3e4ec !important;
+  --ink-soft: #e0cbd7 !important;
+  --ink-muted: #c7aebb !important;
+  --muted: #b295a6 !important;
+  --border: rgba(214, 170, 195, 0.22) !important;
+  --cream: #241a20 !important;
+  --surface-color: #2a1e25 !important;
+}
+
+/* inline brand text colours -> lighter tints on dark */
+html[data-theme="dark"] [style*="color: #993C1D"], html[data-theme="dark"] [style*="color:#993C1D"] { color: #f2a085 !important; }
+html[data-theme="dark"] [style*="color: #3F2B96"], html[data-theme="dark"] [style*="color:#3F2B96"] { color: #c9bdf5 !important; }
+html[data-theme="dark"] [style*="color: #1F104D"], html[data-theme="dark"] [style*="color:#1F104D"] { color: #e2dbfb !important; }
+html[data-theme="dark"] [style*="color: #0F6E56"], html[data-theme="dark"] [style*="color:#0F6E56"] { color: #6fd1b4 !important; }
+html[data-theme="dark"] [style*="color: #07372b"], html[data-theme="dark"] [style*="color:#07372b"] { color: #a8e6d2 !important; }
+html[data-theme="dark"] [style*="color: #7A1C1C"], html[data-theme="dark"] [style*="color:#7A1C1C"] { color: #f19a9a !important; }
+html[data-theme="dark"] [style*="color: #993556"], html[data-theme="dark"] [style*="color:#993556"] { color: #f2a3bf !important; }
+html[data-theme="dark"] [style*="color: #3B6D11"], html[data-theme="dark"] [style*="color:#3B6D11"] { color: #a6d46a !important; }
+html[data-theme="dark"] [style*="color: #5D4037"], html[data-theme="dark"] [style*="color:#5D4037"] { color: #d9bfb4 !important; }
+html[data-theme="dark"] [style*="color: #4A154B"], html[data-theme="dark"] [style*="color:#4A154B"] { color: #e0b6e1 !important; }
+html[data-theme="dark"] [style*="color: var(--muted)"] { color: #b9c6ba !important; }
+
+html[data-theme="dark"] .sd-breadcrumbs a,
+html[data-theme="dark"] .breadcrumb a { color: #8fd0c8; }
+html[data-theme="dark"] .mind-card-view { color: #f2a3bf; }
+html[data-theme="dark"] .debate-card-footer .view-link { color: #f2a085; }
+html[data-theme="dark"] .keyboard-hint { color: #c9bdf5; }
+html[data-theme="dark"] .edv-drawer-title { color: #dfe7ff; }
+html[data-theme="dark"] .back-link { color: #b9c6ba; }
+html[data-theme="dark"] .sd-card-club { color: #f0b34a; }
+html[data-theme="dark"] [style*="color: #0f6e56" i], html[data-theme="dark"] [style*="color:#0f6e56" i] { color: #6fd1b4 !important; }
+
+/* Dark-mode repairs (round 2) */
+html[data-theme="dark"] .cosy-breadcrumbs a { color: #8fd0c8; }
+html[data-theme="dark"] .life-balance-card[style*="background: white"] { background: #1f2320 !important; }
+html[data-theme="dark"] .sd-badge-format,
+html[data-theme="dark"] .sd-badge-lang { color: #e8eee8; background: rgba(255,255,255,0.12); }
+html[data-theme="dark"] .sd-card .sd-card-club, html[data-theme="dark"] .sd-card[data-club] .sd-card-club, html[data-theme="dark"] .sd-card[data-format] .sd-card-club { color: #f19a9a !important; }
+html[data-theme="dark"] a[href*="mave.stream"][style] { background: #1d2a22 !important; border-color: #6fd1b4 !important; color: #6fd1b4 !important; }
+html[data-theme="dark"] .life-balance-footer[style*="#FAF7F2" i] { background: #262b27 !important; }
+html[data-theme="dark"] a[style*="#FFFDF9" i][style*="border"] { background: #1d2a22 !important; border-color: #6fd1b4 !important; }
+html[data-theme="dark"] .target-grammar, html[data-theme="dark"] [style*="background: #F8FAF9" i] strong { color: #1a1f1a !important; }
+html[data-theme="dark"] .life-balance-view[style*="#4F46E5" i] { color: #a9a3ff !important; }

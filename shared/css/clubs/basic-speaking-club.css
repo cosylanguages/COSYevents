@@ -43,3 +43,5 @@ body.session-page .session-hero {
   margin-bottom: 12px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
+
+html[data-theme="dark"] .frame-box { background-color: #232a25; }

@@ -274,29 +274,18 @@
         '<div class="ce-nav-right">' +
           '<div class="ce-nav-right-account" data-cosy-account></div>' +
           '<div class="ce-nav-right-switcher" data-ce-lang-switcher></div>' +
-          '<button class="ce-theme-btn" type="button" aria-label="Toggle dark mode"></button>' +
+          '<button class="ce-theme-btn" type="button" data-cosy-theme-toggle aria-label="Switch theme"></button>' +
         '</div>' +
       '</header>';
 
     nav.innerHTML = html;
 
-    // Theme toggle
-    var btn = nav.querySelector('.ce-theme-btn');
-    var root_ = document.documentElement;
-    var stored = null;
-    try { stored = localStorage.getItem('ce-theme'); } catch (e) {}
-    var dark = stored === 'dark';
-    var applyTheme = function() {
-      root_.setAttribute('data-theme', dark ? 'dark' : 'light');
-      if (btn) btn.textContent = dark ? '☀' : '☾';
-    };
-    applyTheme();
-    if (btn) {
-      btn.addEventListener('click', function () {
-        dark = !dark;
-        try { localStorage.setItem('ce-theme', dark ? 'dark' : 'light'); } catch (e) {}
-        applyTheme();
-      });
+    // Theme: cosy-theme.js (loaded in <head>; shared by every COSY site) owns the state, the saved choice
+    // and the toggle button. Pages built before that tag existed get it loaded here, a little later.
+    if (!window.CosyTheme) {
+      var themeScript = document.createElement('script');
+      themeScript.src = root + 'shared/js/cosy-theme.js';
+      document.head.appendChild(themeScript);
     }
 
     // Disclosure Panel logic
