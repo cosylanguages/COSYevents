@@ -340,3 +340,8 @@
     display: none;
   }
 }
+
+@media (max-width: 640px) {
+  .sd-header-inner .ce-also-available { flex-wrap: wrap; flex-direction: row; gap: 0.35rem 0.6rem; width: 100%; padding: 0.5rem 0.75rem; font-size: 0.8rem; }
+  .sd-header-inner .ce-also-available * { white-space: nowrap; }
+}
