@@ -1469,3 +1469,11 @@ textarea.form-control {
   font-weight: bold;
   color: var(--st-accent);
 }
+
+/* Phone: header controls scroll instead of widening the page */
+@media (max-width: 700px) {
+  .studio-header { height: auto; min-height: var(--st-header-h); flex-wrap: wrap; row-gap: 6px; padding-top: 6px; padding-bottom: 6px; }
+  .studio-header-left { flex: 1 1 100%; }
+  .studio-header-right { flex: 1 1 100%; max-width: 100%; overflow-x: auto; padding-bottom: 2px; }
+  .studio-header-right > * { flex-shrink: 0; }
+}
