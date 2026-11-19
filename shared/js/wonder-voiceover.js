@@ -55,6 +55,10 @@
       this.init();
     }
 
+    duckMusic() { if (window.COSYClubMusic) window.COSYClubMusic.duck(); }
+
+    restoreMusic() { if (window.COSYClubMusic) window.COSYClubMusic.unduck(); }
+
     init() {
       const placeholders = document.querySelectorAll('.wonder-audio-player-placeholder');
       if (!placeholders.length) return;
@@ -166,6 +170,7 @@
               if (!this.audioObj) {
                 this.audioObj = new Audio(audioPath);
                 this.audioObj.addEventListener('ended', () => {
+                  this.restoreMusic();
                   this.isPlaying = false;
                   playBtn.innerHTML = '🎙️';
                   playBtn.style.background = '#3F2B96';
@@ -187,6 +192,7 @@
               const playPromise = this.audioObj.play();
               if (playPromise !== undefined) {
                 playPromise.then(() => {
+                  this.duckMusic();
                   this.isPlaying = true;
                   playBtn.innerHTML = '⏸️';
                   playBtn.style.background = '#2e1f70';
@@ -229,6 +235,7 @@
       }
 
       this.utterance.onend = () => {
+        this.restoreMusic();
         this.isPlaying = false;
         playBtn.innerHTML = '🎙️';
         playBtn.style.background = '#3F2B96';
@@ -236,12 +243,14 @@
       };
 
       this.utterance.onerror = () => {
+        this.restoreMusic();
         this.isPlaying = false;
         playBtn.innerHTML = '🎙️';
         statusText.textContent = 'Voiceover error occurred.';
       };
 
       this.synth.speak(this.utterance);
+      this.duckMusic();
       this.isPlaying = true;
       playBtn.innerHTML = '⏸️';
       playBtn.style.background = '#2e1f70';
@@ -256,6 +265,7 @@
       if (this.synth) {
         this.synth.cancel();
       }
+      this.restoreMusic();
       this.isPlaying = false;
       playBtn.innerHTML = '🎙️';
       playBtn.style.background = '#3F2B96';

@@ -10,7 +10,7 @@
     "check-orphans": "node scripts/check_orphan_classes.js",
     "build-public": "node scripts/build-public.js",
     "publish": "node scripts/publish-events.js",
-    "test": "node scripts/test-no-leak.js && node scripts/test_studio.js && node scripts/test_session_publish.js && node scripts/test_session_directory.js && node scripts/test_daily_spotlights.js && node scripts/test_club_reviews.js",
+    "test": "node scripts/test-no-leak.js && node scripts/test_studio.js && node scripts/test_session_publish.js && node scripts/test_session_directory.js && node scripts/test_daily_spotlights.js && node scripts/test_club_reviews.js && node scripts/test_club_music.js",
     "test-daily-spotlights": "node scripts/test_daily_spotlights.js",
     "test-club-reviews": "node scripts/test_club_reviews.js",
     "fetch-daily-spotlights": "node scripts/fetch_daily_spotlights.js",
