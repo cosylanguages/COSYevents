@@ -7213,3 +7213,30 @@ html[data-theme="dark"] .calc-result-box { background: linear-gradient(135deg, #
 html[data-theme="dark"] .power-feature-title-teal { color: #6fd1b4 !important; }
 html[data-theme="dark"] .power-feature-title-coral { color: #f2a085 !important; }
 html[data-theme="dark"] .hybrid-badge { color: #f0c36b !important; }
+
+/* Phone: keep Log in, language and theme controls reachable */
+@media (max-width: 560px) {
+  .ce-nav-brand span { display: none; }
+  .ce-session-nav { gap: 0.35rem; }
+  .ce-nav-right { gap: 0.3rem; }
+  .ce-nav-right .cosy-account-login-btn { padding: 0.35rem 0.55rem; font-size: 0.8rem; white-space: nowrap; }
+  .ce-nav-right .ce-lang-label { display: none; }
+  .ce-theme-btn { width: 34px; height: 34px; }
+}
+
+/* Club pages: stack content and sidebar on tablets/phones */
+@media (max-width: 900px) {
+  .club-content-grid, .club-content-grid-layout { grid-template-columns: minmax(0, 1fr); }
+  .club-main { min-width: 0; }
+  .power-play-box { padding: 1.5rem; }
+}
+@media (max-width: 600px) {
+  .lang-filter-buttons { flex-wrap: wrap; }
+  .lang-filter-buttons + *, .lang-filter-buttons { max-width: 100%; }
+}
+@media (max-width: 600px) {
+  div:has(> .lang-filter-buttons) { flex-wrap: wrap; max-width: 100%; }
+}
+@media (max-width: 600px) {
+  .lang-filter-buttons, .level-filter-buttons, .type-filter-buttons { flex-wrap: wrap; }
+}
