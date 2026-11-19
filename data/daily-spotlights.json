@@ -1,142 +1,142 @@
 {
-  "updated_at": "2026-11-18T12:31:03.014Z",
-  "display_date": "November 18, 2026",
-  "day": 18,
+  "updated_at": "2026-11-19T12:21:04.402Z",
+  "display_date": "November 19, 2026",
+  "day": 19,
   "month": 11,
   "items": {
     "celebration": {
       "category": "celebration",
       "categoryTitle": "Holiday of the Day",
-      "title": "Day of Army and Victory",
+      "title": "Day of Discovery of Puerto Rico",
       "badge": "Celebration",
-      "description": "\nThe following are public holidays in Haiti. Many Vodou holidays are also celebrated, but are not considered public holidays.",
-      "details": "Day of Army and Victory (Haiti)",
+      "description": "\n\nPuerto Rico celebrates all official U.S. holidays, and other official holidays established by the Commonwealth government.\nAdditionally, many municipalities celebrate their own Patron Saint Festivals, as well as festivals honoring cultural icons like bomba y plena, danza, salsa, hamacas (hammocks), and popular crops such as plantains and coffee.",
+      "details": "Day of Discovery of Puerto Rico (Puerto Rico)",
       "clubLink": "lets-celebrate.html",
       "clubName": "Let's Celebrate",
       "source": "International & Cultural Observances",
       "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
       "i18n": {
         "en": {
-          "title": "Day of Army and Victory",
-          "description": "\nThe following are public holidays in Haiti. Many Vodou holidays are also celebrated, but are not considered public holidays."
+          "title": "Day of Discovery of Puerto Rico",
+          "description": "\n\nPuerto Rico celebrates all official U.S. holidays, and other official holidays established by the Commonwealth government.\nAdditionally, many municipalities celebrate their own Patron Saint Festivals, as well as festivals honoring cultural icons like bomba y plena, danza, salsa, hamacas (hammocks), and popular crops such as plantains and coffee."
         },
         "fr": {
-          "title": "Journée de l'Armée et de la Victoire",
-          "description": "Les jours suivants sont des jours fériés en Haïti. De nombreuses fêtes vaudoues sont également célébrées, mais elles ne sont pas considérées comme des jours fériés."
+          "title": "Jour de la découverte de Porto Rico",
+          "description": "Porto Rico célèbre tous les jours fériés officiels des États-Unis, ainsi que d'autres jours fériés officiels établis par le gouvernement du Commonwealth.\nEn outre, de nombreuses municipalités célèbrent leurs propres fêtes patronales, ainsi que des festivals rendant hommage à des icônes culturelles telles que la bomba y"
         },
         "it": {
-          "title": "Giornata dell'Esercito e della Vittoria",
-          "description": "Di seguito sono elencate le festività nazionali di Haiti. Vengono celebrate anche molte festività vudù, ma non sono considerate festività nazionali."
+          "title": "Giornata della scoperta di Porto Rico",
+          "description": "A Porto Rico si celebrano tutte le festività ufficiali degli Stati Uniti e altre festività ufficiali stabilite dal governo del Commonwealth.\nInoltre, molti comuni celebrano le proprie feste patronali, nonché festival in onore di icone culturali come la bomba y"
         },
         "ru": {
-          "title": "День армии и Победы",
-          "description": "Ниже перечислены государственные праздники Гаити. Также отмечаются многие праздники вуду, но они не считаются государственными праздниками."
+          "title": "День открытия Пуэрто-Рико",
+          "description": "В Пуэрто-Рико отмечаются все официальные праздники США, а также другие официальные праздники, установленные правительством Содружества.\nКроме того, многие муниципалитеты празднуют свои собственные фестивали в честь святых покровителей, а также фестивали в честь культурных символов, таких как бомба и"
         },
         "el": {
-          "title": "Ημέρα του Στρατού και της Νίκης",
-          "description": "Ακολουθούν οι αργίες στην Αϊτή. Εορτάζονται επίσης πολλές γιορτές του Βουντού, αλλά δεν θεωρούνται δημόσιες αργίες."
+          "title": "Ημέρα της Ανακάλυψης του Πουέρτο Ρίκο",
+          "description": "Το Πουέρτο Ρίκο εορτάζει όλες τις επίσημες αργίες των ΗΠΑ, καθώς και άλλες επίσημες αργίες που έχουν θεσπιστεί από την κυβέρνηση της Κοινοπολιτείας.\nΕπιπλέον, πολλοί δήμοι γιορτάζουν τις δικές τους γιορτές του πολιούχου τους, καθώς και γιορτές προς τιμήν πολιτιστικών εμβλημάτων, όπως η μπόμπα και η"
         }
       }
     },
     "science": {
       "category": "science",
       "categoryTitle": "Today in Science",
-      "title": "Vitamin C",
-      "year": "1970",
+      "title": "Patent",
+      "year": "",
       "badge": "Research & Discovery",
-      "description": "In 1970, Nobel Prize winner, Linus Pauling declared this day that large doses of Vitamin C could ward off the common cold. He proposed that regular intake of vitamin C in amounts far higher than the officially sanctioned RDA (Recommended Daily Allowance) could help prevent and shorten the duration of the common cold. He concluded that the optimal daily intake of vitamin C for most people is 2.3 grams to 10 grams daily. Although the medical establishment immediately voiced their strong opposition to this idea, many ordinary people believed Dr. Pauling and began taking large amounts of vitamin C. He wrote a book on the subject Vitamin C and the Common Cold (1970) which became a best-seller.. Linus Pauling in His Own Words: Selections From his Writings, Speeches and Interviews, by Barbara Marinacci. - book suggestion.",
+      "description": "(source) In 2002, a U.S. patent for \"Registered pedigree stuffed animals\" was issued to David L. Pickens of Honolulu, Hawaii (No. 6,482,067). The toy animals are designed to simulate the biological laws of inheritance both for educational, recreational and aesthetic purposes. According to the patent, a pair of opposite sex \"parent\" toy animals are sold with a serial number by which the parent's genotype and phenotype may be identified. Owners of the 'parent' toy animals, having registered with the manufacturer, may later request \"breeding\" of the animals, and receive at least one \"offspring\" toy animal randomly selected from a litter having traits determined according to the registered genotypes of the parents and the Mendelian laws of inheritance.\"",
       "clubLink": "keeping-up-with-science.html",
       "clubName": "Keeping Up with Science",
       "source": "Today in Science History",
-      "sourceUrl": "https://todayinsci.com/11/11_18.htm",
+      "sourceUrl": "https://todayinsci.com/11/11_19.htm",
       "i18n": {
         "en": {
-          "title": "Vitamin C",
-          "description": "In 1970, Nobel Prize winner, Linus Pauling declared this day that large doses of Vitamin C could ward off the common cold. He proposed that regular intake of vitamin C in amounts far higher than the officially sanctioned RDA (Recommended Daily Allowance) could help prevent and shorten the duration of the common cold. He concluded that the optimal daily intake of vitamin C for most people is 2.3 grams to 10 grams daily. Although the medical establishment immediately voiced their strong opposition to this idea, many ordinary people believed Dr. Pauling and began taking large amounts of vitamin C. He wrote a book on the subject Vitamin C and the Common Cold (1970) which became a best-seller.. Linus Pauling in His Own Words: Selections From his Writings, Speeches and Interviews, by Barbara Marinacci. - book suggestion."
+          "title": "Patent",
+          "description": "(source) In 2002, a U.S. patent for \"Registered pedigree stuffed animals\" was issued to David L. Pickens of Honolulu, Hawaii (No. 6,482,067). The toy animals are designed to simulate the biological laws of inheritance both for educational, recreational and aesthetic purposes. According to the patent, a pair of opposite sex \"parent\" toy animals are sold with a serial number by which the parent's genotype and phenotype may be identified. Owners of the 'parent' toy animals, having registered with the manufacturer, may later request \"breeding\" of the animals, and receive at least one \"offspring\" toy animal randomly selected from a litter having traits determined according to the registered genotypes of the parents and the Mendelian laws of inheritance.\""
         },
         "fr": {
-          "title": "Vitamine C",
-          "description": "En 1970, le lauréat du prix Nobel Linus Pauling a déclaré ce jour-là que de fortes doses de vitamine C pouvaient prévenir le rhume. Il a suggéré qu'un apport régulier de vitamine C en quantités bien supérieures à l'ANR (apport nutritionnel recommandé) officiellement approuvé pourrait contribuer à prévenir et à"
+          "title": "Brevet",
+          "description": "(source) En 2002, un brevet américain pour des « animaux en peluche de race enregistrés » a été délivré à David L. Pickens d'Honolulu, à Hawaï (n° 6 482 067). Ces animaux en peluche sont conçus pour simuler les lois biologiques de l'hérédité à des fins éducatives, récréatives et esthétiques."
         },
         "it": {
-          "title": "Vitamina C",
-          "description": "Nel 1970, il premio Nobel Linus Pauling dichiarò in questo giorno che grandi dosi di vitamina C potevano prevenire il raffreddore comune. Egli sostenne che l'assunzione regolare di vitamina C in quantità di gran lunga superiori alla RDA (dose giornaliera raccomandata) ufficialmente approvata potesse contribuire a prevenire e a"
+          "title": "Brevetto",
+          "description": "(fonte) Nel 2002, a David L. Pickens di Honolulu, Hawaii, è stato rilasciato un brevetto statunitense per \"Peluche con pedigree registrato\" (n. 6.482.067). Gli animali giocattolo sono progettati per simulare le leggi biologiche dell'ereditarietà a scopo educativo, ricreativo ed estetico. Secondo"
         },
         "ru": {
-          "title": "Витамин C",
-          "description": "В 1970 году лауреат Нобелевской премии Лайнус Полинг заявил, что большие дозы витамина С могут предотвратить простуду. Он предположил, что регулярное потребление витамина С в количествах, значительно превышающих официально утвержденную РСН (рекомендуемую суточную норму), может помочь предотвратить и"
+          "title": "США",
+          "description": "(источник) В 2002 году Дэвиду Л. Пикенсу из Гонолулу, Гавайи, был выдан патент США на «Мягкие игрушки с зарегистрированной родословной» (№ 6 482 067). Игрушечные животные предназначены для имитации биологических законов наследственности как в образовательных, так и в развлекательных и эстетических целях."
         },
         "el": {
-          "title": "Βιταμίνη C",
-          "description": "Το 1970, ο βραβευμένος με Νόμπελ, Λάινους Πώλινγκ, δήλωσε αυτήν την ημέρα ότι οι μεγάλες δόσεις βιταμίνης C θα μπορούσαν να αποτρέψουν το κοινό κρυολόγημα. Πρότεινε ότι η τακτική λήψη βιταμίνης C σε ποσότητες πολύ υψηλότερες από την επίσημα εγκεκριμένη ΣΗΠ (Συνιστώμενη Ημερήσια Πρόσληψη) θα μπορούσε να συμβάλει στην πρόληψη και την καταπολέμηση του κοινού κρυολογήματος."
+          "title": "δίπλωμα ευρεσιτεχνίας",
+          "description": "(πηγή) Το 2002, χορηγήθηκε δίπλωμα ευρεσιτεχνίας των ΗΠΑ για τα «Καταχωρισμένα λούτρινα ζώα με γενεαλογικό δέντρο» στον David L. Pickens από τη Χονολουλού της Χαβάης (αριθ. 6.482.067). Τα παιχνίδια-ζώα έχουν σχεδιαστεί για να προσομοιώνουν τους βιολογικούς νόμους της κληρονομικότητας, τόσο για εκπαιδευτικούς, όσο και για ψυχαγωγικούς και αισθητικούς σκοπούς. Σύμφωνα με"
         }
       }
     },
     "music": {
       "category": "music",
       "categoryTitle": "Today in Music",
-      "title": "Jeux d'eau",
-      "year": "1901",
+      "title": "The Tragic",
+      "year": "1849",
       "badge": "Music History",
-      "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
+      "description": "Franz Schubert's Symphony No. 4, \"The Tragic\", premieres in Leipzig, more than 20 years after the composer's death",
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
       "sourceUrl": "https://www.onthisday.com/music/",
       "i18n": {
         "en": {
-          "title": "Jeux d'eau",
-          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+          "title": "The Tragic",
+          "description": "Franz Schubert's Symphony No. 4, \"The Tragic\", premieres in Leipzig, more than 20 years after the composer's death"
         },
         "fr": {
-          "title": "Jeux d'eau",
-          "description": "Création de la composition pour piano « Jeux d'eau » de Maurice Ravel"
+          "title": "Le tragique",
+          "description": "La Symphonie nº 4 de Franz Schubert, « La Tragique », est créée à Leipzig, plus de 20 ans après la mort du compositeur."
         },
         "it": {
-          "title": "Jeux d'eau",
-          "description": "Prima esecuzione della composizione per pianoforte \"Jeux d'eau\" di Maurice Ravel"
+          "title": "Il tragico",
+          "description": "La Sinfonia n. 4 di Franz Schubert, \"La tragica\", viene eseguita per la prima volta a Lipsia, più di 20 anni dopo la morte del compositore"
         },
         "ru": {
-          "title": "Jeux d'eau",
-          "description": "Состоялась премьера фортепианной композиции Мориса Равеля «Игра воды»"
+          "title": "Трагическое",
+          "description": "В Лейпциге состоялась премьера Симфонии № 4 Франца Шуберта «Трагическая», спустя более чем 20 лет после смерти композитора."
         },
         "el": {
-          "title": "Jeux d'eau",
-          "description": "Πρώτη εκτέλεση της σύνθεσης για πιάνο του Μωρίς Ραβέλ «Jeux d'eau»"
+          "title": "Το τραγικό",
+          "description": "Η Συμφωνία Αρ. 4 του Φραντς Σούμπερτ, «Η Τραγική», παρουσιάζεται για πρώτη φορά στη Λειψία, περισσότερα από 20 χρόνια μετά τον θάνατο του συνθέτη"
         }
       }
     },
     "film": {
       "category": "film",
       "categoryTitle": "Today in Film & TV",
-      "title": "Gentlemen's Agreement",
-      "year": "1947",
+      "title": "Samuel Goldfish, Edgar and Archibald Selwyn...",
+      "year": "1916",
       "badge": "Cinema & Screen",
-      "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
+      "description": "Samuel Goldfish, Edgar and Archibald Selwyn establish Hollywood's Goldwyn Pictures; Goldfish later changes his name to Goldwyn",
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
       "sourceUrl": "https://www.onthisday.com/film-tv/",
       "i18n": {
         "en": {
-          "title": "Gentlemen's Agreement",
-          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+          "title": "Samuel Goldfish, Edgar and Archibald Selwyn...",
+          "description": "Samuel Goldfish, Edgar and Archibald Selwyn establish Hollywood's Goldwyn Pictures; Goldfish later changes his name to Goldwyn"
         },
         "fr": {
-          "title": "\"gentlemen's agreement\"",
-          "description": "« Gentlemen's Agreement », réalisé par Elia Kazan et interprété par Gregory Peck et Dorothy McGuire, sort en première à New York (meilleur film en 1948)."
+          "title": "Samuel Goldfish, Edgar et Archibald Selwyn...",
+          "description": "Samuel Goldfish, Edgar et Archibald Selwyn fondent la société Goldwyn Pictures à Hollywood ; Goldfish change ensuite son nom en Goldwyn."
         },
         "it": {
-          "title": "Gentlemen’s Agreement",
-          "description": "A New York viene proiettato per la prima volta \"Gente di rispetto\", diretto da Elia Kazan e interpretato da Gregory Peck e Dorothy McGuire (Miglior film nel 1948)"
+          "title": "Samuel Goldfish, Edgar e Archibald Selwyn...",
+          "description": "Samuel Goldfish, Edgar e Archibald Selwyn fondano la Goldwyn Pictures di Hollywood; in seguito Goldfish cambia il proprio nome in Goldwyn."
         },
         "ru": {
-          "title": "Джентльменское соглашение",
-          "description": "В Нью-Йорке состоялась премьера фильма «Джентльменское соглашение» режиссера Элиа Казана с Грегори Пеком и Дороти Макгуайр в главных ролях (лучший фильм 1948 года)."
+          "title": "Сэмюэль Голдфиш, Эдгар и Арчибальд Селвин...",
+          "description": "Самуэль Голдфиш, Эдгар и Арчибальд Селвины основали голливудскую компанию Goldwyn Pictures; позже Голдфиш сменил имя на Голдвин."
         },
         "el": {
-          "title": "Συμφωνία κυρίων!",
-          "description": "Πρεμιέρα στη Νέα Υόρκη της ταινίας «Συμφωνία Κυρίων» σε σκηνοθεσία Ελία Καζάν, με πρωταγωνιστές τους Γκρέγκορι Πεκ και Ντόροθι ΜακΓκουάιρ (Καλύτερη Ταινία 1948)"
+          "title": "Ο Σάμιουελ Γκόλντφις, ο Έντγκαρ και ο Άρτσιμπαλντ Σέλγουιν...",
+          "description": "Ο Σάμιουελ Γκόλντφις, ο Έντγκαρ και ο Άρτσιμπαλντ Σέλγουιν ιδρύουν την εταιρεία Goldwyn Pictures στο Χόλιγουντ. Αργότερα, ο Γκόλντφις αλλάζει το όνομά του σε Γκόλντγουιν."
         }
       }
     }
