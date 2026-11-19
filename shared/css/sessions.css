@@ -7197,3 +7197,19 @@ html[data-theme="dark"] .life-balance-footer[style*="#FAF7F2" i] { background: #
 html[data-theme="dark"] a[style*="#FFFDF9" i][style*="border"] { background: #1d2a22 !important; border-color: #6fd1b4 !important; }
 html[data-theme="dark"] .target-grammar, html[data-theme="dark"] [style*="background: #F8FAF9" i] strong { color: #1a1f1a !important; }
 html[data-theme="dark"] .life-balance-view[style*="#4F46E5" i] { color: #a9a3ff !important; }
+
+/* Hub pages, dark mode: hero + calculator controls */
+html[data-theme="dark"] .hero {
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(111,209,180,.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(232,168,56,.10) 0%, transparent 50%),
+    linear-gradient(160deg, #1b2a22 0%, #16201b 100%);
+}
+html[data-theme="dark"] .hero-tag { background: rgba(111,209,180,.14); color: #8fd0c8; border-color: rgba(111,209,180,.3); }
+html[data-theme="dark"] .calc-chip-item { background: #262b27 !important; }
+html[data-theme="dark"] .calc-chip-select { color: #e8f0e9 !important; }
+html[data-theme="dark"] .calc-chip-select option { background: #262b27; color: #e8f0e9; }
+html[data-theme="dark"] .calc-result-box { background: linear-gradient(135deg, #2f5a45, #1f3a2e) !important; }
+html[data-theme="dark"] .power-feature-title-teal { color: #6fd1b4 !important; }
+html[data-theme="dark"] .power-feature-title-coral { color: #f2a085 !important; }
+html[data-theme="dark"] .hybrid-badge { color: #f0c36b !important; }
