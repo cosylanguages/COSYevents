@@ -20,6 +20,16 @@
 
   var root = rootPrefix();
 
+  // Background music inside speaking clubs (see shared/js/club-music.js; it gates itself by path).
+  (function loadClubMusic() {
+    if (!/speaking-clubs|i-couldnt-help-but-wonder|keeping-up-with-science|lets-celebrate|the-greatest-quotes|mind-matters|my-life-with-without|debatable-relatable|if-you-were|long-reads|premium-events\/clubs\//.test(window.location.pathname)) return;
+    if (window.COSYClubMusic || document.querySelector('script[data-cosy-club-music]')) return;
+    var s = document.createElement('script');
+    s.setAttribute('src', root + 'shared/js/club-music.js');
+    s.setAttribute('data-cosy-club-music', '');
+    document.head.appendChild(s);
+  })();
+
   // Inject favicon, apple-touch-icon, manifest, and theme-color into head if missing
   (function injectHeadAssets() {
     if (!document.querySelector('link[rel="icon"]')) {
