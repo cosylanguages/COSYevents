@@ -9,6 +9,7 @@
  * uploads session material to Supabase or another database.
  */
 const fs = require('node:fs');
+const { stampHtml } = require('./lib/cms_stamp');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 
@@ -230,7 +231,7 @@ async function main() {
   fs.mkdirSync(sessionDir, { recursive: true });
   fs.mkdirSync(pageDir, { recursive: true });
   fs.writeFileSync(jsonPath, JSON.stringify(session, null, 2) + '\n', 'utf8');
-  fs.writeFileSync(htmlPath, renderSessionPage(session, club, event), 'utf8');
+  fs.writeFileSync(htmlPath, stampHtml(renderSessionPage(session, club, event)).html, 'utf8');
 
   catalog.push({
     title: `${session.title} : COSYlanguages`,

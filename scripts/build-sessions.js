@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { stampHtml } = require('./lib/cms_stamp');
 const path = require('path');
 const yaml = require('js-yaml');
 
@@ -681,7 +682,7 @@ function buildSessionsForClub(clubSlug, isGated = false) {
       const htmlContent = isGated
         ? generateGatedSessionHtml(data, clubSlug, sid)
         : generateSessionHtml(data, clubSlug, slug);
-      fs.writeFileSync(htmlPath, htmlContent, 'utf8');
+      fs.writeFileSync(htmlPath, stampHtml(htmlContent).html, 'utf8');
       console.log(`[Generated] ${htmlPath}`);
 
       updateCatalog(clubSlug, slug, data);
