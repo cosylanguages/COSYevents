@@ -86,7 +86,6 @@ console.log('Test 3: Verifying rendering, localization and escaping...');
 const sample = {
   id: 'x',
   club: 'keeping-up-with-science',
-  club_name: 'Keeping Up with Science',
   author: 'O\'Brien',
   language: 'English',
   level: 'C1',
@@ -140,7 +139,7 @@ assert.strictEqual(sanitizeHtml(null), '');
 assert.strictEqual(clubLabel({ club: 'mind-matters' }), 'Mind Matters');
 assert.strictEqual(clubLabel({ club: 'mind-matters' }, 'fr'), 'Mind Matters');
 assert.strictEqual(clubLabel({ club: 'cinema-club' }, 'ru'), 'Киноклуб', 'club names follow the site language');
-assert.strictEqual(clubLabel({ club: 'unknown-club', club_name: 'Custom Name' }), 'Custom Name');
+assert.strictEqual(clubLabel({ club: 'unknown-club' }), 'Unknown Club', 'unknown slugs humanize');
 assert.strictEqual(localized({ author: 'A', text: 'T' }, 'fr').text, 'T', 'falls back to top-level text');
 assert.strictEqual(localized({ author: 'A', text: 'T', i18n: { fr: { text: 'FR' } } }, 'fr').text, 'FR');
 assert(stars(0).includes('is-on') === false, 'zero rating should have no filled stars');
@@ -262,5 +261,45 @@ assert(
   'reviewsForMount must return every review'
 );
 console.log(`  PASS: All ${data.reviews.length} reviews render together in all ${LANGS.length} languages.\n`);
+
+// Test 10: Ordering — newest first, featured floats to the top of its year, stable ties
+console.log('Test 10: Verifying review ordering...');
+const {
+  sortReviews
+} = require('../shared/js/club-reviews.js');
+const orderSample = [
+  { id: 'old', club: 'c', date: '2024', featured: false },
+  { id: 'new', club: 'c', date: '2026', featured: false },
+  { id: 'mid', club: 'c', date: '2025', featured: false },
+  { id: 'feat', club: 'c', date: '2026', featured: true },
+  { id: 'tie-a', club: 'c', date: '2025', featured: false },
+  { id: 'tie-b', club: 'c', date: '2025', featured: false }
+];
+assert.deepStrictEqual(
+  sortReviews(orderSample).map(r => r.id),
+  ['feat', 'new', 'mid', 'tie-a', 'tie-b', 'old'],
+  'featured first, then newest year, ties keep file order'
+);
+assert.deepStrictEqual(
+  reviewsForMount(orderSample).map(r => r.id),
+  ['feat', 'new', 'mid', 'tie-a', 'tie-b', 'old'],
+  'reviewsForMount returns reviews in sorted order'
+);
+assert.deepStrictEqual(
+  sortReviews(orderSample).map(r => r.id).sort(),
+  orderSample.map(r => r.id).sort(),
+  'sorting never drops or duplicates a review'
+);
+console.log('  PASS: Reviews order newest-first with featured first and stable ties.\n');
+
+// Test 11: Data file omits the redundant club_name (CLUB_LABELS is the source of truth)
+console.log('Test 11: Verifying club_name is not duplicated in the data file...');
+for (const review of data.reviews) {
+  assert(
+    !('club_name' in review),
+    `${review.id}: drop club_name — the display name comes from CLUB_LABELS`
+  );
+}
+console.log('  PASS: No redundant club_name in the data file.\n');
 
 console.log('🎉 All Club Reviews tests passed successfully!');

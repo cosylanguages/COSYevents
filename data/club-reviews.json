@@ -4,7 +4,6 @@
     {
       "id": "cr-inter-002",
       "club": "intermediate-speaking-club",
-      "club_name": "English Speaking Club",
       "author": "Yana",
       "language": "English",
       "level": "B1",
@@ -28,139 +27,8 @@
       }
     },
     {
-      "id": "cr-inter-003",
-      "club": "intermediate-speaking-club",
-      "club_name": "English Speaking Club",
-      "author": "Elena",
-      "language": "English",
-      "level": "B1",
-      "rating": 5,
-      "date": "2026",
-      "featured": false,
-      "text": "I just wanted to share how much I enjoy your conversation classes. You have a real talent for making learning feel effortless and engaging. Your classes are always lively, relaxed, and full of meaningful interaction, making you forget you’re actually learning and simply enjoy the conversation. It’s a wonderful combination of expertise, enthusiasm, and an ability to bring people into the learning process. I think that’s a truly special quality. Thank you for your time and dedication!",
-      "i18n": {
-        "fr": {
-          "text": "Je voulais simplement partager à quel point j'apprécie vos cours de conversation. Vous avez un vrai talent pour rendre l'apprentissage naturel et captivant. Vos cours sont toujours vivants, détendus et riches d'interactions significatives : on oublie qu'on apprend et on profite simplement de la conversation. C'est une merveilleuse combinaison d'expertise, d'enthousiasme et de capacité à faire participer les gens au processus d'apprentissage. Je pense que c'est une qualité vraiment spéciale. Merci pour votre temps et votre dévouement !"
-        },
-        "it": {
-          "text": "Volevo solo condividere quanto apprezzo le tue lezioni di conversazione. Hai un vero talento nel rendere l'apprendimento naturale e coinvolgente. Le tue lezioni sono sempre vivaci, rilassate e piene di interazioni significative: ti dimentichi che stai imparando e ti godi semplicemente la conversazione. È una meravigliosa combinazione di competenza, entusiasmo e capacità di coinvolgere le persone nel processo di apprendimento. Penso che sia una qualità davvero speciale. Grazie per il tuo tempo e la tua dedizione!"
-        },
-        "ru": {
-          "text": "Я просто хотела поделиться тем, как сильно мне нравятся ваши разговорные занятия. У вас настоящий талант делать обучение лёгким и увлекательным. Занятия всегда живые, непринуждённые и полны содержательного общения — забываешь, что вообще учишься, и просто получаешь удовольствие от разговора. Это замечательное сочетание профессионализма, энтузиазма и умения вовлечь каждого в процесс обучения. Думаю, это по-настоящему редкое качество. Спасибо за ваше время и преданность делу!"
-        },
-        "el": {
-          "text": "Ήθελα απλώς να μοιραστώ πόσο πολύ απολαμβάνω τα μαθήματα συζήτησης. Έχεις πραγματικό ταλέντο να κάνεις τη μάθηση να μοιάζει αβίαστη και ενδιαφέρουσα. Τα μαθήματα είναι πάντα ζωντανά, χαλαρά και γεμάτα ουσιαστική αλληλεπίδραση: ξεχνάς ότι μαθαίνεις και απλώς απολαμβάνεις τη συζήτηση. Είναι ένας υπέροχος συνδυασμός γνώσης, ενθουσιασμού και ικανότητας να βάζεις τους ανθρώπους στη διαδικασία της μάθησης. Νομίζω ότι αυτό είναι ένα πραγματικά ξεχωριστό χαρακτηριστικό. Ευχαριστώ για τον χρόνο και την αφοσίωσή σου!"
-        }
-      }
-    },
-    {
-      "id": "cr-inter-004",
-      "club": "intermediate-speaking-club",
-      "club_name": "English Speaking Club",
-      "author": "Lyubov",
-      "language": "English",
-      "level": "B1",
-      "rating": 5,
-      "date": "2026",
-      "featured": false,
-      "text": "I really like speaking clubs hosted by JY DM. To me, JY DM is such an intelligent, educated and cultured teacher and host. His personal clubs with unpredictable psychological topics are always interesting. I appreciate the way JY DM treats students. There is respect, a willingness to discuss things, help, and good advice there.",
-      "i18n": {
-        "fr": {
-          "text": "J'aime beaucoup les clubs de conversation animés par JY DM. Pour moi, JY DM est un professeur et un animateur intelligent, cultivé et raffiné. Ses clubs personnels aux sujets psychologiques imprévisibles sont toujours intéressants. J'apprécie la façon dont JY DM traite les étudiants : il y a du respect, l'envie de discuter, de l'aide et de bons conseils."
-        },
-        "it": {
-          "text": "Mi piacciono molto i club di conversazione condotti da JY DM. Per me JY DM è un insegnante e un conduttore intelligente, colto e raffinato. I suoi club personali con argomenti psicologici imprevedibili sono sempre interessanti. Apprezzo il modo in cui JY DM tratta gli studenti: c'è rispetto, voglia di discutere, aiuto e buoni consigli."
-        },
-        "ru": {
-          "text": "Мне очень нравятся разговорные клубы, которые ведёт JY DM. Для меня JY DM — умный, образованный и культурный преподаватель и ведущий. Его личные клубы с непредсказуемыми психологическими темами всегда интересны. Мне нравится, как JY DM относится к студентам: там есть уважение, готовность обсуждать, помощь и хорошие советы."
-        },
-        "el": {
-          "text": "Μου αρέσουν πολύ τα κλαμπ συζήτησης που διοργανώνει ο JY DM. Για μένα ο JY DM είναι ένας έξυπνος, μορφωμένος και καλλιεργημένος δάσκαλος και οικοδεσπότης. Τα προσωπικά του κλαμπ με απρόβλεπτα ψυχολογικά θέματα είναι πάντα ενδιαφέροντα. Εκτιμώ τον τρόπο που ο JY DM αντιμετωπίζει τους μαθητές: υπάρχει σεβασμός, διάθεση για συζήτηση, βοήθεια και καλές συμβουλές."
-        }
-      }
-    },
-    {
-      "id": "cr-inter-005",
-      "club": "intermediate-speaking-club",
-      "club_name": "English Speaking Club",
-      "author": "Max",
-      "language": "English",
-      "level": "B1",
-      "rating": 4,
-      "date": "2026",
-      "featured": false,
-      "text": "I have some thoughts to share. First of all, thanks for hosting speaking clubs on the platform and for being so supportive and kind to us English learners. Second, your detailed explanations of our mistakes and confusing moments are really helpful — especially when we work through them together. Third, it's really cool that we get plenty of time to speak. Honestly, your club format — a short warmup, a short break between rounds, and an error-correction section — is best in class, 10 out of 10.",
-      "i18n": {
-        "fr": {
-          "text": "J'ai quelques réflexions à partager. Tout d'abord, merci d'animer des clubs de conversation sur la plateforme et d'être si bienveillant et encourageant avec nous, apprenants d'anglais. Ensuite, vos explications détaillées de nos erreurs et de nos moments de confusion sont vraiment utiles — surtout quand nous les travaillons ensemble. Enfin, c'est vraiment génial d'avoir beaucoup de temps pour parler. Honnêtement, votre format de club — un court échauffement, une courte pause entre les tours et une partie de correction des erreurs — est le meilleur de sa catégorie, 10 sur 10."
-        },
-        "it": {
-          "text": "Ho qualche riflessione da condividere. Prima di tutto, grazie per organizzare i club di conversazione sulla piattaforma e per essere così disponibile e gentile con noi che impariamo l'inglese. In secondo luogo, le tue spiegazioni dettagliate dei nostri errori e dei momenti confusi sono davvero utili, soprattutto quando li affrontiamo insieme. In terzo luogo, è davvero bello avere molto tempo per parlare. Onestamente, il formato del tuo club — un breve riscaldamento, una breve pausa tra i turni e una parte di correzione degli errori — è il migliore della categoria, 10 su 10."
-        },
-        "ru": {
-          "text": "Хочу поделиться некоторыми мыслями. Во-первых, спасибо за то, что проводите разговорные клубы на платформе и так поддерживаете нас, изучающих английский. Во-вторых, ваши подробные объяснения наших ошибок и непонятных моментов действительно помогают — особенно когда мы разбираем их вместе. В-третьих, здорово, что у нас много времени на разговор. Честно говоря, формат вашего клуба — короткая разминка, небольшая пауза между раундами и блок исправления ошибок — лучший в своём классе, 10 из 10."
-        },
-        "el": {
-          "text": "Έχω μερικές σκέψεις να μοιραστώ. Πρώτα απ' όλα, ευχαριστώ που διοργανώνεις κλαμπ συζήτησης στην πλατφόρμα και που είσαι τόσο υποστηρικτικός και ευγενικός μαζί μας που μαθαίνουμε αγγλικά. Δεύτερον, οι λεπτομερείς εξηγήσεις σου για τα λάθη και τις μπερδεμένες στιγμές μας είναι πραγματικά χρήσιμες — ειδικά όταν τις δουλεύουμε μαζί. Τρίτον, είναι πολύ ωραίο που έχουμε άφθονο χρόνο για να μιλάμε. Ειλικρινά, η μορφή του κλαμπ σου — ένα σύντομο ζέσταμα, ένα σύντομο διάλειμμα ανάμεσα στους γύρους και ένα μέρος διόρθωσης λαθών — είναι η καλύτερη στην κατηγορία της, 10 στα 10."
-        }
-      }
-    },
-    {
-      "id": "cr-fr-001",
-      "club": "french-speaking-club",
-      "club_name": "French Speaking Club",
-      "author": "Andrei",
-      "language": "French",
-      "level": "B1",
-      "rating": 5,
-      "date": "2026",
-      "featured": false,
-      "text": "You are a wonderful teacher, I really appreciate your classes.",
-      "i18n": {
-        "fr": {
-          "text": "Vous êtes un professeur formidable, j'apprécie beaucoup vos cours."
-        },
-        "it": {
-          "text": "Sei un insegnante fantastico, apprezzo molto le tue lezioni."
-        },
-        "ru": {
-          "text": "Вы прекрасный преподаватель, мне очень нравятся ваши занятия."
-        },
-        "el": {
-          "text": "Είσαι υπέροχος δάσκαλος, εκτιμώ πολύ τα μαθήματά σου."
-        }
-      }
-    },
-    {
-      "id": "cr-fr-002",
-      "club": "french-speaking-club",
-      "club_name": "French Speaking Club",
-      "author": "Olga",
-      "language": "French",
-      "level": "A2",
-      "rating": 4,
-      "date": "2026",
-      "featured": false,
-      "text": "I am very happy to take part in the speaking clubs hosted by JY DM! The meetings are very effective. After a month of learning I can see real results: I have started speaking — yes, with mistakes, but I am gradually overcoming the language barrier. JY DM is a teacher with a wonderful sense of humour, which adds a certain lightness to learning the material. Very attentive to details: I get thorough answers to any question. A great atmosphere, genuine interest in every student's success and a visible dynamic in my progress — what could be nicer? That is exactly what I came to a speaking club for. Thank you, JY DM, and I wish you engaged and motivated students!",
-      "i18n": {
-        "fr": {
-          "text": "Je suis très heureuse de participer aux clubs de conversation animés par JY DM ! Les rencontres sont très efficaces. En un mois d'apprentissage, je vois un vrai résultat : j'ai commencé à parler — oui, avec des erreurs, mais je surmonte peu à peu la barrière de la langue. JY DM est un professeur avec un excellent sens de l'humour, ce qui apporte une certaine « légèreté » à l'apprentissage. Très attentif aux détails : j'obtiens des réponses complètes à chaque question. Une super ambiance, un intérêt sincère pour la réussite de chaque étudiant et une progression visible — que demander de plus ? C'est exactement pour cela que je suis venue dans un club de conversation. Merci, JY DM, et je vous souhaite des étudiants passionnés et motivés !"
-        },
-        "it": {
-          "text": "Sono molto felice di partecipare ai club di conversazione condotti da JY DM! Gli incontri sono molto efficaci. Dopo un mese di studio vedo risultati reali: ho iniziato a parlare — sì, con errori, ma supero gradualmente la barriera linguistica. JY DM è un insegnante con un ottimo senso dell'umorismo, che dà una certa «leggerezza» all'apprendimento. Molto attento ai dettagli: a ogni domanda ricevo risposte esaurienti. Un'atmosfera fantastica, interesse sincero per il successo di ogni studente e un progresso evidente — cosa c'è di più bello? È proprio per questo che sono arrivata al club di conversazione. Grazie, JY DM, e ti auguro studenti appassionati e motivati!"
-        },
-        "ru": {
-          "text": "Я очень рада участвовать в разговорных клубах, которые проводит JY DM! Встречи проходят очень эффективно. За месяц обучения я вижу реальный результат: я начала говорить, да, с ошибками, но постепенно преодолеваю языковой барьер. JY DM — преподаватель с прекрасным чувством юмора, что добавляет «лёгкости» в усвоении материала. Очень внимателен к деталям, на любой вопрос я получаю исчерпывающие ответы. Классная атмосфера, заинтересованность в успехе каждого студента и заметная динамика моего прогресса — что может быть приятнее? Именно за этим я пришла в разговорный клуб. Благодарю JY DM и желаю увлечённых и замотивированных студентов!"
-        },
-        "el": {
-          "text": "Χαίρομαι πολύ που συμμετέχω στα κλαμπ συζήτησης που διοργανώνει ο JY DM! Οι συναντήσεις είναι πολύ αποτελεσματικές. Σε έναν μήνα μάθησης βλέπω πραγματικό αποτέλεσμα: άρχισα να μιλάω — ναι, με λάθη, αλλά σταδιακά ξεπερνώ το γλωσσικό εμπόδιο. Ο JY DM είναι δάσκαλος με υπέροχο αίσθημα του χιούμορ, που προσθέτει μια «ελαφρότητα» στην εκμάθηση. Πολύ προσεκτικός στις λεπτομέρειες: σε κάθε ερώτηση παίρνω πλήρεις απαντήσεις. Υπέροχη ατμόσφαιρα, ειλικρινές ενδιαφέρον για την επιτυχία κάθε μαθητή και αισθητή πρόοδος — τι πιο ευχάριστο; Γι' αυτό ακριβώς ήρθα στο κλαμπ συζήτησης. Ευχαριστώ, JY DM, και σου εύχομαι μαθητές με πάθος και κίνητρα!"
-        }
-      }
-    },
-    {
       "id": "cr-basic-001",
       "club": "basic-speaking-club",
-      "club_name": "English Speaking Club",
       "author": "Arkadii",
       "language": "English",
       "level": "A1",
@@ -186,7 +54,6 @@
     {
       "id": "cr-inter-006",
       "club": "intermediate-speaking-club",
-      "club_name": "English Speaking Club",
       "author": "Victoria",
       "language": "English",
       "level": "B1",
@@ -206,6 +73,131 @@
         },
         "el": {
           "text": "Απολαμβάνω πραγματικά τα κλαμπ σου — έχω δοκιμάσει πολλά και τελικά κατέληξα στα δικά σου.\n\nΕίσαι πολύ ευγενικός και ανοιχτός στην επικοινωνία (ακόμα και όταν ο επισκέπτης είναι λίγο περίεργος), αλλά δεν χάνεις ποτέ τη λάμψη σου και το δικό σου «slay vibe». Μου αρέσει αυτό σε σένα, και νομίζω ότι γι' αυτό έμεινα.\n\nΜου αρέσουν επίσης η μορφή και τα θέματα — είναι πραγματικά ενδιαφέροντα. Θα μιλούσα με τους φίλους μου για τέτοια πράγματα.\n\nΕυχαριστώ για τη δουλειά σου! Καλή εβδομάδα και ελπίζω να σε δω τη Δευτέρα!"
+        }
+      }
+    },
+    {
+      "id": "cr-inter-003",
+      "club": "intermediate-speaking-club",
+      "author": "Elena",
+      "language": "English",
+      "level": "B1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "I just wanted to share how much I enjoy your conversation classes. You have a real talent for making learning feel effortless and engaging. Your classes are always lively, relaxed, and full of meaningful interaction, making you forget you’re actually learning and simply enjoy the conversation. It’s a wonderful combination of expertise, enthusiasm, and an ability to bring people into the learning process. I think that’s a truly special quality. Thank you for your time and dedication!",
+      "i18n": {
+        "fr": {
+          "text": "Je voulais simplement partager à quel point j'apprécie vos cours de conversation. Vous avez un vrai talent pour rendre l'apprentissage naturel et captivant. Vos cours sont toujours vivants, détendus et riches d'interactions significatives : on oublie qu'on apprend et on profite simplement de la conversation. C'est une merveilleuse combinaison d'expertise, d'enthousiasme et de capacité à faire participer les gens au processus d'apprentissage. Je pense que c'est une qualité vraiment spéciale. Merci pour votre temps et votre dévouement !"
+        },
+        "it": {
+          "text": "Volevo solo condividere quanto apprezzo le tue lezioni di conversazione. Hai un vero talento nel rendere l'apprendimento naturale e coinvolgente. Le tue lezioni sono sempre vivaci, rilassate e piene di interazioni significative: ti dimentichi che stai imparando e ti godi semplicemente la conversazione. È una meravigliosa combinazione di competenza, entusiasmo e capacità di coinvolgere le persone nel processo di apprendimento. Penso che sia una qualità davvero speciale. Grazie per il tuo tempo e la tua dedizione!"
+        },
+        "ru": {
+          "text": "Я просто хотела поделиться тем, как сильно мне нравятся ваши разговорные занятия. У вас настоящий талант делать обучение лёгким и увлекательным. Занятия всегда живые, непринуждённые и полны содержательного общения — забываешь, что вообще учишься, и просто получаешь удовольствие от разговора. Это замечательное сочетание профессионализма, энтузиазма и умения вовлечь каждого в процесс обучения. Думаю, это по-настоящему редкое качество. Спасибо за ваше время и преданность делу!"
+        },
+        "el": {
+          "text": "Ήθελα απλώς να μοιραστώ πόσο πολύ απολαμβάνω τα μαθήματα συζήτησης. Έχεις πραγματικό ταλέντο να κάνεις τη μάθηση να μοιάζει αβίαστη και ενδιαφέρουσα. Τα μαθήματα είναι πάντα ζωντανά, χαλαρά και γεμάτα ουσιαστική αλληλεπίδραση: ξεχνάς ότι μαθαίνεις και απλώς απολαμβάνεις τη συζήτηση. Είναι ένας υπέροχος συνδυασμός γνώσης, ενθουσιασμού και ικανότητας να βάζεις τους ανθρώπους στη διαδικασία της μάθησης. Νομίζω ότι αυτό είναι ένα πραγματικά ξεχωριστό χαρακτηριστικό. Ευχαριστώ για τον χρόνο και την αφοσίωσή σου!"
+        }
+      }
+    },
+    {
+      "id": "cr-inter-004",
+      "club": "intermediate-speaking-club",
+      "author": "Lyubov",
+      "language": "English",
+      "level": "B1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "I really like speaking clubs hosted by JY DM. To me, JY DM is such an intelligent, educated and cultured teacher and host. His personal clubs with unpredictable psychological topics are always interesting. I appreciate the way JY DM treats students. There is respect, a willingness to discuss things, help, and good advice there.",
+      "i18n": {
+        "fr": {
+          "text": "J'aime beaucoup les clubs de conversation animés par JY DM. Pour moi, JY DM est un professeur et un animateur intelligent, cultivé et raffiné. Ses clubs personnels aux sujets psychologiques imprévisibles sont toujours intéressants. J'apprécie la façon dont JY DM traite les étudiants : il y a du respect, l'envie de discuter, de l'aide et de bons conseils."
+        },
+        "it": {
+          "text": "Mi piacciono molto i club di conversazione condotti da JY DM. Per me JY DM è un insegnante e un conduttore intelligente, colto e raffinato. I suoi club personali con argomenti psicologici imprevedibili sono sempre interessanti. Apprezzo il modo in cui JY DM tratta gli studenti: c'è rispetto, voglia di discutere, aiuto e buoni consigli."
+        },
+        "ru": {
+          "text": "Мне очень нравятся разговорные клубы, которые ведёт JY DM. Для меня JY DM — умный, образованный и культурный преподаватель и ведущий. Его личные клубы с непредсказуемыми психологическими темами всегда интересны. Мне нравится, как JY DM относится к студентам: там есть уважение, готовность обсуждать, помощь и хорошие советы."
+        },
+        "el": {
+          "text": "Μου αρέσουν πολύ τα κλαμπ συζήτησης που διοργανώνει ο JY DM. Για μένα ο JY DM είναι ένας έξυπνος, μορφωμένος και καλλιεργημένος δάσκαλος και οικοδεσπότης. Τα προσωπικά του κλαμπ με απρόβλεπτα ψυχολογικά θέματα είναι πάντα ενδιαφέροντα. Εκτιμώ τον τρόπο που ο JY DM αντιμετωπίζει τους μαθητές: υπάρχει σεβασμός, διάθεση για συζήτηση, βοήθεια και καλές συμβουλές."
+        }
+      }
+    },
+    {
+      "id": "cr-inter-005",
+      "club": "intermediate-speaking-club",
+      "author": "Max",
+      "language": "English",
+      "level": "B1",
+      "rating": 4,
+      "date": "2026",
+      "featured": false,
+      "text": "I have some thoughts to share. First of all, thanks for hosting speaking clubs on the platform and for being so supportive and kind to us English learners. Second, your detailed explanations of our mistakes and confusing moments are really helpful — especially when we work through them together. Third, it's really cool that we get plenty of time to speak. Honestly, your club format — a short warmup, a short break between rounds, and an error-correction section — is best in class, 10 out of 10.",
+      "i18n": {
+        "fr": {
+          "text": "J'ai quelques réflexions à partager. Tout d'abord, merci d'animer des clubs de conversation sur la plateforme et d'être si bienveillant et encourageant avec nous, apprenants d'anglais. Ensuite, vos explications détaillées de nos erreurs et de nos moments de confusion sont vraiment utiles — surtout quand nous les travaillons ensemble. Enfin, c'est vraiment génial d'avoir beaucoup de temps pour parler. Honnêtement, votre format de club — un court échauffement, une courte pause entre les tours et une partie de correction des erreurs — est le meilleur de sa catégorie, 10 sur 10."
+        },
+        "it": {
+          "text": "Ho qualche riflessione da condividere. Prima di tutto, grazie per organizzare i club di conversazione sulla piattaforma e per essere così disponibile e gentile con noi che impariamo l'inglese. In secondo luogo, le tue spiegazioni dettagliate dei nostri errori e dei momenti confusi sono davvero utili, soprattutto quando li affrontiamo insieme. In terzo luogo, è davvero bello avere molto tempo per parlare. Onestamente, il formato del tuo club — un breve riscaldamento, una breve pausa tra i turni e una parte di correzione degli errori — è il migliore della categoria, 10 su 10."
+        },
+        "ru": {
+          "text": "Хочу поделиться некоторыми мыслями. Во-первых, спасибо за то, что проводите разговорные клубы на платформе и так поддерживаете нас, изучающих английский. Во-вторых, ваши подробные объяснения наших ошибок и непонятных моментов действительно помогают — особенно когда мы разбираем их вместе. В-третьих, здорово, что у нас много времени на разговор. Честно говоря, формат вашего клуба — короткая разминка, небольшая пауза между раундами и блок исправления ошибок — лучший в своём классе, 10 из 10."
+        },
+        "el": {
+          "text": "Έχω μερικές σκέψεις να μοιραστώ. Πρώτα απ' όλα, ευχαριστώ που διοργανώνεις κλαμπ συζήτησης στην πλατφόρμα και που είσαι τόσο υποστηρικτικός και ευγενικός μαζί μας που μαθαίνουμε αγγλικά. Δεύτερον, οι λεπτομερείς εξηγήσεις σου για τα λάθη και τις μπερδεμένες στιγμές μας είναι πραγματικά χρήσιμες — ειδικά όταν τις δουλεύουμε μαζί. Τρίτον, είναι πολύ ωραίο που έχουμε άφθονο χρόνο για να μιλάμε. Ειλικρινά, η μορφή του κλαμπ σου — ένα σύντομο ζέσταμα, ένα σύντομο διάλειμμα ανάμεσα στους γύρους και ένα μέρος διόρθωσης λαθών — είναι η καλύτερη στην κατηγορία της, 10 στα 10."
+        }
+      }
+    },
+    {
+      "id": "cr-fr-001",
+      "club": "french-speaking-club",
+      "author": "Andrei",
+      "language": "French",
+      "level": "B1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "You are a wonderful teacher, I really appreciate your classes.",
+      "i18n": {
+        "fr": {
+          "text": "Vous êtes un professeur formidable, j'apprécie beaucoup vos cours."
+        },
+        "it": {
+          "text": "Sei un insegnante fantastico, apprezzo molto le tue lezioni."
+        },
+        "ru": {
+          "text": "Вы прекрасный преподаватель, мне очень нравятся ваши занятия."
+        },
+        "el": {
+          "text": "Είσαι υπέροχος δάσκαλος, εκτιμώ πολύ τα μαθήματά σου."
+        }
+      }
+    },
+    {
+      "id": "cr-fr-002",
+      "club": "french-speaking-club",
+      "author": "Olga",
+      "language": "French",
+      "level": "A2",
+      "rating": 4,
+      "date": "2026",
+      "featured": false,
+      "text": "I am very happy to take part in the speaking clubs hosted by JY DM! The meetings are very effective. After a month of learning I can see real results: I have started speaking — yes, with mistakes, but I am gradually overcoming the language barrier. JY DM is a teacher with a wonderful sense of humour, which adds a certain lightness to learning the material. Very attentive to details: I get thorough answers to any question. A great atmosphere, genuine interest in every student's success and a visible dynamic in my progress — what could be nicer? That is exactly what I came to a speaking club for. Thank you, JY DM, and I wish you engaged and motivated students!",
+      "i18n": {
+        "fr": {
+          "text": "Je suis très heureuse de participer aux clubs de conversation animés par JY DM ! Les rencontres sont très efficaces. En un mois d'apprentissage, je vois un vrai résultat : j'ai commencé à parler — oui, avec des erreurs, mais je surmonte peu à peu la barrière de la langue. JY DM est un professeur avec un excellent sens de l'humour, ce qui apporte une certaine « légèreté » à l'apprentissage. Très attentif aux détails : j'obtiens des réponses complètes à chaque question. Une super ambiance, un intérêt sincère pour la réussite de chaque étudiant et une progression visible — que demander de plus ? C'est exactement pour cela que je suis venue dans un club de conversation. Merci, JY DM, et je vous souhaite des étudiants passionnés et motivés !"
+        },
+        "it": {
+          "text": "Sono molto felice di partecipare ai club di conversazione condotti da JY DM! Gli incontri sono molto efficaci. Dopo un mese di studio vedo risultati reali: ho iniziato a parlare — sì, con errori, ma supero gradualmente la barriera linguistica. JY DM è un insegnante con un ottimo senso dell'umorismo, che dà una certa «leggerezza» all'apprendimento. Molto attento ai dettagli: a ogni domanda ricevo risposte esaurienti. Un'atmosfera fantastica, interesse sincero per il successo di ogni studente e un progresso evidente — cosa c'è di più bello? È proprio per questo che sono arrivata al club di conversazione. Grazie, JY DM, e ti auguro studenti appassionati e motivati!"
+        },
+        "ru": {
+          "text": "Я очень рада участвовать в разговорных клубах, которые проводит JY DM! Встречи проходят очень эффективно. За месяц обучения я вижу реальный результат: я начала говорить, да, с ошибками, но постепенно преодолеваю языковой барьер. JY DM — преподаватель с прекрасным чувством юмора, что добавляет «лёгкости» в усвоении материала. Очень внимателен к деталям, на любой вопрос я получаю исчерпывающие ответы. Классная атмосфера, заинтересованность в успехе каждого студента и заметная динамика моего прогресса — что может быть приятнее? Именно за этим я пришла в разговорный клуб. Благодарю JY DM и желаю увлечённых и замотивированных студентов!"
+        },
+        "el": {
+          "text": "Χαίρομαι πολύ που συμμετέχω στα κλαμπ συζήτησης που διοργανώνει ο JY DM! Οι συναντήσεις είναι πολύ αποτελεσματικές. Σε έναν μήνα μάθησης βλέπω πραγματικό αποτέλεσμα: άρχισα να μιλάω — ναι, με λάθη, αλλά σταδιακά ξεπερνώ το γλωσσικό εμπόδιο. Ο JY DM είναι δάσκαλος με υπέροχο αίσθημα του χιούμορ, που προσθέτει μια «ελαφρότητα» στην εκμάθηση. Πολύ προσεκτικός στις λεπτομέρειες: σε κάθε ερώτηση παίρνω πλήρεις απαντήσεις. Υπέροχη ατμόσφαιρα, ειλικρινές ενδιαφέρον για την επιτυχία κάθε μαθητή και αισθητή πρόοδος — τι πιο ευχάριστο; Γι' αυτό ακριβώς ήρθα στο κλαμπ συζήτησης. Ευχαριστώ, JY DM, και σου εύχομαι μαθητές με πάθος και κίνητρα!"
         }
       }
     }

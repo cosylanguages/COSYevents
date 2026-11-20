@@ -54,8 +54,8 @@
     }
   };
 
-  // Canonical display names, used when a review has no club_name. Speaking clubs are
-  // named by language; the level badge on the card carries the learner's level.
+  // Canonical display names, the single source of truth for club names. Speaking clubs
+  // are named by language; the level badge on the card carries the learner's level.
   var CLUB_LABELS = {
     'basic-speaking-club': 'English Speaking Club',
     'intermediate-speaking-club': 'English Speaking Club',
@@ -216,7 +216,6 @@
   function clubLabel(review, lang) {
     var dict = CLUB_LABELS_I18N[lang] || {};
     if (dict[review.club]) return dict[review.club];
-    if (review.club_name) return review.club_name;
     if (CLUB_LABELS[review.club]) return CLUB_LABELS[review.club];
     if (review.club) {
       return review.club.split('-').map(function (w) {
@@ -357,10 +356,26 @@
     goToSlide(0);
   }
 
+  // Reviews render newest first; `featured: true` floats to the top of its year. The sort is stable,
+  // so entries with the same year keep the order they have in the data file.
+  function sortReviews(reviews) {
+    return reviews.map(function (review, index) { return { review: review, index: index }; })
+      .sort(function (a, b) {
+        var fa = a.review.featured ? 1 : 0;
+        var fb = b.review.featured ? 1 : 0;
+        if (fa !== fb) return fb - fa;
+        var ya = parseInt(a.review.date, 10) || 0;
+        var yb = parseInt(b.review.date, 10) || 0;
+        if (ya !== yb) return yb - ya;
+        return a.index - b.index;
+      })
+      .map(function (entry) { return entry.review; });
+  }
+
   // All reviews live in one carousel. Every mount shows the whole set, so the
   // same reviews appear together wherever the component is placed.
   function reviewsForMount(reviews) {
-    return reviews;
+    return sortReviews(reviews);
   }
 
   // An optional wrapper marked `data-club-reviews-shell` is hidden along with the mount, so an empty
@@ -428,6 +443,7 @@
       clubLabel: clubLabel,
       localized: localized,
       reviewsForMount: reviewsForMount,
+      sortReviews: sortReviews,
       initClubReviews: initClubReviews,
       REVIEWS_I18N: REVIEWS_I18N,
       CLUB_LABELS: CLUB_LABELS,

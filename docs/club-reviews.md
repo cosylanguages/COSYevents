@@ -26,7 +26,6 @@ Open `data/club-reviews.json` and add an object to the `reviews` array:
 {
   "id": "cr-mind-002",
   "club": "mind-matters",
-  "club_name": "Mind Matters",
   "author": "Ines",
   "language": "English",
   "level": "B2",
@@ -47,9 +46,9 @@ Field rules (enforced by `npm run test-club-reviews`):
 
 - `id` — unique, any stable string.
 - `club` — must be one of the club slugs in `CLUB_LABELS` in
-  `shared/js/club-reviews.js` (for example `keeping-up-with-science`).
-- `club_name` — the English name, used as a fallback when a club has no entry in
-  `CLUB_LABELS_I18N`.
+  `shared/js/club-reviews.js` (for example `keeping-up-with-science`). The club
+  name shown under the quote is looked up from `CLUB_LABELS`, so no separate name
+  field is needed.
 - `author` — display name only; never a full legal name.
 - `level` — the learner's CEFR level, shown as a badge on the card.
 - `rating` — integer 1–5, shown as stars.
@@ -60,8 +59,17 @@ Field rules (enforced by `npm run test-club-reviews`):
   wholesale with the site language, so every review needs every language; a
   missing locale leaves an untranslated quote on a translated page. `author` can
   be localized too.
+- `featured` — optional. `true` floats the review above the others of its year.
 
-The `featured` flag is reserved for future ordering; it is not required.
+### Order
+
+Reviews render newest first by `date` (the year). A `featured: true` review is
+shown before the others of the same year. Entries that share a year keep the order
+they have in the data file, so you can hand-tune a tie by reordering the array.
+
+`club_name` was removed from the data file. `CLUB_LABELS` is the single source of
+truth for club names, so a separate name field could only ever drift out of sync;
+`npm run test-club-reviews` fails if one is reintroduced.
 
 ## Where it appears
 
