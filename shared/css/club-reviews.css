@@ -80,7 +80,7 @@
   background: linear-gradient(135deg, #1d3a2c, #0c2018);
   color: #ffffff;
   border-radius: 24px;
-  padding: 2.75rem 3rem 2.25rem;
+  padding: 2.75rem 3rem 3rem;
   width: 100%;
   position: relative;
   box-sizing: border-box;
@@ -122,6 +122,7 @@
   color: rgba(255, 255, 255, 0.95);
   margin: 0 auto;
   max-width: 640px;
+  white-space: pre-line;
 }
 
 .club-review-divider {
@@ -200,7 +201,7 @@
 
 @media (max-width: 680px) {
   .club-reviews-carousel-wrapper { gap: 0.25rem; }
-  .club-review-card-inner { padding: 2.25rem 1.5rem 2rem; }
+  .club-review-card-inner { padding: 2.25rem 1.5rem 2.75rem; }
   .club-review-text { font-size: 0.92rem; line-height: 1.6; }
   .club-review-quote-top { top: 0.75rem; left: 1rem; font-size: 2rem; }
   .club-review-quote-bottom { bottom: 0.75rem; right: 1rem; font-size: 2rem; }

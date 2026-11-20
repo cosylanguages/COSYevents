@@ -26,7 +26,6 @@ Open `data/club-reviews.json` and add an object to the `reviews` array:
 {
   "id": "cr-mind-002",
   "club": "mind-matters",
-  "club_name": "Mind Matters",
   "author": "Ines",
   "language": "English",
   "level": "B2",
@@ -47,19 +46,30 @@ Field rules (enforced by `npm run test-club-reviews`):
 
 - `id` — unique, any stable string.
 - `club` — must be one of the club slugs in `CLUB_LABELS` in
-  `shared/js/club-reviews.js` (for example `keeping-up-with-science`).
-- `club_name` — the English name, used as a fallback when a club has no entry in
-  `CLUB_LABELS_I18N`.
+  `shared/js/club-reviews.js` (for example `keeping-up-with-science`). The club
+  name shown under the quote is looked up from `CLUB_LABELS`, so no separate name
+  field is needed.
 - `author` — display name only; never a full legal name.
+- `level` — the learner's CEFR level, shown as a badge on the card.
 - `rating` — integer 1–5, shown as stars.
 - `date` — the year only (`YYYY`). Rendered as just the year; the month and day are not shown.
-- `text` — the English review. At least 20 characters.
+- `text` — the English review. At least 20 characters. Use `\n\n` between
+  paragraphs; the carousel preserves the line breaks.
 - `i18n` — **required for `fr`, `it`, `ru` and `el`.** The carousel switches
   wholesale with the site language, so every review needs every language; a
   missing locale leaves an untranslated quote on a translated page. `author` can
   be localized too.
+- `featured` — optional. `true` floats the review above the others of its year.
 
-The `featured` flag is reserved for future ordering; it is not required.
+### Order
+
+Reviews render newest first by `date` (the year). A `featured: true` review is
+shown before the others of the same year. Entries that share a year keep the order
+they have in the data file, so you can hand-tune a tie by reordering the array.
+
+`club_name` was removed from the data file. `CLUB_LABELS` is the single source of
+truth for club names, so a separate name field could only ever drift out of sync;
+`npm run test-club-reviews` fails if one is reintroduced.
 
 ## Where it appears
 
@@ -88,7 +98,12 @@ the site root, one level down (`fr/index.html`) or in a nested hub directory
 
 The interface (heading, sub-heading, share button) and the club names are
 translated for `en`, `fr`, `it`, `ru`, `el` in `REVIEWS_I18N` and
-`CLUB_LABELS_I18N` inside `shared/js/club-reviews.js`. Every review carries its
+`CLUB_LABELS_I18N` inside `shared/js/club-reviews.js`. Speaking clubs are named
+by language of instruction, not by level: `basic-speaking-club` and
+`intermediate-speaking-club` both read "English Speaking Club", and the
+`level` badge on the card carries the learner's level (A1, B1, …). This keeps
+the label meaningful on its own; the site pages keep their level-based names
+("Basic Speaking Club (A0–A1)"). Every review carries its
 own text in all five languages, so the carousel is fully translated as soon as
 the visitor picks a language. The review year is shown as-is (no localized month
 name).
