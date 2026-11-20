@@ -20,6 +20,7 @@
  * Without --update an existing session is never overwritten.
  */
 const fs = require('node:fs');
+const { stampHtml } = require('./lib/cms_stamp');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 
@@ -147,7 +148,7 @@ function publishSession({ root, studioSession, club, clubName, format, update = 
   fs.mkdirSync(path.dirname(jsonPath), { recursive: true });
   fs.mkdirSync(path.dirname(htmlPath), { recursive: true });
   fs.writeFileSync(jsonPath, JSON.stringify(session, null, 2) + '\n', 'utf8');
-  fs.writeFileSync(htmlPath, renderPublicPage({ root, session, clubSlug: club, clubName: resolved.club }), 'utf8');
+  fs.writeFileSync(htmlPath, stampHtml(renderPublicPage({ root, session, clubSlug: club, clubName: resolved.club })).html, 'utf8');
   fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 2) + '\n', 'utf8');
 
   if (validate) {

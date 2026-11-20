@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-console.log('=== RUNNING SSO AND FOUNDER CMS EDITOR UNIT TESTS ===\n');
+console.log('=== RUNNING SSO UNIT TESTS ===\n');
 
 function createMockElement(tagName) {
   const attrs = {};
@@ -257,13 +257,10 @@ global.document.body.appendChild = function (child) {
 
 // Load SSO and CMS editor modules
 require('../shared/js/auth-sso.js');
-require('../shared/js/cms-editor.js');
 
 const AuthSSO = global.window.AuthSSO;
-const CMSEditor = global.window.CMSEditor;
 
 assert.ok(AuthSSO, 'AuthSSO global should be defined');
-assert.ok(CMSEditor, 'CMSEditor global should be defined');
 
 // Test 1: Hash Parsing
 console.log('Test 1: AuthSSO Hash Parameters Parsing');
@@ -272,34 +269,10 @@ assert.strictEqual(parsed.access_token, 'a123');
 assert.strictEqual(parsed.refresh_token, 'r456');
 console.log('✔ AuthSSO Hash Parsing Passed.\n');
 
-// Test 2: Role Detection in CMSEditor
-console.log('Test 2: CMSEditor Role Detection');
-assert.strictEqual(CMSEditor.isAuthorizedRole('founder'), true);
-assert.strictEqual(CMSEditor.isAuthorizedRole('admin'), true);
-assert.strictEqual(CMSEditor.isAuthorizedRole('owner'), true);
-assert.strictEqual(CMSEditor.isAuthorizedRole('student'), false);
-assert.strictEqual(CMSEditor.isAuthorizedRole('teacher'), false);
-assert.strictEqual(CMSEditor.isAuthorizedRole(null), false);
-console.log('✔ CMSEditor Role Detection Passed.\n');
-
-// Test 3: Floating Founder CMS Toolbar Rendering
-console.log('Test 3: Floating Founder CMS Toolbar Rendering');
-global.window.COSY_USER = { role: 'founder' };
-CMSEditor.init();
+// The founder editor (shared/js/cms-editor.js) is tested in COSYstudio (packages/cms-editor/tests) and
+// pinned here by test_cms_editor_lock.js; page stamping is tested by test_cms_stamp.js.
 
 setTimeout(() => {
-  const toolbar = global.document.body.querySelector('#cosy-founder-cms-toolbar');
-  assert.ok(toolbar, 'Founder CMS toolbar should be rendered in body');
-
-  const editBtn = toolbar.querySelector('#cms-edit-btn');
-  const saveBtn = toolbar.querySelector('#cms-save-btn');
-
-  assert.ok(editBtn, 'Edit button should exist');
-  assert.ok(saveBtn, 'Save button should exist');
-  assert.strictEqual(editBtn.textContent.includes('Edit Page Content'), true);
-  assert.strictEqual(saveBtn.textContent.includes('Save & Publish Live'), true);
-  console.log('✔ Floating Founder CMS Toolbar Rendering Passed.\n');
-
   // Test 4: Assert Ecosystem Links Are Never Modified & Tokens in Hash Stripped and Ignored
   console.log('Test 4: Assert Ecosystem Links Unmodified & Tokens in Hash Stripped and Ignored');
 
@@ -329,51 +302,5 @@ setTimeout(() => {
   assert.ok(!resultingHref.includes('refresh_token'), 'Link href must not contain refresh_token');
   console.log('✔ No Ecosystem Link Modification Passed.\n');
 
-  // Test 5: CMS Renderer XSS Sanitization
-  console.log('Test 5: CMS Renderer XSS Sanitization');
-
-  // Key Validation Test
-  assert.strictEqual(CMSEditor.isValidOverrideKey('main-title'), true);
-  assert.strictEqual(CMSEditor.isValidOverrideKey('section_1'), true);
-  assert.strictEqual(CMSEditor.isValidOverrideKey('<script>'), false);
-  assert.strictEqual(CMSEditor.isValidOverrideKey('key with spaces'), false);
-  assert.strictEqual(CMSEditor.isValidOverrideKey('key;select*'), false);
-
-  // 1) <script>alert(1)</script> -> script removed
-  const payload1 = '<script>alert(1)</script>';
-  const clean1 = CMSEditor.sanitizeOverrideHtml(payload1);
-  assert.strictEqual(clean1.includes('<script>'), false, 'Scripts should be removed');
-  assert.strictEqual(clean1.includes('alert(1)'), false, 'Script contents should be removed');
-
-  // 2) <img src=x onerror=alert(1)> -> img and onerror removed
-  const payload2 = '<img src=x onerror=alert(1)>';
-  const clean2 = CMSEditor.sanitizeOverrideHtml(payload2);
-  assert.strictEqual(clean2.includes('onerror'), false, 'Event handlers should be removed');
-  assert.strictEqual(clean2.includes('<img'), false, 'Img tags should be removed');
-
-  // 3) <a href="javascript:alert(1)">x</a> -> javascript: href removed
-  const payload3 = '<a href="javascript:alert(1)">x</a>';
-  const clean3 = CMSEditor.sanitizeOverrideHtml(payload3);
-  assert.strictEqual(clean3.includes('javascript:'), false, 'javascript: href should be removed');
-
-  // 4) <iframe src="//evil.test"> -> iframe removed
-  const payload4 = '<iframe src="//evil.test">';
-  const clean4 = CMSEditor.sanitizeOverrideHtml(payload4);
-  assert.strictEqual(clean4.includes('<iframe'), false, 'iframe should be removed');
-
-  // 5) <svg onload=alert(1)> -> svg removed
-  const payload5 = '<svg onload=alert(1)>';
-  const clean5 = CMSEditor.sanitizeOverrideHtml(payload5);
-  assert.strictEqual(clean5.includes('<svg'), false, 'svg should be removed');
-  assert.strictEqual(clean5.includes('onload'), false, 'onload handler should be removed');
-
-  // 6) <a href="https://ok.test" target="_blank">x</a> -> safe link kept with rel="noopener noreferrer"
-  const payload6 = '<a href="https://ok.test" target="_blank">x</a>';
-  const clean6 = CMSEditor.sanitizeOverrideHtml(payload6);
-  assert.ok(clean6.includes('href="https://ok.test"'), 'Safe link href should be kept');
-  assert.ok(clean6.includes('rel="noopener noreferrer"'), 'rel="noopener noreferrer" must be added for target="_blank"');
-
-  console.log('✔ CMS Renderer XSS Sanitization Unit Tests Passed.\n');
-
-  console.log('=== ALL SSO AND CMSEDITOR UNIT TESTS PASSED SUCCESSFULLY! ===');
+  console.log('=== ALL SSO UNIT TESTS PASSED SUCCESSFULLY! ===');
 }, 50);

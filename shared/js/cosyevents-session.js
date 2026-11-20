@@ -60,7 +60,7 @@
     }
   })();
 
-  // Dynamically ensure cosyevents-lang.js, cosy-auth.js, auth-sso.js, and cms-editor.js are loaded
+  // Dynamically ensure cosyevents-lang.js, cosy-auth.js, auth-sso.js, and cms-boot.js (founder editor) are loaded
   if (!window.CosyLang && !document.querySelector('script[src*="cosyevents-lang.js"]')) {
     var langScript = document.createElement('script');
     langScript.src = root + 'shared/js/cosyevents-lang.js';
@@ -79,9 +79,9 @@
     ssoScript.defer = true;
     document.head.appendChild(ssoScript);
   }
-  if (!window.CMSEditor && !document.querySelector('script[src*="cms-editor.js"]')) {
+  if (!window.__cosyCmsBoot && !document.querySelector('script[src*="cms-boot.js"]')) {
     var cmsScript = document.createElement('script');
-    cmsScript.src = root + 'shared/js/cms-editor.js';
+    cmsScript.src = root + 'shared/js/cms-boot.js';
     cmsScript.defer = true;
     document.head.appendChild(cmsScript);
   }

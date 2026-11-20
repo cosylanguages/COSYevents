@@ -366,5 +366,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>`;
 
 html = html.substring(0, scriptStart) + newScript + html.substring(scriptEnd);
-fs.writeFileSync('keeping-up-with-science.html', html, 'utf8');
+fs.writeFileSync('keeping-up-with-science.html', require('./stamp_cms_ids').process('keeping-up-with-science.html', html).html, 'utf8');
 console.log('keeping-up-with-science.html rebuilt cleanly!');

@@ -1,0 +1,7 @@
+{
+  "source": "cosylanguages/COSYstudio",
+  "path": "packages/cms-editor/cms-editor.js",
+  "commit": "978cae9551b9be0247b74e55b43e58a256ff9561",
+  "sha256": "bd720792990aa0b46827a2e289a69a7806f6e53c83dfdad9db423dd75215b972",
+  "note": "cms-editor.js here must stay byte-identical to the COSYstudio copy at this commit. To update: copy the file from COSYstudio, then update commit and sha256."
+}
