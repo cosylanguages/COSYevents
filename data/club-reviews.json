@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19",
+  "updated_at": "2026-11-20",
   "reviews": [
     {
       "id": "cr-inter-002",
@@ -154,6 +154,58 @@
         },
         "el": {
           "text": "Χαίρομαι πολύ που συμμετέχω στα κλαμπ συζήτησης που διοργανώνει ο JY DM! Οι συναντήσεις είναι πολύ αποτελεσματικές. Σε έναν μήνα μάθησης βλέπω πραγματικό αποτέλεσμα: άρχισα να μιλάω — ναι, με λάθη, αλλά σταδιακά ξεπερνώ το γλωσσικό εμπόδιο. Ο JY DM είναι δάσκαλος με υπέροχο αίσθημα του χιούμορ, που προσθέτει μια «ελαφρότητα» στην εκμάθηση. Πολύ προσεκτικός στις λεπτομέρειες: σε κάθε ερώτηση παίρνω πλήρεις απαντήσεις. Υπέροχη ατμόσφαιρα, ειλικρινές ενδιαφέρον για την επιτυχία κάθε μαθητή και αισθητή πρόοδος — τι πιο ευχάριστο; Γι' αυτό ακριβώς ήρθα στο κλαμπ συζήτησης. Ευχαριστώ, JY DM, και σου εύχομαι μαθητές με πάθος και κίνητρα!"
+        }
+      }
+    },
+    {
+      "id": "cr-basic-001",
+      "club": "basic-speaking-club",
+      "club_name": "Basic Speaking Club",
+      "author": "Arkadii",
+      "language": "English",
+      "level": "A1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "I really enjoy our speaking clubs. They are very interesting and fun.\n\nI especially like that you always speak only English and explain everything in English too. I think this is very important when we learn a language. Sometimes it is not easy, but it helps us listen, understand and speak English better.\n\nYou always say: “Try, try, try!” This helps us not to be afraid of making mistakes and to keep learning.\n\nI feel comfortable when I speak English with other students. You are a very kind and friendly teacher. You always create a good atmosphere.\n\nThank you for your time, help and support! I am happy to be a part of your speaking clubs. 😊",
+      "i18n": {
+        "fr": {
+          "text": "J'aime beaucoup nos clubs de conversation. Ils sont très intéressants et amusants.\n\nJ'apprécie particulièrement que vous parliez toujours uniquement en anglais et que vous expliquiez tout en anglais aussi. Je pense que c'est très important quand on apprend une langue. Parfois ce n'est pas facile, mais cela nous aide à mieux écouter, comprendre et parler anglais.\n\nVous dites toujours : « Try, try, try ! » Cela nous aide à ne pas avoir peur de faire des erreurs et à continuer d'apprendre.\n\nJe me sens à l'aise quand je parle anglais avec les autres étudiants. Vous êtes un professeur très gentil et amical. Vous créez toujours une bonne ambiance.\n\nMerci pour votre temps, votre aide et votre soutien ! Je suis heureux de faire partie de vos clubs de conversation. 😊"
+        },
+        "it": {
+          "text": "Mi piacciono molto i nostri club di conversazione. Sono molto interessanti e divertenti.\n\nMi piace soprattutto che tu parli sempre solo in inglese e che spieghi tutto in inglese. Penso che sia molto importante quando impariamo una lingua. A volte non è facile, ma ci aiuta ad ascoltare, capire e parlare inglese meglio.\n\nDici sempre: «Try, try, try!» Questo ci aiuta a non avere paura di sbagliare e a continuare a imparare.\n\nMi sento a mio agio quando parlo inglese con gli altri studenti. Sei un insegnante molto gentile e amichevole. Crea sempre una bella atmosfera.\n\nGrazie per il tuo tempo, il tuo aiuto e il tuo sostegno! Sono felice di far parte dei tuoi club di conversazione. 😊"
+        },
+        "ru": {
+          "text": "Мне очень нравятся наши разговорные клубы. Они очень интересные и весёлые.\n\nОсобенно мне нравится, что вы всегда говорите только по-английски и всё объясняете тоже по-английски. Я думаю, это очень важно, когда мы учим язык. Иногда это непросто, но это помогает нам лучше слушать, понимать и говорить по-английски.\n\nВы всегда говорите: «Try, try, try!» Это помогает нам не бояться ошибок и продолжать учиться.\n\nЯ чувствую себя комфортно, когда говорю по-английски с другими студентами. Вы очень добрый и дружелюбный преподаватель. Вы всегда создаёте хорошую атмосферу.\n\nСпасибо за ваше время, помощь и поддержку! Я счастлив быть частью ваших разговорных клубов. 😊"
+        },
+        "el": {
+          "text": "Μου αρέσουν πολύ τα κλαμπ συζήτησης μας. Είναι πολύ ενδιαφέροντα και διασκεδαστικά.\n\nΜου αρέσει ιδιαίτερα που μιλάς πάντα μόνο αγγλικά και εξηγείς τα πάντα στα αγγλικά. Νομίζω ότι αυτό είναι πολύ σημαντικό όταν μαθαίνουμε μια γλώσσα. Μερικές φορές δεν είναι εύκολο, αλλά μας βοηθά να ακούμε, να καταλαβαίνουμε και να μιλάμε καλύτερα αγγλικά.\n\nΛες πάντα: «Try, try, try!» Αυτό μας βοηθά να μη φοβόμαστε τα λάθη και να συνεχίζουμε να μαθαίνουμε.\n\nΝιώθω άνετα όταν μιλάω αγγλικά με τους άλλους μαθητές. Είσαι πολύ ευγενικός και φιλικός δάσκαλος. Δημιουργείς πάντα μια ωραία ατμόσφαιρα.\n\nΕυχαριστώ για τον χρόνο, τη βοήθεια και τη στήριξή σου! Χαίρομαι που είμαι μέλος των κλαμπ συζήτησης σου. 😊"
+        }
+      }
+    },
+    {
+      "id": "cr-inter-006",
+      "club": "intermediate-speaking-club",
+      "club_name": "Intermediate Speaking Club",
+      "author": "Victoria",
+      "language": "English",
+      "level": "B1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "I do enjoy your clubs, I've visited multiple and at the end settled at yours.\n\nYou are very polite and open to communication (even when the guest is kinda weird), but never lose your sparkle and kind of a slay vibe of yours. I love that about you and I think that's what made me stay.\n\nAlso I do like the format and topics, they are really involving, I'd talk to my friends about things like that.\n\nThank you for your work! Have a great week and hopefully see you on Monday!",
+      "i18n": {
+        "fr": {
+          "text": "J'apprécie vraiment vos clubs — j'en ai essayé plusieurs et finalement je suis restée chez vous.\n\nVous êtes très poli et ouvert à la discussion (même quand l'invité est un peu bizarre), mais vous ne perdez jamais votre éclat ni votre « slay vibe ». J'adore ça chez vous, et je pense que c'est ce qui m'a fait rester.\n\nJ'aime aussi le format et les sujets : ils sont vraiment prenants. J'en parlerais volontiers avec mes amis.\n\nMerci pour votre travail ! Passez une excellente semaine et à lundi, j'espère !"
+        },
+        "it": {
+          "text": "Adoro davvero i tuoi club — ne ho provati diversi e alla fine sono rimasta con te.\n\nSei molto gentile e aperto al dialogo (anche quando l'ospite è un po' strano), ma non perdi mai la tua scintilla e quella tua «slay vibe». Mi piace questo di te, e penso che sia quello che mi ha fatto restare.\n\nMi piacciono anche il formato e gli argomenti: sono davvero coinvolgenti. Ne parlerei con i miei amici.\n\nGrazie per il tuo lavoro! Buona settimana e spero di vederti lunedì!"
+        },
+        "ru": {
+          "text": "Мне действительно нравятся ваши клубы — я пробовала разные, но в итоге остановилась на вашем.\n\nВы очень вежливы и открыты к общению (даже когда гость немного странный), но никогда не теряете свою искру и свой «slay vibe». Мне это в вас очень нравится, и думаю, именно поэтому я осталась.\n\nЕщё мне нравятся формат и темы — они действительно увлекают. Я бы с удовольствием обсуждала такие вещи с друзьями.\n\nСпасибо за вашу работу! Хорошей недели и, надеюсь, до встречи в понедельник!"
+        },
+        "el": {
+          "text": "Απολαμβάνω πραγματικά τα κλαμπ σου — έχω δοκιμάσει πολλά και τελικά κατέληξα στα δικά σου.\n\nΕίσαι πολύ ευγενικός και ανοιχτός στην επικοινωνία (ακόμα και όταν ο επισκέπτης είναι λίγο περίεργος), αλλά δεν χάνεις ποτέ τη λάμψη σου και το δικό σου «slay vibe». Μου αρέσει αυτό σε σένα, και νομίζω ότι γι' αυτό έμεινα.\n\nΜου αρέσουν επίσης η μορφή και τα θέματα — είναι πραγματικά ενδιαφέροντα. Θα μιλούσα με τους φίλους μου για τέτοια πράγματα.\n\nΕυχαριστώ για τη δουλειά σου! Καλή εβδομάδα και ελπίζω να σε δω τη Δευτέρα!"
         }
       }
     }

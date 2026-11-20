@@ -53,7 +53,8 @@ Field rules (enforced by `npm run test-club-reviews`):
 - `author` — display name only; never a full legal name.
 - `rating` — integer 1–5, shown as stars.
 - `date` — the year only (`YYYY`). Rendered as just the year; the month and day are not shown.
-- `text` — the English review. At least 20 characters.
+- `text` — the English review. At least 20 characters. Use `\n\n` between
+  paragraphs; the carousel preserves the line breaks.
 - `i18n` — **required for `fr`, `it`, `ru` and `el`.** The carousel switches
   wholesale with the site language, so every review needs every language; a
   missing locale leaves an untranslated quote on a translated page. `author` can
