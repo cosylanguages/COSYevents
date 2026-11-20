@@ -54,10 +54,11 @@
     }
   };
 
-  // Canonical display names, used when a review has no club_name.
+  // Canonical display names, used when a review has no club_name. Speaking clubs are
+  // named by language; the level badge on the card carries the learner's level.
   var CLUB_LABELS = {
-    'basic-speaking-club': 'Basic Speaking Club',
-    'intermediate-speaking-club': 'Intermediate Speaking Club',
+    'basic-speaking-club': 'English Speaking Club',
+    'intermediate-speaking-club': 'English Speaking Club',
     'french-speaking-club': 'French Speaking Club',
     'keeping-up-with-science': 'Keeping Up with Science',
     'lets-celebrate': "Let's Celebrate",
@@ -75,9 +76,9 @@
 
   var CLUB_LABELS_I18N = {
     fr: {
-      'basic-speaking-club': 'Club de conversation débutant',
-      'intermediate-speaking-club': 'Club de conversation intermédiaire',
-      'french-speaking-club': 'Club de conversation en français',
+      'basic-speaking-club': 'Club de conversation anglais',
+      'intermediate-speaking-club': 'Club de conversation anglais',
+      'french-speaking-club': 'Club de conversation français',
       'keeping-up-with-science': 'Keeping Up with Science',
       'lets-celebrate': "Let's Celebrate",
       'the-greatest-quotes': 'The Greatest Quotes',
@@ -92,8 +93,8 @@
       'game-evenings': 'Soirées jeux'
     },
     it: {
-      'basic-speaking-club': 'Club di conversazione base',
-      'intermediate-speaking-club': 'Club di conversazione intermedio',
+      'basic-speaking-club': 'Club di conversazione in inglese',
+      'intermediate-speaking-club': 'Club di conversazione in inglese',
       'french-speaking-club': 'Club di conversazione in francese',
       'keeping-up-with-science': 'Keeping Up with Science',
       'lets-celebrate': "Let's Celebrate",
@@ -109,8 +110,8 @@
       'game-evenings': 'Serate giochi'
     },
     ru: {
-      'basic-speaking-club': 'Базовый разговорный клуб',
-      'intermediate-speaking-club': 'Разговорный клуб среднего уровня',
+      'basic-speaking-club': 'Разговорный клуб английского',
+      'intermediate-speaking-club': 'Разговорный клуб английского',
       'french-speaking-club': 'Разговорный клуб французского',
       'keeping-up-with-science': 'Keeping Up with Science',
       'lets-celebrate': "Let's Celebrate",
@@ -126,8 +127,8 @@
       'game-evenings': 'Игровые вечера'
     },
     el: {
-      'basic-speaking-club': 'Κλαμπ συζήτησης αρχαρίων',
-      'intermediate-speaking-club': 'Κλαμπ συζήτησης μέσου επιπέδου',
+      'basic-speaking-club': 'Κλαμπ συζήτησης αγγλικών',
+      'intermediate-speaking-club': 'Κλαμπ συζήτησης αγγλικών',
       'french-speaking-club': 'Κλαμπ συζήτησης γαλλικών',
       'keeping-up-with-science': 'Keeping Up with Science',
       'lets-celebrate': "Let's Celebrate",

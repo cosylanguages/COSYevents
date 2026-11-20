@@ -51,6 +51,7 @@ Field rules (enforced by `npm run test-club-reviews`):
 - `club_name` — the English name, used as a fallback when a club has no entry in
   `CLUB_LABELS_I18N`.
 - `author` — display name only; never a full legal name.
+- `level` — the learner's CEFR level, shown as a badge on the card.
 - `rating` — integer 1–5, shown as stars.
 - `date` — the year only (`YYYY`). Rendered as just the year; the month and day are not shown.
 - `text` — the English review. At least 20 characters. Use `\n\n` between
@@ -89,7 +90,12 @@ the site root, one level down (`fr/index.html`) or in a nested hub directory
 
 The interface (heading, sub-heading, share button) and the club names are
 translated for `en`, `fr`, `it`, `ru`, `el` in `REVIEWS_I18N` and
-`CLUB_LABELS_I18N` inside `shared/js/club-reviews.js`. Every review carries its
+`CLUB_LABELS_I18N` inside `shared/js/club-reviews.js`. Speaking clubs are named
+by language of instruction, not by level: `basic-speaking-club` and
+`intermediate-speaking-club` both read "English Speaking Club", and the
+`level` badge on the card carries the learner's level (A1, B1, …). This keeps
+the label meaningful on its own; the site pages keep their level-based names
+("Basic Speaking Club (A0–A1)"). Every review carries its
 own text in all five languages, so the carousel is fully translated as soon as
 the visitor picks a language. The review year is shown as-is (no localized month
 name).

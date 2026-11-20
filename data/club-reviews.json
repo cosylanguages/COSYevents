@@ -4,7 +4,7 @@
     {
       "id": "cr-inter-002",
       "club": "intermediate-speaking-club",
-      "club_name": "Intermediate Speaking Club",
+      "club_name": "English Speaking Club",
       "author": "Yana",
       "language": "English",
       "level": "B1",
@@ -30,7 +30,7 @@
     {
       "id": "cr-inter-003",
       "club": "intermediate-speaking-club",
-      "club_name": "Intermediate Speaking Club",
+      "club_name": "English Speaking Club",
       "author": "Elena",
       "language": "English",
       "level": "B1",
@@ -56,7 +56,7 @@
     {
       "id": "cr-inter-004",
       "club": "intermediate-speaking-club",
-      "club_name": "Intermediate Speaking Club",
+      "club_name": "English Speaking Club",
       "author": "Lyubov",
       "language": "English",
       "level": "B1",
@@ -82,7 +82,7 @@
     {
       "id": "cr-inter-005",
       "club": "intermediate-speaking-club",
-      "club_name": "Intermediate Speaking Club",
+      "club_name": "English Speaking Club",
       "author": "Max",
       "language": "English",
       "level": "B1",
@@ -160,7 +160,7 @@
     {
       "id": "cr-basic-001",
       "club": "basic-speaking-club",
-      "club_name": "Basic Speaking Club",
+      "club_name": "English Speaking Club",
       "author": "Arkadii",
       "language": "English",
       "level": "A1",
@@ -186,7 +186,7 @@
     {
       "id": "cr-inter-006",
       "club": "intermediate-speaking-club",
-      "club_name": "Intermediate Speaking Club",
+      "club_name": "English Speaking Club",
       "author": "Victoria",
       "language": "English",
       "level": "B1",
