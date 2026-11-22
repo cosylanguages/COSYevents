@@ -1,142 +1,142 @@
 {
-  "updated_at": "2026-11-21T11:55:06.766Z",
-  "display_date": "November 21, 2026",
-  "day": 21,
+  "updated_at": "2026-11-22T12:10:02.457Z",
+  "display_date": "November 22, 2026",
+  "day": 22,
   "month": 11,
   "items": {
     "celebration": {
       "category": "celebration",
       "categoryTitle": "Holiday of the Day",
-      "title": "Armed Forces Day",
+      "title": "Good Spouses Day (いい夫婦の日) celebrates married couples in Japan.",
       "badge": "Celebration",
-      "description": "Armed Forces Day is annually observed in Bangladesh on 21 November, signifying formation of Bangladesh Armed Forces on the day in 1971, when the members of the Bangladesh Army, Navy and Air Force were officially unified under and launched joint operations against the Pakistan Armed Forces in the Bangladesh Liberation War. On 16 December 1971, the Pakistani Army of 93,000 surrendered to the joint forces of Bangladesh and India, ending the 9-month long Liberation War of Bangladesh.",
-      "details": "Armed Forces Day (Bangladesh)",
+      "description": "Good Spouses Day  is a celebration held in Japan every year on November 22nd. There is currently no official English name for the day and it has alternatively been called \"Good Couples Day\" or \"Good Husband and Wife Day\" in English.",
+      "details": "Good Spouses Day (いい夫婦の日) celebrates married couples in Japan.",
       "clubLink": "lets-celebrate.html",
       "clubName": "Let's Celebrate",
       "source": "International & Cultural Observances",
       "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
       "i18n": {
         "en": {
-          "title": "Armed Forces Day",
-          "description": "Armed Forces Day is annually observed in Bangladesh on 21 November, signifying formation of Bangladesh Armed Forces on the day in 1971, when the members of the Bangladesh Army, Navy and Air Force were officially unified under and launched joint operations against the Pakistan Armed Forces in the Bangladesh Liberation War. On 16 December 1971, the Pakistani Army of 93,000 surrendered to the joint forces of Bangladesh and India, ending the 9-month long Liberation War of Bangladesh."
+          "title": "Good Spouses Day (いい夫婦の日) celebrates married couples in Japan.",
+          "description": "Good Spouses Day  is a celebration held in Japan every year on November 22nd. There is currently no official English name for the day and it has alternatively been called \"Good Couples Day\" or \"Good Husband and Wife Day\" in English."
         },
         "fr": {
-          "title": "Jour des forces armées",
-          "description": "La Journée des forces armées est célébrée chaque année au Bangladesh le 21 novembre, en commémoration de la création des forces armées du Bangladesh le même jour en 1971, lorsque les membres de l'armée de terre, de la marine et de l'armée de l'air du Bangladesh ont été officiellement unifiés et ont lancé des opérations conjointes contre"
+          "title": "La Journée des bons époux (いい夫婦の日) célèbre les couples mariés au Japon.",
+          "description": "La Journée des bons époux  est une fête célébrée au Japon chaque année le 22 novembre. Il n'existe actuellement aucun nom officiel en anglais pour cette journée, qui a été alternativement appelée « Journée des bons couples » ou « Journée des bons maris et des bonnes épouses » en anglais."
         },
         "it": {
-          "title": "Giornata Forze armate",
-          "description": "La Giornata delle Forze Armate viene celebrata ogni anno in Bangladesh il 21 novembre, in ricordo della costituzione delle Forze Armate del Bangladesh avvenuta in quel giorno del 1971, quando i membri dell'Esercito, della Marina e dell'Aeronautica del Bangladesh furono ufficialmente unificati e diedero inizio a operazioni congiunte contro"
+          "title": "La Giornata dei buoni coniugi (いい夫婦の日) celebra le coppie sposate in Giappone.",
+          "description": "La Giornata dei buoni coniugi  è una festa che si celebra in Giappone ogni anno il 22 novembre. Attualmente non esiste un nome ufficiale in inglese per questa giornata, che è stata chiamata in alternativa \"Giornata delle buone coppie\" o \"Giornata del buon marito e della buona moglie\"."
         },
         "ru": {
-          "title": "Вооруженные силы",
-          "description": "День Вооруженных сил ежегодно отмечается в Бангладеш 21 ноября в ознаменование создания Вооруженных сил Бангладеш в этот день в 1971 году, когда военнослужащие Сухопутных войск, Военно-морского флота и Военно-воздушных сил Бангладеш были официально объединены и начали совместные операции против"
+          "title": "День хороших супругов (いい夫婦の日) — праздник, посвященный супружеским парам в Японии.",
+          "description": "День хороших супругов — это праздник, который отмечается в Японии ежегодно 22 ноября. В настоящее время у этого праздника нет официального названия на английском языке, и его неофициально называют «Днем хороших пар» или «Днем хороших мужей и жен»."
         },
         "el": {
-          "title": "Ένοπλες δυνάμεις",
-          "description": "Η Ημέρα των Ενόπλων Δυνάμεων εορτάζεται κάθε χρόνο στο Μπαγκλαντές στις 21 Νοεμβρίου, σηματοδοτώντας τη σύσταση των Ενόπλων Δυνάμεων του Μπαγκλαντές την ημέρα εκείνη του 1971, όταν τα μέλη του Στρατού Ξηράς, του Πολεμικού Ναυτικού και της Πολεμικής Αεροπορίας του Μπαγκλαντές ενώθηκαν επίσημα και ξεκίνησαν κοινές επιχειρήσεις κατά"
+          "title": "Η Ημέρα των Καλών Συζύγων (いい夫婦の日) τιμά τα παντρεμένα ζευγάρια στην Ιαπωνία.",
+          "description": "Η Ημέρα των Καλών Συζύγων  είναι μια γιορτή που πραγματοποιείται στην Ιαπωνία κάθε χρόνο στις 22 Νοεμβρίου. Προς το παρόν, δεν υπάρχει επίσημη αγγλική ονομασία για την ημέρα αυτή και, εναλλακτικά, έχει ονομαστεί στα αγγλικά «Ημέρα των Καλών Ζευγαριών» ή «Ημέρα των Καλών Συζύγων»."
         }
       }
     },
     "science": {
       "category": "science",
       "categoryTitle": "Today in Science",
-      "title": "Love Canal",
+      "title": "Wringer-washer",
       "year": "",
       "badge": "Research & Discovery",
-      "description": "(source) In 1968, Sheri Schroeder was born the third child to Karen Schroeder, who lived beside the Love Canal chemical dump in the city of Niagara Falls, New York. It was the physical problems of her daughter at birth that prompted her mother to learn about the extent of the Love Canal environmental problem. A vigorous campaign brought it to the public's attention. Sheri was born with a heart that beat irregularly and had a hole in it, bone blockages of the nose, partial deafness, deformed ear exteriors, and a cleft palate. From about the late 1930s, the Hooker Company, manufacturer of pesticides, plasticizers, and caustic soda, used the abandoned canal to dump over 20,000 tons of toxic waste residues which leaked into local homes. Love Canal: Science, Politics, and People, by Adeline Gordon Levine. - book suggestion.",
+      "description": "(source) In 1983, the last wringer-washer made in the U.S., a Master Model E was built by the Maytag Company, the last U.S. company to make hand-operated washers. Their Model E was introduced in 1939. Maytag's first washing machine product was the Pastime hand-powered wood tub. It was produced from late 1907 to 1908 under the \"Parsons\" manufacturer name used until about 1909 when the business adopted the Maytag Company name. In 1893, the founder, Fred L. Maytag, had joined three other men in Newton, Iowa, to manufacture farm implements. The change to domestic appliances solved the seasonal sales slump. On 31 Mar 2006, Whirlpool Corporation, completed acquisition of the Maytag Company.[Image: Maytag Model E] Note: The date 12 Oct 1983 seen elsewhere on the internet is incorrect.",
       "clubLink": "keeping-up-with-science.html",
       "clubName": "Keeping Up with Science",
       "source": "Today in Science History",
-      "sourceUrl": "https://todayinsci.com/11/11_21.htm",
+      "sourceUrl": "https://todayinsci.com/11/11_22.htm",
       "i18n": {
         "en": {
-          "title": "Love Canal",
-          "description": "(source) In 1968, Sheri Schroeder was born the third child to Karen Schroeder, who lived beside the Love Canal chemical dump in the city of Niagara Falls, New York. It was the physical problems of her daughter at birth that prompted her mother to learn about the extent of the Love Canal environmental problem. A vigorous campaign brought it to the public's attention. Sheri was born with a heart that beat irregularly and had a hole in it, bone blockages of the nose, partial deafness, deformed ear exteriors, and a cleft palate. From about the late 1930s, the Hooker Company, manufacturer of pesticides, plasticizers, and caustic soda, used the abandoned canal to dump over 20,000 tons of toxic waste residues which leaked into local homes. Love Canal: Science, Politics, and People, by Adeline Gordon Levine. - book suggestion."
+          "title": "Wringer-washer",
+          "description": "(source) In 1983, the last wringer-washer made in the U.S., a Master Model E was built by the Maytag Company, the last U.S. company to make hand-operated washers. Their Model E was introduced in 1939. Maytag's first washing machine product was the Pastime hand-powered wood tub. It was produced from late 1907 to 1908 under the \"Parsons\" manufacturer name used until about 1909 when the business adopted the Maytag Company name. In 1893, the founder, Fred L. Maytag, had joined three other men in Newton, Iowa, to manufacture farm implements. The change to domestic appliances solved the seasonal sales slump. On 31 Mar 2006, Whirlpool Corporation, completed acquisition of the Maytag Company.[Image: Maytag Model E] Note: The date 12 Oct 1983 seen elsewhere on the internet is incorrect."
         },
         "fr": {
-          "title": "Love Canal",
-          "description": "(source) En 1968, Sheri Schroeder est née, troisième enfant de Karen Schroeder, qui vivait à côté de la décharge chimique de Love Canal, dans la ville de Niagara Falls, dans l’État de New York. Ce sont les problèmes physiques de sa fille à la naissance qui ont incité sa mère à se renseigner sur l'ampleur du problème de Love Canal."
+          "title": "Essoreuse-laveuse",
+          "description": "(source) En 1983, la dernière machine à laver à essoreuse fabriquée aux États-Unis, un modèle Master E, a été construite par la société Maytag, la dernière entreprise américaine à fabriquer des machines à laver manuelles. Leur modèle E a été lancé en 1939. Le premier lave-linge de Maytag était la cuve en bois à commande manuelle Pastime. I"
         },
         "it": {
-          "title": "Love Canal",
-          "description": "(fonte) Nel 1968, Sheri Schroeder nacque come terza figlia di Karen Schroeder, che viveva accanto alla discarica chimica di Love Canal nella città di Niagara Falls, nello Stato di New York. Furono i problemi fisici della figlia alla nascita a spingere la madre a informarsi sulla portata del problema della discarica di Love Canal."
+          "title": "Lavatrice con strizzatoio",
+          "description": "(fonte) Nel 1983, l'ultima lavatrice con strizzatoio prodotta negli Stati Uniti, un modello Master E, fu costruita dalla Maytag Company, l'ultima azienda statunitense a produrre lavatrici a comando manuale. Il loro modello E fu lanciato nel 1939. La prima lavatrice prodotta da Maytag fu la vasca in legno a comando manuale Pastime. I"
         },
         "ru": {
-          "title": "Лав-Канал",
-          "description": "(источник) В 1968 году Шери Шредер родилась третьим ребенком у Карен Шредер, которая жила рядом с химической свалкой «Лав-канал» в городе Ниагара-Фолс, штат Нью-Йорк. Именно физические проблемы дочери при рождении побудили ее мать узнать о масштабах проблемы в Лав-Кэнале."
+          "title": "Стиральная машина с отжимом",
+          "description": "(источник) В 1983 году компания Maytag, последняя американская компания, производившая стиральные машины с ручным управлением, выпустила последнюю стиральную машину с отжимом, произведенную в США, — модель Master Model E. Их модель E была представлена в 1939 году. Первой стиральной машиной Maytag стала деревянная модель Pastime с ручным приводом. I"
         },
         "el": {
-          "title": "Love Canal",
-          "description": "(πηγή) Το 1968, η Σέρι Σρόιντερ γεννήθηκε ως το τρίτο παιδί της Κάρεν Σρόιντερ, η οποία ζούσε δίπλα στη χημική χωματερή του Love Canal στην πόλη Νιαγάρα Φολς της Νέας Υόρκης. Ήταν τα σωματικά προβλήματα της κόρης της κατά τη γέννηση που ώθησαν τη μητέρα της να μάθει για την έκταση της μόλυνσης του Love Canal."
+          "title": "Πλυντήριο με στύπτηρα",
+          "description": "(πηγή) Το 1983, το τελευταίο πλυντήριο με στύπτηρα που κατασκευάστηκε στις ΗΠΑ, το Master Model E, κατασκευάστηκε από την εταιρεία Maytag, την τελευταία αμερικανική εταιρεία που κατασκεύαζε πλυντήρια με χειροκίνητη λειτουργία. Το μοντέλο E παρουσιάστηκε το 1939. Το πρώτο πλυντήριο ρούχων της Maytag ήταν το Pastime, ένας ξύλινος κάδος με χειροκίνητη λειτουργία. I"
         }
       }
     },
     "music": {
       "category": "music",
       "categoryTitle": "Today in Music",
-      "title": "Robert le diable",
-      "year": "1831",
+      "title": "La Perle Du Brésil",
+      "year": "1851",
       "badge": "Music History",
-      "description": "Giacomo Meyerbeer's opera \"Robert le diable\" (Robert the Devil) premieres at the Paris Opéra",
+      "description": "Opera \"La Perle Du Brésil\" is produced (Paris)",
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
       "sourceUrl": "https://www.onthisday.com/music/",
       "i18n": {
         "en": {
-          "title": "Robert le diable",
-          "description": "Giacomo Meyerbeer's opera \"Robert le diable\" (Robert the Devil) premieres at the Paris Opéra"
+          "title": "La Perle Du Brésil",
+          "description": "Opera \"La Perle Du Brésil\" is produced (Paris)"
         },
         "fr": {
-          "title": "Robert le Diable",
-          "description": "L'opéra « Robert le Diable » de Giacomo Meyerbeer est créé à l'Opéra de Paris"
+          "title": "La Perle du Brésil",
+          "description": "L'opéra « La Perle du Brésil » est produit (Paris)"
         },
         "it": {
-          "title": "Roberto il diavolo",
-          "description": "Va in scena l'opera \"Robert le diable\" (Roberto il diavolo) di Giacomo Meyerbeer all'Opéra di Parigi"
+          "title": "La Perle Du Brésil",
+          "description": "Viene prodotta l'opera \"La Perle Du Brésil\" (Parigi)"
         },
         "ru": {
-          "title": "Роберт-дьявол",
-          "description": "В Парижской опере состоялась премьера оперы Джакомо Мейербера «Роберт-дьявол» («Robert le diable»)"
+          "title": "La Perle Du Brésil",
+          "description": "Постановка оперы «Жемчужина Бразилии» (Париж)"
         },
         "el": {
-          "title": "Ο Ροβέρτος ο Διάβολος",
-          "description": "Πραγματοποιείται η πρεμιέρα της όπερας του Τζιάκομο Μεγέρμπερ «Robert le diable» (Ο Ρομπέρ ο Διάβολος) στην Όπερα του Παρισιού"
+          "title": "La Perle Du Brésil",
+          "description": "Παραγωγή της όπερας «La Perle Du Brésil» (Παρίσι)"
         }
       }
     },
     "film": {
       "category": "film",
       "categoryTitle": "Today in Film & TV",
-      "title": "The Last of the Mohicans",
-      "year": "1920",
+      "title": "Funny Face",
+      "year": "1927",
       "badge": "Cinema & Screen",
-      "description": "Silent film \"The Last of the Mohicans\" is releases, adapted from James Fenimore Cooper's novel, starring Wallace Beery and Barbara Bedford",
+      "description": "George Gershwin and Ira Gershwin's musical \"Funny Face\", starring Fred Astaire and his sister Adele Astaire, opens at the new Alvin Theatre, NYC; runs 244 performances",
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
       "sourceUrl": "https://www.onthisday.com/film-tv/",
       "i18n": {
         "en": {
-          "title": "The Last of the Mohicans",
-          "description": "Silent film \"The Last of the Mohicans\" is releases, adapted from James Fenimore Cooper's novel, starring Wallace Beery and Barbara Bedford"
+          "title": "Funny Face",
+          "description": "George Gershwin and Ira Gershwin's musical \"Funny Face\", starring Fred Astaire and his sister Adele Astaire, opens at the new Alvin Theatre, NYC; runs 244 performances"
         },
         "fr": {
-          "title": "Les frites de la blonde",
-          "description": "Sortie du film muet « Le Dernier des Mohicans », adapté du roman de James Fenimore Cooper, avec Wallace Beery et Barbara Bedford"
+          "title": "Drôle de tête",
+          "description": "La comédie musicale « Funny Face » de George Gershwin et Ira Gershwin, avec Fred Astaire et sa sœur Adele Astaire, est présentée pour la première fois au nouvel Alvin Theatre de New York ; elle est jouée 244 fois."
         },
         "it": {
-          "title": "L'ultimo dei Mohicani",
-          "description": "Esce il film muto \"L'ultimo dei Moicani\", adattamento del romanzo di James Fenimore Cooper, con Wallace Beery e Barbara Bedford"
+          "title": "Faccina buffa",
+          "description": "Il musical \"Funny Face\" di George Gershwin e Ira Gershwin, con Fred Astaire e sua sorella Adele Astaire, debutta al nuovo Alvin Theatre di New York; va in scena per 244 repliche."
         },
         "ru": {
-          "title": "Последний из могикан",
-          "description": "Выходит немой фильм «Последний из могикан» по роману Джеймса Фенимора Купера с Уоллесом Бири и Барбарой Бедфорд в главных ролях."
+          "title": "Смешное лицо",
+          "description": "В новом театре «Элвин» в Нью-Йорке состоялась премьера мюзикла Джорджа Гершвина и Айры Гершвина «Весёлое лицо» с участием Фреда Астера и его сестры Адель Астер. Мюзикл был показан 244 раза."
         },
         "el": {
-          "title": "Ο τελευταίος των Μοϊκανών",
-          "description": "Κυκλοφορεί η βωβή ταινία «Ο τελευταίος των Μοϊκανών», διασκευή του μυθιστορήματος του Τζέιμς Φένιμορ Κούπερ, με πρωταγωνιστές τους Γουάλας Μπίρι και Μπάρμπαρα Μπέντφορντ."
+          "title": "Αστείο πρόσωπο",
+          "description": "Το μιούζικαλ «Funny Face» των Τζορτζ Γκέρσουιν και Άιρα Γκέρσουιν, με πρωταγωνιστές τον Φρεντ Αστέρ και την αδελφή του Αντέλ Αστέρ, κάνει πρεμιέρα στο νέο θέατρο Alvin της Νέας Υόρκης. Παίζεται 244 παραστάσεις."
         }
       }
     }
