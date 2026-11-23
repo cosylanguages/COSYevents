@@ -3630,7 +3630,7 @@ vim-choice { margin-bottom: 1.5rem; }
 .session-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; background: var(--warm-white); padding: 2rem; border-radius: 24px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
 .meta-item h4 { font-size: 0.7rem; text-transform: uppercase; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 0.3rem; }
 .meta-item p { font-weight: 600; font-size: 1rem; margin: 0; }
-.meta-item a { color: var(--teal); text-decoration: none; }
+.meta-item a { color: var(--cosy-ink-sage, var(--teal)); text-decoration: none; }
 
 .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin: 3rem 0 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
 
@@ -6434,7 +6434,9 @@ body.theme-dark .session-jump-link.active {
 .session-meta-grid .meta-item h4 { color: #5f5e58; }
 :root[data-theme="dark"] .session-meta-grid, :root[data-theme="dark"] .session-meta-grid .meta-item,
 :root[data-theme="dark"] .session-meta-grid .meta-item p { color: #cdccca; }
-:root[data-theme="dark"] .session-meta-grid .meta-item h4 { color: #797876; }
+:root[data-theme="dark"] .session-meta-grid .meta-item h4 { color: #a9b3aa; }
+:root[data-theme="dark"] .session-meta-grid .meta-item a,
+:root[data-theme="dark"] .session-meta-grid .meta-item p a { color: var(--cosy-ink-sage, #8a9e8b); }
 
 /* ─── Session visual refinements ─── */
 
@@ -6670,7 +6672,7 @@ body.theme-dark .session-jump-link.active {
 }
 
 .cosy-gated-ecosystem-note a {
-  color: var(--cosy-event-accent, #B84318);
+  color: var(--cosy-event-accent-ink, #B84318);
   font-weight: 700;
   text-decoration: none;
 }

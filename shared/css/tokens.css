@@ -67,6 +67,8 @@
 
     /* ── 3. COSYevents Distinct Product Accent (Social Terracotta / Coral) */
     --cosy-event-accent:                 #B84318;
+    /* accent-as-text: same hue, lightened in dark mode so it stays readable */
+    --cosy-event-accent-ink:             #B84318;
     --cosy-event-accent-hover:           #993C1D;
     --cosy-event-accent-deep:            #6E2B15;
     --cosy-event-accent-light:           #FAEEE8;
@@ -378,8 +380,9 @@ html[data-theme="dark"], body.theme-dark {
     --cosy-color-sage-mist:              #1f2720;
     --cosy-color-sage-light:             #222c23;
 
-    --cosy-event-accent:                 #E05638;
-    --cosy-event-accent-hover:           #F06A4B;
+    --cosy-event-accent:                 #B84318;
+    --cosy-event-accent-ink:             #F08968;
+    --cosy-event-accent-hover:           #993C1D;
     --cosy-event-accent-deep:            #FAEEE8;
     --cosy-event-accent-light:           #2D1A15;
     --cosy-event-accent-mist:            #241511;

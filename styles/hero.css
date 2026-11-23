@@ -69,7 +69,7 @@
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
   background: var(--cosy-event-accent-light, #faeee8);
-  color: var(--cosy-event-accent, #b84318);
+  color: var(--cosy-event-accent-ink, #b84318);
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -85,7 +85,7 @@
   letter-spacing: -0.01em;
   color: var(--cosy-color-ink, #1c1917);
 }
-.ev-title em { font-style: italic; font-weight: 400; color: var(--cosy-event-accent, #b84318); }
+.ev-title em { font-style: italic; font-weight: 400; color: var(--cosy-event-accent-ink, #b84318); }
 
 .ev-sub {
   max-width: 34rem;
@@ -132,7 +132,7 @@
   text-decoration: none;
   border-bottom: 2px solid var(--cosy-event-accent, #b84318);
 }
-.ev-link:hover { color: var(--cosy-event-accent, #b84318); }
+.ev-link:hover { color: var(--cosy-event-accent-ink, #b84318); }
 
 .ev-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .ev-chip {
@@ -145,7 +145,7 @@
   font-weight: 700;
   text-decoration: none;
 }
-.ev-chip:hover { border-color: var(--cosy-event-accent, #b84318); color: var(--cosy-event-accent, #b84318); }
+.ev-chip:hover { border-color: var(--cosy-event-accent, #b84318); color: var(--cosy-event-accent-ink, #b84318); }
 
 /* Next-up card */
 .ev-next {
@@ -198,7 +198,7 @@
   padding: 0.3rem 0.4rem;
   border-radius: 10px;
   background: var(--cosy-event-accent-light, #faeee8);
-  color: var(--cosy-event-accent, #b84318);
+  color: var(--cosy-event-accent-ink, #b84318);
   line-height: 1.1;
 }
 .ev-next-date strong { font-size: 1.3rem; }
@@ -222,7 +222,7 @@
   color: var(--cosy-color-ink-soft, #4a4a4a);
   line-height: 1.5;
 }
-.ev-next-empty a { color: var(--cosy-event-accent, #b84318); font-weight: 800; }
+.ev-next-empty a { color: var(--cosy-event-accent-ink, #b84318); font-weight: 800; }
 .ev-next-foot {
   display: inline-block;
   margin-top: 0.9rem;
