@@ -1,142 +1,142 @@
 {
-  "updated_at": "2026-11-22T12:10:02.457Z",
-  "display_date": "November 22, 2026",
-  "day": 22,
+  "updated_at": "2026-11-23T13:53:35.959Z",
+  "display_date": "November 23, 2026",
+  "day": 23,
   "month": 11,
   "items": {
     "celebration": {
       "category": "celebration",
       "categoryTitle": "Holiday of the Day",
-      "title": "Good Spouses Day (いい夫婦の日) celebrates married couples in Japan.",
+      "title": "Labor Thanksgiving Day",
       "badge": "Celebration",
-      "description": "Good Spouses Day  is a celebration held in Japan every year on November 22nd. There is currently no official English name for the day and it has alternatively been called \"Good Couples Day\" or \"Good Husband and Wife Day\" in English.",
-      "details": "Good Spouses Day (いい夫婦の日) celebrates married couples in Japan.",
+      "description": "Labor Thanksgiving Day  is an annual public holiday in Japan celebrated on November 23 of each year, unless that day falls on a Sunday, in which case the holiday is moved to Monday.\nThe law establishing the holiday cites it as an occasion to respect labor, to celebrate production, and for citizens to give each other thanks.",
+      "details": "Labor Thanksgiving Day (Japan)",
       "clubLink": "lets-celebrate.html",
       "clubName": "Let's Celebrate",
       "source": "International & Cultural Observances",
       "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
       "i18n": {
         "en": {
-          "title": "Good Spouses Day (いい夫婦の日) celebrates married couples in Japan.",
-          "description": "Good Spouses Day  is a celebration held in Japan every year on November 22nd. There is currently no official English name for the day and it has alternatively been called \"Good Couples Day\" or \"Good Husband and Wife Day\" in English."
+          "title": "Labor Thanksgiving Day",
+          "description": "Labor Thanksgiving Day  is an annual public holiday in Japan celebrated on November 23 of each year, unless that day falls on a Sunday, in which case the holiday is moved to Monday.\nThe law establishing the holiday cites it as an occasion to respect labor, to celebrate production, and for citizens to give each other thanks."
         },
         "fr": {
-          "title": "La Journée des bons époux (いい夫婦の日) célèbre les couples mariés au Japon.",
-          "description": "La Journée des bons époux  est une fête célébrée au Japon chaque année le 22 novembre. Il n'existe actuellement aucun nom officiel en anglais pour cette journée, qui a été alternativement appelée « Journée des bons couples » ou « Journée des bons maris et des bonnes épouses » en anglais."
+          "title": "Action de grâce du travail",
+          "description": "Le Jour de Thanksgiving du travail  est un jour férié annuel au Japon, célébré le 23 novembre de chaque année, sauf si ce jour tombe un dimanche, auquel cas le jour férié est reporté au lundi.\nLa loi instituant ce jour férié le présente comme une occasion de rendre hommage au travail, de"
         },
         "it": {
-          "title": "La Giornata dei buoni coniugi (いい夫婦の日) celebra le coppie sposate in Giappone.",
-          "description": "La Giornata dei buoni coniugi  è una festa che si celebra in Giappone ogni anno il 22 novembre. Attualmente non esiste un nome ufficiale in inglese per questa giornata, che è stata chiamata in alternativa \"Giornata delle buone coppie\" o \"Giornata del buon marito e della buona moglie\"."
+          "title": "Giorno del Ringraziamento del Lavoro",
+          "description": "Il Giorno del Ringraziamento del Lavoro è una festa nazionale annuale in Giappone celebrata il 23 novembre di ogni anno, a meno che quel giorno non cada di domenica, nel qual caso la festa viene spostata al lunedì.\nLa legge che istituisce la festività la indica come un'occasione per rendere omaggio al lavoro, per"
         },
         "ru": {
-          "title": "День хороших супругов (いい夫婦の日) — праздник, посвященный супружеским парам в Японии.",
-          "description": "День хороших супругов — это праздник, который отмечается в Японии ежегодно 22 ноября. В настоящее время у этого праздника нет официального названия на английском языке, и его неофициально называют «Днем хороших пар» или «Днем хороших мужей и жен»."
+          "title": "День благодарения труду",
+          "description": "День благодарения труду — ежегодный государственный праздник в Японии, который отмечается 23 ноября каждого года, если только этот день не выпадает на воскресенье. В таком случае праздник переносится на понедельник.\nВ законе, устанавливающем этот праздник, он упоминается как повод для выражения уважения к труду, для"
         },
         "el": {
-          "title": "Η Ημέρα των Καλών Συζύγων (いい夫婦の日) τιμά τα παντρεμένα ζευγάρια στην Ιαπωνία.",
-          "description": "Η Ημέρα των Καλών Συζύγων  είναι μια γιορτή που πραγματοποιείται στην Ιαπωνία κάθε χρόνο στις 22 Νοεμβρίου. Προς το παρόν, δεν υπάρχει επίσημη αγγλική ονομασία για την ημέρα αυτή και, εναλλακτικά, έχει ονομαστεί στα αγγλικά «Ημέρα των Καλών Ζευγαριών» ή «Ημέρα των Καλών Συζύγων»."
+          "title": "Ημέρα Ευχαριστιών για την Εργασία",
+          "description": "Η Ημέρα Ευχαριστιών για την Εργασία  είναι μια ετήσια αργία στην Ιαπωνία που εορτάζεται στις 23 Νοεμβρίου κάθε έτους, εκτός εάν αυτή η ημέρα συμπίπτει με Κυριακή, οπότε η αργία μεταφέρεται στη Δευτέρα.\nΟ νόμος που θεσπίζει την αργία την αναφέρει ως αφορμή για να τιμηθεί η εργασία, να"
         }
       }
     },
     "science": {
       "category": "science",
       "categoryTitle": "Today in Science",
-      "title": "Wringer-washer",
+      "title": "Coronary artery bypass",
       "year": "",
       "badge": "Research & Discovery",
-      "description": "(source) In 1983, the last wringer-washer made in the U.S., a Master Model E was built by the Maytag Company, the last U.S. company to make hand-operated washers. Their Model E was introduced in 1939. Maytag's first washing machine product was the Pastime hand-powered wood tub. It was produced from late 1907 to 1908 under the \"Parsons\" manufacturer name used until about 1909 when the business adopted the Maytag Company name. In 1893, the founder, Fred L. Maytag, had joined three other men in Newton, Iowa, to manufacture farm implements. The change to domestic appliances solved the seasonal sales slump. On 31 Mar 2006, Whirlpool Corporation, completed acquisition of the Maytag Company.[Image: Maytag Model E] Note: The date 12 Oct 1983 seen elsewhere on the internet is incorrect.",
+      "description": "(source) In 1964, Dr. Michael E. DeBakey of Houston performed the first successful coronary artery bypass graft procedure.",
       "clubLink": "keeping-up-with-science.html",
       "clubName": "Keeping Up with Science",
       "source": "Today in Science History",
-      "sourceUrl": "https://todayinsci.com/11/11_22.htm",
+      "sourceUrl": "https://todayinsci.com/11/11_23.htm",
       "i18n": {
         "en": {
-          "title": "Wringer-washer",
-          "description": "(source) In 1983, the last wringer-washer made in the U.S., a Master Model E was built by the Maytag Company, the last U.S. company to make hand-operated washers. Their Model E was introduced in 1939. Maytag's first washing machine product was the Pastime hand-powered wood tub. It was produced from late 1907 to 1908 under the \"Parsons\" manufacturer name used until about 1909 when the business adopted the Maytag Company name. In 1893, the founder, Fred L. Maytag, had joined three other men in Newton, Iowa, to manufacture farm implements. The change to domestic appliances solved the seasonal sales slump. On 31 Mar 2006, Whirlpool Corporation, completed acquisition of the Maytag Company.[Image: Maytag Model E] Note: The date 12 Oct 1983 seen elsewhere on the internet is incorrect."
+          "title": "Coronary artery bypass",
+          "description": "(source) In 1964, Dr. Michael E. DeBakey of Houston performed the first successful coronary artery bypass graft procedure."
         },
         "fr": {
-          "title": "Essoreuse-laveuse",
-          "description": "(source) En 1983, la dernière machine à laver à essoreuse fabriquée aux États-Unis, un modèle Master E, a été construite par la société Maytag, la dernière entreprise américaine à fabriquer des machines à laver manuelles. Leur modèle E a été lancé en 1939. Le premier lave-linge de Maytag était la cuve en bois à commande manuelle Pastime. I"
+          "title": "Greffe de pontage de l&apos;artère coronaire",
+          "description": "(source) En 1964, le Dr Michael E. DeBakey, de Houston, a réalisé la première intervention réussie de pontage aorto-coronarien."
         },
         "it": {
-          "title": "Lavatrice con strizzatoio",
-          "description": "(fonte) Nel 1983, l'ultima lavatrice con strizzatoio prodotta negli Stati Uniti, un modello Master E, fu costruita dalla Maytag Company, l'ultima azienda statunitense a produrre lavatrici a comando manuale. Il loro modello E fu lanciato nel 1939. La prima lavatrice prodotta da Maytag fu la vasca in legno a comando manuale Pastime. I"
+          "title": "Bypass aortocoronarico",
+          "description": "(fonte) Nel 1964, il dottor Michael E. DeBakey di Houston eseguì il primo intervento riuscito di bypass aortocoronarico."
         },
         "ru": {
-          "title": "Стиральная машина с отжимом",
-          "description": "(источник) В 1983 году компания Maytag, последняя американская компания, производившая стиральные машины с ручным управлением, выпустила последнюю стиральную машину с отжимом, произведенную в США, — модель Master Model E. Их модель E была представлена в 1939 году. Первой стиральной машиной Maytag стала деревянная модель Pastime с ручным приводом. I"
+          "title": "Аорто-коронарное шунтирование",
+          "description": "(источник) В 1964 году доктор Майкл Э. Дебейки из Хьюстона провел первую успешную операцию аортокоронарного шунтирования."
         },
         "el": {
-          "title": "Πλυντήριο με στύπτηρα",
-          "description": "(πηγή) Το 1983, το τελευταίο πλυντήριο με στύπτηρα που κατασκευάστηκε στις ΗΠΑ, το Master Model E, κατασκευάστηκε από την εταιρεία Maytag, την τελευταία αμερικανική εταιρεία που κατασκεύαζε πλυντήρια με χειροκίνητη λειτουργία. Το μοντέλο E παρουσιάστηκε το 1939. Το πρώτο πλυντήριο ρούχων της Maytag ήταν το Pastime, ένας ξύλινος κάδος με χειροκίνητη λειτουργία. I"
+          "title": "Παράκαμψη στεφανιαίας αρτηρίας",
+          "description": "(πηγή) Το 1964, ο Δρ. Michael E. DeBakey από το Χιούστον πραγματοποίηίσε την πρώτη επιτυχημένη επέμβαση αορτοστεφανιαίας παράκαμψης."
         }
       }
     },
     "music": {
       "category": "music",
       "categoryTitle": "Today in Music",
-      "title": "La Perle Du Brésil",
-      "year": "1851",
+      "title": "Jeux d'eau",
+      "year": "1901",
       "badge": "Music History",
-      "description": "Opera \"La Perle Du Brésil\" is produced (Paris)",
+      "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
       "sourceUrl": "https://www.onthisday.com/music/",
       "i18n": {
         "en": {
-          "title": "La Perle Du Brésil",
-          "description": "Opera \"La Perle Du Brésil\" is produced (Paris)"
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
         },
         "fr": {
-          "title": "La Perle du Brésil",
-          "description": "L'opéra « La Perle du Brésil » est produit (Paris)"
+          "title": "Jeux d'eau",
+          "description": "Création de la composition pour piano « Jeux d'eau » de Maurice Ravel"
         },
         "it": {
-          "title": "La Perle Du Brésil",
-          "description": "Viene prodotta l'opera \"La Perle Du Brésil\" (Parigi)"
+          "title": "Jeux d'eau",
+          "description": "Prima esecuzione della composizione per pianoforte \"Jeux d'eau\" di Maurice Ravel"
         },
         "ru": {
-          "title": "La Perle Du Brésil",
-          "description": "Постановка оперы «Жемчужина Бразилии» (Париж)"
+          "title": "Jeux d'eau",
+          "description": "Состоялась премьера фортепианной композиции Мориса Равеля «Игра воды»"
         },
         "el": {
-          "title": "La Perle Du Brésil",
-          "description": "Παραγωγή της όπερας «La Perle Du Brésil» (Παρίσι)"
+          "title": "Jeux d'eau",
+          "description": "Πρώτη εκτέλεση της σύνθεσης για πιάνο του Μωρίς Ραβέλ «Jeux d'eau»"
         }
       }
     },
     "film": {
       "category": "film",
       "categoryTitle": "Today in Film & TV",
-      "title": "Funny Face",
-      "year": "1927",
+      "title": "Gentlemen's Agreement",
+      "year": "1947",
       "badge": "Cinema & Screen",
-      "description": "George Gershwin and Ira Gershwin's musical \"Funny Face\", starring Fred Astaire and his sister Adele Astaire, opens at the new Alvin Theatre, NYC; runs 244 performances",
+      "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
       "sourceUrl": "https://www.onthisday.com/film-tv/",
       "i18n": {
         "en": {
-          "title": "Funny Face",
-          "description": "George Gershwin and Ira Gershwin's musical \"Funny Face\", starring Fred Astaire and his sister Adele Astaire, opens at the new Alvin Theatre, NYC; runs 244 performances"
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
         },
         "fr": {
-          "title": "Drôle de tête",
-          "description": "La comédie musicale « Funny Face » de George Gershwin et Ira Gershwin, avec Fred Astaire et sa sœur Adele Astaire, est présentée pour la première fois au nouvel Alvin Theatre de New York ; elle est jouée 244 fois."
+          "title": "\"gentlemen's agreement\"",
+          "description": "« Gentlemen's Agreement », réalisé par Elia Kazan et interprété par Gregory Peck et Dorothy McGuire, sort en première à New York (meilleur film en 1948)."
         },
         "it": {
-          "title": "Faccina buffa",
-          "description": "Il musical \"Funny Face\" di George Gershwin e Ira Gershwin, con Fred Astaire e sua sorella Adele Astaire, debutta al nuovo Alvin Theatre di New York; va in scena per 244 repliche."
+          "title": "Gentlemen’s Agreement",
+          "description": "A New York viene proiettato per la prima volta \"Gente di rispetto\", diretto da Elia Kazan e interpretato da Gregory Peck e Dorothy McGuire (Miglior film nel 1948)"
         },
         "ru": {
-          "title": "Смешное лицо",
-          "description": "В новом театре «Элвин» в Нью-Йорке состоялась премьера мюзикла Джорджа Гершвина и Айры Гершвина «Весёлое лицо» с участием Фреда Астера и его сестры Адель Астер. Мюзикл был показан 244 раза."
+          "title": "Джентльменское соглашение",
+          "description": "В Нью-Йорке состоялась премьера фильма «Джентльменское соглашение» режиссера Элиа Казана с Грегори Пеком и Дороти Макгуайр в главных ролях (лучший фильм 1948 года)."
         },
         "el": {
-          "title": "Αστείο πρόσωπο",
-          "description": "Το μιούζικαλ «Funny Face» των Τζορτζ Γκέρσουιν και Άιρα Γκέρσουιν, με πρωταγωνιστές τον Φρεντ Αστέρ και την αδελφή του Αντέλ Αστέρ, κάνει πρεμιέρα στο νέο θέατρο Alvin της Νέας Υόρκης. Παίζεται 244 παραστάσεις."
+          "title": "Συμφωνία κυρίων!",
+          "description": "Πρεμιέρα στη Νέα Υόρκη της ταινίας «Συμφωνία Κυρίων» σε σκηνοθεσία του Ηλία Καζάν, με πρωταγωνιστές τον Γκρέγκορι Πεκ και τη Ντόροθι ΜακΓκουάιρ (Καλύτερη Ταινία 1948)"
         }
       }
     }
