@@ -168,7 +168,7 @@
 
 .nav-btn:hover {
   background: var(--cosy-primary-light, #e8f0e9);
-  color: var(--cosy-primary, #416b49);
+  color: var(--cosy-color-sage-ink, #3C6344);
 }
 
 .nav-btn.today-btn {
@@ -392,7 +392,7 @@
   gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--cosy-primary, #416b49);
+  color: var(--cosy-color-sage-ink, #3C6344);
   margin-bottom: 0.75rem;
 }
 

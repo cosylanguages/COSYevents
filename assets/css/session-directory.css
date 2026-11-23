@@ -442,7 +442,7 @@
 .sd-pill {
   background: var(--cream, #fdfcf8);
   border: 1px solid var(--border);
-  color: var(--ink-muted);
+  color: var(--cosy-color-ink-muted, #5c5957);
   font-family: var(--font-sans);
   font-size: 0.82rem;
   font-weight: 700;
@@ -456,8 +456,8 @@
 
 .sd-pill:hover {
   border-color: var(--border-hover);
-  color: var(--ink);
-  background: #ffffff;
+  color: var(--cosy-color-ink, #2a2a2a);
+  background: var(--cosy-color-warm-white, #ffffff);
 }
 
 .sd-pill:focus-visible {

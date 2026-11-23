@@ -360,7 +360,7 @@ body.theme-mind-inner-child {
   --mind-theme-bg: #FAF5EF;
   --mind-theme-text: #42301B;
   --mind-theme-card-bg: #FFFFFF;
-  --mind-theme-accent: #8D6E63;
+  --mind-theme-accent: #5D4037;
   --mind-theme-border: #E6D7C3;
   --mind-theme-watermark: "🧸";
   --mind-theme-hero: linear-gradient(135deg, #8D6E63, #42301B);
@@ -459,7 +459,7 @@ body.theme-mind-rationality {
   --mind-theme-bg: #F0F4F7;
   --mind-theme-text: #1B2A36;
   --mind-theme-card-bg: #FFFFFF;
-  --mind-theme-accent: #008080;
+  --mind-theme-accent: #006666;
   --mind-theme-border: #D1DFE6;
   --mind-theme-watermark: "🧩";
   --mind-theme-hero: linear-gradient(135deg, #008080, #1B2A36);
@@ -540,7 +540,7 @@ body.theme-mind-grief {
   --mind-theme-bg: #FAF5F0;
   --mind-theme-text: #3E2723;
   --mind-theme-card-bg: #FFFFFF;
-  --mind-theme-accent: #8D6E63;
+  --mind-theme-accent: #5D4037;
   --mind-theme-border: #E6D7CB;
   --mind-theme-watermark: "🍂";
   --mind-theme-hero: linear-gradient(135deg, #8D6E63, #3E2723);
@@ -594,7 +594,7 @@ body.theme-mind-whitewashing {
   --mind-theme-bg: #FAFBFB;
   --mind-theme-text: #2C3E50;
   --mind-theme-card-bg: #FFFFFF;
-  --mind-theme-accent: #78909C;
+  --mind-theme-accent: #546E7A;
   --mind-theme-border: #EAECEE;
   --mind-theme-watermark: "🕊️";
   --mind-theme-hero: linear-gradient(135deg, #455A64, #2C3E50);

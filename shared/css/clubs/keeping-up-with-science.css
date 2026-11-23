@@ -631,7 +631,7 @@ body.theme-science-recycling::after { content: "♻️"; }
 body.theme-science-tv::after { content: "📺"; }
 
 /* ─── KEEPING UP WITH SCIENCE (PHASE 3) REDESIGN ─── */
-body[class*="theme-science"] {
+body[class*="theme-science"]:not(.theme-science-light) {
   /* High contrast, eye-friendly light/cream text variable values because body has custom dark background */
   --ink: #fdfcf8 !important;
   --ink-soft: #e2e8f0 !important;

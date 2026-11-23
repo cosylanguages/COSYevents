@@ -364,8 +364,8 @@
   padding: 0.75rem 1.5rem;
   font-size: var(--cosy-font-size-base);
   font-weight: var(--cosy-font-weight-bold);
-  color: var(--cosy-color-surface);
-  background: var(--cosy-color-sage);
+  color: var(--cosy-on-sage, #ffffff);
+  background: var(--cosy-color-sage-strong, #416b49);
   border: none;
   border-radius: var(--cosy-radius-sm);
   cursor: pointer;
@@ -374,7 +374,7 @@
 }
 
 .auth-btn-primary:hover:not(:disabled) {
-  background: var(--cosy-color-sage-dark);
+  background: var(--cosy-color-sage-strong-hover, #33563a);
 }
 
 .auth-btn-primary:focus-visible {
@@ -392,7 +392,7 @@
   padding: 0.5rem 1rem;
   font-size: var(--cosy-font-size-sm);
   font-weight: var(--cosy-font-weight-semibold);
-  color: var(--cosy-color-sage);
+  color: var(--cosy-color-sage-ink, #3C6344);
   background: none;
   border: 1px solid var(--cosy-color-border);
   border-radius: var(--cosy-radius-sm);
@@ -423,7 +423,7 @@
 }
 
 .auth-back-link {
-  color: var(--cosy-color-sage);
+  color: var(--cosy-color-sage-ink, #3C6344);
   font-size: var(--cosy-font-size-sm);
   text-decoration: none;
   font-weight: var(--cosy-font-weight-semibold);

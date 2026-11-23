@@ -226,6 +226,10 @@
     --box-shadow:                        var(--cosy-shadow-base);
     --border:                            var(--cosy-color-border);
     --border-hover:                      var(--cosy-color-border-hover);
+    --indigo: #4F46E5;
+    --indigo-light: #E0E7FF;
+    --orange: #C2410C;
+    --orange-light: #FFEDD5;
 }
 
 /* ── 8. Dark Mode Theme Overrides ────────────────────────────────────────── */
@@ -259,6 +263,34 @@ html[data-theme="dark"], body.theme-dark {
     --cosy-color-green-light:            #15241b;
     --cosy-color-rose-light:             #2d1515;
     --cosy-color-navy-light:             #141a29;
+    --indigo: #4F46E5;
+    --indigo-light: #2A2F55;
+    --orange: #C2410C;
+    --orange-light: #3A2417;
+
+    --cosy-color-honey-dark: #F6C177;
+    --cosy-color-amber-dark: #F6C177;
+    --cosy-color-honey: #E8BE76;
+    --cosy-color-coral: #F08968;
+    --cosy-color-navy: #9FB4E8;
+    --cosy-color-green: #8FB79A;
+    --cosy-color-blue: #9FB4E8;
+    --cosy-color-plum: #D9B98A;
+    --cosy-color-rose: #F08A8A;
+    --cosy-color-forest-green: #9FD3AA;
+    --cosy-color-sage-soft: #8FB79A;
+    --cosy-track-general: #3F7A50;
+    --cosy-track-spoken: #A34A28;
+    --cosy-track-professional: #3A4E8C;
+    --cosy-track-travelling: #4A6B50;
+    --cosy-track-relocation: #B04A4A;
+    --cosy-track-exam: #7A5C3A;
+    --cosy-track-general-light: #1f2b21;
+    --cosy-track-spoken-light: #2d1a15;
+    --cosy-track-professional-light: #1a202d;
+    --cosy-track-travelling-light: #15241b;
+    --cosy-track-relocation-light: #2d1515;
+    --cosy-track-exam-light: #2a2118;
 }
 
 /* 2. tokens */
@@ -442,6 +474,9 @@ html[data-theme="dark"], body.theme-dark {
     --paper-bg:   #1a1f1a;
     --paper-txt:  #e8f0e9;
 
+    --ink-deep:   var(--cosy-color-ink, #e8f0e9);
+    --ink-sage:   #9fd3aa;
+
     --background-color: var(--cream);
     --surface-color:    #222b22;
     --text-color:       var(--ink);
@@ -482,10 +517,10 @@ html[data-theme="dark"], body.theme-dark {
     --btn-primary-bg: var(--sage);
     --btn-primary-hover-bg: var(--sage-dark);
     --btn-secondary-border: 1.5px solid var(--sage-soft);
-    --btn-secondary-color: var(--sage-light);
+    --btn-secondary-color: var(--sage-deep);
     --btn-secondary-hover-bg: rgba(107,143,113,0.15);
     --btn-secondary-hover-color: #ffffff;
-    --btn-tertiary-color: var(--sage-light);
+    --btn-tertiary-color: var(--sage-deep);
     --btn-tertiary-hover-color: #ffffff;
 }
 
@@ -4432,7 +4467,7 @@ vim-choice { margin-bottom: 1.5rem; }
 .clapper-meta-label {
   display: block;
   font-size: 0.6rem;
-  color: #BA7517; /* Slate-gold label */
+  color: #8A5200; /* Slate-gold label */
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 0.15rem;
@@ -7053,6 +7088,7 @@ body.theme-dark .session-jump-link.active {
 }
 
 .edv-phrases-drawer {
+  color: var(--cosy-color-ink, #2a2a2a);
   position: fixed;
   bottom: 0;
   right: 0;
@@ -7133,6 +7169,7 @@ body.theme-dark .session-jump-link.active {
 
 .edv-drawer-item {
   background: var(--cosy-color-cream, #fdfcf8);
+  color: var(--cosy-color-ink, #2a2a2a);
   border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.1));
   border-radius: 8px;
   padding: 0.5rem 0.75rem;

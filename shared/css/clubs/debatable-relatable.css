@@ -146,7 +146,7 @@ body.theme-debate-ai-art {
   --debate-theme-bg: #FFFDF2;
   --debate-theme-text: #3E2723;
   --debate-theme-card-bg: #FFFFFF;
-  --debate-theme-accent: #D84315;
+  --debate-theme-accent: #BF360C;
   --debate-theme-border: #FFCCBC;
   --debate-theme-watermark: "🎨";
   --debate-theme-hero: linear-gradient(135deg, #9A2C0D, #5D4037);
@@ -166,7 +166,7 @@ body.theme-debate-homework-ban {
   --debate-theme-bg: #FFF9E6;
   --debate-theme-text: #4E342E;
   --debate-theme-card-bg: #FFFFFF;
-  --debate-theme-accent: #EF6C00;
+  --debate-theme-accent: #B45309;
   --debate-theme-border: #FFE082;
   --debate-theme-watermark: "🎒";
   --debate-theme-hero: linear-gradient(135deg, #994000, #4E342E);
@@ -226,7 +226,7 @@ body.theme-debate-holidays {
   --debate-theme-bg: #EFF8FB;
   --debate-theme-text: #004D40;
   --debate-theme-card-bg: #FFFFFF;
-  --debate-theme-accent: #00897B;
+  --debate-theme-accent: #00695C;
   --debate-theme-border: #B2DFDB;
   --debate-theme-watermark: "🌴";
   --debate-theme-hero: linear-gradient(135deg, #00695C, #004D40);
@@ -246,7 +246,7 @@ body.theme-debate-upbringing {
   --debate-theme-bg: #FEF9F5;
   --debate-theme-text: #4E2314;
   --debate-theme-card-bg: #FFFFFF;
-  --debate-theme-accent: #D84315;
+  --debate-theme-accent: #BF360C;
   --debate-theme-border: #FFDCC8;
   --debate-theme-watermark: "🧒";
   --debate-theme-hero: linear-gradient(135deg, #9A2C0D, #4E2314);

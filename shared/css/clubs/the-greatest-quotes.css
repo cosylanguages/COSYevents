@@ -271,7 +271,7 @@ body.theme-quotes-critical {
   --quotes-theme-bg: #F7FAFC;
   --quotes-theme-text: #2D3748;
   --quotes-theme-card-bg: #FFFFFF;
-  --quotes-theme-accent: #4A5568;
+  --quotes-theme-accent: #2D3748;
   --quotes-theme-border: #E2E8F0;
   --quotes-theme-watermark: "🤔";
 }
@@ -279,7 +279,7 @@ body.theme-quotes-art {
   --quotes-theme-bg: #FFF5F5;
   --quotes-theme-text: #2D080C;
   --quotes-theme-card-bg: #FFFFFF;
-  --quotes-theme-accent: #9B2C2C;
+  --quotes-theme-accent: #822727;
   --quotes-theme-border: #FEB2B2;
   --quotes-theme-watermark: "🎨";
 }
@@ -287,7 +287,7 @@ body.theme-quotes-intellect {
   --quotes-theme-bg: #F0F4F8;
   --quotes-theme-text: #0F172A;
   --quotes-theme-card-bg: #FFFFFF;
-  --quotes-theme-accent: #2B6CB0;
+  --quotes-theme-accent: #2C5282;
   --quotes-theme-border: #BEE3F8;
   --quotes-theme-watermark: "🏛️";
 }
@@ -295,7 +295,7 @@ body.theme-quotes-nostalgia {
   --quotes-theme-bg: #FFFDF5;
   --quotes-theme-text: #3D1A0D;
   --quotes-theme-card-bg: #FFFDF9;
-  --quotes-theme-accent: #DD6B20;
+  --quotes-theme-accent: #9C4221;
   --quotes-theme-border: #FEEBC8;
   --quotes-theme-watermark: "⏳";
 }
@@ -303,7 +303,7 @@ body.theme-quotes-parenting {
   --quotes-theme-bg: #F0FDF4;
   --quotes-theme-text: #0B1F17;
   --quotes-theme-card-bg: #FFFFFF;
-  --quotes-theme-accent: #38A169;
+  --quotes-theme-accent: #276749;
   --quotes-theme-border: #C6F6D5;
   --quotes-theme-watermark: "🌱";
 }
@@ -311,7 +311,7 @@ body.theme-quotes-relationships {
   --quotes-theme-bg: #FAF5FF;
   --quotes-theme-text: #1F0E3D;
   --quotes-theme-card-bg: #FFFFFF;
-  --quotes-theme-accent: #805AD5;
+  --quotes-theme-accent: #553C9A;
   --quotes-theme-border: #E9D8FD;
   --quotes-theme-watermark: "💖";
 }
@@ -319,7 +319,7 @@ body.theme-quotes-justice {
   --quotes-theme-bg: #FFFDF0;
   --quotes-theme-text: #2D2306;
   --quotes-theme-card-bg: #FFFFFF;
-  --quotes-theme-accent: #D69E2E;
+  --quotes-theme-accent: #975A16;
   --quotes-theme-border: #FEFCBF;
   --quotes-theme-watermark: "⚖️";
 }
@@ -327,7 +327,7 @@ body.theme-quotes-empathy {
   --quotes-theme-bg: #F0FDFA;
   --quotes-theme-text: #041F1E;
   --quotes-theme-card-bg: #FFFFFF;
-  --quotes-theme-accent: #319795;
+  --quotes-theme-accent: #2C7A7B;
   --quotes-theme-border: #CCFBF1;
   --quotes-theme-watermark: "🧭";
 }
@@ -335,7 +335,7 @@ body.theme-quotes-existential {
   --quotes-theme-bg: #FAF5FF;
   --quotes-theme-text: #110F2E;
   --quotes-theme-card-bg: #FFFFFF;
-  --quotes-theme-accent: #8B5CF6;
+  --quotes-theme-accent: #6B46C1;
   --quotes-theme-border: #DDD6FE;
   --quotes-theme-watermark: "🌌";
 }
@@ -343,7 +343,7 @@ body.theme-quotes-digital {
   --quotes-theme-bg: #F0FDF4;
   --quotes-theme-text: #011C15;
   --quotes-theme-card-bg: #FFFFFF;
-  --quotes-theme-accent: #059669;
+  --quotes-theme-accent: #046C4E;
   --quotes-theme-border: #A7F3D0;
   --quotes-theme-watermark: "💾";
 }
