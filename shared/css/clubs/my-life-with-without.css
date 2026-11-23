@@ -98,7 +98,7 @@ body.theme-life-airplane {
   --life-theme-border: #D2E2EC;
   --life-theme-watermark: "✈️";
   --life-theme-hero: linear-gradient(135deg, #2B6CB0, #1E2D38);
-  --life-theme-accent-contrast: #E67E22;
+  --life-theme-accent-contrast: #B25E14;
   --life-theme-column-bg: rgba(43, 108, 176, 0.02);
 }
 body.theme-life-car {
@@ -120,7 +120,7 @@ body.theme-life-celebrity {
   --life-theme-border: #F8CCD2;
   --life-theme-watermark: "🌟";
   --life-theme-hero: linear-gradient(135deg, #C2185B, #4A121A);
-  --life-theme-accent-contrast: #D4AF37;
+  --life-theme-accent-contrast: #8C721E;
   --life-theme-column-bg: rgba(194, 24, 91, 0.02);
 }
 body.theme-life-diversity {
@@ -142,7 +142,7 @@ body.theme-life-fridge {
   --life-theme-border: #CBECEB;
   --life-theme-watermark: "🧊";
   --life-theme-hero: linear-gradient(135deg, #0B6E67, #1A3533);
-  --life-theme-accent-contrast: #E67E22;
+  --life-theme-accent-contrast: #B25E14;
   --life-theme-column-bg: rgba(49, 151, 149, 0.02);
 }
 body.theme-life-skyscrapers {
@@ -208,7 +208,7 @@ body.theme-life-private-cars {
   --life-theme-border: #D2E6DF;
   --life-theme-watermark: "🚘";
   --life-theme-hero: linear-gradient(135deg, #3B6D11, #1C332A);
-  --life-theme-accent-contrast: #E67E22;
+  --life-theme-accent-contrast: #B25E14;
   --life-theme-column-bg: rgba(59, 109, 17, 0.02);
 }
 body.theme-life-series {
@@ -219,7 +219,7 @@ body.theme-life-series {
   --life-theme-border: #ECDFF0;
   --life-theme-watermark: "📺";
   --life-theme-hero: linear-gradient(135deg, #8E44AD, #3D1B3D);
-  --life-theme-accent-contrast: #D4AF37;
+  --life-theme-accent-contrast: #8C721E;
   --life-theme-column-bg: rgba(142, 68, 173, 0.02);
 }
 body.theme-life-social-media {
@@ -230,7 +230,7 @@ body.theme-life-social-media {
   --life-theme-border: #DCE4F7;
   --life-theme-watermark: "📱";
   --life-theme-hero: linear-gradient(135deg, #3F51B5, #1B2A4A);
-  --life-theme-accent-contrast: #E67E22;
+  --life-theme-accent-contrast: #B25E14;
   --life-theme-column-bg: rgba(63, 81, 181, 0.02);
 }
 

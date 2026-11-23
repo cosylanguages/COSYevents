@@ -3364,21 +3364,6 @@ body.theme-dark .session-mini-nav .sd-jump-link.active {
   color: var(--ink-soft);
   font-style: italic;
 }
-ht: 44px;
-  line-height: 44px;
-  text-align: center;
-}
-
-.comp-cell-link:hover {
-  transform: scale(1.25);
-}
-
-.comp-no-data-row td {
-  text-align: center;
-  padding: 2.5rem 1.5rem;
-  color: var(--ink-soft);
-  font-style: italic;
-}
 
 /* 6. events */
 /* ── Mistake Block Default Tokens & Overrides ─────── */
