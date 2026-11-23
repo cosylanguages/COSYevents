@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20",
+  "updated_at": "2026-11-23",
   "reviews": [
     {
       "id": "cr-inter-002",
@@ -23,6 +23,106 @@
         },
         "el": {
           "text": "Μου αρέσουν πολύ τα κλαμπ σου και συνήθως κάνω ό,τι μπορώ για να μην τα χάνω. Για μένα τα κλαμπ σου είναι ένας συνδυασμός από ένα ενδιαφέρον (και εκπαιδευτικό) θέμα, την απαιτητική έκφραση των ιδεών μου, νέες λέξεις και φράσεις, τις ανεκτίμητες εξηγήσεις σου για τα λάθη μας και νέες οπτικές στη γραμματική και τις εκφράσεις. Το περασμένο Σάββατο μου έλειψες :)"
+        }
+      }
+    },
+    {
+      "id": "cr-inter-007",
+      "club": "intermediate-speaking-club",
+      "author": "Tatiana",
+      "language": "English",
+      "level": "B1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "I really appreciate your lessons. You always find relevant and interesting ideas for discussions, which expands our vocabulary. Furthermore, you always support your students and help them overcome communication awkwardness. I would like to attend your classes more often, if time allows. I wish you great success, recognition, and respect from your students and management.",
+      "i18n": {
+        "fr": {
+          "text": "J'apprécie vraiment vos cours. Vous trouvez toujours des idées pertinentes et intéressantes pour les discussions, ce qui enrichit notre vocabulaire. De plus, vous soutenez toujours vos élèves et les aidez à surmonter leur gêne à communiquer. J'aimerais assister à vos cours plus souvent, si le temps le permet. Je vous souhaite beaucoup de succès, de reconnaissance et de respect de la part de vos élèves et de votre direction."
+        },
+        "it": {
+          "text": "Apprezzo davvero le tue lezioni. Trovi sempre idee pertinenti e interessanti per le discussioni, il che amplia il nostro vocabolario. Inoltre, sostieni sempre i tuoi studenti e li aiuti a superare l'imbarazzo nella comunicazione. Vorrei partecipare alle tue lezioni più spesso, se il tempo lo permette. Ti auguro tanto successo, riconoscimento e rispetto da parte dei tuoi studenti e della direzione."
+        },
+        "ru": {
+          "text": "Мне очень нравятся ваши занятия. Вы всегда находите актуальные и интересные идеи для обсуждения, что расширяет наш словарный запас. Кроме того, вы всегда поддерживаете своих учеников и помогаете им преодолеть неловкость в общении. Я хотела бы посещать ваши занятия чаще, если позволит время. Желаю вам больших успехов, признания и уважения со стороны учеников и руководства."
+        },
+        "el": {
+          "text": "Εκτιμώ πραγματικά τα μαθήματά σου. Βρίσκεις πάντα σχετικές και ενδιαφέρουσες ιδέες για συζήτηση, που εμπλουτίζουν το λεξιλόγιό μας. Επιπλέον, στηρίζεις πάντα τους μαθητές σου και τους βοηθάς να ξεπεράσουν την αμηχανία στην επικοινωνία. Θα ήθελα να παρακολουθώ τα μαθήματά σου πιο συχνά, αν το επιτρέπει ο χρόνος. Σου εύχομαι μεγάλη επιτυχία, αναγνώριση και σεβασμό από τους μαθητές σου και τη διοίκηση."
+        }
+      }
+    },
+    {
+      "id": "cr-inter-008",
+      "club": "intermediate-speaking-club",
+      "author": "Helena",
+      "language": "English",
+      "level": "B1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "Thank you for the speaking clubs! I have only positive things to say. You are very polite and well educated, and it is always a pleasure to practice with you. The clubs help me feel more confident speaking English.",
+      "i18n": {
+        "fr": {
+          "text": "Merci pour les clubs de conversation ! Je n'ai que des choses positives à dire. Vous êtes très poli et cultivé, et c'est toujours un plaisir de pratiquer avec vous. Les clubs m'aident à me sentir plus à l'aise à l'oral en anglais."
+        },
+        "it": {
+          "text": "Grazie per i club di conversazione! Ho solo cose positive da dire. Sei molto gentile e colto, ed è sempre un piacere fare pratica con te. I club mi aiutano a sentirmi più sicura nel parlare inglese."
+        },
+        "ru": {
+          "text": "Спасибо за разговорные клубы! У меня только положительные впечатления. Вы очень вежливы и образованны, и с вами всегда приятно практиковаться. Клубы помогают мне чувствовать себя увереннее, когда я говорю по-английски."
+        },
+        "el": {
+          "text": "Ευχαριστώ για τα κλαμπ συζήτησης! Έχω μόνο θετικά να πω. Είσαι πολύ ευγενικός και μορφωμένος, και είναι πάντα ευχάριστο να εξασκούμαι μαζί σου. Τα κλαμπ με βοηθούν να νιώθω πιο σίγουρη όταν μιλάω αγγλικά."
+        }
+      }
+    },
+    {
+      "id": "cr-basic-002",
+      "club": "basic-speaking-club",
+      "author": "Valentina",
+      "language": "English",
+      "level": "A1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "I like the speaking clubs, especially the topics and their questions. The questions often make you think about things you almost never think about in everyday life. And the topics are always original. I'm tired of discussing food, travel and so on, but it's hard to say what exactly is interesting, so your topics always stand out. I like your ability to keep the conversation going and your involvement. I like the error review at the end of the lesson — it's short, so there's a chance to fit something into your head and remember it. Sometimes I think I should go to a higher-level class, but I don't want to change the already familiar environment or leave my comfort zone. That's why I often fall back on the excuse that I can't study more than on weekends, and that's why I can't attend Intermediate on Monday. In short, everything is great, keep it up)",
+      "i18n": {
+        "fr": {
+          "text": "J'aime les clubs de conversation, surtout les thèmes et leurs questions. Les questions poussent souvent à réfléchir à des choses auxquelles on ne pense presque jamais dans la vie quotidienne. Et les thèmes sont toujours originaux. J'en ai assez de parler de nourriture, de voyages, etc., mais il est difficile de dire ce qui est vraiment intéressant, alors vos thèmes se démarquent toujours. J'aime votre capacité à entretenir la conversation et votre implication. J'aime le retour sur les erreurs à la fin du cours : il est court, donc on a une chance de retenir quelque chose. Parfois je me dis que je devrais suivre des cours d'un niveau supérieur, mais je n'ai pas envie de changer un cadre déjà familier ni de sortir de ma zone de confort. C'est pourquoi je me sers souvent de l'excuse que je ne peux pas étudier en dehors du week-end, et donc que je ne peux pas assister à l'Intermediate du lundi. Bref, tout est génial, continuez comme ça)"
+        },
+        "it": {
+          "text": "Mi piacciono i club di conversazione, soprattutto i temi e le loro domande. Le domande spesso ti fanno riflettere su cose a cui non pensi quasi mai nella vita di tutti i giorni. E i temi sono sempre originali. Mi sono stancata di parlare di cibo, viaggi e così via, ma è difficile dire cosa sia davvero interessante, quindi i tuoi temi si distinguono sempre. Mi piace la tua capacità di mantenere viva la conversazione e il tuo coinvolgimento. Mi piace la revisione degli errori alla fine della lezione: è breve, quindi c'è la possibilità di fissare qualcosa in testa e ricordarla. A volte penso che dovrei andare a lezioni di livello superiore, ma non voglio cambiare un ambiente ormai familiare né uscire dalla mia zona di comfort. Per questo spesso ricorro alla scusa che non posso studiare più che nel fine settimana, e quindi non posso partecipare all'Intermediate del lunedì. Insomma, va tutto benissimo, continua così)"
+        },
+        "ru": {
+          "text": "Мне нравятся спикинг клабы, особенно темы и их вопросы. Вопросы часто заставляют задуматься о том, о чем почти никогда не думаешь в повседневной жизни. А темы всегда оригинальные. Надоело обсуждать еду, путешествия и т.д., но сказать, что именно интересно, сложно, поэтому Ваши темы всегда выделяются. Вы мне нравитесь умением поддержать разговор и вовлеченностью. Мне нравится разбор ошибок в конце урока, разбор небольшой, поэтому есть шанс что-то уместить в голове и запомнить. Иногда я думаю, что надо бы идти на уроки уровнем выше, но не хочется менять уже знакомую обстановку, выходить из зоны комфорта. Поэтому я часто вспоминаю про отговорку, что кроме выходных не могу больше заниматься, потому и не могу посетить Intermediate в понедельник. Короче все классно, продолжайте в том же духе)"
+        },
+        "el": {
+          "text": "Μου αρέσουν τα κλαμπ συζήτησης, ειδικά τα θέματα και οι ερωτήσεις τους. Οι ερωτήσεις συχνά σε κάνουν να σκέφτεσαι πράγματα για τα οποία σχεδόν ποτέ δεν σκέφτεσαι στην καθημερινή ζωή. Και τα θέματα είναι πάντα πρωτότυπα. Βαρέθηκα να συζητάω για φαγητό, ταξίδια κ.λπ., αλλά είναι δύσκολο να πεις τι ακριβώς είναι ενδιαφέρον, γι' αυτό τα θέματά σου ξεχωρίζουν πάντα. Μου αρέσει η ικανότητά σου να κρατάς τη συζήτηση και η συμμετοχή σου. Μου αρέσει η ανάλυση των λαθών στο τέλος του μαθήματος — είναι σύντομη, οπότε υπάρχει πιθανότητα να κρατήσεις κάτι στο μυαλό σου και να το θυμηθείς. Μερικές φορές σκέφτομαι ότι θα έπρεπε να πηγαίνω σε μαθήματα υψηλότερου επιπέδου, αλλά δεν θέλω να αλλάξω το ήδη γνωστό περιβάλλον ή να βγω από τη ζώνη άνεσής μου. Γι' αυτό συχνά επικαλούμαι τη δικαιολογία ότι δεν μπορώ να κάνω μάθημα πέρα από το Σαββατοκύριακο, και γι' αυτό δεν μπορώ να παρακολουθήσω το Intermediate της Δευτέρας. Με λίγα λόγια, όλα είναι υπέροχα, συνεχίστε έτσι)"
+        }
+      }
+    },
+    {
+      "id": "cr-inter-009",
+      "club": "intermediate-speaking-club",
+      "author": "Chynara",
+      "language": "English",
+      "level": "B1",
+      "rating": 5,
+      "date": "2026",
+      "featured": false,
+      "text": "I really enjoy your classes — they are interesting, and the questions make you think.\nYou don't have generic questions where you can answer neutrally or just agree or disagree.\nThe topics are challenging, and I sometimes get a little nervous before class. But afterwards I'm very grateful!\nIt's a pity you have so few classes. The first thing I do is look for your classes. It's almost impossible to sign up for the Sunday class (\nI also like your corrections at the end!\nThank you so much for your work!\nYou are very attentive and intelligent! :)",
+      "i18n": {
+        "fr": {
+          "text": "J'aime beaucoup vos cours : ils sont intéressants et les questions font réfléchir.\nVous n'avez pas de questions génériques où l'on peut répondre de façon neutre ou simplement être d'accord ou non.\nLes thèmes sont exigeants, il m'arrive d'être un peu nerveuse avant le cours. Mais ensuite je suis très reconnaissante !\nC'est dommage que vous ayez si peu de cours. La première chose que je fais, c'est chercher vos cours. Il est presque impossible de s'inscrire au cours du dimanche (\nJ'aime aussi vos corrections à la fin !\nMerci beaucoup pour votre travail !\nVous êtes très attentionné et intelligent ! :)"
+        },
+        "it": {
+          "text": "Mi piacciono molto le tue lezioni: sono interessanti e le domande fanno riflettere.\nNon hai domande generiche a cui si può rispondere in modo neutro o limitarsi a essere d'accordo o meno.\nI temi sono impegnativi, a volte sono un po' nervosa prima della lezione. Ma poi sono molto grata!\nPeccato che tu abbia così poche lezioni. La prima cosa che faccio è cercare le tue lezioni. È quasi impossibile iscriversi alla lezione della domenica (\nMi piacciono anche le tue correzioni alla fine!\nGrazie mille per il tuo lavoro!\nSei molto attento e intelligente! :)"
+        },
+        "ru": {
+          "text": "Мне очень нравятся ваши занятия, они интересные, вопросы заставляют думать.\nУ вас нет общих вопросов, где можно нейтрально ответить или требуется просто соглашаться или нет.\nТемы сложные, бывает немного нервничую перед занятием. Но потом очень бываю благодарна!\nЖалко, что у вас занятий мало. Первым делом ищу ваши занятия. На воскресное занятие практически невозможно записаться (\nТакже нравится ваши корректировки в конце!\nСпасибо вам большое за ваш труд!\nВы очень чуткий, ителлигентый! :)"
+        },
+        "el": {
+          "text": "Μου αρέσουν πολύ τα μαθήματά σου — είναι ενδιαφέροντα και οι ερωτήσεις σε κάνουν να σκέφτεσαι.\nΔεν έχεις γενικές ερωτήσεις όπου μπορείς να απαντήσεις ουδέτερα ή απλώς να συμφωνήσεις ή να διαφωνήσεις.\nΤα θέματα είναι απαιτητικά, μερικές φορές νιώθω λίγο αγχωμένη πριν το μάθημα. Αλλά μετά είμαι πολύ ευγνώμων!\nΚρίμα που έχεις τόσο λίγα μαθήματα. Το πρώτο πράγμα που κάνω είναι να ψάξω τα μαθήματά σου. Είναι σχεδόν αδύνατο να γραφτείς στο μάθημα της Κυριακής (\nΜου αρέσουν επίσης οι διορθώσεις σου στο τέλος!\nΣε ευχαριστώ πολύ για τη δουλειά σου!\nΕίσαι πολύ προσεκτικός και έξυπνος! :)"
         }
       }
     },
