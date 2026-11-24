@@ -221,6 +221,20 @@
   border-radius: var(--cosy-radius-full, 100px);
 }
 
+.daily-spotlights-stale-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #fff7e0;
+  color: #7a4b00;
+  border: 1px solid #f0d9a8;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--cosy-radius-full, 100px);
+  margin-left: 0.5rem;
+}
+
 .daily-spotlights-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

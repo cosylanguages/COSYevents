@@ -140,7 +140,19 @@ and the page links out to them.
 | Fun fact and the hub daily strip | [COSYlanguages](https://github.com/cosylanguages/COSYlanguages) |
 
 `scripts/fetch_daily_spotlights.js` (run by the `daily-spotlights` workflow) rotates the spotlight
-data daily.
+data daily. Its translations are machine-generated; `data/spotlight-overrides.json` holds curated
+replacements that win over the machine output. Key by ISO date (or `month-day`), then category,
+language and the fields to replace:
+
+```json
+{
+  "2026-11-24": {
+    "science": {
+      "fr": { "title": "Le premier brevet…", "description": "Une phrase complète et vérifiée." }
+    }
+  }
+}
+```
 
 As on the COSYlanguages hub strip, the main page ends the daily container with a compact
 "🌐 Daily across the COSY ecosystem" line of chips linking to the other daily surfaces. It comes from

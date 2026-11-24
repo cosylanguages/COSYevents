@@ -149,6 +149,24 @@
     }
   };
 
+  // A stale payload is better than a blank panel, but it must not claim to be "today".
+  var STALE_I18N = {
+    en: { updated: 'Updated', stale_sub: 'Latest available spotlights for {date}. The daily update has not run yet.' },
+    fr: { updated: 'Mis à jour', stale_sub: 'Derniers sujets disponibles pour le {date}. La mise à jour quotidienne n’a pas encore eu lieu.' },
+    it: { updated: 'Aggiornato', stale_sub: 'Ultimi spunti disponibili per il {date}. L’aggiornamento quotidiano non è ancora stato eseguito.' },
+    ru: { updated: 'Обновлено', stale_sub: 'Последние доступные темы на {date}. Ежедневное обновление ещё не выполнено.' },
+    el: { updated: 'Ενημερώθηκε', stale_sub: 'Τελευταία διαθέσιμα θέματα για {date}. Η καθημερινή ενημέρωση δεν έχει εκτελεστεί ακόμη.' }
+  };
+
+  function isStale(data) {
+    if (!data || !data.month || !data.day) return false;
+    var now = new Date();
+    var year = data.updated_at ? new Date(data.updated_at).getUTCFullYear() : now.getUTCFullYear();
+    var dataTime = Date.UTC(year, data.month - 1, data.day);
+    var todayTime = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+    return dataTime < todayTime;
+  }
+
   function sanitizeHtml(str) {
     if (!str) return '';
     return String(str)
@@ -192,7 +210,7 @@
   function formatDisplayDate(data, lang) {
     if (data && data.month && data.day) {
       try {
-        var year = (data.updated_at ? new Date(data.updated_at).getFullYear() : 2026);
+        var year = (data.updated_at ? new Date(data.updated_at).getUTCFullYear() : new Date().getUTCFullYear());
         var dateObj = new Date(year, data.month - 1, data.day);
         var intlLocale = lang === 'el' ? 'el-GR' : (lang === 'ru' ? 'ru-RU' : (lang === 'it' ? 'it-IT' : (lang === 'fr' ? 'fr-FR' : 'en-US')));
         return new Intl.DateTimeFormat(intlLocale, {
@@ -273,8 +291,12 @@
   function renderContainer(data, lang, pathPrefix, opts) {
     opts = opts || {};
     var i18n = SPOTLIGHT_I18N[lang] || SPOTLIGHT_I18N.en;
+    var staleI18n = STALE_I18N[lang] || STALE_I18N.en;
     var localizedDate = formatDisplayDate(data, lang);
-    var subText = (i18n.sub || '').replace('{date}', localizedDate);
+    var stale = isStale(data);
+    var subText = stale
+      ? (staleI18n.stale_sub || '').replace('{date}', localizedDate)
+      : (i18n.sub || '').replace('{date}', localizedDate);
     var items = data.items;
 
     return (
@@ -288,6 +310,7 @@
             '</p>' +
           '</div>' +
           '<span class="daily-spotlights-date-badge">📅 ' + sanitizeHtml(localizedDate) + '</span>' +
+          (stale ? '<span class="daily-spotlights-stale-badge">⚠️ ' + sanitizeHtml(staleI18n.updated) + '</span>' : '') +
         '</div>' +
         '<div class="daily-spotlights-grid">' +
           renderCard('celebration', items.celebration, lang, pathPrefix) +
@@ -368,7 +391,9 @@
       initDailySpotlights: initDailySpotlights,
       detectLanguage: detectLanguage,
       formatDisplayDate: formatDisplayDate,
-      SPOTLIGHT_I18N: SPOTLIGHT_I18N
+      isStale: isStale,
+      SPOTLIGHT_I18N: SPOTLIGHT_I18N,
+      STALE_I18N: STALE_I18N
     };
   }
 })();
