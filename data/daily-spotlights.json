@@ -1,6 +1,7 @@
 {
-  "updated_at": "2026-11-24T11:02:56.284Z",
+  "updated_at": "2026-11-24T14:26:36.623Z",
   "display_date": "November 24, 2026",
+  "date": "2026-11-24",
   "day": 24,
   "month": 11,
   "items": {
@@ -55,8 +56,8 @@
           "description": "In 1909, the Wright brothers formed a million-dollar corporation for the commercial manufacture of airplanes."
         },
         "fr": {
-          "title": "Les frères Wright créent une société",
-          "description": "En 1909, les frères Wright créèrent une société d'un million de dollars pour la fabrication commerciale d'avions."
+          "title": "Les frères Wright créent leur société",
+          "description": "En 1909, les frères Wright ont créé une société d'un million de dollars pour la fabrication commerciale d'avions."
         },
         "it": {
           "title": "I fratelli Wright costituiscono una società",
@@ -89,7 +90,7 @@
           "description": "Weber's opera \"Das Waldmadchen\" premieres in Freiburg"
         },
         "fr": {
-          "title": "Das Waldmädchen",
+          "title": "La Fille de la forêt",
           "description": "L'opéra de Weber « Das Waldmädchen » est créé à Fribourg"
         },
         "it": {
@@ -124,19 +125,19 @@
         },
         "fr": {
           "title": "Gasoline Alley",
-          "description": "La bande dessinée « Gasoline Alley » apparaît pour la première fois dans le Chicago Tribune, sous forme de publication hebdomadaire sur la page Sunday Rectangle."
+          "description": "La bande dessinée « Gasoline Alley » paraît pour la première fois sous forme de rubrique hebdomadaire sur la page Sunday Rectangle du Chicago Tribune."
         },
         "it": {
           "title": "Gasoline Alley",
-          "description": "La striscia a fumetti \"Gasoline Alley\" appare per la prima volta come rubrica settimanale sulla pagina Sunday Rectangle del Chicago Tribune"
+          "description": "La striscia umoristica \"Gasoline Alley\" appare per la prima volta come rubrica settimanale nella pagina Sunday Rectangle del Chicago Tribune"
         },
         "ru": {
           "title": "Газолин-алли",
-          "description": "Комикс «Газолин-алли» впервые появляется в качестве еженедельной рубрики на странице Sunday Rectangle газеты Chicago Tribune"
+          "description": "Газетный комикс «Бензиновая аллея» впервые появляется в качестве еженедельной рубрики на странице Sunday Rectangle газеты Chicago Tribune"
         },
         "el": {
           "title": "Gasoline Alley",
-          "description": "Το ένθετο κόμικ «Gasoline Alley» εμφανίζεται για πρώτη φορά ως εβδομαδιαίο ένθετο στη σελίδα Sunday Rectangle της εφημερίδας Chicago Tribune"
+          "description": "Το κόμικ \"Gasoline Alley\" δημοσιεύεται για πρώτη φορά ως εβδομαδιαίο ένθετο στη σελίδα Sunday Rectangle της εφημερίδας Chicago Tribune"
         }
       }
     }
