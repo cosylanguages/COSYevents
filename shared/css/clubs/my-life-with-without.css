@@ -27,7 +27,7 @@ html[data-theme="dark"] body[class*="theme-life-"]::after {
 /* Breadcrumbs & links color synchronization */
 body[class*="theme-life-"] .back-link,
 body[class*="theme-life-"] .cosy-breadcrumbs a {
-  color: var(--life-theme-accent) !important;
+  color: var(--life-theme-accent-ink) !important;
 }
 
 /* Main Box container styling to ensure beautiful persistent cozy contrast */
@@ -43,7 +43,7 @@ body[class*="theme-life-"] .mistake-block {
 }
 
 body[class*="theme-life-"] .vocab-word {
-  color: var(--life-theme-accent) !important;
+  color: var(--life-theme-accent-ink) !important;
   font-weight: 700;
 }
 
@@ -55,13 +55,13 @@ body[class*="theme-life-"] .mistake-header {
 
 body[class*="theme-life-"] .btn-primary,
 body[class*="theme-life-"] .btn-add-dict {
-  background-color: var(--life-theme-accent) !important;
-  border-color: var(--life-theme-accent) !important;
+  background-color: var(--life-theme-accent-ink) !important;
+  border-color: var(--life-theme-accent-ink) !important;
   color: #FFFFFF !important;
 }
 
 body[class*="theme-life-"] .life-ledger-title {
-  color: var(--life-theme-accent) !important;
+  color: var(--life-theme-accent-ink) !important;
 }
 
 body[class*="theme-life-"] .life-ledger-column {
@@ -70,7 +70,7 @@ body[class*="theme-life-"] .life-ledger-column {
 }
 
 body[class*="theme-life-"] .life-ledger-column.with h5 {
-  color: var(--life-theme-accent) !important;
+  color: var(--life-theme-accent-ink) !important;
 }
 
 body[class*="theme-life-"] .life-ledger-column.without h5 {
@@ -155,6 +155,19 @@ body.theme-life-skyscrapers {
   --life-theme-hero: linear-gradient(135deg, #5C4A9E, #2C3E50);
   --life-theme-accent-contrast: #3B6D11;
   --life-theme-column-bg: rgba(92, 74, 158, 0.02);
+}
+:root {
+  /* the theme accents are fills; as text they need a darker step on the
+     cream grounds, so ink is derived from whatever accent the theme sets */
+  --life-theme-accent-ink: color-mix(in srgb, var(--life-theme-accent) 58%, #000);
+}
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+  --life-theme-accent-ink: var(--life-theme-accent);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]),
+  html:not([data-theme="light"]) body { --life-theme-accent-ink: var(--life-theme-accent); }
 }
 body.theme-life-holidays {
   --life-theme-bg: #FFFDF2;
