@@ -28,6 +28,10 @@ jobs:
       - name: Fetch today's cultural and science spotlights
         run: node scripts/fetch_daily_spotlights.js
 
+      - name: Verify the spotlight file is for today (UTC)
+        run: |
+          node -e "const d=require('./data/daily-spotlights.json'); const n=new Date(); if (d.day!==n.getUTCDate() || d.month!==n.getUTCMonth()+1) { console.error('Stale spotlight file:', d.display_date); process.exit(1); }"
+
       - name: Commit and push if updated
         run: |
           git config --global user.name "github-actions[bot]"

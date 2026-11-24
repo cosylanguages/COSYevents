@@ -19,6 +19,7 @@ const path = require('path');
 const cheerio = require('cheerio');
 
 const OUTPUT_PATH = path.join(__dirname, '..', 'data', 'daily-spotlights.json');
+const OVERRIDES_PATH = path.join(__dirname, '..', 'data', 'spotlight-overrides.json');
 
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 (COSYevents/1.0)';
 
@@ -65,6 +66,21 @@ async function translateText(text, targetLang) {
     // Non-fatal, fallback to adapted/original
   }
   return text;
+}
+
+/**
+ * Cut at a sentence boundary so translations never start from half a sentence.
+ * Falls back to a word boundary with an ellipsis when no sentence ends in range.
+ */
+function completeSentence(text, maxLen = 300) {
+  const clean = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!clean || clean.length <= maxLen) return clean;
+  const window = clean.slice(0, maxLen);
+  const lastStop = Math.max(window.lastIndexOf('. '), window.lastIndexOf('! '), window.lastIndexOf('? '));
+  const minStop = Math.min(40, Math.floor(maxLen * 0.4));
+  if (lastStop >= minStop) return window.slice(0, lastStop + 1).trim();
+  const lastSpace = window.lastIndexOf(' ');
+  return (lastSpace > 0 ? window.slice(0, lastSpace) : window).trim() + '…';
 }
 
 /**
@@ -147,6 +163,7 @@ async function fetchCelebration(month, day) {
         }
         if (!enDesc) enDesc = chosen.text || enTitle;
 
+        enDesc = completeSentence(enDesc, 300);
         // Fetch translations for fr, it, ru, el
         const [frTitle, itTitle, ruTitle, elTitle] = await Promise.all([
           translateText(enTitle, 'fr'),
@@ -156,10 +173,10 @@ async function fetchCelebration(month, day) {
         ]);
 
         const [frDesc, itDesc, ruDesc, elDesc] = await Promise.all([
-          translateText(enDesc.slice(0, 260), 'fr'),
-          translateText(enDesc.slice(0, 260), 'it'),
-          translateText(enDesc.slice(0, 260), 'ru'),
-          translateText(enDesc.slice(0, 260), 'el')
+          translateText(enDesc, 'fr'),
+          translateText(enDesc, 'it'),
+          translateText(enDesc, 'ru'),
+          translateText(enDesc, 'el')
         ]);
 
         return {
@@ -283,6 +300,7 @@ async function fetchScienceEvent(month, day) {
     console.warn('Notice: Could not fetch Today in Science:', err.message);
   }
 
+  enDesc = completeSentence(enDesc, 300);
   // Multilingual adaptation
   const [frTitle, itTitle, ruTitle, elTitle] = await Promise.all([
     translateText(enTitle, 'fr'),
@@ -292,10 +310,10 @@ async function fetchScienceEvent(month, day) {
   ]);
 
   const [frDesc, itDesc, ruDesc, elDesc] = await Promise.all([
-    translateText(enDesc.slice(0, 280), 'fr'),
-    translateText(enDesc.slice(0, 280), 'it'),
-    translateText(enDesc.slice(0, 280), 'ru'),
-    translateText(enDesc.slice(0, 280), 'el')
+    translateText(enDesc, 'fr'),
+    translateText(enDesc, 'it'),
+    translateText(enDesc, 'ru'),
+    translateText(enDesc, 'el')
   ]);
 
   return {
@@ -389,6 +407,7 @@ async function fetchMusicEvent() {
     }
   }
 
+  enDesc = completeSentence(enDesc, 300);
   // Multilingual adaptation
   const [frTitle, itTitle, ruTitle, elTitle] = await Promise.all([
     translateText(enTitle, 'fr'),
@@ -398,10 +417,10 @@ async function fetchMusicEvent() {
   ]);
 
   const [frDesc, itDesc, ruDesc, elDesc] = await Promise.all([
-    translateText(enDesc.slice(0, 280), 'fr'),
-    translateText(enDesc.slice(0, 280), 'it'),
-    translateText(enDesc.slice(0, 280), 'ru'),
-    translateText(enDesc.slice(0, 280), 'el')
+    translateText(enDesc, 'fr'),
+    translateText(enDesc, 'it'),
+    translateText(enDesc, 'ru'),
+    translateText(enDesc, 'el')
   ]);
 
   return {
@@ -495,6 +514,7 @@ async function fetchFilmTvEvent() {
     }
   }
 
+  enDesc = completeSentence(enDesc, 300);
   // Multilingual adaptation
   const [frTitle, itTitle, ruTitle, elTitle] = await Promise.all([
     translateText(enTitle, 'fr'),
@@ -504,10 +524,10 @@ async function fetchFilmTvEvent() {
   ]);
 
   const [frDesc, itDesc, ruDesc, elDesc] = await Promise.all([
-    translateText(enDesc.slice(0, 280), 'fr'),
-    translateText(enDesc.slice(0, 280), 'it'),
-    translateText(enDesc.slice(0, 280), 'ru'),
-    translateText(enDesc.slice(0, 280), 'el')
+    translateText(enDesc, 'fr'),
+    translateText(enDesc, 'it'),
+    translateText(enDesc, 'ru'),
+    translateText(enDesc, 'el')
   ]);
 
   return {
@@ -531,10 +551,36 @@ async function fetchFilmTvEvent() {
   };
 }
 
+function loadOverrides() {
+  try {
+    return JSON.parse(fs.readFileSync(OVERRIDES_PATH, 'utf8'));
+  } catch (err) {
+    if (err.code !== 'ENOENT') console.warn(`Could not read ${OVERRIDES_PATH}: ${err.message}`);
+    return {};
+  }
+}
+
+// Curated translations win over the machine translation. Key by ISO date ("2026-11-24") or "month-day".
+function applyOverrides(output, overrides = {}) {
+  const dayOverrides = overrides[output.date] || overrides[`${output.month}-${output.day}`];
+  if (!dayOverrides) return output;
+  for (const [category, langs] of Object.entries(dayOverrides)) {
+    const item = output.items && output.items[category];
+    if (!item || !item.i18n || !langs || typeof langs !== 'object') continue;
+    for (const [lang, patch] of Object.entries(langs)) {
+      if (!item.i18n[lang] || !patch || typeof patch !== 'object') continue;
+      if (typeof patch.title === 'string' && patch.title.trim()) item.i18n[lang].title = patch.title.trim();
+      if (typeof patch.description === 'string' && patch.description.trim()) item.i18n[lang].description = patch.description.trim();
+    }
+  }
+  return output;
+}
+
 async function main() {
   const now = new Date();
   const month = now.getMonth() + 1;
   const day = now.getDate();
+  const dateKey = now.toISOString().slice(0, 10);
   const dateFormatted = now.toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',
@@ -553,6 +599,7 @@ async function main() {
   const output = {
     updated_at: new Date().toISOString(),
     display_date: dateFormatted,
+    date: dateKey,
     day: day,
     month: month,
     items: {
@@ -562,6 +609,9 @@ async function main() {
       film
     }
   };
+
+  const overrides = loadOverrides();
+  applyOverrides(output, overrides);
 
   const outputDir = path.dirname(OUTPUT_PATH);
   if (!fs.existsSync(outputDir)) {
@@ -584,5 +634,8 @@ module.exports = {
   fetchScienceEvent,
   fetchMusicEvent,
   fetchFilmTvEvent,
-  translateText
+  translateText,
+  completeSentence,
+  applyOverrides,
+  loadOverrides
 };

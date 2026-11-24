@@ -20,14 +20,18 @@ const {
   directorySlotHTML,
   sanitizeHtml,
   formatDisplayDate,
-  SPOTLIGHT_I18N
+  isStale,
+  SPOTLIGHT_I18N,
+  STALE_I18N
 } = require('../shared/js/daily-spotlights.js');
 
 const {
   fetchCelebration,
   fetchScienceEvent,
   fetchMusicEvent,
-  fetchFilmTvEvent
+  fetchFilmTvEvent,
+  completeSentence,
+  applyOverrides
 } = require('./fetch_daily_spotlights.js');
 
 console.log('🧪 Starting Daily Spotlights unit and integrity tests...\n');
@@ -140,6 +144,54 @@ const itDate = formatDisplayDate(testData, 'it');
 assert(itDate.toLowerCase().includes('novembre'), `Expected Italian month in "${itDate}"`);
 console.log('  PASS: Dates properly localize across locales.\n');
 
+// Test 4b: A stale payload is labelled, not presented as today's spotlights
+console.log('Test 4b: Verifying stale spotlight detection and labels...');
+const nowUtc = new Date();
+const todayPayload = {
+  ...data,
+  month: nowUtc.getUTCMonth() + 1,
+  day: nowUtc.getUTCDate(),
+  updated_at: nowUtc.toISOString()
+};
+const yesterdayUtc = new Date(Date.UTC(nowUtc.getUTCFullYear(), nowUtc.getUTCMonth(), nowUtc.getUTCDate() - 1));
+const stalePayload = {
+  ...data,
+  month: yesterdayUtc.getUTCMonth() + 1,
+  day: yesterdayUtc.getUTCDate(),
+  updated_at: yesterdayUtc.toISOString()
+};
+assert.strictEqual(isStale(todayPayload), false, 'today payload must be fresh');
+assert.strictEqual(isStale(stalePayload), true, 'yesterday payload must be stale');
+const staleHtml = renderContainer(stalePayload, 'en', '', {});
+assert(staleHtml.includes('daily-spotlights-stale-badge'), 'stale payload needs a visible badge');
+assert(staleHtml.includes('Latest available spotlights'), 'stale payload must not claim to be today');
+const freshHtml = renderContainer(todayPayload, 'en', '', {});
+assert(!freshHtml.includes('daily-spotlights-stale-badge'), 'fresh payload must not show a stale badge');
+for (const lang of languages) {
+  assert(STALE_I18N[lang] && STALE_I18N[lang].updated && STALE_I18N[lang].stale_sub.includes('{date}'),
+    `${lang} needs a stale label and a {date} placeholder`);
+}
+console.log('  PASS: Stale payloads are labelled in every language.\n');
+
+// Test 4c: Descriptions are cut at sentence boundaries, never mid-sentence
+console.log('Test 4c: Verifying complete-sentence truncation...');
+assert.strictEqual(completeSentence('First sentence. Second sentence is longer.', 20), 'First sentence.');
+assert.strictEqual(completeSentence('Short text.', 50), 'Short text.');
+const longWord = 'word '.repeat(80);
+const cut = completeSentence(longWord, 40);
+assert(cut.endsWith('…'), 'no sentence boundary should fall back to an ellipsis');
+assert(cut.length <= 41, 'fallback cut must respect the limit');
+for (const cat of requiredCategories) {
+  const item = data.items[cat];
+  assert(item.description.length <= 301, `${cat} description is too long for the card`);
+  assert(!/[,\s]$/.test(item.description), `${cat} description ends mid-sentence`);
+  for (const [lang, loc] of Object.entries(item.i18n || {})) {
+    assert(loc.description.length <= 301, `${cat}.${lang} description is too long`);
+    assert(!/[,\s]$/.test(loc.description), `${cat}.${lang} description ends mid-sentence`);
+  }
+}
+console.log('  PASS: Spotlight descriptions end at a sentence or word boundary.\n');
+
 // Test 5: Sanitize helper unit test
 console.log('Test 5: Verifying sanitizeHtml unit edge cases...');
 assert.strictEqual(sanitizeHtml('<b>Hello</b> & "World"'), '&lt;b&gt;Hello&lt;/b&gt; &amp; &quot;World&quot;');
@@ -179,6 +231,27 @@ for (const rel of LOCALIZED_PAGES) {
   assert(!page.includes('data-daily-directory'), `${rel}: localized pages must not mount the directory`);
 }
 console.log('  PASS: The directory line is on the main page only.\n');
+
+// Test 5d: Curated translation overrides
+console.log('Test 5d: Verifying curated translation overrides...');
+const overrideOutput = {
+  date: '2026-11-24', month: 11, day: 24,
+  items: {
+    science: {
+      i18n: {
+        en: { title: 'English title', description: 'English description' },
+        fr: { title: 'Titre machine', description: 'Description machine' }
+      }
+    }
+  }
+};
+applyOverrides(overrideOutput, {
+  '2026-11-24': { science: { fr: { description: 'Description vérifiée.' } } }
+});
+assert.strictEqual(overrideOutput.items.science.i18n.fr.description, 'Description vérifiée.', 'override replaces the description');
+assert.strictEqual(overrideOutput.items.science.i18n.fr.title, 'Titre machine', 'unspecified fields keep the machine value');
+assert.strictEqual(overrideOutput.items.science.i18n.en.description, 'English description', 'other languages are untouched');
+console.log('  PASS: Curated overrides replace only the fields they name.\n');
 
 // Test 6: Extractor Functions Resilience
 console.log('Test 6: Verifying fetch functions return valid structured objects...');

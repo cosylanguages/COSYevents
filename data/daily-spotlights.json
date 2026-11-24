@@ -1,142 +1,142 @@
 {
-  "updated_at": "2026-11-23T13:53:35.959Z",
-  "display_date": "November 23, 2026",
-  "day": 23,
+  "updated_at": "2026-11-24T11:02:56.284Z",
+  "display_date": "November 24, 2026",
+  "day": 24,
   "month": 11,
   "items": {
     "celebration": {
       "category": "celebration",
       "categoryTitle": "Holiday of the Day",
-      "title": "Labor Thanksgiving Day",
+      "title": "Evolution Day",
       "badge": "Celebration",
-      "description": "Labor Thanksgiving Day  is an annual public holiday in Japan celebrated on November 23 of each year, unless that day falls on a Sunday, in which case the holiday is moved to Monday.\nThe law establishing the holiday cites it as an occasion to respect labor, to celebrate production, and for citizens to give each other thanks.",
-      "details": "Labor Thanksgiving Day (Japan)",
+      "description": "Evolution Day is a celebration to commemorate the anniversary of the initial publication of On the Origin of Species by Charles Darwin on 24 November 1859.",
+      "details": "Evolution Day (International observance)",
       "clubLink": "lets-celebrate.html",
       "clubName": "Let's Celebrate",
       "source": "International & Cultural Observances",
       "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
       "i18n": {
         "en": {
-          "title": "Labor Thanksgiving Day",
-          "description": "Labor Thanksgiving Day  is an annual public holiday in Japan celebrated on November 23 of each year, unless that day falls on a Sunday, in which case the holiday is moved to Monday.\nThe law establishing the holiday cites it as an occasion to respect labor, to celebrate production, and for citizens to give each other thanks."
+          "title": "Evolution Day",
+          "description": "Evolution Day is a celebration to commemorate the anniversary of the initial publication of On the Origin of Species by Charles Darwin on 24 November 1859."
         },
         "fr": {
-          "title": "Action de grâce du travail",
-          "description": "Le Jour de Thanksgiving du travail  est un jour férié annuel au Japon, célébré le 23 novembre de chaque année, sauf si ce jour tombe un dimanche, auquel cas le jour férié est reporté au lundi.\nLa loi instituant ce jour férié le présente comme une occasion de rendre hommage au travail, de"
+          "title": "Journée de l'évolution",
+          "description": "La Journée de l'évolution est une célébration qui commémore l'anniversaire de la première publication de L'Origine des espèces par Charles Darwin, le 24 novembre 1859."
         },
         "it": {
-          "title": "Giorno del Ringraziamento del Lavoro",
-          "description": "Il Giorno del Ringraziamento del Lavoro è una festa nazionale annuale in Giappone celebrata il 23 novembre di ogni anno, a meno che quel giorno non cada di domenica, nel qual caso la festa viene spostata al lunedì.\nLa legge che istituisce la festività la indica come un'occasione per rendere omaggio al lavoro, per"
+          "title": "Giornata dell'evoluzione",
+          "description": "La Giornata dell'Evoluzione è una celebrazione per commemorare l'anniversario della prima pubblicazione de L'origine delle specie di Charles Darwin, avvenuta il 24 novembre 1859."
         },
         "ru": {
-          "title": "День благодарения труду",
-          "description": "День благодарения труду — ежегодный государственный праздник в Японии, который отмечается 23 ноября каждого года, если только этот день не выпадает на воскресенье. В таком случае праздник переносится на понедельник.\nВ законе, устанавливающем этот праздник, он упоминается как повод для выражения уважения к труду, для"
+          "title": "День эволюции",
+          "description": "День эволюции — это праздник, посвященный годовщине первой публикации книги Чарльза Дарвина «Происхождение видов» 24 ноября 1859 года."
         },
         "el": {
-          "title": "Ημέρα Ευχαριστιών για την Εργασία",
-          "description": "Η Ημέρα Ευχαριστιών για την Εργασία  είναι μια ετήσια αργία στην Ιαπωνία που εορτάζεται στις 23 Νοεμβρίου κάθε έτους, εκτός εάν αυτή η ημέρα συμπίπτει με Κυριακή, οπότε η αργία μεταφέρεται στη Δευτέρα.\nΟ νόμος που θεσπίζει την αργία την αναφέρει ως αφορμή για να τιμηθεί η εργασία, να"
+          "title": "Ημέρα της Εξέλιξης",
+          "description": "Η Ημέρα της Εξέλιξης είναι μια γιορτή προς τιμήν της επετείου της πρώτης έκδοσης του βιβλίου «Η καταγωγή των ειδών» του Τσαρλς Ντάργουιν στις 24 Νοεμβρίου 1859."
         }
       }
     },
     "science": {
       "category": "science",
       "categoryTitle": "Today in Science",
-      "title": "Coronary artery bypass",
-      "year": "",
+      "title": "Wright brothers incorporate",
+      "year": "1909",
       "badge": "Research & Discovery",
-      "description": "(source) In 1964, Dr. Michael E. DeBakey of Houston performed the first successful coronary artery bypass graft procedure.",
+      "description": "In 1909, the Wright brothers formed a million-dollar corporation for the commercial manufacture of airplanes.",
       "clubLink": "keeping-up-with-science.html",
       "clubName": "Keeping Up with Science",
       "source": "Today in Science History",
-      "sourceUrl": "https://todayinsci.com/11/11_23.htm",
+      "sourceUrl": "https://todayinsci.com/11/11_24.htm",
       "i18n": {
         "en": {
-          "title": "Coronary artery bypass",
-          "description": "(source) In 1964, Dr. Michael E. DeBakey of Houston performed the first successful coronary artery bypass graft procedure."
+          "title": "Wright brothers incorporate",
+          "description": "In 1909, the Wright brothers formed a million-dollar corporation for the commercial manufacture of airplanes."
         },
         "fr": {
-          "title": "Greffe de pontage de l&apos;artère coronaire",
-          "description": "(source) En 1964, le Dr Michael E. DeBakey, de Houston, a réalisé la première intervention réussie de pontage aorto-coronarien."
+          "title": "Les frères Wright créent une société",
+          "description": "En 1909, les frères Wright créèrent une société d'un million de dollars pour la fabrication commerciale d'avions."
         },
         "it": {
-          "title": "Bypass aortocoronarico",
-          "description": "(fonte) Nel 1964, il dottor Michael E. DeBakey di Houston eseguì il primo intervento riuscito di bypass aortocoronarico."
+          "title": "I fratelli Wright costituiscono una società",
+          "description": "Nel 1909, i fratelli Wright fondarono una società da un milione di dollari per la produzione commerciale di aeroplani."
         },
         "ru": {
-          "title": "Аорто-коронарное шунтирование",
-          "description": "(источник) В 1964 году доктор Майкл Э. Дебейки из Хьюстона провел первую успешную операцию аортокоронарного шунтирования."
+          "title": "Братья Райт регистрируют компанию",
+          "description": "В 1909 году братья Райт основали корпорацию стоимостью в миллион долларов для коммерческого производства самолетов."
         },
         "el": {
-          "title": "Παράκαμψη στεφανιαίας αρτηρίας",
-          "description": "(πηγή) Το 1964, ο Δρ. Michael E. DeBakey από το Χιούστον πραγματοποίηίσε την πρώτη επιτυχημένη επέμβαση αορτοστεφανιαίας παράκαμψης."
+          "title": "Οι αδελφοί Ράιτ ιδρύουν εταιρεία",
+          "description": "Το 1909, οι αδελφοί Ράιτ ίδρυσαν μια εταιρεία αξίας ενός εκατομμυρίου δολαρίων για την εμπορική κατασκευή αεροπλάνων."
         }
       }
     },
     "music": {
       "category": "music",
       "categoryTitle": "Today in Music",
-      "title": "Jeux d'eau",
-      "year": "1901",
+      "title": "Das Waldmadchen",
+      "year": "1800",
       "badge": "Music History",
-      "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
+      "description": "Weber's opera \"Das Waldmadchen\" premieres in Freiburg",
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
       "sourceUrl": "https://www.onthisday.com/music/",
       "i18n": {
         "en": {
-          "title": "Jeux d'eau",
-          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+          "title": "Das Waldmadchen",
+          "description": "Weber's opera \"Das Waldmadchen\" premieres in Freiburg"
         },
         "fr": {
-          "title": "Jeux d'eau",
-          "description": "Création de la composition pour piano « Jeux d'eau » de Maurice Ravel"
+          "title": "Das Waldmädchen",
+          "description": "L'opéra de Weber « Das Waldmädchen » est créé à Fribourg"
         },
         "it": {
-          "title": "Jeux d'eau",
-          "description": "Prima esecuzione della composizione per pianoforte \"Jeux d'eau\" di Maurice Ravel"
+          "title": "Das Waldmädchen",
+          "description": "L'opera di Weber \"Das Waldmädchen\" debutta a Friburgo"
         },
         "ru": {
-          "title": "Jeux d'eau",
-          "description": "Состоялась премьера фортепианной композиции Мориса Равеля «Игра воды»"
+          "title": "«Лесная дева»",
+          "description": "Премьера оперы Вебера «Лесная дева» во Фрайбурге"
         },
         "el": {
-          "title": "Jeux d'eau",
-          "description": "Πρώτη εκτέλεση της σύνθεσης για πιάνο του Μωρίς Ραβέλ «Jeux d'eau»"
+          "title": "Το κορίτσι του δάσους",
+          "description": "Πρεμιέρα της όπερας του Βέμπερ «Das Waldmadchen» στο Φράιμπουργκ"
         }
       }
     },
     "film": {
       "category": "film",
       "categoryTitle": "Today in Film & TV",
-      "title": "Gentlemen's Agreement",
-      "year": "1947",
+      "title": "Gasoline Alley",
+      "year": "1918",
       "badge": "Cinema & Screen",
-      "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
+      "description": "Newspaper cartoon \"Gasoline Alley\" first appears as a weekly feature on the Chicago Tribune's Sunday Rectangle page",
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
       "sourceUrl": "https://www.onthisday.com/film-tv/",
       "i18n": {
         "en": {
-          "title": "Gentlemen's Agreement",
-          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+          "title": "Gasoline Alley",
+          "description": "Newspaper cartoon \"Gasoline Alley\" first appears as a weekly feature on the Chicago Tribune's Sunday Rectangle page"
         },
         "fr": {
-          "title": "\"gentlemen's agreement\"",
-          "description": "« Gentlemen's Agreement », réalisé par Elia Kazan et interprété par Gregory Peck et Dorothy McGuire, sort en première à New York (meilleur film en 1948)."
+          "title": "Gasoline Alley",
+          "description": "La bande dessinée « Gasoline Alley » apparaît pour la première fois dans le Chicago Tribune, sous forme de publication hebdomadaire sur la page Sunday Rectangle."
         },
         "it": {
-          "title": "Gentlemen’s Agreement",
-          "description": "A New York viene proiettato per la prima volta \"Gente di rispetto\", diretto da Elia Kazan e interpretato da Gregory Peck e Dorothy McGuire (Miglior film nel 1948)"
+          "title": "Gasoline Alley",
+          "description": "La striscia a fumetti \"Gasoline Alley\" appare per la prima volta come rubrica settimanale sulla pagina Sunday Rectangle del Chicago Tribune"
         },
         "ru": {
-          "title": "Джентльменское соглашение",
-          "description": "В Нью-Йорке состоялась премьера фильма «Джентльменское соглашение» режиссера Элиа Казана с Грегори Пеком и Дороти Макгуайр в главных ролях (лучший фильм 1948 года)."
+          "title": "Газолин-алли",
+          "description": "Комикс «Газолин-алли» впервые появляется в качестве еженедельной рубрики на странице Sunday Rectangle газеты Chicago Tribune"
         },
         "el": {
-          "title": "Συμφωνία κυρίων!",
-          "description": "Πρεμιέρα στη Νέα Υόρκη της ταινίας «Συμφωνία Κυρίων» σε σκηνοθεσία του Ηλία Καζάν, με πρωταγωνιστές τον Γκρέγκορι Πεκ και τη Ντόροθι ΜακΓκουάιρ (Καλύτερη Ταινία 1948)"
+          "title": "Gasoline Alley",
+          "description": "Το ένθετο κόμικ «Gasoline Alley» εμφανίζεται για πρώτη φορά ως εβδομαδιαίο ένθετο στη σελίδα Sunday Rectangle της εφημερίδας Chicago Tribune"
         }
       }
     }
