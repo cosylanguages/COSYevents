@@ -1,4 +1,6 @@
 const assert = require('assert');
+const fs = require('fs');
+const path = require('path');
 const CosyAuth = require('../shared/js/cosy-auth.js');
 
 console.log('=== RUNNING COSYAUTH UNIT TESTS ===\n');
@@ -216,6 +218,17 @@ CosyAuth.init({ config: { enabled: false } }).then(() => {
   });
 
   console.log('✔ Passed Chip and Grants Renderer XSS Payload tests.\n');
+
+  // Test 8: Sign-in URLs keep the requested page and bust the cached login HTML
+  console.log('Test 8: Sign-in URL Redirect and Cache Version');
+  const authSource = fs.readFileSync(path.join(__dirname, '../shared/js/cosy-auth.js'), 'utf8');
+  const loginHtml = fs.readFileSync(path.join(__dirname, '../login.html'), 'utf8');
+  const accountHtml = fs.readFileSync(path.join(__dirname, '../account.html'), 'utf8');
+  assert.match(authSource, /login\.html\?v=20261125-1/);
+  assert.match(authSource, /redirectUrl \+= '&next='/);
+  assert.match(loginHtml, /cosy-auth\.js\?v=20261125-1/);
+  assert.match(accountHtml, /login\.html\?v=20261125-1&next=account\.html/);
+  console.log('✔ Passed Sign-in URL Redirect and Cache Version tests.\n');
 
   console.log('=== ALL COSYAUTH UNIT TESTS PASSED SUCCESSFULLY! ===');
 }).catch(err => {
