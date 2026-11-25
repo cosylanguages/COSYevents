@@ -491,12 +491,24 @@
     var dir = currentPath.replace(/[^/]*$/, '');
     var redirectUrl = currentOrigin + dir + 'login.html';
 
+    var next = null;
     if (typeof window !== 'undefined' && window.location && window.location.search) {
       var params = new URLSearchParams(window.location.search);
-      var next = params.get('next');
-      if (next) {
-        redirectUrl += '?next=' + encodeURIComponent(next);
+      next = params.get('next');
+    }
+
+    if (!next && currentPath && !/\/login\.html$/.test(currentPath)) {
+      var relPath = currentPath;
+      var idx = relPath.indexOf('/COSYevents/');
+      if (idx !== -1) relPath = relPath.substring(idx + '/COSYevents/'.length);
+      if (relPath.charAt(0) === '/') relPath = relPath.substring(1);
+      if (relPath && relPath !== 'login.html') {
+        next = relPath + window.location.search + window.location.hash;
       }
+    }
+
+    if (next) {
+      redirectUrl += '?next=' + encodeURIComponent(next);
     }
 
     return state.client.auth.signInWithOtp({
@@ -635,7 +647,7 @@
           if (idx !== -1) relPath = relPath.substring(idx + '/COSYevents/'.length);
           if (relPath.charAt(0) === '/') relPath = relPath.substring(1);
           if (relPath && relPath !== 'login.html') {
-            loginUrl += '?next=' + encodeURIComponent(relPath);
+            loginUrl += '?next=' + encodeURIComponent(relPath + window.location.search + window.location.hash);
           }
         }
 

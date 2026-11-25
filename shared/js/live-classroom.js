@@ -49,7 +49,7 @@
     }
 
     return window.supabase.createClient(config.SUPABASE_URL, config.SUPABASE_ANON_KEY, {
-      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+      auth: { storageKey: 'cosy-auth', persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
     });
   }
 
