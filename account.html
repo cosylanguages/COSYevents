@@ -113,7 +113,7 @@
 
         var session = window.CosyAuth.getSession();
         if (!session) {
-          window.location.href = 'login.html?next=account.html';
+          window.location.href = 'login.html?v=20261125-1&next=account.html';
           return;
         }
 
@@ -134,7 +134,7 @@
           btnGlobal.textContent = '🌐 ' + t('sign_out_all');
           btnGlobal.onclick = function () {
             window.CosyAuth.signOut({ scope: 'global' }).then(function () {
-              window.location.href = 'login.html';
+              window.location.href = 'login.html?v=20261125-1';
             });
           };
         }

@@ -489,7 +489,7 @@
     var currentOrigin = (typeof window !== 'undefined' && window.location) ? window.location.origin : '';
     var currentPath = (typeof window !== 'undefined' && window.location) ? window.location.pathname : '';
     var dir = currentPath.replace(/[^/]*$/, '');
-    var redirectUrl = currentOrigin + dir + 'login.html';
+    var redirectUrl = currentOrigin + dir + 'login.html?v=20261125-1';
 
     var next = null;
     if (typeof window !== 'undefined' && window.location && window.location.search) {
@@ -508,7 +508,7 @@
     }
 
     if (next) {
-      redirectUrl += '?next=' + encodeURIComponent(next);
+      redirectUrl += '&next=' + encodeURIComponent(next);
     }
 
     return state.client.auth.signInWithOtp({
@@ -640,14 +640,14 @@
       container.textContent = ''; // clear
 
       if (!signedIn) {
-        var loginUrl = state.baseUrl + 'login.html';
+        var loginUrl = state.baseUrl + 'login.html?v=20261125-1';
         if (typeof window !== 'undefined' && window.location) {
           var relPath = window.location.pathname;
           var idx = relPath.indexOf('/COSYevents/');
           if (idx !== -1) relPath = relPath.substring(idx + '/COSYevents/'.length);
           if (relPath.charAt(0) === '/') relPath = relPath.substring(1);
           if (relPath && relPath !== 'login.html') {
-            loginUrl += '?next=' + encodeURIComponent(relPath + window.location.search + window.location.hash);
+            loginUrl += '&next=' + encodeURIComponent(relPath + window.location.search + window.location.hash);
           }
         }
 
