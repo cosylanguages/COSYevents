@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Today's speaking wheel 🎡 : COSYlanguages</title>
+<link href="shared/images/logo.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<script src="shared/js/cosy-theme.js"></script>
+<link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
+<link rel="stylesheet" href="shared/css/sessions.css">
+<style>
+  .today-hero { background: linear-gradient(135deg, #416b49, #2f4f36); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
+  .today-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); margin: .4rem 0 .6rem; }
+  .today-hero p { max-width: 46rem; margin: 0 auto; opacity: .92; }
+  .today-kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; opacity: .8; }
+  .today-body { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+  .today-nav { display: flex; justify-content: center; gap: .6rem; flex-wrap: wrap; margin: 1rem 0 1.5rem; }
+  .today-nav a { border: 1px solid var(--border, #e2dccf); border-radius: 999px; padding: .35rem .9rem; font-size: .85rem; text-decoration: none; color: inherit; background: var(--cream, #FAF7F2); }
+  .today-nav a:hover { background: #EFEAE0; }
+  .week-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: .4rem; }
+  .week-list a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .7rem .9rem; border-radius: 12px; text-decoration: none; color: inherit; border: 1px solid var(--border, #e2dccf); background: #fff; }
+  .week-list a:hover { background: var(--cream, #FAF7F2); }
+  .week-list .day { font-size: .78rem; color: #7a746e; text-transform: uppercase; letter-spacing: .08em; }
+  .week-list .is-today { border-color: #416b49; box-shadow: inset 4px 0 0 #416b49; }
+  .week-list .is-today .day { color: #416b49; font-weight: 700; }
+  .today-note { margin-top: 2rem; font-size: .9rem; color: #6b6560; text-align: center; }
+</style>
+</head>
+<body>
+<div data-ecosystem-strip data-self="events"></div>
+
+<nav id="cosy-nav"></nav>
+
+<header class="today-hero">
+  <span class="today-kicker">Today's speaking wheel</span>
+  <h1 id="today-title">Loading…</h1>
+  <p data-cms-id="p-1-7d33ff">One wheel a day, Monday to Sunday. Eight prompts, a prep timer, a speaking timer. Variations every day.</p>
+</header>
+
+<main class="today-body">
+  <div class="today-nav">
+    <a id="today-prev" href="#">← Yesterday</a>
+    <a id="today-next" href="#">Tomorrow →</a>
+    <a href="speaking-clubs.html">All clubs</a>
+  </div>
+
+  <div id="today-wheel"></div>
+
+  <ul class="week-list" id="week-list"></ul>
+
+  <p data-cms-id="p-2-c8d129" class="today-note">Prefer another club today? The wheel is only a suggestion. <a href="speaking-clubs.html">Pick a club</a> or <a href="index.html">see what is on</a>.</p>
+</main>
+
+<script src="shared/js/cosyevents-session.js"></script>
+<script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
+<script src="shared/js/daily-wheel.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var api = window.CosyDailyWheel;
+  if (!api) return;
+
+  function dateKey(d) {
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+  function shift(base, days) {
+    var d = new Date(base.getTime());
+    d.setDate(d.getDate() + days);
+    return d;
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  var requested = params.get('date');
+  var shown = /^\d{4}-\d{2}-\d{2}$/.test(requested || '') ? new Date(requested + 'T12:00:00') : new Date();
+  var todayKey = dateKey(new Date());
+
+  var wheel = api.wheelForDate(shown);
+  document.getElementById('today-title').textContent = wheel.title;
+
+  var host = document.getElementById('today-wheel');
+  host.setAttribute('data-daily-wheel', wheel.id);
+  host.setAttribute('data-src', 'data/wheels/' + wheel.id + '.json');
+  host.setAttribute('data-date', dateKey(shown));
+  api.initAll();
+
+  document.getElementById('today-prev').href = 'today.html?date=' + dateKey(shift(shown, -1));
+  document.getElementById('today-next').href = 'today.html?date=' + dateKey(shift(shown, 1));
+
+  var names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var list = document.getElementById('week-list');
+  api.WEEKLY_ROTATION.slice().sort(function (a, b) {
+    return ((a.weekday + 6) % 7) - ((b.weekday + 6) % 7);
+  }).forEach(function (w) {
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = w.page;
+    if (w.id === wheel.id) a.className = 'is-today';
+    a.innerHTML = '<span>' + w.title + '</span><span class="day">' + names[w.weekday] + '</span>';
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+
+  if (dateKey(shown) !== todayKey) {
+    var back = document.createElement('a');
+    back.href = 'today.html';
+    back.textContent = 'Back to today';
+    back.className = 'today-nav-back';
+    document.querySelector('.today-nav').appendChild(back);
+  }
+});
+</script>
+</body>
+</html>

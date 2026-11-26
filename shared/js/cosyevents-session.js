@@ -270,6 +270,7 @@
           '</button>' +
           '<div id="ce-clubs-panel" class="ce-clubs-panel" role="region" aria-label="Event categories" hidden>' +
             '<div class="ce-clubs-grid">' +
+              '<a class="ce-club-link ce-club-link-today" href="' + root + 'today.html">🎡 Today\'s wheel</a>' +
               clubs.map(function (c) {
                 var targetRel = c[1];
                 if (window.CosyLang && window.CosyLang.equivalentPath) {

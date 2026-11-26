@@ -89,7 +89,15 @@
     updateUrlParams() {
       if (typeof window === 'undefined' || !window.history || !window.location) return;
       try {
-        const params = new URLSearchParams();
+        // Start from the current query so other features keep their deep-link
+        // parameters (the daily wheel uses band, date and prompt).
+        const params = new URLSearchParams(window.location.search);
+        params.delete('q');
+        params.delete('format');
+        params.delete('club');
+        params.delete('lang');
+        params.delete('level');
+        params.delete('saved');
         if (this.state.searchQuery) params.set('q', this.state.searchQuery);
         if (this.state.selectedType !== 'ALL') params.set('format', this.state.selectedType);
         if (this.state.selectedSpeakingClub !== 'ALL') params.set('club', this.state.selectedSpeakingClub);
