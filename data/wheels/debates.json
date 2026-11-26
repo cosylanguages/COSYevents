@@ -1,0 +1,834 @@
+{
+  "id": "debates",
+  "version": 1,
+  "title": "Debatable & Relatable",
+  "subtitle": "Pick a side and defend it with as many arguments as you can",
+  "lang": "en",
+  "bands": [
+    "a0-a1",
+    "a2",
+    "b1-b2",
+    "c1-c2"
+  ],
+  "task": {
+    "prep_seconds": 300,
+    "speak_seconds": 300,
+    "output": "spoken"
+  },
+  "rules": {
+    "research_allowed": true,
+    "ai_allowed": false
+  },
+  "prompts": [
+    {
+      "band": "a0-a1",
+      "prompt": "Which is better for you?",
+      "side_a": "Cats",
+      "side_b": "Dogs",
+      "follow_ups": [
+        "Why do you think so?"
+      ],
+      "structures": [
+        "comparatives",
+        "because"
+      ],
+      "vocabulary": [
+        "pet",
+        "friendly",
+        "quiet"
+      ],
+      "id": "en:wheel-debates:a0-a1:01",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Which season do you like more?",
+      "side_a": "Summer",
+      "side_b": "Winter",
+      "follow_ups": [
+        "What do you do in that season?"
+      ],
+      "structures": [
+        "comparatives",
+        "like + noun"
+      ],
+      "vocabulary": [
+        "warm",
+        "cold",
+        "holiday"
+      ],
+      "id": "en:wheel-debates:a0-a1:02",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Which is better in the evening?",
+      "side_a": "Your phone",
+      "side_b": "A book",
+      "follow_ups": [
+        "How long do you use it?"
+      ],
+      "structures": [
+        "comparatives",
+        "present simple"
+      ],
+      "vocabulary": [
+        "screen",
+        "story",
+        "sleep"
+      ],
+      "id": "en:wheel-debates:a0-a1:03",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Where is life better?",
+      "side_a": "The city",
+      "side_b": "A small village",
+      "follow_ups": [
+        "What is there to do?"
+      ],
+      "structures": [
+        "there is / there are",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "busy",
+        "quiet",
+        "shop"
+      ],
+      "id": "en:wheel-debates:a0-a1:04",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Which breakfast is better?",
+      "side_a": "Something sweet",
+      "side_b": "Something savoury",
+      "follow_ups": [
+        "What do you eat at the weekend?"
+      ],
+      "structures": [
+        "food vocabulary",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "sweet",
+        "salty",
+        "breakfast"
+      ],
+      "id": "en:wheel-debates:a0-a1:05",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "When are you at your best?",
+      "side_a": "In the morning",
+      "side_b": "At night",
+      "follow_ups": [
+        "What time do you get up?"
+      ],
+      "structures": [
+        "time expressions",
+        "present simple"
+      ],
+      "vocabulary": [
+        "early",
+        "late",
+        "energy"
+      ],
+      "id": "en:wheel-debates:a0-a1:06",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Which is more fun?",
+      "side_a": "TV",
+      "side_b": "Computer games",
+      "follow_ups": [
+        "Who do you play or watch with?"
+      ],
+      "structures": [
+        "comparatives",
+        "present simple"
+      ],
+      "vocabulary": [
+        "watch",
+        "play",
+        "fun"
+      ],
+      "id": "en:wheel-debates:a0-a1:07",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "How do you move around your town?",
+      "side_a": "By bike",
+      "side_b": "By bus",
+      "follow_ups": [
+        "How long does it take?"
+      ],
+      "structures": [
+        "transport vocabulary",
+        "by + noun"
+      ],
+      "vocabulary": [
+        "bike",
+        "bus",
+        "fast"
+      ],
+      "id": "en:wheel-debates:a0-a1:08",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Which is a better dinner?",
+      "side_a": "Pizza",
+      "side_b": "A burger",
+      "follow_ups": [
+        "What do you put on it?"
+      ],
+      "structures": [
+        "food adjectives",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "cheese",
+        "salad",
+        "tasty"
+      ],
+      "id": "en:wheel-debates:a0-a1:09",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Where would you rather spend a day?",
+      "side_a": "The beach",
+      "side_b": "The mountains",
+      "follow_ups": [
+        "Who would you go with?"
+      ],
+      "structures": [
+        "would rather",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "sea",
+        "walk",
+        "sun"
+      ],
+      "id": "en:wheel-debates:a0-a1:10",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Where do you prefer to shop?",
+      "side_a": "Online",
+      "side_b": "In a shop",
+      "follow_ups": [
+        "What do you never buy online?"
+      ],
+      "structures": [
+        "prefer / would rather",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "delivery",
+        "try on",
+        "price"
+      ],
+      "id": "en:wheel-debates:a2:11",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "What is better for students?",
+      "side_a": "Homework",
+      "side_b": "No homework",
+      "follow_ups": [
+        "How much homework is too much?"
+      ],
+      "structures": [
+        "opinion phrases",
+        "should"
+      ],
+      "vocabulary": [
+        "practice",
+        "free time",
+        "tired"
+      ],
+      "id": "en:wheel-debates:a2:12",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "What is better after school?",
+      "side_a": "Living with your parents",
+      "side_b": "Living alone",
+      "follow_ups": [
+        "What is the hardest part?"
+      ],
+      "structures": [
+        "comparatives",
+        "present simple"
+      ],
+      "vocabulary": [
+        "rent",
+        "independent",
+        "help"
+      ],
+      "id": "en:wheel-debates:a2:13",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "How should people travel in cities?",
+      "side_a": "By car",
+      "side_b": "By public transport",
+      "follow_ups": [
+        "What is your city like?"
+      ],
+      "structures": [
+        "transport",
+        "modals"
+      ],
+      "vocabulary": [
+        "traffic",
+        "cheap",
+        "comfortable"
+      ],
+      "id": "en:wheel-debates:a2:14",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Which is better for reading?",
+      "side_a": "Paper books",
+      "side_b": "E-books",
+      "follow_ups": [
+        "Do you read in bed?"
+      ],
+      "structures": [
+        "comparatives",
+        "present simple"
+      ],
+      "vocabulary": [
+        "screen",
+        "paper",
+        "light"
+      ],
+      "id": "en:wheel-debates:a2:15",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "What is better on a busy day?",
+      "side_a": "Cooking at home",
+      "side_b": "Takeaway food",
+      "follow_ups": [
+        "What do you usually order?"
+      ],
+      "structures": [
+        "present simple",
+        "frequency"
+      ],
+      "vocabulary": [
+        "recipe",
+        "order",
+        "healthy"
+      ],
+      "id": "en:wheel-debates:a2:16",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Which do you prefer at work or school?",
+      "side_a": "Group work",
+      "side_b": "Working alone",
+      "follow_ups": [
+        "What is difficult about each?"
+      ],
+      "structures": [
+        "comparatives",
+        "preference verbs"
+      ],
+      "vocabulary": [
+        "team",
+        "share",
+        "quiet"
+      ],
+      "id": "en:wheel-debates:a2:17",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "What is better for your health?",
+      "side_a": "A sport",
+      "side_b": "The gym",
+      "follow_ups": [
+        "How often do you do it?"
+      ],
+      "structures": [
+        "present simple",
+        "frequency adverbs"
+      ],
+      "vocabulary": [
+        "fit",
+        "strong",
+        "routine"
+      ],
+      "id": "en:wheel-debates:a2:18",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "What should schools have?",
+      "side_a": "A school uniform",
+      "side_b": "Your own clothes",
+      "follow_ups": [
+        "What do you wear now?"
+      ],
+      "structures": [
+        "should",
+        "opinion"
+      ],
+      "vocabulary": [
+        "uniform",
+        "comfortable",
+        "expensive"
+      ],
+      "id": "en:wheel-debates:a2:19",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Which is more useful today?",
+      "side_a": "A video blog",
+      "side_b": "A written blog",
+      "follow_ups": [
+        "Which do you watch or read?"
+      ],
+      "structures": [
+        "comparatives",
+        "media vocabulary"
+      ],
+      "vocabulary": [
+        "watch",
+        "read",
+        "subscribe"
+      ],
+      "id": "en:wheel-debates:a2:20",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Where is work more productive?",
+      "side_a": "Remote work",
+      "side_b": "The office",
+      "follow_ups": [
+        "What does your ideal week look like?",
+        "Which jobs cannot be remote?"
+      ],
+      "structures": [
+        "comparatives",
+        "modals of obligation"
+      ],
+      "vocabulary": [
+        "commute",
+        "focus",
+        "collaboration"
+      ],
+      "id": "en:wheel-debates:b1-b2:21",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Which is better for friendships?",
+      "side_a": "Social media",
+      "side_b": "Meeting face to face",
+      "follow_ups": [
+        "Has that changed for you in ten years?"
+      ],
+      "structures": [
+        "present perfect",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "maintain",
+        "shallow",
+        "presence"
+      ],
+      "id": "en:wheel-debates:b1-b2:22",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "What is the better choice after school?",
+      "side_a": "A gap year",
+      "side_b": "Straight to university",
+      "follow_ups": [
+        "What would you tell your younger self?"
+      ],
+      "structures": [
+        "conditionals",
+        "advice modals"
+      ],
+      "vocabulary": [
+        "maturity",
+        "momentum",
+        "experience"
+      ],
+      "id": "en:wheel-debates:b1-b2:23",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Who teaches languages better?",
+      "side_a": "An AI tutor",
+      "side_b": "A human teacher",
+      "follow_ups": [
+        "Where does each one fail?",
+        "Would you pay for either?"
+      ],
+      "structures": [
+        "comparatives",
+        "speculation"
+      ],
+      "vocabulary": [
+        "feedback",
+        "patience",
+        "nuance"
+      ],
+      "id": "en:wheel-debates:b1-b2:24",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "How should city transport be paid for?",
+      "side_a": "Free public transport",
+      "side_b": "Tickets and fares",
+      "follow_ups": [
+        "Who should pay instead?",
+        "What would change in your city?"
+      ],
+      "structures": [
+        "conditionals",
+        "passive"
+      ],
+      "vocabulary": [
+        "subsidy",
+        "congestion",
+        "revenue"
+      ],
+      "id": "en:wheel-debates:b1-b2:25",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Which measures learning better?",
+      "side_a": "Exams",
+      "side_b": "Coursework",
+      "follow_ups": [
+        "Which did you prefer at school?"
+      ],
+      "structures": [
+        "comparatives",
+        "passive voice"
+      ],
+      "vocabulary": [
+        "assessment",
+        "pressure",
+        "deadline"
+      ],
+      "id": "en:wheel-debates:b1-b2:26",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Where would you rather live?",
+      "side_a": "A big city",
+      "side_b": "The countryside",
+      "follow_ups": [
+        "What would you miss?",
+        "What would you gain?"
+      ],
+      "structures": [
+        "would rather",
+        "concession"
+      ],
+      "vocabulary": [
+        "opportunity",
+        "space",
+        "isolation"
+      ],
+      "id": "en:wheel-debates:b1-b2:27",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "How should films be watched?",
+      "side_a": "Streaming at home",
+      "side_b": "At the cinema",
+      "follow_ups": [
+        "What was the last film you saw?"
+      ],
+      "structures": [
+        "comparatives",
+        "past simple"
+      ],
+      "vocabulary": [
+        "screen",
+        "atmosphere",
+        "release"
+      ],
+      "id": "en:wheel-debates:b1-b2:28",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "How should we pay?",
+      "side_a": "Cashless",
+      "side_b": "Cash",
+      "follow_ups": [
+        "Who is left behind?",
+        "What do you use most?"
+      ],
+      "structures": [
+        "modals",
+        "passive"
+      ],
+      "vocabulary": [
+        "convenient",
+        "traceable",
+        "excluded"
+      ],
+      "id": "en:wheel-debates:b1-b2:29",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "How do people learn a language best?",
+      "side_a": "Studying grammar",
+      "side_b": "Immersion",
+      "follow_ups": [
+        "What worked for you?",
+        "Can you combine them?"
+      ],
+      "structures": [
+        "comparatives",
+        "present perfect"
+      ],
+      "vocabulary": [
+        "accuracy",
+        "fluency",
+        "exposure"
+      ],
+      "id": "en:wheel-debates:b1-b2:30",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Which is the fairer safety net?",
+      "side_a": "Universal basic income",
+      "side_b": "Means-tested welfare",
+      "follow_ups": [
+        "Who gains and who loses?",
+        "What would you pilot first?"
+      ],
+      "structures": [
+        "conditionals",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "universal",
+        "targeted",
+        "incentive"
+      ],
+      "id": "en:wheel-debates:c1-c2:31",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "How should borders be managed?",
+      "side_a": "Open borders",
+      "side_b": "Managed migration",
+      "follow_ups": [
+        "What would change in ten years?"
+      ],
+      "structures": [
+        "modals",
+        "concession"
+      ],
+      "vocabulary": [
+        "sovereignty",
+        "labour",
+        "integration"
+      ],
+      "id": "en:wheel-debates:c1-c2:32",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Who should decide what we read?",
+      "side_a": "Algorithmic feeds",
+      "side_b": "Human editors",
+      "follow_ups": [
+        "Which do you trust more, and why?"
+      ],
+      "structures": [
+        "passive",
+        "hedging"
+      ],
+      "vocabulary": [
+        "curation",
+        "bias",
+        "reach"
+      ],
+      "id": "en:wheel-debates:c1-c2:33",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Which working week is better?",
+      "side_a": "Four days",
+      "side_b": "Five days",
+      "follow_ups": [
+        "Would output really fall?",
+        "Who would it hurt?"
+      ],
+      "structures": [
+        "conditionals",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "productivity",
+        "burnout",
+        "wage"
+      ],
+      "id": "en:wheel-debates:c1-c2:34",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Which principle should guide rewards?",
+      "side_a": "Meritocracy",
+      "side_b": "Equality of outcome",
+      "follow_ups": [
+        "What does merit actually measure?"
+      ],
+      "structures": [
+        "nominalisation",
+        "contrast"
+      ],
+      "vocabulary": [
+        "merit",
+        "equity",
+        "advantage"
+      ],
+      "id": "en:wheel-debates:c1-c2:35",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Where should energy money go?",
+      "side_a": "Nuclear",
+      "side_b": "Renewables",
+      "follow_ups": [
+        "What about waste and storage?",
+        "What is politically possible?"
+      ],
+      "structures": [
+        "modals of speculation",
+        "passive"
+      ],
+      "vocabulary": [
+        "baseload",
+        "intermittent",
+        "risk"
+      ],
+      "id": "en:wheel-debates:c1-c2:36",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Which do you trade away?",
+      "side_a": "Privacy",
+      "side_b": "Security",
+      "follow_ups": [
+        "Where is the line for you?"
+      ],
+      "structures": [
+        "conditionals",
+        "concession"
+      ],
+      "vocabulary": [
+        "surveillance",
+        "encryption",
+        "consent"
+      ],
+      "id": "en:wheel-debates:c1-c2:37",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "How should speech be limited?",
+      "side_a": "Cancel culture",
+      "side_b": "Absolute free speech",
+      "follow_ups": [
+        "Who decides the limit?",
+        "What about harm?"
+      ],
+      "structures": [
+        "modals",
+        "passive"
+      ],
+      "vocabulary": [
+        "accountability",
+        "censorship",
+        "harm"
+      ],
+      "id": "en:wheel-debates:c1-c2:38",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Where should public money go?",
+      "side_a": "Space exploration",
+      "side_b": "Ocean exploration",
+      "follow_ups": [
+        "What has each given us?"
+      ],
+      "structures": [
+        "present perfect",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "frontier",
+        "climate",
+        "discovery"
+      ],
+      "id": "en:wheel-debates:c1-c2:39",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "How should universities admit students?",
+      "side_a": "Standardised tests",
+      "side_b": "Holistic admissions",
+      "follow_ups": [
+        "Which predicts success better?"
+      ],
+      "structures": [
+        "passive",
+        "hedging"
+      ],
+      "vocabulary": [
+        "aptitude",
+        "context",
+        "fairness"
+      ],
+      "id": "en:wheel-debates:c1-c2:40",
+      "lang": "en"
+    }
+  ]
+}

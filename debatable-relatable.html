@@ -66,6 +66,8 @@
 <a class="back-link" href="speaking-clubs.html" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--muted); font-size: 0.9rem;">← All Speaking Clubs</a>
 <div class="club-content-grid" style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
 <div class="club-main">
+<div data-daily-wheel="debates" data-src="data/wheels/debates.json" data-band="b1-b2" data-lang="en"></div>
+
 <!-- STUDENT/TEACHER/ADMIN CONTENT -->
 <div>
 <div class="section-header" style="margin-bottom: 1.5rem;">
@@ -517,7 +519,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-</script><script src="shared/js/cosyevents-session.js"></script>
+</script><script src="shared/js/daily-wheel.js" defer></script>
+<script src="shared/js/cosyevents-session.js"></script>
   <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
 </body>
 </html>
