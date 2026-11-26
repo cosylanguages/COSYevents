@@ -1,0 +1,783 @@
+{
+  "id": "karaoke",
+  "version": 1,
+  "title": "Karaoke Club",
+  "subtitle": "Name the song, sing a line, then talk about it",
+  "lang": "en",
+  "bands": [
+    "a0-a1",
+    "a2",
+    "b1-b2",
+    "c1-c2"
+  ],
+  "task": {
+    "prep_seconds": 120,
+    "speak_seconds": 300,
+    "output": "spoken and sung"
+  },
+  "rules": {
+    "research_allowed": true,
+    "ai_allowed": false
+  },
+  "prompts": [
+    {
+      "band": "a0-a1",
+      "prompt": "A song for a birthday.",
+      "sing": "Sing the first line of “Happy Birthday”.",
+      "follow_ups": [
+        "When do people sing it?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "birthday",
+        "sing",
+        "party"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:01",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A song about love.",
+      "sing": "Sing one word from the song.",
+      "follow_ups": [
+        "Do you like this song?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "love",
+        "song",
+        "words"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:02",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A song you know in English.",
+      "sing": "Sing the part you know best.",
+      "follow_ups": [
+        "Where did you learn it?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "know",
+        "learn",
+        "English"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:03",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A song from your childhood.",
+      "sing": "Sing one line from memory.",
+      "follow_ups": [
+        "Who sang it to you?"
+      ],
+      "structures": [
+        "past simple"
+      ],
+      "vocabulary": [
+        "child",
+        "memory",
+        "family"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:04",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A song with a colour in the title.",
+      "sing": "Sing the title.",
+      "follow_ups": [
+        "What colour is in the song?"
+      ],
+      "structures": [
+        "colour words"
+      ],
+      "vocabulary": [
+        "colour",
+        "title",
+        "song"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:05",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A song for a party.",
+      "sing": "Sing the chorus, even badly.",
+      "follow_ups": [
+        "What do people do at your parties?"
+      ],
+      "structures": [
+        "present simple",
+        "imperatives"
+      ],
+      "vocabulary": [
+        "party",
+        "dance",
+        "chorus"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:06",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A song that makes you dance.",
+      "sing": "Sing and move a little.",
+      "follow_ups": [
+        "When do you hear it?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "dance",
+        "move",
+        "music"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:07",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A song about the weather.",
+      "sing": "Sing the line about the weather.",
+      "follow_ups": [
+        "What is the weather today?"
+      ],
+      "structures": [
+        "weather words"
+      ],
+      "vocabulary": [
+        "rain",
+        "sun",
+        "wind"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:08",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A song you sing in the shower.",
+      "sing": "Sing it now, no excuses.",
+      "follow_ups": [
+        "Do you sing loudly?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "shower",
+        "loud",
+        "funny"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:09",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A song with a number in it.",
+      "sing": "Sing the number line.",
+      "follow_ups": [
+        "Can you count in the song?"
+      ],
+      "structures": [
+        "numbers"
+      ],
+      "vocabulary": [
+        "one",
+        "two",
+        "number"
+      ],
+      "id": "en:wheel-karaoke:a0-a1:10",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song that makes you happy.",
+      "sing": "Sing the part that makes you happy.",
+      "follow_ups": [
+        "When did you first hear it?",
+        "Who do you listen to it with?"
+      ],
+      "structures": [
+        "present simple",
+        "past simple"
+      ],
+      "vocabulary": [
+        "happy",
+        "mood",
+        "favourite"
+      ],
+      "id": "en:wheel-karaoke:a2:11",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song from your country.",
+      "sing": "Sing one line, in your language.",
+      "follow_ups": [
+        "What is the song about?"
+      ],
+      "structures": [
+        "present simple",
+        "translation"
+      ],
+      "vocabulary": [
+        "country",
+        "language",
+        "traditional"
+      ],
+      "id": "en:wheel-karaoke:a2:12",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song you would sing at a wedding.",
+      "sing": "Sing the chorus.",
+      "follow_ups": [
+        "Why that song?"
+      ],
+      "structures": [
+        "would",
+        "present simple"
+      ],
+      "vocabulary": [
+        "wedding",
+        "celebrate",
+        "guests"
+      ],
+      "id": "en:wheel-karaoke:a2:13",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song you know by heart.",
+      "sing": "Sing two lines without the lyrics.",
+      "follow_ups": [
+        "How did you learn it?"
+      ],
+      "structures": [
+        "present perfect"
+      ],
+      "vocabulary": [
+        "lyrics",
+        "memory",
+        "heart"
+      ],
+      "id": "en:wheel-karaoke:a2:14",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song with a name in the title.",
+      "sing": "Sing the name.",
+      "follow_ups": [
+        "Do you know someone with that name?"
+      ],
+      "structures": [
+        "proper nouns"
+      ],
+      "vocabulary": [
+        "name",
+        "title",
+        "person"
+      ],
+      "id": "en:wheel-karaoke:a2:15",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song that reminds you of school.",
+      "sing": "Sing the part you remember.",
+      "follow_ups": [
+        "What year was it?"
+      ],
+      "structures": [
+        "past simple",
+        "remind of"
+      ],
+      "vocabulary": [
+        "school",
+        "remember",
+        "year"
+      ],
+      "id": "en:wheel-karaoke:a2:16",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song for a long drive.",
+      "sing": "Sing the chorus like you are driving.",
+      "follow_ups": [
+        "Where would you drive?"
+      ],
+      "structures": [
+        "would",
+        "imperatives"
+      ],
+      "vocabulary": [
+        "drive",
+        "road",
+        "loud"
+      ],
+      "id": "en:wheel-karaoke:a2:17",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song that was popular when you were fifteen.",
+      "sing": "Sing the part everyone knew.",
+      "follow_ups": [
+        "Did you like it then?"
+      ],
+      "structures": [
+        "past simple",
+        "used to"
+      ],
+      "vocabulary": [
+        "popular",
+        "teenager",
+        "radio"
+      ],
+      "id": "en:wheel-karaoke:a2:18",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song in a language you do not speak.",
+      "sing": "Sing it as well as you can.",
+      "follow_ups": [
+        "What do you think it means?"
+      ],
+      "structures": [
+        "speculation",
+        "present simple"
+      ],
+      "vocabulary": [
+        "language",
+        "sound",
+        "guess"
+      ],
+      "id": "en:wheel-karaoke:a2:19",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A song you would sing to a baby.",
+      "sing": "Sing it softly.",
+      "follow_ups": [
+        "Who sang to you?"
+      ],
+      "structures": [
+        "would",
+        "past simple"
+      ],
+      "vocabulary": [
+        "baby",
+        "soft",
+        "lullaby"
+      ],
+      "id": "en:wheel-karaoke:a2:20",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A song whose lyrics surprised you when you understood them.",
+      "sing": "Sing the line that surprised you.",
+      "follow_ups": [
+        "What did you think it meant before?",
+        "Does the meaning change the song?"
+      ],
+      "structures": [
+        "past simple vs present perfect",
+        "contrast"
+      ],
+      "vocabulary": [
+        "lyrics",
+        "misheard",
+        "meaning"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:21",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A song that changed meaning for you over time.",
+      "sing": "Sing the line that changed.",
+      "follow_ups": [
+        "What changed: you or the song?"
+      ],
+      "structures": [
+        "used to",
+        "present perfect"
+      ],
+      "vocabulary": [
+        "meaning",
+        "shift",
+        "experience"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:22",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A protest song that still works.",
+      "sing": "Sing the line people shout.",
+      "follow_ups": [
+        "What is it protesting?",
+        "Does protest music still matter?"
+      ],
+      "structures": [
+        "passive",
+        "rhetorical questions"
+      ],
+      "vocabulary": [
+        "protest",
+        "power",
+        "shout"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:23",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A song you disliked and now like.",
+      "sing": "Sing the part you now enjoy.",
+      "follow_ups": [
+        "What changed your mind?"
+      ],
+      "structures": [
+        "used to",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "taste",
+        "change",
+        "grow"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:24",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A duet you would sing with someone.",
+      "sing": "Sing both parts, or one and describe the other.",
+      "follow_ups": [
+        "Who would you sing it with?"
+      ],
+      "structures": [
+        "conditionals",
+        "would"
+      ],
+      "vocabulary": [
+        "duet",
+        "harmony",
+        "partner"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:25",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A song that tells a story.",
+      "sing": "Sing the line where the story turns.",
+      "follow_ups": [
+        "What happens in the story?",
+        "Does the music follow the story?"
+      ],
+      "structures": [
+        "narrative tenses",
+        "sequencing"
+      ],
+      "vocabulary": [
+        "story",
+        "verse",
+        "character"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:26",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A song that is better live.",
+      "sing": "Sing the part the crowd sings.",
+      "follow_ups": [
+        "Why is it better live?"
+      ],
+      "structures": [
+        "comparatives",
+        "present simple"
+      ],
+      "vocabulary": [
+        "live",
+        "crowd",
+        "energy"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:27",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A cover that is better than the original.",
+      "sing": "Sing a line from the cover.",
+      "follow_ups": [
+        "Which version came first?",
+        "What did the cover change?"
+      ],
+      "structures": [
+        "comparatives",
+        "passive"
+      ],
+      "vocabulary": [
+        "cover",
+        "original",
+        "version"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:28",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A song for heartbreak.",
+      "sing": "Sing the line everyone knows.",
+      "follow_ups": [
+        "Why do sad songs help?"
+      ],
+      "structures": [
+        "present simple",
+        "gerunds"
+      ],
+      "vocabulary": [
+        "heartbreak",
+        "sad",
+        "comfort"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:29",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A song that defined a decade.",
+      "sing": "Sing the opening line.",
+      "follow_ups": [
+        "What does it say about that time?"
+      ],
+      "structures": [
+        "past simple",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "decade",
+        "era",
+        "anthem"
+      ],
+      "id": "en:wheel-karaoke:b1-b2:30",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A lyric that has aged badly.",
+      "sing": "Sing the line and explain the problem.",
+      "follow_ups": [
+        "Should we still sing it?",
+        "Who decides?"
+      ],
+      "structures": [
+        "modals",
+        "concession"
+      ],
+      "vocabulary": [
+        "dated",
+        "offensive",
+        "context"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:31",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A song that works as poetry on the page.",
+      "sing": "Read a line as a poem, then sing it.",
+      "follow_ups": [
+        "What does the music add?"
+      ],
+      "structures": [
+        "contrast",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "poetry",
+        "rhythm",
+        "image"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:32",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A national anthem and what it claims.",
+      "sing": "Sing the line you find most revealing.",
+      "follow_ups": [
+        "What does it leave out?",
+        "Should anthems be rewritten?"
+      ],
+      "structures": [
+        "passive",
+        "rhetorical questions"
+      ],
+      "vocabulary": [
+        "anthem",
+        "nation",
+        "claim"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:33",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A song that was censored somewhere.",
+      "sing": "Sing the line that caused it.",
+      "follow_ups": [
+        "Was the ban justified?",
+        "What does a ban achieve?"
+      ],
+      "structures": [
+        "passive",
+        "conditionals"
+      ],
+      "vocabulary": [
+        "censor",
+        "ban",
+        "provoke"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:34",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A song whose translation changes it completely.",
+      "sing": "Sing a line and give your translation.",
+      "follow_ups": [
+        "What is untranslatable?"
+      ],
+      "structures": [
+        "translation",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "translate",
+        "meaning",
+        "loss"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:35",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A song about a city.",
+      "sing": "Sing the line that names it.",
+      "follow_ups": [
+        "Does it sound like the place?"
+      ],
+      "structures": [
+        "present simple",
+        "sensory language"
+      ],
+      "vocabulary": [
+        "city",
+        "place",
+        "atmosphere"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:36",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A song sung in a dialect.",
+      "sing": "Sing a line and say what it means.",
+      "follow_ups": [
+        "Why sing in dialect?",
+        "Who is it for?"
+      ],
+      "structures": [
+        "register",
+        "explanation"
+      ],
+      "vocabulary": [
+        "dialect",
+        "regional",
+        "identity"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:37",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A song about work.",
+      "sing": "Sing the line about the job.",
+      "follow_ups": [
+        "Does it romanticise or expose?"
+      ],
+      "structures": [
+        "present simple",
+        "contrast"
+      ],
+      "vocabulary": [
+        "labour",
+        "shift",
+        "wage"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:38",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A song about money.",
+      "sing": "Sing the line about money.",
+      "follow_ups": [
+        "What does the song believe about it?"
+      ],
+      "structures": [
+        "present simple",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "money",
+        "wealth",
+        "desire"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:39",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A song you would choose to be remembered by.",
+      "sing": "Sing the line you want people to hear.",
+      "follow_ups": [
+        "Why that line?",
+        "What would people misunderstand?"
+      ],
+      "structures": [
+        "conditionals",
+        "modal perfect"
+      ],
+      "vocabulary": [
+        "legacy",
+        "memory",
+        "choice"
+      ],
+      "id": "en:wheel-karaoke:c1-c2:40",
+      "lang": "en"
+    }
+  ]
+}
