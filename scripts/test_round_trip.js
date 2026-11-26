@@ -66,7 +66,6 @@ const CLUB_SESSIONS = {
   'mind-matters': [
     'sessions/mind-matters/anticipatory-grief.html',
     'sessions/mind-matters/aspiration-vs-inspiration-intermediate.html',
-    'sessions/mind-matters/aspiration-vs-inspiration-upper-intermediate.html',
     'sessions/mind-matters/blue-eyes-brown-eyes-experiment.html',
     'sessions/mind-matters/bluewashing-intermediate.html'
   ],

@@ -3,7 +3,7 @@
 **Audit Date:** November 2026
 **Auditor:** OpenHands (AI Software Engineer)
 **Repository:** COSYevents (`cosylanguages/COSYevents`)
-**Status:** REMEDIATED — 11 dead source citations, 1 empty placeholder, and 2 duplicate upper-level cards remain for editorial review
+**Status:** REMEDIATED — 11 dead source citations remain for editorial review
 
 ---
 
@@ -30,12 +30,12 @@ This report serves as the consolidated single source of truth for the audit stat
 ## 2. Session Content & Catalog Verification
 
 ### Master Catalog Statistics (`data/sessions.json`)
-- **Total Session Files on Disk:** 644 standalone HTML session pages across all supported languages:
-  - English Sessions (`sessions/`): 560 files
+- **Total Session Files on Disk:** 642 standalone HTML session pages across all supported languages:
+  - English Sessions (`sessions/`): 558 files
   - French Sessions (`fr/sessions/`): 43 files
   - Russian Sessions (`ru/sessions/`): 41 files
-- **Language metadata (from `<html lang>`):** 472 English, 87 French, 64 Russian, 7 Italian, 9 Greek, 6 Spanish. Foreign-language cinema and karaoke sessions stored under `sessions/` were previously mislabeled as English in the catalog; all 89 now carry the correct language.
-- **Total Catalog Entries in `data/sessions.json`:** 645 entries. All 644 disk files are cataloged; the single extra entry is the normalized “Game Evenings : COSYlanguages” title that shares the `game-evenings.html` landing page and drives the Games filter in the session directory.
+- **Language metadata (from `<html lang>`):** 470 English, 87 French, 64 Russian, 7 Italian, 9 Greek, 6 Spanish. Foreign-language cinema and karaoke sessions stored under `sessions/` were previously mislabeled as English in the catalog; all 89 now carry the correct language.
+- **Total Catalog Entries in `data/sessions.json`:** 643 entries. All 642 disk files are cataloged; the single extra entry is the normalized “Game Evenings : COSYlanguages” title that shares the `game-evenings.html` landing page and drives the Games filter in the session directory.
 - **Master Calendar Records (`shared/calendar-data/events.json`):** 19 scheduled event entries.
 
 ### Repository-First Session Content Model
@@ -48,12 +48,12 @@ This report serves as the consolidated single source of truth for the audit stat
 
 ## 3. Asset & Link Integrity Verification
 
-All issues previously flagged in legacy asset/link audit summaries have been verified; one session placeholder is incomplete, two upper-level cards duplicate B1 content, and 11 citations still need editorial review:
+All issues previously flagged in legacy asset/link audit summaries have been verified; the empty Gastronomy session and duplicate upper-level cards are resolved, and 11 citations still need editorial review:
 
 | Category | Flagged Issue | Resolution Status | Verified Location |
 |---|---|---|---|
 | **Materials PDFs** | `french-phonetics-guide.pdf` & `russian-idioms.pdf` | ✅ RESOLVED (Sept 2026) | `shared/materials/` |
-| **Session Pages** | `italian-gastronomy.html` | ⚠️ FILE EXISTS, CONTENT EMPTY (see remaining content issues) | `sessions/lets-celebrate/` |
+| **Session Pages** | `italian-gastronomy.html` | ✅ RESOLVED (Nov 2026). Populated with a full B1 session: 10 vocabulary cards, warm-up, two discussion rounds, a collaborative menu task, and teacher corrections. | `sessions/lets-celebrate/` |
 | **Poster Images** | Cover posters (`speaking-clubs-cover.jpg`, `roman-holiday-poster.jpg`, `ratatouille-poster.jpg`, `prada-poster.jpg`) | ✅ RESOLVED (Nov 2026). All four were 43-byte 1×1 GIF placeholders. `speaking-clubs-cover.jpg` was also ICHBW-branded and is now a neutral COSY Speaking Clubs cover. The two duplicate cinema files were replaced with the shared `images/cinemaclub.jpg`; `prada-poster.jpg` was removed. | `assets/`, `images/` |
 | **Hub Navigation** | Relative links on `browse.html`, `cinema-club.html`, `fr/index.html`, `ru/index.html` | ✅ RESOLVED (Sept 2026) | `node scripts/check_hub_links.js` |
 | **Localized Linkage** | French and Russian session grids | ✅ RESOLVED (Sept 2026) | `node scripts/verify_hub_linkage.js` |
@@ -109,12 +109,13 @@ Applied after the September baseline:
 - **Private surfaces:** `login.html`, `account.html`, `live-classroom.html`, `studio.html`, and `admin/session-links.html` are `noindex`; `404.html` is `noindex`. None are in the sitemap.
 - **Secrets:** only the public Supabase `anonKey` is present in `shared/config/supabase.json`; no service-role key, private key, or token is committed.
 - **Fragment anchors:** added the missing `#calendar-controls` targets on the home/localized portals and `#join` on `game-evenings.html`; all 178 local fragment links now resolve.
+- **Editorial content:** populated the Italian Gastronomy session from its Markdown source with a complete B1 lesson and added a dedicated theme; removed two duplicate B2 Mind Matters cards and their duplicate pages/catalog entries; disambiguated the remaining localized page titles. The indexable sitemap now has 0 duplicate titles, 0 duplicate descriptions, and 0 pages without a canonical.
 - **Asset cleanup:** deleted the invalid `prada-poster.jpg` placeholder and obsolete PNG duplicates; replaced the incorrect ICHBW-branded `speaking-clubs-cover.jpg` with a neutral COSY Speaking Clubs cover; removed the duplicate cinema poster copies and pointed the calendar at the shared `images/cinemaclub.jpg`; deleted the unreferenced scaffold `design-tokens.css` that competed with `shared/css/tokens.css`; all remaining image references resolve and all content images have `alt` text.
 
 ### Remaining content issues
 
-- **Empty placeholder:** `sessions/lets-celebrate/italian-gastronomy.html` is linked from `lets-celebrate.html`, appears in the sitemap and catalog, but its `.md` frontmatter and HTML have no vocabulary, discussion questions, or description. It needs real content or removal. It is the only non-localized, indexable session with zero discussion prompts.
-- **Duplicate upper-level cards:** `sessions/mind-matters/aspiration-vs-inspiration-upper-intermediate.html` and `sessions/mind-matters/conversations-avoid-enjoy-upper-intermediate.html` are `noindex` and canonicalize to their intermediate originals, but `mind-matters.html` still exposes them as B2 cards. Their bodies are the B1 lesson (one is byte-identical; the other differs only in whitespace/formatting), so users see two cards for the same content and the B2 label is wrong. Either author genuinely B2 material or remove the cards/catalog entries and keep the pages only as aliases if `test_round_trip` still needs them.
+- **Resolved — empty placeholder:** `sessions/lets-celebrate/italian-gastronomy.html` was rebuilt from its Markdown source with a full B1 lesson (vocabulary, warm-up, two rounds, collaborative task, and corrections) and a dedicated `theme-celebrate-gastronomy` style.
+- **Resolved — duplicate upper-level cards:** removed the two mislabelled B2 cards from `mind-matters.html`, deleted the duplicate pages, and removed their catalog and speaking-club entries. The genuine intermediate lessons remain.
 - **Unfinished translations:** three `fr/sessions/i-couldnt-help-but-wonder/` pages are deliberately `noindex` and canonicalize to their English originals. They are excluded from the sitemap and are not a crawl-blocking defect.
 
 ### Remaining content-provenance issue
