@@ -17,6 +17,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
     'use strict';
 
+    var LEXICON_SCRIPT = 'https://cosylanguages.github.io/COSYtools/shared/js/vocabulary-relations.js';
     var BANDS = ['a0-a1', 'a2', 'b1-b2', 'c1-c2'];
     var SEGMENTS = 8;
     var PALETTE = ['#993556', '#2B6CB0', '#1A7A4A', '#B7791F', '#6B46C1', '#C05621', '#2C7A7B', '#B83280'];
@@ -77,6 +78,9 @@
             '.dw-follow{margin:.5rem 0 1rem;padding-left:1.1rem;color:#4a443e;font-size:.92rem;}',
             '.dw-chips{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;}',
             '.dw-chip{background:#F4EFE7;border-radius:999px;padding:.2rem .65rem;font-size:.78rem;color:#4a443e;}',
+            '.dw-chip.dw-chip-rel{display:inline-flex;flex-direction:column;align-items:flex-start;gap:.05rem;border-radius:14px;padding:.3rem .7rem;}',
+            '.dw-rel{font-size:.7rem;color:#7a746e;line-height:1.3;}',
+            '.dw-rel-ant{color:#416b49;}',
             '.dw-timer{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin-bottom:.9rem;}',
             '.dw-timer button{background:#2B6CB0;color:#fff;border:0;border-radius:999px;padding:.45rem 1rem;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;}',
             '.dw-clock{font-variant-numeric:tabular-nums;font-weight:700;min-width:3.4rem;}',
@@ -126,6 +130,28 @@
     function formatClock(seconds) {
         var m = Math.floor(seconds / 60), s = seconds % 60;
         return m + ':' + String(s).padStart(2, '0');
+    }
+
+    var vocabPromise = null;
+    function ensureVocab(url) {
+        if (typeof window === 'undefined') return Promise.resolve(null);
+        if (window.COSYVocab) {
+            if (!vocabPromise) vocabPromise = window.COSYVocab.load();
+            return vocabPromise;
+        }
+        if (vocabPromise) return vocabPromise;
+        vocabPromise = new Promise(function (resolve) {
+            var script = document.createElement('script');
+            script.src = url || LEXICON_SCRIPT;
+            script.onload = function () {
+                if (!window.COSYVocab) return resolve(null);
+                var jsonUrl = url ? url.replace(/\.js(\?.*)?$/, '.json') : undefined;
+                resolve(window.COSYVocab.load(jsonUrl));
+            };
+            script.onerror = function () { resolve(null); };
+            document.head.appendChild(script);
+        });
+        return vocabPromise;
     }
 
     function mount(host) {
@@ -220,9 +246,18 @@
             var follow = (item.follow_ups || []).length
                 ? '<ul class="dw-follow">' + item.follow_ups.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>'
                 : '';
-            var chips = (item.structures || []).concat(item.vocabulary || []).map(function (c) {
+            var vocab = (typeof window !== 'undefined' && window.COSYVocab) ? window.COSYVocab : null;
+            var chips = (item.structures || []).map(function (c) {
                 return '<span class="dw-chip">' + esc(c) + '</span>';
-            }).join('');
+            }).concat((item.vocabulary || []).map(function (word) {
+                if (!vocab) return '<span class="dw-chip">' + esc(word) + '</span>';
+                var rel = vocab.forBand(word, state.band, state.lang);
+                var rows = '';
+                if (rel.antonyms.length) rows += '<span class="dw-rel dw-rel-ant">↔ ' + esc(rel.antonyms.join(', ')) + '</span>';
+                if (rel.synonyms.length) rows += '<span class="dw-rel">≈ ' + esc(rel.synonyms.join(', ')) + '</span>';
+                if (!rows) return '<span class="dw-chip">' + esc(word) + '</span>';
+                return '<span class="dw-chip dw-chip-rel"><strong>' + esc(word) + '</strong>' + rows + '</span>';
+            })).join('');
             var prep = task.prep_seconds || 300;
             var speak = task.speak_seconds || 300;
 
@@ -291,7 +326,10 @@
 
     function initAll() {
         if (typeof document === 'undefined') return;
-        Array.prototype.forEach.call(document.querySelectorAll('[data-daily-wheel]'), function (el) {
+        var mounts = document.querySelectorAll('[data-daily-wheel]');
+        var lexicon = mounts.length && mounts[0].getAttribute('data-lexicon');
+        ensureVocab(lexicon);
+        Array.prototype.forEach.call(mounts, function (el) {
             if (!el.__dailyWheelMounted) {
                 el.__dailyWheelMounted = true;
                 mount(el);
