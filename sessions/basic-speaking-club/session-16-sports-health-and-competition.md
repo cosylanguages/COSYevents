@@ -8,7 +8,7 @@ theme_class: session-page
 decorator_icon: ''
 duration: 60 minutes
 languages: 🇬🇧 English
-level: Intermediate (B1)
+level: Beginner (A0–A1)
 description: ''
 vocabulary: []
 warm_up: null

@@ -36,8 +36,9 @@ body.session-page .session-hero {
 }
 
 .question-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--surface-color, #ffffff);
+  border: 1px solid var(--border, #e2e8f0);
+  color: var(--ink, inherit);
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 12px;
@@ -45,3 +46,8 @@ body.session-page .session-hero {
 }
 
 html[data-theme="dark"] .frame-box { background-color: #232a25; }
+html[data-theme="dark"] .question-card {
+  background: #232a25;
+  border-color: #3a4640;
+  color: #e8f0e9;
+}

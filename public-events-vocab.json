@@ -1,6 +1,6 @@
 {
-  "sessionsCount": 135,
-  "totalTerms": 173,
+  "sessionsCount": 136,
+  "totalTerms": 183,
   "sessions": [
     {
       "sessionId": "daily-routines-and-habits",
@@ -79,6 +79,166 @@
             "dining-food"
           ],
           "level": "A2"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-11-restaurants-and-social-eating",
+      "sessionTitle": "Session 11: Restaurants & Social Eating",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "26 March 2027",
+      "vocabulary": [
+        {
+          "id": "en:menu:noun",
+          "term": "menu",
+          "pos": "noun",
+          "definition": "The list of food and drinks in a restaurant.",
+          "translation": "",
+          "example": "Can I see the menu, please?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:waiter:noun",
+          "term": "waiter",
+          "pos": "noun",
+          "definition": "The person who brings food to your table.",
+          "translation": "",
+          "example": "The waiter is very friendly.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:table:noun",
+          "term": "table",
+          "pos": "noun",
+          "definition": "The furniture you sit at to eat.",
+          "translation": "",
+          "example": "A table for two, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:water:noun",
+          "term": "water",
+          "pos": "noun",
+          "definition": "A clear drink, usually from a bottle or a tap.",
+          "translation": "",
+          "example": "One water, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:order:verb",
+          "term": "order",
+          "pos": "verb",
+          "definition": "To tell the waiter what you want.",
+          "translation": "",
+          "example": "I want to order now.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bill:noun",
+          "term": "bill",
+          "pos": "noun",
+          "definition": "The paper that shows how much you pay.",
+          "translation": "",
+          "example": "The bill, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tip:noun",
+          "term": "tip",
+          "pos": "noun",
+          "definition": "Extra money you leave for the waiter.",
+          "translation": "",
+          "example": "We leave a small tip.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cheap:adjective",
+          "term": "cheap",
+          "pos": "adjective",
+          "definition": "Costing little money.",
+          "translation": "",
+          "example": "This restaurant is cheap.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:expensive:adjective",
+          "term": "expensive",
+          "pos": "adjective",
+          "definition": "Costing a lot of money.",
+          "translation": "",
+          "example": "The fish is too expensive for me.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:delicious:adjective",
+          "term": "delicious",
+          "pos": "adjective",
+          "definition": "Tasting very good.",
+          "translation": "",
+          "example": "The soup is delicious.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
         }
       ]
     },
