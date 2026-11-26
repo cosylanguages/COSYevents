@@ -3,7 +3,7 @@
 **Audit Date:** November 2026
 **Auditor:** OpenHands (AI Software Engineer)
 **Repository:** COSYevents (`cosylanguages/COSYevents`)
-**Status:** REMEDIATED — 11 dead source citations remain for editorial review
+**Status:** REMEDIATED — all identified defects are fixed; 11 unsupported citations were removed and their claims still need editorial re-sourcing
 
 ---
 
@@ -48,7 +48,7 @@ This report serves as the consolidated single source of truth for the audit stat
 
 ## 3. Asset & Link Integrity Verification
 
-All issues previously flagged in legacy asset/link audit summaries have been verified; the empty Gastronomy session and duplicate upper-level cards are resolved, and 11 citations still need editorial review:
+All issues previously flagged in legacy asset/link audit summaries have been verified; the empty Gastronomy session, duplicate upper-level cards, and dead citation links are resolved:
 
 | Category | Flagged Issue | Resolution Status | Verified Location |
 |---|---|---|---|
@@ -109,6 +109,7 @@ Applied after the September baseline:
 - **Private surfaces:** `login.html`, `account.html`, `live-classroom.html`, `studio.html`, and `admin/session-links.html` are `noindex`; `404.html` is `noindex`. None are in the sitemap.
 - **Secrets:** only the public Supabase `anonKey` is present in `shared/config/supabase.json`; no service-role key, private key, or token is committed.
 - **Fragment anchors:** added the missing `#calendar-controls` targets on the home/localized portals and `#join` on `game-evenings.html`; all 178 local fragment links now resolve.
+- **Dead citations:** removed 11 confirmed 404 source links (and their `article_url` catalog fields) instead of leaving broken links or inventing replacements. The affected claims are flagged below for re-sourcing.
 - **Editorial content:** populated the Italian Gastronomy session from its Markdown source with a complete B1 lesson and added a dedicated theme; removed two duplicate B2 Mind Matters cards and their duplicate pages/catalog entries; disambiguated the remaining localized page titles. The indexable sitemap now has 0 duplicate titles, 0 duplicate descriptions, and 0 pages without a canonical.
 - **Asset cleanup:** deleted the invalid `prada-poster.jpg` placeholder and obsolete PNG duplicates; replaced the incorrect ICHBW-branded `speaking-clubs-cover.jpg` with a neutral COSY Speaking Clubs cover; removed the duplicate cinema poster copies and pointed the calendar at the shared `images/cinemaclub.jpg`; deleted the unreferenced scaffold `design-tokens.css` that competed with `shared/css/tokens.css`; all remaining image references resolve and all content images have `alt` text.
 
@@ -118,9 +119,9 @@ Applied after the September baseline:
 - **Resolved — duplicate upper-level cards:** removed the two mislabelled B2 cards from `mind-matters.html`, deleted the duplicate pages, and removed their catalog and speaking-club entries. The genuine intermediate lessons remain.
 - **Unfinished translations:** three `fr/sessions/i-couldnt-help-but-wonder/` pages are deliberately `noindex` and canonicalize to their English originals. They are excluded from the sitemap and are not a crawl-blocking defect.
 
-### Remaining content-provenance issue
+### Removed content-provenance issue
 
-Eleven source URLs return HTTP 404 and are not present in the Wayback Machine. They appear to be fabricated citations and should be replaced with real sources or removed by an editor:
+Eleven source URLs returned HTTP 404 and were not present in the Wayback Machine. They appeared to be fabricated citations, so their links were removed from the science hub, session pages, and catalog. The claims that used them still need real sources before they are treated as evidence:
 
 | Source | Pages |
 |---|---|
