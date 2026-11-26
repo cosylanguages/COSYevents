@@ -133,6 +133,29 @@
   </div>
 </div>
 
+<!-- Today's wheel -->
+<style>
+  .today-banner { display: block; margin: 0 0 1.5rem; }
+  .today-banner a { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem;
+    padding: 1rem 1.25rem; border-radius: 16px; text-decoration: none; color: #fff;
+    background: linear-gradient(135deg, #416b49, #2f4f36); font-weight: 600; }
+  .today-banner a:hover { filter: brightness(1.08); }
+  .today-banner .tb-kicker { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; opacity: .82; font-weight: 700; }
+  .today-banner .tb-title { font-family: var(--font-serif, 'Playfair Display', serif); font-size: 1.25rem; }
+  .today-banner .tb-cta { background: rgba(255,255,255,.16); padding: .45rem .9rem; border-radius: 999px; font-size: .85rem; }
+  .club-wheel-preview { font-size: .82rem; line-height: 1.5; margin: -.4rem 0 1rem; color: var(--muted, #6b6560); }
+  .club-wheel-preview em { font-style: normal; font-weight: 600; }
+</style>
+<section class="today-banner" data-daily-wheel-banner hidden>
+  <a href="today.html">
+    <span>
+      <span class="tb-kicker">🎡 Today's speaking wheel</span>
+      <span class="tb-title" data-wheel-title>—</span>
+    </span>
+    <span class="tb-cta">Spin today's prompts →</span>
+  </a>
+</section>
+
 <!-- Quick-Start Guide -->
 <section id="onboarding-guide" class="onboarding-guide-box">
 <div class="guide-flex-wrap">
@@ -353,6 +376,7 @@
 <span class="club-tag club-tag-on-dark">Science</span>
 </div>
 <p data-cms-id="p-11-2b3459" class="club-desc club-desc-on-dark">Real science news, made discussable. Each session unpacks a recent discovery or trend.</p>
+<p class="club-wheel-preview" data-wheel-preview="science" hidden></p>
 <a class="club-link club-link-white" href="keeping-up-with-science.html">View Club &amp; History →</a>
 </div>
 </article>
@@ -379,6 +403,7 @@
 <span class="club-tag club-tag-on-dark">Philosophy</span>
 </div>
 <p data-cms-id="p-13-9be38c" class="club-desc club-desc-on-dark">One quote. Multi-faceted café debate. Join Marcus Aurelius, Alan Watts, and Oscar Wilde over espresso to unpack endless interpretations.</p>
+<p class="club-wheel-preview" data-wheel-preview="quotes" hidden></p>
 <a class="club-link club-link-white" href="the-greatest-quotes.html">View Club &amp; History →</a>
 </div>
 </article>
@@ -392,6 +417,7 @@
 <span class="club-tag club-tag-on-dark">Psychology</span>
 </div>
 <p data-cms-id="p-14-bb6389" class="club-desc club-desc-on-dark">Perhaps our minds are not puzzles to be solved, but landscapes to be gently wandered through. Welcome to a sanctuary of quiet reflection where we unravel our habits, our vulnerabilities, and our silent thoughts.</p>
+<p class="club-wheel-preview" data-wheel-preview="mind-matters" hidden></p>
 <a class="club-link club-link-white" href="mind-matters.html">View Club &amp; History →</a>
 </div>
 </article>
@@ -405,6 +431,7 @@
 <span class="club-tag club-tag-on-dark">Personal</span>
 </div>
 <p data-cms-id="p-15-438e98" class="club-desc club-desc-on-dark">Each session explores life before and after one thing : a habit, a person, a city, a decision.</p>
+<p class="club-wheel-preview" data-wheel-preview="life" hidden></p>
 <a class="club-link club-link-white" href="my-life-with-without.html">View Club &amp; History →</a>
 </div>
 </article>
@@ -418,6 +445,7 @@
 <span class="club-tag club-tag-on-dark">Debate</span>
 </div>
 <p data-cms-id="p-16-00e48e" class="club-desc club-desc-on-dark">Hot takes and genuine dilemmas. Each session presents a statement you'll passionately agree with.</p>
+<p class="club-wheel-preview" data-wheel-preview="debates" hidden></p>
 <a class="club-link club-link-white" href="debatable-relatable.html">View Club &amp; History →</a>
 </div>
 </article>
@@ -657,6 +685,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <script src="shared/js/cosyevents-session.js"></script>
+<script src="shared/js/daily-wheel.js" defer></script>
+<script src="shared/js/daily-wheel-preview.js" defer></script>
 <script src="shared/js/club-reviews.js"></script>
   <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
 </body>

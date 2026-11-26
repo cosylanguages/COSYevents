@@ -73,6 +73,26 @@
   <main class="hub-main">
     <div data-ce-lang-resume></div>
 
+    <!-- Today's speaking wheel: one club a day, picked by weekday -->
+    <style>
+      .today-banner { display: block; margin: 0 0 1.5rem; }
+      .today-banner a { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem;
+        padding: 1rem 1.25rem; border-radius: 16px; text-decoration: none; color: #fff;
+        background: linear-gradient(135deg, #416b49, #2f4f36); font-weight: 600; }
+      .today-banner .tb-kicker { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; opacity: .82; font-weight: 700; }
+      .today-banner .tb-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; }
+      .today-banner .tb-cta { background: rgba(255,255,255,.16); padding: .45rem .9rem; border-radius: 999px; font-size: .85rem; }
+    </style>
+    <section class="today-banner" data-daily-wheel-banner hidden>
+      <a href="today.html">
+        <span>
+          <span class="tb-kicker">🎡 Today's speaking wheel</span>
+          <span class="tb-title" data-wheel-title>—</span>
+        </span>
+        <span class="tb-cta">Spin today's prompts →</span>
+      </a>
+    </section>
+
     <!-- Daily Spotlights Section. data-directory="true" appends the compact "Daily across the COSY
          ecosystem" line inside the container, mirroring the hub daily strip. -->
     <section class="daily-spotlights-section">
@@ -521,5 +541,7 @@
   </script>
   <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
 <script src="shared/js/cms-boot.js" defer></script>
+<script src="shared/js/daily-wheel.js" defer></script>
+<script src="shared/js/daily-wheel-preview.js" defer></script>
 </body>
 </html>

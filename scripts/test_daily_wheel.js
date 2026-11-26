@@ -86,4 +86,46 @@ for (const w of WHEELS) {
 }
 console.log(`  PASS: ${WHEELS.length} club pages mount their wheel`);
 
+// Deep links: band, date and prompt in the query string
+assert.deepStrictEqual(wheel.parseQuery('?band=B2&date=2026-11-26&prompt=3'),
+    { band: 'b1-b2', dateKey: '2026-11-26', prompt: 3 }, 'valid query parses');
+assert.deepStrictEqual(wheel.parseQuery('?band=a1'), { band: 'a0-a1' }, 'a1 maps to a0-a1');
+assert.deepStrictEqual(wheel.parseQuery('?band=c2'), { band: 'c1-c2' }, 'c2 maps to c1-c2');
+assert.deepStrictEqual(wheel.parseQuery('?band=nonsense&date=yesterday&prompt=99'), {}, 'junk is dropped');
+assert.deepStrictEqual(wheel.parseQuery(''), {}, 'empty query is empty');
+assert.deepStrictEqual(wheel.parseQuery('?prompt=7'), { prompt: 7 }, 'last segment is addressable');
+console.log('  PASS: deep links — band, date and prompt parse, junk is ignored');
+
+// Weekly rotation: one wheel a day, no gaps, no repeats
+const days = wheel.WEEKLY_ROTATION.map((w) => w.weekday).sort();
+assert.deepStrictEqual(days, [0, 1, 2, 3, 4, 5, 6], 'all seven weekdays are covered');
+const ids = new Set(wheel.WEEKLY_ROTATION.map((w) => w.id));
+assert.strictEqual(ids.size, 7, 'seven distinct wheels');
+for (const w of wheel.WEEKLY_ROTATION) {
+    assert(fs.existsSync(path.join(__dirname, '..', 'data', 'wheels', w.id + '.json')), `${w.id}.json exists`);
+    assert(fs.existsSync(path.join(__dirname, '..', w.page)), `${w.page} exists`);
+}
+assert.strictEqual(wheel.wheelForDate(new Date(2026, 10, 23)).id, 'mind-matters', 'Monday is mind matters');
+assert.strictEqual(wheel.wheelForDate(new Date(2026, 10, 25)).id, 'science', 'Wednesday is science');
+assert.strictEqual(wheel.wheelForDate(new Date(2026, 10, 29)).id, 'life', 'Sunday is life with and without');
+console.log('  PASS: rotation — seven days, seven wheels, files present');
+
+// Discovery: one page, one banner, one nav entry, one bookmark
+const read = (name) => fs.readFileSync(path.join(__dirname, '..', name), 'utf8');
+const todayPage = read('today.html');
+assert(todayPage.includes('shared/js/daily-wheel.js'), 'today.html loads the wheel');
+assert(todayPage.includes('wheelForDate'), 'today.html picks the day\'s wheel');
+assert(todayPage.includes('WEEKLY_ROTATION'), 'today.html lists the week');
+
+const hub = read('speaking-clubs.html');
+assert(hub.includes('data-daily-wheel-banner'), 'hub shows today\'s banner');
+assert.strictEqual((hub.match(/data-wheel-preview=/g) || []).length, 5, 'five hub cards carry a preview');
+
+assert(read('index.html').includes('data-daily-wheel-banner'), 'homepage shows today\'s banner');
+assert(read('shared/js/cosyevents-session.js').includes('today.html'), 'clubs menu links to today');
+
+const manifest = JSON.parse(read('manifest.json'));
+assert(manifest.shortcuts && manifest.shortcuts[0].url === './today.html', 'app shortcut opens today');
+console.log('  PASS: discovery — today page, hub banner, homepage banner, nav entry, app shortcut');
+
 console.log('\n🎉 Daily wheel tests passed');

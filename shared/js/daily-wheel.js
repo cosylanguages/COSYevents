@@ -22,6 +22,57 @@
     var SEGMENTS = 8;
     var PALETTE = ['#993556', '#2B6CB0', '#1A7A4A', '#B7791F', '#6B46C1', '#C05621', '#2C7A7B', '#B83280'];
 
+    // One wheel a day, so nobody has to choose. Monday first.
+    var WEEKLY_ROTATION = [
+        { weekday: 1, id: 'mind-matters', page: 'mind-matters.html', title: 'Mind Matters' },
+        { weekday: 2, id: 'debates', page: 'debatable-relatable.html', title: 'Debatable & Relatable' },
+        { weekday: 3, id: 'science', page: 'keeping-up-with-science.html', title: 'Keeping Up With Science' },
+        { weekday: 4, id: 'quotes', page: 'the-greatest-quotes.html', title: 'The Greatest Quotes' },
+        { weekday: 5, id: 'karaoke', page: 'karaoke-club.html', title: 'Karaoke Club' },
+        { weekday: 6, id: 'films', page: 'cinema-club.html', title: 'Films & Series' },
+        { weekday: 0, id: 'life', page: 'my-life-with-without.html', title: 'My Life With / Without' }
+    ];
+
+    function wheelForDate(d) {
+        var weekday = (d || new Date()).getDay();
+        for (var i = 0; i < WEEKLY_ROTATION.length; i += 1) {
+            if (WEEKLY_ROTATION[i].weekday === weekday) return WEEKLY_ROTATION[i];
+        }
+        return WEEKLY_ROTATION[0];
+    }
+
+    function normaliseBand(value) {
+        var raw = String(value || '').trim().toLowerCase();
+        if (BANDS.indexOf(raw) !== -1) return raw;
+        if (raw === 'a0' || raw === 'a1') return 'a0-a1';
+        if (raw === 'b1' || raw === 'b2') return 'b1-b2';
+        if (raw === 'c1' || raw === 'c2') return 'c1-c2';
+        return '';
+    }
+
+    /** Reads band, date and prompt from a query string; anything invalid is dropped. */
+    function parseQuery(search) {
+        var out = {};
+        var raw = String(search || '').replace(/^\?/, '');
+        if (!raw) return out;
+        raw.split('&').forEach(function (pair) {
+            if (!pair) return;
+            var at = pair.indexOf('=');
+            var key = decodeURIComponent(at === -1 ? pair : pair.slice(0, at));
+            var value = at === -1 ? '' : decodeURIComponent(pair.slice(at + 1));
+            if (key === 'band') {
+                var band = normaliseBand(value);
+                if (band) out.band = band;
+            } else if (key === 'date') {
+                if (/^\d{4}-\d{2}-\d{2}$/.test(value)) out.dateKey = value;
+            } else if (key === 'prompt') {
+                var index = parseInt(value, 10);
+                if (index >= 0 && index < SEGMENTS) out.prompt = index;
+            }
+        });
+        return out;
+    }
+
     function localDateKey(d) {
         d = d || new Date();
         return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
@@ -158,8 +209,10 @@
         var id = host.getAttribute('data-daily-wheel');
         var src = host.getAttribute('data-src') || ('data/wheels/' + id + '.json');
         var lang = (host.getAttribute('data-lang') || 'en').slice(0, 2);
-        var band = host.getAttribute('data-band') || 'b1-b2';
-        var dateKey = host.getAttribute('data-date') || localDateKey();
+        var query = parseQuery(typeof location !== 'undefined' ? location.search : '');
+        // The attributes are the page's defaults; a shared link may override them.
+        var band = query.band || host.getAttribute('data-band') || 'b1-b2';
+        var dateKey = query.dateKey || host.getAttribute('data-date') || localDateKey();
 
         injectStyles();
         host.innerHTML = '<p class="dw-loading">Loading the wheel…</p>';
@@ -174,11 +227,28 @@
                     host.innerHTML = '<p class="dw-loading">This wheel is published in ' + esc(data.lang.toUpperCase()) + ' only for now.</p>';
                     return;
                 }
-                render(host, data, { band: band, dateKey: dateKey });
+                render(host, data, { band: band, dateKey: dateKey, prompt: query.prompt });
             })
             .catch(function (err) {
                 host.innerHTML = '<p class="dw-loading">The wheel could not load (' + esc(err.message) + ').</p>';
             });
+    }
+
+    /** Keeps band, date and the shown prompt in the address bar so the link can be shared. */
+    function syncUrl(host, data, state, index) {
+        if (typeof history === 'undefined' || !history.replaceState) return;
+        var search = typeof location !== 'undefined' ? location.search : '';
+        var params = new URLSearchParams(search);
+        params.set('band', state.band);
+        params.set('date', state.dateKey);
+        if (typeof index === 'number') params.set('prompt', String(index));
+        else params.delete('prompt');
+        var url = (typeof location !== 'undefined' ? location.pathname : '') + '?' + params.toString();
+        try {
+            history.replaceState(null, '', url);
+        } catch (e) {
+            /* some hosts block history updates; the card still works */
+        }
     }
 
     function render(host, data, state) {
@@ -234,6 +304,7 @@
                     c.setAttribute('aria-pressed', String(c === btn));
                 });
                 paint();
+                syncUrl(host, data, state);
             });
             bands.appendChild(btn);
         });
@@ -318,10 +389,15 @@
             setTimeout(function () {
                 spin.disabled = false;
                 showCard(items[index]);
+                syncUrl(host, data, state, index);
             }, reduced ? 0 : 2450);
         });
 
         paint();
+
+        if (typeof state.prompt === 'number' && state.prompt >= 0 && state.prompt < items.length) {
+            showCard(items[state.prompt]);
+        }
     }
 
     function initAll() {
@@ -351,6 +427,9 @@
         localDateKey: localDateKey,
         daysSinceEpoch: daysSinceEpoch,
         pickWheelPrompts: pickWheelPrompts,
+        parseQuery: parseQuery,
+        wheelForDate: wheelForDate,
+        WEEKLY_ROTATION: WEEKLY_ROTATION,
         truncate: truncate,
         initAll: initAll
     };
