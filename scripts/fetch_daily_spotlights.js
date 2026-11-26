@@ -576,41 +576,75 @@ function applyOverrides(output, overrides = {}) {
   return output;
 }
 
+// Machine translation often expands a sentence past the card limit, so clamp every
+// description after translation, not only the English source.
+function clampItem(item) {
+  if (!item) return item;
+  if (item.description) item.description = completeSentence(item.description, 300);
+  for (const loc of Object.values(item.i18n || {})) {
+    if (loc && loc.description) loc.description = completeSentence(loc.description, 300);
+  }
+  return item;
+}
+
+function formatDate(date) {
+  return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}
+
+// The build runs in UTC, but readers live in every timezone. Celebration and science
+// pages are date-addressed, so we publish a window of days around today and let the
+// client pick the reader's local date. Music and film come from today-only pages.
 async function main() {
   const now = new Date();
-  const month = now.getMonth() + 1;
-  const day = now.getDate();
   const dateKey = now.toISOString().slice(0, 10);
-  const dateFormatted = now.toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  });
+  const [baseYear, baseMonth, baseDay] = dateKey.split('-').map(Number);
+  const dateFormatted = formatDate(now);
+  const windowDays = Math.max(0, Number(process.env.SPOTLIGHT_WINDOW == null ? 1 : process.env.SPOTLIGHT_WINDOW));
 
-  console.log(`Fetching daily spotlights for ${dateFormatted} (Month: ${month}, Day: ${day})...`);
+  console.log(`Fetching daily spotlights for ${dateFormatted} (window ±${windowDays} days)...`);
 
-  const [celebration, science, music, film] = await Promise.all([
-    fetchCelebration(month, day),
-    fetchScienceEvent(month, day),
-    fetchMusicEvent(),
-    fetchFilmTvEvent()
-  ]);
+  const [music, film] = await Promise.all([fetchMusicEvent(), fetchFilmTvEvent()]).then(
+    ([m, f]) => [clampItem(m), clampItem(f)]
+  );
+
+  const days = {};
+  let today = null;
+  for (let offset = -windowDays; offset <= windowDays; offset++) {
+    const d = new Date(Date.UTC(baseYear, baseMonth - 1, baseDay + offset));
+    const key = d.toISOString().slice(0, 10);
+    const month = d.getUTCMonth() + 1;
+    const day = d.getUTCDate();
+    try {
+      const [celebration, science] = await Promise.all([
+        fetchCelebration(month, day),
+        fetchScienceEvent(month, day)
+      ]);
+      const items = { celebration: clampItem(celebration), science: clampItem(science) };
+      if (offset === 0) {
+        items.music = music;
+        items.film = film;
+        today = items;
+      }
+      days[key] = { display_date: formatDate(d), day, month, items };
+    } catch (err) {
+      console.warn(`Skipping ${key}: ${err.message}`);
+    }
+  }
 
   const output = {
     updated_at: new Date().toISOString(),
     display_date: dateFormatted,
     date: dateKey,
-    day: day,
-    month: month,
-    items: {
-      celebration,
-      science,
-      music,
-      film
-    }
+    day: baseDay,
+    month: baseMonth,
+    items: today || { celebration: null, science: null, music, film },
+    days
   };
 
   const overrides = loadOverrides();
+  for (const [key, entry] of Object.entries(days)) {
+    applyOverrides({ date: key, month: entry.month, day: entry.day, items: entry.items }, overrides);
+  }
   applyOverrides(output, overrides);
 
   const outputDir = path.dirname(OUTPUT_PATH);

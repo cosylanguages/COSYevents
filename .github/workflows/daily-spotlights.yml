@@ -26,11 +26,25 @@ jobs:
         run: npm ci
 
       - name: Fetch today's cultural and science spotlights
+        env:
+          # Publish yesterday/today/tomorrow so every timezone reads its own local date.
+          SPOTLIGHT_WINDOW: '1'
         run: node scripts/fetch_daily_spotlights.js
 
-      - name: Verify the spotlight file is for today (UTC)
+      - name: Verify the spotlight window covers every timezone
         run: |
-          node -e "const d=require('./data/daily-spotlights.json'); const n=new Date(); if (d.day!==n.getUTCDate() || d.month!==n.getUTCMonth()+1) { console.error('Stale spotlight file:', d.display_date); process.exit(1); }"
+          node -e "
+          const d = require('./data/daily-spotlights.json');
+          const now = new Date();
+          const key = now.toISOString().slice(0, 10);
+          if (d.date !== key) { console.error('Stale spotlight file:', d.date); process.exit(1); }
+          const need = [-1, 0, 1].map((o) => {
+            const x = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + o));
+            return x.toISOString().slice(0, 10);
+          });
+          const missing = need.filter((k) => !d.days || !d.days[k]);
+          if (missing.length) { console.error('Day window missing:', missing.join(', ')); process.exit(1); }
+          "
 
       - name: Commit and push if updated
         run: |

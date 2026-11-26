@@ -21,6 +21,8 @@ const {
   sanitizeHtml,
   formatDisplayDate,
   isStale,
+  getLocalDateKey,
+  pickDay,
   SPOTLIGHT_I18N,
   STALE_I18N
 } = require('../shared/js/daily-spotlights.js');
@@ -146,19 +148,25 @@ console.log('  PASS: Dates properly localize across locales.\n');
 
 // Test 4b: A stale payload is labelled, not presented as today's spotlights
 console.log('Test 4b: Verifying stale spotlight detection and labels...');
-const nowUtc = new Date();
+const nowLocal = new Date();
+const todayKey = getLocalDateKey(nowLocal);
+const yesterdayLocal = new Date(nowLocal.getFullYear(), nowLocal.getMonth(), nowLocal.getDate() - 1);
+const yesterdayKey = getLocalDateKey(yesterdayLocal);
 const todayPayload = {
   ...data,
-  month: nowUtc.getUTCMonth() + 1,
-  day: nowUtc.getUTCDate(),
-  updated_at: nowUtc.toISOString()
+  days: undefined,
+  date: todayKey,
+  month: nowLocal.getMonth() + 1,
+  day: nowLocal.getDate(),
+  updated_at: nowLocal.toISOString()
 };
-const yesterdayUtc = new Date(Date.UTC(nowUtc.getUTCFullYear(), nowUtc.getUTCMonth(), nowUtc.getUTCDate() - 1));
 const stalePayload = {
   ...data,
-  month: yesterdayUtc.getUTCMonth() + 1,
-  day: yesterdayUtc.getUTCDate(),
-  updated_at: yesterdayUtc.toISOString()
+  days: undefined,
+  date: yesterdayKey,
+  month: yesterdayLocal.getMonth() + 1,
+  day: yesterdayLocal.getDate(),
+  updated_at: yesterdayLocal.toISOString()
 };
 assert.strictEqual(isStale(todayPayload), false, 'today payload must be fresh');
 assert.strictEqual(isStale(stalePayload), true, 'yesterday payload must be stale');
@@ -172,6 +180,39 @@ for (const lang of languages) {
     `${lang} needs a stale label and a {date} placeholder`);
 }
 console.log('  PASS: Stale payloads are labelled in every language.\n');
+
+// Test 4c: A published day window is read by the reader's local date, not by UTC.
+console.log('Test 4c: Verifying local-date selection from a day window...');
+const tomorrowLocal = new Date(nowLocal.getFullYear(), nowLocal.getMonth(), nowLocal.getDate() + 1);
+const tomorrowKey = getLocalDateKey(tomorrowLocal);
+const windowPayload = {
+  updated_at: nowLocal.toISOString(),
+  display_date: 'Today',
+  date: todayKey,
+  month: nowLocal.getMonth() + 1,
+  day: nowLocal.getDate(),
+  items: data.items,
+  days: {
+    [todayKey]: { display_date: 'Today', items: data.items },
+    [tomorrowKey]: {
+      display_date: 'Tomorrow',
+      items: {
+        celebration: { ...data.items.celebration, title: 'Tomorrow celebration' },
+        science: { ...data.items.science, title: 'Tomorrow science' }
+      }
+    }
+  }
+};
+const pickedTomorrow = pickDay(windowPayload, tomorrowKey);
+assert.strictEqual(pickedTomorrow.date, tomorrowKey, 'window must resolve the requested local day');
+assert.strictEqual(pickedTomorrow.items.celebration.title, 'Tomorrow celebration', 'window must use that day\'s celebration');
+assert.strictEqual(pickedTomorrow.items.science.title, 'Tomorrow science', 'window must use that day\'s science');
+assert.strictEqual(pickedTomorrow.items.music.latest_available, true, 'a category missing from the day must be flagged');
+assert.strictEqual(pickedTomorrow.exact, false, 'a partial day must not be marked exact');
+assert.strictEqual(isStale(windowPayload, tomorrowKey), false, 'a covered future day is not stale');
+assert.strictEqual(isStale(windowPayload, '2099-01-01'), true, 'an uncovered day must be flagged stale');
+assert.strictEqual(pickDay(windowPayload, '2099-01-01').date, todayKey, 'an uncovered day falls back to the file date');
+console.log('  PASS: Day windows resolve by local date and flag partial days.\n');
 
 // Test 4c: Descriptions are cut at sentence boundaries, never mid-sentence
 console.log('Test 4c: Verifying complete-sentence truncation...');
