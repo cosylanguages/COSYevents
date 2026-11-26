@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T10:02:20.679Z",
+  "updated_at": "2026-11-26T13:23:23.272Z",
   "display_date": "November 26, 2026",
   "date": "2026-11-26",
   "day": 26,
@@ -8,34 +8,34 @@
     "celebration": {
       "category": "celebration",
       "categoryTitle": "Holiday of the Day",
-      "title": "Constitution Day",
+      "title": "World Kindness & Cultural Exchange Day",
       "badge": "Celebration",
-      "description": "The following is a list of public holidays in Abkhazia. The working days are marked in cursive.",
-      "details": "Constitution Day (Abkhazia, Georgia)",
+      "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
+      "details": "International Day of Global Friendship & Cultural Understanding",
       "clubLink": "lets-celebrate.html",
       "clubName": "Let's Celebrate",
-      "source": "International & Cultural Observances",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "source": "Global Traditions & Festivals",
+      "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
       "i18n": {
         "en": {
-          "title": "Constitution Day",
-          "description": "The following is a list of public holidays in Abkhazia. The working days are marked in cursive."
+          "title": "World Kindness & Cultural Exchange Day",
+          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
         },
         "fr": {
-          "title": "La journée de la constitution",
-          "description": "Voici une liste des jours fériés en Abkhazie. Les jours ouvrables sont indiqués en italique."
+          "title": "Journée mondiale de la bienveillance et des échanges culturels",
+          "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
         },
         "it": {
-          "title": "Festa della costituzione",
-          "description": "Di seguito è riportato un elenco delle festività nazionali in Abcasia. I giorni lavorativi sono indicati in corsivo."
+          "title": "Giornata mondiale della gentilezza e dello scambio culturale",
+          "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
         },
         "ru": {
-          "title": "День Конституции",
-          "description": "Ниже представлен список государственных праздников в Абхазии. Рабочие дни выделены курсивом."
+          "title": "Всемирный день доброты и культурного обмена",
+          "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
         },
         "el": {
-          "title": "/ Ν ;0.5!",
-          "description": "Ακολουθεί ένας κατάλογος με τις αργίες στην Αμπχαζία. Οι εργάσιμες ημέρες επισημαίνονται με πλάγιους χαρακτήρες."
+          "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
+          "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
         }
       }
     },
@@ -56,93 +56,168 @@
           "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
         },
         "fr": {
-          "title": "Énergie marémotrice",
-          "description": "(source) En 1966, le président Charles de Gaulle a inauguré la première centrale marémotrice au monde, située dans l'estuaire de la Rance, en Bretagne. La Rance est la centrale marémotrice la plus puissante au monde."
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
         },
         "it": {
-          "title": "energia mareomotrice",
-          "description": "(fonte) Nel 1966, il presidente Charles de Gaulle inaugurò la prima centrale mareomotrice al mondo nell'estuario della Rance, in Bretagna. La Rance è la centrale mareomotrice più potente al mondo."
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
         },
         "ru": {
-          "title": "Приливная электростанция",
-          "description": "(источник) В 1966 году президент Шарль де Голль открыл первую в мире приливную электростанцию в устье реки Ранс в Бретани. Ла-Ранс — самая мощная приливная электростанция в мире. Имея ширину 700 метров, она перекрывает устье реки Ранс, расположенное недалеко от Сен-Мало (департамент Кот-д’Армор)."
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
         },
         "el": {
-          "title": "παλιρροιακή ισχύς",
-          "description": "(πηγή) Το 1966, ο Πρόεδρος Σαρλ ντε Γκωλ εγκαινίασε τον πρώτο σταθμό παραγωγής ενέργειας από παλίρροιες στον κόσμο, στη λιμνοθάλασσα του ποταμού Ρανς, στη Βρετάνη. Ο σταθμός La Rance είναι ο ισχυρότερος σταθμός παραγωγής ενέργειας από παλίρροιες στον κόσμο."
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
         }
       }
     },
     "music": {
       "category": "music",
       "categoryTitle": "Today in Music",
-      "title": "Music of the Spheres",
-      "year": "1921",
+      "title": "Jeux d'eau",
+      "year": "1901",
       "badge": "Music History",
-      "description": "Danish composer Rued Langgaard's \"Music of the Spheres\" (Sfærernes Musik) premieres at Konzerthaus in Karlsruhe, Germany; it is not performed in Denmark until 1969",
+      "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
       "sourceUrl": "https://www.onthisday.com/music/",
       "i18n": {
         "en": {
-          "title": "Music of the Spheres",
-          "description": "Danish composer Rued Langgaard's \"Music of the Spheres\" (Sfærernes Musik) premieres at Konzerthaus in Karlsruhe, Germany; it is not performed in Denmark until 1969"
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
         },
         "fr": {
-          "title": "La musique des Sphères",
-          "description": "La « Musique des sphères » (Sfærernes Musik) du compositeur danois Rued Langgaard est créée au Konzerthaus de Karlsruhe, en Allemagne ; elle n’est pas jouée au Danemark avant 1969."
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
         },
         "it": {
-          "title": "\"Musica delle sfere\".",
-          "description": "La \"Musica delle sfere\" (Sfærernes Musik) del compositore danese Rued Langgaard viene eseguita per la prima volta al Konzerthaus di Karlsruhe, in Germania; non verrà eseguita in Danimarca fino al 1969."
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
         },
         "ru": {
-          "title": "Музыка сфер",
-          "description": "Премьера «Музыки сфер» (Sfærernes Musik) датского композитора Руэда Ланггорда состоялась в Концертхаусе в Карлсруэ, Германия; в Дании произведение было исполнено только в 1969 году."
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
         },
         "el": {
-          "title": "Η μουσική των σφαιρών",
-          "description": "Η «Μουσική των Σφαιρών» (Sfærernes Musik) του Δανού συνθέτη Rued Langgaard παρουσιάζεται για πρώτη φορά στο Konzerthaus της Καρλσρούης, στη Γερμανία. Δεν θα παιχτεί στη Δανία μέχρι το 1969."
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
         }
       }
     },
     "film": {
       "category": "film",
       "categoryTitle": "Today in Film & TV",
-      "title": "The Toll of the Sea,",
-      "year": "1922",
+      "title": "Gentlemen's Agreement",
+      "year": "1947",
       "badge": "Cinema & Screen",
-      "description": "First successful Technicolor movie, \"The Toll of the Sea,\" premieres at the Rialto Theatre in New York City",
+      "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
       "sourceUrl": "https://www.onthisday.com/film-tv/",
       "i18n": {
         "en": {
-          "title": "The Toll of the Sea,",
-          "description": "First successful Technicolor movie, \"The Toll of the Sea,\" premieres at the Rialto Theatre in New York City"
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
         },
         "fr": {
-          "title": "Le tribut de la mer,",
-          "description": "Le premier film Technicolor réussi, « The Toll of the Sea », est projeté en avant-première au Rialto Theatre de New York."
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
         },
         "it": {
-          "title": "Il prezzo del mare,",
-          "description": "Prima del primo film Technicolor di successo, \"The Toll of the Sea\", al Rialto Theatre di New York City"
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
         },
         "ru": {
-          "title": "Цена моря,",
-          "description": "В театре «Риальто» в Нью-Йорке состоялась премьера первого успешного фильма в системе «Техниколор» под названием «Цена моря»"
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
         },
         "el": {
-          "title": "Το τίμημα της θάλασσας,",
-          "description": "Πρώτη επιτυχημένη ταινία Technicolor, «Το τίμημα της θάλασσας», κάνει πρεμιέρα στο θέατρο Ριάλτο της Νέας Υόρκης"
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
         }
       }
     }
   },
   "days": {
+    "2026-11-25": {
+      "display_date": "November 25, 2026",
+      "day": 25,
+      "month": 11,
+      "items": {
+        "celebration": {
+          "category": "celebration",
+          "categoryTitle": "Holiday of the Day",
+          "title": "World Kindness & Cultural Exchange Day",
+          "badge": "Celebration",
+          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
+          "details": "International Day of Global Friendship & Cultural Understanding",
+          "clubLink": "lets-celebrate.html",
+          "clubName": "Let's Celebrate",
+          "source": "Global Traditions & Festivals",
+          "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
+          "i18n": {
+            "en": {
+              "title": "World Kindness & Cultural Exchange Day",
+              "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
+            },
+            "fr": {
+              "title": "Journée mondiale de la bienveillance et des échanges culturels",
+              "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
+            },
+            "it": {
+              "title": "Giornata mondiale della gentilezza e dello scambio culturale",
+              "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
+            },
+            "ru": {
+              "title": "Всемирный день доброты и культурного обмена",
+              "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
+            },
+            "el": {
+              "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
+              "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
+            }
+          }
+        },
+        "science": {
+          "category": "science",
+          "categoryTitle": "Today in Science",
+          "title": "CAT scan patent",
+          "year": "",
+          "badge": "Research & Discovery",
+          "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis.",
+          "clubLink": "keeping-up-with-science.html",
+          "clubName": "Keeping Up with Science",
+          "source": "Today in Science History",
+          "sourceUrl": "https://todayinsci.com/11/11_25.htm",
+          "i18n": {
+            "en": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            },
+            "fr": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            },
+            "it": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            },
+            "ru": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            },
+            "el": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            }
+          }
+        }
+      }
+    },
     "2026-11-26": {
       "display_date": "November 26, 2026",
       "day": 26,
@@ -151,34 +226,34 @@
         "celebration": {
           "category": "celebration",
           "categoryTitle": "Holiday of the Day",
-          "title": "Constitution Day",
+          "title": "World Kindness & Cultural Exchange Day",
           "badge": "Celebration",
-          "description": "The following is a list of public holidays in Abkhazia. The working days are marked in cursive.",
-          "details": "Constitution Day (Abkhazia, Georgia)",
+          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
+          "details": "International Day of Global Friendship & Cultural Understanding",
           "clubLink": "lets-celebrate.html",
           "clubName": "Let's Celebrate",
-          "source": "International & Cultural Observances",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
+          "source": "Global Traditions & Festivals",
+          "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
           "i18n": {
             "en": {
-              "title": "Constitution Day",
-              "description": "The following is a list of public holidays in Abkhazia. The working days are marked in cursive."
+              "title": "World Kindness & Cultural Exchange Day",
+              "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
             },
             "fr": {
-              "title": "La journée de la constitution",
-              "description": "Voici une liste des jours fériés en Abkhazie. Les jours ouvrables sont indiqués en italique."
+              "title": "Journée mondiale de la bienveillance et des échanges culturels",
+              "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
             },
             "it": {
-              "title": "Festa della costituzione",
-              "description": "Di seguito è riportato un elenco delle festività nazionali in Abcasia. I giorni lavorativi sono indicati in corsivo."
+              "title": "Giornata mondiale della gentilezza e dello scambio culturale",
+              "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
             },
             "ru": {
-              "title": "День Конституции",
-              "description": "Ниже представлен список государственных праздников в Абхазии. Рабочие дни выделены курсивом."
+              "title": "Всемирный день доброты и культурного обмена",
+              "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
             },
             "el": {
-              "title": "/ Ν ;0.5!",
-              "description": "Ακολουθεί ένας κατάλογος με τις αργίες στην Αμπχαζία. Οι εργάσιμες ημέρες επισημαίνονται με πλάγιους χαρακτήρες."
+              "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
+              "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
             }
           }
         },
@@ -199,88 +274,163 @@
               "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
             },
             "fr": {
-              "title": "Énergie marémotrice",
-              "description": "(source) En 1966, le président Charles de Gaulle a inauguré la première centrale marémotrice au monde, située dans l'estuaire de la Rance, en Bretagne. La Rance est la centrale marémotrice la plus puissante au monde."
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
             },
             "it": {
-              "title": "energia mareomotrice",
-              "description": "(fonte) Nel 1966, il presidente Charles de Gaulle inaugurò la prima centrale mareomotrice al mondo nell'estuario della Rance, in Bretagna. La Rance è la centrale mareomotrice più potente al mondo."
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
             },
             "ru": {
-              "title": "Приливная электростанция",
-              "description": "(источник) В 1966 году президент Шарль де Голль открыл первую в мире приливную электростанцию в устье реки Ранс в Бретани. Ла-Ранс — самая мощная приливная электростанция в мире. Имея ширину 700 метров, она перекрывает устье реки Ранс, расположенное недалеко от Сен-Мало (департамент Кот-д’Армор)."
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
             },
             "el": {
-              "title": "παλιρροιακή ισχύς",
-              "description": "(πηγή) Το 1966, ο Πρόεδρος Σαρλ ντε Γκωλ εγκαινίασε τον πρώτο σταθμό παραγωγής ενέργειας από παλίρροιες στον κόσμο, στη λιμνοθάλασσα του ποταμού Ρανς, στη Βρετάνη. Ο σταθμός La Rance είναι ο ισχυρότερος σταθμός παραγωγής ενέργειας από παλίρροιες στον κόσμο."
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
             }
           }
         },
         "music": {
           "category": "music",
           "categoryTitle": "Today in Music",
-          "title": "Music of the Spheres",
-          "year": "1921",
+          "title": "Jeux d'eau",
+          "year": "1901",
           "badge": "Music History",
-          "description": "Danish composer Rued Langgaard's \"Music of the Spheres\" (Sfærernes Musik) premieres at Konzerthaus in Karlsruhe, Germany; it is not performed in Denmark until 1969",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
           "clubLink": "karaoke-club.html",
           "clubName": "Karaoke Club",
           "source": "On This Day - Today in Music",
           "sourceUrl": "https://www.onthisday.com/music/",
           "i18n": {
             "en": {
-              "title": "Music of the Spheres",
-              "description": "Danish composer Rued Langgaard's \"Music of the Spheres\" (Sfærernes Musik) premieres at Konzerthaus in Karlsruhe, Germany; it is not performed in Denmark until 1969"
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
             },
             "fr": {
-              "title": "La musique des Sphères",
-              "description": "La « Musique des sphères » (Sfærernes Musik) du compositeur danois Rued Langgaard est créée au Konzerthaus de Karlsruhe, en Allemagne ; elle n’est pas jouée au Danemark avant 1969."
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
             },
             "it": {
-              "title": "\"Musica delle sfere\".",
-              "description": "La \"Musica delle sfere\" (Sfærernes Musik) del compositore danese Rued Langgaard viene eseguita per la prima volta al Konzerthaus di Karlsruhe, in Germania; non verrà eseguita in Danimarca fino al 1969."
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
             },
             "ru": {
-              "title": "Музыка сфер",
-              "description": "Премьера «Музыки сфер» (Sfærernes Musik) датского композитора Руэда Ланггорда состоялась в Концертхаусе в Карлсруэ, Германия; в Дании произведение было исполнено только в 1969 году."
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
             },
             "el": {
-              "title": "Η μουσική των σφαιρών",
-              "description": "Η «Μουσική των Σφαιρών» (Sfærernes Musik) του Δανού συνθέτη Rued Langgaard παρουσιάζεται για πρώτη φορά στο Konzerthaus της Καρλσρούης, στη Γερμανία. Δεν θα παιχτεί στη Δανία μέχρι το 1969."
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
             }
           }
         },
         "film": {
           "category": "film",
           "categoryTitle": "Today in Film & TV",
-          "title": "The Toll of the Sea,",
-          "year": "1922",
+          "title": "Gentlemen's Agreement",
+          "year": "1947",
           "badge": "Cinema & Screen",
-          "description": "First successful Technicolor movie, \"The Toll of the Sea,\" premieres at the Rialto Theatre in New York City",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
           "clubLink": "cinema-nights/index.html",
           "clubName": "Cinema Nights",
           "source": "On This Day - Today in Film & TV",
           "sourceUrl": "https://www.onthisday.com/film-tv/",
           "i18n": {
             "en": {
-              "title": "The Toll of the Sea,",
-              "description": "First successful Technicolor movie, \"The Toll of the Sea,\" premieres at the Rialto Theatre in New York City"
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
             },
             "fr": {
-              "title": "Le tribut de la mer,",
-              "description": "Le premier film Technicolor réussi, « The Toll of the Sea », est projeté en avant-première au Rialto Theatre de New York."
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
             },
             "it": {
-              "title": "Il prezzo del mare,",
-              "description": "Prima del primo film Technicolor di successo, \"The Toll of the Sea\", al Rialto Theatre di New York City"
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
             },
             "ru": {
-              "title": "Цена моря,",
-              "description": "В театре «Риальто» в Нью-Йорке состоялась премьера первого успешного фильма в системе «Техниколор» под названием «Цена моря»"
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
             },
             "el": {
-              "title": "Το τίμημα της θάλασσας,",
-              "description": "Πρώτη επιτυχημένη ταινία Technicolor, «Το τίμημα της θάλασσας», κάνει πρεμιέρα στο θέατρο Ριάλτο της Νέας Υόρκης"
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+            }
+          }
+        }
+      }
+    },
+    "2026-11-27": {
+      "display_date": "November 27, 2026",
+      "day": 27,
+      "month": 11,
+      "items": {
+        "celebration": {
+          "category": "celebration",
+          "categoryTitle": "Holiday of the Day",
+          "title": "World Kindness & Cultural Exchange Day",
+          "badge": "Celebration",
+          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
+          "details": "International Day of Global Friendship & Cultural Understanding",
+          "clubLink": "lets-celebrate.html",
+          "clubName": "Let's Celebrate",
+          "source": "Global Traditions & Festivals",
+          "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
+          "i18n": {
+            "en": {
+              "title": "World Kindness & Cultural Exchange Day",
+              "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
+            },
+            "fr": {
+              "title": "Journée mondiale de la bienveillance et des échanges culturels",
+              "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
+            },
+            "it": {
+              "title": "Giornata mondiale della gentilezza e dello scambio culturale",
+              "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
+            },
+            "ru": {
+              "title": "Всемирный день доброты и культурного обмена",
+              "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
+            },
+            "el": {
+              "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
+              "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
+            }
+          }
+        },
+        "science": {
+          "category": "science",
+          "categoryTitle": "Today in Science",
+          "title": "Sodium atmosphere",
+          "year": "",
+          "badge": "Research & Discovery",
+          "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999).",
+          "clubLink": "keeping-up-with-science.html",
+          "clubName": "Keeping Up with Science",
+          "source": "Today in Science History",
+          "sourceUrl": "https://todayinsci.com/11/11_27.htm",
+          "i18n": {
+            "en": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+            },
+            "fr": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+            },
+            "it": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+            },
+            "ru": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+            },
+            "el": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
             }
           }
         }
