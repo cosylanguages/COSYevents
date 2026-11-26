@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Session 10: Food Culture & Personal Taste — Basic Speaking Club (A0–A1)</title>
+  <title>Session 10: Food Culture &amp; Personal Taste — Basic Speaking Club (A0–A1)</title>
   <script src="../../shared/js/cosy-theme.js"></script>
   <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
   <link rel="stylesheet" href="../../shared/css/sessions.css">
@@ -24,19 +24,79 @@
       border: 1px solid var(--color-border, #e0e8e3);
     }
     .frame-box {
-      background-color: #f8faf9;
-      border-left: 4px solid #2d6a4f;
+      background-color: var(--surface-color, #f8faf9);
+      border-left: 4px solid var(--teal, #2d6a4f);
       padding: 15px;
       margin: 15px 0;
       border-radius: 0 8px 8px 0;
     }
     .question-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: var(--surface-color, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      color: var(--ink, inherit);
       border-radius: 8px;
       padding: 16px;
       margin-bottom: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+    .card-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--surface-color, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm, 0 1px 2px rgba(0, 0, 0, 0.04));
+    }
+    .card-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .card-head h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--ink, #1c3b2b);
+    }
+    .card-time {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--teal, #0F6E56);
+    }
+    .card p {
+      margin: 0.5rem 0;
+    }
+    .card ul {
+      margin: 0.5rem 0;
+      padding-left: 1.25rem;
+      line-height: 1.8;
+    }
+    .ladder {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0;
+      font-size: 0.9rem;
+    }
+    .ladder th,
+    .ladder td {
+      border: 1px solid var(--border, #e2e8f0);
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ladder th {
+      background: var(--sage-pale, #eef4ef);
+      color: var(--ink, #1c3b2b);
+    }
+    .ladder code {
+      white-space: normal;
     }
   </style>
   <link rel="stylesheet" href="../../shared/css/clubs/basic-speaking-club.css">
@@ -47,7 +107,7 @@
   <header class="session-hero" style="background: linear-gradient(135deg, #0F6E56, #0A4737);">
   <div class="club-tag">Basic Speaking Club</div>
   <div class="session-decorator-icon">🌱</div>
-  <h1 data-cms-id="h1-1-214649">Session 10: Food Culture & Personal Taste</h1>
+  <h1 data-cms-id="h1-1-214649">Session 10: Food Culture &amp; Personal Taste</h1>
   <p data-cms-id="p-1-ec9185" class="session-date">19 March 2027</p>
 </header>
   <main class="content-container">
@@ -55,72 +115,131 @@
   <a href="../../index.html">Home</a> <span class="sep">/</span>
   <a href="../../">Events</a> <span class="sep">/</span>
   <a href="../../basic-speaking-club.html">Basic Speaking Club</a> <span class="sep">/</span>
-  <span class="current">Session 10: Food Culture & Personal Taste</span>
+  <span class="current">Session 10: Food Culture &amp; Personal Taste</span>
 </nav>
 
 
-        <p data-cms-id="p-2-c9a708" class="session-lead">A welcoming, structured speaking environment for adult beginners focusing on everyday preferences and practical language.</p>
-      </div>
+                <p data-cms-id="p-2-929a92" class="session-lead">Food is the safest topic in any language: everyone has an opinion and a photo. This session uses both.</p>
 
-      <div class="session-grid">
-        <section class="session-section">
-          <h2 data-cms-id="h2-1-e32cfc">1. Warm-Up & Vocabulary Activation (15 min)</h2>
-          <p data-cms-id="p-3-738172">Get comfortable with today's essential high-utility adult vocabulary:</p>
-          <div class="vocab-grid">
-            <span class="vocab-pill">cuisine</span>
-          <span class="vocab-pill">spicy</span>
-          <span class="vocab-pill">healthy</span>
-          <span class="vocab-pill">fast food</span>
-          <span class="vocab-pill">home-cooked</span>
-          <span class="vocab-pill">vegetarian</span>
-          <span class="vocab-pill">diet</span>
-          <span class="vocab-pill">snack</span>
-          <span class="vocab-pill">portion</span>
-          <span class="vocab-pill">ingredient</span>
-          </div>
-          <div class="frame-box">
-            <strong>Target Grammar Focus:</strong> <code>Like / love / hate + noun/gerund (I love spicy food. I hate cooking.)</code>
-          </div>
-        </section>
+        <div class="card-grid">
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-2-0b51fc">2. Round 1: Guided Discussion Questions (20 min)</h2>
-          <p data-cms-id="p-4-a67bee">Use simple frames ("I think...", "I prefer...", "In my opinion...") to answer these questions with your partner:</p>
-          <div class="question-card">
-            <p data-cms-id="p-5-bf9640"><strong>1.</strong> What’s a food people in your country love but foreigners find strange?</p>
-          </div>
-          <div class="question-card">
-            <p data-cms-id="p-6-51aaa6"><strong>2.</strong> Is fast food a problem in your city?</p>
-          </div>
-          <div class="question-card">
-            <p data-cms-id="p-7-ae9357"><strong>3.</strong> Do you think cooking is a life skill everyone should have?</p>
-          </div>
-        </section>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-1-f47480">Card 1 — Intro + 10 core words</h2>
+              <span class="card-time">10 min</span>
+            </div>
+            <p data-cms-id="p-3-28f8fd">Point, repeat, then test your partner. Use pictures or real objects on the table.</p>
+            <div class="vocab-grid">
+              <span class="vocab-pill">rice</span>
+              <span class="vocab-pill">bread</span>
+              <span class="vocab-pill">soup</span>
+              <span class="vocab-pill">salad</span>
+              <span class="vocab-pill">meat</span>
+              <span class="vocab-pill">fish</span>
+              <span class="vocab-pill">sweet</span>
+              <span class="vocab-pill">salt</span>
+              <span class="vocab-pill">cook</span>
+              <span class="vocab-pill">taste</span>
+            </div>
+            <div class="question-card">
+              <p data-cms-id="p-4-8ec826"><strong>Warm-up:</strong> Open your phone. Find one food photo. Show it and say the word.</p>
+            </div>
+            <div class="frame-box">
+              <strong>Say it:</strong> <code>In my country we eat rice. / It is very good.</code>
+            </div>
+          </section>
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-3-ce545e">3. Let's Speak Together: Pair Activity (15 min)</h2>
-          <p data-cms-id="p-8-5e806b">Take turns asking your partner questions and building your speaking confidence:</p>
-          <ul>
-            <li data-cms-id="li-1-a62a51"><strong>Student A:</strong> Asks Question 1 & 2. Uses follow-up: <em>"Why do you think so?"</em></li>
-            <li data-cms-id="li-2-0e562e"><strong>Student B:</strong> Responds using sentence frame: <em>"I prefer [...] because [...]"</em></li>
-            <li data-cms-id="li-3-06ba89">Switch roles for Question 3.</li>
-          </ul>
-        </section>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-2-e12d0b">Card 2 — Discussion + opinion chunks</h2>
+              <span class="card-time">10 min</span>
+            </div>
+            <p data-cms-id="p-5-cf5252">Think alone for 30 seconds, tell your partner, then three people tell the room.</p>
+            <div class="frame-box">
+              <strong>Opinion chunks:</strong> <code>I think… / For me… / It is good. / It is bad.</code>
+            </div>
+            <div class="question-card">
+              <p data-cms-id="p-6-f92e2f"><strong>Question:</strong> What food is good for you? Why?</p>
+              <p data-cms-id="p-7-d848b4"><strong>Model:</strong> For me, soup is good because it is hot and cheap.</p>
+            </div>
+          </section>
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-4-1f997f">4. Round 2: Friendly Debate / Stance (10 min)</h2>
-          <p data-cms-id="p-9-d7f4a2">Express your opinion on these adult discussion statements:</p>
-          <ul>
-            <li data-cms-id="li-4-25aa14">🗣️ <em>"Home-cooked meals are always better than restaurant meals."</em> — Agree or Disagree?</li>
-            <li data-cms-id="li-5-cf90b0">🗣️ <em>"Fast food should be taxed higher to encourage healthy eating."</em> — Agree or Disagree?</li>
-          </ul>
-        </section>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-3-2dbb82">Card 3 — Which will you choose? + preference chunks</h2>
+              <span class="card-time">10 min</span>
+            </div>
+            <p data-cms-id="p-8-d5a020">Hands up for each side first, then each person says their line.</p>
+            <div class="frame-box">
+              <strong>Preference chunks:</strong> <code>I prefer… / I like [A] more than [B]. / [A] is better for me.</code>
+            </div>
+            <ul>
+              <li data-cms-id="li-1-ccb7a0">food from home or restaurant food</li>
+              <li data-cms-id="li-2-4064c1">sweet food or salty food</li>
+              <li data-cms-id="li-3-315174">cook at home or buy food</li>
+            </ul>
+            <p data-cms-id="p-9-a3afdf"><strong>Example:</strong> I prefer home food because I know the salt.</p>
+          </section>
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-5-1cb7f6">5. Facilitator's Correction Note</h2>
-          <p data-cms-id="p-10-9f797b">Remember: Fluency over perfection! Focus on communicating clear ideas and asking basic follow-up questions.</p>
-        </section>
-      </div>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-4-43bfcc">Card 4 — Real-life mini-action: talk about food from your country</h2>
+              <span class="card-time">15 min</span>
+            </div>
+            <p data-cms-id="p-10-9ae964">Two people describe one dish from home. Ask, answer, then swap.</p>
+            <ul>
+              <li data-cms-id="li-4-46c8f5">In my country we eat…</li>
+              <li data-cms-id="li-5-d2895c">It is very good.</li>
+              <li data-cms-id="li-6-cdd1f4">Is it spicy?</li>
+              <li data-cms-id="li-7-55d45e">No, it is sweet.</li>
+              <li data-cms-id="li-8-6719d6">Do you like it?</li>
+              <li data-cms-id="li-9-4ce153">Yes, I love it.</li>
+            </ul>
+            <p data-cms-id="p-11-9c9bc1"><strong>How to run it:</strong> demo with one student (2 min) → pairs (5 min) → swap roles (5 min) → one pair performs for the room (3 min).</p>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-5-435162">Card 5 — Looking ahead</h2>
+              <span class="card-time">8 min</span>
+            </div>
+            <div class="frame-box">
+              <strong>Future chunks:</strong> <code>This weekend, I want to cook… / Tonight, I will eat…</code>
+            </div>
+            <div class="question-card">
+              <p data-cms-id="p-12-463e65"><strong>Prompts:</strong> What do you want to cook this weekend? What will you eat tonight?</p>
+              <p data-cms-id="p-13-0a3efc"><strong>Model:</strong> This weekend I want to cook rice and fish.</p>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-6-392979">Card 6 — Outro &amp; takeaway</h2>
+              <span class="card-time">5 min</span>
+            </div>
+            <p data-cms-id="p-14-54dc59"><strong>Wrap-up:</strong> One food word + one dish you will eat this week.</p>
+            <p data-cms-id="p-15-8dc2d1"><strong>Facilitator note:</strong> write the three best sentences on the board, then three corrections as "we said / we can say". Fluency first — do not interrupt during the cards.</p>
+          </section>
+
+          <section class="card card-ladder">
+            <div class="card-head">
+              <h2 data-cms-id="h2-7-a564d7">Helper sheet — the chunk ladder</h2>
+              <span class="card-time">use the rung you are ready for</span>
+            </div>
+            <table class="ladder">
+              <thead>
+                <tr><th data-cms-id="th-1-f1e410">Function</th><th data-cms-id="th-2-b8c4ed">A0</th><th data-cms-id="th-3-446258">A0+</th><th data-cms-id="th-4-1ffd4b">A1</th></tr>
+              </thead>
+              <tbody>
+                <tr><td data-cms-id="td-1-b75aaa">Opinion</td><td data-cms-id="td-2-543030">Good. Bad.</td><td data-cms-id="td-3-741316">I think it is good.</td><td data-cms-id="td-4-1fee99">For me, soup is good because it is hot and cheap.</td></tr>
+                <tr><td data-cms-id="td-5-97d9b2">Preference</td><td data-cms-id="td-6-827444">This. That.</td><td data-cms-id="td-7-14975e">I prefer this one.</td><td data-cms-id="td-8-eeda4e">I prefer home food because I know the salt.</td></tr>
+                <tr><td data-cms-id="td-9-047ca5">Future</td><td data-cms-id="td-10-25b4d2">Tomorrow — home.</td><td data-cms-id="td-11-070ba7">Tomorrow I will go home.</td><td data-cms-id="td-12-514ad9">This weekend I want to cook rice and fish.</td></tr>
+              </tbody>
+            </table>
+            <p data-cms-id="p-16-75bbd5"><strong>Weaker group:</strong> give each student a food picture card and let them read the sentence from the card. <strong>Stronger group:</strong> add a comparison — "Which is better, your food or my food?"</p>
+          </section>
+
+        </div>
 
       <div class="session-footer">
         <a href="../../basic-speaking-club.html" class="btn btn-secondary">← Back to Basic Speaking Club</a>

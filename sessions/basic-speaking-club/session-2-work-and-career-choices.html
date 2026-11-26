@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Session 2: Work & Career Choices — Basic Speaking Club (A0–A1)</title>
+  <title>Session 2: Work &amp; Career Choices — Basic Speaking Club (A0–A1)</title>
   <script src="../../shared/js/cosy-theme.js"></script>
   <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
   <link rel="stylesheet" href="../../shared/css/sessions.css">
@@ -24,19 +24,79 @@
       border: 1px solid var(--color-border, #e0e8e3);
     }
     .frame-box {
-      background-color: #f8faf9;
-      border-left: 4px solid #2d6a4f;
+      background-color: var(--surface-color, #f8faf9);
+      border-left: 4px solid var(--teal, #2d6a4f);
       padding: 15px;
       margin: 15px 0;
       border-radius: 0 8px 8px 0;
     }
     .question-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: var(--surface-color, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      color: var(--ink, inherit);
       border-radius: 8px;
       padding: 16px;
       margin-bottom: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+    .card-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--surface-color, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm, 0 1px 2px rgba(0, 0, 0, 0.04));
+    }
+    .card-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .card-head h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--ink, #1c3b2b);
+    }
+    .card-time {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--teal, #0F6E56);
+    }
+    .card p {
+      margin: 0.5rem 0;
+    }
+    .card ul {
+      margin: 0.5rem 0;
+      padding-left: 1.25rem;
+      line-height: 1.8;
+    }
+    .ladder {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0;
+      font-size: 0.9rem;
+    }
+    .ladder th,
+    .ladder td {
+      border: 1px solid var(--border, #e2e8f0);
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ladder th {
+      background: var(--sage-pale, #eef4ef);
+      color: var(--ink, #1c3b2b);
+    }
+    .ladder code {
+      white-space: normal;
     }
   </style>
   <link rel="stylesheet" href="../../shared/css/clubs/basic-speaking-club.css">
@@ -47,7 +107,7 @@
   <header class="session-hero" style="background: linear-gradient(135deg, #0F6E56, #0A4737);">
   <div class="club-tag">Basic Speaking Club</div>
   <div class="session-decorator-icon">🌱</div>
-  <h1 data-cms-id="h1-1-ab79a1">Session 2: Work & Career Choices</h1>
+  <h1 data-cms-id="h1-1-ab79a1">Session 2: Work &amp; Career Choices</h1>
   <p data-cms-id="p-1-d8ea40" class="session-date">22 January 2027</p>
 </header>
   <main class="content-container">
@@ -55,72 +115,131 @@
   <a href="../../index.html">Home</a> <span class="sep">/</span>
   <a href="../../">Events</a> <span class="sep">/</span>
   <a href="../../basic-speaking-club.html">Basic Speaking Club</a> <span class="sep">/</span>
-  <span class="current">Session 2: Work & Career Choices</span>
+  <span class="current">Session 2: Work &amp; Career Choices</span>
 </nav>
 
 
-        <p data-cms-id="p-2-c9a708" class="session-lead">A welcoming, structured speaking environment for adult beginners focusing on everyday preferences and practical language.</p>
-      </div>
+                <p data-cms-id="p-2-16c8b8" class="session-lead">Ten work words, one opinion question, and a small conversation at a shop counter. No grammar lecture — just frames people can use on Monday.</p>
 
-      <div class="session-grid">
-        <section class="session-section">
-          <h2 data-cms-id="h2-1-e32cfc">1. Warm-Up & Vocabulary Activation (15 min)</h2>
-          <p data-cms-id="p-3-738172">Get comfortable with today's essential high-utility adult vocabulary:</p>
-          <div class="vocab-grid">
-            <span class="vocab-pill">job</span>
-          <span class="vocab-pill">boss</span>
-          <span class="vocab-pill">colleague</span>
-          <span class="vocab-pill">office</span>
-          <span class="vocab-pill">salary</span>
-          <span class="vocab-pill">shift</span>
-          <span class="vocab-pill">remote</span>
-          <span class="vocab-pill">part-time</span>
-          <span class="vocab-pill">full-time</span>
-          <span class="vocab-pill">career</span>
-          </div>
-          <div class="frame-box">
-            <strong>Target Grammar Focus:</strong> <code>Present simple for routines (I work… / She doesn’t work…)</code>
-          </div>
-        </section>
+        <div class="card-grid">
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-2-0b51fc">2. Round 1: Guided Discussion Questions (20 min)</h2>
-          <p data-cms-id="p-4-a67bee">Use simple frames ("I think...", "I prefer...", "In my opinion...") to answer these questions with your partner:</p>
-          <div class="question-card">
-            <p data-cms-id="p-5-1eda2c"><strong>1.</strong> What do you like about your job?</p>
-          </div>
-          <div class="question-card">
-            <p data-cms-id="p-6-99c722"><strong>2.</strong> Do you prefer working from home or in an office? Why?</p>
-          </div>
-          <div class="question-card">
-            <p data-cms-id="p-7-bf30e3"><strong>3.</strong> Is a high salary more important than job satisfaction?</p>
-          </div>
-        </section>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-1-f47480">Card 1 — Intro + 10 core words</h2>
+              <span class="card-time">10 min</span>
+            </div>
+            <p data-cms-id="p-3-28f8fd">Point, repeat, then test your partner. Use pictures or real objects on the table.</p>
+            <div class="vocab-grid">
+              <span class="vocab-pill">job</span>
+              <span class="vocab-pill">office</span>
+              <span class="vocab-pill">boss</span>
+              <span class="vocab-pill">colleague</span>
+              <span class="vocab-pill">money</span>
+              <span class="vocab-pill">meeting</span>
+              <span class="vocab-pill">computer</span>
+              <span class="vocab-pill">email</span>
+              <span class="vocab-pill">break</span>
+              <span class="vocab-pill">start</span>
+            </div>
+            <div class="question-card">
+              <p data-cms-id="p-4-5f118b"><strong>Warm-up:</strong> Show your phone. Is your job in the phone? Point to one work app.</p>
+            </div>
+            <div class="frame-box">
+              <strong>Say it:</strong> <code>I work in a shop. / I start at nine.</code>
+            </div>
+          </section>
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-3-ce545e">3. Let's Speak Together: Pair Activity (15 min)</h2>
-          <p data-cms-id="p-8-5e806b">Take turns asking your partner questions and building your speaking confidence:</p>
-          <ul>
-            <li data-cms-id="li-1-a62a51"><strong>Student A:</strong> Asks Question 1 & 2. Uses follow-up: <em>"Why do you think so?"</em></li>
-            <li data-cms-id="li-2-0e562e"><strong>Student B:</strong> Responds using sentence frame: <em>"I prefer [...] because [...]"</em></li>
-            <li data-cms-id="li-3-06ba89">Switch roles for Question 3.</li>
-          </ul>
-        </section>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-2-e12d0b">Card 2 — Discussion + opinion chunks</h2>
+              <span class="card-time">10 min</span>
+            </div>
+            <p data-cms-id="p-5-cf5252">Think alone for 30 seconds, tell your partner, then three people tell the room.</p>
+            <div class="frame-box">
+              <strong>Opinion chunks:</strong> <code>I think… / For me… / It is good. / It is bad.</code>
+            </div>
+            <div class="question-card">
+              <p data-cms-id="p-6-9ad6fa"><strong>Question:</strong> Is your job good for you? Why?</p>
+              <p data-cms-id="p-7-3a03d9"><strong>Model:</strong> For me, my job is good because the people are nice.</p>
+            </div>
+          </section>
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-4-1f997f">4. Round 2: Friendly Debate / Stance (10 min)</h2>
-          <p data-cms-id="p-9-d7f4a2">Express your opinion on these adult discussion statements:</p>
-          <ul>
-            <li data-cms-id="li-4-504172">🗣️ <em>"Working remotely is better than working in an office."</em> — Agree or Disagree?</li>
-            <li data-cms-id="li-5-808d9c">🗣️ <em>"Salary is more important than liking your job."</em> — Agree or Disagree?</li>
-          </ul>
-        </section>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-3-2dbb82">Card 3 — Which will you choose? + preference chunks</h2>
+              <span class="card-time">10 min</span>
+            </div>
+            <p data-cms-id="p-8-d5a020">Hands up for each side first, then each person says their line.</p>
+            <div class="frame-box">
+              <strong>Preference chunks:</strong> <code>I prefer… / I like [A] more than [B]. / [A] is better for me.</code>
+            </div>
+            <ul>
+              <li data-cms-id="li-1-169864">an office job or a job at home</li>
+              <li data-cms-id="li-2-c1ef47">a morning shift or an evening shift</li>
+              <li data-cms-id="li-3-3cb872">a big company or a small company</li>
+            </ul>
+            <p data-cms-id="p-9-d0df07"><strong>Example:</strong> I prefer a morning shift because I sleep early.</p>
+          </section>
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-5-1cb7f6">5. Facilitator's Correction Note</h2>
-          <p data-cms-id="p-10-9f797b">Remember: Fluency over perfection! Focus on communicating clear ideas and asking basic follow-up questions.</p>
-        </section>
-      </div>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-4-232409">Card 4 — Real-life mini-action: ask about a job</h2>
+              <span class="card-time">15 min</span>
+            </div>
+            <p data-cms-id="p-10-9a410f">Student A has a small shop. Student B wants a job there. Ask about the hours and the money.</p>
+            <ul>
+              <li data-cms-id="li-4-b7369a">Hello. I want a job.</li>
+              <li data-cms-id="li-5-9991f4">Are you open on Sunday?</li>
+              <li data-cms-id="li-6-eb67e8">What time do you start?</li>
+              <li data-cms-id="li-7-a28c20">We start at nine.</li>
+              <li data-cms-id="li-8-9632b3">How much is the pay?</li>
+              <li data-cms-id="li-9-d11826">OK, thank you. Goodbye.</li>
+            </ul>
+            <p data-cms-id="p-11-9c9bc1"><strong>How to run it:</strong> demo with one student (2 min) → pairs (5 min) → swap roles (5 min) → one pair performs for the room (3 min).</p>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-5-435162">Card 5 — Looking ahead</h2>
+              <span class="card-time">8 min</span>
+            </div>
+            <div class="frame-box">
+              <strong>Future chunks:</strong> <code>Next year, I want to… / Tomorrow, I will…</code>
+            </div>
+            <div class="question-card">
+              <p data-cms-id="p-12-ec772e"><strong>Prompts:</strong> What do you want to do next year? What will you do after work tomorrow?</p>
+              <p data-cms-id="p-13-31f2b3"><strong>Model:</strong> Next year I want to work in a bigger office.</p>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-6-392979">Card 6 — Outro &amp; takeaway</h2>
+              <span class="card-time">5 min</span>
+            </div>
+            <p data-cms-id="p-14-6b29bf"><strong>Wrap-up:</strong> One word from today + one job you want.</p>
+            <p data-cms-id="p-15-8dc2d1"><strong>Facilitator note:</strong> write the three best sentences on the board, then three corrections as "we said / we can say". Fluency first — do not interrupt during the cards.</p>
+          </section>
+
+          <section class="card card-ladder">
+            <div class="card-head">
+              <h2 data-cms-id="h2-7-a564d7">Helper sheet — the chunk ladder</h2>
+              <span class="card-time">use the rung you are ready for</span>
+            </div>
+            <table class="ladder">
+              <thead>
+                <tr><th data-cms-id="th-1-f1e410">Function</th><th data-cms-id="th-2-b8c4ed">A0</th><th data-cms-id="th-3-446258">A0+</th><th data-cms-id="th-4-1ffd4b">A1</th></tr>
+              </thead>
+              <tbody>
+                <tr><td data-cms-id="td-1-b75aaa">Opinion</td><td data-cms-id="td-2-543030">Good. Bad.</td><td data-cms-id="td-3-741316">I think it is good.</td><td data-cms-id="td-4-140353">For me, my job is good because the people are nice.</td></tr>
+                <tr><td data-cms-id="td-5-97d9b2">Preference</td><td data-cms-id="td-6-827444">This. That.</td><td data-cms-id="td-7-14975e">I prefer this one.</td><td data-cms-id="td-8-0cf10c">I prefer a morning shift because I sleep early.</td></tr>
+                <tr><td data-cms-id="td-9-047ca5">Future</td><td data-cms-id="td-10-25b4d2">Tomorrow — home.</td><td data-cms-id="td-11-070ba7">Tomorrow I will go home.</td><td data-cms-id="td-12-94730c">Next year I want to work in a bigger office.</td></tr>
+              </tbody>
+            </table>
+            <p data-cms-id="p-16-3a7636"><strong>Weaker group:</strong> use only three questions in Card 4 and write them on the board. <strong>Stronger group:</strong> the shop says no, so B asks about a different job — "Do you know a shop with a job?"</p>
+          </section>
+
+        </div>
 
       <div class="session-footer">
         <a href="../../basic-speaking-club.html" class="btn btn-secondary">← Back to Basic Speaking Club</a>

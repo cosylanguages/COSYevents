@@ -13,6 +13,7 @@ Scripts marked with an npm name are exposed in `package.json`; the rest are run 
 | `build-public.js` | `build-public` | Builds the calendar discovery index from `events/` |
 | `build_localized_manifest.js` | `build-i18n`, `check-i18n` | Builds or verifies the localized page manifest |
 | `build-sessions.js` | — | Converts Markdown session files under `sessions/<club>/` to HTML |
+| `build_basic_speaking_club.js` | `build-basic-speaking-club`, `check-basic-speaking-club` | Builds the A0–A1 Basic Speaking Club pages and Markdown from `data/basic-speaking-club-sessions.json`; `--check` fails if a page is stale |
 | `build_science_hub.js` | — | Rebuilds the `keeping-up-with-science.html` hub from its session cards |
 | `convert-html-to-md.js` | — | Inverse of `build-sessions`: HTML sessions to Markdown |
 | `convert_session.py` | — | Converts a single session export to the repository format |

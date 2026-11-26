@@ -1,6 +1,6 @@
 {
-  "sessionsCount": 135,
-  "totalTerms": 173,
+  "sessionsCount": 165,
+  "totalTerms": 473,
   "sessions": [
     {
       "sessionId": "daily-routines-and-habits",
@@ -79,6 +79,4806 @@
             "dining-food"
           ],
           "level": "A2"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-1-introductions-and-first-impressions",
+      "sessionTitle": "Session 1: Introductions & First Impressions",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "15 January 2027",
+      "vocabulary": [
+        {
+          "id": "en:name:noun",
+          "term": "name",
+          "pos": "noun",
+          "definition": "The word people call you.",
+          "translation": "",
+          "example": "My name is Ana.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hello:expression",
+          "term": "hello",
+          "pos": "expression",
+          "definition": "A word you say when you meet someone.",
+          "translation": "",
+          "example": "Hello, I am Sam.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:friend:noun",
+          "term": "friend",
+          "pos": "noun",
+          "definition": "A person you like and know well.",
+          "translation": "",
+          "example": "Ana is my friend.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:country:noun",
+          "term": "country",
+          "pos": "noun",
+          "definition": "A land with its own flag.",
+          "translation": "",
+          "example": "My country is hot.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:city:noun",
+          "term": "city",
+          "pos": "noun",
+          "definition": "A big town with many people.",
+          "translation": "",
+          "example": "My city is big.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:job:noun",
+          "term": "job",
+          "pos": "noun",
+          "definition": "The work you do for money.",
+          "translation": "",
+          "example": "My job is in a shop.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:family:noun",
+          "term": "family",
+          "pos": "noun",
+          "definition": "Your mother, father and children.",
+          "translation": "",
+          "example": "My family is small.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hobby:noun",
+          "term": "hobby",
+          "pos": "noun",
+          "definition": "Something you do for fun.",
+          "translation": "",
+          "example": "My hobby is music.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:phone:noun",
+          "term": "phone",
+          "pos": "noun",
+          "definition": "A small telephone you carry.",
+          "translation": "",
+          "example": "My phone is new.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:photo:noun",
+          "term": "photo",
+          "pos": "noun",
+          "definition": "A picture from a camera.",
+          "translation": "",
+          "example": "This is a photo of my family.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-10-food-culture-and-personal-taste",
+      "sessionTitle": "Session 10: Food Culture & Personal Taste",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "19 March 2027",
+      "vocabulary": [
+        {
+          "id": "en:rice:noun",
+          "term": "rice",
+          "pos": "noun",
+          "definition": "Small white grains you cook.",
+          "translation": "",
+          "example": "We eat rice every day.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bread:noun",
+          "term": "bread",
+          "pos": "noun",
+          "definition": "A food from flour, baked.",
+          "translation": "",
+          "example": "I buy bread in the morning.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:soup:noun",
+          "term": "soup",
+          "pos": "noun",
+          "definition": "Hot food you eat with a spoon.",
+          "translation": "",
+          "example": "The soup is hot.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:salad:noun",
+          "term": "salad",
+          "pos": "noun",
+          "definition": "Cold vegetables in a bowl.",
+          "translation": "",
+          "example": "I want a salad, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:meat:noun",
+          "term": "meat",
+          "pos": "noun",
+          "definition": "Food from an animal.",
+          "translation": "",
+          "example": "I don't eat meat.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:fish:noun",
+          "term": "fish",
+          "pos": "noun",
+          "definition": "Food from the water.",
+          "translation": "",
+          "example": "The fish is fresh.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:sweet:adjective",
+          "term": "sweet",
+          "pos": "adjective",
+          "definition": "With a lot of sugar.",
+          "translation": "",
+          "example": "This cake is too sweet.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:salt:noun",
+          "term": "salt",
+          "pos": "noun",
+          "definition": "White powder for taste.",
+          "translation": "",
+          "example": "No salt, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cook:verb",
+          "term": "cook",
+          "pos": "verb",
+          "definition": "To make food ready with heat.",
+          "translation": "",
+          "example": "I cook on Sunday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:taste:verb",
+          "term": "taste",
+          "pos": "verb",
+          "definition": "To put food in your mouth to check it.",
+          "translation": "",
+          "example": "Can I taste it?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-11-restaurants-and-social-eating",
+      "sessionTitle": "Session 11: Restaurants & Social Eating",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "26 March 2027",
+      "vocabulary": [
+        {
+          "id": "en:menu:noun",
+          "term": "menu",
+          "pos": "noun",
+          "definition": "The list of food and drinks.",
+          "translation": "",
+          "example": "Can I see the menu, please?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:waiter:noun",
+          "term": "waiter",
+          "pos": "noun",
+          "definition": "The person who brings food to your table.",
+          "translation": "",
+          "example": "The waiter is friendly.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:table:noun",
+          "term": "table",
+          "pos": "noun",
+          "definition": "The furniture you sit at to eat.",
+          "translation": "",
+          "example": "A table for two, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:water:noun",
+          "term": "water",
+          "pos": "noun",
+          "definition": "A clear drink.",
+          "translation": "",
+          "example": "One water, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:order:verb",
+          "term": "order",
+          "pos": "verb",
+          "definition": "To tell the waiter what you want.",
+          "translation": "",
+          "example": "I want to order now.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bill:noun",
+          "term": "bill",
+          "pos": "noun",
+          "definition": "The paper that shows how much you pay.",
+          "translation": "",
+          "example": "The bill, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tip:noun",
+          "term": "tip",
+          "pos": "noun",
+          "definition": "Extra money you leave for the waiter.",
+          "translation": "",
+          "example": "We leave a small tip.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cheap:adjective",
+          "term": "cheap",
+          "pos": "adjective",
+          "definition": "Costing little money.",
+          "translation": "",
+          "example": "This restaurant is cheap.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:expensive:adjective",
+          "term": "expensive",
+          "pos": "adjective",
+          "definition": "Costing a lot of money.",
+          "translation": "",
+          "example": "The fish is too expensive.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:delicious:adjective",
+          "term": "delicious",
+          "pos": "adjective",
+          "definition": "Tasting very good.",
+          "translation": "",
+          "example": "The soup is delicious.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-12-money-habits-and-spending-priorities",
+      "sessionTitle": "Session 12: Money Habits & Spending Priorities",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "2 April 2027",
+      "vocabulary": [
+        {
+          "id": "en:money:noun",
+          "term": "money",
+          "pos": "noun",
+          "definition": "What you pay with.",
+          "translation": "",
+          "example": "I don't have money today.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:price:noun",
+          "term": "price",
+          "pos": "noun",
+          "definition": "How much something costs.",
+          "translation": "",
+          "example": "The price is high.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cheap:adjective",
+          "term": "cheap",
+          "pos": "adjective",
+          "definition": "Costing little money.",
+          "translation": "",
+          "example": "This bread is cheap.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:expensive:adjective",
+          "term": "expensive",
+          "pos": "adjective",
+          "definition": "Costing a lot of money.",
+          "translation": "",
+          "example": "That phone is expensive.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:pay:verb",
+          "term": "pay",
+          "pos": "verb",
+          "definition": "To give money for something.",
+          "translation": "",
+          "example": "I pay by card.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:card:noun",
+          "term": "card",
+          "pos": "noun",
+          "definition": "A plastic card for money.",
+          "translation": "",
+          "example": "Can I pay by card?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cash:noun",
+          "term": "cash",
+          "pos": "noun",
+          "definition": "Money in notes and coins.",
+          "translation": "",
+          "example": "I have cash.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:save:verb",
+          "term": "save",
+          "pos": "verb",
+          "definition": "To keep money for later.",
+          "translation": "",
+          "example": "I save twenty euros a month.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:spend:verb",
+          "term": "spend",
+          "pos": "verb",
+          "definition": "To use money.",
+          "translation": "",
+          "example": "I spend too much on coffee.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bank:noun",
+          "term": "bank",
+          "pos": "noun",
+          "definition": "The place that keeps your money.",
+          "translation": "",
+          "example": "My bank is near here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-13-fashion-and-identity",
+      "sessionTitle": "Session 13: Fashion & Identity",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "9 April 2027",
+      "vocabulary": [
+        {
+          "id": "en:shirt:noun",
+          "term": "shirt",
+          "pos": "noun",
+          "definition": "Clothes for the top of your body.",
+          "translation": "",
+          "example": "My shirt is white.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:shoes:noun",
+          "term": "shoes",
+          "pos": "noun",
+          "definition": "You wear them on your feet.",
+          "translation": "",
+          "example": "These shoes are new.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:jacket:noun",
+          "term": "jacket",
+          "pos": "noun",
+          "definition": "A short coat.",
+          "translation": "",
+          "example": "I need a warm jacket.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:dress:noun",
+          "term": "dress",
+          "pos": "noun",
+          "definition": "Clothes for a woman, top and skirt together.",
+          "translation": "",
+          "example": "Her dress is blue.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:size:noun",
+          "term": "size",
+          "pos": "noun",
+          "definition": "How big or small clothes are.",
+          "translation": "",
+          "example": "What size are you?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:colour:noun",
+          "term": "colour",
+          "pos": "noun",
+          "definition": "Red, blue, green.",
+          "translation": "",
+          "example": "I like this colour.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:wear:verb",
+          "term": "wear",
+          "pos": "verb",
+          "definition": "To have clothes on your body.",
+          "translation": "",
+          "example": "I wear a jacket in winter.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:buy:verb",
+          "term": "buy",
+          "pos": "verb",
+          "definition": "To get something with money.",
+          "translation": "",
+          "example": "I buy clothes online.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:old:adjective",
+          "term": "old",
+          "pos": "adjective",
+          "definition": "With many years.",
+          "translation": "",
+          "example": "This is my old jacket.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:new:adjective",
+          "term": "new",
+          "pos": "adjective",
+          "definition": "Not old.",
+          "translation": "",
+          "example": "My shoes are new.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-14-weather-and-lifestyle-choices",
+      "sessionTitle": "Session 14: Weather & Lifestyle Choices",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "16 April 2027",
+      "vocabulary": [
+        {
+          "id": "en:sun:noun",
+          "term": "sun",
+          "pos": "noun",
+          "definition": "The light in the sky in the day.",
+          "translation": "",
+          "example": "The sun is strong today.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:rain:noun",
+          "term": "rain",
+          "pos": "noun",
+          "definition": "Water from the sky.",
+          "translation": "",
+          "example": "I like the rain.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hot:adjective",
+          "term": "hot",
+          "pos": "adjective",
+          "definition": "With a high temperature.",
+          "translation": "",
+          "example": "It is hot in July.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cold:adjective",
+          "term": "cold",
+          "pos": "adjective",
+          "definition": "With a low temperature.",
+          "translation": "",
+          "example": "It is cold today.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:wind:noun",
+          "term": "wind",
+          "pos": "noun",
+          "definition": "Air that moves.",
+          "translation": "",
+          "example": "The wind is strong.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:snow:noun",
+          "term": "snow",
+          "pos": "noun",
+          "definition": "White cold water from the sky.",
+          "translation": "",
+          "example": "We have snow in January.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:coat:noun",
+          "term": "coat",
+          "pos": "noun",
+          "definition": "Warm clothes for outside.",
+          "translation": "",
+          "example": "I wear a coat in winter.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:umbrella:noun",
+          "term": "umbrella",
+          "pos": "noun",
+          "definition": "You hold it in the rain.",
+          "translation": "",
+          "example": "Take an umbrella.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:summer:noun",
+          "term": "summer",
+          "pos": "noun",
+          "definition": "The hot months.",
+          "translation": "",
+          "example": "In summer I swim.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:winter:noun",
+          "term": "winter",
+          "pos": "noun",
+          "definition": "The cold months.",
+          "translation": "",
+          "example": "Winter is long here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-15-hobbies-and-personal-growth",
+      "sessionTitle": "Session 15: Hobbies & Personal Growth",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "23 April 2027",
+      "vocabulary": [
+        {
+          "id": "en:hobby:noun",
+          "term": "hobby",
+          "pos": "noun",
+          "definition": "Something you do for fun.",
+          "translation": "",
+          "example": "My hobby is music.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:music:noun",
+          "term": "music",
+          "pos": "noun",
+          "definition": "Sounds you listen to.",
+          "translation": "",
+          "example": "I listen to music at night.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:guitar:noun",
+          "term": "guitar",
+          "pos": "noun",
+          "definition": "A musical instrument with strings.",
+          "translation": "",
+          "example": "I play the guitar.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:sport:noun",
+          "term": "sport",
+          "pos": "noun",
+          "definition": "A game with your body.",
+          "translation": "",
+          "example": "My sport is football.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:dance:verb",
+          "term": "dance",
+          "pos": "verb",
+          "definition": "To move your body to music.",
+          "translation": "",
+          "example": "We dance on Friday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:read:verb",
+          "term": "read",
+          "pos": "verb",
+          "definition": "To look at words and understand them.",
+          "translation": "",
+          "example": "I read on the bus.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:draw:verb",
+          "term": "draw",
+          "pos": "verb",
+          "definition": "To make a picture with a pen.",
+          "translation": "",
+          "example": "I draw people.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:learn:verb",
+          "term": "learn",
+          "pos": "verb",
+          "definition": "To get new knowledge.",
+          "translation": "",
+          "example": "I learn English at the club.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:class:noun",
+          "term": "class",
+          "pos": "noun",
+          "definition": "A lesson with a teacher.",
+          "translation": "",
+          "example": "My class is on Tuesday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:free-time:expression",
+          "term": "free time",
+          "pos": "expression",
+          "definition": "Time when you do not work.",
+          "translation": "",
+          "example": "In my free time I draw.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-16-sports-health-and-competition",
+      "sessionTitle": "Session 16: Sports, Health & Competition",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "30 April 2027",
+      "vocabulary": [
+        {
+          "id": "en:run:verb",
+          "term": "run",
+          "pos": "verb",
+          "definition": "To move fast on your feet.",
+          "translation": "",
+          "example": "I run in the morning.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:swim:verb",
+          "term": "swim",
+          "pos": "verb",
+          "definition": "To move in water.",
+          "translation": "",
+          "example": "I swim on Sunday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:football:noun",
+          "term": "football",
+          "pos": "noun",
+          "definition": "A game with a ball and two teams.",
+          "translation": "",
+          "example": "We play football after work.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:gym:noun",
+          "term": "gym",
+          "pos": "noun",
+          "definition": "A place with machines for exercise.",
+          "translation": "",
+          "example": "The gym is near my home.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:team:noun",
+          "term": "team",
+          "pos": "noun",
+          "definition": "A group who play together.",
+          "translation": "",
+          "example": "My team is small.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:win:verb",
+          "term": "win",
+          "pos": "verb",
+          "definition": "To be first in a game.",
+          "translation": "",
+          "example": "We win sometimes.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:lose:verb",
+          "term": "lose",
+          "pos": "verb",
+          "definition": "To not win.",
+          "translation": "",
+          "example": "We lose a lot.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tired:adjective",
+          "term": "tired",
+          "pos": "adjective",
+          "definition": "Needing rest.",
+          "translation": "",
+          "example": "I am tired after the gym.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:strong:adjective",
+          "term": "strong",
+          "pos": "adjective",
+          "definition": "With a lot of power.",
+          "translation": "",
+          "example": "My legs are strong.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:match:noun",
+          "term": "match",
+          "pos": "noun",
+          "definition": "A game between two teams.",
+          "translation": "",
+          "example": "The match is on Saturday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-17-city-life-vs-small-town",
+      "sessionTitle": "Session 17: City Life vs Small Town",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "7 May 2027",
+      "vocabulary": [
+        {
+          "id": "en:city:noun",
+          "term": "city",
+          "pos": "noun",
+          "definition": "A big town with many people.",
+          "translation": "",
+          "example": "The city is very big.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:town:noun",
+          "term": "town",
+          "pos": "noun",
+          "definition": "A place smaller than a city.",
+          "translation": "",
+          "example": "I live in a small town.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:village:noun",
+          "term": "village",
+          "pos": "noun",
+          "definition": "A very small town.",
+          "translation": "",
+          "example": "My village has one shop.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:park:noun",
+          "term": "park",
+          "pos": "noun",
+          "definition": "A green place in a city.",
+          "translation": "",
+          "example": "The park is near here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:shop:noun",
+          "term": "shop",
+          "pos": "noun",
+          "definition": "A place where you buy things.",
+          "translation": "",
+          "example": "There is a shop on my street.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:noisy:adjective",
+          "term": "noisy",
+          "pos": "adjective",
+          "definition": "With a lot of sound.",
+          "translation": "",
+          "example": "The city is noisy.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:quiet:adjective",
+          "term": "quiet",
+          "pos": "adjective",
+          "definition": "With little sound.",
+          "translation": "",
+          "example": "My town is quiet.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:people:noun",
+          "term": "people",
+          "pos": "noun",
+          "definition": "Men, women and children.",
+          "translation": "",
+          "example": "There are many people here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:walk:verb",
+          "term": "walk",
+          "pos": "verb",
+          "definition": "To go on foot.",
+          "translation": "",
+          "example": "I walk to the shop.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:live:verb",
+          "term": "live",
+          "pos": "verb",
+          "definition": "To have your home in a place.",
+          "translation": "",
+          "example": "I live in a small town.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-18-transport-choices-and-sustainability",
+      "sessionTitle": "Session 18: Transport Choices & Sustainability",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "14 May 2027",
+      "vocabulary": [
+        {
+          "id": "en:bus:noun",
+          "term": "bus",
+          "pos": "noun",
+          "definition": "A big vehicle for many people.",
+          "translation": "",
+          "example": "I take the bus at eight.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:train:noun",
+          "term": "train",
+          "pos": "noun",
+          "definition": "A long vehicle on rails.",
+          "translation": "",
+          "example": "The train is fast.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bike:noun",
+          "term": "bike",
+          "pos": "noun",
+          "definition": "A vehicle with two wheels and pedals.",
+          "translation": "",
+          "example": "I go to work by bike.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:taxi:noun",
+          "term": "taxi",
+          "pos": "noun",
+          "definition": "A car you pay to travel in.",
+          "translation": "",
+          "example": "The taxi is expensive.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:ticket:noun",
+          "term": "ticket",
+          "pos": "noun",
+          "definition": "The paper you buy to travel.",
+          "translation": "",
+          "example": "One ticket, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:stop:noun",
+          "term": "stop",
+          "pos": "noun",
+          "definition": "The place where a bus stops.",
+          "translation": "",
+          "example": "The stop is near my home.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:walk:verb",
+          "term": "walk",
+          "pos": "verb",
+          "definition": "To go on foot.",
+          "translation": "",
+          "example": "I walk to the station.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cheap:adjective",
+          "term": "cheap",
+          "pos": "adjective",
+          "definition": "Costing little money.",
+          "translation": "",
+          "example": "The bus is cheap.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:fast:adjective",
+          "term": "fast",
+          "pos": "adjective",
+          "definition": "Moving quickly.",
+          "translation": "",
+          "example": "The train is fast.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:late:adjective",
+          "term": "late",
+          "pos": "adjective",
+          "definition": "After the usual time.",
+          "translation": "",
+          "example": "The bus is late again.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-19-job-satisfaction-and-motivation",
+      "sessionTitle": "Session 19: Job Satisfaction & Motivation",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "21 May 2027",
+      "vocabulary": [
+        {
+          "id": "en:happy:adjective",
+          "term": "happy",
+          "pos": "adjective",
+          "definition": "Feeling good.",
+          "translation": "",
+          "example": "I am happy at work.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tired:adjective",
+          "term": "tired",
+          "pos": "adjective",
+          "definition": "Needing rest.",
+          "translation": "",
+          "example": "I am tired after work.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:boss:noun",
+          "term": "boss",
+          "pos": "noun",
+          "definition": "The person you work for.",
+          "translation": "",
+          "example": "My boss is fair.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:team:noun",
+          "term": "team",
+          "pos": "noun",
+          "definition": "The people you work with.",
+          "translation": "",
+          "example": "My team is small.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:money:noun",
+          "term": "money",
+          "pos": "noun",
+          "definition": "What you get for work.",
+          "translation": "",
+          "example": "The money is not good.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:help:verb",
+          "term": "help",
+          "pos": "verb",
+          "definition": "To do part of the work for someone.",
+          "translation": "",
+          "example": "My team helps me.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:learn:verb",
+          "term": "learn",
+          "pos": "verb",
+          "definition": "To get new knowledge.",
+          "translation": "",
+          "example": "I learn new things here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:change:verb",
+          "term": "change",
+          "pos": "verb",
+          "definition": "To make something different.",
+          "translation": "",
+          "example": "I want to change my job.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:day-off:expression",
+          "term": "day off",
+          "pos": "expression",
+          "definition": "A day when you do not work.",
+          "translation": "",
+          "example": "I want a day off.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:start:verb",
+          "term": "start",
+          "pos": "verb",
+          "definition": "To begin work.",
+          "translation": "",
+          "example": "I start at eight.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-2-work-and-career-choices",
+      "sessionTitle": "Session 2: Work & Career Choices",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "22 January 2027",
+      "vocabulary": [
+        {
+          "id": "en:job:noun",
+          "term": "job",
+          "pos": "noun",
+          "definition": "The work you do for money.",
+          "translation": "",
+          "example": "My job is in a shop.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:office:noun",
+          "term": "office",
+          "pos": "noun",
+          "definition": "A room where people work at desks.",
+          "translation": "",
+          "example": "I work in an office.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:boss:noun",
+          "term": "boss",
+          "pos": "noun",
+          "definition": "The person you work for.",
+          "translation": "",
+          "example": "My boss is nice.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:colleague:noun",
+          "term": "colleague",
+          "pos": "noun",
+          "definition": "A person you work with.",
+          "translation": "",
+          "example": "My colleague speaks English.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:money:noun",
+          "term": "money",
+          "pos": "noun",
+          "definition": "What you get for work.",
+          "translation": "",
+          "example": "The money is good.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:meeting:noun",
+          "term": "meeting",
+          "pos": "noun",
+          "definition": "People talking about work together.",
+          "translation": "",
+          "example": "The meeting is at ten.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:computer:noun",
+          "term": "computer",
+          "pos": "noun",
+          "definition": "A machine for work and email.",
+          "translation": "",
+          "example": "My computer is old.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:email:noun",
+          "term": "email",
+          "pos": "noun",
+          "definition": "A message you send from a computer.",
+          "translation": "",
+          "example": "I write ten emails a day.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:break:noun",
+          "term": "break",
+          "pos": "noun",
+          "definition": "A short stop from work.",
+          "translation": "",
+          "example": "My break is at one.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:start:verb",
+          "term": "start",
+          "pos": "verb",
+          "definition": "To begin work.",
+          "translation": "",
+          "example": "I start at nine.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-20-emotions-and-mental-wellbeing",
+      "sessionTitle": "Session 20: Emotions & Mental Wellbeing",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "28 May 2027",
+      "vocabulary": [
+        {
+          "id": "en:happy:adjective",
+          "term": "happy",
+          "pos": "adjective",
+          "definition": "Feeling good.",
+          "translation": "",
+          "example": "I am happy today.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:sad:adjective",
+          "term": "sad",
+          "pos": "adjective",
+          "definition": "Feeling bad.",
+          "translation": "",
+          "example": "He is sad about his job.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tired:adjective",
+          "term": "tired",
+          "pos": "adjective",
+          "definition": "Needing rest.",
+          "translation": "",
+          "example": "I am very tired.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:angry:adjective",
+          "term": "angry",
+          "pos": "adjective",
+          "definition": "Feeling strong and hot.",
+          "translation": "",
+          "example": "I am angry with the bus.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:worried:adjective",
+          "term": "worried",
+          "pos": "adjective",
+          "definition": "Thinking about a problem.",
+          "translation": "",
+          "example": "I am worried about money.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:calm:adjective",
+          "term": "calm",
+          "pos": "adjective",
+          "definition": "Feeling quiet and easy.",
+          "translation": "",
+          "example": "I feel calm after a walk.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:good:adjective",
+          "term": "good",
+          "pos": "adjective",
+          "definition": "Fine, not bad.",
+          "translation": "",
+          "example": "I feel good today.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bad:adjective",
+          "term": "bad",
+          "pos": "adjective",
+          "definition": "Not good.",
+          "translation": "",
+          "example": "I feel bad this morning.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:talk:verb",
+          "term": "talk",
+          "pos": "verb",
+          "definition": "To speak with someone.",
+          "translation": "",
+          "example": "I talk to my friend.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:friend:noun",
+          "term": "friend",
+          "pos": "noun",
+          "definition": "A person you like and know well.",
+          "translation": "",
+          "example": "My friend listens.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-21-health-choices-and-prevention",
+      "sessionTitle": "Session 21: Health Choices & Prevention",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "4 June 2027",
+      "vocabulary": [
+        {
+          "id": "en:sleep:noun",
+          "term": "sleep",
+          "pos": "noun",
+          "definition": "Rest with your eyes closed at night.",
+          "translation": "",
+          "example": "I sleep seven hours.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:water:noun",
+          "term": "water",
+          "pos": "noun",
+          "definition": "A clear drink.",
+          "translation": "",
+          "example": "I drink two litres of water.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:fruit:noun",
+          "term": "fruit",
+          "pos": "noun",
+          "definition": "Sweet food from a plant.",
+          "translation": "",
+          "example": "I eat fruit in the morning.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:vegetables:noun",
+          "term": "vegetables",
+          "pos": "noun",
+          "definition": "Plants you cook or eat in salad.",
+          "translation": "",
+          "example": "I eat vegetables every day.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:walk:noun",
+          "term": "walk",
+          "pos": "noun",
+          "definition": "Going somewhere on foot.",
+          "translation": "",
+          "example": "I take a walk after lunch.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:doctor:noun",
+          "term": "doctor",
+          "pos": "noun",
+          "definition": "The person who helps sick people.",
+          "translation": "",
+          "example": "I go to the doctor on Monday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:medicine:noun",
+          "term": "medicine",
+          "pos": "noun",
+          "definition": "What you take when you are sick.",
+          "translation": "",
+          "example": "I take medicine at night.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tired:adjective",
+          "term": "tired",
+          "pos": "adjective",
+          "definition": "Needing rest.",
+          "translation": "",
+          "example": "I am tired every evening.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:rest:verb",
+          "term": "rest",
+          "pos": "verb",
+          "definition": "To stop working for a time.",
+          "translation": "",
+          "example": "I rest after work.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:every-day:expression",
+          "term": "every day",
+          "pos": "expression",
+          "definition": "On all days.",
+          "translation": "",
+          "example": "I walk every day.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-22-time-perception-and-punctuality",
+      "sessionTitle": "Session 22: Time Perception & Punctuality",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "11 June 2027",
+      "vocabulary": [
+        {
+          "id": "en:minute:noun",
+          "term": "minute",
+          "pos": "noun",
+          "definition": "Sixty seconds.",
+          "translation": "",
+          "example": "Wait five minutes, please.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hour:noun",
+          "term": "hour",
+          "pos": "noun",
+          "definition": "Sixty minutes.",
+          "translation": "",
+          "example": "The class is one hour.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:early:adjective",
+          "term": "early",
+          "pos": "adjective",
+          "definition": "Before the usual time.",
+          "translation": "",
+          "example": "I am always early.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:late:adjective",
+          "term": "late",
+          "pos": "adjective",
+          "definition": "After the usual time.",
+          "translation": "",
+          "example": "She is late again.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:wait:verb",
+          "term": "wait",
+          "pos": "verb",
+          "definition": "To stay until something happens.",
+          "translation": "",
+          "example": "I wait for the bus.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:clock:noun",
+          "term": "clock",
+          "pos": "noun",
+          "definition": "A thing that shows the time.",
+          "translation": "",
+          "example": "The clock is wrong.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:meeting:noun",
+          "term": "meeting",
+          "pos": "noun",
+          "definition": "People talking about work together.",
+          "translation": "",
+          "example": "The meeting starts at nine.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hurry:verb",
+          "term": "hurry",
+          "pos": "verb",
+          "definition": "To go fast because you are late.",
+          "translation": "",
+          "example": "I hurry in the morning.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:sorry:expression",
+          "term": "sorry",
+          "pos": "expression",
+          "definition": "A word you say when you are late.",
+          "translation": "",
+          "example": "Sorry, I am late.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:on-time:expression",
+          "term": "on time",
+          "pos": "expression",
+          "definition": "Not early, not late.",
+          "translation": "",
+          "example": "The train is on time.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-23-shopping-ethics-and-consumer-choices",
+      "sessionTitle": "Session 23: Shopping Ethics & Consumer Choices",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "18 June 2027",
+      "vocabulary": [
+        {
+          "id": "en:shop:noun",
+          "term": "shop",
+          "pos": "noun",
+          "definition": "A place where you buy things.",
+          "translation": "",
+          "example": "The shop closes at eight.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:buy:verb",
+          "term": "buy",
+          "pos": "verb",
+          "definition": "To get something with money.",
+          "translation": "",
+          "example": "I buy food here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:local:adjective",
+          "term": "local",
+          "pos": "adjective",
+          "definition": "From near your home.",
+          "translation": "",
+          "example": "This bread is local.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cheap:adjective",
+          "term": "cheap",
+          "pos": "adjective",
+          "definition": "Costing little money.",
+          "translation": "",
+          "example": "The market is cheap.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:expensive:adjective",
+          "term": "expensive",
+          "pos": "adjective",
+          "definition": "Costing a lot of money.",
+          "translation": "",
+          "example": "This bag is expensive.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:plastic-bag:noun",
+          "term": "plastic bag",
+          "pos": "noun",
+          "definition": "A bag from a shop, bad for the sea.",
+          "translation": "",
+          "example": "No plastic bag, thank you.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:worker:noun",
+          "term": "worker",
+          "pos": "noun",
+          "definition": "A person who works.",
+          "translation": "",
+          "example": "The workers are friendly.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:receipt:noun",
+          "term": "receipt",
+          "pos": "noun",
+          "definition": "The paper that shows what you paid.",
+          "translation": "",
+          "example": "Here is your receipt.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:return:verb",
+          "term": "return",
+          "pos": "verb",
+          "definition": "To give something back to the shop.",
+          "translation": "",
+          "example": "I want to return this.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:choose:verb",
+          "term": "choose",
+          "pos": "verb",
+          "definition": "To take one of two things.",
+          "translation": "",
+          "example": "I choose the local one.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "dining-food",
+          "tags": [
+            "everyday-life",
+            "dining-food"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-24-healthcare-access-and-expectations",
+      "sessionTitle": "Session 24: Healthcare Access & Expectations",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "25 June 2027",
+      "vocabulary": [
+        {
+          "id": "en:doctor:noun",
+          "term": "doctor",
+          "pos": "noun",
+          "definition": "The person who helps sick people.",
+          "translation": "",
+          "example": "I need a doctor.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:appointment:noun",
+          "term": "appointment",
+          "pos": "noun",
+          "definition": "A time you agree for a visit.",
+          "translation": "",
+          "example": "I have an appointment at ten.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hospital:noun",
+          "term": "hospital",
+          "pos": "noun",
+          "definition": "The big place for sick people.",
+          "translation": "",
+          "example": "The hospital is outside the city.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:pharmacy:noun",
+          "term": "pharmacy",
+          "pos": "noun",
+          "definition": "The shop for medicine.",
+          "translation": "",
+          "example": "The pharmacy is open now.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:wait:verb",
+          "term": "wait",
+          "pos": "verb",
+          "definition": "To stay until it is your turn.",
+          "translation": "",
+          "example": "I wait twenty minutes.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:medicine:noun",
+          "term": "medicine",
+          "pos": "noun",
+          "definition": "What you take when you are sick.",
+          "translation": "",
+          "example": "Take this medicine.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:open:adjective",
+          "term": "open",
+          "pos": "adjective",
+          "definition": "Not closed, ready for people.",
+          "translation": "",
+          "example": "Are you open on Sunday?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:closed:adjective",
+          "term": "closed",
+          "pos": "adjective",
+          "definition": "Not open.",
+          "translation": "",
+          "example": "The doctor is closed today.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hurt:verb",
+          "term": "hurt",
+          "pos": "verb",
+          "definition": "To feel pain.",
+          "translation": "",
+          "example": "My back hurts.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:help:verb",
+          "term": "help",
+          "pos": "verb",
+          "definition": "To do something for someone.",
+          "translation": "",
+          "example": "Can you help me?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-25-travel-mindset-and-cultural-curiosity",
+      "sessionTitle": "Session 25: Travel Mindset & Cultural Curiosity",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "2 July 2027",
+      "vocabulary": [
+        {
+          "id": "en:travel:verb",
+          "term": "travel",
+          "pos": "verb",
+          "definition": "To go to another city or country.",
+          "translation": "",
+          "example": "I travel in August.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:ticket:noun",
+          "term": "ticket",
+          "pos": "noun",
+          "definition": "The paper you buy to travel.",
+          "translation": "",
+          "example": "My ticket is in my bag.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hotel:noun",
+          "term": "hotel",
+          "pos": "noun",
+          "definition": "A building where you sleep on a trip.",
+          "translation": "",
+          "example": "The hotel is near the station.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:map:noun",
+          "term": "map",
+          "pos": "noun",
+          "definition": "A drawing of streets.",
+          "translation": "",
+          "example": "I have a map on my phone.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:food:noun",
+          "term": "food",
+          "pos": "noun",
+          "definition": "What you eat.",
+          "translation": "",
+          "example": "The food here is good.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:photo:noun",
+          "term": "photo",
+          "pos": "noun",
+          "definition": "A picture from a camera.",
+          "translation": "",
+          "example": "I take a photo of the street.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:language:noun",
+          "term": "language",
+          "pos": "noun",
+          "definition": "English, Spanish, Arabic.",
+          "translation": "",
+          "example": "I learn two languages.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:ask:verb",
+          "term": "ask",
+          "pos": "verb",
+          "definition": "To say a question.",
+          "translation": "",
+          "example": "I ask for help.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:city:noun",
+          "term": "city",
+          "pos": "noun",
+          "definition": "A big town with many people.",
+          "translation": "",
+          "example": "This city is beautiful.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:help:noun",
+          "term": "help",
+          "pos": "noun",
+          "definition": "Something that makes life easier.",
+          "translation": "",
+          "example": "Thank you for your help.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-26-social-plans-and-boundaries",
+      "sessionTitle": "Session 26: Social Plans & Boundaries",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "9 July 2027",
+      "vocabulary": [
+        {
+          "id": "en:plan:noun",
+          "term": "plan",
+          "pos": "noun",
+          "definition": "What you will do and when.",
+          "translation": "",
+          "example": "My plan is simple.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:invite:verb",
+          "term": "invite",
+          "pos": "verb",
+          "definition": "To ask someone to come.",
+          "translation": "",
+          "example": "I invite two friends.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:friend:noun",
+          "term": "friend",
+          "pos": "noun",
+          "definition": "A person you like and know well.",
+          "translation": "",
+          "example": "My friend lives here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:free:adjective",
+          "term": "free",
+          "pos": "adjective",
+          "definition": "With time for other things.",
+          "translation": "",
+          "example": "I am free on Sunday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:busy:adjective",
+          "term": "busy",
+          "pos": "adjective",
+          "definition": "With many things to do.",
+          "translation": "",
+          "example": "I am busy on Saturday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:dinner:noun",
+          "term": "dinner",
+          "pos": "noun",
+          "definition": "The meal in the evening.",
+          "translation": "",
+          "example": "Dinner at my home?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cinema:noun",
+          "term": "cinema",
+          "pos": "noun",
+          "definition": "The place where you watch films.",
+          "translation": "",
+          "example": "The cinema is near here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:time:noun",
+          "term": "time",
+          "pos": "noun",
+          "definition": "Hours and minutes.",
+          "translation": "",
+          "example": "What time?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:yes:expression",
+          "term": "yes",
+          "pos": "expression",
+          "definition": "A good answer.",
+          "translation": "",
+          "example": "Yes, I want to come.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:no:expression",
+          "term": "no",
+          "pos": "expression",
+          "definition": "A negative answer.",
+          "translation": "",
+          "example": "No, thank you.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-27-navigation-and-independence",
+      "sessionTitle": "Session 27: Navigation & Independence",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "16 July 2027",
+      "vocabulary": [
+        {
+          "id": "en:map:noun",
+          "term": "map",
+          "pos": "noun",
+          "definition": "A drawing of streets.",
+          "translation": "",
+          "example": "I look at the map.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:left:adverb",
+          "term": "left",
+          "pos": "adverb",
+          "definition": "This side, not right.",
+          "translation": "",
+          "example": "Go left at the bank.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:right:adverb",
+          "term": "right",
+          "pos": "adverb",
+          "definition": "This side, not left.",
+          "translation": "",
+          "example": "Then go right.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:straight:adverb",
+          "term": "straight",
+          "pos": "adverb",
+          "definition": "Forward, not left or right.",
+          "translation": "",
+          "example": "Go straight for two streets.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:near:adjective",
+          "term": "near",
+          "pos": "adjective",
+          "definition": "Not far.",
+          "translation": "",
+          "example": "The stop is near.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:far:adjective",
+          "term": "far",
+          "pos": "adjective",
+          "definition": "A long way.",
+          "translation": "",
+          "example": "The hospital is far.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:street:noun",
+          "term": "street",
+          "pos": "noun",
+          "definition": "A road with houses.",
+          "translation": "",
+          "example": "This street is long.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bus-stop:noun",
+          "term": "bus stop",
+          "pos": "noun",
+          "definition": "The place where a bus stops.",
+          "translation": "",
+          "example": "The bus stop is there.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:ask:verb",
+          "term": "ask",
+          "pos": "verb",
+          "definition": "To say a question.",
+          "translation": "",
+          "example": "I ask a person.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:lost:adjective",
+          "term": "lost",
+          "pos": "adjective",
+          "definition": "Not knowing where you are.",
+          "translation": "",
+          "example": "I am lost.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "travel",
+          "tags": [
+            "everyday-life",
+            "travel"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-28-learning-styles-and-education-memories",
+      "sessionTitle": "Session 28: Learning Styles & Education Memories",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "23 July 2027",
+      "vocabulary": [
+        {
+          "id": "en:school:noun",
+          "term": "school",
+          "pos": "noun",
+          "definition": "The place where children learn.",
+          "translation": "",
+          "example": "My school was small.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:teacher:noun",
+          "term": "teacher",
+          "pos": "noun",
+          "definition": "The person who helps you learn.",
+          "translation": "",
+          "example": "My teacher is patient.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:book:noun",
+          "term": "book",
+          "pos": "noun",
+          "definition": "Pages with words.",
+          "translation": "",
+          "example": "I read one book a month.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:learn:verb",
+          "term": "learn",
+          "pos": "verb",
+          "definition": "To get new knowledge.",
+          "translation": "",
+          "example": "I learn ten words a week.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:english:noun",
+          "term": "English",
+          "pos": "noun",
+          "definition": "The language of this club.",
+          "translation": "",
+          "example": "I learn English here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:class:noun",
+          "term": "class",
+          "pos": "noun",
+          "definition": "A lesson with a teacher.",
+          "translation": "",
+          "example": "My class is on Monday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:homework:noun",
+          "term": "homework",
+          "pos": "noun",
+          "definition": "Work you do at home for a class.",
+          "translation": "",
+          "example": "I do homework on the bus.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:easy:adjective",
+          "term": "easy",
+          "pos": "adjective",
+          "definition": "Not difficult.",
+          "translation": "",
+          "example": "Listening is easy for me.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:difficult:adjective",
+          "term": "difficult",
+          "pos": "adjective",
+          "definition": "Not easy.",
+          "translation": "",
+          "example": "Speaking is difficult.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:remember:verb",
+          "term": "remember",
+          "pos": "verb",
+          "definition": "To keep something in your mind.",
+          "translation": "",
+          "example": "I remember new words with photos.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "hobbies",
+          "tags": [
+            "everyday-life",
+            "hobbies"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-29-tech-dependence-and-digital-habits",
+      "sessionTitle": "Session 29: Tech Dependence & Digital Habits",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "30 July 2027",
+      "vocabulary": [
+        {
+          "id": "en:phone:noun",
+          "term": "phone",
+          "pos": "noun",
+          "definition": "A small telephone you carry.",
+          "translation": "",
+          "example": "My phone is new.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:screen:noun",
+          "term": "screen",
+          "pos": "noun",
+          "definition": "The glass front of a phone.",
+          "translation": "",
+          "example": "I look at the screen too much.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:app:noun",
+          "term": "app",
+          "pos": "noun",
+          "definition": "A program on a phone.",
+          "translation": "",
+          "example": "This app is useful.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:message:noun",
+          "term": "message",
+          "pos": "noun",
+          "definition": "A short text you send.",
+          "translation": "",
+          "example": "I send a message.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:photo:noun",
+          "term": "photo",
+          "pos": "noun",
+          "definition": "A picture from a camera.",
+          "translation": "",
+          "example": "I take photos of food.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:charge:verb",
+          "term": "charge",
+          "pos": "verb",
+          "definition": "To put electricity in a phone.",
+          "translation": "",
+          "example": "I charge my phone at night.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:off:adverb",
+          "term": "off",
+          "pos": "adverb",
+          "definition": "Not on, not working.",
+          "translation": "",
+          "example": "My phone is off.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:on:adverb",
+          "term": "on",
+          "pos": "adverb",
+          "definition": "Working.",
+          "translation": "",
+          "example": "The phone is on.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:night:noun",
+          "term": "night",
+          "pos": "noun",
+          "definition": "The dark hours.",
+          "translation": "",
+          "example": "I read at night.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:quiet:adjective",
+          "term": "quiet",
+          "pos": "adjective",
+          "definition": "With little sound.",
+          "translation": "",
+          "example": "The phone is quiet at night.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-3-time-management-and-daily-priorities",
+      "sessionTitle": "Session 3: Time Management & Daily Priorities",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "29 January 2027",
+      "vocabulary": [
+        {
+          "id": "en:time:noun",
+          "term": "time",
+          "pos": "noun",
+          "definition": "Hours and minutes.",
+          "translation": "",
+          "example": "What time is it?",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:clock:noun",
+          "term": "clock",
+          "pos": "noun",
+          "definition": "A thing that shows the time.",
+          "translation": "",
+          "example": "The clock is on the wall.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:early:adjective",
+          "term": "early",
+          "pos": "adjective",
+          "definition": "Before the usual time.",
+          "translation": "",
+          "example": "I wake up early.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:late:adjective",
+          "term": "late",
+          "pos": "adjective",
+          "definition": "After the usual time.",
+          "translation": "",
+          "example": "The bus is late.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:busy:adjective",
+          "term": "busy",
+          "pos": "adjective",
+          "definition": "With many things to do.",
+          "translation": "",
+          "example": "I am busy today.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:free:adjective",
+          "term": "free",
+          "pos": "adjective",
+          "definition": "With time for other things.",
+          "translation": "",
+          "example": "I am free on Sunday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:work:noun",
+          "term": "work",
+          "pos": "noun",
+          "definition": "The place or the thing you do for money.",
+          "translation": "",
+          "example": "I go to work at eight.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:dinner:noun",
+          "term": "dinner",
+          "pos": "noun",
+          "definition": "The meal in the evening.",
+          "translation": "",
+          "example": "Dinner is at seven.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:sleep:verb",
+          "term": "sleep",
+          "pos": "verb",
+          "definition": "To rest with your eyes closed.",
+          "translation": "",
+          "example": "I sleep eight hours.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:plan:noun",
+          "term": "plan",
+          "pos": "noun",
+          "definition": "What you will do and when.",
+          "translation": "",
+          "example": "My plan is simple.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-30-life-reflections-and-future-hopes",
+      "sessionTitle": "Session 30: Life Reflections & Future Hopes",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "6 August 2027",
+      "vocabulary": [
+        {
+          "id": "en:year:noun",
+          "term": "year",
+          "pos": "noun",
+          "definition": "Twelve months.",
+          "translation": "",
+          "example": "This year was busy.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:change:noun",
+          "term": "change",
+          "pos": "noun",
+          "definition": "Something different.",
+          "translation": "",
+          "example": "I want a change.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:home:noun",
+          "term": "home",
+          "pos": "noun",
+          "definition": "The place where you live.",
+          "translation": "",
+          "example": "My home is small.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:job:noun",
+          "term": "job",
+          "pos": "noun",
+          "definition": "The work you do for money.",
+          "translation": "",
+          "example": "I want a new job.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:family:noun",
+          "term": "family",
+          "pos": "noun",
+          "definition": "Your mother, father and children.",
+          "translation": "",
+          "example": "My family is near.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:learn:verb",
+          "term": "learn",
+          "pos": "verb",
+          "definition": "To get new knowledge.",
+          "translation": "",
+          "example": "I want to learn to drive.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:happy:adjective",
+          "term": "happy",
+          "pos": "adjective",
+          "definition": "Feeling good.",
+          "translation": "",
+          "example": "I am happy here.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:plan:noun",
+          "term": "plan",
+          "pos": "noun",
+          "definition": "What you will do and when.",
+          "translation": "",
+          "example": "My plan is simple.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:next:adjective",
+          "term": "next",
+          "pos": "adjective",
+          "definition": "After this one.",
+          "translation": "",
+          "example": "Next year I will move.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hope:noun",
+          "term": "hope",
+          "pos": "noun",
+          "definition": "Something good you want.",
+          "translation": "",
+          "example": "My hope is a quiet flat.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-4-family-roles-and-responsibilities",
+      "sessionTitle": "Session 4: Family Roles & Responsibilities",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "5 February 2027",
+      "vocabulary": [
+        {
+          "id": "en:mother:noun",
+          "term": "mother",
+          "pos": "noun",
+          "definition": "The woman in your family with children.",
+          "translation": "",
+          "example": "My mother is a teacher.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:father:noun",
+          "term": "father",
+          "pos": "noun",
+          "definition": "The man in your family with children.",
+          "translation": "",
+          "example": "My father cooks well.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:sister:noun",
+          "term": "sister",
+          "pos": "noun",
+          "definition": "A girl or woman with the same parents.",
+          "translation": "",
+          "example": "My sister is ten.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:brother:noun",
+          "term": "brother",
+          "pos": "noun",
+          "definition": "A boy or man with the same parents.",
+          "translation": "",
+          "example": "I have one brother.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:child:noun",
+          "term": "child",
+          "pos": "noun",
+          "definition": "A young person.",
+          "translation": "",
+          "example": "They have two children.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:cook:verb",
+          "term": "cook",
+          "pos": "verb",
+          "definition": "To make food hot and ready.",
+          "translation": "",
+          "example": "I cook every day.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:clean:verb",
+          "term": "clean",
+          "pos": "verb",
+          "definition": "To make a place not dirty.",
+          "translation": "",
+          "example": "I clean on Saturday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:help:verb",
+          "term": "help",
+          "pos": "verb",
+          "definition": "To do part of the work for someone.",
+          "translation": "",
+          "example": "My brother helps at home.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:visit:verb",
+          "term": "visit",
+          "pos": "verb",
+          "definition": "To go to someone's home for a time.",
+          "translation": "",
+          "example": "We visit my mother on Sunday.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:home:noun",
+          "term": "home",
+          "pos": "noun",
+          "definition": "The place where you live.",
+          "translation": "",
+          "example": "I am at home now.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-5-appearance-and-first-judgments",
+      "sessionTitle": "Session 5: Appearance & First Judgments",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "12 February 2027",
+      "vocabulary": [
+        {
+          "id": "en:hair:noun",
+          "term": "hair",
+          "pos": "noun",
+          "definition": "What grows on your head.",
+          "translation": "",
+          "example": "Her hair is long.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:eyes:noun",
+          "term": "eyes",
+          "pos": "noun",
+          "definition": "You see with them.",
+          "translation": "",
+          "example": "He has brown eyes.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tall:adjective",
+          "term": "tall",
+          "pos": "adjective",
+          "definition": "Big from top to bottom.",
+          "translation": "",
+          "example": "My brother is tall.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:short:adjective",
+          "term": "short",
+          "pos": "adjective",
+          "definition": "Small from top to bottom.",
+          "translation": "",
+          "example": "I am short.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:young:adjective",
+          "term": "young",
+          "pos": "adjective",
+          "definition": "Not old.",
+          "translation": "",
+          "example": "She is very young.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:old:adjective",
+          "term": "old",
+          "pos": "adjective",
+          "definition": "With many years.",
+          "translation": "",
+          "example": "My father is old.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:smile:noun",
+          "term": "smile",
+          "pos": "noun",
+          "definition": "A happy mouth.",
+          "translation": "",
+          "example": "She has a nice smile.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:glasses:noun",
+          "term": "glasses",
+          "pos": "noun",
+          "definition": "You wear them to see well.",
+          "translation": "",
+          "example": "I wear glasses.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:clothes:noun",
+          "term": "clothes",
+          "pos": "noun",
+          "definition": "Shirt, trousers, dress.",
+          "translation": "",
+          "example": "His clothes are black.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:beard:noun",
+          "term": "beard",
+          "pos": "noun",
+          "definition": "Hair on a man's face.",
+          "translation": "",
+          "example": "He has a beard.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-6-morning-routines-and-productivity",
+      "sessionTitle": "Session 6: Morning Routines & Productivity",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "19 February 2027",
+      "vocabulary": [
+        {
+          "id": "en:alarm:noun",
+          "term": "alarm",
+          "pos": "noun",
+          "definition": "A sound that wakes you up.",
+          "translation": "",
+          "example": "My alarm is at six.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:shower:noun",
+          "term": "shower",
+          "pos": "noun",
+          "definition": "Washing your body with water.",
+          "translation": "",
+          "example": "I take a shower at seven.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:breakfast:noun",
+          "term": "breakfast",
+          "pos": "noun",
+          "definition": "The first meal of the day.",
+          "translation": "",
+          "example": "My breakfast is small.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:coffee:noun",
+          "term": "coffee",
+          "pos": "noun",
+          "definition": "A hot brown drink.",
+          "translation": "",
+          "example": "I drink coffee every morning.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bus:noun",
+          "term": "bus",
+          "pos": "noun",
+          "definition": "A big vehicle for many people.",
+          "translation": "",
+          "example": "I take the bus at eight.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:hurry:verb",
+          "term": "hurry",
+          "pos": "verb",
+          "definition": "To go fast because you are late.",
+          "translation": "",
+          "example": "I hurry every morning.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:brush:verb",
+          "term": "brush",
+          "pos": "verb",
+          "definition": "To clean your teeth.",
+          "translation": "",
+          "example": "I brush my teeth.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:work:noun",
+          "term": "work",
+          "pos": "noun",
+          "definition": "What you do for money.",
+          "translation": "",
+          "example": "I go to work at nine.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:early:adverb",
+          "term": "early",
+          "pos": "adverb",
+          "definition": "Before the usual time.",
+          "translation": "",
+          "example": "I wake up early.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tired:adjective",
+          "term": "tired",
+          "pos": "adjective",
+          "definition": "Needing sleep.",
+          "translation": "",
+          "example": "I am tired in the morning.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-7-evening-wind-down-and-work-life-balance",
+      "sessionTitle": "Session 7: Evening Wind-Down & Work-Life Balance",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "26 February 2027",
+      "vocabulary": [
+        {
+          "id": "en:evening:noun",
+          "term": "evening",
+          "pos": "noun",
+          "definition": "The time after work, before night.",
+          "translation": "",
+          "example": "In the evening I am at home.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:dinner:noun",
+          "term": "dinner",
+          "pos": "noun",
+          "definition": "The meal in the evening.",
+          "translation": "",
+          "example": "Dinner is at eight.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tv:noun",
+          "term": "TV",
+          "pos": "noun",
+          "definition": "A screen for films and news.",
+          "translation": "",
+          "example": "I watch TV for one hour.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:walk:noun",
+          "term": "walk",
+          "pos": "noun",
+          "definition": "Going somewhere on foot.",
+          "translation": "",
+          "example": "We take a walk after dinner.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:relax:verb",
+          "term": "relax",
+          "pos": "verb",
+          "definition": "To rest and do nothing hard.",
+          "translation": "",
+          "example": "I relax with music.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tired:adjective",
+          "term": "tired",
+          "pos": "adjective",
+          "definition": "Needing sleep.",
+          "translation": "",
+          "example": "I am tired at nine.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:book:noun",
+          "term": "book",
+          "pos": "noun",
+          "definition": "Pages with a story.",
+          "translation": "",
+          "example": "I read a book in bed.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tea:noun",
+          "term": "tea",
+          "pos": "noun",
+          "definition": "A hot drink from leaves.",
+          "translation": "",
+          "example": "I drink tea at night.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:music:noun",
+          "term": "music",
+          "pos": "noun",
+          "definition": "Sounds you listen to.",
+          "translation": "",
+          "example": "I listen to music.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bed:noun",
+          "term": "bed",
+          "pos": "noun",
+          "definition": "Where you sleep.",
+          "translation": "",
+          "example": "I go to bed at eleven.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "routines",
+          "tags": [
+            "everyday-life",
+            "routines"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-8-home-and-living-preferences",
+      "sessionTitle": "Session 8: Home & Living Preferences",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "5 March 2027",
+      "vocabulary": [
+        {
+          "id": "en:flat:noun",
+          "term": "flat",
+          "pos": "noun",
+          "definition": "A home on one floor of a building.",
+          "translation": "",
+          "example": "My flat is on the third floor.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:house:noun",
+          "term": "house",
+          "pos": "noun",
+          "definition": "A home with its own door to the street.",
+          "translation": "",
+          "example": "They live in a big house.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:room:noun",
+          "term": "room",
+          "pos": "noun",
+          "definition": "A space with walls and a door.",
+          "translation": "",
+          "example": "The flat has two rooms.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:kitchen:noun",
+          "term": "kitchen",
+          "pos": "noun",
+          "definition": "The room where you cook.",
+          "translation": "",
+          "example": "My kitchen is small.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bathroom:noun",
+          "term": "bathroom",
+          "pos": "noun",
+          "definition": "The room with a shower.",
+          "translation": "",
+          "example": "The bathroom is new.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:window:noun",
+          "term": "window",
+          "pos": "noun",
+          "definition": "Glass in the wall for light.",
+          "translation": "",
+          "example": "The window is big.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:garden:noun",
+          "term": "garden",
+          "pos": "noun",
+          "definition": "A small green space outside.",
+          "translation": "",
+          "example": "We have a small garden.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:street:noun",
+          "term": "street",
+          "pos": "noun",
+          "definition": "A road with houses.",
+          "translation": "",
+          "example": "My street is quiet.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:neighbour:noun",
+          "term": "neighbour",
+          "pos": "noun",
+          "definition": "A person in the next home.",
+          "translation": "",
+          "example": "My neighbour is friendly.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:keys:noun",
+          "term": "keys",
+          "pos": "noun",
+          "definition": "You open the door with them.",
+          "translation": "",
+          "example": "These are my keys.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "sessionId": "basic-speaking-club-session-9-minimalism-vs-comfort-at-home",
+      "sessionTitle": "Session 9: Minimalism vs Comfort at Home",
+      "eventType": "speaking-club",
+      "language": "🇬🇧 English",
+      "level": "Beginner (A0–A1)",
+      "exportDate": "12 March 2027",
+      "vocabulary": [
+        {
+          "id": "en:box:noun",
+          "term": "box",
+          "pos": "noun",
+          "definition": "A thing you put other things in.",
+          "translation": "",
+          "example": "The box is full.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:shelf:noun",
+          "term": "shelf",
+          "pos": "noun",
+          "definition": "A flat board for things on a wall.",
+          "translation": "",
+          "example": "My shelf is empty.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:old:adjective",
+          "term": "old",
+          "pos": "adjective",
+          "definition": "With many years.",
+          "translation": "",
+          "example": "This chair is old.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:new:adjective",
+          "term": "new",
+          "pos": "adjective",
+          "definition": "Not old.",
+          "translation": "",
+          "example": "I want a new lamp.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:keep:verb",
+          "term": "keep",
+          "pos": "verb",
+          "definition": "To not give something away.",
+          "translation": "",
+          "example": "I keep my mother's photos.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:bin:noun",
+          "term": "bin",
+          "pos": "noun",
+          "definition": "The box for things you throw away.",
+          "translation": "",
+          "example": "The paper is in the bin.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:tidy:adjective",
+          "term": "tidy",
+          "pos": "adjective",
+          "definition": "Everything in the right place.",
+          "translation": "",
+          "example": "My room is tidy.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:full:adjective",
+          "term": "full",
+          "pos": "adjective",
+          "definition": "With no space.",
+          "translation": "",
+          "example": "My cupboard is full.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:empty:adjective",
+          "term": "empty",
+          "pos": "adjective",
+          "definition": "With no things in it.",
+          "translation": "",
+          "example": "The flat is empty.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "en:buy:verb",
+          "term": "buy",
+          "pos": "verb",
+          "definition": "To get something with money.",
+          "translation": "",
+          "example": "I buy too many things.",
+          "primary_theme": "everyday-life",
+          "sub_theme": "home",
+          "tags": [
+            "everyday-life",
+            "home"
+          ],
+          "level": "A1"
         }
       ]
     },

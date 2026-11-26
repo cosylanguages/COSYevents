@@ -63,14 +63,62 @@ Words must cycle through:
 
 ---
 
-### Part 2. Standard 60/90-Minute Speaking Club Structure
+### Part 2. The Six-Card Session Structure
 
-1. **0–10 min: Welcome & Icebreaker** (Emoji check-in, Question of the day)
-2. **10–25 min: Vocabulary Activation** (Show → Connect → Personalise)
-3. **25–40 min: Grammar Through Speaking** (Notice → Practice → Use)
-4. **40–60 min: Controlled & Guided Conversation** (Sentence frames, partner pairs)
-5. **60–80 min: Main Speaking Activity / Debate Stance** (Role plays, conversation circles)
-6. **80–90 min: Reflection & Teacher Note** (Linguistic corrections and feedback)
+Every session page in the club follows the same six cards. The order never changes,
+so the group always knows what happens next and all their attention stays on the words.
+
+**Where the content lives.** The topic content for all 30 sessions is in
+`data/basic-speaking-club-sessions.json`. The pages in `sessions/basic-speaking-club/`
+and their Markdown twins are generated from it:
+
+```
+npm run build-basic-speaking-club     # regenerate pages and markdown
+npm run check-basic-speaking-club     # fail if a page is out of date
+```
+
+Edit the data file, not the HTML. A new session is a new object in the array — the six
+cards, the timings and the helper sheet come from the template.
+
+| Card | Time | What happens | What students produce |
+|---|---|---|---|
+| 1. Intro + 10 core words | 10 min | Ten words with pictures or real objects; show, repeat, then pairs test each other | Single words, pointing, repetition |
+| 2. Discussion + opinion chunks | 10 min | One question, one model answer, then think → partner → room | One opinion sentence |
+| 3. Which will you choose? | 10 min | Three this-or-that choices; hands up first, then say the line | "I prefer X" plus a reason if ready |
+| 4. Real-life mini-action | 15 min | Role-play in pairs: order, ask, or solve a small everyday problem | A four to six line exchange |
+| 5. Looking ahead | 8 min | Simple future frames about tonight, the weekend, next week | One plan sentence |
+| 6. Outro & takeaway | 5 min | One word you liked + one tiny goal, then board work | Two short sentences |
+
+Cards 1–6 total 58 minutes, which leaves two minutes of slack. Card 4 is the only
+card that gets more time when the group is slow. For a 90-minute club, run the six
+cards first and add a second round of Card 4 with new partners.
+
+**How to run Card 4:** demo with one strong student (2 min) → pairs (5 min) →
+swap roles (5 min) → one pair performs for the room (3 min). Without the demo, A0
+pairs freeze on the first line.
+
+### Part 2b. The Chunk Ladder
+
+Do not pick one difficulty level for the room. Put all three rungs on the table card
+and let people climb when they are ready. Never ask which rung someone is on.
+
+| Function | A0 (survival) | A0+ (sentence) | A1 (reason) |
+|---|---|---|---|
+| Opinion | Good. Bad. I like it. | I think it is good. For me, it is noisy. | I think it is good because it is quiet. |
+| Preference | This. That. I like this. | I prefer coffee. I like tea more. | I prefer tea because coffee is too hot for me. |
+| Future | Tomorrow — home. | Tomorrow I work at home. | Next week I will work at home. |
+
+Two rules keep the ladder honest:
+
+1. **One frame per card is compulsory.** The A0 rung is the minimum, never the fallback.
+2. **The A1 rung is offered, not taught.** Say it once, write it on the board, leave it there.
+
+### Part 2c. Delivery Routines
+
+- **Rehearse, then perform.** Cards 2, 3 and 5 go: think alone (30 seconds) → say it to your partner → two or three people say it to the room.
+- **Delayed correction only.** Keep a small paper. Write three errors, maximum, without interrupting. At Card 6 put them on the board as "we said / we can say".
+- **Point, don't explain.** If a word fails, point at the picture, mime it, or give the first sound. Translation is the last resort, and only for a noun.
+- **Same seat, new partner.** Card 4 always swaps partners; Cards 2 and 3 keep the same partner.
 
 ---
 
@@ -108,6 +156,10 @@ Display these frames on the board for adult A0–A1 discussions:
 
 ### Overview
 30 adult-centered, discussion-focused sessions covering everyday preferences, lifestyle choices, habits, work, money, technology, health, and travel.
+
+The grammar column below is the **A1 rung** of the chunk ladder for that session. The
+A0 rung is always a shorter version of the same frame (for example `I want…` before
+`I would like…`), so a session never depends on a structure the group has not met yet.
 
 1. **Session 1:** Introductions & First Impressions (*to be + adjectives*)
 2. **Session 2:** Work & Career Choices (*Present Simple routines*)
