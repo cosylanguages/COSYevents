@@ -349,6 +349,15 @@ body.theme-celebrate-diwali {
   --celebrate-theme-watermark: "🪔";
   --celebrate-theme-hero: linear-gradient(135deg, #8C520C, #4A3515);
 }
+body.theme-celebrate-gastronomy {
+  --celebrate-theme-bg: #FFF8F0;
+  --celebrate-theme-text: #4A1F12;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-accent: #B84318;
+  --celebrate-theme-border: #F2D8C4;
+  --celebrate-theme-watermark: "🍝";
+  --celebrate-theme-hero: linear-gradient(135deg, #8A1E1E, #3A0E0E);
+}
 body.theme-celebrate-simplicity {
   --celebrate-theme-bg: #F4F7F5;
   --celebrate-theme-text: #1E2D24;

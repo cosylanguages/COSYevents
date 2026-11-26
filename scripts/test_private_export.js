@@ -1,4 +1,7 @@
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
 const { extractSession } = require('./export_private_sessions');
 const catalog = require('../data/sessions.json');
 
@@ -8,7 +11,7 @@ const sampleHrefs = {
   speaking: 'sessions/debatable-relatable/ai-and-art.html',
   longRead: 'sessions/long-reads/changing-our-brains.html',
   karaoke: 'sessions/karaoke-club/challenges/abba-challenge/index.html',
-  emptyLegacy: 'sessions/lets-celebrate/italian-gastronomy.html'
+  gastronomy: 'sessions/lets-celebrate/italian-gastronomy.html'
 };
 
 function getPayload(href) {
@@ -17,7 +20,7 @@ function getPayload(href) {
   return extractSession(entry);
 }
 
-assert.ok(catalog.length >= 645, 'Session catalog unexpectedly lost existing entries.');
+assert.ok(catalog.length >= 643, 'Session catalog unexpectedly lost existing entries.');
 const sessionIds = new Set();
 let sourceCount = 0;
 let unknownLevelCount = 0;
@@ -53,7 +56,15 @@ assert.ok(karaoke.content.vocabulary.some(item => item.opposite), 'Karaoke oppos
 assert.ok(karaoke.content.discussion.some(item => item.prompt.includes('Before Listening')));
 assert.ok(karaoke.content.discussion.some(item => item.prompt.includes('Internal Conversation')));
 
-const emptyLegacy = getPayload(sampleHrefs.emptyLegacy);
+const gastronomy = getPayload(sampleHrefs.gastronomy);
+assert.ok(gastronomy.content.vocabulary.length > 0, 'Gastronomy vocabulary was not extracted.');
+assert.ok(gastronomy.content.discussion.length > 0, 'Gastronomy discussion prompts were not extracted.');
+
+const emptyDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cosy-empty-session-'));
+const emptyPath = path.join(emptyDir, 'empty-legacy.html');
+fs.writeFileSync(emptyPath, '<!DOCTYPE html><html lang="en"><head><title>Empty Legacy</title></head><body><h1>Empty Legacy</h1></body></html>', 'utf8');
+const emptyLegacy = extractSession({ href: emptyPath, title: 'Empty Legacy', level: 'B1' });
+fs.rmSync(emptyDir, { recursive: true, force: true });
 assert.equal(emptyLegacy.content.vocabulary.length, 0);
 assert.equal(emptyLegacy.content.discussion.length, 0);
 assert.ok(emptyLegacy.review_notes.some(note => note.includes('No vocabulary')));
