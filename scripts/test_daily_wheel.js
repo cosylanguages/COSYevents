@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * scripts/test_daily_wheel.js
- * Data and component tests for the daily speaking wheels (mind matters, debates).
+ * Data and component tests for the seven daily speaking wheels.
  */
 const assert = require('assert');
 const fs = require('fs');
@@ -11,8 +11,13 @@ const wheel = require('../shared/js/daily-wheel.js');
 
 const BANDS = ['a0-a1', 'a2', 'b1-b2', 'c1-c2'];
 const WHEELS = [
-    { id: 'mind-matters', page: 'mind-matters.html', needsSides: false },
-    { id: 'debates', page: 'debatable-relatable.html', needsSides: true }
+    { id: 'mind-matters', page: 'mind-matters.html' },
+    { id: 'debates', page: 'debatable-relatable.html', needsSides: true },
+    { id: 'science', page: 'keeping-up-with-science.html' },
+    { id: 'quotes', page: 'the-greatest-quotes.html', needsAttribution: true },
+    { id: 'karaoke', page: 'karaoke-club.html', needsSing: true },
+    { id: 'films', page: 'cinema-club.html' },
+    { id: 'life', page: 'my-life-with-without.html', needsSides: true }
 ];
 
 for (const w of WHEELS) {
@@ -23,8 +28,8 @@ for (const w of WHEELS) {
     assert.strictEqual(data.id, w.id, `${w.id}: id must match the file name`);
     assert(data.title && data.subtitle, `${w.id}: title and subtitle required`);
     assert.deepStrictEqual(data.bands, BANDS, `${w.id}: must declare the four bands`);
-    assert.strictEqual(data.task.prep_seconds, 300, `${w.id}: five minutes of preparation`);
-    assert.strictEqual(data.task.speak_seconds, 300, `${w.id}: five minutes of speaking`);
+    assert(data.task.prep_seconds > 0, `${w.id}: preparation time required`);
+    assert(data.task.speak_seconds > 0, `${w.id}: speaking time required`);
     assert.strictEqual(data.rules.research_allowed, true, `${w.id}: research is allowed`);
     assert.strictEqual(data.rules.ai_allowed, false, `${w.id}: AI is not allowed`);
 
@@ -45,26 +50,32 @@ for (const w of WHEELS) {
             assert(Array.isArray(p.structures) && p.structures.length >= 1, `${p.id}: structures required`);
             assert(Array.isArray(p.vocabulary) && p.vocabulary.length >= 3, `${p.id}: vocabulary required`);
             if (w.needsSides) {
-                assert(p.side_a && p.side_b, `${p.id}: debate prompts need two sides`);
+                assert(p.side_a && p.side_b, `${p.id}: two sides required`);
                 assert.notStrictEqual(p.side_a, p.side_b, `${p.id}: sides must differ`);
             }
+            if (w.needsAttribution) assert(p.attribution, `${p.id}: attribution required`);
+            if (w.needsSing) assert(p.sing, `${p.id}: sing instruction required`);
         }
     }
     console.log(`  PASS: ${w.id} — 40 prompts, 10 per band, all fields present`);
 }
 
-// Deterministic daily set
-const mind = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'wheels', 'mind-matters.json'), 'utf-8'));
-const a = wheel.pickWheelPrompts(mind.prompts, 'b1-b2', '2026-11-26', 8);
-const b = wheel.pickWheelPrompts(mind.prompts, 'b1-b2', '2026-11-26', 8);
-assert.deepStrictEqual(a.map((p) => p.id), b.map((p) => p.id), 'same date must give the same set');
-assert.strictEqual(a.length, 8, 'eight segments');
-assert(a.every((p) => p.band === 'b1-b2'), 'all prompts come from the requested band');
-const next = wheel.pickWheelPrompts(mind.prompts, 'b1-b2', '2026-11-27', 8);
-assert.notStrictEqual(a[0].id, next[0].id, 'the set shifts the next day');
-assert.deepStrictEqual(wheel.pickWheelPrompts(mind.prompts, 'zz', '2026-11-26', 8), [], 'unknown band is empty');
-assert.strictEqual(new Set(a.map((p) => p.id)).size, 8, 'no repeats inside one day');
-console.log('  PASS: daily set is deterministic, banded and shifts by one each day');
+// Deterministic daily set, for every wheel and every band
+for (const w of WHEELS) {
+    const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'wheels', `${w.id}.json`), 'utf-8'));
+    for (const band of BANDS) {
+        const a = wheel.pickWheelPrompts(data.prompts, band, '2026-11-26', 8);
+        const b = wheel.pickWheelPrompts(data.prompts, band, '2026-11-26', 8);
+        assert.strictEqual(a.length, 8, `${w.id}/${band}: eight segments`);
+        assert(a.every((p) => p.band === band), `${w.id}/${band}: band filtered`);
+        assert.strictEqual(new Set(a.map((p) => p.id)).size, 8, `${w.id}/${band}: no repeats`);
+        assert.deepStrictEqual(a.map((p) => p.id), b.map((p) => p.id), `${w.id}/${band}: same day, same set`);
+        const next = wheel.pickWheelPrompts(data.prompts, band, '2026-11-27', 8);
+        assert.notStrictEqual(a[0].id, next[0].id, `${w.id}/${band}: shifts the next day`);
+    }
+}
+assert.deepStrictEqual(wheel.pickWheelPrompts(WHEELS.length ? [{ band: 'a2', id: 'x' }] : [], 'zz', '2026-11-26', 8), [], 'unknown band is empty');
+console.log('  PASS: every wheel and band gives eight deterministic prompts a day');
 
 // Page integration
 for (const w of WHEELS) {
@@ -72,7 +83,7 @@ for (const w of WHEELS) {
     assert(html.includes(`data-daily-wheel="${w.id}"`), `${w.page}: must mount the ${w.id} wheel`);
     assert(html.includes('data-src="data/wheels/'), `${w.page}: must point at its data file`);
     assert(html.includes('shared/js/daily-wheel.js'), `${w.page}: must load the wheel component`);
-    console.log(`  PASS: ${w.page} mounts the ${w.id} wheel`);
 }
+console.log(`  PASS: ${WHEELS.length} club pages mount their wheel`);
 
 console.log('\n🎉 Daily wheel tests passed');

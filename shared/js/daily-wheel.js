@@ -68,6 +68,9 @@
             '.dw-card{background:#fff;border:1px solid #e5e0d8;border-radius:20px;padding:1.5rem;}',
             '.dw-kicker{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#993556;font-weight:700;margin-bottom:.5rem;}',
             '.dw-prompt{margin:0 0 .75rem;font-size:1.15rem;line-height:1.45;}',
+            '.dw-quote{font-family:"Playfair Display",serif;font-size:1.3rem;line-height:1.5;}',
+            '.dw-attribution{margin:-.35rem 0 .9rem;font-size:.85rem;color:#6b6560;font-style:italic;}',
+            '.dw-sing{margin:0 0 .9rem;background:#F4EFE7;border-radius:12px;padding:.6rem .85rem;font-size:.92rem;}',
             '.dw-sides{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin:0 0 .9rem;font-weight:600;}',
             '.dw-side{background:#F4EFE7;border-radius:12px;padding:.4rem .8rem;}',
             '.dw-vs{color:#993556;font-weight:700;}',
@@ -223,10 +226,18 @@
             var prep = task.prep_seconds || 300;
             var speak = task.speak_seconds || 300;
 
+            var quote = item.attribution
+                ? '<h3 class="dw-prompt dw-quote">“' + esc(item.prompt) + '”</h3>' +
+                  '<p class="dw-attribution">— ' + esc(item.attribution) + '</p>'
+                : '<h3 class="dw-prompt">' + esc(item.prompt) + '</h3>';
+            var sing = item.sing
+                ? '<p class="dw-sing"><strong>🎤 Sing:</strong> ' + esc(item.sing) + '</p>'
+                : '';
+
             result.innerHTML =
                 '<div class="dw-card">' +
                     '<span class="dw-kicker">' + esc(state.band.toUpperCase()) + ' · ' + esc(data.title) + '</span>' +
-                    '<h3 class="dw-prompt">' + esc(item.prompt) + '</h3>' +
+                    quote + sing +
                     sides + follow +
                     (chips ? '<div class="dw-chips">' + chips + '</div>' : '') +
                     '<div class="dw-timer">' +
