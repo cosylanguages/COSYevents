@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Session 1: Introductions & First Impressions — Basic Speaking Club (A0–A1)</title>
+  <title>Session 1: Introductions &amp; First Impressions — Basic Speaking Club (A0–A1)</title>
   <script src="../../shared/js/cosy-theme.js"></script>
   <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
   <link rel="stylesheet" href="../../shared/css/sessions.css">
@@ -24,19 +24,79 @@
       border: 1px solid var(--color-border, #e0e8e3);
     }
     .frame-box {
-      background-color: #f8faf9;
-      border-left: 4px solid #2d6a4f;
+      background-color: var(--surface-color, #f8faf9);
+      border-left: 4px solid var(--teal, #2d6a4f);
       padding: 15px;
       margin: 15px 0;
       border-radius: 0 8px 8px 0;
     }
     .question-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: var(--surface-color, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      color: var(--ink, inherit);
       border-radius: 8px;
       padding: 16px;
       margin-bottom: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+    .card-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--surface-color, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm, 0 1px 2px rgba(0, 0, 0, 0.04));
+    }
+    .card-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .card-head h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--ink, #1c3b2b);
+    }
+    .card-time {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--teal, #0F6E56);
+    }
+    .card p {
+      margin: 0.5rem 0;
+    }
+    .card ul {
+      margin: 0.5rem 0;
+      padding-left: 1.25rem;
+      line-height: 1.8;
+    }
+    .ladder {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0;
+      font-size: 0.9rem;
+    }
+    .ladder th,
+    .ladder td {
+      border: 1px solid var(--border, #e2e8f0);
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ladder th {
+      background: var(--sage-pale, #eef4ef);
+      color: var(--ink, #1c3b2b);
+    }
+    .ladder code {
+      white-space: normal;
     }
   </style>
   <link rel="stylesheet" href="../../shared/css/clubs/basic-speaking-club.css">
@@ -47,7 +107,7 @@
   <header class="session-hero" style="background: linear-gradient(135deg, #0F6E56, #0A4737);">
   <div class="club-tag">Basic Speaking Club</div>
   <div class="session-decorator-icon">🌱</div>
-  <h1 data-cms-id="h1-1-4c4ae5">Session 1: Introductions & First Impressions</h1>
+  <h1 data-cms-id="h1-1-4c4ae5">Session 1: Introductions &amp; First Impressions</h1>
   <p data-cms-id="p-1-2566a4" class="session-date">15 January 2027</p>
 </header>
   <main class="content-container">
@@ -55,71 +115,131 @@
   <a href="../../index.html">Home</a> <span class="sep">/</span>
   <a href="../../">Events</a> <span class="sep">/</span>
   <a href="../../basic-speaking-club.html">Basic Speaking Club</a> <span class="sep">/</span>
-  <span class="current">Session 1: Introductions & First Impressions</span>
+  <span class="current">Session 1: Introductions &amp; First Impressions</span>
 </nav>
 
 
-        <p data-cms-id="p-2-c9a708" class="session-lead">A welcoming, structured speaking environment for adult beginners focusing on everyday preferences and practical language.</p>
+                <p data-cms-id="p-2-e6aab0" class="session-lead">Six cards, sixty minutes, ten words. Everyone speaks from the first minute, and every card carries a sentence frame you can read off the table.</p>
 
-      <div class="session-grid">
-        <section class="session-section">
-          <h2 data-cms-id="h2-1-e32cfc">1. Warm-Up & Vocabulary Activation (15 min)</h2>
-          <p data-cms-id="p-3-738172">Get comfortable with today's essential high-utility adult vocabulary:</p>
-          <div class="vocab-grid">
-            <span class="vocab-pill">name</span>
-          <span class="vocab-pill">country</span>
-          <span class="vocab-pill">city</span>
-          <span class="vocab-pill">job</span>
-          <span class="vocab-pill">hobby</span>
-          <span class="vocab-pill">language</span>
-          <span class="vocab-pill">family</span>
-          <span class="vocab-pill">age</span>
-          <span class="vocab-pill">married/single</span>
-          <span class="vocab-pill">interesting</span>
-          </div>
-          <div class="frame-box">
-            <strong>Target Grammar Focus:</strong> <code>to be + adjectives (I am from… / It is interesting)</code>
-          </div>
-        </section>
+        <div class="card-grid">
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-2-0b51fc">2. Round 1: Guided Discussion Questions (20 min)</h2>
-          <p data-cms-id="p-4-a67bee">Use simple frames ("I think...", "I prefer...", "In my opinion...") to answer these questions with your partner:</p>
-          <div class="question-card">
-            <p data-cms-id="p-5-75124f"><strong>1.</strong> What’s one interesting fact about your country?</p>
-          </div>
-          <div class="question-card">
-            <p data-cms-id="p-6-b3b154"><strong>2.</strong> Do you think first impressions are important? Why?</p>
-          </div>
-          <div class="question-card">
-            <p data-cms-id="p-7-a0ffdd"><strong>3.</strong> What’s the best way to meet new people in your city?</p>
-          </div>
-        </section>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-1-f47480">Card 1 — Intro + 10 core words</h2>
+              <span class="card-time">10 min</span>
+            </div>
+            <p data-cms-id="p-3-28f8fd">Point, repeat, then test your partner. Use pictures or real objects on the table.</p>
+            <div class="vocab-grid">
+              <span class="vocab-pill">name</span>
+              <span class="vocab-pill">hello</span>
+              <span class="vocab-pill">friend</span>
+              <span class="vocab-pill">country</span>
+              <span class="vocab-pill">city</span>
+              <span class="vocab-pill">job</span>
+              <span class="vocab-pill">family</span>
+              <span class="vocab-pill">hobby</span>
+              <span class="vocab-pill">phone</span>
+              <span class="vocab-pill">photo</span>
+            </div>
+            <div class="question-card">
+              <p data-cms-id="p-4-483df8"><strong>Warm-up:</strong> Point to your name on your phone. Say it to your partner.</p>
+            </div>
+            <div class="frame-box">
+              <strong>Say it:</strong> <code>My name is Ana. / Nice to meet you.</code>
+            </div>
+          </section>
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-3-ce545e">3. Let's Speak Together: Pair Activity (15 min)</h2>
-          <p data-cms-id="p-8-5e806b">Take turns asking your partner questions and building your speaking confidence:</p>
-          <ul>
-            <li data-cms-id="li-1-a62a51"><strong>Student A:</strong> Asks Question 1 & 2. Uses follow-up: <em>"Why do you think so?"</em></li>
-            <li data-cms-id="li-2-0e562e"><strong>Student B:</strong> Responds using sentence frame: <em>"I prefer [...] because [...]"</em></li>
-            <li data-cms-id="li-3-06ba89">Switch roles for Question 3.</li>
-          </ul>
-        </section>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-2-e12d0b">Card 2 — Discussion + opinion chunks</h2>
+              <span class="card-time">10 min</span>
+            </div>
+            <p data-cms-id="p-5-cf5252">Think alone for 30 seconds, tell your partner, then three people tell the room.</p>
+            <div class="frame-box">
+              <strong>Opinion chunks:</strong> <code>I think… / For me… / It is good. / It is bad.</code>
+            </div>
+            <div class="question-card">
+              <p data-cms-id="p-6-03f07a"><strong>Question:</strong> Is your city friendly? Why?</p>
+              <p data-cms-id="p-7-878f31"><strong>Model:</strong> For me, my city is friendly because people say hello.</p>
+            </div>
+          </section>
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-4-1f997f">4. Round 2: Friendly Debate / Stance (10 min)</h2>
-          <p data-cms-id="p-9-d7f4a2">Express your opinion on these adult discussion statements:</p>
-          <ul>
-            <li data-cms-id="li-4-390319">🗣️ <em>"First impressions are always correct."</em> — Agree or Disagree?</li>
-            <li data-cms-id="li-5-19579a">🗣️ <em>"It is easy to make new adult friends in big cities."</em> — Agree or Disagree?</li>
-          </ul>
-        </section>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-3-2dbb82">Card 3 — Which will you choose? + preference chunks</h2>
+              <span class="card-time">10 min</span>
+            </div>
+            <p data-cms-id="p-8-d5a020">Hands up for each side first, then each person says their line.</p>
+            <div class="frame-box">
+              <strong>Preference chunks:</strong> <code>I prefer… / I like [A] more than [B]. / [A] is better for me.</code>
+            </div>
+            <ul>
+              <li data-cms-id="li-1-d82c31">a big city or a small town</li>
+              <li data-cms-id="li-2-bcf966">talk to new people or stay with friends</li>
+              <li data-cms-id="li-3-76341d">a morning person or an evening person</li>
+            </ul>
+            <p data-cms-id="p-9-2de702"><strong>Example:</strong> I prefer a small town because it is quiet.</p>
+          </section>
 
-        <section class="session-section">
-          <h2 data-cms-id="h2-5-1cb7f6">5. Facilitator's Correction Note</h2>
-          <p data-cms-id="p-10-9f797b">Remember: Fluency over perfection! Focus on communicating clear ideas and asking basic follow-up questions.</p>
-        </section>
-      </div>
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-4-66dfd8">Card 4 — Real-life mini-action: meet someone new</h2>
+              <span class="card-time">15 min</span>
+            </div>
+            <p data-cms-id="p-10-9e8810">Student A is new at the club, Student B is a member. Say your name and ask two questions.</p>
+            <ul>
+              <li data-cms-id="li-4-b6e54e">Hello. My name is…</li>
+              <li data-cms-id="li-5-64753c">Nice to meet you.</li>
+              <li data-cms-id="li-6-7bc5e7">Where are you from?</li>
+              <li data-cms-id="li-7-a2dfa6">I am from…</li>
+              <li data-cms-id="li-8-56b2ea">What is your job?</li>
+              <li data-cms-id="li-9-da65d3">See you next week.</li>
+            </ul>
+            <p data-cms-id="p-11-9c9bc1"><strong>How to run it:</strong> demo with one student (2 min) → pairs (5 min) → swap roles (5 min) → one pair performs for the room (3 min).</p>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-5-435162">Card 5 — Looking ahead</h2>
+              <span class="card-time">8 min</span>
+            </div>
+            <div class="frame-box">
+              <strong>Future chunks:</strong> <code>Tomorrow, I will… / Next week, I want to…</code>
+            </div>
+            <div class="question-card">
+              <p data-cms-id="p-12-fdda71"><strong>Prompts:</strong> Who will you meet tomorrow? What do you want to do next week?</p>
+              <p data-cms-id="p-13-8f46b8"><strong>Model:</strong> Next week I want to meet a new friend.</p>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2 data-cms-id="h2-6-392979">Card 6 — Outro &amp; takeaway</h2>
+              <span class="card-time">5 min</span>
+            </div>
+            <p data-cms-id="p-14-652883"><strong>Wrap-up:</strong> Say your name + one word you liked today.</p>
+            <p data-cms-id="p-15-8dc2d1"><strong>Facilitator note:</strong> write the three best sentences on the board, then three corrections as "we said / we can say". Fluency first — do not interrupt during the cards.</p>
+          </section>
+
+          <section class="card card-ladder">
+            <div class="card-head">
+              <h2 data-cms-id="h2-7-a564d7">Helper sheet — the chunk ladder</h2>
+              <span class="card-time">use the rung you are ready for</span>
+            </div>
+            <table class="ladder">
+              <thead>
+                <tr><th data-cms-id="th-1-f1e410">Function</th><th data-cms-id="th-2-b8c4ed">A0</th><th data-cms-id="th-3-446258">A0+</th><th data-cms-id="th-4-1ffd4b">A1</th></tr>
+              </thead>
+              <tbody>
+                <tr><td data-cms-id="td-1-b75aaa">Opinion</td><td data-cms-id="td-2-543030">Good. Bad.</td><td data-cms-id="td-3-741316">I think it is good.</td><td data-cms-id="td-4-3b573b">For me, my city is friendly because people say hello.</td></tr>
+                <tr><td data-cms-id="td-5-97d9b2">Preference</td><td data-cms-id="td-6-827444">This. That.</td><td data-cms-id="td-7-14975e">I prefer this one.</td><td data-cms-id="td-8-b60f6e">I prefer a small town because it is quiet.</td></tr>
+                <tr><td data-cms-id="td-9-047ca5">Future</td><td data-cms-id="td-10-25b4d2">Tomorrow — home.</td><td data-cms-id="td-11-070ba7">Tomorrow I will go home.</td><td data-cms-id="td-12-e648f8">Next week I want to meet a new friend.</td></tr>
+              </tbody>
+            </table>
+            <p data-cms-id="p-16-28a8a8"><strong>Weaker group:</strong> let Card 4 be read word for word from the card. <strong>Stronger group:</strong> add a third question — "Do you live near here?"</p>
+          </section>
+
+        </div>
 
       <div class="session-footer">
         <a href="../../basic-speaking-club.html" class="btn btn-secondary">← Back to Basic Speaking Club</a>

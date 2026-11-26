@@ -68,6 +68,18 @@ Words must cycle through:
 Every session page in the club follows the same six cards. The order never changes,
 so the group always knows what happens next and all their attention stays on the words.
 
+**Where the content lives.** The topic content for all 30 sessions is in
+`data/basic-speaking-club-sessions.json`. The pages in `sessions/basic-speaking-club/`
+and their Markdown twins are generated from it:
+
+```
+npm run build-basic-speaking-club     # regenerate pages and markdown
+npm run check-basic-speaking-club     # fail if a page is out of date
+```
+
+Edit the data file, not the HTML. A new session is a new object in the array — the six
+cards, the timings and the helper sheet come from the template.
+
 | Card | Time | What happens | What students produce |
 |---|---|---|---|
 | 1. Intro + 10 core words | 10 min | Ten words with pictures or real objects; show, repeat, then pairs test each other | Single words, pointing, repetition |
