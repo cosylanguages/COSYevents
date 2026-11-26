@@ -158,13 +158,49 @@
     el: { updated: 'Ενημερώθηκε', stale_sub: 'Τελευταία διαθέσιμα θέματα για {date}. Η καθημερινή ενημέρωση δεν έχει εκτελεστεί ακόμη.' }
   };
 
-  function isStale(data) {
-    if (!data || !data.month || !data.day) return false;
-    var now = new Date();
-    var year = data.updated_at ? new Date(data.updated_at).getUTCFullYear() : now.getUTCFullYear();
-    var dataTime = Date.UTC(year, data.month - 1, data.day);
-    var todayTime = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
-    return dataTime < todayTime;
+  // The reader's own calendar date, YYYY-MM-DD. Every daily comparison uses this, never UTC.
+  function getLocalDateKey(d) {
+    d = d || new Date();
+    var m = String(d.getMonth() + 1).padStart(2, '0');
+    var day = String(d.getDate()).padStart(2, '0');
+    return d.getFullYear() + '-' + m + '-' + day;
+  }
+
+  function payloadDate(data) {
+    if (!data) return '';
+    if (data.date) return String(data.date);
+    if (!data.month || !data.day) return '';
+    var year = data.updated_at ? new Date(data.updated_at).getUTCFullYear() : new Date().getFullYear();
+    return year + '-' + String(data.month).padStart(2, '0') + '-' + String(data.day).padStart(2, '0');
+  }
+
+  // A file may publish a rolling window under `days` keyed by YYYY-MM-DD. Pick the
+  // reader's local day. A category the window does not carry for that date falls back
+  // to the file's top-level item and is flagged, never silently passed off as today's.
+  function pickDay(data, dateKey) {
+    dateKey = dateKey || getLocalDateKey();
+    if (!data || !data.items) return null;
+    var day = data.days && data.days[dateKey];
+    if (!day) {
+      return { date: payloadDate(data), items: data.items, exact: false };
+    }
+    var items = {};
+    var exact = true;
+    Object.keys(data.items).forEach(function (key) {
+      if (day.items && day.items[key]) {
+        items[key] = day.items[key];
+      } else {
+        items[key] = Object.assign({}, data.items[key], { latest_available: true });
+        exact = false;
+      }
+    });
+    return { date: dateKey, items: items, exact: exact };
+  }
+
+  function isStale(data, dateKey) {
+    var picked = pickDay(data, dateKey);
+    if (!picked || !picked.date) return false;
+    return picked.date < (dateKey || getLocalDateKey());
   }
 
   function sanitizeHtml(str) {
@@ -207,11 +243,12 @@
     return '';
   }
 
-  function formatDisplayDate(data, lang) {
-    if (data && data.month && data.day) {
+  function formatDisplayDate(data, lang, dateKey) {
+    var key = dateKey || payloadDate(data);
+    if (key) {
       try {
-        var year = (data.updated_at ? new Date(data.updated_at).getUTCFullYear() : new Date().getUTCFullYear());
-        var dateObj = new Date(year, data.month - 1, data.day);
+        var parts = key.split('-');
+        var dateObj = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
         var intlLocale = lang === 'el' ? 'el-GR' : (lang === 'ru' ? 'ru-RU' : (lang === 'it' ? 'it-IT' : (lang === 'fr' ? 'fr-FR' : 'en-US')));
         return new Intl.DateTimeFormat(intlLocale, {
           month: 'long',
@@ -236,6 +273,9 @@
     var clubName = (i18n.clubs && i18n.clubs[key]) || item.clubName || 'Club';
 
     var yearBadge = item.year ? '<span class="spotlight-year-badge">' + sanitizeHtml(item.year) + '</span>' : '';
+    var latestBadge = item.latest_available
+      ? '<span class="spotlight-badge spotlight-badge-latest">' + sanitizeHtml((STALE_I18N[lang] || STALE_I18N.en).updated) + '</span>'
+      : '';
 
     // Resolve localized content from i18n field if present, else fallback to top-level
     var locItem = (item.i18n && (item.i18n[lang] || item.i18n.en)) || item;
@@ -261,6 +301,7 @@
           '</div>' +
           '<div class="spotlight-badge-wrap">' +
             yearBadge +
+            latestBadge +
             (badge ? '<span class="spotlight-badge">' + sanitizeHtml(badge) + '</span>' : '') +
           '</div>' +
         '</div>' +
@@ -292,12 +333,13 @@
     opts = opts || {};
     var i18n = SPOTLIGHT_I18N[lang] || SPOTLIGHT_I18N.en;
     var staleI18n = STALE_I18N[lang] || STALE_I18N.en;
-    var localizedDate = formatDisplayDate(data, lang);
+    var picked = pickDay(data) || { date: payloadDate(data), items: (data && data.items) || {}, exact: true };
+    var localizedDate = formatDisplayDate(data, lang, picked.date);
     var stale = isStale(data);
     var subText = stale
       ? (staleI18n.stale_sub || '').replace('{date}', localizedDate)
       : (i18n.sub || '').replace('{date}', localizedDate);
-    var items = data.items;
+    var items = picked.items;
 
     return (
       '<div class="daily-spotlights-container">' +
@@ -392,6 +434,8 @@
       detectLanguage: detectLanguage,
       formatDisplayDate: formatDisplayDate,
       isStale: isStale,
+      getLocalDateKey: getLocalDateKey,
+      pickDay: pickDay,
       SPOTLIGHT_I18N: SPOTLIGHT_I18N,
       STALE_I18N: STALE_I18N
     };

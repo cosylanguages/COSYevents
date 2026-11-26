@@ -1,143 +1,288 @@
 {
-  "updated_at": "2026-11-25T13:44:54.835Z",
-  "display_date": "November 25, 2026",
-  "date": "2026-11-25",
-  "day": 25,
+  "updated_at": "2026-11-26T10:02:20.679Z",
+  "display_date": "November 26, 2026",
+  "date": "2026-11-26",
+  "day": 26,
   "month": 11,
   "items": {
     "celebration": {
       "category": "celebration",
       "categoryTitle": "Holiday of the Day",
-      "title": "International Day for the Elimination of Violence against Women",
+      "title": "Constitution Day",
       "badge": "Celebration",
-      "description": "The United Nations General Assembly has designated November 25 as the International Day for the Elimination of Violence Against Women.",
-      "details": "International Day for the Elimination of Violence against Women",
+      "description": "The following is a list of public holidays in Abkhazia. The working days are marked in cursive.",
+      "details": "Constitution Day (Abkhazia, Georgia)",
       "clubLink": "lets-celebrate.html",
       "clubName": "Let's Celebrate",
       "source": "International & Cultural Observances",
       "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
       "i18n": {
         "en": {
-          "title": "International Day for the Elimination of Violence against Women",
-          "description": "The United Nations General Assembly has designated November 25 as the International Day for the Elimination of Violence Against Women."
+          "title": "Constitution Day",
+          "description": "The following is a list of public holidays in Abkhazia. The working days are marked in cursive."
         },
         "fr": {
-          "title": "Combattre la violence, le racisme et toutes les formes de discrimination.",
-          "description": "L’Assemblée générale des Nations Unies a désigné le 25 novembre comme Journée internationale pour l’élimination de la violence à l’égard des femmes."
+          "title": "La journée de la constitution",
+          "description": "Voici une liste des jours fériés en Abkhazie. Les jours ouvrables sont indiqués en italique."
         },
         "it": {
-          "title": "Giornata contro la violenza alle donne",
-          "description": "L'Assemblea Generale delle Nazioni Unite ha proclamato il 25 novembre Giornata internazionale per l'eliminazione della violenza contro le donne."
+          "title": "Festa della costituzione",
+          "description": "Di seguito è riportato un elenco delle festività nazionali in Abcasia. I giorni lavorativi sono indicati in corsivo."
         },
         "ru": {
-          "title": "Международный день борьбы за ликвидацию насилия в отношении женщин",
-          "description": "Генеральная Ассамблея Организации Объединенных Наций провозгласила 25 ноября Международным днем борьбы за ликвидацию насилия в отношении женщин."
+          "title": "День Конституции",
+          "description": "Ниже представлен список государственных праздников в Абхазии. Рабочие дни выделены курсивом."
         },
         "el": {
-          "title": "Σήμερα είναι η διεθνής ημέρα για την εξάλειψη της βίας κατά των γυναικών.",
-          "description": "Η Γενική Συνέλευση των Ηνωμένων Εθνών όρισε την 25η Νοεμβρίου ως Διεθνή Ημέρα για την Εξάλειψη της Βίας κατά των Γυναικών."
+          "title": "/ Ν ;0.5!",
+          "description": "Ακολουθεί ένας κατάλογος με τις αργίες στην Αμπχαζία. Οι εργάσιμες ημέρες επισημαίνονται με πλάγιους χαρακτήρες."
         }
       }
     },
     "science": {
       "category": "science",
       "categoryTitle": "Today in Science",
-      "title": "CAT scan patent",
+      "title": "Tidal power",
       "year": "",
       "badge": "Research & Discovery",
-      "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis.",
+      "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor).",
       "clubLink": "keeping-up-with-science.html",
       "clubName": "Keeping Up with Science",
       "source": "Today in Science History",
-      "sourceUrl": "https://todayinsci.com/11/11_25.htm",
+      "sourceUrl": "https://todayinsci.com/11/11_26.htm",
       "i18n": {
         "en": {
-          "title": "CAT scan patent",
-          "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
         },
         "fr": {
-          "title": "Brevet de tomodensitométrie",
-          "description": "Ledley (source) En 1975, le premier brevet américain pour un scanner radiographique du corps entier a été délivré à Robert S. Ledley (n° 3 922 552). Le scanner radiologique de diagnostic ACTA (Automatic Computerized Transverse Axial) a révolutionné le diagnostic médical."
+          "title": "Énergie marémotrice",
+          "description": "(source) En 1966, le président Charles de Gaulle a inauguré la première centrale marémotrice au monde, située dans l'estuaire de la Rance, en Bretagne. La Rance est la centrale marémotrice la plus puissante au monde."
         },
         "it": {
-          "title": "Brevetto per la TAC",
-          "description": "Ledley (fonte) Nel 1975, il primo brevetto statunitense per uno scanner a raggi X per tutto il corpo fu rilasciato a Robert S. Ledley (n. 3.922.552). Lo scanner diagnostico a raggi X ACTA (Automatic Computerized Transverse Axial) ha rivoluzionato la diagnostica medica."
+          "title": "energia mareomotrice",
+          "description": "(fonte) Nel 1966, il presidente Charles de Gaulle inaugurò la prima centrale mareomotrice al mondo nell'estuario della Rance, in Bretagna. La Rance è la centrale mareomotrice più potente al mondo."
         },
         "ru": {
-          "title": "Патент на компьютерную томографию",
-          "description": "Ледли (источник) В 1975 году Роберту С. Ледли был выдан первый в США патент на рентгеновский сканер всего тела (№ 3 922 552). Диагностический рентгеновский сканер ACTA (Automatic Computerized Transverse Axial — автоматический компьютеризированный поперечно-осевой) произвел революцию в медицинской диагностике."
+          "title": "Приливная электростанция",
+          "description": "(источник) В 1966 году президент Шарль де Голль открыл первую в мире приливную электростанцию в устье реки Ранс в Бретани. Ла-Ранс — самая мощная приливная электростанция в мире. Имея ширину 700 метров, она перекрывает устье реки Ранс, расположенное недалеко от Сен-Мало (департамент Кот-д’Армор)."
         },
         "el": {
-          "title": "Δίπλωμα ευρεσιτεχνίας για την αξονική τομογραφία",
-          "description": "Ledley(πηγή) Το 1975, το πρώτο δίπλωμα ευρεσιτεχνίας των ΗΠΑ για έναν σαρωτή ακτίνων Χ ολόκληρου του σώματος εκδόθηκε στο όνομα του Robert S. Ledley (αριθ. 3.922.552). Ο διαγνωστικός ακτινολογικός σαρωτής ACTA (Automatic Computerized Transverse Axial) (Αυτόματος Εξονυχιστικός Εγκάρσιος Αξονικός) επέφερε επανάσταση στη ιατρική διάγνωση."
+          "title": "παλιρροιακή ισχύς",
+          "description": "(πηγή) Το 1966, ο Πρόεδρος Σαρλ ντε Γκωλ εγκαινίασε τον πρώτο σταθμό παραγωγής ενέργειας από παλίρροιες στον κόσμο, στη λιμνοθάλασσα του ποταμού Ρανς, στη Βρετάνη. Ο σταθμός La Rance είναι ο ισχυρότερος σταθμός παραγωγής ενέργειας από παλίρροιες στον κόσμο."
         }
       }
     },
     "music": {
       "category": "music",
       "categoryTitle": "Today in Music",
-      "title": "Martha",
-      "year": "1847",
+      "title": "Music of the Spheres",
+      "year": "1921",
       "badge": "Music History",
-      "description": "Friedrich von Flotow's comic romance opera \"Martha\" premiers at the Kärntnertortheater in Vienna",
+      "description": "Danish composer Rued Langgaard's \"Music of the Spheres\" (Sfærernes Musik) premieres at Konzerthaus in Karlsruhe, Germany; it is not performed in Denmark until 1969",
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
       "sourceUrl": "https://www.onthisday.com/music/",
       "i18n": {
         "en": {
-          "title": "Martha",
-          "description": "Friedrich von Flotow's comic romance opera \"Martha\" premiers at the Kärntnertortheater in Vienna"
+          "title": "Music of the Spheres",
+          "description": "Danish composer Rued Langgaard's \"Music of the Spheres\" (Sfærernes Musik) premieres at Konzerthaus in Karlsruhe, Germany; it is not performed in Denmark until 1969"
         },
         "fr": {
-          "title": "Martha",
-          "description": "L'opéra-comique romantique « Martha » de Friedrich von Flotow est créé au Kärntnertortheater de Vienne."
+          "title": "La musique des Sphères",
+          "description": "La « Musique des sphères » (Sfærernes Musik) du compositeur danois Rued Langgaard est créée au Konzerthaus de Karlsruhe, en Allemagne ; elle n’est pas jouée au Danemark avant 1969."
         },
         "it": {
-          "title": "Martha",
-          "description": "Prima rappresentazione dell'opera comica romantica \"Martha\" di Friedrich von Flotow al Kärntnertortheater di Vienna"
+          "title": "\"Musica delle sfere\".",
+          "description": "La \"Musica delle sfere\" (Sfærernes Musik) del compositore danese Rued Langgaard viene eseguita per la prima volta al Konzerthaus di Karlsruhe, in Germania; non verrà eseguita in Danimarca fino al 1969."
         },
         "ru": {
-          "title": "Клетка для хомяков Martha",
-          "description": "В Венском театре «Кернтнертортеатр» состоялась премьера комической романтической оперы Фридриха фон Флотова «Марта»"
+          "title": "Музыка сфер",
+          "description": "Премьера «Музыки сфер» (Sfærernes Musik) датского композитора Руэда Ланггорда состоялась в Концертхаусе в Карлсруэ, Германия; в Дании произведение было исполнено только в 1969 году."
         },
         "el": {
-          "title": "Martha",
-          "description": "Πρώτη παράσταση της κωμικής ρομαντικής όπερας «Μάρθα» του Φρίντριχ φον Φλότοβ στο Kärntnertortheater της Βιέννης"
+          "title": "Η μουσική των σφαιρών",
+          "description": "Η «Μουσική των Σφαιρών» (Sfærernes Musik) του Δανού συνθέτη Rued Langgaard παρουσιάζεται για πρώτη φορά στο Konzerthaus της Καρλσρούης, στη Γερμανία. Δεν θα παιχτεί στη Δανία μέχρι το 1969."
         }
       }
     },
     "film": {
       "category": "film",
       "categoryTitle": "Today in Film & TV",
-      "title": "First systematic Hollywood blacklist is instituted,...",
-      "year": "1947",
+      "title": "The Toll of the Sea,",
+      "year": "1922",
       "badge": "Cinema & Screen",
-      "description": "First systematic Hollywood blacklist is instituted, denying employment to American entertainment professionals with alleged communist ties or sympathies",
+      "description": "First successful Technicolor movie, \"The Toll of the Sea,\" premieres at the Rialto Theatre in New York City",
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
       "sourceUrl": "https://www.onthisday.com/film-tv/",
       "i18n": {
         "en": {
-          "title": "First systematic Hollywood blacklist is instituted,...",
-          "description": "First systematic Hollywood blacklist is instituted, denying employment to American entertainment professionals with alleged communist ties or sympathies"
+          "title": "The Toll of the Sea,",
+          "description": "First successful Technicolor movie, \"The Toll of the Sea,\" premieres at the Rialto Theatre in New York City"
         },
         "fr": {
-          "title": "La première liste noire systématique d'Hollywood est établie,...",
-          "description": "La première liste noire systématique d'Hollywood est établie, refusant l'emploi à des professionnels américains du divertissement ayant des liens ou des sympathies présumés avec le communisme."
+          "title": "Le tribut de la mer,",
+          "description": "Le premier film Technicolor réussi, « The Toll of the Sea », est projeté en avant-première au Rialto Theatre de New York."
         },
         "it": {
-          "title": "Viene istituita la prima lista nera sistematica di Hollywood,...",
-          "description": "Viene istituita la prima lista nera sistematica di Hollywood, che nega l'impiego ai professionisti dell'intrattenimento americano con presunti legami o simpatie comuniste"
+          "title": "Il prezzo del mare,",
+          "description": "Prima del primo film Technicolor di successo, \"The Toll of the Sea\", al Rialto Theatre di New York City"
         },
         "ru": {
-          "title": "Составлен первый систематический голливудский черный список,...",
-          "description": "Составлен первый систематический голливудский черный список, в результате чего американские деятели индустрии развлечений, предположительно имевшие связи с коммунистами или симпатизировавшие им, лишились работы."
+          "title": "Цена моря,",
+          "description": "В театре «Риальто» в Нью-Йорке состоялась премьера первого успешного фильма в системе «Техниколор» под названием «Цена моря»"
         },
         "el": {
-          "title": "Θεσπίζεται η πρώτη συστηματική μαύρη λίστα του Χόλιγουντ,...",
-          "description": "Θεσπίζεται η πρώτη συστηματική μαύρη λίστα του Χόλιγουντ, η οποία απαγορεύει την απασχόληση Αμερικανών επαγγελματιών του χώρου της ψυχαγωγίας με υποτιθέμενους κομμουνιστικούς δεσμούς ή συμπάθειες"
+          "title": "Το τίμημα της θάλασσας,",
+          "description": "Πρώτη επιτυχημένη ταινία Technicolor, «Το τίμημα της θάλασσας», κάνει πρεμιέρα στο θέατρο Ριάλτο της Νέας Υόρκης"
+        }
+      }
+    }
+  },
+  "days": {
+    "2026-11-26": {
+      "display_date": "November 26, 2026",
+      "day": 26,
+      "month": 11,
+      "items": {
+        "celebration": {
+          "category": "celebration",
+          "categoryTitle": "Holiday of the Day",
+          "title": "Constitution Day",
+          "badge": "Celebration",
+          "description": "The following is a list of public holidays in Abkhazia. The working days are marked in cursive.",
+          "details": "Constitution Day (Abkhazia, Georgia)",
+          "clubLink": "lets-celebrate.html",
+          "clubName": "Let's Celebrate",
+          "source": "International & Cultural Observances",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Portal:Current_events",
+          "i18n": {
+            "en": {
+              "title": "Constitution Day",
+              "description": "The following is a list of public holidays in Abkhazia. The working days are marked in cursive."
+            },
+            "fr": {
+              "title": "La journée de la constitution",
+              "description": "Voici une liste des jours fériés en Abkhazie. Les jours ouvrables sont indiqués en italique."
+            },
+            "it": {
+              "title": "Festa della costituzione",
+              "description": "Di seguito è riportato un elenco delle festività nazionali in Abcasia. I giorni lavorativi sono indicati in corsivo."
+            },
+            "ru": {
+              "title": "День Конституции",
+              "description": "Ниже представлен список государственных праздников в Абхазии. Рабочие дни выделены курсивом."
+            },
+            "el": {
+              "title": "/ Ν ;0.5!",
+              "description": "Ακολουθεί ένας κατάλογος με τις αργίες στην Αμπχαζία. Οι εργάσιμες ημέρες επισημαίνονται με πλάγιους χαρακτήρες."
+            }
+          }
+        },
+        "science": {
+          "category": "science",
+          "categoryTitle": "Today in Science",
+          "title": "Tidal power",
+          "year": "",
+          "badge": "Research & Discovery",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor).",
+          "clubLink": "keeping-up-with-science.html",
+          "clubName": "Keeping Up with Science",
+          "source": "Today in Science History",
+          "sourceUrl": "https://todayinsci.com/11/11_26.htm",
+          "i18n": {
+            "en": {
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+            },
+            "fr": {
+              "title": "Énergie marémotrice",
+              "description": "(source) En 1966, le président Charles de Gaulle a inauguré la première centrale marémotrice au monde, située dans l'estuaire de la Rance, en Bretagne. La Rance est la centrale marémotrice la plus puissante au monde."
+            },
+            "it": {
+              "title": "energia mareomotrice",
+              "description": "(fonte) Nel 1966, il presidente Charles de Gaulle inaugurò la prima centrale mareomotrice al mondo nell'estuario della Rance, in Bretagna. La Rance è la centrale mareomotrice più potente al mondo."
+            },
+            "ru": {
+              "title": "Приливная электростанция",
+              "description": "(источник) В 1966 году президент Шарль де Голль открыл первую в мире приливную электростанцию в устье реки Ранс в Бретани. Ла-Ранс — самая мощная приливная электростанция в мире. Имея ширину 700 метров, она перекрывает устье реки Ранс, расположенное недалеко от Сен-Мало (департамент Кот-д’Армор)."
+            },
+            "el": {
+              "title": "παλιρροιακή ισχύς",
+              "description": "(πηγή) Το 1966, ο Πρόεδρος Σαρλ ντε Γκωλ εγκαινίασε τον πρώτο σταθμό παραγωγής ενέργειας από παλίρροιες στον κόσμο, στη λιμνοθάλασσα του ποταμού Ρανς, στη Βρετάνη. Ο σταθμός La Rance είναι ο ισχυρότερος σταθμός παραγωγής ενέργειας από παλίρροιες στον κόσμο."
+            }
+          }
+        },
+        "music": {
+          "category": "music",
+          "categoryTitle": "Today in Music",
+          "title": "Music of the Spheres",
+          "year": "1921",
+          "badge": "Music History",
+          "description": "Danish composer Rued Langgaard's \"Music of the Spheres\" (Sfærernes Musik) premieres at Konzerthaus in Karlsruhe, Germany; it is not performed in Denmark until 1969",
+          "clubLink": "karaoke-club.html",
+          "clubName": "Karaoke Club",
+          "source": "On This Day - Today in Music",
+          "sourceUrl": "https://www.onthisday.com/music/",
+          "i18n": {
+            "en": {
+              "title": "Music of the Spheres",
+              "description": "Danish composer Rued Langgaard's \"Music of the Spheres\" (Sfærernes Musik) premieres at Konzerthaus in Karlsruhe, Germany; it is not performed in Denmark until 1969"
+            },
+            "fr": {
+              "title": "La musique des Sphères",
+              "description": "La « Musique des sphères » (Sfærernes Musik) du compositeur danois Rued Langgaard est créée au Konzerthaus de Karlsruhe, en Allemagne ; elle n’est pas jouée au Danemark avant 1969."
+            },
+            "it": {
+              "title": "\"Musica delle sfere\".",
+              "description": "La \"Musica delle sfere\" (Sfærernes Musik) del compositore danese Rued Langgaard viene eseguita per la prima volta al Konzerthaus di Karlsruhe, in Germania; non verrà eseguita in Danimarca fino al 1969."
+            },
+            "ru": {
+              "title": "Музыка сфер",
+              "description": "Премьера «Музыки сфер» (Sfærernes Musik) датского композитора Руэда Ланггорда состоялась в Концертхаусе в Карлсруэ, Германия; в Дании произведение было исполнено только в 1969 году."
+            },
+            "el": {
+              "title": "Η μουσική των σφαιρών",
+              "description": "Η «Μουσική των Σφαιρών» (Sfærernes Musik) του Δανού συνθέτη Rued Langgaard παρουσιάζεται για πρώτη φορά στο Konzerthaus της Καρλσρούης, στη Γερμανία. Δεν θα παιχτεί στη Δανία μέχρι το 1969."
+            }
+          }
+        },
+        "film": {
+          "category": "film",
+          "categoryTitle": "Today in Film & TV",
+          "title": "The Toll of the Sea,",
+          "year": "1922",
+          "badge": "Cinema & Screen",
+          "description": "First successful Technicolor movie, \"The Toll of the Sea,\" premieres at the Rialto Theatre in New York City",
+          "clubLink": "cinema-nights/index.html",
+          "clubName": "Cinema Nights",
+          "source": "On This Day - Today in Film & TV",
+          "sourceUrl": "https://www.onthisday.com/film-tv/",
+          "i18n": {
+            "en": {
+              "title": "The Toll of the Sea,",
+              "description": "First successful Technicolor movie, \"The Toll of the Sea,\" premieres at the Rialto Theatre in New York City"
+            },
+            "fr": {
+              "title": "Le tribut de la mer,",
+              "description": "Le premier film Technicolor réussi, « The Toll of the Sea », est projeté en avant-première au Rialto Theatre de New York."
+            },
+            "it": {
+              "title": "Il prezzo del mare,",
+              "description": "Prima del primo film Technicolor di successo, \"The Toll of the Sea\", al Rialto Theatre di New York City"
+            },
+            "ru": {
+              "title": "Цена моря,",
+              "description": "В театре «Риальто» в Нью-Йорке состоялась премьера первого успешного фильма в системе «Техниколор» под названием «Цена моря»"
+            },
+            "el": {
+              "title": "Το τίμημα της θάλασσας,",
+              "description": "Πρώτη επιτυχημένη ταινία Technicolor, «Το τίμημα της θάλασσας», κάνει πρεμιέρα στο θέατρο Ριάλτο της Νέας Υόρκης"
+            }
+          }
         }
       }
     }
