@@ -15,6 +15,8 @@ const EXCLUDED_FILES = new Set([
 ]);
 
 const SESSION_DIRS = ['sessions', 'fr/sessions', 'ru/sessions'];
+const LOCALIZED_ROOT_DIRS = ['fr', 'ru', 'it', 'el'];
+const EXTRA_HUB_DIRS = ['past-events'];
 const HUB_INDEXES = [
   'index.html',
   'fr/index.html',
@@ -70,7 +72,7 @@ function collectPages() {
     if (fs.existsSync(path.join(ROOT, hub))) pages.add(hub);
   }
 
-  for (const dir of SESSION_DIRS) {
+  for (const dir of [...SESSION_DIRS, ...LOCALIZED_ROOT_DIRS, ...EXTRA_HUB_DIRS]) {
     for (const file of listHtml(dir)) pages.add(file);
   }
 

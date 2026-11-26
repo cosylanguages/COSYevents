@@ -45,17 +45,37 @@ console.log('Total catalog entries in data/sessions.json:', sessionsJson.length)
 
 let errors = 0;
 const catalogHrefs = new Set();
+const catalogTitles = new Map();
+const langNameToCode = { English: 'en', French: 'fr', Russian: 'ru', Spanish: 'es', Italian: 'it', Greek: 'el' };
 
 for (let i = 0; i < sessionsJson.length; i++) {
   const item = sessionsJson[i];
-  if (!item.title || !item.href || !item.lang || !item.format) {
+  if (!item.title || !item.href || !item.lang || !item.format || !item.level) {
     console.error(`Item ${i} missing required fields:`, item);
     errors++;
   }
+  if (catalogHrefs.has(item.href)) {
+    console.error(`Item ${i} duplicate href: ${item.href}`);
+    errors++;
+  }
+  const normalizedTitle = (item.title || '').replace(/&amp;/g, '&').trim().toLowerCase();
+  if (catalogTitles.has(normalizedTitle)) {
+    console.error(`Item ${i} duplicate title: ${item.title} (also ${catalogTitles.get(normalizedTitle)})`);
+    errors++;
+  }
+  catalogTitles.set(normalizedTitle, item.href);
+
   if (!fs.existsSync(item.href)) {
     console.error(`Item ${i} href does not exist on disk:`, item.href);
     errors++;
   } else {
+    const pageHtml = fs.readFileSync(item.href, 'utf8');
+    const pageLang = (pageHtml.match(/<html[^>]*\blang=["']([^"']+)/i) || [])[1];
+    const pageLangCode = pageLang ? pageLang.split('-')[0] : '';
+    if (langNameToCode[item.lang] !== pageLangCode) {
+      console.error(`Item ${i} language mismatch: catalog "${item.lang}", page "${pageLang || '(missing)'}" (${item.href})`);
+      errors++;
+    }
     const pageLevels = getExplicitSessionLevels(item.href);
     const catalogLevels = [...new Set((item.level || '').match(/\b(A0|A1|A2|B1|B2|C1|C2)\b/g) || [])];
     if (pageLevels.length > 0 && (

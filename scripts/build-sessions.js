@@ -393,6 +393,7 @@ ${noteText ? `<span class="mistake-note-text">${noteText}</span>` : ''}
 function generateSessionHtml(data, clubSlug = 'mind-matters', sessionSlug = '') {
   const config = CLUB_CONFIGS[clubSlug] || CLUB_CONFIGS['mind-matters'];
   const pageTitle = data.page_title || `${data.title} : COSYlanguages`;
+  const canonicalUrl = `https://cosylanguages.github.io/COSYevents/sessions/${clubSlug}/${sessionSlug}.html`;
   const themeClass = data.theme_class || 'theme-mind';
   const heroStyle = data.hero_background ? ` style="background: ${data.hero_background};"` : '';
   const clubTag = data.club_tag || config.tag;
@@ -475,6 +476,7 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>${pageTitle}</title>
+<link rel="canonical" href="${canonicalUrl}"/>
 <link href="../../shared/images/logo.png" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>

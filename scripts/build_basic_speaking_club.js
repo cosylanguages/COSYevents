@@ -190,6 +190,8 @@ ${ladder(s)}
 function renderHtml(s, template) {
   const html = template
     .replace(/{{PAGE_TITLE}}/g, () => attr(pageTitle(s)))
+    .replace(/{{CANONICAL_URL}}/g, () => `https://cosylanguages.github.io/COSYevents/sessions/basic-speaking-club/${s.slug}.html`)
+    .replace(/{{DESCRIPTION}}/g, () => attr(`${sessionHeading(s)} — ${s.date}. Basic Speaking Club session with vocabulary, discussion questions and free materials.`))
     .replace(/{{TITLE}}/g, () => esc(sessionHeading(s)))
     .replace(/{{DATE}}/g, () => esc(s.date))
     .replace(/{{BREADCRUMB}}/g, () => esc(sessionHeading(s)))

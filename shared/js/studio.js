@@ -99,7 +99,7 @@
           type: 'round_2',
           title: 'Page 4: Round 2 — Future Speculation',
           instructions: 'Speculate on how AI and automation will transform work and learning in the next 10 years.',
-          content: '<ol>\n  <li>Which daily task do you hope AI completely replaces first?</li>\n  <li>Will language learning become obsolete because of real-time earpiece translation? Why or why not?</li>\n</ol>\n\n<div class="card-video-box">\n  <div class="card-video-responsive">\n    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Material" allowfullscreen></iframe>\n  </div>\n  <div class="card-video-disclaimer">🎬 Educational video clip for discussion. Pause to answer comprehension prompts.</div>\n</div>'
+          content: '<ol>\n  <li>Which daily task do you hope AI completely replaces first?</li>\n  <li>Will language learning become obsolete because of real-time earpiece translation? Why or why not?</li>\n</ol>\n\n<div class="card-video-box">\n  <div class="card-video-responsive">\n    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Material" loading="lazy" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox"></iframe>\n  </div>\n  <div class="card-video-disclaimer">🎬 Educational video clip for discussion. Pause to answer comprehension prompts.</div>\n</div>'
         },
         {
           type: 'outro',
@@ -276,7 +276,7 @@
           type: 'icebreaker',
           title: 'Page 1: Scene Hook & Visual Atmosphere',
           instructions: 'Watch the selected opening sequence and discuss the cinematography.',
-          content: '<div class="card-video-box">\n  <div class="card-video-responsive">\n    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Film Clip" allowfullscreen></iframe>\n  </div>\n  <div class="card-video-disclaimer">🎬 Film Sequence: Notice camera angle, lighting, and ambient sound cues.</div>\n</div>\n\n<ol>\n  <li>What emotions does the opening lighting palette evoke?</li>\n  <li>Do you trust the protagonist from the very first frame? Why or why not?</li>\n</ol>'
+          content: '<div class="card-video-box">\n  <div class="card-video-responsive">\n    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Film Clip" loading="lazy" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox"></iframe>\n  </div>\n  <div class="card-video-disclaimer">🎬 Film Sequence: Notice camera angle, lighting, and ambient sound cues.</div>\n</div>\n\n<ol>\n  <li>What emotions does the opening lighting palette evoke?</li>\n  <li>Do you trust the protagonist from the very first frame? Why or why not?</li>\n</ol>'
         },
         {
           type: 'roleplay',
@@ -568,7 +568,7 @@
       '<div class="card-video-box">\n' +
       '  <div class="card-video-responsive">\n' +
       '    <iframe src="' + (url.includes('youtube') ? url.replace('watch?v=', 'embed/') : url) + '" ' +
-      'title="Video Material" allowfullscreen></iframe>\n' +
+      'title="Video Material" loading="lazy" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox"></iframe>\n' +
       '  </div>\n' +
       '  <div class="card-video-disclaimer">🎬 Educational video clip for discussion. Pause to answer comprehension prompts.</div>\n' +
       '</div>'
