@@ -10,7 +10,7 @@
     "check-orphans": "node scripts/check_orphan_classes.js",
     "build-public": "node scripts/build-public.js",
     "publish": "node scripts/publish-events.js",
-    "test": "node scripts/test-no-leak.js && node scripts/test_studio.js && node scripts/test_session_publish.js && node scripts/test_cms_stamp.js && node scripts/test_cms_editor_lock.js && node scripts/stamp_cms_ids.js --check && node scripts/build_basic_speaking_club.js --check && node scripts/test_session_directory.js && node scripts/test_daily_spotlights.js && node scripts/test_daily_wheel.js && node scripts/test_club_reviews.js && node scripts/test_club_music.js && node scripts/check_redirects.js",
+    "test": "node scripts/test-no-leak.js && node scripts/test_studio.js && node scripts/test_session_publish.js && node scripts/test_cms_stamp.js && node scripts/test_cms_editor_lock.js && node scripts/stamp_cms_ids.js --check && node scripts/build_basic_speaking_club.js --check && node scripts/test_session_directory.js && node scripts/verify_catalog.js && node scripts/test_daily_spotlights.js && node scripts/test_daily_wheel.js && node scripts/test_club_reviews.js && node scripts/test_club_music.js && node scripts/check_redirects.js",
     "test-daily-spotlights": "node scripts/test_daily_spotlights.js",
     "test-club-reviews": "node scripts/test_club_reviews.js",
     "fetch-daily-spotlights": "node scripts/fetch_daily_spotlights.js",
@@ -42,7 +42,8 @@
     "check-contact": "node scripts/set_contact.js --check",
     "stamp-cms": "node scripts/stamp_cms_ids.js",
     "check-cms": "node scripts/stamp_cms_ids.js --check",
-    "test-daily-wheel": "node scripts/test_daily_wheel.js"
+    "test-daily-wheel": "node scripts/test_daily_wheel.js",
+    "verify-catalog": "node scripts/verify_catalog.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
