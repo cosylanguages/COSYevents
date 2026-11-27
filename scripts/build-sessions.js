@@ -478,11 +478,11 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
 <title>${pageTitle}</title>
 <link rel="canonical" href="${canonicalUrl}"/>
 <link href="../../shared/images/logo.png" rel="icon"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
 <script src="../../shared/js/cosy-theme.js"></script>
-<link rel="stylesheet" href="../../shared/css/sessions.css">
+<link rel="stylesheet" href="../../shared/css/tokens.css">
+  <link rel="stylesheet" href="../../shared/css/sessions.css">
 <link rel="stylesheet" href="${config.css}">
+  <link rel="stylesheet" href="../../shared/css/dark-fixes.css">
 </head>
 <body class="${themeClass}" data-product="social">
 <nav id="cosy-nav"></nav>
@@ -664,6 +664,37 @@ function updateCatalog(clubSlug, slug, sessionData) {
   }
 }
 
+// Some head and footer refinements were applied by hand after the first build
+// and have no generator of their own: session descriptions, hreflang alternates
+// and the lazy footer logo. A rebuild must not drop them, so each one is carried
+// forward from the page it replaces instead of being invented here.
+function carryForward(htmlPath, html) {
+  if (!fs.existsSync(htmlPath)) return html;
+  const previous = fs.readFileSync(htmlPath, 'utf8');
+
+  if (!html.includes('name="description"')) {
+    const description = previous.match(/<meta name="description"[^>]*\/>\n/);
+    if (description) html = html.replace(/(<link rel="canonical"[^>]*\/>\n)/, `$1${description[0]}`);
+  }
+
+  if (!html.includes('hreflang')) {
+    const alternates = previous.match(/(?:<link rel="alternate" hreflang="[^"]*"[^>]*\/>\n)+/);
+    if (alternates) {
+      const anchor = html.includes('name="description"')
+        ? /(<meta name="description"[^>]*\/>\n)/
+        : /(<link rel="canonical"[^>]*\/>\n)/;
+      html = html.replace(anchor, `$1${alternates[0]}`);
+    }
+  }
+
+  const previousLogo = previous.match(/<img alt="COSYlanguages logo"[^>]*>/);
+  if (previousLogo && previousLogo[0].includes('loading=')) {
+    html = html.replace(/<img alt="COSYlanguages logo"[^>]*\/>/, previousLogo[0]);
+  }
+
+  return html;
+}
+
 function buildSessionsForClub(clubSlug, isGated = false) {
   const targetDir = path.join(__dirname, `../sessions/${clubSlug}`);
   if (!fs.existsSync(targetDir)) return;
@@ -684,7 +715,7 @@ function buildSessionsForClub(clubSlug, isGated = false) {
       const htmlContent = isGated
         ? generateGatedSessionHtml(data, clubSlug, sid)
         : generateSessionHtml(data, clubSlug, slug);
-      fs.writeFileSync(htmlPath, stampHtml(htmlContent).html, 'utf8');
+      fs.writeFileSync(htmlPath, stampHtml(carryForward(htmlPath, htmlContent)).html, 'utf8');
       console.log(`[Generated] ${htmlPath}`);
 
       updateCatalog(clubSlug, slug, data);
