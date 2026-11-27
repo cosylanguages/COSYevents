@@ -43,8 +43,10 @@ body.theme-dark .error-links a { color: #9fd3aa !important; }
 /* ── Solid fills carrying white labels ── */
 .join-btn,
 .whatsapp-btn { background: #0f6b35 !important; color: #ffffff !important; }
-a[href*="wa.me"]:not(footer a),
-a[href*="whatsapp"]:not(footer a) { background: #0f6b35 !important; color: #ffffff !important; }
+/* Plain links keep the WhatsApp affordance; a designed CTA (.ev-btn, .btn)
+   keeps its brand fill instead of being repainted by its href. */
+a[href*="wa.me"]:not(footer a):not(.ev-btn):not(.btn),
+a[href*="whatsapp"]:not(footer a):not(.ev-btn):not(.btn) { background: #0f6b35 !important; color: #ffffff !important; }
 .mistake-mod-label,
 [class*="mod-badge"] { background: #9a3412 !important; color: #ffffff !important; }
 

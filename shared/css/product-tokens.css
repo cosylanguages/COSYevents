@@ -116,6 +116,11 @@ html[data-cosy-theme="dark"] .cosy-ecosystem-strip.cosy-ecosystem-strip {
     --cosy-color-sage-pale:   #D6F7F5;
     --cosy-color-sage-light:  #D6F7F5;
 
+    /* Fill behind white text. Every --cosy-color-sage step turns light in dark
+       mode because they are inks there, so a fill cannot borrow them. */
+    --cosy-primary-fill:       #087A80;
+    --cosy-primary-fill-hover: #0B4749;
+
     --cosy-fill-sage:         #0B4749;
     --cosy-fill-sage-hover:   #0A5F63;
     --cosy-ink-sage:          #087A80;
@@ -134,6 +139,8 @@ html[data-cosy-theme="dark"] .cosy-ecosystem-strip.cosy-ecosystem-strip {
         --cosy-color-sage-dark:   #7FE7E1;
         --cosy-color-sage-deep:   #DFFAF8;
         --cosy-color-sage-pale:   #0B2E2E;
+        --cosy-primary-fill:       #0A5F63;
+        --cosy-primary-fill-hover: #087A80;
         --cosy-color-sage-mist:   #0A2A2B;
         --cosy-color-sage-light:  #0B2E2E;
 
@@ -150,6 +157,8 @@ html[data-cosy-theme="dark"] .cosy-ecosystem-strip.cosy-ecosystem-strip {
 
 html[data-theme="dark"],
 body.theme-dark {
+    --cosy-primary-fill:       #0A5F63;
+    --cosy-primary-fill-hover: #087A80;
     --cosy-color-sage:        #3FD6CE;
     --cosy-color-sage-dark:   #7FE7E1;
     --cosy-color-sage-deep:   #DFFAF8;

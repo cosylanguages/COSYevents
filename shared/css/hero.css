@@ -114,11 +114,11 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 .ev-btn-primary {
-  background: var(--cosy-event-accent, #b84318);
+  background: var(--cosy-primary-fill, #087a80);
   color: #fff;
-  box-shadow: 0 4px 14px rgba(184, 67, 24, 0.3);
+  box-shadow: 0 4px 14px rgba(8, 122, 128, 0.28);
 }
-.ev-btn-primary:hover { background: var(--cosy-event-accent-hover, #993c1d); transform: translateY(-1px); color: #fff; }
+.ev-btn-primary:hover { background: var(--cosy-primary-fill-hover, #0b4749); transform: translateY(-1px); color: #fff; }
 .ev-btn-secondary {
   background: var(--cosy-color-warm-white, #fff);
   color: var(--cosy-color-ink, #1c1917);

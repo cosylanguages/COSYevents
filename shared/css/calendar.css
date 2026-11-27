@@ -49,9 +49,9 @@
 }
 
 .filter-btn.active {
-  background: var(--cosy-primary, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
-  border-color: var(--cosy-primary, #087a80);
+  border-color: var(--cosy-primary-fill, #087a80);
   box-shadow: var(--cosy-shadow-sm, 0 2px 8px rgba(65, 107, 73, 0.25));
 }
 
@@ -110,9 +110,9 @@
 }
 
 .lang-chip.active {
-  background: var(--cosy-primary, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
-  border-color: var(--cosy-primary, #087a80);
+  border-color: var(--cosy-primary-fill, #087a80);
   box-shadow: var(--cosy-shadow-sm, 0 2px 8px rgba(65, 107, 73, 0.25));
 }
 
@@ -263,7 +263,7 @@
 }
 
 .today .day-number {
-  background: var(--cosy-primary, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
 }
 
@@ -421,7 +421,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  background: var(--cosy-primary, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
@@ -457,7 +457,7 @@
 
 .btn-outline:hover {
   background: var(--cosy-primary-light, #d6f7f5);
-  border-color: var(--cosy-primary, #087a80);
+  border-color: var(--cosy-primary-fill, #087a80);
 }
 
 /* ── Modal Dialog ─────────────────────────────────────────────────── */
