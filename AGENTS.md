@@ -86,6 +86,17 @@ Chrome fetches every subset of a family it uses, so a first visit costs about
 `font-display: swap` keeps text visible, so this is accepted rather than
 worked around.
 
+### YouTube embeds
+
+All 205 embeds use `www.youtube.com/embed/...` with `loading="lazy"` and a
+`sandbox` attribute, so an off-screen player is not requested until it nears the
+viewport. Keep both attributes.
+
+Do not switch them to `www.youtube-nocookie.com`. That looks like a free privacy
+win, but a side-by-side test showed nocookie rendering "Video unavailable" for a
+video that plays normally from `www.youtube.com/embed`. The change was reverted
+after it would have broken every embed.
+
 ### No third-party font CDNs
 
 643 pages used to load Playfair Display, DM Sans and Nunito from
