@@ -21,7 +21,7 @@
     "vendor:cosylanguages": "node scripts/vendor_cosylanguages.js",
     "check-vendor": "node scripts/vendor_cosylanguages.js --check",
     "check-contrast": "node scripts/check_contrast.js",
-    "check-external-fonts": "node scripts/check_external_fonts.js",
+    "check-external-assets": "node scripts/check_external_assets.js",
     "check-redirects": "node scripts/check_redirects.js",
     "check:gated": "node scripts/check-gated-pages.js",
     "session:new": "node scripts/session_new.js",
@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@supabase/supabase-js": "2.39.0",
+    "@supabase/supabase-js": "^2.49.1",
     "ajv": "^8.20.0",
     "cheerio": "^1.2.0",
     "parse5": "^7.3.0",

@@ -95,7 +95,15 @@ depended on a service it does not control.
 
 Those pages now use the self-hosted COSY families: Playfair Display maps to
 Fraunces, and DM Sans and Nunito map to Commissioner. `npm run
-check-external-fonts` fails if a font CDN link or `@import` returns.
+check-external-assets` fails if a font CDN link, `@import`, or external
+`<script src>` returns.
+
+Third-party scripts are vendored too: `@supabase/supabase-js` lives in
+`shared/vendor/supabase.js` with its version and SHA-256 in
+`supabase.VERSION.txt`. After changing the dependency, run
+`node scripts/vendor_supabase.js`. Never point a page at jsDelivr or unpkg, and
+never use a floating range such as `@2` - `live-classroom.html` did, which
+meant an arbitrary future release executed on the page.
 
 Italic cuts live in `shared/fonts/` and are declared in
 `shared/css/product-fonts.css`, because the vendored `fonts.css` ships upright
