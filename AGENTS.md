@@ -98,6 +98,12 @@ sage. Override it in the product layer, never in place. `shared/js/cms-editor.js
 is excluded too: it must stay byte-identical to COSYstudio's copy
 (`cms-editor.lock.json`), so its colour changes upstream first.
 
+Dark neutrals are overridden in the same file. The canonical dark palette is
+green-tinted (`#181C18`, `#222B22`, `#E8F0E9`), so dark mode read as a green
+site with teal accents; the overrides keep each vendor step's lightness and only
+move the hue onto the signal teal. `--cosy-primary-fill` exists because
+`--cosy-primary` is an ink in dark mode and cannot carry white text.
+
 Semantic greens are allowed and must stay: `#0f6b35`/`#25d366` for WhatsApp,
 greens for success and correct-answer states.
 

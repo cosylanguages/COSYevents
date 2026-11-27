@@ -175,3 +175,41 @@ body.theme-dark {
     --cosy-primary-light:     #0B2E2E;
     --cosy-primary-soft:      #0A5F63;
 }
+
+/* ── Dark neutrals ─────────────────────────────────────────────────────────
+   The canonical dark palette is green-tinted: its surfaces, inks and borders
+   all carry a green cast, so dark mode read as a green site with teal accents. Each value below keeps the lightness of the
+   vendor step it replaces and only moves the hue onto the signal teal, so the
+   contrast between ink and surface is unchanged.
+   ------------------------------------------------------------------------ */
+html[data-theme="dark"],
+body.theme-dark,
+html[data-cosy-theme="dark"] {
+    --cosy-color-cream:          #171D1E;
+    --cosy-color-cream-dark:     #111718;
+    --cosy-color-warm-white:     #1F2A2B;
+    --cosy-color-surface:        #1F2A2B;
+    --cosy-color-surface-raised: #242E30;
+    --cosy-color-ink:            #E6F2F1;
+    --cosy-color-ink-soft:       #C6DAD9;
+    --cosy-color-ink-muted:      #A6BAB9;
+    --cosy-color-ink-faint:      #88A09F;
+    --cosy-color-border:         rgba(107, 143, 146, 0.20);
+    --cosy-color-border-hover:   rgba(107, 143, 146, 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --cosy-color-cream:          #171D1E;
+        --cosy-color-cream-dark:     #111718;
+        --cosy-color-warm-white:     #1F2A2B;
+        --cosy-color-surface:        #1F2A2B;
+        --cosy-color-surface-raised: #242E30;
+        --cosy-color-ink:            #E6F2F1;
+        --cosy-color-ink-soft:       #C6DAD9;
+        --cosy-color-ink-muted:      #A6BAB9;
+        --cosy-color-ink-faint:      #88A09F;
+        --cosy-color-border:         rgba(107, 143, 146, 0.20);
+        --cosy-color-border-hover:   rgba(107, 143, 146, 0.35);
+    }
+}
