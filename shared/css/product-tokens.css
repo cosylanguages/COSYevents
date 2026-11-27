@@ -76,3 +76,24 @@
     --product-signal-border:     color-mix(in srgb, var(--cosy-signal) 35%, transparent);
     --product-signal-gradient:   var(--cosy-signal-gradient);
 }
+
+/* ---------------------------------------------------------------------------
+ * Ecosystem strip
+ *
+ * The strip's stylesheet is vendored and sets --cosy-strip-bg to sage deep.
+ * It cannot be edited, and pages link it after tokens.css, so order cannot win
+ * this. The repeated class raises specificity above the vendor rule and above
+ * each of its three dark-mode variants, which depend on order instead.
+ *
+ * White on --cosy-signal-800 is 7.42:1, so the strip keeps its white links.
+ * ------------------------------------------------------------------------ */
+
+.cosy-ecosystem-strip.cosy-ecosystem-strip {
+    --cosy-strip-bg: var(--cosy-signal-800);
+}
+
+html[data-theme="dark"] .cosy-ecosystem-strip.cosy-ecosystem-strip,
+body.theme-dark .cosy-ecosystem-strip.cosy-ecosystem-strip,
+html[data-cosy-theme="dark"] .cosy-ecosystem-strip.cosy-ecosystem-strip {
+    --cosy-strip-bg: #0B2E2E;
+}
