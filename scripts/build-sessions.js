@@ -484,7 +484,7 @@ ${item.personal ? `<div class="round-item-personal">${item.personal}</div>` : ''
 <link rel="stylesheet" href="../../shared/css/sessions.css">
 <link rel="stylesheet" href="${config.css}">
 </head>
-<body class="${themeClass}">
+<body class="${themeClass}" data-product="social">
 <nav id="cosy-nav"></nav>
 <header class="session-hero"${heroStyle}>
 <div class="club-tag">${clubTag}</div>

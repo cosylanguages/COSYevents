@@ -159,7 +159,7 @@ function renderSessionPage(session, clubSlug, eventSlug) {
   <script src="../../shared/js/cosy-theme.js"></script>
   <link rel="stylesheet" href="../../shared/css/sessions.css">
 </head>
-<body>
+<body data-product="social">
   <header class="session-hero">
     <div class="club-tag">${clubSlug}</div>
     <h1 id="session-title">Loading session…</h1>
