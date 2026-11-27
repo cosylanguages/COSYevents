@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Teal primary preview · COSYevents</title>
+<link rel="stylesheet" href="../../shared/css/tokens.css">
+<style>
+  body {
+    margin: 0;
+    font-family: var(--cosy-font-sans);
+    background: var(--cosy-color-cream);
+    color: var(--cosy-color-ink, #23201c);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  h1 { font-family: var(--cosy-font-serif); font-size: 1.6rem; margin: 0 0 .35rem; }
+  .lede { margin: 0 0 2rem; max-width: 62ch; color: color-mix(in srgb, var(--cosy-color-ink, #23201c) 75%, transparent); }
+
+  .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  @media (max-width: 880px) { .panels { grid-template-columns: 1fr; } }
+
+  .panel {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid color-mix(in srgb, var(--cosy-color-ink, #23201c) 14%, transparent);
+  }
+  .panel--sage { --cosy-primary: #416B49; --cosy-primary-dark: #375742; }
+  .panel--teal { --cosy-primary: #087A80; --cosy-primary-dark: #0B4749; }
+
+  .panel__label {
+    margin: 0;
+    padding: .55rem 1rem;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    border-bottom: 1px solid color-mix(in srgb, var(--cosy-color-ink, #23201c) 12%, transparent);
+  }
+
+  .hero {
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, var(--cosy-primary-dark) 0%, var(--cosy-primary) 100%);
+    color: #fff;
+  }
+  .hero h2 { font-family: var(--cosy-font-serif); margin: 0 0 .4rem; font-size: 1.45rem; }
+  .hero p { margin: 0 0 1.1rem; font-size: .9rem; color: rgba(255,255,255,.88); }
+
+  .btn {
+    display: inline-block;
+    padding: .5rem 1.1rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: .5rem;
+  }
+  .btn--primary { background: #fff; color: var(--cosy-primary-dark); }
+  .btn--ghost { border: 1px solid rgba(255,255,255,.55); color: #fff; }
+
+  .body { padding: 1.25rem 1.5rem 1.5rem; }
+  .card {
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    border: 1px solid color-mix(in srgb, var(--cosy-color-ink, #23201c) 12%, transparent);
+    background: color-mix(in srgb, var(--cosy-signal-soft) 45%, #fff);
+  }
+  .badge {
+    display: inline-block;
+    padding: .15rem .6rem;
+    border-radius: 999px;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    background: var(--cosy-primary);
+    color: #fff;
+  }
+  .chip {
+    display: inline-block;
+    padding: .15rem .55rem;
+    border-radius: 6px;
+    font-size: .72rem;
+    background: var(--cosy-signal-soft);
+    color: var(--cosy-signal-deep);
+    font-weight: 600;
+  }
+  .card h3 { font-family: var(--cosy-font-serif); font-size: 1.05rem; margin: .55rem 0 .35rem; }
+  .card p { margin: 0 0 .6rem; font-size: .85rem; }
+  .link { color: var(--cosy-signal-deep); font-weight: 600; font-size: .85rem; text-decoration: underline; text-underline-offset: 2px; }
+
+  .notes { margin-top: 1rem; font-size: .78rem; border-top: 1px dashed color-mix(in srgb, var(--cosy-color-ink, #23201c) 20%, transparent); padding-top: .7rem; }
+  .notes dt { font-weight: 700; }
+  .notes dd { margin: 0 0 .3rem; }
+  .pass { color: #1d6b2f; }
+  .fail { color: #a3282d; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Teal primary: side by side</h1>
+  <p class="lede">
+    The page hero and primary buttons take their colour from <code>--cosy-primary</code>, which
+    is sage today. Both panels render the same markup; only that lever differs.
+    The teal panel uses <code>#087A80</code> rather than the brand <code>#0CA2B0</code>,
+    because white text on <code>#0CA2B0</code> only reaches 3.08:1.
+  </p>
+
+  <div class="panels">
+    <section class="panel panel--sage">
+      <p class="panel__label">A · current — sage primary</p>
+      <div class="hero">
+        <h2>Speaking Clubs Hub</h2>
+        <p>Topic-driven, communicative discussion sessions designed for calibrated fluency.</p>
+        <a class="btn btn--primary" href="#">Register</a>
+        <a class="btn btn--ghost" href="#">Session materials</a>
+      </div>
+      <div class="body">
+        <div class="card">
+          <span class="badge">Speaking Club</span>
+          <span class="chip">A1</span>
+          <h3>A0–A1 Basic Speaking Club Launch</h3>
+          <p>Launch session for the A0–A1 Basic Adult Speaking Club curriculum.</p>
+          <a class="link" href="#">Open materials</a>
+        </div>
+        <dl class="notes">
+          <dt>White on primary</dt>
+          <dd class="pass">6.13:1 — passes</dd>
+          <dt>Badge white on primary</dt>
+          <dd class="pass">6.13:1 — passes</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="panel panel--teal">
+      <p class="panel__label">B · proposed — teal primary</p>
+      <div class="hero">
+        <h2>Speaking Clubs Hub</h2>
+        <p>Topic-driven, communicative discussion sessions designed for calibrated fluency.</p>
+        <a class="btn btn--primary" href="#">Register</a>
+        <a class="btn btn--ghost" href="#">Session materials</a>
+      </div>
+      <div class="body">
+        <div class="card">
+          <span class="badge">Speaking Club</span>
+          <span class="chip">A1</span>
+          <h3>A0–A1 Basic Speaking Club Launch</h3>
+          <p>Launch session for the A0–A1 Basic Adult Speaking Club curriculum.</p>
+          <a class="link" href="#">Open materials</a>
+        </div>
+        <dl class="notes">
+          <dt>White on primary</dt>
+          <dd class="pass">5.11:1 — passes</dd>
+          <dt>Badge white on primary</dt>
+          <dd class="pass">5.11:1 — passes</dd>
+          <dt>If primary were #0CA2B0</dt>
+          <dd class="fail">3.08:1 — fails AA for text</dd>
+        </dl>
+      </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
