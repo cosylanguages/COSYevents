@@ -835,7 +835,7 @@
 
 .calendar-select:hover {
   border-color: var(--cosy-color-sage, #087a80);
-  background-color: var(--cosy-color-sage-mist, #f0f5f1);
+  background-color: var(--cosy-color-sage-mist, #effcfb);
 }
 
 .calendar-select:focus-visible {

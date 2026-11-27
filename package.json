@@ -22,6 +22,7 @@
     "check-vendor": "node scripts/vendor_cosylanguages.js --check",
     "check-contrast": "node scripts/check_contrast.js",
     "check-external-assets": "node scripts/check_external_assets.js",
+    "check-brand-colours": "node scripts/check_brand_colours.js",
     "check-redirects": "node scripts/check_redirects.js",
     "check:gated": "node scripts/check-gated-pages.js",
     "session:new": "node scripts/session_new.js",

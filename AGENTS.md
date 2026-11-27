@@ -86,6 +86,21 @@ Chrome fetches every subset of a family it uses, so a first visit costs about
 `font-display: swap` keeps text visible, so this is accepted rather than
 worked around.
 
+### Brand colour guard
+
+`npm run check-brand-colours` fails if a legacy sage hex reappears in CSS, JS or
+markup. The sage family is remapped to teal in `shared/css/product-tokens.css`,
+and that remap only reaches code that asks for a token; a hard-coded `#416b49`
+ignores it, which is exactly how half the site stayed green during the rebrand.
+
+`shared/vendor/` is excluded because it is a sha-pinned copy that still defines
+sage. Override it in the product layer, never in place. `shared/js/cms-editor.js`
+is excluded too: it must stay byte-identical to COSYstudio's copy
+(`cms-editor.lock.json`), so its colour changes upstream first.
+
+Semantic greens are allowed and must stay: `#0f6b35`/`#25d366` for WhatsApp,
+greens for success and correct-answer states.
+
 ### YouTube embeds
 
 All 205 embeds use `www.youtube.com/embed/...` with `loading="lazy"` and a

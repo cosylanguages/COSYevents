@@ -212,7 +212,7 @@
 .daily-spotlights-date-badge {
   display: inline-flex;
   align-items: center;
-  background: var(--cosy-color-sage-mist, #f0f5f1);
+  background: var(--cosy-color-sage-mist, #effcfb);
   color: var(--cosy-color-sage-deep, #062b2d);
   border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.2));
   font-weight: 700;
@@ -334,7 +334,7 @@
 }
 
 .spotlight-year-badge {
-  background: var(--cosy-color-sage-mist, #f0f5f1);
+  background: var(--cosy-color-sage-mist, #effcfb);
   color: var(--cosy-color-sage-deep, #062b2d);
   font-size: 0.72rem;
   font-weight: 800;
@@ -464,7 +464,7 @@
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  background: var(--cosy-color-sage-mist, #f0f5f1);
+  background: var(--cosy-color-sage-mist, #effcfb);
   padding: 1rem 1.5rem;
   border-radius: var(--cosy-radius-lg, 22px);
   border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.15));

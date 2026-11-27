@@ -26,7 +26,7 @@
     --cosy-color-sage-dark:              #0b4749;
     --cosy-color-sage-deep:              #062b2d;
     --cosy-color-sage-soft:              #0ca2b0;
-    --cosy-color-sage-mist:              #f0f5f1;
+    --cosy-color-sage-mist:              #effcfb;
     --cosy-color-sage-pale:              #d6f7f5;
     --cosy-color-sage-light:             #d6f7f5;
 
@@ -240,20 +240,20 @@ html[data-theme="dark"], body.theme-dark {
     --cosy-color-surface:                #222b22;
 
     --cosy-color-ink:                    #d6f7f5;
-    --cosy-color-ink-soft:               #c8d8c9;
-    --cosy-color-ink-muted:              #c8d8c9;
-    --cosy-color-ink-faint:              #8a9e8b;
-    --cosy-color-muted:                  #8a9e8b;
+    --cosy-color-ink-soft:               #c9e9e7;
+    --cosy-color-ink-muted:              #c9e9e7;
+    --cosy-color-ink-faint:              #8fb3b1;
+    --cosy-color-muted:                  #8fb3b1;
 
     --cosy-color-border:                 rgba(107, 143, 113, 0.2);
     --cosy-color-border-hover:           rgba(107, 143, 113, 0.35);
 
-    --cosy-color-sage:                   #5a7a5f;
-    --cosy-color-sage-dark:              #8a9e8b;
+    --cosy-color-sage:                   #3fd6ce;
+    --cosy-color-sage-dark:              #8fb3b1;
     --cosy-color-sage-deep:              #d6f7f5;
-    --cosy-color-sage-pale:              #222c23;
-    --cosy-color-sage-mist:              #1f2720;
-    --cosy-color-sage-light:             #222c23;
+    --cosy-color-sage-pale:              #0b2e2e;
+    --cosy-color-sage-mist:              #0a2a2b;
+    --cosy-color-sage-light:             #0b2e2e;
 
     --cosy-color-honey-pale:             #2d2417;
     --cosy-color-honey-mid:              #35291b;
@@ -301,7 +301,7 @@ html[data-theme="dark"], body.theme-dark {
     --sage-dark:  var(--cosy-color-sage-dark, #0b4749);
     --sage-deep:  var(--cosy-color-sage-deep, #062b2d);
     --sage-soft:  var(--cosy-color-sage-soft, #0ca2b0);
-    --sage-mist:  var(--cosy-color-sage-mist, #f0f5f1);
+    --sage-mist:  var(--cosy-color-sage-mist, #effcfb);
     --sage-pale:  var(--cosy-color-sage-pale, #d6f7f5);
     --sage-light: var(--cosy-color-sage-light, #d6f7f5);
 
@@ -456,20 +456,20 @@ html[data-theme="dark"], body.theme-dark {
     --cream-dark: var(--cosy-color-cream-dark, #141914);
     --warm-white: var(--cosy-color-warm-white, #222b22);
     --ink:        var(--cosy-color-ink, #d6f7f5);
-    --ink-soft:   var(--cosy-color-ink-soft, #c8d8c9);
-    --ink-muted:  var(--cosy-color-ink-muted, #c8d8c9);
-    --ink-faint:  var(--cosy-color-ink-faint, #8a9e8b);
-    --muted:      var(--cosy-color-muted, #8a9e8b);
+    --ink-soft:   var(--cosy-color-ink-soft, #c9e9e7);
+    --ink-muted:  var(--cosy-color-ink-muted, #c9e9e7);
+    --ink-faint:  var(--cosy-color-ink-faint, #8fb3b1);
+    --muted:      var(--cosy-color-muted, #8fb3b1);
     --border:     var(--cosy-color-border, rgba(107,143,113,.2));
     --border-hover: var(--cosy-color-border-hover, rgba(107,143,113,.35));
 
     /* Sage Theme dark variations */
-    --sage:       var(--cosy-color-sage, #5a7a5f);
-    --sage-dark:  var(--cosy-color-sage-dark, #8a9e8b);
+    --sage:       var(--cosy-color-sage, #3fd6ce);
+    --sage-dark:  var(--cosy-color-sage-dark, #8fb3b1);
     --sage-deep:  var(--cosy-color-sage-deep, #d6f7f5);
-    --sage-pale:  var(--cosy-color-sage-pale, #222c23);
-    --sage-mist:  var(--cosy-color-sage-mist, #1f2720);
-    --sage-light: var(--cosy-color-sage-light, #222c23);
+    --sage-pale:  var(--cosy-color-sage-pale, #0b2e2e);
+    --sage-mist:  var(--cosy-color-sage-mist, #0a2a2b);
+    --sage-light: var(--cosy-color-sage-light, #0b2e2e);
 
     --paper-bg:   #1a1f1a;
     --paper-txt:  #d6f7f5;
@@ -6209,7 +6209,7 @@ body.theme-dark .session-jump-link.active {
 }
 .event-type-card:hover { transform: translateY(-4px); border-color: var(--border-hover); }
 .event-type-card-speaking {
-  background: linear-gradient(135deg, #fdfcf8, #f0f5f1);
+  background: linear-gradient(135deg, #fdfcf8, #effcfb);
 }
 .etc-icon { font-size: 2.5rem; margin-bottom: 1.2rem; }
 .etc-icon-img {
@@ -6456,7 +6456,7 @@ body.theme-dark .session-jump-link.active {
 :root[data-theme="dark"] .session-meta-grid .meta-item p { color: #cdccca; }
 :root[data-theme="dark"] .session-meta-grid .meta-item h4 { color: #a9b3aa; }
 :root[data-theme="dark"] .session-meta-grid .meta-item a,
-:root[data-theme="dark"] .session-meta-grid .meta-item p a { color: var(--cosy-ink-sage, #8a9e8b); }
+:root[data-theme="dark"] .session-meta-grid .meta-item p a { color: var(--cosy-ink-sage, #8fb3b1); }
 
 /* ─── Session visual refinements ─── */
 
@@ -6989,7 +6989,7 @@ body.theme-dark .session-jump-link.active {
 
 .edv-poll-card.selected {
   border-color: var(--cosy-color-sage-deep, #062b2d);
-  background: var(--cosy-color-sage-mist, #f0f5f1);
+  background: var(--cosy-color-sage-mist, #effcfb);
   box-shadow: 0 4px 14px rgba(65, 107, 73, 0.15);
 }
 

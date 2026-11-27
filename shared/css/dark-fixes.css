@@ -56,7 +56,7 @@ a[href*="whatsapp"]:not(footer a) { background: #0f6b35 !important; color: #ffff
 
 /* ── Footers of bespoke themes stay on the light surface ── */
 :root[data-theme="dark"] footer,
-:root[data-theme="dark"] .footer-inner { background: #1a1f1a !important; color: #c8d8c9; }
+:root[data-theme="dark"] .footer-inner { background: #1a1f1a !important; color: #c9e9e7; }
 :root[data-theme="dark"] .footer-links-col h3,
 :root[data-theme="dark"] .footer-links-col h5,
 :root[data-theme="dark"] .fb-name,

@@ -55,7 +55,7 @@
     if (!document.querySelector('meta[name="theme-color"]')) {
       var themeMeta = document.createElement('meta');
       themeMeta.name = 'theme-color';
-      themeMeta.content = '#416b49';
+      themeMeta.content = '#087a80';
       document.head.appendChild(themeMeta);
     }
   })();

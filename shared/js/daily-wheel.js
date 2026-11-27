@@ -131,7 +131,7 @@
             '.dw-chip{background:#F4EFE7;border-radius:999px;padding:.2rem .65rem;font-size:.78rem;color:#4a443e;}',
             '.dw-chip.dw-chip-rel{display:inline-flex;flex-direction:column;align-items:flex-start;gap:.05rem;border-radius:14px;padding:.3rem .7rem;}',
             '.dw-rel{font-size:.7rem;color:#7a746e;line-height:1.3;}',
-            '.dw-rel-ant{color:#416b49;}',
+            '.dw-rel-ant{color:#087a80;}',
             '.dw-timer{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin-bottom:.9rem;}',
             '.dw-timer button{background:#2B6CB0;color:#fff;border:0;border-radius:999px;padding:.45rem 1rem;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;}',
             '.dw-clock{font-variant-numeric:tabular-nums;font-weight:700;min-width:3.4rem;}',
