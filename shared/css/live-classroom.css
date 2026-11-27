@@ -149,7 +149,7 @@ body {
 .live-session-toolbar button:focus-visible,
 .live-room-panel button:focus-visible,
 #live-login-form button:focus-visible {
-  outline: 3px solid #7aa88e;
+  outline: 3px solid var(--cosy-signal-ink, #087A80);
   outline-offset: 2px;
 }
 

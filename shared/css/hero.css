@@ -42,7 +42,7 @@
 .ev-chip:focus-visible,
 .ev-link:focus-visible,
 .ev-next-join:focus-visible,
-.ev-next-foot:focus-visible { outline: 3px solid var(--cosy-color-sage, #416b49); outline-offset: 2px; }
+.ev-next-foot:focus-visible { outline: 3px solid var(--cosy-signal-ink, #087A80); outline-offset: 2px; }
 
 .ev-hero {
   position: relative;

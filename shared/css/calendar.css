@@ -840,8 +840,8 @@
 
 .calendar-select:focus-visible {
   outline: none;
-  border-color: var(--cosy-color-sage, #416b49);
-  box-shadow: 0 0 0 3px rgba(65, 107, 73, 0.25);
+  border-color: var(--cosy-signal-ink, #087A80);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cosy-signal-ink, #087A80) 30%, transparent);
 }
 
 html[data-theme="dark"] .calendar-select,

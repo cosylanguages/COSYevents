@@ -44,6 +44,7 @@ const PAIRS = [
 
   { fg: '--cosy-signal-600', bg: '--cosy-color-surface', min: 3.0, label: 'teal 600 icon/border on white' },
   { fg: '--cosy-signal-700', bg: '--cosy-color-cream', min: 4.5, label: 'teal 700 text on cream' },
+  { fg: '--cosy-signal-ink', bg: '--cosy-color-cream', min: 3.0, label: 'focus ring on cream' },
 
   { fg: '--cosy-signal-500', bg: '--cosy-color-surface', max: 3.0, label: 'teal 500 on white stays decorative' },
   { fg: '--cosy-signal-500', bg: '--cosy-color-cream', max: 3.0, label: 'teal 500 on cream stays decorative' },

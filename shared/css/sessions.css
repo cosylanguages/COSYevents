@@ -607,20 +607,20 @@ body.theme-contrast {
 
 /* Custom Accessible Focus Ring using site palette */
 :focus-visible {
-    outline: 3px solid var(--teal);
+    outline: 3px solid var(--cosy-signal-ink, #087A80);
     outline-offset: 3px;
     border-radius: var(--r-sm);
 }
 
 /* Specific focus styling for cards and pills and larger buttons */
 .qs-card:focus-visible, .lang-pill:focus-visible, .cat-pill:focus-visible {
-    outline: 3px solid var(--teal);
+    outline: 3px solid var(--cosy-signal-ink, #087A80);
     outline-offset: 3px;
     border-radius: var(--r-lg);
 }
 
 .mc-opt:focus-visible, .tf-btn:focus-visible, .btn-start:focus-visible, .btn-primary:focus-visible, .btn-secondary:focus-visible, .wheel-btn:focus-visible {
-    outline: 3px solid var(--teal);
+    outline: 3px solid var(--cosy-signal-ink, #087A80);
     outline-offset: 3px;
     border-radius: 100px;
 }
@@ -1165,7 +1165,7 @@ body.theme-dark #cosy-nav {
 }
 
 .btn-tertiary:focus-visible, .fpill:focus-visible, .styled-sel:focus-visible, .search-input:focus-visible {
-  outline: 3px solid var(--teal, #416b49);
+  outline: 3px solid var(--cosy-signal-ink, #087A80);
   outline-offset: 2px;
 }
 

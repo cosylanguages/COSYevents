@@ -313,7 +313,7 @@
 .sd-search-input:focus-visible {
   outline: none;
   border-color: var(--sage);
-  box-shadow: 0 0 0 3px rgba(65, 107, 73, 0.18);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cosy-signal-ink, #087A80) 30%, transparent);
   background: #ffffff;
 }
 
@@ -378,7 +378,7 @@
 .sd-select:focus-visible {
   outline: none;
   border-color: var(--sage);
-  box-shadow: 0 0 0 3px rgba(65, 107, 73, 0.18);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cosy-signal-ink, #087A80) 30%, transparent);
   background-color: #ffffff;
 }
 
@@ -463,7 +463,7 @@
 .sd-pill:focus-visible {
   outline: none;
   border-color: var(--sage);
-  box-shadow: 0 0 0 3px rgba(65, 107, 73, 0.2);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cosy-signal-ink, #087A80) 30%, transparent);
 }
 
 .sd-pill.active {

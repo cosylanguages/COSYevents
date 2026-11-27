@@ -503,7 +503,7 @@
 .hero-btn:focus-visible,
 .calc-btn-wa:focus-visible,
 .calc-btn-tg:focus-visible {
-  outline: 3px solid var(--cosy-color-sage, #416b49);
+  outline: 3px solid var(--cosy-signal-ink, #087A80);
   outline-offset: 2px;
 }
 
