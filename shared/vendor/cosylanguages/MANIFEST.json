@@ -1,10 +1,10 @@
 {
   "source": "https://cosylanguages.github.io/COSYlanguages/",
-  "fetchedAt": "2026-11-27T12:18:43.635Z",
+  "fetchedAt": "2026-11-27T13:03:11.510Z",
   "files": {
     "shared/css/tokens.css": {
-      "sha256": "a71d1b10937a5c7d367fe38e11268fd7a8985ed8d74b954d80bbdfd2937d63ae",
-      "bytes": 34601
+      "sha256": "c6036f437f30b1ceaecaea0df2390938199df63c2c18b9ac86c698f1ccb62f58",
+      "bytes": 38258
     },
     "css/fonts.css": {
       "sha256": "773f6ca77eb89d65f7fa83cb7b26080eeea4f539b45b3f2d5943afc3ef0d255d",

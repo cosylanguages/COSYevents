@@ -286,6 +286,17 @@
     --shadow:                            var(--cosy-shadow-base);
     --box-shadow:                        var(--cosy-shadow-base);
 
+    /* ── 10b. Product identity (opt-in via [data-product]) ─────────────── */
+    /* One shared file, many products. An identity changes form — radius,
+       depth, display face, rhythm — and never hue, so adopting one cannot
+       introduce a colour. Pages without the attribute keep the defaults. */
+    --cosy-product-radius:               var(--cosy-radius-base);
+    --cosy-product-shadow:               var(--cosy-shadow-sm);
+    --cosy-product-display:              var(--font-serif);
+    --cosy-product-display-weight:       600;
+    --cosy-product-tracking:             -0.01em;
+    --cosy-product-leading:              1.2;
+
     /* ── 11. Transitions & Motion Tokens ───────────────────────────────── */
     --cosy-transition-fast:              0.15s ease;
     --cosy-transition-base:              0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -398,6 +409,53 @@
     --cosy-cefr-c1-bar-ink:              #f3e8ff;
     --cosy-cefr-c2-bar:                  #18181b;
     --cosy-cefr-c2-bar-ink:              #e4e4e7;
+}
+
+/* ── Product identities ─────────────────────────────────────────────────────
+   COSYgames → playful, COSYworld → immersive, COSYtools → professional,
+   COSYevents → social, COSYmagazine → editorial. Sibling repositories set the
+   same attribute on <body> and inherit the rhythm through tokens.css.
+   Every identity keeps the signal accent: only form moves. */
+[data-product="playful"] {
+    --cosy-product-radius:               var(--cosy-radius-lg);
+    --cosy-product-shadow:               var(--cosy-shadow-md);
+    --cosy-product-display-weight:       700;
+    --cosy-product-tracking:             0.01em;
+    --cosy-product-leading:              1.15;
+}
+
+[data-product="immersive"] {
+    --cosy-product-radius:               var(--cosy-radius-xl);
+    --cosy-product-shadow:               var(--cosy-shadow-lg);
+    --cosy-product-display-weight:       700;
+    --cosy-product-tracking:             -0.02em;
+    --cosy-product-leading:              1.1;
+}
+
+[data-product="professional"] {
+    --cosy-product-radius:               var(--cosy-radius-sm);
+    --cosy-product-shadow:               var(--cosy-shadow-sm);
+    --cosy-product-display:              var(--font-sans);
+    --cosy-product-display-weight:       650;
+    --cosy-product-tracking:             0;
+    --cosy-product-leading:              1.25;
+}
+
+[data-product="social"] {
+    --cosy-product-radius:               var(--cosy-radius-base);
+    --cosy-product-shadow:               var(--cosy-shadow-base);
+    --cosy-product-display-weight:       600;
+    --cosy-product-tracking:             -0.005em;
+    --cosy-product-leading:              1.3;
+}
+
+[data-product="editorial"] {
+    --cosy-product-radius:               var(--cosy-radius-xs);
+    --cosy-product-shadow:               none;
+    --cosy-product-display:              var(--font-serif);
+    --cosy-product-display-weight:       500;
+    --cosy-product-tracking:             -0.02em;
+    --cosy-product-leading:              1.12;
 }
 
 /* ── 13. Shared Ecosystem Strip Component Styles ─────────────────────────── */
@@ -710,4 +768,26 @@ html[data-theme="dark"] .cosy-ecosystem-strip,
 body.theme-dark .cosy-ecosystem-strip {
     background: #141A15;
     border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ── 14. Product identity: application ─────────────────────────────────────
+   A product opts in with data-product on <body> and inherits the form tokens
+   above. Kept here rather than in a per-repo components file so every sibling
+   that links tokens.css gets the same behaviour from one attribute. */
+[data-product] h1,
+[data-product] .sec-h2 {
+    font-family: var(--cosy-product-display);
+    font-weight: var(--cosy-product-display-weight);
+    letter-spacing: var(--cosy-product-tracking);
+    line-height: var(--cosy-product-leading);
+}
+
+[data-product] .card,
+[data-product] .value-card,
+[data-product] .contact-card,
+[data-product] .tool-card,
+[data-product] .course-card,
+[data-product] .calc-card {
+    border-radius: var(--cosy-product-radius);
+    box-shadow: var(--cosy-product-shadow);
 }
