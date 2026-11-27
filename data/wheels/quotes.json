@@ -1,0 +1,795 @@
+{
+  "id": "quotes",
+  "version": 1,
+  "title": "The Greatest Quotes",
+  "subtitle": "Take the quote apart, then agree or disagree with it",
+  "lang": "en",
+  "bands": [
+    "a0-a1",
+    "a2",
+    "b1-b2",
+    "c1-c2"
+  ],
+  "task": {
+    "prep_seconds": 300,
+    "speak_seconds": 300,
+    "output": "spoken"
+  },
+  "rules": {
+    "research_allowed": true,
+    "ai_allowed": false
+  },
+  "prompts": [
+    {
+      "band": "a0-a1",
+      "prompt": "Practice makes perfect.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "What do you practise every day?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "practise",
+        "perfect",
+        "skill"
+      ],
+      "id": "en:wheel-quotes:a0-a1:01",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Better late than never.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "When were you last late?"
+      ],
+      "structures": [
+        "comparatives"
+      ],
+      "vocabulary": [
+        "late",
+        "never",
+        "better"
+      ],
+      "id": "en:wheel-quotes:a0-a1:02",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Home is where the heart is.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "What does home mean to you?"
+      ],
+      "structures": [
+        "present simple",
+        "defining"
+      ],
+      "vocabulary": [
+        "home",
+        "heart",
+        "family"
+      ],
+      "id": "en:wheel-quotes:a0-a1:03",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Laughter is the best medicine.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "What makes you laugh?"
+      ],
+      "structures": [
+        "superlatives"
+      ],
+      "vocabulary": [
+        "laughter",
+        "medicine",
+        "best"
+      ],
+      "id": "en:wheel-quotes:a0-a1:04",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Actions speak louder than words.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "Can you give an example?"
+      ],
+      "structures": [
+        "comparatives"
+      ],
+      "vocabulary": [
+        "action",
+        "word",
+        "loud"
+      ],
+      "id": "en:wheel-quotes:a0-a1:05",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Every cloud has a silver lining.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "Tell us about a bad day with a good ending."
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "cloud",
+        "hope",
+        "good"
+      ],
+      "id": "en:wheel-quotes:a0-a1:06",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Honesty is the best policy.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "Is it always easy to be honest?"
+      ],
+      "structures": [
+        "superlatives",
+        "present simple"
+      ],
+      "vocabulary": [
+        "honest",
+        "policy",
+        "truth"
+      ],
+      "id": "en:wheel-quotes:a0-a1:07",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Time flies.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "When did time go fast for you?"
+      ],
+      "structures": [
+        "past simple"
+      ],
+      "vocabulary": [
+        "time",
+        "fast",
+        "year"
+      ],
+      "id": "en:wheel-quotes:a0-a1:08",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Two heads are better than one.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "Do you like working in a team?"
+      ],
+      "structures": [
+        "comparatives"
+      ],
+      "vocabulary": [
+        "team",
+        "idea",
+        "together"
+      ],
+      "id": "en:wheel-quotes:a0-a1:09",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Never give up.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "What did you not give up on?"
+      ],
+      "structures": [
+        "imperatives",
+        "past simple"
+      ],
+      "vocabulary": [
+        "give up",
+        "try",
+        "again"
+      ],
+      "id": "en:wheel-quotes:a0-a1:10",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "The journey of a thousand miles begins with a single step.",
+      "attribution": "Lao Tzu",
+      "follow_ups": [
+        "What is your next single step?"
+      ],
+      "structures": [
+        "present simple",
+        "gerunds"
+      ],
+      "vocabulary": [
+        "journey",
+        "step",
+        "begin"
+      ],
+      "id": "en:wheel-quotes:a2:11",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "You miss 100% of the shots you don't take.",
+      "attribution": "Wayne Gretzky",
+      "follow_ups": [
+        "When did you take a risk?"
+      ],
+      "structures": [
+        "conditionals",
+        "past simple"
+      ],
+      "vocabulary": [
+        "shot",
+        "risk",
+        "chance"
+      ],
+      "id": "en:wheel-quotes:a2:12",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Happiness depends upon ourselves.",
+      "attribution": "Aristotle",
+      "follow_ups": [
+        "Do you agree? What makes you happy?"
+      ],
+      "structures": [
+        "present simple",
+        "depend on"
+      ],
+      "vocabulary": [
+        "happiness",
+        "choice",
+        "attitude"
+      ],
+      "id": "en:wheel-quotes:a2:13",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Talk is cheap.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "When is talking not enough?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "talk",
+        "action",
+        "promise"
+      ],
+      "id": "en:wheel-quotes:a2:14",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A friend in need is a friend indeed.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "Who helped you when you needed it?"
+      ],
+      "structures": [
+        "relative clauses",
+        "past simple"
+      ],
+      "vocabulary": [
+        "friend",
+        "help",
+        "need"
+      ],
+      "id": "en:wheel-quotes:a2:15",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Don't judge a book by its cover.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "Have you ever been wrong about someone?"
+      ],
+      "structures": [
+        "imperatives",
+        "past simple"
+      ],
+      "vocabulary": [
+        "judge",
+        "appearance",
+        "surprise"
+      ],
+      "id": "en:wheel-quotes:a2:16",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Where there's a will, there's a way.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "Tell us about a difficult solution."
+      ],
+      "structures": [
+        "there is / there are",
+        "conditionals"
+      ],
+      "vocabulary": [
+        "will",
+        "way",
+        "solve"
+      ],
+      "id": "en:wheel-quotes:a2:17",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "The early bird catches the worm.",
+      "attribution": "English proverb",
+      "follow_ups": [
+        "Are you a morning person?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "early",
+        "morning",
+        "routine"
+      ],
+      "id": "en:wheel-quotes:a2:18",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "You can't judge a fish by its ability to climb a tree.",
+      "attribution": "Often attributed to Albert Einstein",
+      "follow_ups": [
+        "What does this say about school tests?"
+      ],
+      "structures": [
+        "modals",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "ability",
+        "judge",
+        "measure"
+      ],
+      "id": "en:wheel-quotes:a2:19",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Be the change you wish to see in the world.",
+      "attribution": "Often attributed to Mahatma Gandhi",
+      "follow_ups": [
+        "What small change would you start?"
+      ],
+      "structures": [
+        "imperatives",
+        "wish"
+      ],
+      "vocabulary": [
+        "change",
+        "world",
+        "start"
+      ],
+      "id": "en:wheel-quotes:a2:20",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "The unexamined life is not worth living.",
+      "attribution": "Socrates",
+      "follow_ups": [
+        "What does an examined life look like?",
+        "Is reflection a luxury?"
+      ],
+      "structures": [
+        "passive",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "examine",
+        "reflection",
+        "worth"
+      ],
+      "id": "en:wheel-quotes:b1-b2:21",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "I think, therefore I am.",
+      "attribution": "René Descartes",
+      "follow_ups": [
+        "What would you keep if you doubted everything?",
+        "Is thinking enough to prove existence?"
+      ],
+      "structures": [
+        "conditionals",
+        "hedging"
+      ],
+      "vocabulary": [
+        "doubt",
+        "exist",
+        "certainty"
+      ],
+      "id": "en:wheel-quotes:b1-b2:22",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Man is condemned to be free.",
+      "attribution": "Jean-Paul Sartre",
+      "follow_ups": [
+        "Where do you feel most free, and least free?",
+        "Does freedom feel like a burden?"
+      ],
+      "structures": [
+        "passive",
+        "concession"
+      ],
+      "vocabulary": [
+        "condemned",
+        "freedom",
+        "choice"
+      ],
+      "id": "en:wheel-quotes:b1-b2:23",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Hell is other people.",
+      "attribution": "Jean-Paul Sartre",
+      "follow_ups": [
+        "Do you agree, or is it a misreading?",
+        "Which people make you feel most yourself?"
+      ],
+      "structures": [
+        "present simple",
+        "contrast"
+      ],
+      "vocabulary": [
+        "other",
+        "judgement",
+        "gaze"
+      ],
+      "id": "en:wheel-quotes:b1-b2:24",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "The medium is the message.",
+      "attribution": "Marshall McLuhan",
+      "follow_ups": [
+        "How does the platform change what you say?",
+        "Give an example from your own life."
+      ],
+      "structures": [
+        "nominalisation",
+        "cause and effect"
+      ],
+      "vocabulary": [
+        "medium",
+        "message",
+        "platform"
+      ],
+      "id": "en:wheel-quotes:b1-b2:25",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Power tends to corrupt, and absolute power corrupts absolutely.",
+      "attribution": "Lord Acton",
+      "follow_ups": [
+        "Where have you seen this at work or in politics?",
+        "Are checks enough?"
+      ],
+      "structures": [
+        "present perfect",
+        "passive"
+      ],
+      "vocabulary": [
+        "power",
+        "corrupt",
+        "accountability"
+      ],
+      "id": "en:wheel-quotes:b1-b2:26",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "It is not the strongest that survives, but the most adaptable.",
+      "attribution": "Often misattributed to Charles Darwin",
+      "follow_ups": [
+        "Why is the misattribution popular?",
+        "What does adaptation mean for you?"
+      ],
+      "structures": [
+        "cleft sentences",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "adapt",
+        "survive",
+        "misquote"
+      ],
+      "id": "en:wheel-quotes:b1-b2:27",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "The only thing we have to fear is fear itself.",
+      "attribution": "Franklin D. Roosevelt",
+      "follow_ups": [
+        "When has fear been worse than the event?",
+        "What helps you face it?"
+      ],
+      "structures": [
+        "present perfect",
+        "conditionals"
+      ],
+      "vocabulary": [
+        "fear",
+        "courage",
+        "panic"
+      ],
+      "id": "en:wheel-quotes:b1-b2:28",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A lie can travel halfway around the world while the truth is putting on its shoes.",
+      "attribution": "Attribution disputed, often given to Mark Twain",
+      "follow_ups": [
+        "Why does false news travel faster?",
+        "What would slow it down?"
+      ],
+      "structures": [
+        "present continuous",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "rumour",
+        "spread",
+        "correction"
+      ],
+      "id": "en:wheel-quotes:b1-b2:29",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Simplicity is the ultimate sophistication.",
+      "attribution": "Attribution disputed, often given to Leonardo da Vinci",
+      "follow_ups": [
+        "What is genuinely simple, not just basic?",
+        "When is complexity necessary?"
+      ],
+      "structures": [
+        "superlatives",
+        "contrast"
+      ],
+      "vocabulary": [
+        "simple",
+        "design",
+        "clarity"
+      ],
+      "id": "en:wheel-quotes:b1-b2:30",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Whereof one cannot speak, thereof one must be silent.",
+      "attribution": "Ludwig Wittgenstein",
+      "follow_ups": [
+        "What is the most important thing you cannot put into words?",
+        "Is silence a failure or a discipline?"
+      ],
+      "structures": [
+        "formal register",
+        "negation"
+      ],
+      "vocabulary": [
+        "ineffable",
+        "silence",
+        "limit"
+      ],
+      "id": "en:wheel-quotes:c1-c2:31",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Freedom is the recognition of necessity.",
+      "attribution": "G. W. F. Hegel",
+      "follow_ups": [
+        "Which constraints make you freer?",
+        "Is this a consolation or a truth?"
+      ],
+      "structures": [
+        "nominalisation",
+        "concession"
+      ],
+      "vocabulary": [
+        "necessity",
+        "recognise",
+        "constraint"
+      ],
+      "id": "en:wheel-quotes:c1-c2:32",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "The arc of the moral universe is long, but it bends toward justice.",
+      "attribution": "Martin Luther King Jr.",
+      "follow_ups": [
+        "Does history support it?",
+        "What would make it bend faster?"
+      ],
+      "structures": [
+        "metaphor",
+        "conditionals"
+      ],
+      "vocabulary": [
+        "arc",
+        "justice",
+        "progress"
+      ],
+      "id": "en:wheel-quotes:c1-c2:33",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "All that is solid melts into air.",
+      "attribution": "Karl Marx and Friedrich Engels",
+      "follow_ups": [
+        "What feels solid in your life right now?",
+        "What replaced the old certainties?"
+      ],
+      "structures": [
+        "metaphor",
+        "present perfect"
+      ],
+      "vocabulary": [
+        "solid",
+        "dissolve",
+        "modernity"
+      ],
+      "id": "en:wheel-quotes:c1-c2:34",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "One is not born, but rather becomes, a woman.",
+      "attribution": "Simone de Beauvoir",
+      "follow_ups": [
+        "How much of identity is made rather than given?",
+        "Where do you see this in language?"
+      ],
+      "structures": [
+        "passive",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "become",
+        "identity",
+        "constructed"
+      ],
+      "id": "en:wheel-quotes:c1-c2:35",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "The master's tools will never dismantle the master's house.",
+      "attribution": "Audre Lorde",
+      "follow_ups": [
+        "Can you reform a system from inside it?",
+        "What would new tools look like?"
+      ],
+      "structures": [
+        "metaphor",
+        "modals"
+      ],
+      "vocabulary": [
+        "dismantle",
+        "system",
+        "instrument"
+      ],
+      "id": "en:wheel-quotes:c1-c2:36",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Justice is the first virtue of social institutions.",
+      "attribution": "John Rawls",
+      "follow_ups": [
+        "Would you trade some justice for stability?",
+        "Which institution fails this test?"
+      ],
+      "structures": [
+        "conditionals",
+        "abstract nouns"
+      ],
+      "vocabulary": [
+        "justice",
+        "institution",
+        "fairness"
+      ],
+      "id": "en:wheel-quotes:c1-c2:37",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "The limits of my language mean the limits of my world.",
+      "attribution": "Ludwig Wittgenstein",
+      "follow_ups": [
+        "How has learning a language changed what you can think?",
+        "Is anything lost in translation?"
+      ],
+      "structures": [
+        "nominalisation",
+        "concession"
+      ],
+      "vocabulary": [
+        "limit",
+        "language",
+        "world"
+      ],
+      "id": "en:wheel-quotes:c1-c2:38",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "The death of one man is a tragedy, the death of millions is a statistic.",
+      "attribution": "Attributed to Joseph Stalin, possibly apocryphal",
+      "follow_ups": [
+        "Why do numbers anaesthetise us?",
+        "How should journalism resist it?"
+      ],
+      "structures": [
+        "passive",
+        "rhetorical questions"
+      ],
+      "vocabulary": [
+        "statistic",
+        "tragedy",
+        "scale"
+      ],
+      "id": "en:wheel-quotes:c1-c2:39",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "There is no document of civilisation that is not at the same time a document of barbarism.",
+      "attribution": "Walter Benjamin",
+      "follow_ups": [
+        "Which progress came with a hidden cost?",
+        "Can you name a monument that proves it?"
+      ],
+      "structures": [
+        "antithesis",
+        "passive"
+      ],
+      "vocabulary": [
+        "civilisation",
+        "barbarism",
+        "progress"
+      ],
+      "id": "en:wheel-quotes:c1-c2:40",
+      "lang": "en"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>My Access — COSYevents</title>
+  <script src="shared/js/cosy-theme.js"></script>
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
+  <link rel="stylesheet" href="shared/css/hub.css">
+  <link rel="stylesheet" href="shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="shared/css/auth.css">
+  <link rel="icon" href="shared/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="shared/assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#416b49">
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/ecosystem-strip.css">
+  <link rel="stylesheet" href="shared/css/dark-fixes.css">
+</head>
+<body>
+
+  <div data-ecosystem-strip data-self="events"></div>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <div class="auth-header-actions">
+        <span class="hub-brand">COSYlanguages Ecosystem</span>
+        <div class="auth-header-actions">
+          <div data-cosy-account></div>
+          <div data-ce-lang-switcher></div>
+        </div>
+      </div>
+      <h1 id="account-title" class="hub-title">My Access &amp; Passes</h1>
+      <p id="account-subtitle" class="hub-subtitle">
+        Overview of your active COSYpasses, course grants, teacher languages, and event access rights.
+      </p>
+    </div>
+  </header>
+
+  <main class="hub-main auth-main-container">
+    <article class="auth-card">
+
+      <!-- User Banner -->
+      <div class="auth-user-banner">
+        <div>
+          <span class="auth-user-label">Logged in as</span>
+          <div id="account-email" class="auth-user-email">...</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
+          <span id="account-role-badge" class="auth-role-badge">
+            Student
+          </span>
+          <button type="button" id="btn-sign-out-global" class="btn-secondary" style="background: #a33117; color: #fff; border: none; padding: 0.4rem 0.8rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer;">
+            🌐 Sign out on all devices
+          </button>
+        </div>
+      </div>
+
+      <!-- Grants Section -->
+      <div>
+        <h2 id="heading-access" class="auth-section-title">
+          Active Access Grants &amp; Passes
+        </h2>
+
+        <div id="grants-container" class="grants-table-container">
+          <!-- Table rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Matching Event Hub Links -->
+      <div class="auth-nav-section">
+        <h3 id="heading-hubs" class="auth-subsection-title">
+          Explore Event Hubs
+        </h3>
+        <nav class="auth-nav-links">
+          <a href="speaking-clubs/index.html" class="hub-nav-link">Speaking Clubs 💬</a>
+          <a href="cinema-nights/index.html" class="hub-nav-link">Cinema 🎬</a>
+          <a href="karaoke-club.html" class="hub-nav-link">Karaoke 🎤</a>
+          <a href="game-evenings.html" class="hub-nav-link">Games 🎲</a>
+          <a href="long-reads.html" class="hub-nav-link">Long Reads 📚</a>
+        </nav>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="hub-footer">
+    <p>COSYlanguages (2020–2026) &bull; COSYevents (2024–2026) &copy; COSYlanguages Ecosystem.</p>
+    <p>
+      <a href="privacy.html">Privacy &amp; legal notice</a>
+    </p>
+  </footer>
+
+  <script src="shared/js/cosyevents-lang.js" defer></script>
+  <script src="shared/js/cosy-auth.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function getLang() {
+        if (window.CosyAuth && window.CosyAuth.getTranslation) {
+          var pLang = 'en';
+          if (window.CosyLang && window.CosyLang.detectPageLang) {
+            pLang = window.CosyLang.detectPageLang(window.location.pathname);
+          }
+          return pLang;
+        }
+        return 'en';
+      }
+
+      function renderAccountPage() {
+        if (!window.CosyAuth) return;
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        var session = window.CosyAuth.getSession();
+        if (!session) {
+          window.location.href = 'login.html?v=20261125-1&next=account.html';
+          return;
+        }
+
+        var access = window.CosyAuth.getAccess();
+        var email = session.user ? session.user.email : '';
+        document.getElementById('account-email').textContent = email;
+
+        var userRole = window.CosyAuth.role() || 'student';
+        var roleLabel = t('role_student');
+        if (userRole === 'teacher') roleLabel = t('role_teacher');
+        if (userRole === 'founder') roleLabel = t('role_founder');
+        document.getElementById('account-role-badge').textContent = roleLabel;
+
+        document.getElementById('heading-access').textContent = t('my_access');
+
+        var btnGlobal = document.getElementById('btn-sign-out-global');
+        if (btnGlobal) {
+          btnGlobal.textContent = '🌐 ' + t('sign_out_all');
+          btnGlobal.onclick = function () {
+            window.CosyAuth.signOut({ scope: 'global' }).then(function () {
+              window.location.href = 'login.html?v=20261125-1';
+            });
+          };
+        }
+
+        var grantsContainer = document.getElementById('grants-container');
+        grantsContainer.textContent = ''; // clear
+
+        var grants = (access && Array.isArray(access.grants)) ? access.grants : [];
+        var teaches = (access && Array.isArray(access.teaches)) ? access.teaches : [];
+
+        if (userRole === 'teacher' && teaches.length > 0) {
+          var tInfo = document.createElement('div');
+          tInfo.className = 'teacher-languages-info';
+          tInfo.textContent = t('role_teacher') + ' languages: ' + teaches.map(function (l) { return l.toUpperCase(); }).join(', ');
+          grantsContainer.appendChild(tInfo);
+          if (grants.length === 0) {
+            return;
+          }
+        }
+
+        if (grants.length === 0 && teaches.length === 0) {
+          var noGrantsP = document.createElement('p');
+          noGrantsP.className = 'auth-no-grants';
+          noGrantsP.textContent = t('no_grants');
+          grantsContainer.appendChild(noGrantsP);
+          return;
+        }
+
+        var table = document.createElement('table');
+        table.className = 'grants-table';
+
+        var thead = document.createElement('thead');
+        var headerRow = document.createElement('tr');
+        var headers = [t('language'), t('level'), t('course'), t('valid_until'), 'Notes'];
+        headers.forEach(function (hText) {
+          var th = document.createElement('th');
+          th.textContent = hText;
+          headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        var tbody = document.createElement('tbody');
+        for (var i = 0; i < grants.length; i++) {
+          var g = grants[i];
+          var langName = g.language ? g.language.toUpperCase() : '-';
+          if (window.CosyLang && window.CosyLang.LANG_CONFIG && window.CosyLang.LANG_CONFIG[g.language]) {
+            langName = window.CosyLang.LANG_CONFIG[g.language].flag + ' ' + window.CosyLang.LANG_CONFIG[g.language].name;
+          }
+          var validUntil = g.valid_until ? g.valid_until : '∞';
+          var noteStr = g.include_lower ? t('includes_lower') : '';
+
+          var row = document.createElement('tr');
+
+          var tdLang = document.createElement('td');
+          tdLang.className = 'cell-bold';
+          tdLang.textContent = langName;
+          row.appendChild(tdLang);
+
+          var tdLevel = document.createElement('td');
+          tdLevel.textContent = g.level || '-';
+          row.appendChild(tdLevel);
+
+          var tdCourse = document.createElement('td');
+          tdCourse.textContent = g.course || 'General';
+          row.appendChild(tdCourse);
+
+          var tdValid = document.createElement('td');
+          tdValid.textContent = validUntil;
+          row.appendChild(tdValid);
+
+          var tdNote = document.createElement('td');
+          tdNote.className = 'cell-note';
+          tdNote.textContent = noteStr;
+          row.appendChild(tdNote);
+
+          tbody.appendChild(row);
+        }
+        table.appendChild(tbody);
+        grantsContainer.appendChild(table);
+      }
+
+      if (window.CosyAuth) {
+        window.CosyAuth.init().then(renderAccountPage);
+      }
+    });
+  </script>
+  <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
+</body>
+</html>

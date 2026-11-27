@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "COSYevents Canonical Theme Taxonomy",
+  "version": "1.0.0",
+  "themes": {
+    "everyday-life": {
+      "title": "Everyday Life",
+      "description": "Daily routines, habits, food, dining, travel, hobbies, and social interactions.",
+      "sub_themes": {
+        "routines": "Daily routines and habits",
+        "dining-food": "Food, dining out, cooking, and gastronomy",
+        "travel": "Travel, vacations, and transportation",
+        "hobbies": "Hobbies, leisure, and personal passions",
+        "home": "Home, living spaces, and domestic life"
+      }
+    },
+    "technology-ai": {
+      "title": "Technology & AI",
+      "description": "Artificial intelligence, digital culture, software, and technological transformation.",
+      "sub_themes": {
+        "artificial-intelligence": "AI, machine learning, and generative models",
+        "digital-lifestyle": "Smartphones, social media, and digital habits",
+        "future-tech": "Emerging technologies and future innovations",
+        "automation": "Automation, robotics, and industrial tech"
+      }
+    },
+    "psychology-mind": {
+      "title": "Psychology & Mind",
+      "description": "Human cognitive processes, mental health, behavior, and emotional intelligence.",
+      "sub_themes": {
+        "cognitive-biases": "Cognitive biases, decision making, and rationality",
+        "mental-health": "Mental health, well-being, and stress management",
+        "behavior": "Human behavior, habits, and psychology",
+        "emotions": "Emotions, feelings, and self-awareness",
+        "cognition": "Memory, thought processes, and learning"
+      }
+    },
+    "culture-society": {
+      "title": "Culture & Society",
+      "description": "Cultural traditions, celebrations, societal trends, and civic life.",
+      "sub_themes": {
+        "traditions-celebrations": "Holidays, rituals, and cultural celebrations",
+        "social-issues": "Social debates, equality, and civic matters",
+        "ethics": "Ethical dilemmas, social responsibility, and morality",
+        "media-news": "Journalism, media consumption, and public communication"
+      }
+    },
+    "arts-entertainment": {
+      "title": "Arts & Entertainment",
+      "description": "Visual arts, music, cinema, literature, and performing arts.",
+      "sub_themes": {
+        "cinema-film": "Movies, directing, film genres, and cinema",
+        "music-lyrics": "Songs, lyrics, musical genres, and performance",
+        "literature": "Reading, books, stories, and creative writing",
+        "visual-arts": "Painting, design, aesthetics, and sculpture"
+      }
+    },
+    "nature-science": {
+      "title": "Nature & Science",
+      "description": "Scientific breakthroughs, environmental issues, biology, and natural phenomena.",
+      "sub_themes": {
+        "environment": "Climate, ecology, sustainability, and nature",
+        "space": "Astronomy, cosmos, and space exploration",
+        "scientific-discoveries": "Physics, chemistry, medical research, and innovations",
+        "biology": "Life sciences, flora, fauna, and human body"
+      }
+    },
+    "work-career": {
+      "title": "Work & Career",
+      "description": "Professional life, career development, business, and education.",
+      "sub_themes": {
+        "business": "Commerce, economics, finance, and industry",
+        "education": "Learning, teaching, schooling, and academic growth",
+        "leadership": "Management, teamwork, and leadership skills",
+        "future-of-work": "Remote work, obsolete jobs, and modern workplaces"
+      }
+    },
+    "philosophy-ethics": {
+      "title": "Philosophy & Reflection",
+      "description": "Philosophical thought, existential reflection, wisdom, and life perspectives.",
+      "sub_themes": {
+        "existentialism": "Meaning of life, identity, and existential questions",
+        "morality": "Moral choices, justice, and human values",
+        "quotes-wisdom": "Inspirational quotes, sayings, and classical wisdom",
+        "perspectives": "Worldviews, empathy, and alternative perspectives"
+      }
+    }
+  }
+}

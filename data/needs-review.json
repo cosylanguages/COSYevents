@@ -1,0 +1,116 @@
+{
+  "id": "needs-review",
+  "title": "Sessions & Assets Needing Review",
+  "description": "Sessions and assets flagged for review during migration reconciliation and audio integration.",
+  "audio_mappings": {
+    "i_couldnt_help_but_wonder": {
+      "status": "pending_human_confirmation",
+      "description": "Proposed 1:1 mapping between draft1.mp3..draft18.mp3 and 'I Couldn't Help But Wonder' session HTML files.",
+      "mapping": [
+        { "audio": "draft1.mp3", "session": "whether-raindrops-select-where-to-fall.html", "tag": "Draft #01" },
+        { "audio": "draft2.mp3", "session": "do-insects-hide-when-it-rains.html", "tag": "Draft #02" },
+        { "audio": "draft3.mp3", "session": "is-bad-weather-gods-anger.html", "tag": "Draft #03" },
+        { "audio": "draft4.mp3", "session": "always-watched-in-a-crowd.html", "tag": "Draft #04" },
+        { "audio": "draft5.mp3", "session": "why-is-everyone-copying-me.html", "tag": "Draft #05" },
+        { "audio": "draft6.mp3", "session": "feeling-empty-after-series.html", "tag": "Draft #06" },
+        { "audio": "draft7.mp3", "session": "death-of-the-album.html", "tag": "Draft #07" },
+        { "audio": "draft8.mp3", "session": "ugly-produce-anti-waste.html", "tag": "Draft #08" },
+        { "audio": "draft9.mp3", "session": "does-euthanasia-reduce-suicide-rates.html", "tag": "Draft #09" },
+        { "audio": "draft10.mp3", "session": "appreciating-amy-winehouse-after-death.html", "tag": "Draft #10" },
+        { "audio": "draft11.mp3", "session": "why-do-we-try-to-relate-to-adhd.html", "tag": "Draft #11" },
+        { "audio": "draft12.mp3", "session": "is-parenting-instinct-a-real-thing-or-scam.html", "tag": "Draft #12" },
+        { "audio": "draft13.mp3", "session": "are-traditions-hidden-monogamy.html", "tag": "Draft #13" },
+        { "audio": "draft14.mp3", "session": "collective-guilt-global-crisis.html", "tag": "Draft #14" },
+        { "audio": "draft15.mp3", "session": "are-traditions-hidden-monogamy-upper-intermediate.html", "tag": "Draft #15" },
+        { "audio": "draft16.mp3", "session": "i-have-no-time-for-it.html", "tag": "Draft #16" },
+        { "audio": "draft17.mp3", "session": "why-do-i-spend-more-when-i-earn-more.html", "tag": "Draft #17" },
+        { "audio": "draft18.mp3", "session": "does-inclusive-language-make-us-equal.html", "tag": "Draft #18" }
+      ]
+    }
+  },
+  "sessions": [
+    {
+      "file": "angelina-wismes-challenge.html",
+      "status": "resolved",
+      "title": "Angelina Wismes Challenge",
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/angelina-wismes-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    },
+    {
+      "file": "angele-challenge.html",
+      "status": "resolved",
+      "title": "Angèle Challenge",
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/angele-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    },
+    {
+      "file": "arletta-challenge.html",
+      "status": "resolved",
+      "title": "Arletta Challenge",
+      "artist": "Featured Artist (Greek)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/el/arletta-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    },
+    {
+      "file": "esteman-challenge.html",
+      "status": "resolved",
+      "title": "Esteman Challenge",
+      "artist": "Featured Artist (Spanish)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/es/esteman-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    },
+    {
+      "file": "fabienne-thibeault-challenge.html",
+      "status": "resolved",
+      "title": "Fabienne Thibeault Challenge",
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/fabienne-thibeault-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    },
+    {
+      "file": "la-zarra-challenge.html",
+      "status": "resolved",
+      "title": "La Zarra Challenge",
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/la-zarra-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    },
+    {
+      "file": "massimo-ranieri-challenge.html",
+      "status": "resolved",
+      "title": "Massimo Ranieri Challenge",
+      "artist": "Featured Artist (Italian)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/it/massimo-ranieri-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    },
+    {
+      "file": "maelle-challenge.html",
+      "status": "resolved",
+      "title": "Maëlle Challenge",
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/maelle-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    },
+    {
+      "file": "mple-challenge.html",
+      "status": "resolved",
+      "title": "Mple Challenge",
+      "artist": "Featured Artist (Greek)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/el/mple-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    },
+    {
+      "file": "quelquun-pour-toi.html",
+      "status": "resolved",
+      "title": "Quelqu'un pour toi",
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Cataloged in data/events/karaoke-club.json under global-karaoke-catalog dataset. No standalone HTML file required on disk as it is served via JSON prompt deck loader and external streaming link."
+    },
+    {
+      "file": "template-karaoke.html",
+      "status": "excluded",
+      "title": "Template Karaoke",
+      "resolution_note": "Excluded from event catalog dataset as it is an authoring template for developers rather than a published song session."
+    },
+    {
+      "file": "zazie-challenge.html",
+      "status": "resolved",
+      "title": "Zazie Challenge",
+      "artist": "Featured Artist (French)",
+      "resolution_note": "Legitimate session challenge. Active deck located at sessions/karaoke-club/challenges/fr/zazie-challenge/index.html, cataloged in data/events/karaoke-club.json and linked on karaoke-club.html."
+    }
+  ]
+}

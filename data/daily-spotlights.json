@@ -1,0 +1,440 @@
+{
+  "updated_at": "2026-11-26T13:23:23.272Z",
+  "display_date": "November 26, 2026",
+  "date": "2026-11-26",
+  "day": 26,
+  "month": 11,
+  "items": {
+    "celebration": {
+      "category": "celebration",
+      "categoryTitle": "Holiday of the Day",
+      "title": "World Kindness & Cultural Exchange Day",
+      "badge": "Celebration",
+      "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
+      "details": "International Day of Global Friendship & Cultural Understanding",
+      "clubLink": "lets-celebrate.html",
+      "clubName": "Let's Celebrate",
+      "source": "Global Traditions & Festivals",
+      "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
+      "i18n": {
+        "en": {
+          "title": "World Kindness & Cultural Exchange Day",
+          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
+        },
+        "fr": {
+          "title": "Journée mondiale de la bienveillance et des échanges culturels",
+          "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
+        },
+        "it": {
+          "title": "Giornata mondiale della gentilezza e dello scambio culturale",
+          "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
+        },
+        "ru": {
+          "title": "Всемирный день доброты и культурного обмена",
+          "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
+        },
+        "el": {
+          "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
+          "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
+        }
+      }
+    },
+    "science": {
+      "category": "science",
+      "categoryTitle": "Today in Science",
+      "title": "Tidal power",
+      "year": "",
+      "badge": "Research & Discovery",
+      "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor).",
+      "clubLink": "keeping-up-with-science.html",
+      "clubName": "Keeping Up with Science",
+      "source": "Today in Science History",
+      "sourceUrl": "https://todayinsci.com/11/11_26.htm",
+      "i18n": {
+        "en": {
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+        },
+        "fr": {
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+        },
+        "it": {
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+        },
+        "ru": {
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+        },
+        "el": {
+          "title": "Tidal power",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+        }
+      }
+    },
+    "music": {
+      "category": "music",
+      "categoryTitle": "Today in Music",
+      "title": "Jeux d'eau",
+      "year": "1901",
+      "badge": "Music History",
+      "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
+      "clubLink": "karaoke-club.html",
+      "clubName": "Karaoke Club",
+      "source": "On This Day - Today in Music",
+      "sourceUrl": "https://www.onthisday.com/music/",
+      "i18n": {
+        "en": {
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+        },
+        "fr": {
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+        },
+        "it": {
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+        },
+        "ru": {
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+        },
+        "el": {
+          "title": "Jeux d'eau",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+        }
+      }
+    },
+    "film": {
+      "category": "film",
+      "categoryTitle": "Today in Film & TV",
+      "title": "Gentlemen's Agreement",
+      "year": "1947",
+      "badge": "Cinema & Screen",
+      "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
+      "clubLink": "cinema-nights/index.html",
+      "clubName": "Cinema Nights",
+      "source": "On This Day - Today in Film & TV",
+      "sourceUrl": "https://www.onthisday.com/film-tv/",
+      "i18n": {
+        "en": {
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+        },
+        "fr": {
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+        },
+        "it": {
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+        },
+        "ru": {
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+        },
+        "el": {
+          "title": "Gentlemen's Agreement",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+        }
+      }
+    }
+  },
+  "days": {
+    "2026-11-25": {
+      "display_date": "November 25, 2026",
+      "day": 25,
+      "month": 11,
+      "items": {
+        "celebration": {
+          "category": "celebration",
+          "categoryTitle": "Holiday of the Day",
+          "title": "World Kindness & Cultural Exchange Day",
+          "badge": "Celebration",
+          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
+          "details": "International Day of Global Friendship & Cultural Understanding",
+          "clubLink": "lets-celebrate.html",
+          "clubName": "Let's Celebrate",
+          "source": "Global Traditions & Festivals",
+          "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
+          "i18n": {
+            "en": {
+              "title": "World Kindness & Cultural Exchange Day",
+              "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
+            },
+            "fr": {
+              "title": "Journée mondiale de la bienveillance et des échanges culturels",
+              "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
+            },
+            "it": {
+              "title": "Giornata mondiale della gentilezza e dello scambio culturale",
+              "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
+            },
+            "ru": {
+              "title": "Всемирный день доброты и культурного обмена",
+              "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
+            },
+            "el": {
+              "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
+              "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
+            }
+          }
+        },
+        "science": {
+          "category": "science",
+          "categoryTitle": "Today in Science",
+          "title": "CAT scan patent",
+          "year": "",
+          "badge": "Research & Discovery",
+          "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis.",
+          "clubLink": "keeping-up-with-science.html",
+          "clubName": "Keeping Up with Science",
+          "source": "Today in Science History",
+          "sourceUrl": "https://todayinsci.com/11/11_25.htm",
+          "i18n": {
+            "en": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            },
+            "fr": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            },
+            "it": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            },
+            "ru": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            },
+            "el": {
+              "title": "CAT scan patent",
+              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
+            }
+          }
+        }
+      }
+    },
+    "2026-11-26": {
+      "display_date": "November 26, 2026",
+      "day": 26,
+      "month": 11,
+      "items": {
+        "celebration": {
+          "category": "celebration",
+          "categoryTitle": "Holiday of the Day",
+          "title": "World Kindness & Cultural Exchange Day",
+          "badge": "Celebration",
+          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
+          "details": "International Day of Global Friendship & Cultural Understanding",
+          "clubLink": "lets-celebrate.html",
+          "clubName": "Let's Celebrate",
+          "source": "Global Traditions & Festivals",
+          "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
+          "i18n": {
+            "en": {
+              "title": "World Kindness & Cultural Exchange Day",
+              "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
+            },
+            "fr": {
+              "title": "Journée mondiale de la bienveillance et des échanges culturels",
+              "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
+            },
+            "it": {
+              "title": "Giornata mondiale della gentilezza e dello scambio culturale",
+              "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
+            },
+            "ru": {
+              "title": "Всемирный день доброты и культурного обмена",
+              "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
+            },
+            "el": {
+              "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
+              "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
+            }
+          }
+        },
+        "science": {
+          "category": "science",
+          "categoryTitle": "Today in Science",
+          "title": "Tidal power",
+          "year": "",
+          "badge": "Research & Discovery",
+          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor).",
+          "clubLink": "keeping-up-with-science.html",
+          "clubName": "Keeping Up with Science",
+          "source": "Today in Science History",
+          "sourceUrl": "https://todayinsci.com/11/11_26.htm",
+          "i18n": {
+            "en": {
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+            },
+            "fr": {
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+            },
+            "it": {
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+            },
+            "ru": {
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+            },
+            "el": {
+              "title": "Tidal power",
+              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+            }
+          }
+        },
+        "music": {
+          "category": "music",
+          "categoryTitle": "Today in Music",
+          "title": "Jeux d'eau",
+          "year": "1901",
+          "badge": "Music History",
+          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
+          "clubLink": "karaoke-club.html",
+          "clubName": "Karaoke Club",
+          "source": "On This Day - Today in Music",
+          "sourceUrl": "https://www.onthisday.com/music/",
+          "i18n": {
+            "en": {
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+            },
+            "fr": {
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+            },
+            "it": {
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+            },
+            "ru": {
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+            },
+            "el": {
+              "title": "Jeux d'eau",
+              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+            }
+          }
+        },
+        "film": {
+          "category": "film",
+          "categoryTitle": "Today in Film & TV",
+          "title": "Gentlemen's Agreement",
+          "year": "1947",
+          "badge": "Cinema & Screen",
+          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
+          "clubLink": "cinema-nights/index.html",
+          "clubName": "Cinema Nights",
+          "source": "On This Day - Today in Film & TV",
+          "sourceUrl": "https://www.onthisday.com/film-tv/",
+          "i18n": {
+            "en": {
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+            },
+            "fr": {
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+            },
+            "it": {
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+            },
+            "ru": {
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+            },
+            "el": {
+              "title": "Gentlemen's Agreement",
+              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+            }
+          }
+        }
+      }
+    },
+    "2026-11-27": {
+      "display_date": "November 27, 2026",
+      "day": 27,
+      "month": 11,
+      "items": {
+        "celebration": {
+          "category": "celebration",
+          "categoryTitle": "Holiday of the Day",
+          "title": "World Kindness & Cultural Exchange Day",
+          "badge": "Celebration",
+          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
+          "details": "International Day of Global Friendship & Cultural Understanding",
+          "clubLink": "lets-celebrate.html",
+          "clubName": "Let's Celebrate",
+          "source": "Global Traditions & Festivals",
+          "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
+          "i18n": {
+            "en": {
+              "title": "World Kindness & Cultural Exchange Day",
+              "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
+            },
+            "fr": {
+              "title": "Journée mondiale de la bienveillance et des échanges culturels",
+              "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
+            },
+            "it": {
+              "title": "Giornata mondiale della gentilezza e dello scambio culturale",
+              "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
+            },
+            "ru": {
+              "title": "Всемирный день доброты и культурного обмена",
+              "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
+            },
+            "el": {
+              "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
+              "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
+            }
+          }
+        },
+        "science": {
+          "category": "science",
+          "categoryTitle": "Today in Science",
+          "title": "Sodium atmosphere",
+          "year": "",
+          "badge": "Research & Discovery",
+          "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999).",
+          "clubLink": "keeping-up-with-science.html",
+          "clubName": "Keeping Up with Science",
+          "source": "Today in Science History",
+          "sourceUrl": "https://todayinsci.com/11/11_27.htm",
+          "i18n": {
+            "en": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+            },
+            "fr": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+            },
+            "it": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+            },
+            "ru": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+            },
+            "el": {
+              "title": "Sodium atmosphere",
+              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+            }
+          }
+        }
+      }
+    }
+  }
+}

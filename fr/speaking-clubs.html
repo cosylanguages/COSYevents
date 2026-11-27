@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clubs de conversation 🎙️ : COSYlanguages</title>
+<link rel="canonical" href="https://cosylanguages.github.io/COSYevents/fr/speaking-clubs.html"/>
+<link rel="alternate" hreflang="en" href="https://cosylanguages.github.io/COSYevents/speaking-clubs.html"/>
+<link rel="alternate" hreflang="fr" href="https://cosylanguages.github.io/COSYevents/fr/speaking-clubs.html"/>
+<link rel="alternate" hreflang="ru" href="https://cosylanguages.github.io/COSYevents/ru/speaking-clubs.html"/>
+<link rel="alternate" hreflang="x-default" href="https://cosylanguages.github.io/COSYevents/speaking-clubs.html"/>
+<link href="../shared/images/logo.png" rel="icon"/>
+<link href="../manifest.json" rel="manifest"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&amp;family=DM+Sans:wght@400;500;700&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<script src="../shared/js/cosy-theme.js"></script>
+<link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
+  <link rel="stylesheet" href="../shared/css/hub.css">
+<link rel="stylesheet" href="../shared/css/club-reviews.css">
+<style>
+      .view-btn {
+        display: inline-block;
+        background: var(--teal);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-align: center;
+        transition: opacity 0.2s;
+      }
+      .view-btn:hover { opacity: 0.9; }
+
+      /* Club Specifics */
+      .club-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .club-card {
+        background: var(--warm-white);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform .3s, box-shadow .3s;
+      }
+      .club-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(61,43,31,.12); }
+      .club-card-inner { padding: 1.5rem; text-align: left; display: flex; flex-direction: column; flex-grow: 1; }
+      .club-emoji { font-size: 1.8rem; margin-bottom: 0.8rem; display: block; }
+      .club-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; font-family: var(--font-serif); }
+      .club-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+      .club-tag { font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 700; border: 1px solid; text-transform: uppercase; letter-spacing: 0.03em; }
+      .club-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
+      .club-link {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--teal);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .club-link:hover { color: var(--sage-deep); }
+</style>
+  <meta name="description" content="Clubs de conversation COSYevents : pratiquez l'anglais, le français, le russe, l'italien ou le grec en petit groupe.">
+  <link rel="icon" href="../shared/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../shared/assets/apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#416b49">
+  <meta property="og:title" content="Clubs de conversation 🎙️ : COSYlanguages">
+  <meta property="og:description" content="Calendrier public et catalogue COSYevents — clubs de conversation, soirées cinéma, karaoké, jeux et sessions enseignant.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cosylanguages.github.io/COSYevents/shared/assets/og-image.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../shared/css/dark-fixes.css">
+</head>
+<body>
+<nav id="cosy-nav"></nav>
+<header class="hero">
+<div class="hero-inner">
+<div class="hero-left">
+<div class="hero-tag">🎙️ Clubs de conversation</div>
+<h1 data-cms-id="h1-1-d08ecd">Clubs de conversation thématiques</h1>
+<p data-cms-id="p-1-2a2a0e" class="hero-sub">Sessions en petits groupes (4–6 personnes) sur des thèmes du monde réel. Des échanges calibrés par niveau, animés par des enseignants natifs COSYlanguages.</p>
+<div class="hero-ctas">
+<a class="btn-primary" href="https://wa.me/330766784195">Rejoindre une session</a>
+<a class="btn-secondary" href="#clubs">Explorer les clubs ↓</a>
+</div>
+</div>
+<div class="hero-right">
+<!-- Decoration -->
+</div>
+</div>
+</header>
+
+<main class="page">
+<nav class="cosy-breadcrumbs" style="margin-bottom: 2rem;">
+<a href="index.html">Accueil</a> <span class="sep">/</span>
+<a href="index.html">Événements</a> <span class="sep">/</span>
+<span class="current">Clubs de conversation</span>
+</nav>
+
+<!-- Guide de démarrage rapide -->
+<section id="onboarding-guide" style="background: var(--cream-dark); border: 1.5px dashed var(--border); border-radius: var(--r-xl); padding: 2rem; margin-bottom: 2.5rem; box-sizing: border-box;">
+<div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+<span style="font-size: 2.5rem; line-height: 1;">🧭</span>
+<div style="flex: 1; min-width: 280px;">
+<h3 data-cms-id="h3-1-11b8e8" style="margin: 0 0 0.5rem 0; font-family: var(--font-serif); font-size: 1.35rem; color: var(--sage-deep);">Guide de démarrage rapide des clubs</h3>
+<p data-cms-id="p-2-8a4056" style="margin: 0 0 1rem 0; font-size: 0.92rem; line-height: 1.6; color: var(--ink-soft);">
+          Nouveau dans nos clubs de conversation ? Suivez notre parcours calibré par niveau pour gagner en confiance, enrichir votre vocabulaire et vous exprimer avec fluidité avec nos enseignants natifs.
+        </p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;">
+<div style="background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+<strong style="color: #BA7517; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">🌱 Adapté aux Débutants (A1–A2)</strong>
+<p data-cms-id="p-3-d00ac2" style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--muted);">Commencez par <strong>Let's Celebrate</strong> ou <strong>The Greatest Quotes</strong>. Les sujets sont centrés sur la vie quotidienne, les traditions et le vocabulaire essentiel.</p>
+</div>
+<div style="background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+<strong style="color: #993556; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">🚀 Niveau Intermédiaire (B1–B2)</strong>
+<p data-cms-id="p-4-d39603" style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--muted);">Rejoignez <strong>My Life With &amp; Without</strong> ou <strong>Debatable &amp; Relatable</strong>. Exprimez vos choix personnels, vos regrets et débattez de légères controverses.</p>
+</div>
+<div style="background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+<strong style="color: #0F6E56; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">🧠 Niveau Avancé (B2–C2)</strong>
+<p data-cms-id="p-5-3a5986" style="margin: 0; font-size: 0.85rem; line-height: 1.4; color: var(--muted);">Relevez le défi avec <strong>Keeping Up with Science</strong>, <strong>Mind Matters</strong> ou <strong>I Couldn't Help But Wonder</strong>. Échangez sur la biologie, la psychologie et la philosophie abstraite.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 3: Browse Clubs -->
+<section id="clubs">
+<span class="sec-tag">🎙️ Parcourez nos clubs</span>
+<h2 data-cms-id="h2-1-1a2b26" class="sec-h2">Trouvez votre sujet préféré</h2>
+<p data-cms-id="p-6-7e5cdf" class="sec-p">De la science à la philosophie, nos clubs couvrent les sujets qui comptent pour les adultes.</p>
+<div class="club-filters">
+<button class="filter-btn active" data-level="all">Tous les niveaux</button>
+<button class="filter-btn" data-level="beginner">Débutant (A1-A2)</button>
+<button class="filter-btn" data-level="intermediate">Intermédiaire (B1-B2)</button>
+<button class="filter-btn" data-level="advanced">Avancé (C1-C2)</button>
+</div>
+<div class="club-grid" style="margin-bottom: 3.5rem; margin-top: 1.5rem;">
+<!-- 1. KEEPING UP WITH SCIENCE -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #0F6E56, #073b2d); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Science logo" src="../images/keepingupwithscience.jpg" style="height: 50px;"/></span>
+<h3 data-cms-id="h3-2-b3bb22" style="color: white;">Keeping Up with Science</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Science</span>
+</div>
+<p data-cms-id="p-7-f3f99b" class="club-desc" style="color: rgba(255,255,255,0.85);">L'actualité scientifique réelle, rendue discutable. Chaque session décortique une découverte ou une tendance récente.</p>
+<a class="club-link" href="speaking-clubs.html#clubs" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 2. LET'S CELEBRATE -->
+<article class="club-card" data-levels="beginner intermediate advanced" style="background: linear-gradient(135deg, #BA7517, #5c390b); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Celebrate logo" src="../images/letscelebrate.jpg" style="height: 50px;" loading="lazy" decoding="async"></span>
+<h3 data-cms-id="h3-3-6859f2" style="color: white;">Let's Celebrate</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">A1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Culture</span>
+</div>
+<p data-cms-id="p-8-80c196" class="club-desc" style="color: rgba(255,255,255,0.85);">Festivals, traditions et les rituels qui rassemblent les gens.</p>
+<a class="club-link" href="speaking-clubs.html#clubs" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 3. THE GREATEST QUOTES -->
+<article class="club-card" data-levels="beginner intermediate advanced" style="background: linear-gradient(135deg, #534AB7, #2a255c); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Quotes logo" src="../images/thegreatestquotes.jpg" style="height: 50px;" loading="lazy" decoding="async"></span>
+<h3 data-cms-id="h3-4-37db0f" style="color: white;">The Greatest Quotes</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">A1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Philosophie</span>
+</div>
+<p data-cms-id="p-9-135069" class="club-desc" style="color: rgba(255,255,255,0.85);">Une citation. Une analyse profonde. Qu'est-ce qu'ils voulaient dire : et qu'est-ce que cela signifie pour vous ?</p>
+<a class="club-link" href="speaking-clubs.html#clubs" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 4. MIND MATTERS -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #993556, #4d1a2b); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Mind logo" src="../images/mindmatters.jpg" style="height: 50px;" loading="lazy" decoding="async"></span>
+<h3 data-cms-id="h3-5-df67f2" style="color: white;">Mind Matters</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Psychologie</span>
+</div>
+<p data-cms-id="p-10-06b944" class="club-desc" style="color: rgba(255,255,255,0.85);">Psychologie, émotions, habitudes et comportement humain. Nous explorons ce qui se passe dans les coulisses.</p>
+<a class="club-link" href="mind-matters.html" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 5. MY LIFE WITH & MY LIFE WITHOUT -->
+<article class="club-card" data-levels="beginner intermediate advanced" style="background: linear-gradient(135deg, #3B6D11, #1d3608); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Life logo" src="../images/lifewithlifewithout.jpg" style="height: 50px;" loading="lazy" decoding="async"></span>
+<h3 data-cms-id="h3-6-ebedf7" style="color: white;">My Life With &amp; Without</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">A1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Personnel</span>
+</div>
+<p data-cms-id="p-11-772dae" class="club-desc" style="color: rgba(255,255,255,0.85);">Chaque session explore la vie avant et après une chose : une habitude, une personne, une ville, une décision.</p>
+<a class="club-link" href="speaking-clubs.html#clubs" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 6. DEBATABLE & RELATABLE -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #993C1D, #4d1e0f); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Debate logo" src="../images/debatabeandrelatable.jpg" style="height: 50px;" loading="lazy" decoding="async"></span>
+<h3 data-cms-id="h3-7-77d064" style="color: white;">Debatable &amp; Relatable</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Débat</span>
+</div>
+<p data-cms-id="p-12-8be927" class="club-desc" style="color: rgba(255,255,255,0.85);">Opinions tranchées et dilemmes authentiques. Chaque session présente une affirmation avec laquelle vous serez passionnément d'accord.</p>
+<a class="club-link" href="speaking-clubs.html#clubs" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 7. I COULDN'T HELP BUT WONDER -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #3F2B96, #1F104D); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="Wonder logo" src="../images/icouldnthelpbutwonder.jpg" style="height: 50px;" loading="lazy" decoding="async"></span>
+<h3 data-cms-id="h3-8-6c33a0" style="color: white;">I Couldn't Help But Wonder</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B1–C2</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Philosophie</span>
+</div>
+<p data-cms-id="p-13-735634" class="club-desc" style="color: rgba(255,255,255,0.85);">Des idées aléatoires où nous spéculons sur diverses choses, posons des questions poétiques et développons une réflexion philosophique profonde.</p>
+<a class="club-link" href="speaking-clubs.html#clubs" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 8. IF YOU WERE -->
+<article class="club-card" data-levels="beginner intermediate advanced" style="background: linear-gradient(135deg, #4F46E5, #1e1b4b); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji"><img alt="If You Were logo" src="../images/ifyouwere.jpg" style="height: 50px;" loading="lazy" decoding="async"></span>
+<h3 data-cms-id="h3-9-97604a" style="color: white;">If You Were</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">A2–C1</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Hypothèse</span>
+</div>
+<p data-cms-id="p-14-52bcab" class="club-desc" style="color: rgba(255,255,255,0.85);">Glissez-vous dans une autre peau, un autre rôle ou une autre réalité. Des hypothèses spéculatives et de l'empathie radicale pour restructurer votre esprit.</p>
+<a class="club-link" href="speaking-clubs.html#clubs" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+<!-- 9. LONG READS -->
+<article class="club-card" data-levels="intermediate advanced" style="background: linear-gradient(135deg, #7A1C1C, #3E0F0F); color: white;">
+<div class="club-card-inner">
+<span class="club-emoji" style="font-size: 1.8rem; margin-bottom: 0.8rem; display: block;">📚</span>
+<h3 data-cms-id="h3-10-727490" style="color: white;">Long Reads</h3>
+<div class="club-meta">
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">B2–C1</span>
+<span class="club-tag" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">Littérature</span>
+</div>
+<p data-cms-id="p-15-2b1941" class="club-desc" style="color: rgba(255,255,255,0.85);">Micro-discussions sur des livres, des livres audio et des podcasts d'exception. Transportez des idées et des réflexions de chapitre en chapitre.</p>
+<a class="club-link" href="speaking-clubs.html#clubs" style="color: white;">Voir le Club &amp; Historique →</a>
+</div>
+</article>
+</div>
+</section>
+
+<!-- Section 5: CTA -->
+<section id="join">
+<div class="cta-section">
+<h2 data-cms-id="h2-2-899768">Contactez-nous pour rejoindre le prochain événement</h2>
+<p data-cms-id="p-16-270c0c">Prêt à vous lancer ? Connectez-vous avec nous sur votre plateforme préférée et nous vous aiderons à trouver la bonne session.</p>
+<div class="cta-btns">
+<a class="cta-wa" href="https://wa.me/330766784195">💬 WhatsApp</a>
+<a class="cta-tg" href="https://t.me/cosylanguagesproject">✈️ Telegram</a>
+</div>
+</div>
+</section>
+
+<!-- SECTION: ARCHIVE DES SESSIONS EN FRANÇAIS -->
+<section id="sessions-archive" style="margin-top: 4rem; margin-bottom: 4rem;">
+  <span class="sec-tag">📚 Catalogue complet</span>
+  <h2 data-cms-id="h2-3-ee105f" class="sec-h2">Toutes les sessions de discussion en Français (44 sessions)</h2>
+  <p data-cms-id="p-17-f0b08c" class="sec-p">Accédez directement aux fiches pédagogiques, vocabulaires et guides de conversation.</p>
+
+  <div class="club-grid" style="margin-top: 2rem;">
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">debatable-relatable</span>
+        </div>
+        <h4 data-cms-id="h4-1-66bd78" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">L'aide active à mourir : oui ou non ?</h4>
+        <p data-cms-id="p-18-0ced85" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Session de discussion calibrée COSYlanguages.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/debatable-relatable/l-aide-active-a-mourir.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">debatable-relatable</span>
+        </div>
+        <h4 data-cms-id="h4-2-906881" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">La semaine de 4 jours</h4>
+        <p data-cms-id="p-19-53a2fc" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Équilibre vie pro-vie privée / Productivité</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/debatable-relatable/la-semaine-de-4-jours.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-3-ef6938" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">I Couldn't Help But Wonder : Langage Inclusif</h4>
+        <p data-cms-id="p-20-a83193" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Un salon parisien élégant et feutré, réunissant des intellectuels du monde entier</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-4-da180d" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">La culture nous pousse-t-elle à éviter ce qui est gratuit ?</h4>
+        <p data-cms-id="p-21-40af5a" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Une place pavée à Saint-Malo devant la grande bibliothèque municipale</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/avoiding-things-for-free.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-5-ef6938" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">I Couldn't Help But Wonder : Langage Inclusif</h4>
+        <p data-cms-id="p-22-a83193" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Un salon parisien élégant et feutré, réunissant des intellectuels du monde entier</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/collective-guilt-global-crisis.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-6-132c4f" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">I Couldn't Help But Wonder : La Mort de l'Album</h4>
+        <p data-cms-id="p-23-e784ab" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Playlists éphémères hyperactives vs Histoires de vinyle cohérentes</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/death-of-the-album.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-7-ef6938" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">I Couldn't Help But Wonder : Langage Inclusif</h4>
+        <p data-cms-id="p-24-a83193" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Un salon parisien élégant et feutré, réunissant des intellectuels du monde entier</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/does-inclusive-language-make-us-equal.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-8-d2e76f" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">I Couldn't Help But Wonder : Le Vide Post-Série</h4>
+        <p data-cms-id="p-25-b05e81" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Ruptures parasociales vs Solitude réelle</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/feeling-empty-after-series.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-9-ef6938" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">I Couldn't Help But Wonder : Langage Inclusif</h4>
+        <p data-cms-id="p-26-a83193" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Un salon parisien élégant et feutré, réunissant des intellectuels du monde entier</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/i-have-no-time-for-it.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-10-d98227" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">L'instinct parental est-il une réalité ou une illusion ?</h4>
+        <p data-cms-id="p-27-4fe939" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Script programmé de la nature vs Panique du choix moderne</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/is-parenting-instinct-a-real-thing-or-scam.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-11-af5469" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">I Couldn't Help But Wonder : Légumes Moches &amp;amp; Anti-Gaspillage</h4>
+        <p data-cms-id="p-28-5032bf" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Pommes tavelées vs Profils sociaux lisses</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/ugly-produce-anti-waste.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-12-b9e289" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Pourquoi essayons-nous de nous identifier au TDAH ?</h4>
+        <p data-cms-id="p-29-8c4b80" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Rues hyper-distraites de Bretagne vs Chimie neuronale</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/why-do-we-try-to-relate-to-adhd.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">i-couldnt-help-but-wonder</span>
+        </div>
+        <h4 data-cms-id="h4-13-edbfdb" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Quel est l'intérêt du lancement automatique des Shorts sur YouTube ?</h4>
+        <p data-cms-id="p-30-9f3fd9" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">La terrasse d'un café près de la Place Sainte-Anne à Rennes par un après-midi ensoleillé d'août</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/i-couldnt-help-but-wonder/youtube-shorts-app-trend.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">lets-celebrate</span>
+        </div>
+        <h4 data-cms-id="h4-14-d05294" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Diwali (B1)</h4>
+        <p data-cms-id="p-31-0ced85" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Session de discussion calibrée COSYlanguages.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/lets-celebrate/diwali-festival.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">lets-celebrate</span>
+        </div>
+        <h4 data-cms-id="h4-15-d44557" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Journée des transferts de fonds familiaux (B1)</h4>
+        <p data-cms-id="p-32-0ced85" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Session de discussion calibrée COSYlanguages.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/lets-celebrate/family-remittances-day.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">lets-celebrate</span>
+        </div>
+        <h4 data-cms-id="h4-16-a124e8" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Le Nouvel An Lunaire (B1)</h4>
+        <p data-cms-id="p-33-0ced85" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Session de discussion calibrée COSYlanguages.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/lets-celebrate/lunar-new-year.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">lets-celebrate</span>
+        </div>
+        <h4 data-cms-id="h4-17-b1d5ac" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Journée de la Simplicité (A1)</h4>
+        <p data-cms-id="p-34-0ced85" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Session de discussion calibrée COSYlanguages.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/lets-celebrate/national-simplicity-day.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">lets-celebrate</span>
+        </div>
+        <h4 data-cms-id="h4-18-273df3" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Journée des Workaholics (A1)</h4>
+        <p data-cms-id="p-35-0ced85" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Session de discussion calibrée COSYlanguages.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/lets-celebrate/national-workaholics-day.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-19-ee3a62" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Deuil anticipé</h4>
+        <p data-cms-id="p-36-90675c" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Deuil anticipé : regretter quelqu'un qui est encore là, parce que vous sentez déjà l'au revoir arriver.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/anticipatory-grief.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-20-d1155a" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Tant d'enfants brisés...</h4>
+        <p data-cms-id="p-37-578ad8" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">« Tant d'enfants brisés vivant dans des corps d'adultes, imitant des vies d'adultes. » (Ijeoma Umebinyuo)</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/broken-children-grown-bodies.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-21-ae5489" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Dépersonnalisation</h4>
+        <p data-cms-id="p-38-5c7d5e" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Dépersonnalisation : quand vous vous sentez loin de vous-même, comme si vous regardiez votre propre vie à travers une vitre.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/depersonalization.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-22-0783ab" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Ils craignent l'amour car il crée...</h4>
+        <p data-cms-id="p-39-59b8bf" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">« Ils craignent l'amour parce qu'il crée un monde qu'ils ne peuvent pas contrôler. » (George Orwell)</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/fear-of-love-control.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-23-990985" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Trouver une personne avec qui discuter...</h4>
+        <p data-cms-id="p-40-774954" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">« Le principal dans la vie, c'est de trouver une personne avec qui on peut discuter cent fois du même sujet. »</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/finding-the-right-person.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-24-40de4b" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Loi de Gilbert</h4>
+        <p data-cms-id="p-41-9373ee" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Loi de Gilbert : « Le plus gros problème au travail, c'est que personne ne vous dit quoi faire. »</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/gilberts-law.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-25-665a17" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Usurpation d'identité</h4>
+        <p data-cms-id="p-42-f8af8c" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">© 2026 COSYlanguages : All rights reserved</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/impersonation.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-26-2bf91a" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Loi de Kidlin</h4>
+        <p data-cms-id="p-43-667d5d" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Loi de Kidlin : « Si vous écrivez clairement le problème, alors il est à moitié résolu. »</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/kidlins-law.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-27-af34fc" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Loi de l'attraction</h4>
+        <p data-cms-id="p-44-df1cd5" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Loi de l'attraction : la croyance que les pensées positives ou négatives apportent des expériences positives ou négatives dans la vie d'une ...</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/law-of-attraction.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-28-e0a56b" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Limérence</h4>
+        <p data-cms-id="p-45-708a8a" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Limérence : quand votre esprit construit toute une vie avec quelqu'un que vous connaissez à peine, et que vous ne pouvez pas l'arrêter.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/limerence.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-29-f2b6e2" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Loi de Murphy</h4>
+        <p data-cms-id="p-46-a5794c" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Loi de Murphy : « Tout ce qui peut mal tourner tournera mal. »</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/murphys-law.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">mind-matters</span>
+        </div>
+        <h4 data-cms-id="h4-30-13560e" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Loi de Wilson</h4>
+        <p data-cms-id="p-47-bbf8e5" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Loi de Wilson : « Si vous donnez la priorité à l'intelligence et à l'information, l'argent continuera d'arriver. »</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/mind-matters/wilsons-law.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-31-cec7e4" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Si vous n'acceptez pas un enfant gay...</h4>
+        <p data-cms-id="p-48-4aa8b3" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Famille &amp;amp; Acceptation</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/accept-gay-child.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-32-e913b2" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">L'IA est l'opposé de la prise de risque...</h4>
+        <p data-cms-id="p-49-ac947f" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Intermédiaire (B1-B2)</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/ai-opposite-of-art.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-33-34dfcb" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">La forme la plus dangereuse de cécité...</h4>
+        <p data-cms-id="p-50-0531c5" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Limites de la perspective &amp;amp; Biais</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/dangerous-blindness-perspective.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-34-f87bcb" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">L'enfant difficile</h4>
+        <p data-cms-id="p-51-e2cf22" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Éducation &amp;amp; Identité</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/dolto-difficult-child-quote.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-35-a29632" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Certains de vos jours préférés...</h4>
+        <p data-cms-id="p-52-afd8bc" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Imagination &amp;amp; Désillusion</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/favorite-days-not-happened.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-36-befacc" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Le foyer n'est pas un lieu - c'est un temps</h4>
+        <p data-cms-id="p-53-207f4b" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Nostalgie &amp;amp; Foyer</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/home-is-a-time.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-37-d5eb07" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">La sagesse de Socrate</h4>
+        <p data-cms-id="p-54-8ccada" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Philosophie / Connaissance de soi</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/la-sagesse-de-socrate.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-38-cb399d" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Les gens ont de belles choses à dire sur vous...</h4>
+        <p data-cms-id="p-55-42435d" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Transformation personnelle</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/must-die-first.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-39-7e6e31" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Saudade</h4>
+        <p data-cms-id="p-56-393e36" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Mélancolie &amp;amp; Nostalgie</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/saudade.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-40-42db74" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Sonder</h4>
+        <p data-cms-id="p-57-b566ec" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Empathie &amp;amp; Perspective</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/sonder.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-41-4c3f6c" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Lire et danser</h4>
+        <p data-cms-id="p-58-0ced85" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Session de discussion calibrée COSYlanguages.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/voltaire-read-dance-quote.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-42-3e9035" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Toutes les femmes deviennent comme leur mère...</h4>
+        <p data-cms-id="p-59-77439f" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Rôles sociaux &amp;amp; Maternité</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/women-mothers-tragedy.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+    <article class="club-card history-session" data-level="b1" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+          <span class="club-tag tag-b1" style="background:#E1F5EE; color:#1A7A4A; font-weight:700; font-size:0.75rem; padding: 2px 6px; border-radius: 4px;">B1</span>
+          <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">the-greatest-quotes</span>
+        </div>
+        <h4 data-cms-id="h4-43-e3114c" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-family: var(--font-serif, serif); color: var(--ink); line-height: 1.3;">Vous n'avez pas d'âme. Vous êtes une âme.</h4>
+        <p data-cms-id="p-60-0ced85" style="margin: 0 0 1rem 0; font-size: 0.85rem; color: var(--muted); line-height: 1.5;">Session de discussion calibrée COSYlanguages.</p>
+      </div>
+      <div>
+        <a href="../fr/sessions/the-greatest-quotes/you-are-a-soul.html" class="view-btn" style="width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none;">Accéder à la session ➔</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="reviews" style="margin-top: 2.5rem;">
+  <div data-club-reviews></div>
+</section>
+</main>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="fb-logo">
+<img alt="COSYlanguages logo" src="../shared/images/logo.png" loading="lazy" decoding="async">
+<span class="fb-name">COSYlanguages</span>
+</div>
+<p data-cms-id="p-61-76c8cb">Votre coin chaleureux pour maîtriser de nouvelles langues et vous connecter au monde. 🌍</p>
+</div>
+<div class="footer-links-col">
+<h5 data-cms-id="h5-1-2331b4">Cours</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/courses/general.html">Cours général 📖</a>
+<a href="https://cosylanguages.github.io/COSYlanguages/courses/spoken.html">Cours d'expression orale 🗣️</a>
+<a href="https://cosylanguages.github.io/COSYlanguages/courses/exam-preparation.html">Préparation aux examens 📝</a>
+<a href="https://cosylanguages.github.io/COSYlanguages/courses/travelling.html">Cours de voyage ✈️</a>
+<a href="https://cosylanguages.github.io/COSYlanguages/courses/professional.html">Cours professionnel 💼</a>
+<a href="https://cosylanguages.github.io/COSYlanguages/courses/relocation.html">Cours de réinstallation 🏡</a>
+</div>
+<div class="footer-links-col">
+<h5 data-cms-id="h5-2-8b3ee4">Explorer</h5>
+<a href="https://cosylanguages.github.io/COSYlanguages/#languages">Langues 🌍</a>
+<a href="https://cosylanguages.github.io/COSYpractice/">Pratique libre 💡</a>
+<a href="../index.html">Événements 🎉</a>
+<a href="https://cosylanguages.github.io/COSYgames/">Jeux 🎮</a>
+</div>
+<div class="footer-links-col">
+<h5 data-cms-id="h5-3-a9de3a">Projet</h5>
+<a href="privacy.html">Politique de confidentialité &amp; mentions légales</a>
+</div>
+<div class="footer-links-col">
+<h5 data-cms-id="h5-4-b37456">Contact</h5>
+<a href="https://wa.me/330766784195">WhatsApp 📱</a>
+<a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+<a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+</div>
+</div>
+<div class="footer-bottom">© 2026 COSYlanguages : Tous droits réservés</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.club-grid .club-card');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const level = btn.getAttribute('data-level');
+
+      cards.forEach(card => {
+        const levels = card.getAttribute('data-levels') || '';
+        if (level === 'all' || levels.includes(level)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+<script src="../shared/js/cosyevents-session.js"></script>
+<script src="../shared/js/club-reviews.js"></script>
+</body>
+</html>

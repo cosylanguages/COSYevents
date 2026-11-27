@@ -1,0 +1,284 @@
+# Speaking Clubs Specification & Templates
+
+## 1. Core Principles
+- **Immersion First:** All session content (topics, questions, notes) should be in the target language where possible.
+- **Public vs. Paid Content Boundary:**
+  - **Free / Public Content:** Session Name, Short Session Summary (introductory blurb), and Useful Vocabulary (10 source-extracted units).
+  - **Paid / Gated Session Structure:**
+    1. **Warm-up:** Short introduction and icebreaker questions.
+    2. **Round 1 (Theoretical Discussion & Analysis):**
+       - *Useful Language:* Level-adapted expressions/phrases for breakout room discussion.
+       - *Questions:* Theoretical discussion of main ideas from the article/source + personal application questions (`.round-item-main` & `.round-item-personal`).
+    3. **Interlude / Let's Speak Together:**
+       - Quick flash discussion together in the main room where participants vote (Option A vs. Option B).
+    4. **Round 2 (Future Speculation & Projections):**
+       - *Useful Language:* Level-adapted speculation/disagreement expressions for breakout rooms.
+       - *Questions:* Agree/disagree statements & future speculation + personal application questions.
+    5. **Outro & Mistakes Discussion (Teacher's Note):**
+       - Review of linguistic corrections and feedback recorded during the session.
+- **Role-Based Reality:**
+  - **Free Visitors:** See the club list, description, session summary, and public vocabulary grid. Prompted to unlock gated structure.
+  - **Students:** See schedules, active session vocabulary, and full past session history structure.
+  - **Teachers:** See everything students see + preparation topics + active mistake notes area.
+- **Interactivity:** Toggles for Vocabulary, Rounds, and Mistake Notes.
+
+## 2. Visual Guidelines
+- **Typography:** Headers: `'Playfair Display'`, Body: `'DM Sans'`, Content: `'Nunito'`.
+- **Club Colors:** Science (`#0F6E56`), Celebrate (`#BA7517`), Quotes (`#534AB7`), Mind (`#993556`), Life (`#3B6D11`), Debate (`#993C1D`).
+- **Section Accents:** Warm-up (`#FAEEE8`), Round 1 (`#E1F5EE`), Speak Together (`#EEEDFE`), Round 2 (`#EAF3DE`), Mistakes (`#FFF8F5`).
+
+## 3. Round Type Templates
+Clubs use various round activities. Use the following structures inside `.round-body`:
+
+- **Questions:** Standard list of discussion points.
+- **Agree/Disagree:** `[STATEMENT] — Do you agree or disagree?`
+- **True/False:** `[FACT/MYTH] — Is this true or false in your experience?`
+- **Real/Unreal:** `[SCENARIO] — Is this a real possibility or just science fiction?`
+- **Believe it / Ain't believe it:** `[UNBELIEVABLE FACT] — Do you believe it?`
+- **Possible/Impossible:** `[GOAL/TASK] — Is this possible today or impossible?`
+- **Role Play:** `Speaker A: [ROLE], Speaker B: [ROLE]. Scenario: [SITUATION].`
+- **Finish the Idea:** `[SENTENCE STARTER] ... (complete with your own ideas).`
+
+## 4. Vocabulary Format
+All vocabulary entries must follow this pattern:
+`Word – definition. Example: Sentence using the word.`
+
+## 5. HTML Template: Session Entry (History)
+Place inside `.history-body` of a club card.
+
+```html
+<div class="history-session" id="[SESSION_ID]" style="margin-bottom:1rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+  <div class="history-session-header" onclick="toggleBlock('[SESSION_ID]')" style="display:flex;align-items:center;justify-content:space-between;padding:.5rem .85rem;cursor:pointer;font-size:.8rem;font-weight:500;background:#FAF7F2;user-select:none;">
+    <span>[SESSION TOPIC] <span class="history-date" style="font-size:.72rem;color:var(--muted);font-weight:400;margin-left:.5rem;">[DATE]</span></span>
+    <span class="round-toggle">▼</span>
+  </div>
+  <div class="history-session-body" style="display:none;padding:.65rem .85rem .85rem;border-top:1px solid var(--border);">
+    <div class="rounds-container" style="display:flex;flex-direction:column;gap:.65rem;">
+
+      <!-- 1. WARM-UP -->
+      <div class="round-block warm-up" id="[SESSION_ID]-warm">
+        <div class="round-header" style="background:#FAEEE8;" onclick="toggleRound('[SESSION_ID]-warm')">
+          <span>🟠 Warm-up</span><span class="round-toggle">▼</span>
+        </div>
+        <div class="round-body">
+          <p><vim-image resource-id="[ID]"></vim-image></p>
+          <vim-instruction>[INSTRUCTION]</vim-instruction>
+          <vim-choice>
+            <vim-choice-option>
+              <vim-choice-option-title>Vokabeln</vim-choice-option-title>
+              <vim-choice-option-content>
+                <ul>
+                  <li>[WORD]</li>
+                </ul>
+              </vim-choice-option-content>
+            </vim-choice-option>
+            <vim-choice-option>
+              <vim-choice-option-title>Grammatik</vim-choice-option-title>
+              <vim-choice-option-content>
+                <vim-blockquote importance="basic">
+                  <h2>[TITLE]</h2>
+                  <p>[CONTENT]</p>
+                </vim-blockquote>
+              </vim-choice-option-content>
+            </vim-choice-option>
+          </vim-choice>
+        </div>
+      </div>
+
+      <!-- 2. ROUND 1 -->
+      <div class="round-block" id="[SESSION_ID]-r1">
+        <div class="round-header" style="background:#E1F5EE;" onclick="toggleRound('[SESSION_ID]-r1')">
+          <span>🔵 Round 1 — [TYPE]</span><span class="round-toggle">▼</span>
+        </div>
+        <div class="round-body">
+          <!-- Template varies by type (Agree/Disagree, Questions, etc.) -->
+          <div class="round-item">
+             <div class="round-item-main"><strong>1.</strong> [CONTENT]</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. LET'S SPEAK TOGETHER -->
+      <div class="round-block lst" id="[SESSION_ID]-lst">
+        <div class="round-header" style="background:#EEEDFE;" onclick="toggleRound('[SESSION_ID]-lst')">
+          <span>🟣 Let's Speak Together</span><span class="round-toggle">▼</span>
+        </div>
+        <div class="round-body">
+          <p class="round-instruction">[INSTRUCTION]</p>
+          <div class="lst-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)); gap:10px;">
+             <!-- Image Item -->
+             <div class="lst-item" style="text-align:center;">
+                <img src="[URL]" style="width:100%; border-radius:8px; margin-bottom:5px;">
+                <div style="font-size:.75rem; font-weight:600;">[LABEL]</div>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. ROUND 2 -->
+      <div class="round-block" id="[SESSION_ID]-r2">
+        <div class="round-header" style="background:#EAF3DE;" onclick="toggleRound('[SESSION_ID]-r2')">
+          <span>🟢 Round 2 — Deep Dive</span><span class="round-toggle">▼</span>
+        </div>
+        <div class="round-body">
+          <div class="round-item">
+             <div class="round-item-main"><strong>1.</strong> [STATEMENT/QUESTION]</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. TEACHER'S NOTE (LINGUISTIC CORRECTIONS) -->
+      <div class="mistake-block" id="[SESSION_ID]-mistakes">
+        <div class="mistake-header" onclick="toggleBlock('[SESSION_ID]-mistakes')">
+          <span>✏️ Teacher's Note (Linguistic Corrections)</span><span class="round-toggle">▼</span>
+        </div>
+        <div class="mistake-body">
+          <!-- 1. Extra/Wrong Word Example -->
+          <div class="mistake-item">
+            <span class="mistake-wrong">He <span class="mistake-flag-wrong">have</span> went to Paris</span>
+            <span class="mistake-arrow">→</span>
+            <span class="mistake-right">He <span class="mistake-flag-right">has</span> gone to Paris</span>
+            <span class="mistake-note-text">(Wrong word: 'have' vs singular auxiliary 'has' for present perfect)</span>
+          </div>
+
+          <!-- 2. Missing Word Example -->
+          <div class="mistake-item">
+            <span class="mistake-wrong">She lives <span class="mistake-null">X</span> Paris</span>
+            <span class="mistake-arrow">→</span>
+            <span class="mistake-right">She lives <span class="mistake-flag-right">in</span> Paris</span>
+            <span class="mistake-note-text">(Missing preposition 'in')</span>
+          </div>
+
+          <!-- 3. Word Order / Structure Example -->
+          <div class="mistake-item">
+            <span class="mistake-wrong"><span class="mistake-part-subj">We</span> <span class="mistake-part-verb">discussed</span> <span class="mistake-part-mod">yesterday</span> <span class="mistake-part-obj">the problem</span></span>
+            <span class="mistake-arrow">→</span>
+            <span class="mistake-right"><span class="mistake-part-subj">We</span> <span class="mistake-part-verb">discussed</span> <span class="mistake-part-obj">the problem</span> <span class="mistake-part-mod">yesterday</span></span>
+            <span class="mistake-note-text">(Word order: Subject + Verb + Object + Modifier)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+```
+
+## 6. Markdown Frontmatter Session Schema (Stage 3 Refined)
+
+The Markdown frontmatter format (`sessions/<club>/*.md`) serves as the structured content source for session static generation.
+
+### Frontmatter Schema Definition
+```yaml
+---
+title: "Session Title"
+page_title: "Session Title : COSYlanguages"
+breadcrumbs_current: "Short Title"
+club_tag: "Mind Matters" # or Cinema Club, Karaoke Club, Keeping Up with Science, etc.
+date: "DD Month YYYY"
+theme_class: "theme-mind-topic"
+decorator_icon: "🎙️" # or 🧠, 🎬, 🎤, 🔬, 🧪
+duration: "60 minutes"
+languages: "🇬🇧 English"
+level: "Intermediate (B1)"
+topic: "Session Topic"
+target_grammar: "Conditionals (2nd, 3rd, Mixed)" # Explicit key auto-populating badges & filters
+hero_background: "linear-gradient(135deg, #993556, #4d1a2b)"
+description: "Detailed 3-sentence blurb introducing the session theme."
+
+# Format-Specific Profile Objects (Optional)
+mind_profile:
+  core_tendency: "Core Human Tendency"
+  trigger: "Subconscious Trigger"
+  phenomenon: "Psychological Phenomenon"
+  anchor: "Self-Reflection Anchor"
+
+film_metadata:
+  movie_title: "Movie Title"
+  director: "Director Name"
+  release_year: "2024"
+  suggested_genre: "Drama / Sci-Fi"
+  age_rating: "PG-13"
+
+song_metadata:
+  song_title: "Track Title"
+  artist: "Artist Name"
+  release_year: "2023"
+  genre: "Pop / Indie"
+  lyrics_gap_fill_lines: # Max 8 lines allowed per copyright policy
+    - "Line 1..."
+    - "Line 2..."
+
+science_takeaway:
+  core_finding: "Core Scientific Finding"
+  scientific_field: "Neuroscience"
+  real_world_application: "Practical Application"
+
+sensitive_topic_warning: "Optional note for sensitive or 18+ personal/philosophical themes."
+
+vocabulary:
+  - word: "Term"
+    definition: "definition ending with period."
+    example: "Example sentence using term."
+
+warm_up:
+  instruction: "Optional instruction text."
+  questions:
+    - "Question 1?"
+    - "Question 2?"
+
+round_1:
+  title: "Round 1 : Title"
+  badge: "Questions" # Falls back to target_grammar if omitted
+  instruction: "Optional instruction."
+  items:
+    - main: "Main question statement."
+      personal: "Optional personal application question."
+
+lets_speak_together:
+  title: "Let's Speak Together"
+  # Structured subfields option (recommended):
+  task_title: "The Roleplay / Synthesis Task"
+  task_description: "Scenario description for participants."
+  grammar_requirements:
+    - "At least one Second Conditional"
+    - "At least one Third Conditional"
+  # Rich-text fallback:
+  note: "<p>Custom HTML card or paragraph fallback.</p>"
+
+round_2:
+  title: "Round 2 : Title"
+  badge: "Conditionals"
+  instruction: "Optional instruction."
+  items:
+    - main: "Main statement or dilemma."
+      personal: "Optional personal question."
+
+mistakes:
+  - wrong: "Incorrect string or HTML snippet"
+    wrong_part: "Structured incorrect part"
+    right: "Corrected string or HTML snippet"
+    right_part: "Structured corrected part"
+    note: "Level-appropriate explanation note."
+---
+```
+
+## 7. Master Product Architecture & Visual Signature Matrix
+
+All COSYevents offerings exist as specialized product lines of the overarching ecosystem. Each event type and sub-club maintains distinct visual styling, thematic tokens, and specialized pedagogical structures:
+
+| Event Type / Sub-Club | Visual Identity & Palette | Structural Accent | Signature Pedagogical Structure |
+| :--- | :--- | :--- | :--- |
+| **Cinema Club** | Chalk & Gold / Film Noir (`#d97706`) | Clapperboard slates, scene stamps | Scene Screening, Film Trivia, Dialogue Deconstruction |
+| **Karaoke Club** | Vintage Plum & Cassette (`#8b5cf6`) | Cassette tape liners, lyric boxes | Lyric Translation, Rhyme & Pronunciation Drills, Song Analysis |
+| **Long Reads** | Literary Parlor Burgundy (`#7a1c1c`) | Parchment ledger, double borders | Dialogue Ledger, Extended Literary Passage, Philosophical Debates |
+| **Game Evenings** | Vibrant Emerald Boardgame (`#059669`) | Dice tokens, interactive prompt cards | Parlor Play Rules, Round Robin Mechanics, Interactive Gameplay |
+| **Keeping Up with Science** | Deep Emerald Science Journal (`#0F6E56`) | Lab monograph border, publication badges | Original Research Paper, Data Speculation, Health/Tech Thematics |
+| **I Couldn't Help But Wonder** | Introspective Terracotta/Violet (`#7c2d12`) | Reflection mirror, dilemma cards | Philosophical Dilemma, Introspective Horizon, 'Stop Translating' Rule |
+| **Debatable & Relatable** | Balanced Clay & Terracotta (`#993C1D`) | Scales watermark, point-counterpoint grids | Formal Pro/Con Debates, Structured Rebuttals, A vs B Flash Voting |
+| **Mind Matters** | Subconscious Rose & Plum (`#993556`) | Profile dossiers, neuroscience insights | Behavioral Prompts, Case Scenarios, Emotional Intelligence Reflection |
+| **The Greatest Quotes** | Parisian Café Espresso (`#534AB7`) | Napkin & coaster borders, vintage typography | Philosophers' Ledger, Epigram Deconstruction, Historical Context |
+| **Let's Celebrate** | Festive Amber & Gold (`#BA7517`) | Gift tags, ribbon banners | Cultural Customs, Celebration Traditions, Holiday Reflection |
+| **My Life With & Without** | Counterfactual Sage (`#3B6D11`) | Life ledger balance sheets | Dual-Reality Comparisons, Habit Experiments, Counterfactual Prompts |
+| **If You Were** | Imaginative Cerulean (`#2563EB`) | Perspective mirror boxes | Role Immersion, Empathy Projection, Alternative Persona Scenarios |
+| **Basic Speaking Club** | Clear Pedagogical Teal (`#0D9488`) | High-clarity flashcards, guided speech frames | Foundation Warm-up, Guided Conversational Scaffolding, Vocabulary Expansion |

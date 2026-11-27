@@ -1,0 +1,213 @@
+/* Night-mode corrections. Loaded last so it wins over the sheets it repairs.
+   Light mode is untouched by everything in this file. */
+
+/* ── Bespoke session themes paint light surfaces with !important and have no
+      night counterpart: the ink flips but the paper stays pastel (1.0:1).
+      Night mode renders those cards on the shared night surfaces instead. ── */
+:root[data-theme="dark"] body[class*="theme-"] .vocab-card,
+:root[data-theme="dark"] body[class*="theme-"] .round-block,
+:root[data-theme="dark"] body[class*="theme-"] .debate-duel-box,
+:root[data-theme="dark"] body[class*="theme-"] .sensitive-box,
+:root[data-theme="dark"] body[class*="theme-"] .ce-slide-item,
+:root[data-theme="dark"] body[class*="theme-"] .science-journal-box,
+:root[data-theme="dark"] body[class*="theme-"] .philosophers-ledger {
+  background: #232c24 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #e8f0e9 !important;
+}
+
+:root[data-theme="dark"] body[class*="theme-"] .vocab-card *,
+:root[data-theme="dark"] body[class*="theme-"] .round-block *,
+:root[data-theme="dark"] body[class*="theme-"] .debate-duel-box *,
+:root[data-theme="dark"] body[class*="theme-"] .ce-slide-item * {
+  color: #e8f0e9 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+:root[data-theme="dark"] body[class*="theme-"] .vocab-card h4,
+:root[data-theme="dark"] body[class*="theme-"] .round-header,
+:root[data-theme="dark"] body[class*="theme-"] .round-header * {
+  color: #9fd3aa !important;
+}
+
+/* Section headings keep the accent but at a night-legible lightness */
+:root[data-theme="dark"] body[class*="theme-"] .section-title { color: #b7dcc0 !important; }
+
+/* ── Inks that never got a night value ── */
+:root[data-theme="dark"] .error-links a,
+body.theme-dark .error-links a { color: #9fd3aa !important; }
+
+:root[data-theme="dark"] .debate-duel-item strong { color: #9fb3a2 !important; }
+:root[data-theme="dark"] .debate-duel-item span { color: #dfe9e0 !important; }
+
+/* ── Solid fills carrying white labels ── */
+.join-btn,
+.whatsapp-btn { background: #0f6b35 !important; color: #ffffff !important; }
+a[href*="wa.me"]:not(footer a),
+a[href*="whatsapp"]:not(footer a) { background: #0f6b35 !important; color: #ffffff !important; }
+.mistake-mod-label,
+[class*="mod-badge"] { background: #9a3412 !important; color: #ffffff !important; }
+
+/* Tailwind-ish pastel panels pasted into the copy */
+:root[data-theme="dark"] [class*="bg-violet-100"],
+:root[data-theme="dark"] [class*="bg-pink-50"],
+:root[data-theme="dark"] [class*="bg-orange-50"],
+:root[data-theme="dark"] [class*="bg-stone-50"] { background: #232c24 !important; }
+
+/* ── Footers of bespoke themes stay on the light surface ── */
+:root[data-theme="dark"] footer,
+:root[data-theme="dark"] .footer-inner { background: #1a1f1a !important; color: #c8d8c9; }
+:root[data-theme="dark"] .footer-links-col h3,
+:root[data-theme="dark"] .footer-links-col h5,
+:root[data-theme="dark"] .fb-name,
+:root[data-theme="dark"] .footer-brand .fb-name { color: #e8f0e9 !important; }
+:root[data-theme="dark"] .footer-links-col a,
+:root[data-theme="dark"] .footer-brand p,
+:root[data-theme="dark"] .footer-bottom { color: #a9bcac !important; }
+
+/* ── Slide/overview blocks: pastel panels with flipped ink ── */
+:root[data-theme="dark"] .ce-slide-item > div,
+:root[data-theme="dark"] .ce-slide-item > div > div,
+:root[data-theme="dark"] .parlor-ledger,
+:root[data-theme="dark"] .ce-slide-overview-wrapper { background: #232c24 !important; }
+:root[data-theme="dark"] .ce-slide-item > div,
+:root[data-theme="dark"] .ce-slide-item > div > div,
+:root[data-theme="dark"] .parlor-ledger { color: #e8f0e9 !important; border-color: rgba(255,255,255,.14) !important; }
+
+/* ── Wonder voiceover widget is painted from JS with fixed pastels ── */
+:root[data-theme="dark"] .wonder-voiceover-player,
+:root[data-theme="dark"] .wonder-voiceover-player > div,
+:root[data-theme="dark"] .wonder-voiceover-player > div > div { background: #232c24 !important; color: #e8f0e9 !important; }
+:root[data-theme="dark"] .speech-mode-badge { background: #3b3550 !important; color: #e9e5ff !important; }
+:root[data-theme="dark"] .clapper-meta-label { color: #F0B357 !important; }
+
+/* ── Chips and small inks that keep their light values at night ── */
+:root[data-theme="dark"] .vocab-pill,
+:root[data-theme="dark"] .vocab-grid span { background: #2c352d !important; color: #dfe9e0 !important; border-color: rgba(255,255,255,.14) !important; }
+
+:root[data-theme="dark"] .btn-trailer,
+:root[data-theme="dark"] a.btn-trailer { color: #F0B357 !important; }
+
+:root[data-theme="dark"] .sidebar-promo,
+:root[data-theme="dark"] .sidebar-promo * { color: #F08968 !important; }
+
+:root[data-theme="dark"] .error-container .error-code { color: #9fd3aa !important; }
+:root[data-theme="dark"] .error-links { color: #9fd3aa !important; }
+
+/* science-light keeps a white page under a dark palette */
+:root[data-theme="dark"] body.theme-science-light,
+:root[data-theme="dark"] body.theme-science-light main.content-container,
+:root[data-theme="dark"] body.theme-science-light .content-container {
+  background: #1a1f1a !important; color: #e8f0e9 !important;
+}
+:root[data-theme="dark"] body.theme-science-light h1,
+:root[data-theme="dark"] body.theme-science-light h2,
+:root[data-theme="dark"] body.theme-science-light h3,
+:root[data-theme="dark"] body.theme-science-light h4,
+:root[data-theme="dark"] body.theme-science-light p,
+:root[data-theme="dark"] body.theme-science-light li,
+:root[data-theme="dark"] body.theme-science-light span:not([class]) { color: #e8f0e9 !important; }
+
+/* Quotes themes use a pastel accent as a button *fill* under white labels
+   (2.1:1 in both modes). Keep the pastel for borders, darken the fill. */
+body[class*="theme-quotes-"] .btn-primary,
+body[class*="theme-quotes-"] #ledger-next-btn,
+body[class*="theme-quotes-"] .ledger-next-btn {
+  background-color: color-mix(in srgb, var(--quotes-theme-accent, #B45309) 45%, #000000) !important;
+  color: #ffffff !important;
+}
+
+/* Footer brand text must follow the page ink, never a fixed light value */
+.footer-brand .fb-name,
+.footer-brand .fb-logo span,
+.footer-links-col h3,
+.footer-links-col h5 {
+  background: transparent !important;
+  color: var(--ink, #28251d) !important;
+}
+
+/* Cinema slates are dark surfaces: their link accent must be light */
+.cinema-slate-box .btn-trailer,
+.cinema-slate-box .theme-video-link a { color: #F0B357 !important; }
+
+/* ── Second wave: surfaces that kept light paper under the night palette ── */
+:root[data-theme="dark"] .history-session,
+:root[data-theme="dark"] .history-body,
+:root[data-theme="dark"] .perspective-mirror-box,
+:root[data-theme="dark"] .perspective-mirror-grid > div,
+:root[data-theme="dark"] .calc-card,
+:root[data-theme="dark"] #quiz-result,
+:root[data-theme="dark"] .ev-card,
+:root[data-theme="dark"] .event-card,
+:root[data-theme="dark"] body[class*="theme-celebrate-"] main.content-container,
+:root[data-theme="dark"] body[class*="theme-celebrate-"] .content-container {
+  background: #232c24 !important;
+  color: #e8f0e9 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+:root[data-theme="dark"] .history-session h4,
+:root[data-theme="dark"] .perspective-mirror-grid h4,
+:root[data-theme="dark"] .perspective-mirror-grid strong { color: #e8f0e9 !important; }
+:root[data-theme="dark"] body[class*="theme-celebrate-"] h1,
+:root[data-theme="dark"] body[class*="theme-celebrate-"] h2,
+:root[data-theme="dark"] body[class*="theme-celebrate-"] h3,
+:root[data-theme="dark"] body[class*="theme-celebrate-"] p,
+:root[data-theme="dark"] body[class*="theme-celebrate-"] li { color: #e8f0e9 !important; }
+:root[data-theme="dark"] .ev-card *,
+:root[data-theme="dark"] .event-card * { color: #dfe9e0 !important; }
+
+/* Quiz "correct" chip used the WhatsApp green under white text (1.98:1) */
+#quiz-result,
+.quiz-result,
+.calc-card .correct { background: #0f6b35 !important; color: #ffffff !important; }
+#quiz-result * { color: #ffffff !important; }
+:root[data-theme="dark"] .ev-card,
+:root[data-theme="dark"] .ev-card h3,
+:root[data-theme="dark"] .ev-card h4,
+:root[data-theme="dark"] .ev-card p { color: #dfe9e0 !important; }
+
+/* Active filter pills keep their light-mode brown ink on a dark chip */
+:root[data-theme="dark"] .sd-pill.sd-active,
+:root[data-theme="dark"] .sd-pill[aria-pressed="true"],
+:root[data-theme="dark"] .sd-pill.is-active { background: #4a3a20 !important; color: #F6C177 !important; }
+
+/* Buttons that fill with --indigo need white ink, not a tinted one */
+a.view-btn[style*="--indigo"],
+a.view-btn[style*="--indigo"] * { color: #ffffff !important; }
+
+/* Onboarding guide cards were hard-coded white */
+:root[data-theme="dark"] #onboarding-guide div,
+:root[data-theme="dark"] #onboarding-guide p,
+:root[data-theme="dark"] #onboarding-guide strong {
+  background-color: transparent !important;
+  color: #dfe9e0 !important;
+}
+:root[data-theme="dark"] #onboarding-guide > div > div,
+:root[data-theme="dark"] #onboarding-guide .onboarding-card {
+  background: #232c24 !important;
+  border-color: rgba(255,255,255,0.14) !important;
+}
+
+/* Footer links / ecosystem note keep light-mode accents on the night footer */
+:root[data-theme="dark"] footer a,
+:root[data-theme="dark"] footer p,
+:root[data-theme="dark"] .cosy-gated-ecosystem-note a { color: #A9CFB3 !important; }
+:root[data-theme="dark"] .cosy-gated-ecosystem-note a { color: #F08968 !important; }
+
+/* Mind-deck CTA paints the theme accent under white text (2.6:1) */
+:root[data-theme="dark"] body[class*="theme-mind"] #ledger-next-btn,
+:root[data-theme="dark"] body[class*="theme-mind"] .philosophers-ledger .btn-primary {
+  background: color-mix(in srgb, var(--mind-theme-accent, #5D4037) 55%, #000000) !important;
+  color: #ffffff !important;
+}
+
+/* Wonder pages are dark by design: the perspective panel must not stay cream */
+body[class*="theme-wonder-"] .cosy-perspective-panel,
+body[class*="theme-wonder-"] .panel-perspective-mirror,
+body[class*="theme-wonder-"] .wonder-column-item {
+  background: #221a2d !important;
+  color: #e8e4ef !important;
+  border-color: #3a3245 !important;
+}
+body[class*="theme-wonder-"] .cosy-perspective-panel *,
+body[class*="theme-wonder-"] .wonder-column-item * { color: #e8e4ef !important; }

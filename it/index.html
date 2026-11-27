@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSYevents : Eventi linguistici dal vivo</title>
+                        <script src="../shared/js/cosy-theme.js"></script>
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/fonts.css">
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
+  <link rel="stylesheet" href="../shared/css/hub.css">
+  <link rel="stylesheet" href="../shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="../styles/calendar.css">
+  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/hero.css">
+  <meta name="description" content="Club di conversazione, serate cinema e attività linguistiche interattive in inglese, francese, italiano, russo e greco.">
+  <link rel="icon" href="../shared/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../shared/assets/apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#416b49">
+  <meta property="og:title" content="COSYevents : Eventi linguistici dal vivo">
+  <meta property="og:description" content="Club di conversazione, serate cinema e attività linguistiche interattive in inglese, francese, italiano, russo e greco.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cosylanguages.github.io/COSYevents/shared/assets/og-image.png">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://cosylanguages.github.io/COSYevents/it/">
+<link rel="alternate" hreflang="el" href="https://cosylanguages.github.io/COSYevents/el/"/>
+<link rel="alternate" hreflang="en" href="https://cosylanguages.github.io/COSYevents/index.html"/>
+<link rel="alternate" hreflang="fr" href="https://cosylanguages.github.io/COSYevents/fr/"/>
+<link rel="alternate" hreflang="it" href="https://cosylanguages.github.io/COSYevents/it/"/>
+<link rel="alternate" hreflang="ru" href="https://cosylanguages.github.io/COSYevents/ru/"/>
+<link rel="alternate" hreflang="x-default" href="https://cosylanguages.github.io/COSYevents/index.html"/>
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/ecosystem-strip.css">
+  <link rel="stylesheet" href="../shared/css/club-reviews.css">
+  <link rel="stylesheet" href="../shared/css/dark-fixes.css">
+</head>
+<body>
+
+  <div data-ecosystem-strip data-self="events"></div>
+
+  <div class="ev-topbar">
+    <a class="ev-brand" href="index.html" aria-label="Home COSYevents">
+      <img src="../shared/images/logo.png" alt="" width="30" height="30">
+      <span>COSYevents</span>
+    </a>
+    <div class="ev-topbar-tools">
+      <div data-cosy-account></div>
+      <div data-ce-lang-switcher></div>
+      <button type="button" class="ev-theme-btn" data-cosy-theme-toggle aria-label="Switch theme">🌙</button>
+    </div>
+  </div>
+
+  <header class="ev-hero" id="top">
+    <div class="ev-hero-inner">
+      <div class="ev-hero-copy">
+        <p data-cms-id="p-1-0c1cd8" class="ev-eyebrow">🎉 Eventi linguistici dal vivo</p>
+        <h1 data-cms-id="h1-1-8c1dc9" class="ev-title">Parla con gli altri, <em>dal vivo.</em></h1>
+        <p data-cms-id="p-2-8d2583" class="ev-sub">
+          Club di conversazione, serate cinema e attività linguistiche interattive in inglese, francese, italiano, russo e greco.
+        </p>
+        <div class="ev-actions">
+          <a href="#calendar-controls" class="ev-btn ev-btn-primary">Vedi il calendario</a>
+          <a href="https://wa.me/330766784195?text=Ciao%21%20Vorrei%20iscrivermi%20a%20una%20sessione%20COSYevents." target="_blank" rel="noopener" class="ev-btn ev-btn-secondary">💬 Iscriviti su WhatsApp</a>
+        <a href="#reviews" class="ev-link">Recensioni</a>
+        </div>
+        <nav class="ev-chips" aria-label="Categorie di eventi">
+          <a href="../speaking-clubs/index.html" class="ev-chip">💬 Club di conversazione</a>
+          <a href="../cinema-nights/index.html" class="ev-chip">🎬 Cinema</a>
+          <a href="../karaoke-club.html" class="ev-chip">🎤 Karaoke</a>
+          <a href="../game-evenings.html" class="ev-chip">🎲 Giochi</a>
+          <a href="../long-reads.html" class="ev-chip">📚 Letture lunghe</a>
+        </nav>
+      </div>
+
+      <aside class="ev-next" aria-labelledby="ev-next-title">
+        <div class="ev-next-head">
+          <span class="ev-next-icon" aria-hidden="true">🎟️</span>
+          <h2 id="ev-next-title">Prossimi</h2>
+        </div>
+        <ul class="ev-next-list" data-next-events aria-live="polite">
+          <li data-cms-id="li-1-df316e" class="ev-next-empty">…</li>
+        </ul>
+        <a href="#calendar-controls" class="ev-next-foot">Apri il calendario completo →</a>
+      </aside>
+    </div>
+  </header>
+
+  <main class="hub-main">
+    <!-- Daily Spotlights Section -->
+    <section class="daily-spotlights-section">
+      <div id="daily-spotlights-root"></div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="calendar-controls" id="calendar-controls">
+      <div class="calendar-filters-row">
+        <div class="type-filters" aria-label="Filtra per tipo di evento">
+          <button class="filter-btn active" data-type="all">Tutti gli eventi</button>
+          <button class="filter-btn" data-type="speaking-club">Club di conversazione</button>
+          <button class="filter-btn" data-type="cinema-night">Serate Cinema</button>
+          <button class="filter-btn" data-type="special-event">Eventi speciali</button>
+        </div>
+
+        <div class="language-filters-group" role="group" aria-labelledby="lang-filter-label">
+          <span id="lang-filter-label" class="filter-group-label">Lingue dell'evento:</span>
+          <div id="language-filter-chips" class="language-chips">
+            <button type="button" class="lang-chip active" data-lang="all" aria-pressed="true">Tutte</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monthly Calendar View -->
+    <section class="calendar-section">
+      <div class="month-nav-header">
+        <button id="prev-month-btn" class="nav-btn" aria-label="Mese precedente">‹</button>
+        <button id="today-month-btn" class="nav-btn today-btn" aria-label="Mese corrente">Oggi 📅</button>
+        <h2 id="calendar-month-title" class="month-title">Ottobre 2026</h2>
+        <button id="next-month-btn" class="nav-btn" aria-label="Mese successivo">›</button>
+      </div>
+
+      <div class="calendar-grid-container">
+        <div class="calendar-weekdays">
+          <div class="weekday">Lun</div>
+          <div class="weekday">Mar</div>
+          <div class="weekday">Mer</div>
+          <div class="weekday">Gio</div>
+          <div class="weekday">Ven</div>
+          <div class="weekday">Sab</div>
+          <div class="weekday">Dom</div>
+        </div>
+        <div id="calendar-days-grid" class="calendar-days-grid">
+          <!-- Rendered dynamically by calendar.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events List -->
+    <section class="calendar-section">
+      <h2 class="section-title">
+        <span>Prossimi eventi</span>
+        <a href="../past-events/index.html" class="btn-outline" style="font-size:0.8rem;">Archivio eventi passati →</a>
+      </h2>
+      <div id="upcoming-events-list" class="upcoming-events-grid">
+        <!-- Rendered dynamically by calendar.js -->
+      </div>
+    </section>
+
+    <!-- Evergreen Italian Karaoke List Section -->
+    <section id="italian-karaoke-archive" class="calendar-section" style="margin-top: 3rem;">
+      <div style="background: var(--sage-mist, #E8F0EC); border-radius: var(--cosy-radius, 16px); padding: 2.5rem 1.5rem;">
+        <span class="pill-sm" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--teal, #0F6E56);">🇮🇹 Sessioni in Italiano</span>
+        <h2 data-cms-id="h2-1-72dd12" class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem; border: none; padding: 0;">Brani e Sfide Musica Karaoke</h2>
+
+        <div style="overflow-x: auto; background: white; border-radius: 12px; border: 1px solid var(--border, rgba(0,0,0,0.1));">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+            <thead>
+              <tr style="background: var(--sage-pale, #F0F5F1); border-bottom: 1px solid var(--border, rgba(0,0,0,0.1));">
+                <th data-cms-id="th-1-34afd9" style="padding: 1rem; font-size: 0.8rem; text-transform: uppercase;">Titolo Sessione</th>
+                <th data-cms-id="th-2-c25b74" style="padding: 1rem; font-size: 0.8rem; text-transform: uppercase;">Formato</th>
+                <th data-cms-id="th-3-26e3c6" style="padding: 1rem; font-size: 0.8rem; text-transform: uppercase;">Livello / Dettagli</th>
+                <th data-cms-id="th-4-f18824" style="padding: 1rem; font-size: 0.8rem; text-transform: uppercase;">Azione</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border, rgba(0,0,0,0.06));">
+                <td data-cms-id="td-1-a93548" style="padding: 1rem; font-weight: 700;">Massimo Ranieri Challenge</td>
+                <td data-cms-id="td-2-1b590b" style="padding: 1rem;">Karaoke Challenge</td>
+                <td data-cms-id="td-3-0be711" style="padding: 1rem;">Chi sarà con te &amp; L'amore è un attimo</td>
+                <td style="padding: 1rem;"><a href="../sessions/karaoke-club/challenges/it/massimo-ranieri-challenge/index.html" class="btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Vedi Sfida ➔</a></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border, rgba(0,0,0,0.06));">
+                <td data-cms-id="td-4-707a47" style="padding: 1rem; font-weight: 700;">Due grosse lacrime bianche</td>
+                <td data-cms-id="td-5-cb9e8e" style="padding: 1rem;">Karaoke Session</td>
+                <td data-cms-id="td-6-abd310" style="padding: 1rem;">Iva Zanicchi</td>
+                <td style="padding: 1rem;"><a href="../sessions/karaoke-club/it/due-grosse-lacrime-bianche.html" class="btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Vedi Sessione ➔</a></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border, rgba(0,0,0,0.06));">
+                <td data-cms-id="td-7-380ab4" style="padding: 1rem; font-weight: 700;">L'uomo che amava le donne</td>
+                <td data-cms-id="td-8-cb9e8e" style="padding: 1rem;">Karaoke Session</td>
+                <td data-cms-id="td-9-3c04ab" style="padding: 1rem;">Nina Zilli</td>
+                <td style="padding: 1rem;"><a href="../sessions/karaoke-club/it/luomo-che-amava-le-donne.html" class="btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Vedi Sessione ➔</a></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border, rgba(0,0,0,0.06));">
+                <td data-cms-id="td-10-e2a010" style="padding: 1rem; font-weight: 700;">Un raggio di sole</td>
+                <td data-cms-id="td-11-cb9e8e" style="padding: 1rem;">Karaoke Session</td>
+                <td data-cms-id="td-12-942f15" style="padding: 1rem;">Jovanotti</td>
+                <td style="padding: 1rem;"><a href="../sessions/karaoke-club/it/un-raggio-di-sole.html" class="btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Vedi Sessione ➔</a></td>
+              </tr>
+              <tr>
+                <td data-cms-id="td-13-5070f7" style="padding: 1rem; font-weight: 700;">Un'altra estate</td>
+                <td data-cms-id="td-14-cb9e8e" style="padding: 1rem;">Karaoke Session</td>
+                <td data-cms-id="td-15-37a1cd" style="padding: 1rem;">Diodato</td>
+                <td style="padding: 1rem;"><a href="../sessions/karaoke-club/it/unatta-estate.html" class="btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Vedi Sessione ➔</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Merged Explore Section -->
+    <section class="explore-section">
+      <h2 data-cms-id="h2-2-6eda2c" class="section-title">Esplora i tipi di eventi</h2>
+      <div class="explore-grid">
+        <a href="../speaking-clubs/index.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">💬</span>
+            <span class="explore-badge">Dal vivo &amp; Interattivo</span>
+          </div>
+          <h3 data-cms-id="h3-1-c6de33" class="explore-card-title">Club di conversazione</h3>
+          <p data-cms-id="p-3-35e50e" class="explore-card-desc">Discussioni in piccoli gruppi per argomenti, calibrazione dei livelli CEFR e spunti di vocabolario.</p>
+          <div class="explore-card-footer"><span>Esplora i club</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../cinema-nights/index.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🎬</span>
+            <span class="explore-badge">Multimediale</span>
+          </div>
+          <h3 data-cms-id="h3-2-004191" class="explore-card-title">Serate Cinema</h3>
+          <p data-cms-id="p-4-b535d8" class="explore-card-desc">Immersione in film in lingua originale, analisi delle scene, schede di vocabolario e dibattiti post-visione.</p>
+          <div class="explore-card-footer"><span>Esplora il cinema</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../karaoke-club.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🎤</span>
+            <span class="explore-badge">Musica</span>
+          </div>
+          <h3 data-cms-id="h3-3-695381" class="explore-card-title">Karaoke Club</h3>
+          <p data-cms-id="p-5-855a92" class="explore-card-desc">Immersione musicale interattiva, pronuncia dei testi, schede di vocabolario e canto di gruppo.</p>
+          <div class="explore-card-footer"><span>Esplora il karaoke</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../game-evenings.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">🎲</span>
+            <span class="explore-badge">Giochi</span>
+          </div>
+          <h3 data-cms-id="h3-4-1f779c" class="explore-card-title">Serate Giochi</h3>
+          <p data-cms-id="p-6-db2943" class="explore-card-desc">Giochi da tavolo poliglotta, quiz a squadre, sfide linguistiche strategiche e attività sociali.</p>
+          <div class="explore-card-footer"><span>Esplora i giochi</span><span class="arrow">→</span></div>
+        </a>
+
+        <a href="../long-reads.html" class="explore-card">
+          <div class="explore-card-top">
+            <span class="explore-card-icon" aria-hidden="true">📚</span>
+            <span class="explore-badge">Letteratura</span>
+          </div>
+          <h3 data-cms-id="h3-5-8313ea" class="explore-card-title">Letture lunghe</h3>
+          <p data-cms-id="p-7-de4ac7" class="explore-card-desc">Analisi approfondita di saggi, racconti brevi, estratti di articoli e opere letterarie.</p>
+          <div class="explore-card-footer"><span>Esplora la letteratura</span><span class="arrow">→</span></div>
+        </a>
+
+      </div>
+
+      <p data-cms-id="p-8-a56f5f" class="past-events-prompt">Cerchi materiali di sessioni passate, guide o schede? <a href="../past-events/index.html">Sfoglia l'archivio degli eventi passati →</a></p>
+    </section>
+
+    <!-- Club Reviews Section -->
+    <div id="reviews" data-club-reviews></div>
+  </main>
+
+  <!-- Event Detail Modal -->
+  <div id="event-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-event-title" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-event-title" class="event-card-title" style="margin:0;">Dettagli dell'evento</h3>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Chiudi">×</button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-event-meta" style="margin-bottom: 1rem;"></div>
+        <p id="modal-event-desc" style="margin-bottom: 1rem; color: var(--cosy-text);"></p>
+        <div id="modal-event-host" class="event-host-info"></div>
+        <div id="modal-timezone-box" class="timezone-converter-box"></div>
+        <div class="modal-actions">
+          <a id="modal-reg-btn" href="#" target="_blank" rel="noopener" class="btn-primary">
+            Iscriviti tramite l'Hub principale (WhatsApp / Telegram)
+          </a>
+          <a id="modal-gcal-btn" href="#" target="_blank" rel="noopener" class="btn-outline">
+            📅 Aggiungi a Google Calendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="hub-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand-title">COSYevents</div>
+        <p data-cms-id="p-9-26cb74" class="footer-brand-desc">Club di conversazione, serate cinema ed eventi linguistici nell'ecosistema COSYlanguages.</p>
+      </div>
+      <div class="footer-links-col">
+        <h5 data-cms-id="h5-1-197242">Ecosistema</h5>
+        <a href="https://cosylanguages.github.io/COSYlanguages/">COSYlanguages</a>
+        <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a>
+        <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>
+      </div>
+      <div class="footer-links-col">
+        <h5 data-cms-id="h5-2-f8b51b">Contatto &amp; Iscrizione</h5>
+        <a href="https://wa.me/330766784195" target="_blank" rel="noopener">WhatsApp 📱</a>
+        <a href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener">Telegram ✈️</a>
+        <a href="../privacy.html">Informativa sulla privacy e note legali</a>
+      </div>
+    </div>
+    <div class="footer-bottom">COSYevents &copy; Ecosistema COSYlanguages. Tutti i diritti riservati.</div>
+  </footer>
+
+  <script src="../shared/js/cosyevents-lang.js" defer></script>
+  <script src="../shared/js/cosy-auth.js" defer></script>
+  <script src="../shared/calendar/calendar-i18n.js"></script>
+  <script src="../shared/calendar/calendar.js"></script>
+  <script src="../shared/js/daily-spotlights.js"></script>
+  <script src="../shared/js/hero-next.js" defer></script>
+  <script src="../shared/js/club-reviews.js"></script>
+  <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
+<script src="../shared/js/cms-boot.js" defer></script>
+</body>
+</html>

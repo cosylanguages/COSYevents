@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSYevents: live language events</title>
+<link rel="canonical" href="https://cosylanguages.github.io/COSYevents/index.html"/>
+<link rel="alternate" hreflang="el" href="https://cosylanguages.github.io/COSYevents/el/"/>
+<link rel="alternate" hreflang="en" href="https://cosylanguages.github.io/COSYevents/index.html"/>
+<link rel="alternate" hreflang="fr" href="https://cosylanguages.github.io/COSYevents/fr/"/>
+<link rel="alternate" hreflang="it" href="https://cosylanguages.github.io/COSYevents/it/"/>
+<link rel="alternate" hreflang="ru" href="https://cosylanguages.github.io/COSYevents/ru/"/>
+<link rel="alternate" hreflang="x-default" href="https://cosylanguages.github.io/COSYevents/index.html"/>
+  <meta name="description" content="Speaking clubs, cinema nights, karaoke and games in English, French, Italian, Russian and Greek. Check the calendar, pick your level, and join on WhatsApp or Telegram.">
+  <script src="shared/js/cosy-theme.js"></script>
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/fonts.css">
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
+  <link rel="stylesheet" href="shared/css/hub.css">
+  <link rel="stylesheet" href="shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="shared/css/club-reviews.css">
+  <link rel="stylesheet" href="styles/calendar.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/daily-directory.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/ecosystem-strip.css">
+  <link rel="stylesheet" href="shared/css/dark-fixes.css">
+</head>
+<body>
+
+  <div data-ecosystem-strip data-self="events"></div>
+
+  <div class="ev-topbar">
+    <a class="ev-brand" href="index.html" aria-label="COSYevents home">
+      <img src="shared/images/logo.png" alt="" width="30" height="30">
+      <span>COSYevents</span>
+    </a>
+    <div class="ev-topbar-tools">
+      <div data-ce-lang-switcher></div>
+      <button type="button" class="ev-theme-btn" data-cosy-theme-toggle aria-label="Switch theme">🌙</button>
+    </div>
+  </div>
+
+  <header class="ev-hero" id="top">
+    <div class="ev-hero-inner">
+      <div class="ev-hero-copy">
+        <p data-cms-id="p-1-416f98" class="ev-eyebrow">🎉 Live language events</p>
+        <h1 data-cms-id="h1-1-2ffe83" class="ev-title">Speak with others, <em>live.</em></h1>
+        <p data-cms-id="p-2-bebaf9" class="ev-sub">
+          Speaking clubs, cinema nights, karaoke and games in English, French, Italian, Russian and Greek. Check the calendar, pick your level, and join on WhatsApp or Telegram.
+        </p>
+        <div class="ev-actions">
+          <a href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20join%20a%20COSYevents%20session." target="_blank" rel="noopener" class="ev-btn ev-btn-primary">💬 Join now</a>
+          <a href="#calendar-controls" class="ev-btn ev-btn-secondary">See the calendar</a>
+          <a href="#tariff-calculator" class="ev-link">Pricing</a>
+          <a href="#reviews" class="ev-link">Reviews</a>
+        </div>
+        <nav class="ev-chips" aria-label="Event categories">
+          <a href="speaking-clubs/index.html" class="ev-chip">🗣️ Speaking Clubs</a>
+          <a href="cinema-nights/index.html" class="ev-chip">🎬 Cinema</a>
+          <a href="karaoke-club.html" class="ev-chip">🎤 Karaoke</a>
+          <a href="game-evenings.html" class="ev-chip">🎲 Games</a>
+          <a href="long-reads.html" class="ev-chip">📚 Long Reads</a>
+        </nav>
+      </div>
+
+      <aside class="ev-next" aria-labelledby="ev-next-title">
+        <div class="ev-next-head">
+          <span class="ev-next-icon" aria-hidden="true">🎟️</span>
+          <h2 id="ev-next-title">Next up</h2>
+        </div>
+        <ul class="ev-next-list" data-next-events aria-live="polite">
+          <li data-cms-id="li-1-4badf7" class="ev-next-empty">Loading the schedule…</li>
+        </ul>
+        <a href="#calendar-controls" class="ev-next-foot">Open the full calendar →</a>
+      </aside>
+    </div>
+  </header>
+
+  <main class="hub-main">
+    <div data-ce-lang-resume></div>
+
+    <!-- Today's speaking wheel: one club a day, picked by weekday -->
+    <style>
+      .today-banner { display: block; margin: 0 0 1.5rem; }
+      .today-banner a { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem;
+        padding: 1rem 1.25rem; border-radius: 16px; text-decoration: none; color: #fff;
+        background: linear-gradient(135deg, #416b49, #2f4f36); font-weight: 600; }
+      .today-banner .tb-kicker { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; opacity: .82; font-weight: 700; }
+      .today-banner .tb-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; }
+      .today-banner .tb-cta { background: rgba(255,255,255,.16); padding: .45rem .9rem; border-radius: 999px; font-size: .85rem; }
+    </style>
+    <section class="today-banner" data-daily-wheel-banner hidden>
+      <a href="today.html">
+        <span>
+          <span class="tb-kicker">🎡 Today's speaking wheel</span>
+          <span class="tb-title" data-wheel-title>—</span>
+        </span>
+        <span class="tb-cta">Spin today's prompts →</span>
+      </a>
+    </section>
+
+    <!-- Daily Spotlights Section. data-directory="true" appends the compact "Daily across the COSY
+         ecosystem" line inside the container, mirroring the hub daily strip. -->
+    <section class="daily-spotlights-section">
+      <div id="daily-spotlights-root" data-directory="true"></div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="calendar-controls" id="calendar-controls">
+      <div class="calendar-filters-row">
+        <div class="type-filters" aria-label="Filter by Event Type">
+          <button class="filter-btn active" data-type="all">All Events</button>
+          <button class="filter-btn" data-type="speaking-club">Speaking Clubs</button>
+          <button class="filter-btn" data-type="cinema-night">Cinema Nights</button>
+          <button class="filter-btn" data-type="special-event">Special Events</button>
+        </div>
+
+        <div class="select-filter-group">
+          <label for="language-filter" class="select-filter-label">Event Language:</label>
+          <select id="language-filter" class="calendar-select">
+            <option value="all">All Languages</option>
+            <option value="English">English</option>
+            <option value="French">French</option>
+            <option value="Italian">Italian</option>
+            <option value="Russian">Russian</option>
+            <option value="Greek">Greek</option>
+          </select>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Monthly Calendar View -->
+    <section class="calendar-section">
+      <div class="month-nav-header">
+        <button id="prev-month-btn" class="nav-btn" aria-label="Previous Month">‹</button>
+        <button id="today-month-btn" class="nav-btn today-btn" aria-label="Current Month">Today 📅</button>
+        <h2 id="calendar-month-title" class="month-title">September 2026</h2>
+        <button id="next-month-btn" class="nav-btn" aria-label="Next Month">›</button>
+      </div>
+
+      <div class="calendar-grid-container">
+        <div class="calendar-weekdays">
+          <div class="weekday">Mon</div>
+          <div class="weekday">Tue</div>
+          <div class="weekday">Wed</div>
+          <div class="weekday">Thu</div>
+          <div class="weekday">Fri</div>
+          <div class="weekday">Sat</div>
+          <div class="weekday">Sun</div>
+        </div>
+        <div id="calendar-days-grid" class="calendar-days-grid">
+          <!-- Rendered dynamically by calendar.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Public Event Catalog & Upcoming Sessions -->
+    <section class="calendar-section">
+      <h2 data-cms-id="h2-1-1474e4" class="section-title section-title-wrap">
+        <span>Public Session Schedule</span>
+      </h2>
+      <div id="upcoming-events-list" class="upcoming-events-grid">
+        <!-- Rendered dynamically by calendar.js: title, date, level, and one-line summary always visible -->
+      </div>
+    </section>
+
+    <!-- Explore Event Types Section -->
+    <section class="explore-events-section">
+      <h2 data-cms-id="h2-2-4581ad" class="section-title">Explore event types</h2>
+      <div class="explore-grid">
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-speech" aria-hidden="true">💬</span>
+              <h3 data-cms-id="h3-1-232f08" class="explore-card-title">Speaking Clubs</h3>
+            </div>
+            <p data-cms-id="p-3-56250c" class="explore-card-desc">Topic-driven group discussions with CEFR level calibration.</p>
+          </div>
+          <a href="speaking-clubs/index.html" class="explore-card-cta">Explore Speaking Clubs →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-film" aria-hidden="true">🎬</span>
+              <h3 data-cms-id="h3-2-d09c15" class="explore-card-title">Cinema Nights</h3>
+            </div>
+            <p data-cms-id="p-4-84107f" class="explore-card-desc">Original-language film screenings &amp; scene study.</p>
+          </div>
+          <a href="cinema-nights/index.html" class="explore-card-cta">Explore Cinema Nights →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-music" aria-hidden="true">🎤</span>
+              <h3 data-cms-id="h3-3-695381" class="explore-card-title">Karaoke Club</h3>
+            </div>
+            <p data-cms-id="p-5-ca7860" class="explore-card-desc">Singing sessions with guided lyric pronunciation &amp; vocabulary primers.</p>
+          </div>
+          <a href="karaoke-club.html" class="explore-card-cta">Explore Karaoke Club →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-dice" aria-hidden="true">🎲</span>
+              <h3 data-cms-id="h3-4-d7b54a" class="explore-card-title">Game Evenings</h3>
+            </div>
+            <p data-cms-id="p-6-8b6fed" class="explore-card-desc">Polyglot board games, trivia nights, and social language challenges.</p>
+          </div>
+          <a href="game-evenings.html" class="explore-card-cta">Explore Game Evenings →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-book" aria-hidden="true">📚</span>
+              <h3 data-cms-id="h3-5-727490" class="explore-card-title">Long Reads</h3>
+            </div>
+            <p data-cms-id="p-7-c3ddd3" class="explore-card-desc">Serialized literature and in-depth texts read and discussed chapter by chapter.</p>
+          </div>
+          <a href="long-reads.html" class="explore-card-cta">Explore Long Reads →</a>
+        </div>
+
+        <div class="explore-card">
+          <div>
+            <div class="explore-card-top">
+              <span class="explore-card-icon cosy-icon icon-star" aria-hidden="true">⭐</span>
+              <h3 data-cms-id="h3-6-38bec9" class="explore-card-title">Special Events</h3>
+            </div>
+            <p data-cms-id="p-8-2cb8d9" class="explore-card-desc">Interactive games, cultural celebrations, polyglot trivia, and workshops.</p>
+          </div>
+          <a href="special-events/index.html" class="explore-card-cta">Explore Special Events →</a>
+        </div>
+      </div>
+      <p data-cms-id="p-9-169562" class="past-events-footer-link">
+        Looking for earlier sessions? <a href="past-events/index.html">See past events →</a>
+      </p>
+    </section>
+
+    <!-- Interactive Level Placement Quiz Section -->
+    <section id="level-quiz-section" class="calc-section" style="margin-bottom: 2rem;">
+      <div class="calc-card" style="background: linear-gradient(135deg, #1e2f6b, #0c4e54); color: white; border-radius: 28px; padding: 2.5rem; box-shadow: var(--shadow-base);">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <span class="calc-tag" style="background: rgba(255,255,255,0.2); color: #ffffff;">🎯 Self-Assessment Tool</span>
+          <h2 data-cms-id="h2-3-6b440f" style="font-family: var(--font-serif); font-size: 2rem; margin: 0.5rem 0; color: #ffffff;">Find Your Speaking Level in 10 Seconds</h2>
+          <p data-cms-id="p-10-f9bd01" style="opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.5;">
+            Answer 3 quick questions to discover your recommended CEFR level, ideal speaking clubs, and matching pass.
+          </p>
+        </div>
+
+        <form id="level-quiz-form" style="display: flex; flex-direction: column; gap: 1.25rem; max-width: 720px; margin: 0 auto;">
+          <div style="background: rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15);">
+            <label style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.5rem; color: #ffffff;">
+              1. How easily can you express everyday thoughts in conversation?
+            </label>
+            <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem;">
+              <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="q1" value="beginner" checked>
+                <span>🌱 I use simple words &amp; short phrases, needing time to construct sentences.</span>
+              </label>
+              <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="q1" value="intermediate">
+                <span>🚀 I hold comfortable conversations on familiar topics with good flow.</span>
+              </label>
+              <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="q1" value="advanced">
+                <span>🧠 I discuss complex, abstract, and nuanced ideas effortlessly.</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15);">
+            <label style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.5rem; color: #ffffff;">
+              2. How do you handle unfamiliar words or complex grammar?
+            </label>
+            <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem;">
+              <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="q2" value="beginner" checked>
+                <span>🌱 I prefer simple sentence structures and visual prompts.</span>
+              </label>
+              <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="q2" value="intermediate">
+                <span>🚀 I can rephrase my thoughts when I forget a word and ask questions.</span>
+              </label>
+              <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="q2" value="advanced">
+                <span>🧠 I seamlessly incorporate idiomatic expressions and debate complex opinions.</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15);">
+            <label style="font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.5rem; color: #ffffff;">
+              3. What is your primary goal for joining COSYevents?
+            </label>
+            <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem;">
+              <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="q3" value="beginner" checked>
+                <span>🌱 Build speaking confidence without fear of making mistakes.</span>
+              </label>
+              <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="q3" value="intermediate">
+                <span>🚀 Expand vocabulary, improve spontaneous response, and debate real issues.</span>
+              </label>
+              <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="q3" value="advanced">
+                <span>🧠 Engage in philosophical debates, science news, and long-form literature.</span>
+              </label>
+            </div>
+          </div>
+        </form>
+
+        <div id="quiz-result-box" style="margin-top: 1.5rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 1.5rem; text-align: center;">
+          <h3 id="quiz-result-title" style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">
+            🌱 Recommended Level: Beginner (A0–A1)
+          </h3>
+          <p id="quiz-result-desc" style="font-size: 0.9rem; opacity: 0.95; line-height: 1.5; margin-bottom: 1rem; max-width: 580px; margin-left: auto; margin-right: auto;">
+            We recommend starting with our <strong>Basic Speaking Club (A0–A1)</strong> or <strong>Let's Celebrate</strong>. You'll enjoy guided visual prompts and low-pressure conversation.
+          </p>
+          <button id="quiz-apply-btn" type="button" class="btn-primary" style="background: #0f6b35; color: #ffffff; font-weight: 800; border: none; padding: 0.75rem 1.5rem; border-radius: 100px; cursor: pointer;">
+            👉 Apply Level to Pricing Calculator Below
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tariff & Price Calculator Section -->
+    <section id="tariff-calculator" class="calc-section">
+      <div class="calc-card">
+        <div class="calc-header-box">
+          <span class="calc-tag">💳 Flexible Access Tariffs</span>
+          <h2 data-cms-id="h2-4-bbb28a" class="calc-title">Event Passes &amp; Price Calculator</h2>
+          <p data-cms-id="p-11-9bf30a" class="calc-subtitle">
+            Select your level and desired plan to calculate your weekly/monthly live session access rights, cost per session, and savings. Max 10 participants per session.
+          </p>
+        </div>
+
+        <!-- Configurator controls bar -->
+        <div class="calc-chips-bar">
+          <div class="calc-chip-item">
+            <span class="chip-lbl">1. LEVEL:</span>
+            <select id="calc-level-select" class="calc-chip-select">
+              <option value="beginner">🌱 Beginner (A0–A1)</option>
+              <option value="intermediate" selected>🚀 Intermediate (B1–B2)</option>
+              <option value="advanced">🧠 Advanced (C1–C2)</option>
+            </select>
+          </div>
+
+          <div class="calc-chip-item">
+            <span class="chip-lbl">2. TARIFF PLAN:</span>
+            <select id="calc-plan-select" class="calc-chip-select">
+              <option value="single">Single session (first one free)</option>
+              <option value="week">1-Week Pass (€15)</option>
+              <option value="month" selected>1-Month Pass (€45, best value)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Output Result Display Box -->
+        <div id="calc-result-display" class="calc-result-box">
+          <div class="calc-result-left">
+            <div class="calc-price-row">
+              <span id="calc-price-display" class="calc-price-num">€45</span>
+              <span id="calc-billing-period" class="calc-price-period">/ month</span>
+            </div>
+            <h3 id="calc-plan-title" class="calc-result-title">1-Month Pass • Intermediate (B1–B2)</h3>
+            <p id="calc-plan-desc" class="calc-result-desc">
+              Access to all live sessions at your level for one month, up to 14 in a typical month (8 Speaking Clubs at 2 a week, 4 Karaoke Nights, 1 Film Night and 1 Game Evening). Includes session decks and COSY Passport progress backup.
+            </p>
+            <div class="calc-pills-row">
+              <span id="calc-unit-price" class="calc-badge">≈ €3.21 per session if you attend all 14 (about 60% less than single sessions)</span>
+              <span class="calc-badge">Max 10 people per session</span>
+              <span class="calc-badge">handcrafted Decks</span>
+            </div>
+          </div>
+
+          <div class="calc-result-right">
+            <a id="calc-wa-btn" href="https://wa.me/330766784195?text=Hi!%20I%27d%20like%20to%20reserve%20a%201-Month%20Pass%20(Intermediate%20B1-B2)." target="_blank" rel="noopener" class="calc-btn-wa">💬 Claim Pass via WhatsApp</a>
+            <a id="calc-tg-btn" href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener" class="calc-btn-tg">✈️ Ask on Telegram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Club Reviews Section -->
+    <div id="reviews" data-club-reviews></div>
+  </main>
+
+  <!-- Event Detail Modal -->
+  <div id="event-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-event-title" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-event-title" class="event-card-title">Event Details</h3>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">×</button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-event-meta"></div>
+        <p id="modal-event-desc"></p>
+        <div id="modal-event-host" class="event-host-info"></div>
+        <div id="modal-timezone-box" class="timezone-converter-box"></div>
+        <div class="modal-actions">
+          <a id="modal-reg-btn" href="#" target="_blank" rel="noopener" class="btn-primary">
+            Register via Main Hub (WhatsApp / Telegram)
+          </a>
+          <a id="modal-gcal-btn" href="#" target="_blank" rel="noopener" class="btn-outline">
+            📅 Add to Google Calendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="hub-footer">
+    <p data-cms-id="p-12-8e8945" class="footer-messaging-line">
+      Join by messaging us on <a href="https://wa.me/330766784195" target="_blank" rel="noopener">WhatsApp</a> or <a href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener">Telegram</a>
+    </p>
+    <p data-cms-id="p-13-d90d14" class="footer-ecosystem-line">
+      COSYevents &copy; <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages</a> Ecosystem &bull; <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🔎</a> &bull; <a href="https://cosylanguages.github.io/COSYgames/" target="_blank" rel="noopener">COSYgames 🎮</a>
+    </p>
+    <p data-cms-id="p-14-964922" class="footer-privacy-line">
+      <a href="privacy.html">Privacy &amp; legal notice</a>
+    </p>
+  </footer>
+
+  <script src="shared/js/cosyevents-lang.js" defer></script>
+  <script src="shared/calendar/calendar-i18n.js"></script>
+  <script src="shared/calendar/calendar.js"></script>
+  <script src="shared/js/daily-spotlights.js"></script>
+  <script src="shared/js/club-reviews.js"></script>
+  <script src="shared/js/hero-next.js" defer></script>
+  <script src="https://cosylanguages.github.io/COSYlanguages/js/daily-directory.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const levelSelect = document.getElementById('calc-level-select');
+      const planSelect = document.getElementById('calc-plan-select');
+
+      if (levelSelect && planSelect) {
+        function updateCalculator() {
+          const level = levelSelect.value;
+          const plan = planSelect.value;
+
+          const priceElem = document.getElementById('calc-price-display');
+          const periodElem = document.getElementById('calc-billing-period');
+          const titleElem = document.getElementById('calc-plan-title');
+          const descElem = document.getElementById('calc-plan-desc');
+          const unitElem = document.getElementById('calc-unit-price');
+          const waBtn = document.getElementById('calc-wa-btn');
+
+          let levelLabel = 'Intermediate (B1–B2)';
+          if (level === 'beginner') levelLabel = 'Beginner (A0–A1)';
+          if (level === 'advanced') levelLabel = 'Advanced (C1–C2)';
+
+          let priceStr = '€45';
+          let periodStr = '/ month';
+          let planTitle = `1-Month Pass • ${levelLabel}`;
+          let planDesc = '';
+          let unitPrice = '';
+          let waMessage = `Hi! I'd like to reserve a 1-Month Pass (${levelLabel}).`;
+
+          if (plan === 'single') {
+            priceStr = '€8';
+            periodStr = '/ session';
+            planTitle = `Single Session • ${levelLabel}`;
+            planDesc = `Join one live session of your choice. Your first session is free; after that, single sessions are €8 each.`;
+            unitPrice = 'First session free, then €8';
+            waMessage = `Hi! I'd like to book my free first session (${levelLabel}).`;
+          } else if (plan === 'week') {
+            priceStr = '€15';
+            periodStr = '/ week';
+            planTitle = `1-Week Pass • ${levelLabel}`;
+            planDesc = `Access to all live sessions at your level for 7 days, for example 2 Speaking Clubs and 1 Karaoke Night.`;
+            unitPrice = '≈ €5 per session if you attend 3';
+            waMessage = `Hi! I'd like to reserve a 1-Week Pass (${levelLabel}).`;
+          } else if (plan === 'month') {
+            priceStr = '€45';
+            periodStr = '/ month';
+            planTitle = `1-Month Pass • ${levelLabel}`;
+            const clubsText = level === 'beginner' ? '8 Basic Speaking Clubs' : '8 Speaking Clubs';
+            planDesc = `Access to all live sessions at your level for one month, up to 14 in a typical month (${clubsText} at 2 a week, 4 Karaoke Nights, 1 Film Night and 1 Game Evening). Includes session decks and COSY Passport progress backup.`;
+            unitPrice = '≈ €3.21 per session if you attend all 14 (about 60% less than single sessions)';
+            waMessage = `Hi! I'd like to reserve a 1-Month Pass (${levelLabel}).`;
+          }
+
+          if (priceElem) priceElem.textContent = priceStr;
+          if (periodElem) periodElem.textContent = periodStr;
+          if (titleElem) titleElem.textContent = planTitle;
+          if (descElem) descElem.innerHTML = planDesc;
+          if (unitElem) unitElem.textContent = unitPrice;
+          if (waBtn) waBtn.href = `https://wa.me/330766784195?text=${encodeURIComponent(waMessage)}`;
+        }
+
+        levelSelect.addEventListener('change', updateCalculator);
+        planSelect.addEventListener('change', updateCalculator);
+        updateCalculator();
+      }
+
+      // Quiz Logic
+      const quizForm = document.getElementById('level-quiz-form');
+      const quizTitle = document.getElementById('quiz-result-title');
+      const quizDesc = document.getElementById('quiz-result-desc');
+      const quizApplyBtn = document.getElementById('quiz-apply-btn');
+
+      if (quizForm && quizTitle && quizDesc) {
+        let recommendedLevelVal = 'beginner';
+
+        function updateQuizResult() {
+          const formData = new FormData(quizForm);
+          const q1 = formData.get('q1');
+          const q2 = formData.get('q2');
+          const q3 = formData.get('q3');
+
+          let scores = { beginner: 0, intermediate: 0, advanced: 0 };
+          if (q1) scores[q1]++;
+          if (q2) scores[q2]++;
+          if (q3) scores[q3]++;
+
+          if (scores.advanced >= 2 || (scores.advanced === 1 && scores.intermediate === 1 && q1 === 'advanced')) {
+            recommendedLevelVal = 'advanced';
+            quizTitle.textContent = '🧠 Recommended Level: Advanced (C1–C2)';
+            quizDesc.innerHTML = 'We recommend <strong>Keeping Up with Science</strong>, <strong>Mind Matters</strong>, and <strong>I Couldn\'t Help But Wonder</strong>. Tackle spontaneous philosophical questions and high-level debate.';
+          } else if (scores.intermediate >= 2 || scores.advanced === 1) {
+            recommendedLevelVal = 'intermediate';
+            quizTitle.textContent = '🚀 Recommended Level: Intermediate (B1–B2)';
+            quizDesc.innerHTML = 'We recommend <strong>Debatable &amp; Relatable</strong>, <strong>My Life With/Without</strong>, and <strong>Cinema Nights</strong>. Great for idiom expansion and natural conversation flow.';
+          } else {
+            recommendedLevelVal = 'beginner';
+            quizTitle.textContent = '🌱 Recommended Level: Beginner (A0–A1)';
+            quizDesc.innerHTML = 'We recommend starting with our <strong>Basic Speaking Club (A0–A1)</strong> or <strong>Let\'s Celebrate</strong>. Enjoy guided visual prompts and low-pressure conversation.';
+          }
+        }
+
+        quizForm.addEventListener('change', updateQuizResult);
+
+        if (quizApplyBtn && levelSelect) {
+          quizApplyBtn.addEventListener('click', () => {
+            levelSelect.value = recommendedLevelVal;
+            levelSelect.dispatchEvent(new Event('change'));
+            const calcEl = document.getElementById('tariff-calculator');
+            if (calcEl) calcEl.scrollIntoView({ behavior: 'smooth' });
+          });
+        }
+      }
+    });
+  </script>
+  <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
+<script src="shared/js/cms-boot.js" defer></script>
+<script src="shared/js/daily-wheel.js" defer></script>
+<script src="shared/js/daily-wheel-preview.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+{
+  "albert-einstein": {
+    "name": "Albert Einstein",
+    "years": "1879 – 1955",
+    "job": "Theoretical Physicist & Philosopher of Science",
+    "achievements": "Formulated the Special and General Theories of Relativity (E=mc²); awarded the 1921 Nobel Prize in Physics.",
+    "first_in": "First to prove light exists as discrete quanta (photons) and to redefine gravity as spacetime curvature.",
+    "image": "images/quotes/albert-einstein.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Physicien théoricien & Philosophe des sciences",
+        "achievements": "A élaboré les théories de la relativité restreinte et générale (E=mc²) ; lauréat du prix Nobel de physique 1921.",
+        "first_in": "Premier à démontrer la nature quantique de la lumière et à redéfinir la gravité comme une courbure de l'espace-temps."
+      },
+      "ru": {
+        "name": "Альберт Эйнштейн",
+        "job": "Физик-теоретик и философ науки",
+        "achievements": "Создал специальную и общую теории относительности (E=mc²); лауреат Нобелевской премии по физике 1921 года.",
+        "first_in": "Первым доказал квантовую природу света и объяснил гравитацию искривлением пространства-времени."
+      }
+    }
+  },
+  "steve-jobs": {
+    "name": "Steve Jobs",
+    "years": "1955 – 2011",
+    "job": "Co-founder & CEO of Apple, Industrial Designer & Tech Visionary",
+    "achievements": "Pioneered modern personal computing, digital typography, animated films (Pixar), and mobile communications.",
+    "first_in": "First to introduce commercially successful graphical user interface (GUI) computers, multi-touch smartphones (iPhone), and tablets (iPad).",
+    "image": "images/quotes/steve-jobs.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Cofondateur & PDG d'Apple, visionnaire de la technologie",
+        "achievements": "Pionnier de l'informatique grand public, de la typographie numérique, de l'animation par ordinateur (Pixar) et des smartphones.",
+        "first_in": "Premier à démocratiser l'ordinateur à interface graphique grand public, les smartphones multi-touch (iPhone) et les tablettes (iPad)."
+      },
+      "ru": {
+        "name": "Стив Джобс",
+        "job": "Сооснователь и глава Apple, предприниматель и визионер",
+        "achievements": "Перевернул индустрию персональных компьютеров, цифровой типографики, компьютерной анимации (Pixar) и смартфонов.",
+        "first_in": "Первым сделал графический интерфейс и мультитач-смартфоны массовым достоянием человечества."
+      }
+    }
+  },
+  "richard-feynman": {
+    "name": "Richard Feynman",
+    "years": "1918 – 1988",
+    "job": "Theoretical Physicist, Author & Master Educator",
+    "achievements": "Formulated quantum electrodynamics (QED) and Feynman diagrams; awarded the 1965 Nobel Prize in Physics.",
+    "first_in": "First to conceptualize nanotechnology ('There's Plenty of Room at the Bottom') and quantum computing.",
+    "image": "images/quotes/richard-feynman.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Physicien théoricien, auteur et pédagogue d'exception",
+        "achievements": "A formulé l'électrodynamique quantique (QED) et les diagrammes de Feynman ; prix Nobel de physique 1965.",
+        "first_in": "Premier à conceptualiser les nanotechnologies et le principe de l'informatique quantique."
+      },
+      "ru": {
+        "name": "Ричард Фейнман",
+        "job": "Физик-теоретик, популяризатор науки и выдающийся педагог",
+        "achievements": "Создал квантовую электродинамику (КЭД) и метод диаграмм Фейнмана; лауреат Нобелевской премии по физике 1965 года.",
+        "first_in": "Первым предсказал эру нанотехнологий и квантовых вычислений."
+      }
+    }
+  },
+  "socrates": {
+    "name": "Socrates",
+    "years": "c. 470 – 399 BC",
+    "job": "Classical Athenian Philosopher & Teacher",
+    "achievements": "Laid the foundational cornerstones of Western philosophy, ethics, moral reasoning, and epistemology.",
+    "first_in": "First to establish the Socratic method of cooperative argumentative dialogue and critical self-examination.",
+    "image": "images/quotes/socrates.jpg",
+    "i18n": {
+      "fr": {
+        "name": "Socrate",
+        "years": "vers 470 – 399 av. J.-C.",
+        "job": "Philosophe athénien de l'Antiquité classique",
+        "achievements": "Fondateur de la philosophie morale occidentale, de l'éthique et de l'épistémologie.",
+        "first_in": "Premier à introduire la maïeutique et la méthode de questionnement critique (dialogue socratique)."
+      },
+      "ru": {
+        "name": "Сократ",
+        "years": "ок. 470 – 399 до н. э.",
+        "job": "Древнегреческий афинский философ",
+        "achievements": "Заложил фундамент западной философии, этики, диалектики и критического мышления.",
+        "first_in": "Первым применил вопросно-ответный сократический метод (майевтику) для исследования истины."
+      }
+    }
+  },
+  "voltaire": {
+    "name": "Voltaire (François-Marie Arouet)",
+    "years": "1694 – 1778",
+    "job": "Enlightenment Writer, Philosopher & Satirist",
+    "achievements": "Championed civil liberties, freedom of religion, freedom of speech, and the separation of church and state (Candide).",
+    "first_in": "First widely celebrated public intellectual in Europe to lead international human rights legal advocacy campaigns (Calas Affair).",
+    "image": "images/quotes/voltaire.jpg",
+    "i18n": {
+      "fr": {
+        "name": "Voltaire (François-Marie Arouet)",
+        "years": "1694 – 1778",
+        "job": "Écrivain, philosophe des Lumières & polémiste",
+        "achievements": "Figure majeure des Lumières, défenseur passionné de la tolérance, de la liberté de culte et de pensée (Candide).",
+        "first_in": "Premier intellectuel engagé d'envergure européenne à mener avec succès des réhabilitations judiciaires publiques (l'Affaire Calas)."
+      },
+      "ru": {
+        "name": "Вольтер (Франсуа-Мари Аруэ)",
+        "years": "1694 – 1778",
+        "job": "Философ-просветитель, поэт, прозаик и сатирик",
+        "achievements": "Один из ключевых мыслителей эпохи Просвещения, защитник свободы слова, совести и веротерпимости («Кандид»).",
+        "first_in": "Первым среди европейских интеллектуалов возглавил масштабные общественные кампании в защиту прав осужденных (дело Каласа)."
+      }
+    }
+  },
+  "fedor-dostoevsky": {
+    "name": "Fyodor Dostoevsky",
+    "years": "1821 – 1881",
+    "job": "Novelist, Short Story Writer, Essayist & Philosopher",
+    "achievements": "Authored literary masterpieces including Crime and Punishment, The Brothers Karamazov, and The Idiot.",
+    "first_in": "First to pioneer modern psychological existential realism, plumbing the deepest abysses of human guilt, faith, and freedom.",
+    "image": "images/quotes/fedor-dostoevsky.jpg",
+    "i18n": {
+      "fr": {
+        "name": "Fiodor Dostoïevski",
+        "job": "Romancier, essayiste et philosophe",
+        "achievements": "Auteur de chefs-d'œuvre mondiaux dont Crime et Châtiment, Les Frères Karamazov et L'Idiot.",
+        "first_in": "Premier grand explorateur du réalisme psychologique et existentiel moderne, sondant la foi, la liberté et la conscience."
+      },
+      "ru": {
+        "name": "Фёдор Достоевский",
+        "years": "1821 – 1881",
+        "job": "Классик мировой литературы, писатель, публицист и мыслитель",
+        "achievements": "Создатель бессмертных романов «Преступление и наказание», «Братья Карамазовы», «Идиот», «Бесы».",
+        "first_in": "Первым раскрыл предельную глубину психологического и экзистенциального реализма в исследовании человеческой души."
+      }
+    }
+  },
+  "francoise-dolto": {
+    "name": "Françoise Dolto",
+    "years": "1908 – 1988",
+    "job": "Pediatrician & Pioneering Psychoanalyst",
+    "achievements": "Revolutionized child psychology; founded 'La Maison Verte' day centres and made child psychoanalysis accessible via radio broadcasts.",
+    "first_in": "First to recognize infants and children as full-fledged subjects of speech and dialogue from birth.",
+    "image": "images/quotes/francoise-dolto.jpg",
+    "i18n": {
+      "fr": {
+        "name": "Françoise Dolto",
+        "job": "Pédiatre et psychanalyste pionnière de l'enfance",
+        "achievements": "A révolutionné l'écoute de l'enfant ; fondatrice de La Maison Verte et voix majeure de la vulgarisation psychanalytique.",
+        "first_in": "Première à affirmer que le nourrisson est un sujet de langage et de communication à part entière dès sa venue au monde."
+      },
+      "ru": {
+        "name": "Франсуаза Дольто",
+        "years": "1908 – 1988",
+        "job": "Педиатр и новатор детского психоанализа",
+        "achievements": "Революционизировала детскую психологию, основала «Зеленый дом» (La Maison Verte) для ранней социализации.",
+        "first_in": "Первой доказала, что ребенок является полноценным субъектом диалога и слова с первых дней жизни."
+      }
+    }
+  },
+  "robin-williams": {
+    "name": "Robin Williams",
+    "years": "1951 – 2014",
+    "job": "Comedian, Actor & Philanthropist",
+    "achievements": "Beloved film and stand-up star; won the Academy Award for Best Supporting Actor for Good Will Hunting (1997).",
+    "first_in": "First to redefine voice acting in animation through brilliant improvisation (Aladdin) and master both comedic whirlwind and profound drama.",
+    "image": "images/quotes/robin-williams.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Acteur comique et dramatique, humoriste & philanthrope",
+        "achievements": "Légende du cinéma et du stand-up ; Oscar du meilleur acteur dans un second rôle pour Will Hunting (1997).",
+        "first_in": "Premier à transformer le doublage d'animation par son improvisation géniale (Aladdin) et à marier comédie explosive et drame intime."
+      },
+      "ru": {
+        "name": "Робин Уильямс",
+        "years": "1951 – 2014",
+        "job": "Актер театра и кино, стендап-комик и филантроп",
+        "achievements": "Обладатель премии «Оскар» за драму «Умница Уилл Хантинг» (1997), шестикратный лауреат «Золотого глобуса».",
+        "first_in": "Первым превратил озвучивание анимационных персонажей в высокое импровизационное искусство (Джинн в «Аладдине»)."
+      }
+    }
+  },
+  "madonna": {
+    "name": "Madonna",
+    "years": "b. 1958",
+    "job": "Singer, Songwriter, Cultural Icon & Producer",
+    "achievements": "Best-selling female recording artist of all time (over 400 million records sold); 7 Grammy Awards.",
+    "first_in": "First female pop artist to retain complete artistic, visual, and business control over her global multimedia empire.",
+    "image": "images/quotes/madonna.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Chanteuse, auteure-compositrice, icône culturelle & productrice",
+        "achievements": "Artiste féminine ayant vendu le plus de disques de l'histoire (plus de 400 millions) ; 7 Grammy Awards.",
+        "first_in": "Première superstar féminine de la pop à conquérir un contrôle artistique, visuel et financier absolu sur son œuvre."
+      },
+      "ru": {
+        "name": "Мадонна",
+        "years": "род. 1958",
+        "job": "Певица, автор песен, музыкальный продюсер и культурная икона",
+        "achievements": "Самая коммерчески успешная исполнительница в истории музыки (более 400 млн проданных записей); 7 премий «Грэмми».",
+        "first_in": "Первой среди поп-исполнительниц добилась полного творческого и финансового контроля над своей медиа-империей."
+      }
+    }
+  },
+  "alisa-freindlich": {
+    "name": "Alisa Freindlich",
+    "years": "b. 1934",
+    "job": "Soviet & Russian Theatre and Film Actress",
+    "achievements": "People's Artist of the USSR; star of legendary cinema classics Office Romance (1977), Stalker (1979), and D'Artagnan and Three Musketeers.",
+    "first_in": "First leading actress of the BDT Tovstonogov Theatre to bridge classical stage depth with timeless, subtle on-screen vulnerability.",
+    "image": "images/quotes/alisa-freindlich.jpg",
+    "i18n": {
+      "fr": {
+        "name": "Alisa Freindlich",
+        "job": "Actrice de théâtre et de cinéma",
+        "achievements": "Artiste du peuple de l'URSS ; star des classiques du cinéma soviétique Le Roman de bureau (1977) et Stalker (1979).",
+        "first_in": "Première grande comédienne du Théâtre Tovstonogov à allier virtuosité théâtrale et subtilité intimiste à l'écran."
+      },
+      "ru": {
+        "name": "Алиса Фрейндлих",
+        "years": "род. 1934",
+        "job": "Актриса театра и кино, народная артистка СССР",
+        "achievements": "Звезда шедевров кинематографа («Служебный роман», «Сталкер», «Д’Артаньян и три мушкетера»), ведущая актриса БДТ.",
+        "first_in": "Первой соединила на советской сцене и экране редчайший синтез высокой драматической глубины и эксцентричной комедии."
+      }
+    }
+  },
+  "alfried-langle": {
+    "name": "Alfried Längle",
+    "years": "b. 1951",
+    "job": "Psychotherapist, Clinical Psychologist & Physician",
+    "achievements": "Co-developed modern Existential Analysis and Logotherapy; founder of the International Society for Logotherapy and Existential Analysis (GLE).",
+    "first_in": "First to formulate the Four Fundamental Motivations of human existence in psychotherapy.",
+    "image": "images/quotes/alfried-langle.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Médecin, psychothérapeute & docteur en psychologie",
+        "achievements": "Co-développeur de l'analyse existentielle moderne ; fondateur de la Société Internationale de Logothérapie (GLE).",
+        "first_in": "Premier à modéliser les quatre motivations fondamentales de l'existence humaine en psychothérapie clinique."
+      },
+      "ru": {
+        "name": "Альфрид Лэнгле",
+        "years": "род. 1951",
+        "job": "Австрийский психотерапевт, клинический психолог и доктор медицины",
+        "achievements": "Ученик Виктора Франкла, создатель современного экзистенциального анализа и основатель Международного общества (GLE).",
+        "first_in": "Первым сформулировал концепцию четырех фундаментальных мотиваций бытия человека в экзистенциальной терапии."
+      }
+    }
+  },
+  "gordon-neufeld": {
+    "name": "Gordon Neufeld",
+    "years": "b. 1946",
+    "job": "Developmental Psychologist & Author",
+    "achievements": "Created the comprehensive Attachment-Based Developmental Model; authored the international bestseller Hold On to Your Kids.",
+    "first_in": "First to detail peer orientation as a primary disruptor of healthy family bonding in modern psychology.",
+    "image": "images/quotes/gordon-neufeld.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Psychologue clinicien du développement et auteur",
+        "achievements": "Créateur du modèle développemental fondé sur l'attachement ; auteur du best-seller Retrouver son rôle de parent.",
+        "first_in": "Premier à identifier l'orientation vers les pairs comme le facteur clé de rupture du lien éducatif familial moderne."
+      },
+      "ru": {
+        "name": "Гордон Ньюфелд",
+        "years": "род. 1946",
+        "job": "Канадский психолог развития, клиницист и автор",
+        "achievements": "Создатель целостной теории развития на основе привязанности; автор бестселлера «Не упускайте своих детей».",
+        "first_in": "Первым детально описал явление «ориентации на ровесников» как угрозу здоровому психологическому созреванию ребенка."
+      }
+    }
+  },
+  "cs-lewis": {
+    "name": "C.S. Lewis (Clive Staples Lewis)",
+    "years": "1898 – 1963",
+    "job": "Novelist, Literary Scholar & Christian Apologist",
+    "achievements": "Authored The Chronicles of Narnia, The Screwtape Letters, and Mere Christianity; Professor of Medieval Literature at Oxford & Cambridge.",
+    "first_in": "First to master the fusion of high Christian philosophical apologetics with universal children's fantasy literature.",
+    "image": "images/quotes/cs-lewis.jpg",
+    "i18n": {
+      "fr": {
+        "name": "C.S. Lewis",
+        "job": "Écrivain, professeur de littérature à Oxford & Cambridge",
+        "achievements": "Auteur des Chroniques de Narnia, de Tactique du diable et des Fondements du christianisme.",
+        "first_in": "Premier à fusionner la rigueur de l'apologétique philosophique et l'imaginaire féerique de la littérature jeunesse."
+      },
+      "ru": {
+        "name": "Клайв Стейплз Льюис (C.S. Lewis)",
+        "years": "1898 – 1963",
+        "job": "Британский писатель, литературовед и богослов",
+        "achievements": "Автор цикла «Хроники Нарнии», «Писем Баламута», «Просто христианства»; профессор Оксфорда и Кембриджа.",
+        "first_in": "Первым органично объединил глубокую философскую теологию и волшебную сказочную мифологию для поколений читателей."
+      }
+    }
+  },
+  "oscar-wilde": {
+    "name": "Oscar Wilde",
+    "years": "1854 – 1900",
+    "job": "Playwright, Poet & Aesthetician",
+    "achievements": "Master of Victorian epigrammatic comedy (The Importance of Being Earnest) and philosophical prose (The Picture of Dorian Gray).",
+    "first_in": "First prominent British writer to popularize the Aesthetic movement slogan 'art for art's sake' as a lived personal philosophy.",
+    "image": "images/quotes/oscar-wilde.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Dramaturge, poète et dandy irlandais",
+        "achievements": "Auteur du Portrait de Dorian Gray et de L'Importance d'être Constant ; maître de l'esprit et de l'aphorisme mordant.",
+        "first_in": "Premier auteur victorien à ériger le dandysme et le mouvement esthétique ('l'art pour l'art') en véritable manifeste de vie."
+      },
+      "ru": {
+        "name": "Оскар Уайльд",
+        "years": "1854 – 1900",
+        "job": "Ирландский драматург, поэт, прозаик и эстет",
+        "achievements": "Автор шедевра «Портрет Дориана Грея», пьесы «Как важно быть серьезным», гениальный мастер афоризма и парадокса.",
+        "first_in": "Первым возвел эстетизм («искусство ради искусства») и дендизм в статус всеобъемлющего жизненного кредо."
+      }
+    }
+  },
+  "barbra-streisand": {
+    "name": "Barbra Streisand",
+    "years": "b. 1942",
+    "job": "Singer, Actress, Film Director & Producer",
+    "achievements": "Rare EGOT winner (Emmy, Grammy, Oscar, Tony); star of Funny Girl (1968), The Way We Were, and Yentl (1983).",
+    "first_in": "First woman to write, produce, direct, and star in a major studio motion picture (Yentl, 1983) and win the Golden Globe for Best Director.",
+    "image": "images/quotes/barbra-streisand.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Chanteuse, actrice, réalisatrice et productrice",
+        "achievements": "Lauréate du prestigieux statut EGOT ; star de Funny Girl et réalisatrice de Yentl.",
+        "first_in": "Première femme à écrire, produire, réaliser et interpréter le rôle principal d'un grand film de studio (Yentl, 1983) et remporter le Golden Globe de la réalisation."
+      },
+      "ru": {
+        "name": "Барбра Стрейзанд",
+        "years": "род. 1942",
+        "job": "Американская певица, актриса, кинорежиссер и продюсер",
+        "achievements": "Обладательница редкого статуса EGOT («Эмми», «Грэмми», «Оскар», «Тони»); звезда фильмов «Смешная девчонка» и «Йентл».",
+        "first_in": "Первая женщина в Голливуде, выступившая сценаристом, продюсером, режиссером и исполнительницей главной роли («Йентл», 1983)."
+      }
+    }
+  },
+  "virginia-woolf": {
+    "name": "Virginia Woolf",
+    "years": "1882 – 1941",
+    "job": "Modernist Writer, Essayist & Critic",
+    "achievements": "Central figure of the Bloomsbury Group; author of Mrs Dalloway (1925), To the Lighthouse (1927), and A Room of One's Own (1929).",
+    "first_in": "First to elevate the stream-of-consciousness narrative technique and articulate the material independence required for women writers.",
+    "image": "images/quotes/virginia-woolf.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Écrivaine moderniste, essayiste et théoricienne littéraire",
+        "achievements": "Figure majeure du groupe de Bloomsbury ; autrice de Mrs Dalloway et de l'essai fondateur Une chambre à soi.",
+        "first_in": "Première à révolutionner le roman par le courant de conscience et à théoriser l'autonomie matérielle des femmes créatrices."
+      },
+      "ru": {
+        "name": "Вирджиния Вулф",
+        "years": "1882 – 1941",
+        "job": "Британская писательница-модернистка, эссеистка и критик",
+        "achievements": "Ключевая фигура группы Блумсбери; автор романов «Миссис Дэллоуэй», «На маяк» и эссе «Своя комната».",
+        "first_in": "Первой возвела технику «потока сознания» в высшую литературную форму и сформулировала основы женской творческой автономии."
+      }
+    }
+  },
+  "amish-tripathi": {
+    "name": "Amish Tripathi",
+    "years": "b. 1974",
+    "job": "Author, Mythologist & Diplomat",
+    "achievements": "Authored the phenomenal Shiva Trilogy (The Immortals of Meluha) and Ram Chandra Series, selling over 7 million copies.",
+    "first_in": "First Indian author whose debut mythological pop-thriller series became the fastest-selling book series in Indian publishing history.",
+    "image": "images/quotes/amish-tripathi.jpg",
+    "i18n": {
+      "fr": {
+        "job": "Romancier, mythologue contemporain et diplomate",
+        "achievements": "Auteur de la célèbre Trilogie de Shiva ; plus de 7 millions d'exemplaires vendus dans le monde.",
+        "first_in": "Premier auteur indien à réinventer les mythes védiques sous forme de thrillers philosophiques modernes au succès commercial record."
+      },
+      "ru": {
+        "name": "Амиш Трипати",
+        "years": "род. 1974",
+        "job": "Индийский писатель, мифолог и дипломат",
+        "achievements": "Автор знаменитой «Трилогии Шивы» («Бессмертные Мелухи») с тиражами свыше 7 миллионов экземпляров.",
+        "first_in": "Первым превратил древнеиндийский эпос в захватывающий философский фэнтези-бестселлер с рекордными темпами продаж."
+      }
+    }
+  },
+  "jim-kwik": {
+    "name": "Jim Kwik",
+    "years": "b. 1973",
+    "job": "Brain Coach, Memory Expert & Keynote Speaker",
+    "achievements": "Founder of Kwik Learning; author of the Wall Street Journal and New York Times bestseller Limitless.",
+    "first_in": "First to develop the widely adopted 'meta-learning' speed-reading and cognitive optimization frameworks for tech leaders and students worldwide.",
+    "image": "images/quotes/jim-kwik.svg",
+    "i18n": {
+      "fr": {
+        "job": "Coach cérébral, expert en mémorisation et conférencier",
+        "achievements": "Fondateur de Kwik Learning ; auteur du best-seller mondial Limitless (Sans limites).",
+        "first_in": "Premier à démocratiser auprès du grand public les méthodes de lecture rapide et d'agilité cognitive appliquées aux neurosciences."
+      },
+      "ru": {
+        "name": "Джим Квик",
+        "years": "род. 1973",
+        "job": "Тренер по развитию мозга, эксперт по памяти и оратор",
+        "achievements": "Основатель Kwik Learning, автор мирового бестселлера «Безграничье» (Limitless).",
+        "first_in": "Первым внедрил методику когнитивной оптимизации и мета-обучения для топ-менеджеров и миллионов учащихся по всему миру."
+      }
+    }
+  },
+  "brianna-pastor": {
+    "name": "Brianna Pastor",
+    "years": "b. 1995",
+    "job": "Poet, Mental Health Advocate & Author",
+    "achievements": "Penned the acclaimed poetry collection Good Grief; influential voice in contemporary emotional healing literature.",
+    "first_in": "First among new-wave confessional poets to bring authentic discourse on boundary-setting and emotional recovery into daily social verse.",
+    "image": "images/quotes/brianna-pastor.svg",
+    "i18n": {
+      "fr": {
+        "job": "Poétesse contemporaine & défenseuse de la santé mentale",
+        "achievements": "Autrice du recueil à succès Good Grief ; voix montante de la poésie introspective et réparatrice.",
+        "first_in": "Première de la nouvelle vague de poésie confessionnelle à démocratiser la pose de limites émotionnelles et la guérison intérieure."
+      },
+      "ru": {
+        "name": "Брианна Пастор",
+        "years": "род. 1995",
+        "job": "Поэтесса, автор и активист в области ментального здоровья",
+        "achievements": "Автор поэтического сборника Good Grief, популярный голос в теме исцеления травм и установления личных границ.",
+        "first_in": "Первой среди современных поэтов нового поколения сделала открытый разговор о психологических границах языком лаконичной поэзии."
+      }
+    }
+  },
+  "sadia-hakim": {
+    "name": "Sadia Hakim",
+    "years": "Contemporary Writer",
+    "job": "Poet, Essayist & Social Observer",
+    "achievements": "Celebrated for concise epigrams exploring loneliness in crowded urban environments and rediscovering human tenderness.",
+    "first_in": "First to popularize poignant micro-reflections on loneliness within the modern digital diaspora.",
+    "image": "images/quotes/sadia-hakim.svg",
+    "i18n": {
+      "fr": {
+        "years": "Auteure contemporaine",
+        "job": "Poétesse et observatrice sociale",
+        "achievements": "Reconnue pour ses aphorismes poignants sur l'isolement dans les métropoles modernes et la tendresse humaine.",
+        "first_in": "Première à populariser des micro-réflexions poétiques sur la solitude au cœur des grandes cités connectées."
+      },
+      "ru": {
+        "name": "Садия Хаким",
+        "years": "Современный автор",
+        "job": "Поэтесса, эссеистка и наблюдатель",
+        "achievements": "Известна пронзительными афоризмами об одиночестве среди толпы и поиске подлинной человечности в XXI веке.",
+        "first_in": "Первой запечатлела в краткой поэтической форме контраст перенаселенных мегаполисов и эмоциональной изоляции."
+      }
+    }
+  },
+  "john-koenig": {
+    "name": "John Koenig",
+    "years": "b. 1984",
+    "job": "Writer, Neologist, Graphic Designer & Filmmaker",
+    "achievements": "Created The Dictionary of Obscure Sorrows, coining dozens of terms for unnamed emotions that entered global dictionaries (sonder).",
+    "first_in": "First to invent a comprehensive poetic vocabulary of human existential emotions adopted into mainstream linguistics.",
+    "image": "images/quotes/john-koenig.svg",
+    "i18n": {
+      "fr": {
+        "job": "Écrivain, néologue et réalisateur",
+        "achievements": "Créateur du Dictionary of Obscure Sorrows ; inventeur de néologismes désormais universels comme 'sonder'.",
+        "first_in": "Premier à forger un lexique poétique complet des émotions indicibles adopté par la linguistique contemporaine."
+      },
+      "ru": {
+        "name": "Джон Кёниг",
+        "years": "род. 1984",
+        "job": "Американский писатель, неолог и кинематографист",
+        "achievements": "Создатель «Словаря непонятных скорбей» (The Dictionary of Obscure Sorrows), автор термина «сондер» (sonder).",
+        "first_in": "Первым систематизировал и придумал точные поэтические названия для сложнейших безымянных оттенков человеческих чувств."
+      }
+    }
+  },
+  "mikhail-prishvin": {
+    "name": "Mikhail Prishvin",
+    "years": "1873 – 1954",
+    "job": "Writer, Naturalist, Ethnographer & Diarist",
+    "achievements": "Master of Russian nature prose (The Sun's Storeroom) and extraordinary lifelong secret philosophical diaries.",
+    "first_in": "First Russian naturalist writer to unite precise field zoology/botany with profound introspective existential humanism.",
+    "image": "images/quotes/mikhail-prishvin.jpg",
+    "i18n": {
+      "fr": {
+        "name": "Mikhaïl Prichvine",
+        "job": "Écrivain naturaliste, ethnographe et diariste",
+        "achievements": "Auteur d'écrits célèbres sur la nature et d'un journal intime philosophique monumental tenu pendant cinquante ans.",
+        "first_in": "Premier écrivain naturaliste russe à unir observation scientifique minutieuse et humanisme existentiel profond."
+      },
+      "ru": {
+        "name": "Михаил Пришвин",
+        "years": "1873 – 1954",
+        "job": "Писатель-натуралист, прозаик, этнограф и мыслитель",
+        "achievements": "Классик русской литературы («Кладовая солнца», «Кащеева цепь»), автор уникальных тайных философских «Дневников».",
+        "first_in": "Первым соединил строгую естественнонаучную зоркость к природе с глубочайшим экзистенциальным поиском свободы личности."
+      }
+    }
+  },
+  "vasily-sukhomlinsky": {
+    "name": "Vasily Sukhomlinsky",
+    "years": "1918 – 1970",
+    "job": "Pedagogue, Humanist Thinker & School Principal",
+    "achievements": "Author of My Heart I Give to Children; pioneer of holistic humanist moral education at the Pavlysh Secondary School.",
+    "first_in": "First Soviet educational theorist to establish emotional empathy, joy, and individual dignity as the true heart of school schooling.",
+    "image": "images/quotes/vasily-sukhomlinsky.jpg",
+    "i18n": {
+      "fr": {
+        "name": "Vassili Soukhomlinski",
+        "job": "Pédagogue humaniste et directeur d'école novateur",
+        "achievements": "Auteur du classique Mon cœur est aux enfants ; créateur de la méthode d'éducation par la joie et la sensibilité morale.",
+        "first_in": "Premier théoricien de l'éducation en Europe de l'Est à placer l'empathie, la beauté et la dignité personnelle au centre de l'école."
+      },
+      "ru": {
+        "name": "Василий Сухомлинский",
+        "years": "1918 – 1970",
+        "job": "Педагог-гуманист, член-корреспондент АПН СССР",
+        "achievements": "Создатель Павлышской школы, автор бессмертной книги «Сердце отдаю детям», признанной классикой мировой педагогики.",
+        "first_in": "Первым в советской педагогике провозгласил безусловную самоценность личности ребенка, радость познания и сердечность."
+      }
+    }
+  },
+  "dalai-lama": {
+    "name": "The 14th Dalai Lama (Tenzin Gyatso)",
+    "years": "b. 1935",
+    "job": "Spiritual Leader of Tibetan Buddhism & Peace Laureate",
+    "achievements": "Awarded the 1989 Nobel Peace Prize; author of The Art of Happiness and global ambassador of secular ethics and compassion.",
+    "first_in": "First spiritual world leader to establish sustained institutional dialogues between Buddhist contemplative practices and modern neuroscience (Mind & Life Institute).",
+    "image": "images/quotes/dalai-lama.jpg",
+    "i18n": {
+      "fr": {
+        "name": "14e Dalaï-lama (Tenzin Gyatso)",
+        "job": "Chef spirituel du bouddhisme tibétain & prix Nobel de la paix",
+        "achievements": "Prix Nobel de la paix 1989 ; auteur de L'Art du bonheur et défenseur universel de la non-violence et de la compassion.",
+        "first_in": "Premier dignitaire spirituel mondial à initier des collaborations systématiques entre méditation bouddhique et neurosciences modernes."
+      },
+      "ru": {
+        "name": "Далай-лама XIV (Тензин Гьяцо)",
+        "years": "род. 1935",
+        "job": "Духовный лидер тибетского буддизма, лауреат Нобелевской премии мира",
+        "achievements": "Лауреат Нобелевской премии мира 1989 года; автор бестселлера «Искусство быть счастливым», посол сострадания и светской этики.",
+        "first_in": "Первым из мировых религиозных лидеров инициировал фундаментальный диалог буддийской философии и современной нейробиологии."
+      }
+    }
+  },
+  "fernando-pessoa": {
+    "name": "Fernando Pessoa",
+    "years": "1888 – 1935",
+    "job": "Poet, Writer, Literary Critic & Translator",
+    "achievements": "Foremost figure of Portuguese modernism; author of The Book of Disquiet (Livro do Desassossego) and creator of over 70 distinct literary heteronyms.",
+    "first_in": "First author in world literature to invent complex literary heteronyms with distinct biographies, philosophies, and poetic styles.",
+    "image": "images/quotes/fernando-pessoa.jpg",
+    "i18n": {
+      "fr": {
+        "name": "Fernando Pessoa",
+        "years": "1888 – 1935",
+        "job": "Poète, écrivain et critique littéraire",
+        "achievements": "Figure majeure du modernisme portugais ; auteur du Livre de l'intranquillité et créateur de plus de 70 hétéronymes littéraires.",
+        "first_in": "Premier écrivain à développer le concept d'hétéronymie littéraire, dotant chaque alter ego d'une voix et d'une pensée singulières."
+      },
+      "ru": {
+        "name": "Фернандо Пессоа",
+        "years": "1888 – 1935",
+        "job": "Португальский поэт, прозаик, драматург и мыслитель",
+        "achievements": "Ключевая фигура португальского модернизма; автор «Книги непокоя» (Livro do Desassossego) и создатель уникальной системы гетеронимов.",
+        "first_in": "Первым в мировой литературе создал сложнейшую вселенную литературных гетеронимов со своими биографиями и философскими стилями."
+      }
+    }
+  },
+  "nithya-shri": {
+    "name": "Nithya Shri",
+    "years": "Contemporary Commentator",
+    "job": "Digital Culture Critic & Essayist",
+    "achievements": "Author of resonant cultural commentary on subscription economics, obsolescence, and consumer digital nostalgia.",
+    "first_in": "First to crystallize public debate on the loss of physical memory ownership in the cloud-storage era.",
+    "image": "images/quotes/nithya-shri.svg",
+    "i18n": {
+      "fr": {
+        "years": "Autrice contemporaine",
+        "job": "Critique de la culture numérique et essayiste",
+        "achievements": "Analyste reconnue de l'économie de l'abonnement et de la marchandisation de nos souvenirs numériques.",
+        "first_in": "Première à synthétiser le débat public sur la dépossession des cartes mémoire physiques au profit du stockage cloud payant."
+      },
+      "ru": {
+        "name": "Нитья Шри",
+        "years": "Современный автор",
+        "job": "Эссеистка и критик цифровой потребительской культуры",
+        "achievements": "Автор вирусных эссе об экономике подписок, облачном хранении данных и утрате права на личную цифровую память.",
+        "first_in": "Первой сформулировала парадокс отъема физических карт памяти ради навязанной платной подписки на облачные хранилища."
+      }
+    }
+  },
+  "anonymous": {
+    "name": "Anonymous / Collective Wisdom",
+    "years": "Timeless",
+    "job": "Philosophical Observers & Cultural Chroniclers",
+    "achievements": "Preserved universal life insights on freedom, authenticity, perception, and human connection across oral traditions.",
+    "first_in": "First to capture collective truths that belong to everyone and transcend individual authorship.",
+    "image": "images/quotes/anonymous.svg",
+    "i18n": {
+      "fr": {
+        "name": "Anonyme / Sagesse collective",
+        "years": "Intemporel",
+        "job": "Observateurs philosophiques et mémoire collective",
+        "achievements": "A transmis des aphorismes universels sur la liberté d'esprit, la beauté du quotidien et l'indépendance de pensée.",
+        "first_in": "Premier à incarner les vérités partagées par toute l'humanité, au-delà de toute signature individuelle."
+      },
+      "ru": {
+        "name": "Неизвестный автор / Коллективная мудрость",
+        "years": "Вне времени",
+        "job": "Философские мыслители и народная память",
+        "achievements": "Сохранили в культуре универсальные наблюдения о внутренней свободе, восприятии прекрасного и критическом мышлении.",
+        "first_in": "Первыми передали из уст в уста истины, принадлежащие всему человечеству вне личных имен."
+      }
+    }
+  },
+  "proverb": {
+    "name": "Folk Wisdom & Traditional Proverb",
+    "years": "Timeless",
+    "job": "Traditional Storytellers & Folk Philosophers",
+    "achievements": "Distilled centuries of pragmatic human observation into concise allegories illustrating conflicting perspectives in life.",
+    "first_in": "First form of human education to demonstrate how one person's adversity is another person's opportunity through natural metaphor.",
+    "image": "images/quotes/proverb.svg",
+    "i18n": {
+      "fr": {
+        "name": "Sagesse populaire & Proverbe traditionnel",
+        "years": "Intemporel",
+        "job": "Conteurs traditionnels et observateurs de la vie",
+        "achievements": "A condensé des siècles d'expérience humaine dans des allégories révélant la dualité des perspectives.",
+        "first_in": "Première école de pensée populaire à démontrer que le malheur de l'un fait souvent le bonheur de l'autre par la métaphore de la pluie."
+      },
+      "ru": {
+        "name": "Народная мудрость и пословицы",
+        "years": "Вне времени",
+        "job": "Народные сказители и хранители житейского опыта",
+        "achievements": "Сформулировали в емких метафорах многовековой опыт человечества о многогранности и относительности восприятия событий.",
+        "first_in": "Первыми в истории культуры образно доказали, что одно и то же явление несет одновременно и утрату, и спасение."
+      }
+    }
+  }
+}

@@ -1,0 +1,764 @@
+{
+  "id": "science",
+  "version": 1,
+  "title": "Keeping Up With Science",
+  "subtitle": "Explain a scientific idea so a curious friend understands it",
+  "lang": "en",
+  "bands": [
+    "a0-a1",
+    "a2",
+    "b1-b2",
+    "c1-c2"
+  ],
+  "task": {
+    "prep_seconds": 300,
+    "speak_seconds": 300,
+    "output": "spoken"
+  },
+  "rules": {
+    "research_allowed": true,
+    "ai_allowed": false
+  },
+  "prompts": [
+    {
+      "band": "a0-a1",
+      "prompt": "Why do we sleep?",
+      "follow_ups": [
+        "How many hours do you sleep?"
+      ],
+      "structures": [
+        "present simple",
+        "because"
+      ],
+      "vocabulary": [
+        "sleep",
+        "tired",
+        "dream"
+      ],
+      "id": "en:wheel-science:a0-a1:01",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Why is the sky blue?",
+      "follow_ups": [
+        "What colour is the sky at night?"
+      ],
+      "structures": [
+        "present simple",
+        "colour words"
+      ],
+      "vocabulary": [
+        "sky",
+        "light",
+        "colour"
+      ],
+      "id": "en:wheel-science:a0-a1:02",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Why does ice melt?",
+      "follow_ups": [
+        "What happens to water in the freezer?"
+      ],
+      "structures": [
+        "present simple",
+        "cause and effect"
+      ],
+      "vocabulary": [
+        "ice",
+        "melt",
+        "cold"
+      ],
+      "id": "en:wheel-science:a0-a1:03",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Why do plants need the sun?",
+      "follow_ups": [
+        "What happens to a plant in a dark room?"
+      ],
+      "structures": [
+        "present simple",
+        "need + noun"
+      ],
+      "vocabulary": [
+        "plant",
+        "sun",
+        "grow"
+      ],
+      "id": "en:wheel-science:a0-a1:04",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Why does it rain?",
+      "follow_ups": [
+        "What do you use when it rains?"
+      ],
+      "structures": [
+        "present simple",
+        "weather words"
+      ],
+      "vocabulary": [
+        "rain",
+        "cloud",
+        "water"
+      ],
+      "id": "en:wheel-science:a0-a1:05",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Why do we get hungry?",
+      "follow_ups": [
+        "What do you eat when you are very hungry?"
+      ],
+      "structures": [
+        "present simple",
+        "body words"
+      ],
+      "vocabulary": [
+        "hungry",
+        "food",
+        "stomach"
+      ],
+      "id": "en:wheel-science:a0-a1:06",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Why do we sneeze?",
+      "follow_ups": [
+        "What do you say after a sneeze?"
+      ],
+      "structures": [
+        "present simple",
+        "body words"
+      ],
+      "vocabulary": [
+        "sneeze",
+        "nose",
+        "dust"
+      ],
+      "id": "en:wheel-science:a0-a1:07",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Why is the sea salty?",
+      "follow_ups": [
+        "Do you like swimming in the sea?"
+      ],
+      "structures": [
+        "present simple",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "sea",
+        "salt",
+        "water"
+      ],
+      "id": "en:wheel-science:a0-a1:08",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Why do cats purr?",
+      "follow_ups": [
+        "Do you have a cat or a dog?"
+      ],
+      "structures": [
+        "present simple",
+        "animal words"
+      ],
+      "vocabulary": [
+        "cat",
+        "sound",
+        "happy"
+      ],
+      "id": "en:wheel-science:a0-a1:09",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Why do we have teeth?",
+      "follow_ups": [
+        "How many times a day do you brush them?"
+      ],
+      "structures": [
+        "present simple",
+        "body words"
+      ],
+      "vocabulary": [
+        "teeth",
+        "eat",
+        "smile"
+      ],
+      "id": "en:wheel-science:a0-a1:10",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Why do we forget things?",
+      "follow_ups": [
+        "What do you do to remember appointments?"
+      ],
+      "structures": [
+        "present simple",
+        "because"
+      ],
+      "vocabulary": [
+        "memory",
+        "forget",
+        "remind"
+      ],
+      "id": "en:wheel-science:a2:11",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Why is exercise good for the brain?",
+      "follow_ups": [
+        "How often do you exercise?"
+      ],
+      "structures": [
+        "present simple",
+        "should"
+      ],
+      "vocabulary": [
+        "exercise",
+        "brain",
+        "healthy"
+      ],
+      "id": "en:wheel-science:a2:12",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Why do some people have allergies?",
+      "follow_ups": [
+        "Do you have an allergy?"
+      ],
+      "structures": [
+        "present simple",
+        "frequency"
+      ],
+      "vocabulary": [
+        "allergy",
+        "pollen",
+        "reaction"
+      ],
+      "id": "en:wheel-science:a2:13",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "How does a vaccine work?",
+      "follow_ups": [
+        "Did you get a vaccine this year?"
+      ],
+      "structures": [
+        "present simple",
+        "passive"
+      ],
+      "vocabulary": [
+        "vaccine",
+        "protect",
+        "virus"
+      ],
+      "id": "en:wheel-science:a2:14",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Why do we dream?",
+      "follow_ups": [
+        "Can you remember your last dream?"
+      ],
+      "structures": [
+        "past simple",
+        "present simple"
+      ],
+      "vocabulary": [
+        "dream",
+        "night",
+        "remember"
+      ],
+      "id": "en:wheel-science:a2:15",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "How does GPS know where you are?",
+      "follow_ups": [
+        "When do you use a map?"
+      ],
+      "structures": [
+        "present simple",
+        "technology verbs"
+      ],
+      "vocabulary": [
+        "signal",
+        "satellite",
+        "location"
+      ],
+      "id": "en:wheel-science:a2:16",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Why does the moon change shape?",
+      "follow_ups": [
+        "Can you see the moon tonight?"
+      ],
+      "structures": [
+        "present simple",
+        "time expressions"
+      ],
+      "vocabulary": [
+        "moon",
+        "light",
+        "night"
+      ],
+      "id": "en:wheel-science:a2:17",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Why do we get older?",
+      "follow_ups": [
+        "Who is the oldest person you know?"
+      ],
+      "structures": [
+        "present simple",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "age",
+        "body",
+        "change"
+      ],
+      "id": "en:wheel-science:a2:18",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Why do plants need water?",
+      "follow_ups": [
+        "Do you have plants at home?"
+      ],
+      "structures": [
+        "present simple",
+        "need to"
+      ],
+      "vocabulary": [
+        "water",
+        "plant",
+        "grow"
+      ],
+      "id": "en:wheel-science:a2:19",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Why do we feel cold in winter?",
+      "follow_ups": [
+        "What do you wear in winter?"
+      ],
+      "structures": [
+        "present simple",
+        "because"
+      ],
+      "vocabulary": [
+        "cold",
+        "winter",
+        "clothes"
+      ],
+      "id": "en:wheel-science:a2:20",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "How does a vaccine train the immune system?",
+      "follow_ups": [
+        "Why do some vaccines need two doses?",
+        "What is herd immunity?"
+      ],
+      "structures": [
+        "passive voice",
+        "sequencing"
+      ],
+      "vocabulary": [
+        "immune",
+        "antibody",
+        "exposure"
+      ],
+      "id": "en:wheel-science:b1-b2:21",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Why does antibiotic resistance happen, and why does it matter?",
+      "follow_ups": [
+        "Where does overuse come from?",
+        "What would change behaviour?"
+      ],
+      "structures": [
+        "cause and effect",
+        "modals"
+      ],
+      "vocabulary": [
+        "bacteria",
+        "resistance",
+        "prescription"
+      ],
+      "id": "en:wheel-science:b1-b2:22",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "How do we know the climate is warming?",
+      "follow_ups": [
+        "Which evidence convinces people?",
+        "Why is the weather not the same as the climate?"
+      ],
+      "structures": [
+        "present perfect",
+        "evidence language"
+      ],
+      "vocabulary": [
+        "average",
+        "trend",
+        "record"
+      ],
+      "id": "en:wheel-science:b1-b2:23",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "What is a black hole, in simple terms?",
+      "follow_ups": [
+        "What happens at the edge?",
+        "Why do we care about them?"
+      ],
+      "structures": [
+        "analogy",
+        "defining relative clauses"
+      ],
+      "vocabulary": [
+        "gravity",
+        "horizon",
+        "collapse"
+      ],
+      "id": "en:wheel-science:b1-b2:24",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "How does sleep affect memory?",
+      "follow_ups": [
+        "What happens after a bad night?",
+        "What would you tell a student before an exam?"
+      ],
+      "structures": [
+        "conditionals",
+        "cause and effect"
+      ],
+      "vocabulary": [
+        "consolidate",
+        "recall",
+        "rest"
+      ],
+      "id": "en:wheel-science:b1-b2:25",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Why is the placebo effect real?",
+      "follow_ups": [
+        "Where have you seen expectation change a result?",
+        "What should doctors do with it?"
+      ],
+      "structures": [
+        "passive",
+        "hedging"
+      ],
+      "vocabulary": [
+        "expectation",
+        "trial",
+        "perception"
+      ],
+      "id": "en:wheel-science:b1-b2:26",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "How does the internet move data across the world?",
+      "follow_ups": [
+        "What is a cable under the sea?",
+        "Why is latency different from speed?"
+      ],
+      "structures": [
+        "process description",
+        "passive"
+      ],
+      "vocabulary": [
+        "packet",
+        "route",
+        "latency"
+      ],
+      "id": "en:wheel-science:b1-b2:27",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "What is a quantum computer good at?",
+      "follow_ups": [
+        "Where does it fail?",
+        "Why is it not just a faster laptop?"
+      ],
+      "structures": [
+        "comparatives",
+        "speculation"
+      ],
+      "vocabulary": [
+        "qubit",
+        "superposition",
+        "factor"
+      ],
+      "id": "en:wheel-science:b1-b2:28",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Why do we yawn?",
+      "follow_ups": [
+        "Does yawning spread?",
+        "What is the best explanation you have heard?"
+      ],
+      "structures": [
+        "present simple",
+        "hypothesis language"
+      ],
+      "vocabulary": [
+        "contagious",
+        "oxygen",
+        "stretch"
+      ],
+      "id": "en:wheel-science:b1-b2:29",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "How does evolution produce complexity?",
+      "follow_ups": [
+        "What is a common misunderstanding?",
+        "How long does it take?"
+      ],
+      "structures": [
+        "present perfect",
+        "concession"
+      ],
+      "vocabulary": [
+        "selection",
+        "variation",
+        "generation"
+      ],
+      "id": "en:wheel-science:b1-b2:30",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Why is entropy a one-way street?",
+      "follow_ups": [
+        "Where does the arrow of time come from?",
+        "How does life fit a rising-entropy universe?"
+      ],
+      "structures": [
+        "nominalisation",
+        "conditionals"
+      ],
+      "vocabulary": [
+        "entropy",
+        "irreversible",
+        "disorder"
+      ],
+      "id": "en:wheel-science:c1-c2:31",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "How do we know dark matter exists if we cannot see it?",
+      "follow_ups": [
+        "What would falsify it?",
+        "Which alternative explanations survive?"
+      ],
+      "structures": [
+        "modals of deduction",
+        "hedging"
+      ],
+      "vocabulary": [
+        "inference",
+        "gravitational",
+        "candidate"
+      ],
+      "id": "en:wheel-science:c1-c2:32",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "What does it mean for a theory to be falsifiable?",
+      "follow_ups": [
+        "Give an example of an unfalsifiable claim.",
+        "Is string theory science?"
+      ],
+      "structures": [
+        "defining language",
+        "concession"
+      ],
+      "vocabulary": [
+        "falsify",
+        "predict",
+        "testable"
+      ],
+      "id": "en:wheel-science:c1-c2:33",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "How do prions break the rules of infection?",
+      "follow_ups": [
+        "What does that imply for medicine?",
+        "Why was the idea resisted?"
+      ],
+      "structures": [
+        "passive",
+        "contrast"
+      ],
+      "vocabulary": [
+        "protein",
+        "misfold",
+        "transmissible"
+      ],
+      "id": "en:wheel-science:c1-c2:34",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Why is consciousness so hard to study?",
+      "follow_ups": [
+        "What would count as evidence?",
+        "Is the hard problem real or a confusion?"
+      ],
+      "structures": [
+        "rhetorical questions",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "subjective",
+        "qualia",
+        "correlate"
+      ],
+      "id": "en:wheel-science:c1-c2:35",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "How does CRISPR change what inheritance means?",
+      "follow_ups": [
+        "Where should the line be drawn?",
+        "Who decides?"
+      ],
+      "structures": [
+        "conditionals",
+        "passive"
+      ],
+      "vocabulary": [
+        "edit",
+        "genome",
+        "heritable"
+      ],
+      "id": "en:wheel-science:c1-c2:36",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "What is the replication crisis, and what caused it?",
+      "follow_ups": [
+        "Which fields recovered fastest?",
+        "What would you change in publishing?"
+      ],
+      "structures": [
+        "nominalisation",
+        "cause and effect"
+      ],
+      "vocabulary": [
+        "replicate",
+        "significance",
+        "incentive"
+      ],
+      "id": "en:wheel-science:c1-c2:37",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Why does time seem to speed up as we age?",
+      "follow_ups": [
+        "What would slow it down?",
+        "Is it memory or attention?"
+      ],
+      "structures": [
+        "comparatives",
+        "speculation"
+      ],
+      "vocabulary": [
+        "perception",
+        "novelty",
+        "retrospect"
+      ],
+      "id": "en:wheel-science:c1-c2:38",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "How does the immune system avoid attacking the body?",
+      "follow_ups": [
+        "What happens when it fails?",
+        "Why is autoimmunity rising?"
+      ],
+      "structures": [
+        "present simple passive",
+        "concession"
+      ],
+      "vocabulary": [
+        "tolerance",
+        "autoimmune",
+        "recognition"
+      ],
+      "id": "en:wheel-science:c1-c2:39",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "What would it take to prove we live in a simulation?",
+      "follow_ups": [
+        "Could such evidence ever be trusted?",
+        "Does the question change anything?"
+      ],
+      "structures": [
+        "conditionals",
+        "modal perfect"
+      ],
+      "vocabulary": [
+        "simulation",
+        "evidence",
+        "unfalsifiable"
+      ],
+      "id": "en:wheel-science:c1-c2:40",
+      "lang": "en"
+    }
+  ]
+}

@@ -1,0 +1,840 @@
+{
+  "id": "life",
+  "version": 1,
+  "title": "My Life With and Without",
+  "subtitle": "Two lives, one choice: take a side and defend it",
+  "lang": "en",
+  "bands": [
+    "a0-a1",
+    "a2",
+    "b1-b2",
+    "c1-c2"
+  ],
+  "task": {
+    "prep_seconds": 300,
+    "speak_seconds": 300,
+    "output": "spoken"
+  },
+  "rules": {
+    "research_allowed": true,
+    "ai_allowed": false
+  },
+  "prompts": [
+    {
+      "band": "a0-a1",
+      "prompt": "Life with a pet, or life without it? Choose and defend your choice.",
+      "side_a": "With a pet",
+      "side_b": "Without a pet",
+      "follow_ups": [
+        "What animal would you choose?"
+      ],
+      "structures": [
+        "comparatives",
+        "would"
+      ],
+      "vocabulary": [
+        "pet",
+        "animal",
+        "home"
+      ],
+      "id": "en:wheel-life:a0-a1:01",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Life with a car, or life without it? Choose and defend your choice.",
+      "side_a": "With a car",
+      "side_b": "Without a car",
+      "follow_ups": [
+        "How do you travel now?"
+      ],
+      "structures": [
+        "present simple",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "car",
+        "bus",
+        "drive"
+      ],
+      "id": "en:wheel-life:a0-a1:02",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Life with a phone, or life without it? Choose and defend your choice.",
+      "side_a": "With a phone",
+      "side_b": "Without a phone",
+      "follow_ups": [
+        "How many hours a day do you use it?"
+      ],
+      "structures": [
+        "frequency adverbs"
+      ],
+      "vocabulary": [
+        "phone",
+        "call",
+        "screen"
+      ],
+      "id": "en:wheel-life:a0-a1:03",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Life with a garden, or life without it? Choose and defend your choice.",
+      "side_a": "With a garden",
+      "side_b": "Without a garden",
+      "follow_ups": [
+        "Do you like plants?"
+      ],
+      "structures": [
+        "there is / there are"
+      ],
+      "vocabulary": [
+        "garden",
+        "plant",
+        "outside"
+      ],
+      "id": "en:wheel-life:a0-a1:04",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Life with brothers and sisters, or life without it? Choose and defend your choice.",
+      "side_a": "With brothers and sisters",
+      "side_b": "Without brothers and sisters",
+      "follow_ups": [
+        "Are you the oldest or the youngest?"
+      ],
+      "structures": [
+        "past simple",
+        "family words"
+      ],
+      "vocabulary": [
+        "brother",
+        "sister",
+        "family"
+      ],
+      "id": "en:wheel-life:a0-a1:05",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Life with a job, or life without it? Choose and defend your choice.",
+      "side_a": "With a job",
+      "side_b": "Without a job",
+      "follow_ups": [
+        "What job would you like?"
+      ],
+      "structures": [
+        "present simple",
+        "want to"
+      ],
+      "vocabulary": [
+        "job",
+        "work",
+        "money"
+      ],
+      "id": "en:wheel-life:a0-a1:06",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Life with a bike, or life without it? Choose and defend your choice.",
+      "side_a": "With a bike",
+      "side_b": "Without a bike",
+      "follow_ups": [
+        "Do you ride a bike?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "bike",
+        "ride",
+        "city"
+      ],
+      "id": "en:wheel-life:a0-a1:07",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Life with a TV, or life without it? Choose and defend your choice.",
+      "side_a": "With a TV",
+      "side_b": "Without a TV",
+      "follow_ups": [
+        "What do you watch?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "watch",
+        "film",
+        "news"
+      ],
+      "id": "en:wheel-life:a0-a1:08",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Life with a best friend, or life without it? Choose and defend your choice.",
+      "side_a": "With a best friend",
+      "side_b": "Without a best friend",
+      "follow_ups": [
+        "How long have you known them?"
+      ],
+      "structures": [
+        "present perfect"
+      ],
+      "vocabulary": [
+        "friend",
+        "together",
+        "talk"
+      ],
+      "id": "en:wheel-life:a0-a1:09",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Life with a computer, or life without it? Choose and defend your choice.",
+      "side_a": "With a computer",
+      "side_b": "Without a computer",
+      "follow_ups": [
+        "What do you use it for?"
+      ],
+      "structures": [
+        "present simple",
+        "for + -ing"
+      ],
+      "vocabulary": [
+        "computer",
+        "work",
+        "internet"
+      ],
+      "id": "en:wheel-life:a0-a1:10",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with social media, or life without it? Choose and defend your choice.",
+      "side_a": "With social media",
+      "side_b": "Without social media",
+      "follow_ups": [
+        "Which app do you use most?",
+        "How would your week change?"
+      ],
+      "structures": [
+        "conditionals",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "post",
+        "follow",
+        "offline"
+      ],
+      "id": "en:wheel-life:a2:11",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with a car in the city, or life without it? Choose and defend your choice.",
+      "side_a": "With a car in the city",
+      "side_b": "Without a car in the city",
+      "follow_ups": [
+        "What is parking like where you live?"
+      ],
+      "structures": [
+        "there is",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "traffic",
+        "parking",
+        "walk"
+      ],
+      "id": "en:wheel-life:a2:12",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with a university degree, or life without it? Choose and defend your choice.",
+      "side_a": "With a university degree",
+      "side_b": "Without a university degree",
+      "follow_ups": [
+        "What would you study?"
+      ],
+      "structures": [
+        "would",
+        "present simple"
+      ],
+      "vocabulary": [
+        "degree",
+        "study",
+        "career"
+      ],
+      "id": "en:wheel-life:a2:13",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with a pet in a small flat, or life without it? Choose and defend your choice.",
+      "side_a": "With a pet in a small flat",
+      "side_b": "Without a pet in a small flat",
+      "follow_ups": [
+        "Is it fair to the animal?"
+      ],
+      "structures": [
+        "modals",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "flat",
+        "space",
+        "walk"
+      ],
+      "id": "en:wheel-life:a2:14",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with coffee, or life without it? Choose and defend your choice.",
+      "side_a": "With coffee",
+      "side_b": "Without coffee",
+      "follow_ups": [
+        "What do you drink in the morning?"
+      ],
+      "structures": [
+        "present simple",
+        "frequency"
+      ],
+      "vocabulary": [
+        "coffee",
+        "morning",
+        "energy"
+      ],
+      "id": "en:wheel-life:a2:15",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with a holiday every year, or life without it? Choose and defend your choice.",
+      "side_a": "With a holiday every year",
+      "side_b": "Without a holiday every year",
+      "follow_ups": [
+        "Where would you go?"
+      ],
+      "structures": [
+        "would",
+        "present simple"
+      ],
+      "vocabulary": [
+        "holiday",
+        "travel",
+        "rest"
+      ],
+      "id": "en:wheel-life:a2:16",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with a big family, or life without it? Choose and defend your choice.",
+      "side_a": "With a big family",
+      "side_b": "Without a big family",
+      "follow_ups": [
+        "How many people are in your family?"
+      ],
+      "structures": [
+        "there are",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "family",
+        "noise",
+        "help"
+      ],
+      "id": "en:wheel-life:a2:17",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with living alone, or life without it? Choose and defend your choice.",
+      "side_a": "With living alone",
+      "side_b": "Without living alone",
+      "follow_ups": [
+        "What would be difficult?"
+      ],
+      "structures": [
+        "would",
+        "conditionals"
+      ],
+      "vocabulary": [
+        "alone",
+        "rent",
+        "quiet"
+      ],
+      "id": "en:wheel-life:a2:18",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with a second language, or life without it? Choose and defend your choice.",
+      "side_a": "With a second language",
+      "side_b": "Without a second language",
+      "follow_ups": [
+        "Which language would you choose?"
+      ],
+      "structures": [
+        "would",
+        "present simple"
+      ],
+      "vocabulary": [
+        "language",
+        "travel",
+        "work"
+      ],
+      "id": "en:wheel-life:a2:19",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Life with a garden in the city, or life without it? Choose and defend your choice.",
+      "side_a": "With a garden in the city",
+      "side_b": "Without a garden in the city",
+      "follow_ups": [
+        "What would you grow?"
+      ],
+      "structures": [
+        "would",
+        "there is"
+      ],
+      "vocabulary": [
+        "grow",
+        "green",
+        "outside"
+      ],
+      "id": "en:wheel-life:a2:20",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with a smartphone for a week, or life without it? Choose and defend your choice.",
+      "side_a": "With a smartphone for a week",
+      "side_b": "Without a smartphone for a week",
+      "follow_ups": [
+        "What would you miss most?",
+        "How would you replace it?"
+      ],
+      "structures": [
+        "conditionals",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "notification",
+        "habit",
+        "offline"
+      ],
+      "id": "en:wheel-life:b1-b2:21",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with remote work, or life without it? Choose and defend your choice.",
+      "side_a": "With remote work",
+      "side_b": "Without remote work",
+      "follow_ups": [
+        "What does your ideal week look like?",
+        "Who loses when everyone stays home?"
+      ],
+      "structures": [
+        "comparatives",
+        "concession"
+      ],
+      "vocabulary": [
+        "commute",
+        "focus",
+        "team"
+      ],
+      "id": "en:wheel-life:b1-b2:22",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with a car in a big city, or life without it? Choose and defend your choice.",
+      "side_a": "With a car in a big city",
+      "side_b": "Without a car in a big city",
+      "follow_ups": [
+        "What would change for families?",
+        "Who pays for the roads?"
+      ],
+      "structures": [
+        "conditionals",
+        "passive"
+      ],
+      "vocabulary": [
+        "congestion",
+        "parking",
+        "subsidy"
+      ],
+      "id": "en:wheel-life:b1-b2:23",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with children, or life without it? Choose and defend your choice.",
+      "side_a": "With children",
+      "side_b": "Without children",
+      "follow_ups": [
+        "What changes that nobody warns you about?",
+        "Is the choice really free?"
+      ],
+      "structures": [
+        "present perfect",
+        "hedging"
+      ],
+      "vocabulary": [
+        "parent",
+        "time",
+        "responsibility"
+      ],
+      "id": "en:wheel-life:b1-b2:24",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with ambition, or life without it? Choose and defend your choice.",
+      "side_a": "With ambition",
+      "side_b": "Without ambition",
+      "follow_ups": [
+        "Where did yours come from?",
+        "What does it cost?"
+      ],
+      "structures": [
+        "past simple",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "goal",
+        "drive",
+        "burnout"
+      ],
+      "id": "en:wheel-life:b1-b2:25",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with a mortgage, or life without it? Choose and defend your choice.",
+      "side_a": "With a mortgage",
+      "side_b": "Without a mortgage",
+      "follow_ups": [
+        "What does owning change?",
+        "Is renting a failure?"
+      ],
+      "structures": [
+        "comparatives",
+        "passive"
+      ],
+      "vocabulary": [
+        "loan",
+        "own",
+        "stability"
+      ],
+      "id": "en:wheel-life:b1-b2:26",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with a passport that opens doors, or life without it? Choose and defend your choice.",
+      "side_a": "With a passport that opens doors",
+      "side_b": "Without a passport that opens doors",
+      "follow_ups": [
+        "What would you do first?",
+        "What do borders decide for us?"
+      ],
+      "structures": [
+        "conditionals",
+        "modals"
+      ],
+      "vocabulary": [
+        "visa",
+        "border",
+        "mobility"
+      ],
+      "id": "en:wheel-life:b1-b2:27",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with streaming subscriptions, or life without it? Choose and defend your choice.",
+      "side_a": "With streaming subscriptions",
+      "side_b": "Without streaming subscriptions",
+      "follow_ups": [
+        "How many do you pay for?",
+        "What do you actually watch?"
+      ],
+      "structures": [
+        "present perfect",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "subscribe",
+        "choice",
+        "cost"
+      ],
+      "id": "en:wheel-life:b1-b2:28",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with a side project, or life without it? Choose and defend your choice.",
+      "side_a": "With a side project",
+      "side_b": "Without a side project",
+      "follow_ups": [
+        "What would you build?",
+        "Why do so few people start?"
+      ],
+      "structures": [
+        "conditionals",
+        "cause and effect"
+      ],
+      "vocabulary": [
+        "project",
+        "time",
+        "start"
+      ],
+      "id": "en:wheel-life:b1-b2:29",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Life with a plan for the next five years, or life without it? Choose and defend your choice.",
+      "side_a": "With a plan for the next five years",
+      "side_b": "Without a plan for the next five years",
+      "follow_ups": [
+        "What happens when the plan fails?",
+        "Is planning a comfort?"
+      ],
+      "structures": [
+        "future forms",
+        "concession"
+      ],
+      "vocabulary": [
+        "plan",
+        "change",
+        "flexible"
+      ],
+      "id": "en:wheel-life:b1-b2:30",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with certainty, or life without it? Choose and defend your choice.",
+      "side_a": "With certainty",
+      "side_b": "Without certainty",
+      "follow_ups": [
+        "What would you lose if you knew everything?",
+        "Can you act without it?"
+      ],
+      "structures": [
+        "conditionals",
+        "modal perfect"
+      ],
+      "vocabulary": [
+        "certainty",
+        "doubt",
+        "decide"
+      ],
+      "id": "en:wheel-life:c1-c2:31",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with a career, or life without it? Choose and defend your choice.",
+      "side_a": "With a career",
+      "side_b": "Without a career",
+      "follow_ups": [
+        "Is a career a life or a container for one?",
+        "Who benefits from that idea?"
+      ],
+      "structures": [
+        "nominalisation",
+        "rhetorical questions"
+      ],
+      "vocabulary": [
+        "career",
+        "identity",
+        "trajectory"
+      ],
+      "id": "en:wheel-life:c1-c2:32",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with a country, or life without it? Choose and defend your choice.",
+      "side_a": "With a country",
+      "side_b": "Without a country",
+      "follow_ups": [
+        "What does belonging to one demand of you?",
+        "Could you be from nowhere?"
+      ],
+      "structures": [
+        "modals",
+        "concession"
+      ],
+      "vocabulary": [
+        "nation",
+        "belonging",
+        "citizenship"
+      ],
+      "id": "en:wheel-life:c1-c2:33",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with a belief you can defend, or life without it? Choose and defend your choice.",
+      "side_a": "With a belief you can defend",
+      "side_b": "Without a belief you can defend",
+      "follow_ups": [
+        "Which belief would you give up last?",
+        "What would shake it?"
+      ],
+      "structures": [
+        "conditionals",
+        "hedging"
+      ],
+      "vocabulary": [
+        "conviction",
+        "defend",
+        "doubt"
+      ],
+      "id": "en:wheel-life:c1-c2:34",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with a language you inherited, or life without it? Choose and defend your choice.",
+      "side_a": "With a language you inherited",
+      "side_b": "Without a language you inherited",
+      "follow_ups": [
+        "What does it carry that translation cannot?",
+        "What if you lose it?"
+      ],
+      "structures": [
+        "nominalisation",
+        "conditionals"
+      ],
+      "vocabulary": [
+        "inherit",
+        "mother tongue",
+        "loss"
+      ],
+      "id": "en:wheel-life:c1-c2:35",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with a public reputation, or life without it? Choose and defend your choice.",
+      "side_a": "With a public reputation",
+      "side_b": "Without a public reputation",
+      "follow_ups": [
+        "What would you do differently if nobody watched?",
+        "Is privacy still possible?"
+      ],
+      "structures": [
+        "conditionals",
+        "passive"
+      ],
+      "vocabulary": [
+        "reputation",
+        "audience",
+        "exposure"
+      ],
+      "id": "en:wheel-life:c1-c2:36",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with a deadline, or life without it? Choose and defend your choice.",
+      "side_a": "With a deadline",
+      "side_b": "Without a deadline",
+      "follow_ups": [
+        "Does pressure produce your best work?",
+        "What does it destroy?"
+      ],
+      "structures": [
+        "present simple",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "pressure",
+        "focus",
+        "quality"
+      ],
+      "id": "en:wheel-life:c1-c2:37",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with a fixed identity, or life without it? Choose and defend your choice.",
+      "side_a": "With a fixed identity",
+      "side_b": "Without a fixed identity",
+      "follow_ups": [
+        "Which part of your identity is chosen?",
+        "What would you keep if you could change one thing?"
+      ],
+      "structures": [
+        "passive",
+        "conditionals"
+      ],
+      "vocabulary": [
+        "identity",
+        "fixed",
+        "fluid"
+      ],
+      "id": "en:wheel-life:c1-c2:38",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with a community, or life without it? Choose and defend your choice.",
+      "side_a": "With a community",
+      "side_b": "Without a community",
+      "follow_ups": [
+        "What does it ask in return?",
+        "Can you build one from scratch?"
+      ],
+      "structures": [
+        "modals",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "community",
+        "obligation",
+        "belong"
+      ],
+      "id": "en:wheel-life:c1-c2:39",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Life with a sense of purpose, or life without it? Choose and defend your choice.",
+      "side_a": "With a sense of purpose",
+      "side_b": "Without a sense of purpose",
+      "follow_ups": [
+        "Where did yours come from?",
+        "Can purpose be manufactured?"
+      ],
+      "structures": [
+        "present perfect",
+        "passive"
+      ],
+      "vocabulary": [
+        "purpose",
+        "meaning",
+        "direction"
+      ],
+      "id": "en:wheel-life:c1-c2:40",
+      "lang": "en"
+    }
+  ]
+}

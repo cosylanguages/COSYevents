@@ -1,0 +1,9 @@
+node_modules/
+private/
+protected-export/
+.cache/
+.env
+.env.local
+*.log
+verification/
+test-results/

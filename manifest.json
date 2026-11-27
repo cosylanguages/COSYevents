@@ -1,0 +1,56 @@
+{
+  "name": "COSYevents",
+  "short_name": "COSYevents",
+  "description": "Public calendar and catalog for COSYevents — speaking clubs, cinema nights, karaoke, games, and long reads.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fdfcf8",
+  "theme_color": "#416b49",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "shared/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "shared/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "entertainment"
+  ],
+  "lang": "en",
+  "shortcuts": [
+    {
+      "name": "Today's speaking wheel",
+      "short_name": "Today's wheel",
+      "url": "./today.html",
+      "description": "The wheel of the day: eight speaking prompts, prep and speak timers"
+    },
+    {
+      "name": "Karaoke Club",
+      "short_name": "Karaoke",
+      "url": "./karaoke-club.html",
+      "description": "Sing a line, then talk about the lyrics"
+    },
+    {
+      "name": "Debatable & Relatable",
+      "short_name": "Debate",
+      "url": "./debatable-relatable.html",
+      "description": "Take a side and defend it"
+    },
+    {
+      "name": "Keeping Up With Science",
+      "short_name": "Science",
+      "url": "./keeping-up-with-science.html",
+      "description": "Real science news, made discussable"
+    }
+  ]
+}

@@ -1,0 +1,5380 @@
+[
+  {
+    "path": "sessions/cinema-club/101-and-102-dalmatians.html",
+    "size": 32362,
+    "stripped_size": 20658,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/16-wishes.html",
+    "size": 32209,
+    "stripped_size": 20462,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/a-quiet-place.html",
+    "size": 31167,
+    "stripped_size": 23458,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/about-time.html",
+    "size": 28434,
+    "stripped_size": 23327,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/adolescence.html",
+    "size": 29162,
+    "stripped_size": 21635,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/angels-and-demons.html",
+    "size": 31481,
+    "stripped_size": 23702,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/beautiful-thing-intermediate.html",
+    "size": 30341,
+    "stripped_size": 22868,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/beautiful-thing-upper-intermediate.html",
+    "size": 29673,
+    "stripped_size": 24590,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/bird-box.html",
+    "size": 29434,
+    "stripped_size": 24377,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/black-mirror.html",
+    "size": 32548,
+    "stripped_size": 24823,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/bohemian-rhapsody.html",
+    "size": 29516,
+    "stripped_size": 23873,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/breakfast-at-tiffanys.html",
+    "size": 30395,
+    "stripped_size": 22639,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/call-me-by-your-name.html",
+    "size": 30119,
+    "stripped_size": 24818,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/charade.html",
+    "size": 30232,
+    "stripped_size": 22563,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/cloud-atlas.html",
+    "size": 32998,
+    "stripped_size": 25095,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/coda-intermediate.html",
+    "size": 29477,
+    "stripped_size": 21624,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/coda-upper-intermediate.html",
+    "size": 28952,
+    "stripped_size": 23535,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/countdown.html",
+    "size": 29969,
+    "stripped_size": 22546,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/crazy-ex-girlfriend.html",
+    "size": 32508,
+    "stripped_size": 24531,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/death-becomes-her.html",
+    "size": 30159,
+    "stripped_size": 24568,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/destino.html",
+    "size": 32941,
+    "stripped_size": 20521,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/dont-look-up.html",
+    "size": 31652,
+    "stripped_size": 24169,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/dont-worry-darling.html",
+    "size": 30000,
+    "stripped_size": 24477,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/equals.html",
+    "size": 32029,
+    "stripped_size": 24348,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/fleabag.html",
+    "size": 31163,
+    "stripped_size": 23859,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/free-guy-intermediate.html",
+    "size": 29743,
+    "stripped_size": 21724,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/free-guy-upper-intermediate.html",
+    "size": 30907,
+    "stripped_size": 23472,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/funny-girl.html",
+    "size": 30424,
+    "stripped_size": 22887,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/glee-intermediate.html",
+    "size": 29348,
+    "stripped_size": 21795,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/glee-upper-intermediate.html",
+    "size": 28640,
+    "stripped_size": 23465,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/gone-girl.html",
+    "size": 31338,
+    "stripped_size": 23706,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/heathers-the-musical.html",
+    "size": 32324,
+    "stripped_size": 24343,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/hello-dolly-intermediate.html",
+    "size": 30098,
+    "stripped_size": 21513,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/hello-dolly-upper-intermediate.html",
+    "size": 31094,
+    "stripped_size": 23263,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/hereditary.html",
+    "size": 31948,
+    "stripped_size": 24420,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/homeward-bound.html",
+    "size": 32546,
+    "stripped_size": 20520,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/how-i-live-now.html",
+    "size": 31834,
+    "stripped_size": 24489,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/how-to-be-single.html",
+    "size": 29759,
+    "stripped_size": 21758,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/incendies.html",
+    "size": 28430,
+    "stripped_size": 24344,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/its-complicated.html",
+    "size": 31674,
+    "stripped_size": 23703,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/julie-and-julia-intermediate.html",
+    "size": 31193,
+    "stripped_size": 22440,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/julie-and-julia-upper-intermediate.html",
+    "size": 32249,
+    "stripped_size": 24207,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/just-my-luck.html",
+    "size": 30047,
+    "stripped_size": 22082,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/karlik-nos-dwarf-nose.html",
+    "size": 30679,
+    "stripped_size": 22448,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/kill-bill.html",
+    "size": 32188,
+    "stripped_size": 24311,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/killing-eve.html",
+    "size": 31661,
+    "stripped_size": 23761,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/kinky-boots.html",
+    "size": 30779,
+    "stripped_size": 22746,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/la-valla.html",
+    "size": 31072,
+    "stripped_size": 24787,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/lattente.html",
+    "size": 28173,
+    "stripped_size": 21971,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/leave-the-world-behind.html",
+    "size": 32742,
+    "stripped_size": 24679,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/lending-my-wings.html",
+    "size": 28253,
+    "stripped_size": 21954,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/lost.html",
+    "size": 28530,
+    "stripped_size": 23503,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/love-and-other-drugs.html",
+    "size": 32183,
+    "stripped_size": 24566,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/luck.html",
+    "size": 32264,
+    "stripped_size": 20435,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/lucy.html",
+    "size": 32204,
+    "stripped_size": 24567,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/mamma-mia.html",
+    "size": 30377,
+    "stripped_size": 22010,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/midsommar.html",
+    "size": 31856,
+    "stripped_size": 24171,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/miss-you-already.html",
+    "size": 32172,
+    "stripped_size": 24365,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/missing-searching.html",
+    "size": 29744,
+    "stripped_size": 24107,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/mrs.-harris-goes-to-paris.html",
+    "size": 29506,
+    "stripped_size": 21974,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/now-you-see-me.html",
+    "size": 31633,
+    "stripped_size": 23890,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/nuts.html",
+    "size": 30480,
+    "stripped_size": 22730,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/odd-thomas.html",
+    "size": 28565,
+    "stripped_size": 23464,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/on-a-clear-day-you-can-see....html",
+    "size": 31675,
+    "stripped_size": 23956,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/once-and-forever.html",
+    "size": 32207,
+    "stripped_size": 23850,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/once-upon-a-time....html",
+    "size": 30549,
+    "stripped_size": 22160,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/personal-shopper.html",
+    "size": 32225,
+    "stripped_size": 24480,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/queendom.html",
+    "size": 32295,
+    "stripped_size": 24164,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/radin.html",
+    "size": 28112,
+    "stripped_size": 21794,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/ratatouille-english.html",
+    "size": 32337,
+    "stripped_size": 20267,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/ratatouille-french.html",
+    "size": 32660,
+    "stripped_size": 20394,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/roman-holiday-intermediate.html",
+    "size": 30323,
+    "stripped_size": 22692,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/roman-holiday-upper-intermediate.html",
+    "size": 30367,
+    "stripped_size": 22736,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/run.html",
+    "size": 31591,
+    "stripped_size": 24166,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/serebryanye-konki.html",
+    "size": 30554,
+    "stripped_size": 22521,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/sex-and-the-city.html",
+    "size": 32510,
+    "stripped_size": 24579,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/shes-the-man.html",
+    "size": 29426,
+    "stripped_size": 21851,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/spoiler-alert.html",
+    "size": 32460,
+    "stripped_size": 24458,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/stepmom-intermediate.html",
+    "size": 30471,
+    "stripped_size": 22570,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/stepmom-upper-intermediate.html",
+    "size": 31741,
+    "stripped_size": 24187,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/still-alice.html",
+    "size": 32177,
+    "stripped_size": 24278,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/suspiria-2018.html",
+    "size": 32197,
+    "stripped_size": 24432,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-act.html",
+    "size": 31755,
+    "stripped_size": 24208,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-age-of-adaline.html",
+    "size": 28812,
+    "stripped_size": 23653,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-call.html",
+    "size": 29215,
+    "stripped_size": 24048,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-da-vinci-code.html",
+    "size": 30701,
+    "stripped_size": 22852,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-devil-wears-prada-intermediate.html",
+    "size": 30718,
+    "stripped_size": 22984,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-devil-wears-prada-upper-intermediate.html",
+    "size": 30755,
+    "stripped_size": 23021,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-first-wives-club-intermediate.html",
+    "size": 28945,
+    "stripped_size": 21832,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-first-wives-club-upper-intermediate.html",
+    "size": 30592,
+    "stripped_size": 23479,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-hunger-games.html",
+    "size": 31866,
+    "stripped_size": 24495,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-invasion.html",
+    "size": 31226,
+    "stripped_size": 23641,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-iron-lady.html",
+    "size": 31739,
+    "stripped_size": 23724,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-mirror-has-two-faces.html",
+    "size": 31956,
+    "stripped_size": 23884,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-mummy-intermediate.html",
+    "size": 29943,
+    "stripped_size": 21752,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-mummy-upper-intermediate.html",
+    "size": 31226,
+    "stripped_size": 23467,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-notebook-intermediate.html",
+    "size": 30554,
+    "stripped_size": 22043,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-notebook-upper-intermediate.html",
+    "size": 31577,
+    "stripped_size": 23864,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-odyssey.html",
+    "size": 31278,
+    "stripped_size": 23569,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-others.html",
+    "size": 31138,
+    "stripped_size": 24159,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-owl-and-the-pussycat.html",
+    "size": 31826,
+    "stripped_size": 23605,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-pianist-intermediate.html",
+    "size": 30086,
+    "stripped_size": 22422,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-pianist-upper-intermediate.html",
+    "size": 31289,
+    "stripped_size": 24195,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-queens-gambit.html",
+    "size": 32094,
+    "stripped_size": 24558,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-regime.html",
+    "size": 32747,
+    "stripped_size": 24568,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-shape-of-water.html",
+    "size": 32817,
+    "stripped_size": 24910,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-substance.html",
+    "size": 31383,
+    "stripped_size": 23620,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/the-swan-princess.html",
+    "size": 32388,
+    "stripped_size": 20483,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/v-for-vendetta.html",
+    "size": 32563,
+    "stripped_size": 24500,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/what-women-want-intermediate.html",
+    "size": 29800,
+    "stripped_size": 22117,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/what-women-want-upper-intermediate.html",
+    "size": 31452,
+    "stripped_size": 23769,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/why-women-kill.html",
+    "size": 31714,
+    "stripped_size": 24443,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/cinema-club/yentl.html",
+    "size": 30344,
+    "stripped_size": 22696,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/always-watched-in-a-crowd.html",
+    "size": 41975,
+    "stripped_size": 31448,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/appreciating-amy-winehouse-after-death.html",
+    "size": 38446,
+    "stripped_size": 32633,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy-upper-intermediate.html",
+    "size": 39017,
+    "stripped_size": 33228,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy.html",
+    "size": 39490,
+    "stripped_size": 33507,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/avoiding-things-for-free.html",
+    "size": 28575,
+    "stripped_size": 22248,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/celebrity-memorial-photos-trend.html",
+    "size": 33093,
+    "stripped_size": 25115,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/collective-guilt-global-crisis.html",
+    "size": 39335,
+    "stripped_size": 33216,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/death-of-the-album.html",
+    "size": 38871,
+    "stripped_size": 32525,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/do-bisexuals-have-to-choose.html",
+    "size": 18194,
+    "stripped_size": 12825,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/do-insects-hide-when-it-rains.html",
+    "size": 37368,
+    "stripped_size": 32108,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/does-euthanasia-reduce-suicide-rates.html",
+    "size": 38509,
+    "stripped_size": 32659,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/does-inclusive-language-make-us-equal.html",
+    "size": 29157,
+    "stripped_size": 23200,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/feeling-empty-after-series.html",
+    "size": 38052,
+    "stripped_size": 31908,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/i-have-no-time-for-it.html",
+    "size": 45708,
+    "stripped_size": 40033,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/information-consumption-as-rest.html",
+    "size": 32320,
+    "stripped_size": 24530,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/is-bad-weather-gods-anger.html",
+    "size": 38462,
+    "stripped_size": 33056,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/is-it-possible-to-find-love-without-sex.html",
+    "size": 38769,
+    "stripped_size": 32323,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/is-marketing-making-sedentary-lifestyle-a-new-normality.html",
+    "size": 26822,
+    "stripped_size": 21201,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/is-parenting-instinct-a-real-thing-or-scam.html",
+    "size": 37969,
+    "stripped_size": 32021,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/ugly-produce-anti-waste.html",
+    "size": 39221,
+    "stripped_size": 33154,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/we-are-people-we-are-not-stupid-animals.html",
+    "size": 38010,
+    "stripped_size": 31665,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/what-if-everyone-refuses-to-work.html",
+    "size": 33705,
+    "stripped_size": 25793,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/whether-raindrops-select-where-to-fall.html",
+    "size": 36935,
+    "stripped_size": 31607,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/why-do-i-spend-more-when-i-earn-more.html",
+    "size": 28863,
+    "stripped_size": 22901,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/why-do-we-try-to-relate-to-adhd.html",
+    "size": 39120,
+    "stripped_size": 33085,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/why-is-everyone-copying-me.html",
+    "size": 37780,
+    "stripped_size": 32139,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/i-couldnt-help-but-wonder/youtube-shorts-app-trend.html",
+    "size": 30030,
+    "stripped_size": 22406,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/as-it-was.html",
+    "size": 27156,
+    "stripped_size": 25388,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/california-dreaming.html",
+    "size": 29778,
+    "stripped_size": 28026,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/abba-challenge/angeleyes.html",
+    "size": 32752,
+    "stripped_size": 31004,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/abba-challenge/index.html",
+    "size": 62261,
+    "stripped_size": 58771,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/abba-challenge/me-and-i.html",
+    "size": 32835,
+    "stripped_size": 31093,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/cass-elliot-challenge/index.html",
+    "size": 57161,
+    "stripped_size": 53661,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/cass-elliot-challenge/its-getting-better.html",
+    "size": 29088,
+    "stripped_size": 27327,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/cass-elliot-challenge/make-your-own-kind-of-music.html",
+    "size": 28062,
+    "stripped_size": 26323,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/a-diagnosis.html",
+    "size": 30451,
+    "stripped_size": 28685,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/after-everything-ive-done-for-you.html",
+    "size": 30281,
+    "stripped_size": 28499,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/antidepressants-are-so-not-a-big-deal.html",
+    "size": 30294,
+    "stripped_size": 28530,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/dont-be-a-lawyer.html",
+    "size": 33039,
+    "stripped_size": 31264,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/eleven-oclock.html",
+    "size": 32082,
+    "stripped_size": 30297,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/face-your-fears.html",
+    "size": 30143,
+    "stripped_size": 28392,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/fit-hot-guys-have-problems-too.html",
+    "size": 29881,
+    "stripped_size": 28119,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/group-hang.html",
+    "size": 30760,
+    "stripped_size": 29015,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/i-hate-everything-but-you.html",
+    "size": 29862,
+    "stripped_size": 28097,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/im-a-good-person.html",
+    "size": 30913,
+    "stripped_size": 29160,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/im-the-villain-in-my-own-story.html",
+    "size": 29743,
+    "stripped_size": 27992,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/index.html",
+    "size": 802892,
+    "stripped_size": 757044,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/lets-generalize-about-men.html",
+    "size": 30575,
+    "stripped_size": 28810,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/love-kernels.html",
+    "size": 29573,
+    "stripped_size": 27809,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/oh-my-god-i-think-i-like-you.html",
+    "size": 29511,
+    "stripped_size": 27744,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/settle-for-me.html",
+    "size": 29631,
+    "stripped_size": 27877,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/sex-with-a-stranger.html",
+    "size": 29386,
+    "stripped_size": 27632,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/sexy-french-depression.html",
+    "size": 30301,
+    "stripped_size": 28541,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/sexy-getting-ready-song.html",
+    "size": 30388,
+    "stripped_size": 28630,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/slow-motion.html",
+    "size": 31669,
+    "stripped_size": 29901,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/so-maternal.html",
+    "size": 30091,
+    "stripped_size": 28318,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/whatll-it-be.html",
+    "size": 30058,
+    "stripped_size": 28295,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/wheres-the-bathroom.html",
+    "size": 29635,
+    "stripped_size": 27864,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/whos-the-new-guy.html",
+    "size": 30338,
+    "stripped_size": 28576,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/without-love-you-can-save-the-world.html",
+    "size": 30023,
+    "stripped_size": 28252,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/women-gotta-stick-together.html",
+    "size": 30477,
+    "stripped_size": 28705,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/crazy-ex-girlfriend-challenge/you-stupid-bitch.html",
+    "size": 34643,
+    "stripped_size": 32896,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/el/arletta-challenge/index.html",
+    "size": 64298,
+    "stripped_size": 60532,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/el/arletta-challenge/kapoies-nychtes.html",
+    "size": 35250,
+    "stripped_size": 33367,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/el/arletta-challenge/o-gatos.html",
+    "size": 33198,
+    "stripped_size": 31315,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/el/mple-challenge/fovamai.html",
+    "size": 39715,
+    "stripped_size": 38049,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/el/mple-challenge/index.html",
+    "size": 73254,
+    "stripped_size": 69936,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/el/mple-challenge/to-idio-to-theo.html",
+    "size": 38925,
+    "stripped_size": 37273,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/es/esteman-challenge/amor-libre.html",
+    "size": 28913,
+    "stripped_size": 27105,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/es/esteman-challenge/index.html",
+    "size": 55992,
+    "stripped_size": 52351,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/es/esteman-challenge/te-alejas-mas-de-mi.html",
+    "size": 29428,
+    "stripped_size": 27595,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/angele-challenge/balance-ton-quoi.html",
+    "size": 27410,
+    "stripped_size": 25588,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/angele-challenge/index.html",
+    "size": 50720,
+    "stripped_size": 47086,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/angele-challenge/oui-ou-non.html",
+    "size": 27014,
+    "stripped_size": 25202,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/angelina-wismes-challenge/index.html",
+    "size": 51953,
+    "stripped_size": 48378,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/angelina-wismes-challenge/la-tour-eiffel-est-pour-moi.html",
+    "size": 27949,
+    "stripped_size": 26175,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/angelina-wismes-challenge/le-soleil-noir.html",
+    "size": 27027,
+    "stripped_size": 25226,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/fabienne-thibeault-challenge/index.html",
+    "size": 126995,
+    "stripped_size": 119697,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/fabienne-thibeault-challenge/la-complainte-de-la-serveuse-automate.html",
+    "size": 28045,
+    "stripped_size": 26221,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/fabienne-thibeault-challenge/le-monde-est-stone.html",
+    "size": 29346,
+    "stripped_size": 27539,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/fabienne-thibeault-challenge/les-uns-contre-les-autres.html",
+    "size": 28928,
+    "stripped_size": 27106,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/fabienne-thibeault-challenge/un-garcon-pas-comme-les-autres.html",
+    "size": 28385,
+    "stripped_size": 26540,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/la-zarra-challenge/diva.html",
+    "size": 27045,
+    "stripped_size": 25238,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/la-zarra-challenge/index.html",
+    "size": 49204,
+    "stripped_size": 45596,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/la-zarra-challenge/tu-ten-iras.html",
+    "size": 26711,
+    "stripped_size": 24910,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/madame-monsieur-challenge/comme-un-voleur.html",
+    "size": 24470,
+    "stripped_size": 23472,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/madame-monsieur-challenge/comme-une-reine.html",
+    "size": 24084,
+    "stripped_size": 23077,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/madame-monsieur-challenge/faudrait-pas.html",
+    "size": 24044,
+    "stripped_size": 23039,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/madame-monsieur-challenge/index.html",
+    "size": 111072,
+    "stripped_size": 106058,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/madame-monsieur-challenge/les-lois-de-lattraction.html",
+    "size": 24164,
+    "stripped_size": 23154,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/madame-monsieur-challenge/tour-eiffel.html",
+    "size": 23222,
+    "stripped_size": 22228,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/maelle-challenge/flash.html",
+    "size": 31577,
+    "stripped_size": 29778,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/maelle-challenge/index.html",
+    "size": 82727,
+    "stripped_size": 77371,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/maelle-challenge/je-taime-comme-je-taime.html",
+    "size": 27800,
+    "stripped_size": 25992,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/maelle-challenge/toutes-les-machines-ont-le-coeur.html",
+    "size": 29615,
+    "stripped_size": 27802,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/zazie-challenge/couleur.html",
+    "size": 28112,
+    "stripped_size": 26296,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/zazie-challenge/index.html",
+    "size": 97965,
+    "stripped_size": 90725,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/zazie-challenge/je-suis-un-homme.html",
+    "size": 27646,
+    "stripped_size": 25828,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/zazie-challenge/nos-ames-sont.html",
+    "size": 27460,
+    "stripped_size": 25660,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/fr/zazie-challenge/speed.html",
+    "size": 27239,
+    "stripped_size": 25433,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/casualties-of-war.html",
+    "size": 29227,
+    "stripped_size": 27482,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/crazy-again.html",
+    "size": 29788,
+    "stripped_size": 28021,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/get-a-job.html",
+    "size": 30810,
+    "stripped_size": 29078,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/heavy-cross.html",
+    "size": 31249,
+    "stripped_size": 29510,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/index.html",
+    "size": 255750,
+    "stripped_size": 240036,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/men-in-love.html",
+    "size": 29453,
+    "stripped_size": 27708,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/move-in-the-right-direction.html",
+    "size": 29810,
+    "stripped_size": 28053,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/pop-goes-the-world.html",
+    "size": 29735,
+    "stripped_size": 27991,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/real-power.html",
+    "size": 29484,
+    "stripped_size": 27749,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/gossip-challenge/standing-in-the-way-of-control.html",
+    "size": 29958,
+    "stripped_size": 28208,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/heathers-challenge/index.html",
+    "size": 57009,
+    "stripped_size": 53519,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/heathers-challenge/lifeboat.html",
+    "size": 29344,
+    "stripped_size": 27601,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/heathers-challenge/seventeen.html",
+    "size": 29119,
+    "stripped_size": 27372,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/it/massimo-ranieri-challenge/chi-sara-con-te.html",
+    "size": 28040,
+    "stripped_size": 26247,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/it/massimo-ranieri-challenge/index.html",
+    "size": 55326,
+    "stripped_size": 51743,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/it/massimo-ranieri-challenge/lamore-e-un-attimo.html",
+    "size": 28343,
+    "stripped_size": 26553,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/kate-bush-challenge/army-dreamers.html",
+    "size": 29897,
+    "stripped_size": 28139,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/kate-bush-challenge/index.html",
+    "size": 58672,
+    "stripped_size": 55146,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/kate-bush-challenge/oh-to-be-in-love.html",
+    "size": 28973,
+    "stripped_size": 27205,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/alla-pugacheva-challenge/a-znaesh-vse-esche-budet.html",
+    "size": 34617,
+    "stripped_size": 32719,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/alla-pugacheva-challenge/index.html",
+    "size": 94640,
+    "stripped_size": 88888,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/alla-pugacheva-challenge/pesnya-pervoklassnika.html",
+    "size": 34283,
+    "stripped_size": 32335,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/alla-pugacheva-challenge/volshebnik-nedouchka.html",
+    "size": 34234,
+    "stripped_size": 32328,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/fleur-challenge/chelovek-33-cherty.html",
+    "size": 35029,
+    "stripped_size": 33075,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/fleur-challenge/formalin.html",
+    "size": 34204,
+    "stripped_size": 32262,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/fleur-challenge/index.html",
+    "size": 65125,
+    "stripped_size": 61229,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/mariia-chaikovska-challenge/babushka.html",
+    "size": 34914,
+    "stripped_size": 33010,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/mariia-chaikovska-challenge/index.html",
+    "size": 94956,
+    "stripped_size": 89230,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/mariia-chaikovska-challenge/zelyonaya-stranitsa.html",
+    "size": 33781,
+    "stripped_size": 31861,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/mariia-chaikovska-challenge/zuby.html",
+    "size": 34351,
+    "stripped_size": 32449,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/zemfira-challenge/arivederchi.html",
+    "size": 35582,
+    "stripped_size": 33620,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/zemfira-challenge/hoches.html",
+    "size": 35185,
+    "stripped_size": 33201,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/zemfira-challenge/index.html",
+    "size": 164318,
+    "stripped_size": 154590,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/zemfira-challenge/iskala.html",
+    "size": 36122,
+    "stripped_size": 34194,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/zemfira-challenge/lyubov-kak-sluchaynaya-smert.html",
+    "size": 34689,
+    "stripped_size": 32747,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/challenges/ru/zemfira-challenge/progulka.html",
+    "size": 34964,
+    "stripped_size": 33052,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/coming-around-again.html",
+    "size": 28019,
+    "stripped_size": 26255,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/el/an-einai-i-agapi-amartia.html",
+    "size": 33089,
+    "stripped_size": 31210,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/el/faros.html",
+    "size": 33287,
+    "stripped_size": 31362,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/el/na-i-agapi-na.html",
+    "size": 32530,
+    "stripped_size": 30639,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/es/nuevo-verano.html",
+    "size": 27610,
+    "stripped_size": 25821,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/bien-plus-fort.html",
+    "size": 27393,
+    "stripped_size": 25582,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/immobile.html",
+    "size": 26409,
+    "stripped_size": 24619,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/la-nuit-nen-finit-plus.html",
+    "size": 27166,
+    "stripped_size": 25371,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/laziza.html",
+    "size": 26913,
+    "stripped_size": 25088,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/leffet-de-masse.html",
+    "size": 27739,
+    "stripped_size": 25931,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/ma-philosophie.html",
+    "size": 27467,
+    "stripped_size": 25668,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/ouvrir-les-yeux.html",
+    "size": 26852,
+    "stripped_size": 25029,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/salut.html",
+    "size": 26648,
+    "stripped_size": 24879,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/toi-mon-amour.html",
+    "size": 28043,
+    "stripped_size": 26217,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/un-premier-amour.html",
+    "size": 27915,
+    "stripped_size": 26121,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/fr/voila.html",
+    "size": 26786,
+    "stripped_size": 24975,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/im-afraid-of-americans.html",
+    "size": 28820,
+    "stripped_size": 27034,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/it/due-grosse-lacrime-bianche.html",
+    "size": 27053,
+    "stripped_size": 25257,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/it/luomo-che-amava-le-donne.html",
+    "size": 27300,
+    "stripped_size": 25481,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/it/un-raggio-di-sole.html",
+    "size": 28002,
+    "stripped_size": 26202,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/it/unatta-estate.html",
+    "size": 27551,
+    "stripped_size": 25769,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/its-raining-men.html",
+    "size": 29377,
+    "stripped_size": 27615,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/left-outside-alone.html",
+    "size": 27685,
+    "stripped_size": 25915,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/mixed-up-world.html",
+    "size": 27897,
+    "stripped_size": 26145,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/one-of-the-greats.html",
+    "size": 27391,
+    "stripped_size": 25637,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/overprotected.html",
+    "size": 27899,
+    "stripped_size": 26135,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/ru/jim-beam.html",
+    "size": 32346,
+    "stripped_size": 30440,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/ru/u-mamy-est-sekret.html",
+    "size": 32842,
+    "stripped_size": 30930,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/ru/vyshe-domov.html",
+    "size": 31939,
+    "stripped_size": 30013,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/second-hand-rose.html",
+    "size": 28003,
+    "stripped_size": 26250,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/the-greatest.html",
+    "size": 27903,
+    "stripped_size": 26155,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/unlikely-lovers.html",
+    "size": 28011,
+    "stripped_size": 26253,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/karaoke-club/where-is-my-husband.html",
+    "size": 28093,
+    "stripped_size": 26347,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/ai-and-the-brain-intermediate.html",
+    "size": 31184,
+    "stripped_size": 25576,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/ai-and-the-brain-upper-intermediate.html",
+    "size": 31554,
+    "stripped_size": 25967,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/ai-reality-delusion.html",
+    "size": 31985,
+    "stripped_size": 26449,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/animal-cooperation-language-intermediate.html",
+    "size": 29812,
+    "stripped_size": 24884,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/animal-cooperation-language-upper-intermediate.html",
+    "size": 30446,
+    "stripped_size": 24990,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/ape-laughter-speech-origin-elementary.html",
+    "size": 28379,
+    "stripped_size": 23565,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/ape-laughter-speech-origin-intermediate.html",
+    "size": 30780,
+    "stripped_size": 25415,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/brain-cells-motivation-advanced.html",
+    "size": 24125,
+    "stripped_size": 18386,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/brain-cells-motivation-intermediate.html",
+    "size": 22957,
+    "stripped_size": 17641,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/brain-improving-in-90s-intermediate.html",
+    "size": 30980,
+    "stripped_size": 25758,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/brain-improving-in-90s-upper-intermediate.html",
+    "size": 31474,
+    "stripped_size": 25866,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/childhood-obesity-theory-elementary.html",
+    "size": 25688,
+    "stripped_size": 20840,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/childhood-obesity-theory-intermediate.html",
+    "size": 28682,
+    "stripped_size": 22478,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/childhood-obesity-theory-upper-intermediate.html",
+    "size": 23467,
+    "stripped_size": 17987,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/climate-scientist-warming-report-intermediate.html",
+    "size": 30721,
+    "stripped_size": 25707,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/climate-scientist-warming-report-upper-intermediate.html",
+    "size": 31561,
+    "stripped_size": 25966,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/coffee-fat-muscle-hormones-advanced.html",
+    "size": 15079,
+    "stripped_size": 9640,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/football-beats-shamrock-intermediate.html",
+    "size": 31297,
+    "stripped_size": 26383,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/football-beats-shamrock-upper-intermediate.html",
+    "size": 31959,
+    "stripped_size": 26425,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/fusion-energy.html",
+    "size": 31494,
+    "stripped_size": 26057,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/grandmother-evolutionary-mystery.html",
+    "size": 30928,
+    "stripped_size": 25822,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/grandparents-mental-health.html",
+    "size": 31390,
+    "stripped_size": 26142,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/gut-brain-memory-intermediate.html",
+    "size": 27916,
+    "stripped_size": 22052,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/hidden-regenerative-powers-intermediate.html",
+    "size": 30752,
+    "stripped_size": 25551,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/hidden-regenerative-powers-upper-intermediate.html",
+    "size": 31172,
+    "stripped_size": 25702,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/human-family-tree-rewrite-advanced.html",
+    "size": 15066,
+    "stripped_size": 9572,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/impersonation-accounts.html",
+    "size": 32340,
+    "stripped_size": 26797,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/inside-the-backrooms-elementary.html",
+    "size": 25884,
+    "stripped_size": 21180,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/inside-the-backrooms-intermediate.html",
+    "size": 29229,
+    "stripped_size": 22913,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/living-most-creative-time.html",
+    "size": 31125,
+    "stripped_size": 26098,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/losing-spoken-words.html",
+    "size": 31727,
+    "stripped_size": 26547,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/mendelian-laws-broken.html",
+    "size": 31488,
+    "stripped_size": 26296,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/multilingual-younger-brains-elementary.html",
+    "size": 13817,
+    "stripped_size": 9295,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/multilingual-younger-brains-intermediate.html",
+    "size": 14836,
+    "stripped_size": 9632,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/museums-movies-theater-stay-younger-elementary.html",
+    "size": 30387,
+    "stripped_size": 25141,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/museums-movies-theater-stay-younger-intermediate.html",
+    "size": 31320,
+    "stripped_size": 26309,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/museums-movies-theater-stay-younger-upper-intermediate.html",
+    "size": 31867,
+    "stripped_size": 26270,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/ordinary-wifi-identification-elementary.html",
+    "size": 22009,
+    "stripped_size": 17379,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/ordinary-wifi-identification-intermediate.html",
+    "size": 23372,
+    "stripped_size": 17820,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/ozempic-obesity-revolution-intermediate.html",
+    "size": 31209,
+    "stripped_size": 26341,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/ozempic-obesity-revolution-upper-intermediate.html",
+    "size": 31835,
+    "stripped_size": 26311,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/recycling-distraction-test-intermediate.html",
+    "size": 28561,
+    "stripped_size": 22316,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/right-handedness.html",
+    "size": 31139,
+    "stripped_size": 26285,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/screen-time-kids-8-years-intermediate.html",
+    "size": 15697,
+    "stripped_size": 10253,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/sensory-system-pain-disease-intermediate.html",
+    "size": 31112,
+    "stripped_size": 26164,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/sensory-system-pain-disease-upper-intermediate.html",
+    "size": 31757,
+    "stripped_size": 26343,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/sitting-up-straight-elementary.html",
+    "size": 22104,
+    "stripped_size": 17416,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/sitting-up-straight-intermediate.html",
+    "size": 23033,
+    "stripped_size": 17667,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/social-decisions-brain.html",
+    "size": 32076,
+    "stripped_size": 26632,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-intermediate.html",
+    "size": 31997,
+    "stripped_size": 26933,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/spider-creatures-origins-of-fatherhood-upper-intermediate.html",
+    "size": 32529,
+    "stripped_size": 27092,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/tv-midlife-shrink-brain-intermediate.html",
+    "size": 28381,
+    "stripped_size": 22376,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-elementary.html",
+    "size": 30259,
+    "stripped_size": 24963,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-intermediate.html",
+    "size": 30835,
+    "stripped_size": 25865,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/where-you-live-shapes-dementia-risk-upper-intermediate.html",
+    "size": 31761,
+    "stripped_size": 26072,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-intermediate.html",
+    "size": 31515,
+    "stripped_size": 26601,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/keeping-up-with-science/your-fingers-hold-secret-brain-evolution-upper-intermediate.html",
+    "size": 32553,
+    "stripped_size": 27044,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/long-reads/attention-economy.html",
+    "size": 32634,
+    "stripped_size": 25184,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/long-reads/changing-our-brains.html",
+    "size": 32758,
+    "stripped_size": 25124,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/long-reads/designed-to-addict.html",
+    "size": 32134,
+    "stripped_size": 25000,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/long-reads/the-30-day-breakup.html",
+    "size": 33859,
+    "stripped_size": 26221,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/aspiration-vs-inspiration-upper-intermediate.html",
+    "size": 24090,
+    "stripped_size": 16987,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/blue-eyes-brown-eyes-experiment.html",
+    "size": 24450,
+    "stripped_size": 17009,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/bluewashing-intermediate.html",
+    "size": 24104,
+    "stripped_size": 17141,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/bluewashing-upper-intermediate.html",
+    "size": 24110,
+    "stripped_size": 17147,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/bounded-rationality-intermediate.html",
+    "size": 23716,
+    "stripped_size": 16684,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/bounded-rationality-upper-intermediate.html",
+    "size": 23722,
+    "stripped_size": 16690,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/brain-discipline-dopamine.html",
+    "size": 24382,
+    "stripped_size": 16896,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/brainwashing-intermediate.html",
+    "size": 23391,
+    "stripped_size": 16732,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/brainwashing-upper-intermediate.html",
+    "size": 23397,
+    "stripped_size": 16738,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/broken-children-grown-bodies.html",
+    "size": 23899,
+    "stripped_size": 16858,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/conversations-avoid-enjoy-intermediate.html",
+    "size": 23343,
+    "stripped_size": 16093,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/conversations-avoid-enjoy-upper-intermediate.html",
+    "size": 23343,
+    "stripped_size": 16093,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/depersonalization.html",
+    "size": 23645,
+    "stripped_size": 16516,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/disappearance-of-literary-men.html",
+    "size": 23135,
+    "stripped_size": 17739,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/expert-defend-language-mistakes.html",
+    "size": 23374,
+    "stripped_size": 16068,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/fear-of-love-control.html",
+    "size": 23962,
+    "stripped_size": 16585,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/finding-the-right-person.html",
+    "size": 24642,
+    "stripped_size": 17145,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/gilberts-law.html",
+    "size": 24736,
+    "stripped_size": 17732,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/guilt-moving-abroad-intermediate.html",
+    "size": 24251,
+    "stripped_size": 16948,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/guilt-moving-abroad-proficiency.html",
+    "size": 24259,
+    "stripped_size": 16956,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/how-to-love-your-work.html",
+    "size": 23125,
+    "stripped_size": 16044,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/impersonation.html",
+    "size": 23187,
+    "stripped_size": 16100,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/kidlins-law.html",
+    "size": 25256,
+    "stripped_size": 18405,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/law-of-attraction.html",
+    "size": 25549,
+    "stripped_size": 17987,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/limerence.html",
+    "size": 24691,
+    "stripped_size": 17562,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/maze-of-biases.html",
+    "size": 24982,
+    "stripped_size": 17793,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/mind-great-literature.html",
+    "size": 23960,
+    "stripped_size": 16881,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/moving-new-city-true-self-intermediate.html",
+    "size": 19968,
+    "stripped_size": 13870,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/moving-new-city-true-self.html",
+    "size": 22565,
+    "stripped_size": 15402,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/murphys-law.html",
+    "size": 25504,
+    "stripped_size": 18304,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/nazi-race-propaganda.html",
+    "size": 24277,
+    "stripped_size": 17021,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/pinkwashing-intermediate.html",
+    "size": 23572,
+    "stripped_size": 16904,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/pinkwashing-upper-intermediate.html",
+    "size": 23578,
+    "stripped_size": 16910,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/power-of-habits.html",
+    "size": 23153,
+    "stripped_size": 15988,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/psychology-of-action-bias.html",
+    "size": 24574,
+    "stripped_size": 17389,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/psychology-of-smiles.html",
+    "size": 23810,
+    "stripped_size": 16296,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/purple-washing-intermediate.html",
+    "size": 23863,
+    "stripped_size": 16800,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/purple-washing-upper-intermediate.html",
+    "size": 23869,
+    "stripped_size": 16806,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/redwashing-intermediate.html",
+    "size": 23801,
+    "stripped_size": 17303,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/redwashing-upper-intermediate.html",
+    "size": 23807,
+    "stripped_size": 17309,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/science-of-sleep.html",
+    "size": 23276,
+    "stripped_size": 16011,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/simmel-objective-freedom.html",
+    "size": 22989,
+    "stripped_size": 15889,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/sportswashing-intermediate.html",
+    "size": 23742,
+    "stripped_size": 17007,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/sportswashing-upper-intermediate.html",
+    "size": 23748,
+    "stripped_size": 17013,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/technofeudalism-attention.html",
+    "size": 22932,
+    "stripped_size": 17598,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/the-bye-now-effect-intermediate.html",
+    "size": 24705,
+    "stripped_size": 17753,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/the-bye-now-effect-upper-intermediate.html",
+    "size": 24711,
+    "stripped_size": 17759,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/whitewashing-intermediate.html",
+    "size": 23676,
+    "stripped_size": 16986,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/whitewashing-upper-intermediate.html",
+    "size": 23682,
+    "stripped_size": 16992,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/why-do-they-say-ai-is-inevitable-intermediate.html",
+    "size": 24958,
+    "stripped_size": 17465,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/why-do-they-say-ai-is-inevitable-upper-intermediate.html",
+    "size": 24964,
+    "stripped_size": 17471,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/why-friends-correct-your-story-intermediate.html",
+    "size": 14680,
+    "stripped_size": 9657,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "sessions/mind-matters/wilsons-law.html",
+    "size": 23980,
+    "stripped_size": 17165,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "el/index.html",
+    "size": 19586,
+    "stripped_size": 19586,
+    "exceeds_size": true,
+    "markers_found": [],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/mind-matters.html",
+    "size": 42987,
+    "stripped_size": 42987,
+    "exceeds_size": true,
+    "markers_found": [],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/debatable-relatable/l-aide-active-a-mourir.html",
+    "size": 33199,
+    "stripped_size": 27051,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/debatable-relatable/la-semaine-de-4-jours.html",
+    "size": 31155,
+    "stripped_size": 25610,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy.html",
+    "size": 84727,
+    "stripped_size": 72519,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/avoiding-things-for-free.html",
+    "size": 79309,
+    "stripped_size": 67400,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/collective-guilt-global-crisis.html",
+    "size": 84333,
+    "stripped_size": 72125,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/death-of-the-album.html",
+    "size": 91714,
+    "stripped_size": 79761,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/does-inclusive-language-make-us-equal.html",
+    "size": 84333,
+    "stripped_size": 72125,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/feeling-empty-after-series.html",
+    "size": 90411,
+    "stripped_size": 78688,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/i-have-no-time-for-it.html",
+    "size": 84333,
+    "stripped_size": 72125,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/is-parenting-instinct-a-real-thing-or-scam.html",
+    "size": 92884,
+    "stripped_size": 80925,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/ugly-produce-anti-waste.html",
+    "size": 91037,
+    "stripped_size": 79162,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/why-do-we-try-to-relate-to-adhd.html",
+    "size": 91131,
+    "stripped_size": 79222,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/i-couldnt-help-but-wonder/youtube-shorts-app-trend.html",
+    "size": 86302,
+    "stripped_size": 72636,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/keeping-up-with-science/impersonation-accounts.html",
+    "size": 30253,
+    "stripped_size": 23765,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/lets-celebrate/diwali-festival.html",
+    "size": 20593,
+    "stripped_size": 14784,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/lets-celebrate/family-remittances-day.html",
+    "size": 21294,
+    "stripped_size": 15003,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/lets-celebrate/lunar-new-year.html",
+    "size": 20185,
+    "stripped_size": 14570,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/lets-celebrate/national-simplicity-day.html",
+    "size": 17670,
+    "stripped_size": 12533,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/lets-celebrate/national-workaholics-day.html",
+    "size": 18021,
+    "stripped_size": 12644,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/anticipatory-grief.html",
+    "size": 20093,
+    "stripped_size": 12097,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/broken-children-grown-bodies.html",
+    "size": 21771,
+    "stripped_size": 14024,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/depersonalization.html",
+    "size": 20139,
+    "stripped_size": 12143,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/fear-of-love-control.html",
+    "size": 21480,
+    "stripped_size": 13733,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/finding-the-right-person.html",
+    "size": 21115,
+    "stripped_size": 13368,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/gilberts-law.html",
+    "size": 19450,
+    "stripped_size": 11454,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/impersonation.html",
+    "size": 15431,
+    "stripped_size": 11147,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/kidlins-law.html",
+    "size": 20091,
+    "stripped_size": 12095,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/law-of-attraction.html",
+    "size": 20173,
+    "stripped_size": 12177,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/limerence.html",
+    "size": 19843,
+    "stripped_size": 11847,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/murphys-law.html",
+    "size": 19384,
+    "stripped_size": 11388,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/mind-matters/wilsons-law.html",
+    "size": 19441,
+    "stripped_size": 11445,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/accept-gay-child.html",
+    "size": 28479,
+    "stripped_size": 23084,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/ai-opposite-of-art.html",
+    "size": 28282,
+    "stripped_size": 22828,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/dangerous-blindness-perspective.html",
+    "size": 28106,
+    "stripped_size": 22664,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/dolto-difficult-child-quote.html",
+    "size": 29909,
+    "stripped_size": 24007,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/favorite-days-not-happened.html",
+    "size": 31454,
+    "stripped_size": 23707,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/home-is-a-time.html",
+    "size": 31507,
+    "stripped_size": 23760,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/la-sagesse-de-socrate.html",
+    "size": 27724,
+    "stripped_size": 22689,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/must-die-first.html",
+    "size": 31440,
+    "stripped_size": 23693,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/saudade.html",
+    "size": 31622,
+    "stripped_size": 23626,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/sonder.html",
+    "size": 31687,
+    "stripped_size": 23691,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/voltaire-read-dance-quote.html",
+    "size": 29594,
+    "stripped_size": 23823,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/women-mothers-tragedy.html",
+    "size": 31753,
+    "stripped_size": 24006,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/sessions/the-greatest-quotes/you-are-a-soul.html",
+    "size": 31400,
+    "stripped_size": 23653,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "fr/speaking-clubs.html",
+    "size": 77405,
+    "stripped_size": 77405,
+    "exceeds_size": true,
+    "markers_found": [],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "it/index.html",
+    "size": 17157,
+    "stripped_size": 17157,
+    "exceeds_size": true,
+    "markers_found": [],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/index.html",
+    "size": 18306,
+    "stripped_size": 18306,
+    "exceeds_size": true,
+    "markers_found": [],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/debatable-relatable/4-dnevnaya-rabochaya-nedelya.html",
+    "size": 36936,
+    "stripped_size": 30525,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/always-watched-in-a-crowd.html",
+    "size": 91795,
+    "stripped_size": 74327,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/appreciating-amy-winehouse-after-death.html",
+    "size": 89226,
+    "stripped_size": 76662,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy-upper-intermediate.html",
+    "size": 90695,
+    "stripped_size": 78617,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/are-traditions-hidden-monogamy.html",
+    "size": 92104,
+    "stripped_size": 79736,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/avoiding-things-for-free.html",
+    "size": 77506,
+    "stripped_size": 65628,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/collective-guilt-global-crisis.html",
+    "size": 90806,
+    "stripped_size": 79234,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/death-of-the-album.html",
+    "size": 87779,
+    "stripped_size": 75860,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/do-insects-hide-when-it-rains.html",
+    "size": 88289,
+    "stripped_size": 76890,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/does-euthanasia-reduce-suicide-rates.html",
+    "size": 87444,
+    "stripped_size": 75688,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/does-inclusive-language-make-us-equal.html",
+    "size": 78615,
+    "stripped_size": 66967,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/feeling-empty-after-series.html",
+    "size": 86722,
+    "stripped_size": 74838,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/i-have-no-time-for-it.html",
+    "size": 99783,
+    "stripped_size": 88223,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/is-bad-weather-gods-anger.html",
+    "size": 91245,
+    "stripped_size": 79945,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/is-it-possible-to-find-love-without-sex.html",
+    "size": 118139,
+    "stripped_size": 103303,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/is-marketing-making-sedentary-lifestyle-a-new-normality.html",
+    "size": 74632,
+    "stripped_size": 63195,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/is-parenting-instinct-a-real-thing-or-scam.html",
+    "size": 86825,
+    "stripped_size": 75397,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/ugly-produce-anti-waste.html",
+    "size": 93083,
+    "stripped_size": 81713,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/whether-raindrops-select-where-to-fall.html",
+    "size": 86947,
+    "stripped_size": 75722,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/why-do-i-spend-more-when-i-earn-more.html",
+    "size": 78270,
+    "stripped_size": 66740,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/why-do-we-try-to-relate-to-adhd.html",
+    "size": 92653,
+    "stripped_size": 81182,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/why-is-everyone-copying-me.html",
+    "size": 88198,
+    "stripped_size": 76891,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/i-couldnt-help-but-wonder/youtube-shorts-app-trend.html",
+    "size": 101969,
+    "stripped_size": 84411,
+    "exceeds_size": true,
+    "markers_found": [
+      "teacher-note",
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/keeping-up-with-science/vliyanie-propagandy-deti.html",
+    "size": 35179,
+    "stripped_size": 27685,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/lets-celebrate/diwali-festival.html",
+    "size": 25414,
+    "stripped_size": 17760,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/lets-celebrate/family-remittances-day.html",
+    "size": 27321,
+    "stripped_size": 18339,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/lets-celebrate/lunar-new-year.html",
+    "size": 26120,
+    "stripped_size": 18130,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/lets-celebrate/national-simplicity-day.html",
+    "size": 21637,
+    "stripped_size": 14559,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/lets-celebrate/national-workaholics-day.html",
+    "size": 22626,
+    "stripped_size": 15242,
+    "exceeds_size": false,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/mind-matters/ne-ispravlyay-rech.html",
+    "size": 24117,
+    "stripped_size": 16712,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/mind-matters/syn-vlyubilsya-v-druga.html",
+    "size": 24887,
+    "stripped_size": 17707,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/alisa-freindlich-inner-child-elementary.html",
+    "size": 28659,
+    "stripped_size": 20744,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/alisa-freindlich-inner-child-intermediate.html",
+    "size": 30700,
+    "stripped_size": 22043,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/dolto-difficult-child-quote.html",
+    "size": 37092,
+    "stripped_size": 29105,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/dostoevsky-loving-power-quote.html",
+    "size": 36180,
+    "stripped_size": 28489,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/dostoevsky-politics-religion-quote.html",
+    "size": 35042,
+    "stripped_size": 27351,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/langle-suppressed-child-quote.html",
+    "size": 36943,
+    "stripped_size": 28956,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/neufeld-resistance-quote.html",
+    "size": 37322,
+    "stripped_size": 29335,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/prishvin-convenient-people-quote.html",
+    "size": 37102,
+    "stripped_size": 29115,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/sukhomlinsky-obedience-quote.html",
+    "size": 37227,
+    "stripped_size": 29240,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/sessions/the-greatest-quotes/think-for-yourself-quote.html",
+    "size": 36282,
+    "stripped_size": 28667,
+    "exceeds_size": true,
+    "markers_found": [
+      "round-block"
+    ],
+    "seed_exists": false,
+    "status": "needs import first"
+  },
+  {
+    "path": "ru/speaking-clubs.html",
+    "size": 77179,
+    "stripped_size": 77179,
+    "exceeds_size": true,
+    "markers_found": [],
+    "seed_exists": false,
+    "status": "needs import first"
+  }
+]

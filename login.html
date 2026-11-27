@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Log in — COSYevents</title>
+  <script src="shared/js/cosy-theme.js"></script>
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
+  <link rel="stylesheet" href="shared/css/hub.css">
+  <link rel="stylesheet" href="shared/css/cosy-icons.css">
+  <link rel="stylesheet" href="shared/css/auth.css">
+  <link rel="icon" href="shared/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="shared/assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#416b49">
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/ecosystem-strip.css">
+  <link rel="stylesheet" href="shared/css/dark-fixes.css">
+</head>
+<body>
+
+  <div data-ecosystem-strip data-self="events"></div>
+
+  <header class="hub-header">
+    <div class="hub-header-content">
+      <div class="auth-header-actions">
+        <span class="hub-brand">COSYlanguages Ecosystem</span>
+        <div class="auth-header-actions">
+          <div data-cosy-account></div>
+          <div data-ce-lang-switcher></div>
+        </div>
+      </div>
+      <h1 id="login-title" class="hub-title">Log in</h1>
+      <p id="login-subtitle" class="hub-subtitle">
+        Enter your email address to receive a secure 6-digit login code. No password needed.
+      </p>
+    </div>
+  </header>
+
+  <main class="hub-main login-main-container">
+    <article class="auth-card">
+
+      <div id="login-status-msg" class="auth-status-msg" role="status" aria-live="polite" hidden></div>
+
+      <!-- Step 1: Request OTP -->
+      <form id="login-step-1" class="auth-form-step">
+        <div>
+          <label id="lbl-email" for="input-email" class="auth-form-label">
+            Email address
+          </label>
+          <input type="email" id="input-email" class="auth-input-text" required placeholder="you@example.com" />
+        </div>
+
+        <button type="submit" id="btn-send-code" class="auth-btn-primary">
+          Send login code
+        </button>
+      </form>
+
+      <!-- Step 2: Verify Code -->
+      <form id="login-step-2" class="auth-form-step" hidden>
+        <div>
+          <label id="lbl-code" for="input-code" class="auth-form-label">
+            Enter 6-digit code
+          </label>
+          <input type="text" id="input-code" class="auth-input-code" pattern="[0-9]{6}" maxlength="6" inputmode="numeric" required placeholder="123456" />
+        </div>
+
+        <button type="submit" id="btn-verify-code" class="auth-btn-primary">
+          Verify &amp; Log in
+        </button>
+
+        <button type="button" id="btn-resend-code" class="auth-btn-secondary">
+          Resend code
+        </button>
+      </form>
+
+      <div class="auth-back-container">
+        <a id="link-home" href="index.html" class="auth-back-link">
+          ← Back to home
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="hub-footer">
+    <p>COSYevents &copy; COSYlanguages Ecosystem.</p>
+    <p>
+      <a href="privacy.html">Privacy &amp; legal notice</a>
+    </p>
+  </footer>
+
+  <script src="shared/js/cosyevents-lang.js" defer></script>
+  <script src="shared/js/cosy-auth.js?v=20261125-1" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var params = new URLSearchParams(window.location.search);
+      var rawNext = params.get('next');
+
+      function getLang() {
+        if (window.CosyAuth && window.CosyAuth.getTranslation) {
+          var pLang = 'en';
+          if (window.CosyLang && window.CosyLang.detectPageLang) {
+            pLang = window.CosyLang.detectPageLang(window.location.pathname);
+          }
+          return pLang;
+        }
+        return 'en';
+      }
+
+      function updatePageText() {
+        if (!window.CosyAuth) return;
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        document.getElementById('login-title').textContent = t('login');
+        document.getElementById('lbl-email').textContent = t('email_label');
+        document.getElementById('btn-send-code').textContent = t('send_code');
+        document.getElementById('lbl-code').textContent = t('enter_code');
+        document.getElementById('btn-verify-code').textContent = t('verify_code');
+        document.getElementById('btn-resend-code').textContent = t('resend_code');
+        document.getElementById('link-home').textContent = '← ' + t('back_to_home');
+      }
+
+      setTimeout(updatePageText, 100);
+
+      var step1 = document.getElementById('login-step-1');
+      var step2 = document.getElementById('login-step-2');
+      var statusMsg = document.getElementById('login-status-msg');
+      var emailInput = document.getElementById('input-email');
+      var codeInput = document.getElementById('input-code');
+      var resendBtn = document.getElementById('btn-resend-code');
+
+      var currentEmail = '';
+      var resendTimer = null;
+      var resendCooldown = 0;
+
+      function showStatus(msg, isError) {
+        statusMsg.hidden = false;
+        statusMsg.textContent = msg;
+        if (isError) {
+          statusMsg.className = 'auth-status-msg status-error';
+        } else {
+          statusMsg.className = 'auth-status-msg status-success';
+        }
+      }
+
+      function hideStatus() {
+        statusMsg.hidden = true;
+        statusMsg.textContent = '';
+      }
+
+      function startResendCooldown() {
+        resendCooldown = 30;
+        resendBtn.disabled = true;
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        if (resendTimer) clearInterval(resendTimer);
+        resendTimer = setInterval(function () {
+          resendCooldown--;
+          if (resendCooldown <= 0) {
+            clearInterval(resendTimer);
+            resendBtn.disabled = false;
+            resendBtn.textContent = t('resend_code');
+          } else {
+            resendBtn.textContent = t('resend_code') + ' (' + resendCooldown + 's)';
+          }
+        }, 1000);
+      }
+
+      // Check if already signed in
+      if (window.CosyAuth) {
+        window.CosyAuth.init().then(function () {
+          updatePageText();
+          if (window.CosyAuth.getSession()) {
+            var target = window.CosyAuth.validateNextParam(rawNext, 'index.html');
+            window.location.href = target;
+          }
+        });
+      }
+
+      step1.addEventListener('submit', function (e) {
+        e.preventDefault();
+        hideStatus();
+        var email = emailInput.value.trim();
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        if (!email || email.indexOf('@') === -1) {
+          showStatus(t('error_invalid_email'), true);
+          return;
+        }
+
+        if (!navigator.onLine) {
+          showStatus(t('error_offline'), true);
+          return;
+        }
+
+        currentEmail = email;
+        var sendBtn = document.getElementById('btn-send-code');
+        sendBtn.disabled = true;
+
+        if (window.CosyAuth && window.CosyAuth.signInWithEmail) {
+          window.CosyAuth.signInWithEmail(email)
+            .then(function (res) {
+              sendBtn.disabled = false;
+              if (res.error) {
+                if (res.error.status === 429 || (res.error.message && res.error.message.indexOf('rate') !== -1)) {
+                  showStatus(t('error_rate_limit'), true);
+                } else {
+                  showStatus(res.error.message || t('error_generic'), true);
+                }
+              } else {
+                step1.hidden = true;
+                step2.hidden = false;
+                showStatus(t('code_sent'), false);
+                codeInput.focus();
+                startResendCooldown();
+              }
+            })
+            .catch(function (err) {
+              sendBtn.disabled = false;
+              showStatus(err.message || t('error_generic'), true);
+            });
+        }
+      });
+
+      step2.addEventListener('submit', function (e) {
+        e.preventDefault();
+        hideStatus();
+        var code = codeInput.value.trim();
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        if (!code || code.length !== 6) {
+          showStatus(t('error_expired_code'), true);
+          return;
+        }
+
+        if (!navigator.onLine) {
+          showStatus(t('error_offline'), true);
+          return;
+        }
+
+        var verifyBtn = document.getElementById('btn-verify-code');
+        verifyBtn.disabled = true;
+
+        if (window.CosyAuth && window.CosyAuth.verifyCode) {
+          window.CosyAuth.verifyCode(currentEmail, code)
+            .then(function (res) {
+              verifyBtn.disabled = false;
+              if (res.error) {
+                showStatus(t('error_expired_code'), true);
+              } else {
+                var target = window.CosyAuth.validateNextParam(rawNext, 'index.html');
+                window.location.href = target;
+              }
+            })
+            .catch(function () {
+              verifyBtn.disabled = false;
+              showStatus(t('error_expired_code'), true);
+            });
+        }
+      });
+
+      resendBtn.addEventListener('click', function () {
+        if (resendCooldown > 0 || !currentEmail) return;
+        hideStatus();
+        var pLang = getLang();
+        var t = function (k) { return window.CosyAuth.getTranslation(k, pLang); };
+
+        if (window.CosyAuth && window.CosyAuth.signInWithEmail) {
+          window.CosyAuth.signInWithEmail(currentEmail)
+            .then(function (res) {
+              if (res.error) {
+                showStatus(res.error.message || t('error_generic'), true);
+              } else {
+                showStatus(t('code_sent'), false);
+                startResendCooldown();
+              }
+            });
+        }
+      });
+    });
+  </script>
+  <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+/* ─── Karaoke Club Retro Cassette Liner Notes Aesthetic ─── */
+body.theme-karaoke {
+  background: radial-gradient(circle at top right, rgba(122, 92, 58, 0.15), transparent), #FDFBF7 !important;
+  color: #3A1E2D !important;
+}
+
+/* Vintage Plum & Cream variables */
+body.theme-karaoke {
+  --ink: #3A1E2D !important;
+  --ink-soft: #4d243a !important;
+  --ink-muted: #61364d !important;
+  --muted: #805c74 !important;
+  --border: rgba(122, 92, 58, 0.18) !important;
+  --cream: #FAF7F2 !important;
+  --surface-color: #FAF5EC !important;
+}
+
+/* Retro cassette cards */
+.karaoke-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.history-session {
+  background: var(--surface-color) !important;
+  border: 1.5px solid var(--border) !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 4px 10px rgba(122, 92, 58, 0.08) !important;
+  transition: all 0.3s ease !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.history-session:hover {
+  transform: translateY(-4px) !important;
+  border-color: var(--plum, #7a5c3a) !important;
+  box-shadow: 0 8px 24px rgba(122, 92, 58, 0.15) !important;
+}
+.karaoke-card-title {
+  color: var(--ink) !important;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  margin: 0 0 0.25rem 0 !important;
+  font-size: 1.15rem !important;
+}
+.karaoke-card-artist {
+  color: var(--muted) !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.75rem !important;
+  display: block;
+}
+.karaoke-card-desc {
+  font-size: 0.88rem !important;
+  color: var(--ink-soft) !important;
+  line-height: 1.5 !important;
+}

@@ -1,0 +1,210 @@
+/**
+ * shared/css/club-reviews.css
+ *
+ * Learner-review carousel for COSYevents speaking clubs. Companion styles for
+ * shared/js/club-reviews.js. Styled to match the COSYlanguages course-reviews
+ * carousel but using the COSYevents sage/terracotta palette.
+ */
+
+.club-reviews-section {
+  max-width: 860px;
+  margin: 3.5rem auto 1rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.club-reviews-header {
+  margin-bottom: 1.75rem;
+}
+
+.club-reviews-heading {
+  font-family: var(--font-serif, 'Playfair Display', serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--ink, #2a2a2a);
+  margin: 0 0 0.5rem;
+}
+
+.club-reviews-sub {
+  font-size: 0.98rem;
+  color: var(--ink-muted, #5c5957);
+  margin: 0 0 1rem;
+}
+
+.club-reviews-share {
+  display: inline-block;
+  background: var(--cosy-event-accent, #B84318);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.club-reviews-share:hover {
+  background: var(--cosy-event-accent-hover, #993C1D);
+  transform: translateY(-2px);
+}
+
+.club-reviews-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.club-reviews-carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.club-reviews-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+
+.club-review-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.club-review-card-inner {
+  background: linear-gradient(135deg, #1d3a2c, #0c2018);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 2.75rem 3rem 3rem;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.club-review-quote {
+  font-family: var(--font-serif, serif);
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  user-select: none;
+  line-height: 1;
+}
+
+.club-review-quote-top { top: 1.25rem; left: 1.5rem; }
+.club-review-quote-bottom { bottom: 1.25rem; right: 1.5rem; }
+
+.club-review-stars {
+  display: inline-flex;
+  gap: 0.15rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.club-review-star {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.club-review-star.is-on {
+  color: #f4b942;
+}
+
+.club-review-text {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 auto;
+  max-width: 640px;
+  white-space: pre-line;
+}
+
+.club-review-divider {
+  width: 180px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 1.75rem auto 1.25rem;
+}
+
+.club-review-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.85rem;
+  font-size: 0.9rem;
+}
+
+.club-review-author {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.club-review-club,
+.club-review-date {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.club-review-level {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  padding: 2px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.club-review-counter {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.5rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.club-reviews-nav-btn {
+  background: none;
+  border: none;
+  color: var(--sage-deep, #233827);
+  font-size: 2.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.club-reviews-nav-btn:hover {
+  transform: scale(1.2);
+  color: var(--sage, #416b49);
+}
+
+.club-reviews-nav-btn:focus-visible {
+  outline: 2px solid var(--sage, #416b49);
+  border-radius: 50%;
+}
+
+@media (max-width: 680px) {
+  .club-reviews-carousel-wrapper { gap: 0.25rem; }
+  .club-review-card-inner { padding: 2.25rem 1.5rem 2.75rem; }
+  .club-review-text { font-size: 0.92rem; line-height: 1.6; }
+  .club-review-quote-top { top: 0.75rem; left: 1rem; font-size: 2rem; }
+  .club-review-quote-bottom { bottom: 0.75rem; right: 1rem; font-size: 2rem; }
+  .club-review-counter { bottom: 0.75rem; left: 1rem; }
+  .club-reviews-nav-btn { font-size: 2rem; padding: 0.25rem; }
+}

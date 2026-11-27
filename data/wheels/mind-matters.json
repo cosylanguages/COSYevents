@@ -1,0 +1,759 @@
+{
+  "id": "mind-matters",
+  "version": 1,
+  "title": "Mind Matters",
+  "subtitle": "Psychological questions to explain, illustrate and reflect on",
+  "lang": "en",
+  "bands": [
+    "a0-a1",
+    "a2",
+    "b1-b2",
+    "c1-c2"
+  ],
+  "task": {
+    "prep_seconds": 300,
+    "speak_seconds": 300,
+    "output": "spoken"
+  },
+  "rules": {
+    "research_allowed": true,
+    "ai_allowed": false
+  },
+  "prompts": [
+    {
+      "band": "a0-a1",
+      "prompt": "What makes you happy? Give two examples.",
+      "follow_ups": [
+        "Is it the same for your family?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "happy",
+        "hobby",
+        "friend"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:01",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "When do you feel tired? What do you do then?",
+      "follow_ups": [
+        "What time do you go to bed?"
+      ],
+      "structures": [
+        "present simple",
+        "time expressions"
+      ],
+      "vocabulary": [
+        "tired",
+        "rest",
+        "early"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:02",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "What helps you sleep well?",
+      "follow_ups": [
+        "Do you use your phone in bed?"
+      ],
+      "structures": [
+        "present simple",
+        "because"
+      ],
+      "vocabulary": [
+        "sleep",
+        "quiet",
+        "bedroom"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:03",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Do you have a good habit? Tell us about it.",
+      "follow_ups": [
+        "When did you start?"
+      ],
+      "structures": [
+        "present simple",
+        "frequency adverbs"
+      ],
+      "vocabulary": [
+        "habit",
+        "every day",
+        "healthy"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:04",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "What makes you laugh?",
+      "follow_ups": [
+        "Who makes you laugh most?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "funny",
+        "joke",
+        "smile"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:05",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Are you sometimes afraid? What of?",
+      "follow_ups": [
+        "What do you do when you are afraid?"
+      ],
+      "structures": [
+        "present simple",
+        "be + adjective"
+      ],
+      "vocabulary": [
+        "afraid",
+        "dark",
+        "alone"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:06",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "How do you remember new words?",
+      "follow_ups": [
+        "Do you write them down?"
+      ],
+      "structures": [
+        "present simple",
+        "questions"
+      ],
+      "vocabulary": [
+        "remember",
+        "word",
+        "notebook"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:07",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Do you like being alone? When?",
+      "follow_ups": [
+        "What do you do alone?"
+      ],
+      "structures": [
+        "present simple",
+        "like + -ing"
+      ],
+      "vocabulary": [
+        "alone",
+        "quiet",
+        "music"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:08",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "What do you do when you are angry?",
+      "follow_ups": [
+        "Does it help?"
+      ],
+      "structures": [
+        "present simple",
+        "when clauses"
+      ],
+      "vocabulary": [
+        "angry",
+        "breathe",
+        "walk"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:09",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "Who do you talk to when you are sad?",
+      "follow_ups": [
+        "What do they say to you?"
+      ],
+      "structures": [
+        "present simple",
+        "who questions"
+      ],
+      "vocabulary": [
+        "sad",
+        "talk",
+        "listen"
+      ],
+      "id": "en:wheel-mind-matters:a0-a1:10",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A habit you want to change, and why.",
+      "follow_ups": [
+        "What is the first small step?"
+      ],
+      "structures": [
+        "want to / would like to",
+        "because"
+      ],
+      "vocabulary": [
+        "habit",
+        "change",
+        "routine"
+      ],
+      "id": "en:wheel-mind-matters:a2:11",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "How do you remember things: lists, photos or apps?",
+      "follow_ups": [
+        "Have you ever forgotten something important?"
+      ],
+      "structures": [
+        "present simple vs past simple"
+      ],
+      "vocabulary": [
+        "remind",
+        "forget",
+        "note"
+      ],
+      "id": "en:wheel-mind-matters:a2:12",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "What makes you stressed before an exam, and what helps?",
+      "follow_ups": [
+        "What advice would you give a friend?"
+      ],
+      "structures": [
+        "causes and results",
+        "should"
+      ],
+      "vocabulary": [
+        "stress",
+        "prepare",
+        "calm"
+      ],
+      "id": "en:wheel-mind-matters:a2:13",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Do you check your phone too much? What happens?",
+      "follow_ups": [
+        "How could you use it less?"
+      ],
+      "structures": [
+        "present simple",
+        "frequency adverbs"
+      ],
+      "vocabulary": [
+        "screen",
+        "notification",
+        "focus"
+      ],
+      "id": "en:wheel-mind-matters:a2:14",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Describe a time you forgot something important.",
+      "follow_ups": [
+        "How did you feel? What did you do?"
+      ],
+      "structures": [
+        "past simple",
+        "time linkers"
+      ],
+      "vocabulary": [
+        "forget",
+        "late",
+        "apologise"
+      ],
+      "id": "en:wheel-mind-matters:a2:15",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Why do people need friends?",
+      "follow_ups": [
+        "How do friends help you?"
+      ],
+      "structures": [
+        "why questions",
+        "because"
+      ],
+      "vocabulary": [
+        "support",
+        "trust",
+        "company"
+      ],
+      "id": "en:wheel-mind-matters:a2:16",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "What is a good way to relax after work or study?",
+      "follow_ups": [
+        "What do you usually do?"
+      ],
+      "structures": [
+        "gerunds",
+        "usually"
+      ],
+      "vocabulary": [
+        "relax",
+        "unwind",
+        "hobby"
+      ],
+      "id": "en:wheel-mind-matters:a2:17",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Do you compare yourself with other people? Why?",
+      "follow_ups": [
+        "Does it help or not?"
+      ],
+      "structures": [
+        "comparatives",
+        "present simple"
+      ],
+      "vocabulary": [
+        "compare",
+        "better",
+        "confident"
+      ],
+      "id": "en:wheel-mind-matters:a2:18",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "What makes a person kind? Give an example.",
+      "follow_ups": [
+        "Who is the kindest person you know?"
+      ],
+      "structures": [
+        "relative clauses",
+        "present simple"
+      ],
+      "vocabulary": [
+        "kind",
+        "help",
+        "generous"
+      ],
+      "id": "en:wheel-mind-matters:a2:19",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "Is it good to be alone sometimes?",
+      "follow_ups": [
+        "When do you need time alone?"
+      ],
+      "structures": [
+        "opinion phrases",
+        "present simple"
+      ],
+      "vocabulary": [
+        "alone",
+        "recharge",
+        "space"
+      ],
+      "id": "en:wheel-mind-matters:a2:20",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Procrastination: why do we delay things we actually care about?",
+      "follow_ups": [
+        "What is your own procrastination pattern?",
+        "Which trick works for you?"
+      ],
+      "structures": [
+        "present perfect",
+        "cause and effect"
+      ],
+      "vocabulary": [
+        "delay",
+        "deadline",
+        "overwhelm"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:21",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Describe one cognitive bias you notice in yourself.",
+      "follow_ups": [
+        "When did you last catch it?",
+        "How do you correct for it?"
+      ],
+      "structures": [
+        "passive voice",
+        "hedging"
+      ],
+      "vocabulary": [
+        "bias",
+        "assumption",
+        "evidence"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:22",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "The attention economy: how do apps compete for your focus?",
+      "follow_ups": [
+        "Which design choices work on you?",
+        "What would a fairer design look like?"
+      ],
+      "structures": [
+        "present continuous",
+        "modals of speculation"
+      ],
+      "vocabulary": [
+        "attention",
+        "scroll",
+        "engagement"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:23",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Burnout: what are the first signs, and what actually helps?",
+      "follow_ups": [
+        "Have you seen it in someone else?",
+        "What would you tell a manager?"
+      ],
+      "structures": [
+        "present perfect",
+        "advice modals"
+      ],
+      "vocabulary": [
+        "exhaustion",
+        "boundaries",
+        "recover"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:24",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Nostalgia: why do certain songs or smells bring the past back?",
+      "follow_ups": [
+        "What sound or smell takes you back?",
+        "Is nostalgia useful?"
+      ],
+      "structures": [
+        "past simple vs present perfect",
+        "sensory verbs"
+      ],
+      "vocabulary": [
+        "memory",
+        "trigger",
+        "childhood"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:25",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Habit loops: cue, routine, reward. Analyse one of yours.",
+      "follow_ups": [
+        "What is the cue you never noticed?",
+        "How would you swap the routine?"
+      ],
+      "structures": [
+        "sequencing",
+        "present simple"
+      ],
+      "vocabulary": [
+        "cue",
+        "routine",
+        "reward"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:26",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Social comparison: how does scrolling change how you see yourself?",
+      "follow_ups": [
+        "Who do you compare yourself with?",
+        "Does it ever motivate you?"
+      ],
+      "structures": [
+        "comparatives",
+        "present perfect"
+      ],
+      "vocabulary": [
+        "comparison",
+        "self-image",
+        "highlight reel"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:27",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Emotional regulation: what do you do when a feeling is too big?",
+      "follow_ups": [
+        "What did you learn from your family?",
+        "What would you teach a child?"
+      ],
+      "structures": [
+        "when / as soon as",
+        "reflexive verbs"
+      ],
+      "vocabulary": [
+        "regulate",
+        "breathe",
+        "name the feeling"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:28",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Growth mindset: describe a skill you improved by failing at it.",
+      "follow_ups": [
+        "What did the failure teach you?",
+        "What would you try next?"
+      ],
+      "structures": [
+        "past perfect",
+        "used to"
+      ],
+      "vocabulary": [
+        "fail",
+        "improve",
+        "effort"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:29",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "Empathy: describe a time you understood someone you disagreed with.",
+      "follow_ups": [
+        "What changed in the conversation?",
+        "Can empathy be learned?"
+      ],
+      "structures": [
+        "narrative tenses",
+        "concession"
+      ],
+      "vocabulary": [
+        "perspective",
+        "listen",
+        "disagree"
+      ],
+      "id": "en:wheel-mind-matters:b1-b2:30",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Cognitive dissonance: a belief you changed, and the discomfort before it.",
+      "follow_ups": [
+        "What finally shifted it?",
+        "How do you hold uncertainty now?"
+      ],
+      "structures": [
+        "past perfect continuous",
+        "concessive clauses"
+      ],
+      "vocabulary": [
+        "dissonance",
+        "rationalise",
+        "conviction"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:31",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Dopamine and motivation: is the pursuit often better than the reward?",
+      "follow_ups": [
+        "Where do you see this in your own work?",
+        "What would you redesign?"
+      ],
+      "structures": [
+        "nominalisation",
+        "speculative modals"
+      ],
+      "vocabulary": [
+        "anticipation",
+        "reward",
+        "drive"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:32",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Confirmation bias in public debate: how does it shape what we read and share?",
+      "follow_ups": [
+        "Which outlets do you trust, and why?",
+        "What would break the loop?"
+      ],
+      "structures": [
+        "passive constructions",
+        "hedging"
+      ],
+      "vocabulary": [
+        "echo chamber",
+        "curate",
+        "polarise"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:33",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Attachment styles: how do early relationships shape adult ones?",
+      "follow_ups": [
+        "Do you recognise a pattern in yourself?",
+        "How much can people change?"
+      ],
+      "structures": [
+        "conditional forms",
+        "distancing language"
+      ],
+      "vocabulary": [
+        "attachment",
+        "secure",
+        "avoidant"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:34",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Tolerance of ambiguity: how do people cope without a clear answer?",
+      "follow_ups": [
+        "When do you find ambiguity exciting, and when unbearable?"
+      ],
+      "structures": [
+        "impersonal constructions",
+        "modal perfect"
+      ],
+      "vocabulary": [
+        "ambiguity",
+        "tolerate",
+        "resolve"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:35",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "The narrative self: how does the story you tell about yourself limit you?",
+      "follow_ups": [
+        "Which chapter would you rewrite?",
+        "Who else writes your story?"
+      ],
+      "structures": [
+        "metaphor",
+        "narrative tenses"
+      ],
+      "vocabulary": [
+        "narrative",
+        "identity",
+        "coherent"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:36",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Empathy versus sympathy: where does the difference actually matter?",
+      "follow_ups": [
+        "When has sympathy been the wrong response?"
+      ],
+      "structures": [
+        "contrastive structures",
+        "register shift"
+      ],
+      "vocabulary": [
+        "empathy",
+        "sympathy",
+        "validate"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:37",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Moral luck: we judge outcomes we did not fully control. Is that fair?",
+      "follow_ups": [
+        "Give an example from public life.",
+        "How should the law handle it?"
+      ],
+      "structures": [
+        "conditionals",
+        "passive voice"
+      ],
+      "vocabulary": [
+        "outcome",
+        "intent",
+        "culpability"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:38",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Flow states: what conditions produce them, and why are they rare?",
+      "follow_ups": [
+        "When did you last lose track of time?",
+        "Can work be designed for flow?"
+      ],
+      "structures": [
+        "present perfect",
+        "causative verbs"
+      ],
+      "vocabulary": [
+        "absorption",
+        "challenge",
+        "skill balance"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:39",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "Burnout culture: why did exhaustion become a status symbol?",
+      "follow_ups": [
+        "What does your workplace reward?",
+        "What would a healthy alternative look like?"
+      ],
+      "structures": [
+        "rhetorical questions",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "hustle",
+        "prestige",
+        "sustainable"
+      ],
+      "id": "en:wheel-mind-matters:c1-c2:40",
+      "lang": "en"
+    }
+  ]
+}

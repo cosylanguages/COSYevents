@@ -1,0 +1,761 @@
+{
+  "id": "films",
+  "version": 1,
+  "title": "Cinema Club",
+  "subtitle": "Talk about a film as if the others have not seen it",
+  "lang": "en",
+  "bands": [
+    "a0-a1",
+    "a2",
+    "b1-b2",
+    "c1-c2"
+  ],
+  "task": {
+    "prep_seconds": 300,
+    "speak_seconds": 300,
+    "output": "spoken"
+  },
+  "rules": {
+    "research_allowed": true,
+    "ai_allowed": false
+  },
+  "prompts": [
+    {
+      "band": "a0-a1",
+      "prompt": "A film you love.",
+      "follow_ups": [
+        "Who do you watch it with?"
+      ],
+      "structures": [
+        "present simple"
+      ],
+      "vocabulary": [
+        "film",
+        "love",
+        "story"
+      ],
+      "id": "en:wheel-films:a0-a1:01",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A funny film.",
+      "follow_ups": [
+        "What is the funniest part?"
+      ],
+      "structures": [
+        "present simple",
+        "superlatives"
+      ],
+      "vocabulary": [
+        "funny",
+        "laugh",
+        "scene"
+      ],
+      "id": "en:wheel-films:a0-a1:02",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A film for children.",
+      "follow_ups": [
+        "Did you watch it as a child?"
+      ],
+      "structures": [
+        "past simple"
+      ],
+      "vocabulary": [
+        "child",
+        "cartoon",
+        "family"
+      ],
+      "id": "en:wheel-films:a0-a1:03",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A film with animals.",
+      "follow_ups": [
+        "Which animal is the best?"
+      ],
+      "structures": [
+        "present simple",
+        "animal words"
+      ],
+      "vocabulary": [
+        "animal",
+        "dog",
+        "wild"
+      ],
+      "id": "en:wheel-films:a0-a1:04",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A film you watched many times.",
+      "follow_ups": [
+        "How many times?"
+      ],
+      "structures": [
+        "present perfect",
+        "frequency"
+      ],
+      "vocabulary": [
+        "again",
+        "favourite",
+        "repeat"
+      ],
+      "id": "en:wheel-films:a0-a1:05",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A film that made you cry.",
+      "follow_ups": [
+        "Why did it make you cry?"
+      ],
+      "structures": [
+        "past simple",
+        "because"
+      ],
+      "vocabulary": [
+        "cry",
+        "sad",
+        "ending"
+      ],
+      "id": "en:wheel-films:a0-a1:06",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A film you did not like.",
+      "follow_ups": [
+        "Why not?"
+      ],
+      "structures": [
+        "past simple",
+        "negatives"
+      ],
+      "vocabulary": [
+        "boring",
+        "slow",
+        "bad"
+      ],
+      "id": "en:wheel-films:a0-a1:07",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A film with a happy ending.",
+      "follow_ups": [
+        "What happens at the end?"
+      ],
+      "structures": [
+        "present simple",
+        "story words"
+      ],
+      "vocabulary": [
+        "end",
+        "happy",
+        "wedding"
+      ],
+      "id": "en:wheel-films:a0-a1:08",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A film about a family.",
+      "follow_ups": [
+        "Is your family like that?"
+      ],
+      "structures": [
+        "present simple",
+        "family words"
+      ],
+      "vocabulary": [
+        "family",
+        "home",
+        "together"
+      ],
+      "id": "en:wheel-films:a0-a1:09",
+      "lang": "en"
+    },
+    {
+      "band": "a0-a1",
+      "prompt": "A film you want to watch tonight.",
+      "follow_ups": [
+        "Who will you watch it with?"
+      ],
+      "structures": [
+        "want to",
+        "future"
+      ],
+      "vocabulary": [
+        "tonight",
+        "choose",
+        "watch"
+      ],
+      "id": "en:wheel-films:a0-a1:10",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film that surprised you.",
+      "follow_ups": [
+        "What did you expect?",
+        "Would you watch it again?"
+      ],
+      "structures": [
+        "past simple",
+        "expectations"
+      ],
+      "vocabulary": [
+        "surprise",
+        "twist",
+        "expect"
+      ],
+      "id": "en:wheel-films:a2:11",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film with a great soundtrack.",
+      "follow_ups": [
+        "Can you hum the music?"
+      ],
+      "structures": [
+        "present simple",
+        "adjectives"
+      ],
+      "vocabulary": [
+        "music",
+        "sound",
+        "song"
+      ],
+      "id": "en:wheel-films:a2:12",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film from your country.",
+      "follow_ups": [
+        "Is it famous abroad?"
+      ],
+      "structures": [
+        "present simple",
+        "passive"
+      ],
+      "vocabulary": [
+        "country",
+        "famous",
+        "cinema"
+      ],
+      "id": "en:wheel-films:a2:13",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film that scared you.",
+      "follow_ups": [
+        "Do you like horror films?"
+      ],
+      "structures": [
+        "past simple",
+        "present simple"
+      ],
+      "vocabulary": [
+        "scary",
+        "afraid",
+        "night"
+      ],
+      "id": "en:wheel-films:a2:14",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film you would recommend to a friend.",
+      "follow_ups": [
+        "Who should not watch it?"
+      ],
+      "structures": [
+        "would",
+        "recommend"
+      ],
+      "vocabulary": [
+        "recommend",
+        "audience",
+        "perfect"
+      ],
+      "id": "en:wheel-films:a2:15",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film that is better than the book.",
+      "follow_ups": [
+        "Did you read the book first?"
+      ],
+      "structures": [
+        "comparatives",
+        "past simple"
+      ],
+      "vocabulary": [
+        "book",
+        "adapt",
+        "better"
+      ],
+      "id": "en:wheel-films:a2:16",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film you fell asleep in.",
+      "follow_ups": [
+        "Why were you tired?"
+      ],
+      "structures": [
+        "past continuous",
+        "because"
+      ],
+      "vocabulary": [
+        "sleep",
+        "boring",
+        "long"
+      ],
+      "id": "en:wheel-films:a2:17",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film about a journey.",
+      "follow_ups": [
+        "Where would you like to go?"
+      ],
+      "structures": [
+        "present simple",
+        "would"
+      ],
+      "vocabulary": [
+        "journey",
+        "travel",
+        "road"
+      ],
+      "id": "en:wheel-films:a2:18",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film with a twist.",
+      "follow_ups": [
+        "Did you guess it?"
+      ],
+      "structures": [
+        "past simple",
+        "questions"
+      ],
+      "vocabulary": [
+        "twist",
+        "guess",
+        "end"
+      ],
+      "id": "en:wheel-films:a2:19",
+      "lang": "en"
+    },
+    {
+      "band": "a2",
+      "prompt": "A film you watched because of the trailer.",
+      "follow_ups": [
+        "Was the trailer better?"
+      ],
+      "structures": [
+        "past simple",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "trailer",
+        "advert",
+        "expect"
+      ],
+      "id": "en:wheel-films:a2:20",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A film that changed your mind about something.",
+      "follow_ups": [
+        "What did you believe before?",
+        "What convinced you?"
+      ],
+      "structures": [
+        "past perfect",
+        "cause and effect"
+      ],
+      "vocabulary": [
+        "change",
+        "perspective",
+        "convince"
+      ],
+      "id": "en:wheel-films:b1-b2:21",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A villain you understood.",
+      "follow_ups": [
+        "Does understanding excuse them?",
+        "What made them believable?"
+      ],
+      "structures": [
+        "relative clauses",
+        "concession"
+      ],
+      "vocabulary": [
+        "villain",
+        "motive",
+        "sympathy"
+      ],
+      "id": "en:wheel-films:b1-b2:22",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "An ending that divided people.",
+      "follow_ups": [
+        "Which side were you on?",
+        "What would you have changed?"
+      ],
+      "structures": [
+        "conditionals",
+        "contrast"
+      ],
+      "vocabulary": [
+        "ending",
+        "divide",
+        "ambiguous"
+      ],
+      "id": "en:wheel-films:b1-b2:23",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A remake that worked, or one that failed.",
+      "follow_ups": [
+        "What did it keep and what did it lose?"
+      ],
+      "structures": [
+        "comparatives",
+        "passive"
+      ],
+      "vocabulary": [
+        "remake",
+        "original",
+        "loyal"
+      ],
+      "id": "en:wheel-films:b1-b2:24",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A film that captures a city.",
+      "follow_ups": [
+        "Which scene shows the city best?",
+        "Does your city have that film?"
+      ],
+      "structures": [
+        "present simple",
+        "sensory language"
+      ],
+      "vocabulary": [
+        "city",
+        "atmosphere",
+        "street"
+      ],
+      "id": "en:wheel-films:b1-b2:25",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A documentary that stayed with you.",
+      "follow_ups": [
+        "What did it change in you?",
+        "Was it fair to its subjects?"
+      ],
+      "structures": [
+        "present perfect",
+        "passive"
+      ],
+      "vocabulary": [
+        "documentary",
+        "evidence",
+        "subject"
+      ],
+      "id": "en:wheel-films:b1-b2:26",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A film that is better in its original language.",
+      "follow_ups": [
+        "What do subtitles lose?"
+      ],
+      "structures": [
+        "passive",
+        "comparatives"
+      ],
+      "vocabulary": [
+        "original",
+        "subtitles",
+        "voice"
+      ],
+      "id": "en:wheel-films:b1-b2:27",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A film you loved as a teenager and rewatched.",
+      "follow_ups": [
+        "Did it hold up?",
+        "What did you miss the first time?"
+      ],
+      "structures": [
+        "used to",
+        "past simple"
+      ],
+      "vocabulary": [
+        "teenager",
+        "rewatch",
+        "nostalgia"
+      ],
+      "id": "en:wheel-films:b1-b2:28",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A film that uses silence well.",
+      "follow_ups": [
+        "Which scene has no music?",
+        "What does the silence do?"
+      ],
+      "structures": [
+        "present simple",
+        "cause and effect"
+      ],
+      "vocabulary": [
+        "silence",
+        "tension",
+        "scene"
+      ],
+      "id": "en:wheel-films:b1-b2:29",
+      "lang": "en"
+    },
+    {
+      "band": "b1-b2",
+      "prompt": "A film that was miscast.",
+      "follow_ups": [
+        "Who should have played the part?",
+        "Does casting make or break a film?"
+      ],
+      "structures": [
+        "conditionals",
+        "modals"
+      ],
+      "vocabulary": [
+        "cast",
+        "actor",
+        "miscast"
+      ],
+      "id": "en:wheel-films:b1-b2:30",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A film whose politics you read differently now.",
+      "follow_ups": [
+        "What changed: the film or you?",
+        "Does it still work?"
+      ],
+      "structures": [
+        "past perfect",
+        "concession"
+      ],
+      "vocabulary": [
+        "politics",
+        "revision",
+        "context"
+      ],
+      "id": "en:wheel-films:c1-c2:31",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A film that manipulates its audience and knows it.",
+      "follow_ups": [
+        "Where does it show its hand?",
+        "Is manipulation always a fault?"
+      ],
+      "structures": [
+        "rhetorical questions",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "manipulate",
+        "score",
+        "framing"
+      ],
+      "id": "en:wheel-films:c1-c2:32",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "An adaptation that improves on its source.",
+      "follow_ups": [
+        "What did the book do better?",
+        "What does cinema add?"
+      ],
+      "structures": [
+        "comparatives",
+        "passive"
+      ],
+      "vocabulary": [
+        "adapt",
+        "source",
+        "medium"
+      ],
+      "id": "en:wheel-films:c1-c2:33",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A film that fails at what it attempts and is still worth watching.",
+      "follow_ups": [
+        "What does the failure reveal?",
+        "Would you recommend it?"
+      ],
+      "structures": [
+        "concession",
+        "conditionals"
+      ],
+      "vocabulary": [
+        "ambition",
+        "failure",
+        "flawed"
+      ],
+      "id": "en:wheel-films:c1-c2:34",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A film about memory.",
+      "follow_ups": [
+        "How does the form mirror forgetting?",
+        "Which scene lies to you?"
+      ],
+      "structures": [
+        "present simple",
+        "metaphor"
+      ],
+      "vocabulary": [
+        "memory",
+        "unreliable",
+        "form"
+      ],
+      "id": "en:wheel-films:c1-c2:35",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A film where the form is the argument.",
+      "follow_ups": [
+        "What would be lost in a novel?",
+        "Which technique carries the meaning?"
+      ],
+      "structures": [
+        "passive",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "form",
+        "structure",
+        "argument"
+      ],
+      "id": "en:wheel-films:c1-c2:36",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A film that could not be made today.",
+      "follow_ups": [
+        "What changed: money, taste or politics?",
+        "Should it be remade?"
+      ],
+      "structures": [
+        "passive",
+        "modals"
+      ],
+      "vocabulary": [
+        "censor",
+        "budget",
+        "taste"
+      ],
+      "id": "en:wheel-films:c1-c2:37",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A film whose subtitles betray it.",
+      "follow_ups": [
+        "Which line was mistranslated?",
+        "Can a translation be faithful and wrong?"
+      ],
+      "structures": [
+        "passive",
+        "contrast"
+      ],
+      "vocabulary": [
+        "subtitle",
+        "translation",
+        "betray"
+      ],
+      "id": "en:wheel-films:c1-c2:38",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A film about work.",
+      "follow_ups": [
+        "Does it romanticise labour?",
+        "What does it leave out?"
+      ],
+      "structures": [
+        "present simple",
+        "nominalisation"
+      ],
+      "vocabulary": [
+        "labour",
+        "class",
+        "shift"
+      ],
+      "id": "en:wheel-films:c1-c2:39",
+      "lang": "en"
+    },
+    {
+      "band": "c1-c2",
+      "prompt": "A film you would defend against the consensus.",
+      "follow_ups": [
+        "Why does it fail for others?",
+        "What do they miss?"
+      ],
+      "structures": [
+        "conditionals",
+        "hedging"
+      ],
+      "vocabulary": [
+        "consensus",
+        "defend",
+        "misread"
+      ],
+      "id": "en:wheel-films:c1-c2:40",
+      "lang": "en"
+    }
+  ]
+}

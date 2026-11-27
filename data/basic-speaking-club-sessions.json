@@ -1,0 +1,3627 @@
+[
+  {
+    "number": 1,
+    "slug": "session-1-introductions-and-first-impressions",
+    "title": "Introductions & First Impressions",
+    "date": "15 January 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "routines",
+    "lead": "Six cards, sixty minutes, ten words. Everyone speaks from the first minute, and every card carries a sentence frame you can read off the table.",
+    "warmup": "Point to your name on your phone. Say it to your partner.",
+    "say": "My name is Ana. / Nice to meet you.",
+    "words": [
+      [
+        "name",
+        "a name badge",
+        "naym",
+        "noun",
+        "The word people call you.",
+        "My name is Ana."
+      ],
+      [
+        "hello",
+        "a hand waving",
+        "he-LO",
+        "expression",
+        "A word you say when you meet someone.",
+        "Hello, I am Sam."
+      ],
+      [
+        "friend",
+        "two people together",
+        "frend",
+        "noun",
+        "A person you like and know well.",
+        "Ana is my friend."
+      ],
+      [
+        "country",
+        "a flag on a map",
+        "KUN-tree",
+        "noun",
+        "A land with its own flag.",
+        "My country is hot."
+      ],
+      [
+        "city",
+        "tall buildings",
+        "SI-tee",
+        "noun",
+        "A big town with many people.",
+        "My city is big."
+      ],
+      [
+        "job",
+        "a work badge",
+        "job",
+        "noun",
+        "The work you do for money.",
+        "My job is in a shop."
+      ],
+      [
+        "family",
+        "four people at a table",
+        "FAM-i-lee",
+        "noun",
+        "Your mother, father and children.",
+        "My family is small."
+      ],
+      [
+        "hobby",
+        "a guitar",
+        "HOB-ee",
+        "noun",
+        "Something you do for fun.",
+        "My hobby is music."
+      ],
+      [
+        "phone",
+        "a phone in a hand",
+        "fone",
+        "noun",
+        "A small telephone you carry.",
+        "My phone is new."
+      ],
+      [
+        "photo",
+        "a printed picture",
+        "FO-to",
+        "noun",
+        "A picture from a camera.",
+        "This is a photo of my family."
+      ]
+    ],
+    "question": "Is your city friendly? Why?",
+    "model": "For me, my city is friendly because people say hello.",
+    "choices": [
+      "a big city or a small town",
+      "talk to new people or stay with friends",
+      "a morning person or an evening person"
+    ],
+    "pref_example": "I prefer a small town because it is quiet.",
+    "roleplay": {
+      "title": "meet someone new",
+      "scenario": "Student A is new at the club, Student B is a member. Say your name and ask two questions.",
+      "frames": [
+        "Hello. My name is…",
+        "Nice to meet you.",
+        "Where are you from?",
+        "I am from…",
+        "What is your job?",
+        "See you next week."
+      ]
+    },
+    "future": {
+      "chunks": "Tomorrow, I will… / Next week, I want to…",
+      "prompts": "Who will you meet tomorrow? What do you want to do next week?",
+      "model": "Next week I want to meet a new friend."
+    },
+    "takeaway": "Say your name + one word you liked today.",
+    "weaker": "let Card 4 be read word for word from the card.",
+    "stronger": "add a third question — \"Do you live near here?\""
+  },
+  {
+    "number": 2,
+    "slug": "session-2-work-and-career-choices",
+    "title": "Work & Career Choices",
+    "date": "22 January 2027",
+    "topic": "Work & Career",
+    "sub_theme": "routines",
+    "lead": "Ten work words, one opinion question, and a small conversation at a shop counter. No grammar lecture — just frames people can use on Monday.",
+    "warmup": "Show your phone. Is your job in the phone? Point to one work app.",
+    "say": "I work in a shop. / I start at nine.",
+    "words": [
+      [
+        "job",
+        "a work badge",
+        "job",
+        "noun",
+        "The work you do for money.",
+        "My job is in a shop."
+      ],
+      [
+        "office",
+        "desks and chairs",
+        "OF-is",
+        "noun",
+        "A room where people work at desks.",
+        "I work in an office."
+      ],
+      [
+        "boss",
+        "a person with a list",
+        "bos",
+        "noun",
+        "The person you work for.",
+        "My boss is nice."
+      ],
+      [
+        "colleague",
+        "two people at a desk",
+        "KOL-eeg",
+        "noun",
+        "A person you work with.",
+        "My colleague speaks English."
+      ],
+      [
+        "money",
+        "notes and coins",
+        "MUN-ee",
+        "noun",
+        "What you get for work.",
+        "The money is good."
+      ],
+      [
+        "meeting",
+        "people at a table",
+        "MEE-ting",
+        "noun",
+        "People talking about work together.",
+        "The meeting is at ten."
+      ],
+      [
+        "computer",
+        "a laptop",
+        "kum-PYOO-ter",
+        "noun",
+        "A machine for work and email.",
+        "My computer is old."
+      ],
+      [
+        "email",
+        "an envelope on a screen",
+        "EE-mayl",
+        "noun",
+        "A message you send from a computer.",
+        "I write ten emails a day."
+      ],
+      [
+        "break",
+        "a cup and a clock",
+        "brayk",
+        "noun",
+        "A short stop from work.",
+        "My break is at one."
+      ],
+      [
+        "start",
+        "a clock at nine",
+        "start",
+        "verb",
+        "To begin work.",
+        "I start at nine."
+      ]
+    ],
+    "question": "Is your job good for you? Why?",
+    "model": "For me, my job is good because the people are nice.",
+    "choices": [
+      "an office job or a job at home",
+      "a morning shift or an evening shift",
+      "a big company or a small company"
+    ],
+    "pref_example": "I prefer a morning shift because I sleep early.",
+    "roleplay": {
+      "title": "ask about a job",
+      "scenario": "Student A has a small shop. Student B wants a job there. Ask about the hours and the money.",
+      "frames": [
+        "Hello. I want a job.",
+        "Are you open on Sunday?",
+        "What time do you start?",
+        "We start at nine.",
+        "How much is the pay?",
+        "OK, thank you. Goodbye."
+      ]
+    },
+    "future": {
+      "chunks": "Next year, I want to… / Tomorrow, I will…",
+      "prompts": "What do you want to do next year? What will you do after work tomorrow?",
+      "model": "Next year I want to work in a bigger office."
+    },
+    "takeaway": "One word from today + one job you want.",
+    "weaker": "use only three questions in Card 4 and write them on the board.",
+    "stronger": "the shop says no, so B asks about a different job — \"Do you know a shop with a job?\""
+  },
+  {
+    "number": 3,
+    "slug": "session-3-time-management-and-daily-priorities",
+    "title": "Time Management & Daily Priorities",
+    "date": "29 January 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "routines",
+    "lead": "Time words are the easiest words to use at A0: today, tomorrow, nine o'clock. This session turns them into appointments and plans.",
+    "warmup": "Look at your phone. What time is it now? Say the time to your partner.",
+    "say": "It is nine o'clock. / I am busy today.",
+    "words": [
+      [
+        "time",
+        "a clock face",
+        "tighm",
+        "noun",
+        "Hours and minutes.",
+        "What time is it?"
+      ],
+      [
+        "clock",
+        "a wall clock",
+        "klok",
+        "noun",
+        "A thing that shows the time.",
+        "The clock is on the wall."
+      ],
+      [
+        "early",
+        "a clock at seven",
+        "ER-lee",
+        "adjective",
+        "Before the usual time.",
+        "I wake up early."
+      ],
+      [
+        "late",
+        "a clock at eleven",
+        "layt",
+        "adjective",
+        "After the usual time.",
+        "The bus is late."
+      ],
+      [
+        "busy",
+        "a full notebook",
+        "BIZ-ee",
+        "adjective",
+        "With many things to do.",
+        "I am busy today."
+      ],
+      [
+        "free",
+        "an empty page",
+        "free",
+        "adjective",
+        "With time for other things.",
+        "I am free on Sunday."
+      ],
+      [
+        "work",
+        "a desk",
+        "werk",
+        "noun",
+        "The place or the thing you do for money.",
+        "I go to work at eight."
+      ],
+      [
+        "dinner",
+        "a plate at night",
+        "DIN-er",
+        "noun",
+        "The meal in the evening.",
+        "Dinner is at seven."
+      ],
+      [
+        "sleep",
+        "a pillow",
+        "sleep",
+        "verb",
+        "To rest with your eyes closed.",
+        "I sleep eight hours."
+      ],
+      [
+        "plan",
+        "a list with times",
+        "plan",
+        "noun",
+        "What you will do and when.",
+        "My plan is simple."
+      ]
+    ],
+    "question": "Are you busy every day? Why?",
+    "model": "For me, I am busy every day because I work and cook.",
+    "choices": [
+      "a busy day or a free day",
+      "work in the morning or work in the evening",
+      "make a plan or no plan"
+    ],
+    "pref_example": "I prefer a free day because I can sleep.",
+    "roleplay": {
+      "title": "make an appointment",
+      "scenario": "Student A works at a reception desk. Student B wants an appointment this week.",
+      "frames": [
+        "Hello. I want an appointment.",
+        "What day?",
+        "Monday, please.",
+        "What time?",
+        "Three o'clock.",
+        "OK. See you Monday."
+      ]
+    },
+    "future": {
+      "chunks": "Tonight, I will… / Tomorrow, I want to…",
+      "prompts": "What will you do tonight? What do you want to do tomorrow morning?",
+      "model": "Tonight I will sleep early."
+    },
+    "takeaway": "One word + one time you will do something tomorrow.",
+    "weaker": "put three times on the board (nine, twelve, three) and let B point.",
+    "stronger": "Monday is full, so the receptionist offers Tuesday at four — B must accept or ask for another day."
+  },
+  {
+    "number": 4,
+    "slug": "session-4-family-roles-and-responsibilities",
+    "title": "Family Roles & Responsibilities",
+    "date": "5 February 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "home",
+    "lead": "Family words are personal, so this session runs on photos and short answers. Card 4 is a friendly conversation, not a debate.",
+    "warmup": "Show a photo on your phone. Who is in the photo? Say one word.",
+    "say": "This is my sister. / She lives in my city.",
+    "words": [
+      [
+        "mother",
+        "a woman with a child",
+        "MUTH-er",
+        "noun",
+        "The woman in your family with children.",
+        "My mother is a teacher."
+      ],
+      [
+        "father",
+        "a man with a child",
+        "FAH-ther",
+        "noun",
+        "The man in your family with children.",
+        "My father cooks well."
+      ],
+      [
+        "sister",
+        "two girls",
+        "SIS-ter",
+        "noun",
+        "A girl or woman with the same parents.",
+        "My sister is ten."
+      ],
+      [
+        "brother",
+        "two boys",
+        "BRUTH-er",
+        "noun",
+        "A boy or man with the same parents.",
+        "I have one brother."
+      ],
+      [
+        "child",
+        "a small person",
+        "chighld",
+        "noun",
+        "A young person.",
+        "They have two children."
+      ],
+      [
+        "cook",
+        "a pan on a stove",
+        "kuk",
+        "verb",
+        "To make food hot and ready.",
+        "I cook every day."
+      ],
+      [
+        "clean",
+        "a sponge",
+        "kleen",
+        "verb",
+        "To make a place not dirty.",
+        "I clean on Saturday."
+      ],
+      [
+        "help",
+        "two hands together",
+        "help",
+        "verb",
+        "To do part of the work for someone.",
+        "My brother helps at home."
+      ],
+      [
+        "visit",
+        "a door with a bag",
+        "VIZ-it",
+        "verb",
+        "To go to someone's home for a time.",
+        "We visit my mother on Sunday."
+      ],
+      [
+        "home",
+        "a house with a light",
+        "hohm",
+        "noun",
+        "The place where you live.",
+        "I am at home now."
+      ]
+    ],
+    "question": "Who cooks in your home?",
+    "model": "For me, I cook, and my sister cleans.",
+    "choices": [
+      "a big family or a small family",
+      "cook at home or eat out",
+      "live with family or live alone"
+    ],
+    "pref_example": "I prefer a small family because it is quiet.",
+    "roleplay": {
+      "title": "ask about a family",
+      "scenario": "Two friends talk about their families. Ask, answer, then swap.",
+      "frames": [
+        "Do you have brothers or sisters?",
+        "Yes, one sister.",
+        "Does she live here?",
+        "No, she lives in another city.",
+        "Do you visit your family?",
+        "Yes, every Sunday."
+      ]
+    },
+    "future": {
+      "chunks": "This weekend, I will… / Next month, I want to…",
+      "prompts": "Who will you visit this weekend? What do you want to do with your family next month?",
+      "model": "This weekend I will visit my mother."
+    },
+    "takeaway": "One word + one person you will see this week.",
+    "weaker": "write the six answers on the board so B can read them.",
+    "stronger": "add a follow-up — \"Who cooks in her home?\" — so the answers get longer."
+  },
+  {
+    "number": 5,
+    "slug": "session-5-appearance-and-first-judgments",
+    "title": "Appearance & First Judgments",
+    "date": "12 February 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "routines",
+    "lead": "Describing people needs only two patterns: is and has. Ten words, three choices, and a short visit to an optician.",
+    "warmup": "Look at your partner. Say one true sentence: \"You have brown eyes.\"",
+    "say": "She has long hair. / He is tall.",
+    "words": [
+      [
+        "hair",
+        "a head with hair",
+        "hair",
+        "noun",
+        "What grows on your head.",
+        "Her hair is long."
+      ],
+      [
+        "eyes",
+        "two eyes",
+        "ighz",
+        "noun",
+        "You see with them.",
+        "He has brown eyes."
+      ],
+      [
+        "tall",
+        "a tall person",
+        "tawl",
+        "adjective",
+        "Big from top to bottom.",
+        "My brother is tall."
+      ],
+      [
+        "short",
+        "a short person",
+        "short",
+        "adjective",
+        "Small from top to bottom.",
+        "I am short."
+      ],
+      [
+        "young",
+        "a child",
+        "yung",
+        "adjective",
+        "Not old.",
+        "She is very young."
+      ],
+      [
+        "old",
+        "an older person",
+        "ohld",
+        "adjective",
+        "With many years.",
+        "My father is old."
+      ],
+      [
+        "smile",
+        "a happy face",
+        "smighl",
+        "noun",
+        "A happy mouth.",
+        "She has a nice smile."
+      ],
+      [
+        "glasses",
+        "a person with glasses",
+        "GLAS-iz",
+        "noun",
+        "You wear them to see well.",
+        "I wear glasses."
+      ],
+      [
+        "clothes",
+        "a shirt and trousers",
+        "klohz",
+        "noun",
+        "Shirt, trousers, dress.",
+        "His clothes are black."
+      ],
+      [
+        "beard",
+        "a face with a beard",
+        "beerd",
+        "noun",
+        "Hair on a man's face.",
+        "He has a beard."
+      ]
+    ],
+    "question": "Do you like your photo? Why?",
+    "model": "For me, I don't like my photo because my eyes are closed.",
+    "choices": [
+      "short hair or long hair",
+      "glasses or no glasses",
+      "formal clothes or comfortable clothes"
+    ],
+    "pref_example": "I prefer comfortable clothes because I walk a lot.",
+    "roleplay": {
+      "title": "at the optician",
+      "scenario": "Student A works in an optician's shop. Student B wants new glasses.",
+      "frames": [
+        "Hello. I want new glasses.",
+        "Do you like these?",
+        "Can I try them?",
+        "Yes, of course.",
+        "How much are they?",
+        "They are forty euros."
+      ]
+    },
+    "future": {
+      "chunks": "Next month, I want to… / Tomorrow, I will…",
+      "prompts": "What do you want to buy next month? What will you wear tomorrow?",
+      "model": "Next month I want to buy new glasses."
+    },
+    "takeaway": "One word + one thing you will wear tomorrow.",
+    "weaker": "let A point at the glasses and say only \"These? These?\" plus the price.",
+    "stronger": "the glasses are too small, so B asks for a different pair and a different price."
+  },
+  {
+    "number": 6,
+    "slug": "session-6-morning-routines-and-productivity",
+    "title": "Morning Routines & Productivity",
+    "date": "19 February 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "routines",
+    "lead": "The morning is the easiest place to start speaking: everybody has one, and every action has a picture. Card 4 is breakfast at a café counter.",
+    "warmup": "Mime one morning action. Your partner says the word.",
+    "say": "I wake up at seven. / I drink coffee.",
+    "words": [
+      [
+        "alarm",
+        "a phone alarm",
+        "a-LARM",
+        "noun",
+        "A sound that wakes you up.",
+        "My alarm is at six."
+      ],
+      [
+        "shower",
+        "water from above",
+        "SHOW-er",
+        "noun",
+        "Washing your body with water.",
+        "I take a shower at seven."
+      ],
+      [
+        "breakfast",
+        "bread and coffee",
+        "BREK-fast",
+        "noun",
+        "The first meal of the day.",
+        "My breakfast is small."
+      ],
+      [
+        "coffee",
+        "a cup",
+        "KOF-ee",
+        "noun",
+        "A hot brown drink.",
+        "I drink coffee every morning."
+      ],
+      [
+        "bus",
+        "a city bus",
+        "bus",
+        "noun",
+        "A big vehicle for many people.",
+        "I take the bus at eight."
+      ],
+      [
+        "hurry",
+        "a running person",
+        "HUR-ee",
+        "verb",
+        "To go fast because you are late.",
+        "I hurry every morning."
+      ],
+      [
+        "brush",
+        "a toothbrush",
+        "brush",
+        "verb",
+        "To clean your teeth.",
+        "I brush my teeth."
+      ],
+      [
+        "work",
+        "a desk",
+        "werk",
+        "noun",
+        "What you do for money.",
+        "I go to work at nine."
+      ],
+      [
+        "early",
+        "a clock at six",
+        "ER-lee",
+        "adverb",
+        "Before the usual time.",
+        "I wake up early."
+      ],
+      [
+        "tired",
+        "a yawning face",
+        "TIGH-erd",
+        "adjective",
+        "Needing sleep.",
+        "I am tired in the morning."
+      ]
+    ],
+    "question": "Is your morning good or bad? Why?",
+    "model": "For me, my morning is good because I have time for coffee.",
+    "choices": [
+      "early morning or late night",
+      "breakfast at home or breakfast at a café",
+      "walk to work or take the bus"
+    ],
+    "pref_example": "I prefer to walk because the bus is late.",
+    "roleplay": {
+      "title": "buy breakfast",
+      "scenario": "Student A works at a café. Student B wants breakfast before work.",
+      "frames": [
+        "One coffee, please.",
+        "And one sandwich, please.",
+        "Here you are.",
+        "How much is it?",
+        "Five euros, please.",
+        "Thank you. Have a good day."
+      ]
+    },
+    "future": {
+      "chunks": "Tomorrow, I will… / Next week, I want to…",
+      "prompts": "What time will you wake up tomorrow? What do you want to change in your morning?",
+      "model": "Tomorrow I will wake up at six and walk to work."
+    },
+    "takeaway": "One word + one thing you will do tomorrow morning.",
+    "weaker": "put the three prices on the board and let B point to the total.",
+    "stronger": "the sandwich is finished, so B chooses something else and asks the price again."
+  },
+  {
+    "number": 7,
+    "slug": "session-7-evening-wind-down-and-work-life-balance",
+    "title": "Evening Wind-Down & Work-Life Balance",
+    "date": "26 February 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "routines",
+    "lead": "After work is when adults actually have time to talk. This session keeps the language small so the conversation can be long.",
+    "warmup": "Mime one thing you do after work. Your partner says it.",
+    "say": "In the evening I watch TV. / I relax at home.",
+    "words": [
+      [
+        "evening",
+        "a dark sky with a lamp",
+        "EEV-ning",
+        "noun",
+        "The time after work, before night.",
+        "In the evening I am at home."
+      ],
+      [
+        "dinner",
+        "a plate at night",
+        "DIN-er",
+        "noun",
+        "The meal in the evening.",
+        "Dinner is at eight."
+      ],
+      [
+        "TV",
+        "a television",
+        "tee-VEE",
+        "noun",
+        "A screen for films and news.",
+        "I watch TV for one hour."
+      ],
+      [
+        "walk",
+        "feet on a path",
+        "wawk",
+        "noun",
+        "Going somewhere on foot.",
+        "We take a walk after dinner."
+      ],
+      [
+        "relax",
+        "a person on a sofa",
+        "ri-LAKS",
+        "verb",
+        "To rest and do nothing hard.",
+        "I relax with music."
+      ],
+      [
+        "tired",
+        "a yawning face",
+        "TIGH-erd",
+        "adjective",
+        "Needing sleep.",
+        "I am tired at nine."
+      ],
+      [
+        "book",
+        "an open book",
+        "buk",
+        "noun",
+        "Pages with a story.",
+        "I read a book in bed."
+      ],
+      [
+        "tea",
+        "a cup with steam",
+        "tee",
+        "noun",
+        "A hot drink from leaves.",
+        "I drink tea at night."
+      ],
+      [
+        "music",
+        "headphones",
+        "MYOO-zik",
+        "noun",
+        "Sounds you listen to.",
+        "I listen to music."
+      ],
+      [
+        "bed",
+        "a bed",
+        "bed",
+        "noun",
+        "Where you sleep.",
+        "I go to bed at eleven."
+      ]
+    ],
+    "question": "What do you do in the evening? Is it good for you?",
+    "model": "For me, my evening is good because I walk and then relax.",
+    "choices": [
+      "watch TV or read a book",
+      "walk after dinner or sit on the sofa",
+      "phone in bed or no phone in bed"
+    ],
+    "pref_example": "I prefer a book because the TV is too loud.",
+    "roleplay": {
+      "title": "invite a friend for dinner",
+      "scenario": "Student A invites Student B for dinner. B says yes and asks what to bring.",
+      "frames": [
+        "Do you want to come for dinner?",
+        "Yes, thank you. What time?",
+        "Seven o'clock.",
+        "What can I bring?",
+        "Just bread. See you at seven."
+      ]
+    },
+    "future": {
+      "chunks": "Tonight, I will… / Next week, I want to…",
+      "prompts": "What will you do tonight? What do you want to do after work next week?",
+      "model": "Tonight I will walk for twenty minutes and go to bed early."
+    },
+    "takeaway": "One word + one thing you will do tonight.",
+    "weaker": "cut the invitation to three lines and let B read them.",
+    "stronger": "B is busy tonight, so they have to find another day and time."
+  },
+  {
+    "number": 8,
+    "slug": "session-8-home-and-living-preferences",
+    "title": "Home & Living Preferences",
+    "date": "5 March 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "home",
+    "lead": "Rooms and furniture give A0 speakers something to point at and name. Card 4 turns that into a phone call about a flat.",
+    "warmup": "Point to three things in this room. Name them.",
+    "say": "There is a kitchen. / My flat is small.",
+    "words": [
+      [
+        "flat",
+        "a block of flats",
+        "flat",
+        "noun",
+        "A home on one floor of a building.",
+        "My flat is on the third floor."
+      ],
+      [
+        "house",
+        "a house with a door",
+        "hows",
+        "noun",
+        "A home with its own door to the street.",
+        "They live in a big house."
+      ],
+      [
+        "room",
+        "a bed in a room",
+        "room",
+        "noun",
+        "A space with walls and a door.",
+        "The flat has two rooms."
+      ],
+      [
+        "kitchen",
+        "a cooker",
+        "KICH-en",
+        "noun",
+        "The room where you cook.",
+        "My kitchen is small."
+      ],
+      [
+        "bathroom",
+        "a shower",
+        "BATH-room",
+        "noun",
+        "The room with a shower.",
+        "The bathroom is new."
+      ],
+      [
+        "window",
+        "a window",
+        "WIN-doh",
+        "noun",
+        "Glass in the wall for light.",
+        "The window is big."
+      ],
+      [
+        "garden",
+        "grass and a tree",
+        "GAR-den",
+        "noun",
+        "A small green space outside.",
+        "We have a small garden."
+      ],
+      [
+        "street",
+        "a street with cars",
+        "street",
+        "noun",
+        "A road with houses.",
+        "My street is quiet."
+      ],
+      [
+        "neighbour",
+        "two doors side by side",
+        "NAY-ber",
+        "noun",
+        "A person in the next home.",
+        "My neighbour is friendly."
+      ],
+      [
+        "keys",
+        "a key ring",
+        "keez",
+        "noun",
+        "You open the door with them.",
+        "These are my keys."
+      ]
+    ],
+    "question": "Do you like your home? Why?",
+    "model": "For me, I like my home because it is quiet and near the bus.",
+    "choices": [
+      "a flat or a house",
+      "in the city centre or outside the city",
+      "an old building or a new building"
+    ],
+    "pref_example": "I prefer an old building because the rooms are big.",
+    "roleplay": {
+      "title": "call about a flat",
+      "scenario": "Student A has a flat to rent. Student B calls and asks three questions.",
+      "frames": [
+        "Hello. I want to see the flat.",
+        "It has two rooms.",
+        "Is it quiet?",
+        "Yes, very quiet.",
+        "How much is the rent?",
+        "Six hundred euros a month."
+      ]
+    },
+    "future": {
+      "chunks": "Next year, I want to… / This weekend, I will…",
+      "prompts": "Where do you want to live next year? What will you do at home this weekend?",
+      "model": "Next year I want to live in a flat near the park."
+    },
+    "takeaway": "One word + one thing you want in your next home.",
+    "weaker": "write the rent on a paper card so the numbers are read, not invented.",
+    "stronger": "the flat has no lift and B lives on the fifth floor — B must ask about it."
+  },
+  {
+    "number": 9,
+    "slug": "session-9-minimalism-vs-comfort-at-home",
+    "title": "Minimalism vs Comfort at Home",
+    "date": "12 March 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "home",
+    "lead": "\"Minimalism\" is a big word for a simple action: keep it or give it away. That action is Card 4.",
+    "warmup": "Look in your bag. What do you keep and never use? Say one thing.",
+    "say": "I keep this. / I don't need this.",
+    "words": [
+      [
+        "box",
+        "a cardboard box",
+        "boks",
+        "noun",
+        "A thing you put other things in.",
+        "The box is full."
+      ],
+      [
+        "shelf",
+        "a shelf with books",
+        "shelf",
+        "noun",
+        "A flat board for things on a wall.",
+        "My shelf is empty."
+      ],
+      [
+        "old",
+        "an old chair",
+        "ohld",
+        "adjective",
+        "With many years.",
+        "This chair is old."
+      ],
+      [
+        "new",
+        "a new lamp",
+        "nyoo",
+        "adjective",
+        "Not old.",
+        "I want a new lamp."
+      ],
+      [
+        "keep",
+        "hands holding a cup",
+        "keep",
+        "verb",
+        "To not give something away.",
+        "I keep my mother's photos."
+      ],
+      [
+        "bin",
+        "a bin",
+        "bin",
+        "noun",
+        "The box for things you throw away.",
+        "The paper is in the bin."
+      ],
+      [
+        "tidy",
+        "a tidy room",
+        "TIGH-dee",
+        "adjective",
+        "Everything in the right place.",
+        "My room is tidy."
+      ],
+      [
+        "full",
+        "a full box",
+        "ful",
+        "adjective",
+        "With no space.",
+        "My cupboard is full."
+      ],
+      [
+        "empty",
+        "an empty shelf",
+        "EMP-tee",
+        "adjective",
+        "With no things in it.",
+        "The flat is empty."
+      ],
+      [
+        "buy",
+        "a hand with a coin",
+        "bigh",
+        "verb",
+        "To get something with money.",
+        "I buy too many things."
+      ]
+    ],
+    "question": "Is your home full of things? Is that good?",
+    "model": "For me, my home is full, and I think it is too much.",
+    "choices": [
+      "many things or few things",
+      "keep old things or give them away",
+      "buy new things or use the old ones"
+    ],
+    "pref_example": "I prefer few things because I can clean fast.",
+    "roleplay": {
+      "title": "give things away",
+      "scenario": "Student A is moving to a smaller flat. Student B takes some things.",
+      "frames": [
+        "Do you want this?",
+        "Yes, thank you. What is it?",
+        "It is a lamp.",
+        "I don't need this one.",
+        "OK, I can give it to my sister."
+      ]
+    },
+    "future": {
+      "chunks": "This weekend, I will… / Next month, I want to…",
+      "prompts": "What will you clean this weekend? What do you want to give away?",
+      "model": "This weekend I will clean my shelf and give away three books."
+    },
+    "takeaway": "One word + one thing you will give away.",
+    "weaker": "use only three objects on the table and let B point.",
+    "stronger": "B wants the lamp but has no space, so they have to explain why not."
+  },
+  {
+    "number": 10,
+    "slug": "session-10-food-culture-and-personal-taste",
+    "title": "Food Culture & Personal Taste",
+    "date": "19 March 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "dining-food",
+    "lead": "Food is the safest topic in any language: everyone has an opinion and a photo. This session uses both.",
+    "warmup": "Open your phone. Find one food photo. Show it and say the word.",
+    "say": "In my country we eat rice. / It is very good.",
+    "words": [
+      [
+        "rice",
+        "a bowl of rice",
+        "righs",
+        "noun",
+        "Small white grains you cook.",
+        "We eat rice every day."
+      ],
+      [
+        "bread",
+        "a loaf",
+        "bred",
+        "noun",
+        "A food from flour, baked.",
+        "I buy bread in the morning."
+      ],
+      [
+        "soup",
+        "a bowl with a spoon",
+        "soop",
+        "noun",
+        "Hot food you eat with a spoon.",
+        "The soup is hot."
+      ],
+      [
+        "salad",
+        "green leaves",
+        "SAL-ad",
+        "noun",
+        "Cold vegetables in a bowl.",
+        "I want a salad, please."
+      ],
+      [
+        "meat",
+        "a plate with meat",
+        "meet",
+        "noun",
+        "Food from an animal.",
+        "I don't eat meat."
+      ],
+      [
+        "fish",
+        "a fish on a plate",
+        "fish",
+        "noun",
+        "Food from the water.",
+        "The fish is fresh."
+      ],
+      [
+        "sweet",
+        "a cake",
+        "sweet",
+        "adjective",
+        "With a lot of sugar.",
+        "This cake is too sweet."
+      ],
+      [
+        "salt",
+        "a salt shaker",
+        "sawlt",
+        "noun",
+        "White powder for taste.",
+        "No salt, please."
+      ],
+      [
+        "cook",
+        "a pan on a stove",
+        "kuk",
+        "verb",
+        "To make food ready with heat.",
+        "I cook on Sunday."
+      ],
+      [
+        "taste",
+        "a spoon near the mouth",
+        "tayst",
+        "verb",
+        "To put food in your mouth to check it.",
+        "Can I taste it?"
+      ]
+    ],
+    "question": "What food is good for you? Why?",
+    "model": "For me, soup is good because it is hot and cheap.",
+    "choices": [
+      "food from home or restaurant food",
+      "sweet food or salty food",
+      "cook at home or buy food"
+    ],
+    "pref_example": "I prefer home food because I know the salt.",
+    "roleplay": {
+      "title": "talk about food from your country",
+      "scenario": "Two people describe one dish from home. Ask, answer, then swap.",
+      "frames": [
+        "In my country we eat…",
+        "It is very good.",
+        "Is it spicy?",
+        "No, it is sweet.",
+        "Do you like it?",
+        "Yes, I love it."
+      ]
+    },
+    "future": {
+      "chunks": "This weekend, I want to cook… / Tonight, I will eat…",
+      "prompts": "What do you want to cook this weekend? What will you eat tonight?",
+      "model": "This weekend I want to cook rice and fish."
+    },
+    "takeaway": "One food word + one dish you will eat this week.",
+    "weaker": "give each student a food picture card and let them read the sentence from the card.",
+    "stronger": "add a comparison — \"Which is better, your food or my food?\""
+  },
+  {
+    "number": 11,
+    "slug": "session-11-restaurants-and-social-eating",
+    "title": "Restaurants & Social Eating",
+    "date": "26 March 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "dining-food",
+    "lead": "Ordering food is the most useful A0 conversation there is. Card 4 runs it twice, so both people get to be the waiter.",
+    "warmup": "Look at the menu on your table. Point to one food. What is it?",
+    "say": "It is a menu. / This is water. / I like soup.",
+    "words": [
+      [
+        "menu",
+        "an open menu",
+        "MEN-yoo",
+        "noun",
+        "The list of food and drinks.",
+        "Can I see the menu, please?"
+      ],
+      [
+        "waiter",
+        "a person with a plate",
+        "WAY-ter",
+        "noun",
+        "The person who brings food to your table.",
+        "The waiter is friendly."
+      ],
+      [
+        "table",
+        "a table with two chairs",
+        "TAY-bul",
+        "noun",
+        "The furniture you sit at to eat.",
+        "A table for two, please."
+      ],
+      [
+        "water",
+        "a glass of water",
+        "WAW-ter",
+        "noun",
+        "A clear drink.",
+        "One water, please."
+      ],
+      [
+        "order",
+        "a finger on a menu",
+        "OR-der",
+        "verb",
+        "To tell the waiter what you want.",
+        "I want to order now."
+      ],
+      [
+        "bill",
+        "a paper with a total",
+        "bil",
+        "noun",
+        "The paper that shows how much you pay.",
+        "The bill, please."
+      ],
+      [
+        "tip",
+        "coins on a table",
+        "tip",
+        "noun",
+        "Extra money you leave for the waiter.",
+        "We leave a small tip."
+      ],
+      [
+        "cheap",
+        "a small price tag",
+        "cheep",
+        "adjective",
+        "Costing little money.",
+        "This restaurant is cheap."
+      ],
+      [
+        "expensive",
+        "a big price tag",
+        "ik-SPEN-siv",
+        "adjective",
+        "Costing a lot of money.",
+        "The fish is too expensive."
+      ],
+      [
+        "delicious",
+        "a happy face with a fork",
+        "di-LISH-us",
+        "adjective",
+        "Tasting very good.",
+        "The soup is delicious."
+      ]
+    ],
+    "question": "Is a restaurant good for you? Why?",
+    "model": "For me, a restaurant is good because the food is delicious.",
+    "choices": [
+      "eat at home or eat in a restaurant",
+      "a quiet restaurant or a busy restaurant",
+      "pay by card or pay cash"
+    ],
+    "pref_example": "I prefer a quiet restaurant because I can talk.",
+    "roleplay": {
+      "title": "order a meal",
+      "scenario": "Student A is the waiter, Student B is the customer. Order one drink and one dish, then ask for the bill.",
+      "frames": [
+        "A table for two, please.",
+        "Can I see the menu, please?",
+        "I want the soup, please.",
+        "One water, please. Is it cold?",
+        "The bill, please.",
+        "Here you are. Thank you."
+      ]
+    },
+    "future": {
+      "chunks": "Tonight, I will… / Next weekend, I want to eat…",
+      "prompts": "What will you eat tonight? Where do you want to eat next weekend?",
+      "model": "Tonight I will cook pasta. Next weekend I want to eat in a new restaurant."
+    },
+    "takeaway": "One word from today + one place you want to eat next week.",
+    "weaker": "use two choices in Card 3, and let Card 4 be read word for word.",
+    "stronger": "the dish is finished, so the customer must choose again — \"Do you have soup? No? OK, I want the salad.\""
+  },
+  {
+    "number": 12,
+    "slug": "session-12-money-habits-and-spending-priorities",
+    "title": "Money Habits & Spending Priorities",
+    "date": "2 April 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "dining-food",
+    "lead": "Prices are numbers you already know. This session puts them to work at a shop counter, with no grammar beyond \"how much\".",
+    "warmup": "Take out a coin or a note. Say how much it is.",
+    "say": "It is five euros. / I pay by card.",
+    "words": [
+      [
+        "money",
+        "notes and coins",
+        "MUN-ee",
+        "noun",
+        "What you pay with.",
+        "I don't have money today."
+      ],
+      [
+        "price",
+        "a price tag",
+        "prighs",
+        "noun",
+        "How much something costs.",
+        "The price is high."
+      ],
+      [
+        "cheap",
+        "a small price tag",
+        "cheep",
+        "adjective",
+        "Costing little money.",
+        "This bread is cheap."
+      ],
+      [
+        "expensive",
+        "a big price tag",
+        "ik-SPEN-siv",
+        "adjective",
+        "Costing a lot of money.",
+        "That phone is expensive."
+      ],
+      [
+        "pay",
+        "a card in a machine",
+        "pay",
+        "verb",
+        "To give money for something.",
+        "I pay by card."
+      ],
+      [
+        "card",
+        "a bank card",
+        "kard",
+        "noun",
+        "A plastic card for money.",
+        "Can I pay by card?"
+      ],
+      [
+        "cash",
+        "a banknote",
+        "kash",
+        "noun",
+        "Money in notes and coins.",
+        "I have cash."
+      ],
+      [
+        "save",
+        "a jar with coins",
+        "sayv",
+        "verb",
+        "To keep money for later.",
+        "I save twenty euros a month."
+      ],
+      [
+        "spend",
+        "a hand with a bag",
+        "spend",
+        "verb",
+        "To use money.",
+        "I spend too much on coffee."
+      ],
+      [
+        "bank",
+        "a bank building",
+        "bank",
+        "noun",
+        "The place that keeps your money.",
+        "My bank is near here."
+      ]
+    ],
+    "question": "Is it easy to save money? Why?",
+    "model": "For me, it is difficult because the city is expensive.",
+    "choices": [
+      "pay by card or pay cash",
+      "save the money or spend it",
+      "buy the cheap one or buy the good one"
+    ],
+    "pref_example": "I prefer cash because I spend less.",
+    "roleplay": {
+      "title": "pay in a shop",
+      "scenario": "Student A works in a shop. Student B buys one thing and pays.",
+      "frames": [
+        "Hello. How much is this?",
+        "It is twelve euros.",
+        "Can I pay by card?",
+        "Yes, of course.",
+        "Here you are.",
+        "Thank you. Have a good day."
+      ]
+    },
+    "future": {
+      "chunks": "Next month, I will… / This year, I want to…",
+      "prompts": "What will you save for next month? What do you want to buy this year?",
+      "model": "Next month I will save fifty euros for a new phone."
+    },
+    "takeaway": "One word + one thing you will not buy this month.",
+    "weaker": "put three prices on the board and let B point to the one they want.",
+    "stronger": "the card machine is broken, so B has to pay cash and check the change."
+  },
+  {
+    "number": 13,
+    "slug": "session-13-fashion-and-identity",
+    "title": "Fashion & Identity",
+    "date": "9 April 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "routines",
+    "lead": "Clothes are vocabulary you wear. Card 4 is a changing room, which gives every student a reason to say \"too big\" and \"too small\".",
+    "warmup": "Look at your partner's shoes. Say the colour.",
+    "say": "I wear black shoes. / This is my size.",
+    "words": [
+      [
+        "shirt",
+        "a shirt",
+        "shert",
+        "noun",
+        "Clothes for the top of your body.",
+        "My shirt is white."
+      ],
+      [
+        "shoes",
+        "a pair of shoes",
+        "shooz",
+        "noun",
+        "You wear them on your feet.",
+        "These shoes are new."
+      ],
+      [
+        "jacket",
+        "a jacket",
+        "JAK-it",
+        "noun",
+        "A short coat.",
+        "I need a warm jacket."
+      ],
+      [
+        "dress",
+        "a dress",
+        "dres",
+        "noun",
+        "Clothes for a woman, top and skirt together.",
+        "Her dress is blue."
+      ],
+      [
+        "size",
+        "S, M, L labels",
+        "sighz",
+        "noun",
+        "How big or small clothes are.",
+        "What size are you?"
+      ],
+      [
+        "colour",
+        "three colour cards",
+        "KUL-er",
+        "noun",
+        "Red, blue, green.",
+        "I like this colour."
+      ],
+      [
+        "wear",
+        "a person dressed",
+        "wair",
+        "verb",
+        "To have clothes on your body.",
+        "I wear a jacket in winter."
+      ],
+      [
+        "buy",
+        "a bag from a shop",
+        "bigh",
+        "verb",
+        "To get something with money.",
+        "I buy clothes online."
+      ],
+      [
+        "old",
+        "an old jumper",
+        "ohld",
+        "adjective",
+        "With many years.",
+        "This is my old jacket."
+      ],
+      [
+        "new",
+        "a new shirt",
+        "nyoo",
+        "adjective",
+        "Not old.",
+        "My shoes are new."
+      ]
+    ],
+    "question": "Do clothes say something about a person? Why?",
+    "model": "For me, clothes say a lot because I wear a uniform.",
+    "choices": [
+      "new clothes or old clothes",
+      "bright colours or dark colours",
+      "comfortable clothes or beautiful clothes"
+    ],
+    "pref_example": "I prefer comfortable clothes because I walk to work.",
+    "roleplay": {
+      "title": "buy a jacket",
+      "scenario": "Student A works in a clothes shop. Student B wants a jacket in the right size.",
+      "frames": [
+        "I want this jacket.",
+        "What size are you?",
+        "Medium, please.",
+        "Do you want to try it on?",
+        "Yes, please. It is too small.",
+        "Here is a large one."
+      ]
+    },
+    "future": {
+      "chunks": "Next month, I want to buy… / Tomorrow, I will wear…",
+      "prompts": "What do you want to buy next month? What will you wear tomorrow?",
+      "model": "Next month I want to buy a warm jacket."
+    },
+    "takeaway": "One word + one thing you will wear tomorrow.",
+    "weaker": "write the three sizes on cards and let B hand one to A.",
+    "stronger": "the jacket is the last one and it is too expensive — B asks for something cheaper."
+  },
+  {
+    "number": 14,
+    "slug": "session-14-weather-and-lifestyle-choices",
+    "title": "Weather & Lifestyle Choices",
+    "date": "16 April 2027",
+    "topic": "Nature & Science",
+    "sub_theme": "travel",
+    "lead": "Weather is the one topic every stranger shares. Ten words, three choices, and a short conversation about plans that depend on the sky.",
+    "warmup": "Look out of the window. Say one word about the weather.",
+    "say": "It is cold today. / I have an umbrella.",
+    "words": [
+      [
+        "sun",
+        "a yellow circle",
+        "sun",
+        "noun",
+        "The light in the sky in the day.",
+        "The sun is strong today."
+      ],
+      [
+        "rain",
+        "lines falling from a cloud",
+        "rayn",
+        "noun",
+        "Water from the sky.",
+        "I like the rain."
+      ],
+      [
+        "hot",
+        "a person with a fan",
+        "hot",
+        "adjective",
+        "With a high temperature.",
+        "It is hot in July."
+      ],
+      [
+        "cold",
+        "a person in a coat",
+        "kohld",
+        "adjective",
+        "With a low temperature.",
+        "It is cold today."
+      ],
+      [
+        "wind",
+        "a tree bending",
+        "wind",
+        "noun",
+        "Air that moves.",
+        "The wind is strong."
+      ],
+      [
+        "snow",
+        "white ground",
+        "snoh",
+        "noun",
+        "White cold water from the sky.",
+        "We have snow in January."
+      ],
+      [
+        "coat",
+        "a winter coat",
+        "koht",
+        "noun",
+        "Warm clothes for outside.",
+        "I wear a coat in winter."
+      ],
+      [
+        "umbrella",
+        "an open umbrella",
+        "um-BREL-a",
+        "noun",
+        "You hold it in the rain.",
+        "Take an umbrella."
+      ],
+      [
+        "summer",
+        "a beach",
+        "SUM-er",
+        "noun",
+        "The hot months.",
+        "In summer I swim."
+      ],
+      [
+        "winter",
+        "a snowy street",
+        "WIN-ter",
+        "noun",
+        "The cold months.",
+        "Winter is long here."
+      ]
+    ],
+    "question": "Do you like the weather today? Why?",
+    "model": "For me, today is good because it is not too hot.",
+    "choices": [
+      "hot weather or cold weather",
+      "summer or winter",
+      "walk in the rain or stay at home"
+    ],
+    "pref_example": "I prefer winter because I can wear my coat.",
+    "roleplay": {
+      "title": "make a plan about the weather",
+      "scenario": "Two friends want to go out today. Look out of the window and decide.",
+      "frames": [
+        "Is it cold today?",
+        "Yes, very cold.",
+        "Do you want to walk?",
+        "No, let's take the bus.",
+        "OK. See you at five."
+      ]
+    },
+    "future": {
+      "chunks": "This weekend, if it is sunny, I will… / Next summer, I want to…",
+      "prompts": "What will you do this weekend if it is sunny? Where do you want to go next summer?",
+      "model": "This weekend, if it is sunny, I will walk in the park."
+    },
+    "takeaway": "One weather word + one plan for the weekend.",
+    "weaker": "draw two weather symbols (sun, rain) and let students point.",
+    "stronger": "the forecast says rain all weekend, so the pair has to change the plan twice."
+  },
+  {
+    "number": 15,
+    "slug": "session-15-hobbies-and-personal-growth",
+    "title": "Hobbies & Personal Growth",
+    "date": "23 April 2027",
+    "topic": "Arts & Entertainment",
+    "sub_theme": "hobbies",
+    "lead": "Everyone has one thing they do for free. This session finds it, names it, and puts it in a sentence.",
+    "warmup": "Mime your hobby. The group guesses the word.",
+    "say": "My hobby is music. / I play the guitar.",
+    "words": [
+      [
+        "hobby",
+        "a guitar",
+        "HOB-ee",
+        "noun",
+        "Something you do for fun.",
+        "My hobby is music."
+      ],
+      [
+        "music",
+        "headphones",
+        "MYOO-zik",
+        "noun",
+        "Sounds you listen to.",
+        "I listen to music at night."
+      ],
+      [
+        "guitar",
+        "a guitar",
+        "gi-TAR",
+        "noun",
+        "A musical instrument with strings.",
+        "I play the guitar."
+      ],
+      [
+        "sport",
+        "a ball",
+        "spawrt",
+        "noun",
+        "A game with your body.",
+        "My sport is football."
+      ],
+      [
+        "dance",
+        "two people dancing",
+        "dans",
+        "verb",
+        "To move your body to music.",
+        "We dance on Friday."
+      ],
+      [
+        "read",
+        "an open book",
+        "reed",
+        "verb",
+        "To look at words and understand them.",
+        "I read on the bus."
+      ],
+      [
+        "draw",
+        "a pencil and paper",
+        "draw",
+        "verb",
+        "To make a picture with a pen.",
+        "I draw people."
+      ],
+      [
+        "learn",
+        "a notebook",
+        "lern",
+        "verb",
+        "To get new knowledge.",
+        "I learn English at the club."
+      ],
+      [
+        "class",
+        "people at desks",
+        "klas",
+        "noun",
+        "A lesson with a teacher.",
+        "My class is on Tuesday."
+      ],
+      [
+        "free time",
+        "a clock and a cup",
+        "free tighm",
+        "expression",
+        "Time when you do not work.",
+        "In my free time I draw."
+      ]
+    ],
+    "question": "What do you do in your free time?",
+    "model": "For me, I draw in my free time because it is quiet.",
+    "choices": [
+      "music or sport",
+      "learn alone or learn in a class",
+      "a free hobby or a hobby you pay for"
+    ],
+    "pref_example": "I prefer a class because I meet people.",
+    "roleplay": {
+      "title": "ask about a class",
+      "scenario": "Student A teaches a small guitar class. Student B wants to join.",
+      "frames": [
+        "I want to learn guitar.",
+        "We have a class on Tuesday.",
+        "What time is it?",
+        "At seven in the evening.",
+        "How much is it?",
+        "Twenty euros for one hour."
+      ]
+    },
+    "future": {
+      "chunks": "Next year, I want to learn… / This weekend, I will…",
+      "prompts": "What do you want to learn next year? What will you do this weekend?",
+      "model": "Next year I want to learn to swim."
+    },
+    "takeaway": "One word + one thing you want to learn.",
+    "weaker": "give B the three questions written on a card to read aloud.",
+    "stronger": "the Tuesday class is full, so A offers Thursday and B must choose."
+  },
+  {
+    "number": 16,
+    "slug": "session-16-sports-health-and-competition",
+    "title": "Sports, Health & Competition",
+    "date": "30 April 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "hobbies",
+    "lead": "Sport gives beginners verbs they can mime: run, swim, play, win. Card 4 is a conversation at a gym desk.",
+    "warmup": "Mime one sport. Your partner says the word.",
+    "say": "I play football. / I go swimming.",
+    "words": [
+      [
+        "run",
+        "a running person",
+        "run",
+        "verb",
+        "To move fast on your feet.",
+        "I run in the morning."
+      ],
+      [
+        "swim",
+        "a swimmer",
+        "swim",
+        "verb",
+        "To move in water.",
+        "I swim on Sunday."
+      ],
+      [
+        "football",
+        "a football",
+        "FOOT-bawl",
+        "noun",
+        "A game with a ball and two teams.",
+        "We play football after work."
+      ],
+      [
+        "gym",
+        "machines in a room",
+        "jim",
+        "noun",
+        "A place with machines for exercise.",
+        "The gym is near my home."
+      ],
+      [
+        "team",
+        "players together",
+        "teem",
+        "noun",
+        "A group who play together.",
+        "My team is small."
+      ],
+      [
+        "win",
+        "a hand up",
+        "win",
+        "verb",
+        "To be first in a game.",
+        "We win sometimes."
+      ],
+      [
+        "lose",
+        "a sad face",
+        "looz",
+        "verb",
+        "To not win.",
+        "We lose a lot."
+      ],
+      [
+        "tired",
+        "a yawning face",
+        "TIGH-erd",
+        "adjective",
+        "Needing rest.",
+        "I am tired after the gym."
+      ],
+      [
+        "strong",
+        "an arm with a muscle",
+        "strong",
+        "adjective",
+        "With a lot of power.",
+        "My legs are strong."
+      ],
+      [
+        "match",
+        "a football match",
+        "mach",
+        "noun",
+        "A game between two teams.",
+        "The match is on Saturday."
+      ]
+    ],
+    "question": "Do you like sport? Why?",
+    "model": "For me, sport is good because I sleep better after it.",
+    "choices": [
+      "play a sport or watch a sport",
+      "exercise alone or in a team",
+      "exercise in the morning or in the evening"
+    ],
+    "pref_example": "I prefer the evening because I am tired in the morning.",
+    "roleplay": {
+      "title": "join a gym",
+      "scenario": "Student A works at a gym. Student B wants to join.",
+      "frames": [
+        "I want to join the gym.",
+        "How much is it?",
+        "Thirty euros a month.",
+        "What time are you open?",
+        "From six to ten.",
+        "OK, thank you."
+      ]
+    },
+    "future": {
+      "chunks": "Next week, I will… / This year, I want to…",
+      "prompts": "What will you do for your body next week? What do you want to try this year?",
+      "model": "Next week I will swim two times."
+    },
+    "takeaway": "One sport word + one thing you will do next week.",
+    "weaker": "write three times (six, eight, ten) on the board for B to choose from.",
+    "stronger": "the gym has a cheaper plan without a trainer — B must compare the two."
+  },
+  {
+    "number": 17,
+    "slug": "session-17-city-life-vs-small-town",
+    "title": "City Life vs Small Town",
+    "date": "7 May 2027",
+    "topic": "Culture & Society",
+    "sub_theme": "travel",
+    "lead": "Comparing two places is the first real opinion a beginner can defend. Card 4 adds a small map and a stranger.",
+    "warmup": "Name one place near your home: a park, a shop, a café.",
+    "say": "There is a park near my home.",
+    "words": [
+      [
+        "city",
+        "tall buildings",
+        "SI-tee",
+        "noun",
+        "A big town with many people.",
+        "The city is very big."
+      ],
+      [
+        "town",
+        "small houses",
+        "town",
+        "noun",
+        "A place smaller than a city.",
+        "I live in a small town."
+      ],
+      [
+        "village",
+        "a few houses and a tree",
+        "VIL-ij",
+        "noun",
+        "A very small town.",
+        "My village has one shop."
+      ],
+      [
+        "park",
+        "trees and a path",
+        "park",
+        "noun",
+        "A green place in a city.",
+        "The park is near here."
+      ],
+      [
+        "shop",
+        "a shop window",
+        "shop",
+        "noun",
+        "A place where you buy things.",
+        "There is a shop on my street."
+      ],
+      [
+        "noisy",
+        "hands over ears",
+        "NOI-zee",
+        "adjective",
+        "With a lot of sound.",
+        "The city is noisy."
+      ],
+      [
+        "quiet",
+        "a finger on the lips",
+        "KWAI-et",
+        "adjective",
+        "With little sound.",
+        "My town is quiet."
+      ],
+      [
+        "people",
+        "a crowd",
+        "PEE-pul",
+        "noun",
+        "Men, women and children.",
+        "There are many people here."
+      ],
+      [
+        "walk",
+        "feet on a path",
+        "wawk",
+        "verb",
+        "To go on foot.",
+        "I walk to the shop."
+      ],
+      [
+        "live",
+        "a house with a light",
+        "liv",
+        "verb",
+        "To have your home in a place.",
+        "I live in a small town."
+      ]
+    ],
+    "question": "Is a city good for you? Why?",
+    "model": "For me, the city is good because everything is near.",
+    "choices": [
+      "a city or a small town",
+      "a park or a café",
+      "live near work or live far from work"
+    ],
+    "pref_example": "I prefer a small town because it is quiet.",
+    "roleplay": {
+      "title": "ask for directions",
+      "scenario": "Student B is new in the city. Student A lives here. B wants the park.",
+      "frames": [
+        "Excuse me, where is the park?",
+        "Go left, then right.",
+        "Is it far?",
+        "No, five minutes.",
+        "Thank you very much.",
+        "You're welcome."
+      ]
+    },
+    "future": {
+      "chunks": "Next year, I want to live… / This weekend, I will go to…",
+      "prompts": "Where do you want to live next year? Where will you go this weekend?",
+      "model": "Next year I want to live in a small town near the sea."
+    },
+    "takeaway": "One place word + one place you will go this weekend.",
+    "weaker": "draw a simple map with three streets and let A point while speaking.",
+    "stronger": "B asks for a second place (a pharmacy) and A must give a longer route."
+  },
+  {
+    "number": 18,
+    "slug": "session-18-transport-choices-and-sustainability",
+    "title": "Transport Choices & Sustainability",
+    "date": "14 May 2027",
+    "topic": "Culture & Society",
+    "sub_theme": "travel",
+    "lead": "Transport is the language of getting to work on time. Card 4 is a ticket office, and the clock is the complication.",
+    "warmup": "Mime how you came here today. The group guesses: bus, bike, walk.",
+    "say": "I come by bus. / The bus is late.",
+    "words": [
+      [
+        "bus",
+        "a city bus",
+        "bus",
+        "noun",
+        "A big vehicle for many people.",
+        "I take the bus at eight."
+      ],
+      [
+        "train",
+        "a train at a platform",
+        "trayn",
+        "noun",
+        "A long vehicle on rails.",
+        "The train is fast."
+      ],
+      [
+        "bike",
+        "a bicycle",
+        "bighk",
+        "noun",
+        "A vehicle with two wheels and pedals.",
+        "I go to work by bike."
+      ],
+      [
+        "taxi",
+        "a taxi",
+        "TAK-see",
+        "noun",
+        "A car you pay to travel in.",
+        "The taxi is expensive."
+      ],
+      [
+        "ticket",
+        "a paper ticket",
+        "TIK-it",
+        "noun",
+        "The paper you buy to travel.",
+        "One ticket, please."
+      ],
+      [
+        "stop",
+        "a bus stop sign",
+        "stop",
+        "noun",
+        "The place where a bus stops.",
+        "The stop is near my home."
+      ],
+      [
+        "walk",
+        "feet on a path",
+        "wawk",
+        "verb",
+        "To go on foot.",
+        "I walk to the station."
+      ],
+      [
+        "cheap",
+        "a small price tag",
+        "cheep",
+        "adjective",
+        "Costing little money.",
+        "The bus is cheap."
+      ],
+      [
+        "fast",
+        "a train moving",
+        "fast",
+        "adjective",
+        "Moving quickly.",
+        "The train is fast."
+      ],
+      [
+        "late",
+        "a clock, red",
+        "layt",
+        "adjective",
+        "After the usual time.",
+        "The bus is late again."
+      ]
+    ],
+    "question": "How do you go to work? Is it good?",
+    "model": "For me, the bike is good because it is cheap and fast.",
+    "choices": [
+      "the bus or the bike",
+      "a taxi or a walk",
+      "a paper ticket or a ticket on your phone"
+    ],
+    "pref_example": "I prefer the train because the bus is always late.",
+    "roleplay": {
+      "title": "buy a ticket",
+      "scenario": "Student A works at the ticket office. Student B wants a ticket to the city centre.",
+      "frames": [
+        "One ticket to the city centre, please.",
+        "Single or return?",
+        "Single, please. How much is it?",
+        "Three fifty.",
+        "Which platform?",
+        "Platform three. It is ten minutes late."
+      ]
+    },
+    "future": {
+      "chunks": "Tomorrow, I will go by… / Next weekend, I want to go to…",
+      "prompts": "How will you go to work tomorrow? Where do you want to go next weekend?",
+      "model": "Tomorrow I will go by train, and next weekend I want to go to the lake."
+    },
+    "takeaway": "One transport word + one place you will go next week.",
+    "weaker": "use three destinations with the prices written on the board.",
+    "stronger": "the train is cancelled, so the clerk offers a bus and B must ask about the time again."
+  },
+  {
+    "number": 19,
+    "slug": "session-19-job-satisfaction-and-motivation",
+    "title": "Job Satisfaction & Motivation",
+    "date": "21 May 2027",
+    "topic": "Work & Career",
+    "sub_theme": "routines",
+    "lead": "Talking about work at A0 means talking about feelings and small requests, not careers. Card 4 is asking for a day off.",
+    "warmup": "Say one good thing and one bad thing about your job. One word each.",
+    "say": "My job is good. / The money is bad.",
+    "words": [
+      [
+        "happy",
+        "a smiling face",
+        "HAP-ee",
+        "adjective",
+        "Feeling good.",
+        "I am happy at work."
+      ],
+      [
+        "tired",
+        "a yawning face",
+        "TIGH-erd",
+        "adjective",
+        "Needing rest.",
+        "I am tired after work."
+      ],
+      [
+        "boss",
+        "a person with a list",
+        "bos",
+        "noun",
+        "The person you work for.",
+        "My boss is fair."
+      ],
+      [
+        "team",
+        "people at a table",
+        "teem",
+        "noun",
+        "The people you work with.",
+        "My team is small."
+      ],
+      [
+        "money",
+        "notes and coins",
+        "MUN-ee",
+        "noun",
+        "What you get for work.",
+        "The money is not good."
+      ],
+      [
+        "help",
+        "two hands together",
+        "help",
+        "verb",
+        "To do part of the work for someone.",
+        "My team helps me."
+      ],
+      [
+        "learn",
+        "a notebook",
+        "lern",
+        "verb",
+        "To get new knowledge.",
+        "I learn new things here."
+      ],
+      [
+        "change",
+        "two arrows",
+        "chayn",
+        "verb",
+        "To make something different.",
+        "I want to change my job."
+      ],
+      [
+        "day off",
+        "an empty calendar day",
+        "day of",
+        "expression",
+        "A day when you do not work.",
+        "I want a day off."
+      ],
+      [
+        "start",
+        "a clock at nine",
+        "start",
+        "verb",
+        "To begin work.",
+        "I start at eight."
+      ]
+    ],
+    "question": "Are you happy at work? Why?",
+    "model": "For me, I am happy at work because my team is friendly.",
+    "choices": [
+      "a good team or good money",
+      "the same job or a new job",
+      "learn new things or do the same work"
+    ],
+    "pref_example": "I prefer a good team because the days are fast.",
+    "roleplay": {
+      "title": "ask for a day off",
+      "scenario": "Student B wants a day off. Student A is the boss and needs a reason.",
+      "frames": [
+        "Can I have Friday off, please?",
+        "Why?",
+        "I have a family day.",
+        "OK, but Saturday is busy.",
+        "No problem. Thank you."
+      ]
+    },
+    "future": {
+      "chunks": "Next year, I want to… / Next month, I will…",
+      "prompts": "What do you want to change next year? What will you do in your next job?",
+      "model": "Next year I want to change my job and start later."
+    },
+    "takeaway": "One word + one thing you want to change at work.",
+    "weaker": "give the boss three possible answers on the board to choose from.",
+    "stronger": "the boss says no, so B has to ask for a different day and give a better reason."
+  },
+  {
+    "number": 20,
+    "slug": "session-20-emotions-and-mental-wellbeing",
+    "title": "Emotions & Mental Wellbeing",
+    "date": "28 May 2027",
+    "topic": "Psychology & Mind",
+    "sub_theme": "routines",
+    "lead": "Feelings are A0 grammar with a big payoff: \"I am tired\" is a full conversation opener. Keep the session light and practical.",
+    "warmup": "Show one face: happy, tired or worried. Your partner says the word.",
+    "say": "I am tired today. / I feel good.",
+    "words": [
+      [
+        "happy",
+        "a smiling face",
+        "HAP-ee",
+        "adjective",
+        "Feeling good.",
+        "I am happy today."
+      ],
+      [
+        "sad",
+        "a sad face",
+        "sad",
+        "adjective",
+        "Feeling bad.",
+        "He is sad about his job."
+      ],
+      [
+        "tired",
+        "a yawning face",
+        "TIGH-erd",
+        "adjective",
+        "Needing rest.",
+        "I am very tired."
+      ],
+      [
+        "angry",
+        "a red face",
+        "ANG-gree",
+        "adjective",
+        "Feeling strong and hot.",
+        "I am angry with the bus."
+      ],
+      [
+        "worried",
+        "a hand on the head",
+        "WUR-eed",
+        "adjective",
+        "Thinking about a problem.",
+        "I am worried about money."
+      ],
+      [
+        "calm",
+        "a person with eyes closed",
+        "kahm",
+        "adjective",
+        "Feeling quiet and easy.",
+        "I feel calm after a walk."
+      ],
+      [
+        "good",
+        "a thumb up",
+        "gud",
+        "adjective",
+        "Fine, not bad.",
+        "I feel good today."
+      ],
+      [
+        "bad",
+        "a thumb down",
+        "bad",
+        "adjective",
+        "Not good.",
+        "I feel bad this morning."
+      ],
+      [
+        "talk",
+        "two people with a coffee",
+        "tawk",
+        "verb",
+        "To speak with someone.",
+        "I talk to my friend."
+      ],
+      [
+        "friend",
+        "two people together",
+        "frend",
+        "noun",
+        "A person you like and know well.",
+        "My friend listens."
+      ]
+    ],
+    "question": "What do you do when you are stressed?",
+    "model": "For me, I walk when I am stressed because it helps.",
+    "choices": [
+      "talk to a friend or stay alone",
+      "walk outside or sleep",
+      "music or silence"
+    ],
+    "pref_example": "I prefer to talk because my friend is a good listener.",
+    "roleplay": {
+      "title": "ask a friend how they are",
+      "scenario": "Two friends meet after work. B has a difficult week.",
+      "frames": [
+        "How are you?",
+        "I am tired and worried.",
+        "What happened?",
+        "My job is very busy.",
+        "Do you want to talk?",
+        "Yes, let's have a coffee."
+      ]
+    },
+    "future": {
+      "chunks": "This weekend, I will… / Next week, I want to…",
+      "prompts": "How will you relax this weekend? What do you want to do less next week?",
+      "model": "This weekend I will walk and sleep, and next week I want to work less."
+    },
+    "takeaway": "One feeling word + one thing you will do to relax.",
+    "weaker": "put six faces on the table and let students point instead of naming the feeling.",
+    "stronger": "A has the same problem and they have to suggest two solutions to each other."
+  },
+  {
+    "number": 21,
+    "slug": "session-21-health-choices-and-prevention",
+    "title": "Health Choices & Prevention",
+    "date": "4 June 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "routines",
+    "lead": "Health talk at A0 is a shopping list of small habits. Ten words, three choices, and a pharmacy conversation everyone will need eventually.",
+    "warmup": "Point to your body: head, stomach, throat. Say the words with your partner.",
+    "say": "I sleep eight hours. / I drink water every day.",
+    "words": [
+      [
+        "sleep",
+        "a pillow",
+        "sleep",
+        "noun",
+        "Rest with your eyes closed at night.",
+        "I sleep seven hours."
+      ],
+      [
+        "water",
+        "a glass of water",
+        "WAW-ter",
+        "noun",
+        "A clear drink.",
+        "I drink two litres of water."
+      ],
+      [
+        "fruit",
+        "an apple and a banana",
+        "froot",
+        "noun",
+        "Sweet food from a plant.",
+        "I eat fruit in the morning."
+      ],
+      [
+        "vegetables",
+        "green vegetables",
+        "VEJ-ti-buls",
+        "noun",
+        "Plants you cook or eat in salad.",
+        "I eat vegetables every day."
+      ],
+      [
+        "walk",
+        "feet on a path",
+        "wawk",
+        "noun",
+        "Going somewhere on foot.",
+        "I take a walk after lunch."
+      ],
+      [
+        "doctor",
+        "a person in a white coat",
+        "DOK-ter",
+        "noun",
+        "The person who helps sick people.",
+        "I go to the doctor on Monday."
+      ],
+      [
+        "medicine",
+        "a pill box",
+        "MED-i-sin",
+        "noun",
+        "What you take when you are sick.",
+        "I take medicine at night."
+      ],
+      [
+        "tired",
+        "a yawning face",
+        "TIGH-erd",
+        "adjective",
+        "Needing rest.",
+        "I am tired every evening."
+      ],
+      [
+        "rest",
+        "a person on a sofa",
+        "rest",
+        "verb",
+        "To stop working for a time.",
+        "I rest after work."
+      ],
+      [
+        "every day",
+        "a calendar with all days",
+        "EV-ree day",
+        "expression",
+        "On all days.",
+        "I walk every day."
+      ]
+    ],
+    "question": "What is good for your health? Why?",
+    "model": "For me, walking is good because it is free and easy.",
+    "choices": [
+      "walk every day or go to the gym",
+      "cook at home or order food",
+      "sleep six hours or sleep eight hours"
+    ],
+    "pref_example": "I prefer to cook because restaurant food has too much salt.",
+    "roleplay": {
+      "title": "at the pharmacy",
+      "scenario": "Student A is the pharmacist. Student B has a headache.",
+      "frames": [
+        "Good morning. Can I help you?",
+        "I have a headache.",
+        "Take this, two times a day.",
+        "Before food or after food?",
+        "After food. Drink water.",
+        "How much is it?"
+      ]
+    },
+    "future": {
+      "chunks": "Next week, I will… / This month, I want to…",
+      "prompts": "What will you do for your health next week? What do you want to change this month?",
+      "model": "Next week I will walk thirty minutes every day."
+    },
+    "takeaway": "One word + one small health goal.",
+    "weaker": "give the customer a card with the symptom written on it.",
+    "stronger": "the pharmacy is out of the medicine, so A suggests a doctor and B books a time."
+  },
+  {
+    "number": 22,
+    "slug": "session-22-time-perception-and-punctuality",
+    "title": "Time Perception & Punctuality",
+    "date": "11 June 2027",
+    "topic": "Culture & Society",
+    "sub_theme": "routines",
+    "lead": "Being late is a cultural topic you can handle with three words: sorry, bus, wait. Card 4 rehearses the apology until it feels normal.",
+    "warmup": "Look at your phone. Say the time. Now say a time you are usually busy.",
+    "say": "I am sorry I am late. / The bus was late.",
+    "words": [
+      [
+        "minute",
+        "a phone clock with minutes",
+        "MIN-it",
+        "noun",
+        "Sixty seconds.",
+        "Wait five minutes, please."
+      ],
+      [
+        "hour",
+        "a clock face",
+        "our",
+        "noun",
+        "Sixty minutes.",
+        "The class is one hour."
+      ],
+      [
+        "early",
+        "a clock at seven",
+        "ER-lee",
+        "adjective",
+        "Before the usual time.",
+        "I am always early."
+      ],
+      [
+        "late",
+        "a clock at eleven",
+        "layt",
+        "adjective",
+        "After the usual time.",
+        "She is late again."
+      ],
+      [
+        "wait",
+        "a person at a bus stop",
+        "wayt",
+        "verb",
+        "To stay until something happens.",
+        "I wait for the bus."
+      ],
+      [
+        "clock",
+        "a wall clock",
+        "klok",
+        "noun",
+        "A thing that shows the time.",
+        "The clock is wrong."
+      ],
+      [
+        "meeting",
+        "people at a table",
+        "MEE-ting",
+        "noun",
+        "People talking about work together.",
+        "The meeting starts at nine."
+      ],
+      [
+        "hurry",
+        "a running person",
+        "HUR-ee",
+        "verb",
+        "To go fast because you are late.",
+        "I hurry in the morning."
+      ],
+      [
+        "sorry",
+        "a hand on the heart",
+        "SOR-ee",
+        "expression",
+        "A word you say when you are late.",
+        "Sorry, I am late."
+      ],
+      [
+        "on time",
+        "a clock at nine",
+        "on tighm",
+        "expression",
+        "Not early, not late.",
+        "The train is on time."
+      ]
+    ],
+    "question": "Are you usually early or late? Why?",
+    "model": "For me, I am usually early because I don't like to hurry.",
+    "choices": [
+      "arrive early or arrive on time",
+      "wait ten minutes or leave",
+      "use a clock or use your phone"
+    ],
+    "pref_example": "I prefer to arrive early because I can relax.",
+    "roleplay": {
+      "title": "you are late for a meeting",
+      "scenario": "Student B arrives late. Student A is waiting.",
+      "frames": [
+        "Sorry I am late.",
+        "No problem. What happened?",
+        "The bus was late.",
+        "OK. Let's start now.",
+        "Thank you for waiting."
+      ]
+    },
+    "future": {
+      "chunks": "Tomorrow, I will leave… / Next week, I want to…",
+      "prompts": "What time will you leave tomorrow? What do you want to change about your mornings?",
+      "model": "Tomorrow I will leave at eight and arrive on time."
+    },
+    "takeaway": "One time word + one time you will arrive tomorrow.",
+    "weaker": "let A accept the apology with one word (\"OK\") and keep the scene at four lines.",
+    "stronger": "the meeting is important, so A is not happy and B has to explain and apologise twice."
+  },
+  {
+    "number": 23,
+    "slug": "session-23-shopping-ethics-and-consumer-choices",
+    "title": "Shopping Ethics & Consumer Choices",
+    "date": "18 June 2027",
+    "topic": "Culture & Society",
+    "sub_theme": "dining-food",
+    "lead": "\"Ethics\" becomes speakable at A0 when it turns into three questions: where is it from, who made it, and can I return it.",
+    "warmup": "Look at one thing on your desk or in your bag. Where is it from?",
+    "say": "It is from Spain. / I buy local food.",
+    "words": [
+      [
+        "shop",
+        "a shop window",
+        "shop",
+        "noun",
+        "A place where you buy things.",
+        "The shop closes at eight."
+      ],
+      [
+        "buy",
+        "a hand with a coin",
+        "bigh",
+        "verb",
+        "To get something with money.",
+        "I buy food here."
+      ],
+      [
+        "local",
+        "a market stall",
+        "LOH-kul",
+        "adjective",
+        "From near your home.",
+        "This bread is local."
+      ],
+      [
+        "cheap",
+        "a small price tag",
+        "cheep",
+        "adjective",
+        "Costing little money.",
+        "The market is cheap."
+      ],
+      [
+        "expensive",
+        "a big price tag",
+        "ik-SPEN-siv",
+        "adjective",
+        "Costing a lot of money.",
+        "This bag is expensive."
+      ],
+      [
+        "plastic bag",
+        "a plastic bag",
+        "PLAS-tik bag",
+        "noun",
+        "A bag from a shop, bad for the sea.",
+        "No plastic bag, thank you."
+      ],
+      [
+        "worker",
+        "a person in a uniform",
+        "WER-ker",
+        "noun",
+        "A person who works.",
+        "The workers are friendly."
+      ],
+      [
+        "receipt",
+        "a paper receipt",
+        "ri-SEET",
+        "noun",
+        "The paper that shows what you paid.",
+        "Here is your receipt."
+      ],
+      [
+        "return",
+        "an item on a counter",
+        "ri-TERN",
+        "verb",
+        "To give something back to the shop.",
+        "I want to return this."
+      ],
+      [
+        "choose",
+        "two items and a hand",
+        "chooz",
+        "verb",
+        "To take one of two things.",
+        "I choose the local one."
+      ]
+    ],
+    "question": "Do you buy local food? Why?",
+    "model": "For me, I buy local food because it is fresh.",
+    "choices": [
+      "a local shop or a big supermarket",
+      "cheap things or good things",
+      "a new phone or the old phone"
+    ],
+    "pref_example": "I prefer the local shop because the people know me.",
+    "roleplay": {
+      "title": "ask where food is from",
+      "scenario": "Student A works in a small shop. Student B asks about the food and then returns something.",
+      "frames": [
+        "Where is this from?",
+        "It is from Spain.",
+        "Is it local?",
+        "No, sorry. The cheese is local.",
+        "I want to return this bag.",
+        "Do you have the receipt?"
+      ]
+    },
+    "future": {
+      "chunks": "Next month, I want to buy… / This weekend, I will…",
+      "prompts": "What do you want to buy local next month? What will you do with old things at home?",
+      "model": "Next month I want to buy local vegetables at the market."
+    },
+    "takeaway": "One word + one thing you will buy locally.",
+    "weaker": "cut the return part and keep only the \"where is this from\" exchange.",
+    "stronger": "B has no receipt, so A has to explain the shop rules politely."
+  },
+  {
+    "number": 24,
+    "slug": "session-24-healthcare-access-and-expectations",
+    "title": "Healthcare Access & Expectations",
+    "date": "25 June 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "routines",
+    "lead": "The first real conversation many newcomers need is booking a doctor's appointment. Card 4 is exactly that phone call.",
+    "warmup": "Point to the body words: head, stomach, throat, back. Say them with your partner.",
+    "say": "I want an appointment. / I have a pain here.",
+    "words": [
+      [
+        "doctor",
+        "a person in a white coat",
+        "DOK-ter",
+        "noun",
+        "The person who helps sick people.",
+        "I need a doctor."
+      ],
+      [
+        "appointment",
+        "a calendar with a time",
+        "a-POINT-ment",
+        "noun",
+        "A time you agree for a visit.",
+        "I have an appointment at ten."
+      ],
+      [
+        "hospital",
+        "a big building with a cross",
+        "HOS-pi-tal",
+        "noun",
+        "The big place for sick people.",
+        "The hospital is outside the city."
+      ],
+      [
+        "pharmacy",
+        "a green cross",
+        "FAR-ma-see",
+        "noun",
+        "The shop for medicine.",
+        "The pharmacy is open now."
+      ],
+      [
+        "wait",
+        "people in a queue",
+        "wayt",
+        "verb",
+        "To stay until it is your turn.",
+        "I wait twenty minutes."
+      ],
+      [
+        "medicine",
+        "a pill box",
+        "MED-i-sin",
+        "noun",
+        "What you take when you are sick.",
+        "Take this medicine."
+      ],
+      [
+        "open",
+        "an open door",
+        "OH-pen",
+        "adjective",
+        "Not closed, ready for people.",
+        "Are you open on Sunday?"
+      ],
+      [
+        "closed",
+        "a closed door",
+        "klohzd",
+        "adjective",
+        "Not open.",
+        "The doctor is closed today."
+      ],
+      [
+        "hurt",
+        "a red spot on an arm",
+        "hert",
+        "verb",
+        "To feel pain.",
+        "My back hurts."
+      ],
+      [
+        "help",
+        "two hands together",
+        "help",
+        "verb",
+        "To do something for someone.",
+        "Can you help me?"
+      ]
+    ],
+    "question": "Is it easy to see a doctor in your city? Why?",
+    "model": "For me, it is difficult because the doctor is very busy.",
+    "choices": [
+      "a doctor near home or a big hospital",
+      "a morning appointment or an evening appointment",
+      "call first or go in person"
+    ],
+    "pref_example": "I prefer a morning appointment because I work in the evening.",
+    "roleplay": {
+      "title": "book an appointment",
+      "scenario": "Student A works at a clinic. Student B calls to book a visit.",
+      "frames": [
+        "Hello. I want an appointment.",
+        "What is your name?",
+        "Ana Silva.",
+        "Are you free on Tuesday?",
+        "Yes, in the morning.",
+        "Ten o'clock is OK?"
+      ]
+    },
+    "future": {
+      "chunks": "Next week, I will… / Tomorrow, I want to…",
+      "prompts": "When will you go to the doctor next? What do you want to ask about?",
+      "model": "Next week I will go to the pharmacy and then to the doctor."
+    },
+    "takeaway": "One word + one appointment you need this month.",
+    "weaker": "write the days and times on the board so B only has to choose.",
+    "stronger": "Tuesday is full, so A offers Thursday afternoon and B must check their calendar."
+  },
+  {
+    "number": 25,
+    "slug": "session-25-travel-mindset-and-cultural-curiosity",
+    "title": "Travel Mindset & Cultural Curiosity",
+    "date": "2 July 2027",
+    "topic": "Culture & Society",
+    "sub_theme": "travel",
+    "lead": "Travel gives beginners a reason to ask questions. Card 4 is a hotel desk, where every sentence is short and useful.",
+    "warmup": "Show one travel photo on your phone. Say where it is.",
+    "say": "I have a reservation. / My name is Ana Silva.",
+    "words": [
+      [
+        "travel",
+        "a plane and a bag",
+        "TRAV-el",
+        "verb",
+        "To go to another city or country.",
+        "I travel in August."
+      ],
+      [
+        "ticket",
+        "a paper ticket",
+        "TIK-it",
+        "noun",
+        "The paper you buy to travel.",
+        "My ticket is in my bag."
+      ],
+      [
+        "hotel",
+        "a hotel at night",
+        "ho-TEL",
+        "noun",
+        "A building where you sleep on a trip.",
+        "The hotel is near the station."
+      ],
+      [
+        "map",
+        "a city map",
+        "map",
+        "noun",
+        "A drawing of streets.",
+        "I have a map on my phone."
+      ],
+      [
+        "food",
+        "a plate of food",
+        "food",
+        "noun",
+        "What you eat.",
+        "The food here is good."
+      ],
+      [
+        "photo",
+        "a camera",
+        "FO-to",
+        "noun",
+        "A picture from a camera.",
+        "I take a photo of the street."
+      ],
+      [
+        "language",
+        "letters from two alphabets",
+        "LANG-gwij",
+        "noun",
+        "English, Spanish, Arabic.",
+        "I learn two languages."
+      ],
+      [
+        "ask",
+        "a hand up",
+        "ask",
+        "verb",
+        "To say a question.",
+        "I ask for help."
+      ],
+      [
+        "city",
+        "tall buildings",
+        "SI-tee",
+        "noun",
+        "A big town with many people.",
+        "This city is beautiful."
+      ],
+      [
+        "help",
+        "two hands together",
+        "help",
+        "noun",
+        "Something that makes life easier.",
+        "Thank you for your help."
+      ]
+    ],
+    "question": "Do you like travel? Why?",
+    "model": "For me, travel is good because I see new food and new streets.",
+    "choices": [
+      "plan everything or no plan",
+      "a hotel or a flat",
+      "a city or the sea"
+    ],
+    "pref_example": "I prefer a flat because I can cook.",
+    "roleplay": {
+      "title": "check in at a hotel",
+      "scenario": "Student A works at a hotel. Student B has a reservation.",
+      "frames": [
+        "Hello. I have a reservation.",
+        "What is your name?",
+        "Ana Silva.",
+        "Yes, room twelve.",
+        "What time is breakfast?",
+        "From seven to ten."
+      ]
+    },
+    "future": {
+      "chunks": "Next year, I want to travel to… / In August, I will…",
+      "prompts": "Where do you want to travel next year? What will you do there?",
+      "model": "Next year I want to travel to Italy and eat in small restaurants."
+    },
+    "takeaway": "One word + one place you want to see.",
+    "weaker": "give B a reservation card with name, room and dates written on it.",
+    "stronger": "the room is not ready, so B has to ask for a place to leave the bags."
+  },
+  {
+    "number": 26,
+    "slug": "session-26-social-plans-and-boundaries",
+    "title": "Social Plans & Boundaries",
+    "date": "9 July 2027",
+    "topic": "Culture & Society",
+    "sub_theme": "hobbies",
+    "lead": "Saying no politely is the hardest A0 skill and the most useful. This session practises it until it is easy.",
+    "warmup": "Say one thing you will do this weekend. One sentence.",
+    "say": "Do you want to come? / Sorry, I am busy.",
+    "words": [
+      [
+        "plan",
+        "a list with times",
+        "plan",
+        "noun",
+        "What you will do and when.",
+        "My plan is simple."
+      ],
+      [
+        "invite",
+        "a hand with a phone",
+        "in-VIGHT",
+        "verb",
+        "To ask someone to come.",
+        "I invite two friends."
+      ],
+      [
+        "friend",
+        "two people together",
+        "frend",
+        "noun",
+        "A person you like and know well.",
+        "My friend lives here."
+      ],
+      [
+        "free",
+        "an empty page",
+        "free",
+        "adjective",
+        "With time for other things.",
+        "I am free on Sunday."
+      ],
+      [
+        "busy",
+        "a full notebook",
+        "BIZ-ee",
+        "adjective",
+        "With many things to do.",
+        "I am busy on Saturday."
+      ],
+      [
+        "dinner",
+        "a plate at night",
+        "DIN-er",
+        "noun",
+        "The meal in the evening.",
+        "Dinner at my home?"
+      ],
+      [
+        "cinema",
+        "a cinema screen",
+        "SIN-e-ma",
+        "noun",
+        "The place where you watch films.",
+        "The cinema is near here."
+      ],
+      [
+        "time",
+        "a clock face",
+        "tighm",
+        "noun",
+        "Hours and minutes.",
+        "What time?"
+      ],
+      [
+        "yes",
+        "a thumb up",
+        "yes",
+        "expression",
+        "A good answer.",
+        "Yes, I want to come."
+      ],
+      [
+        "no",
+        "a thumb down",
+        "noh",
+        "expression",
+        "A negative answer.",
+        "No, thank you."
+      ]
+    ],
+    "question": "Is it easy to say no to friends? Why?",
+    "model": "For me, it is difficult because I don't want to be rude.",
+    "choices": [
+      "say yes always or say no sometimes",
+      "plan early or plan at the last minute",
+      "a small group or a big group"
+    ],
+    "pref_example": "I prefer a small group because I can talk to everybody.",
+    "roleplay": {
+      "title": "invite and say no politely",
+      "scenario": "Student A invites Student B out. B is busy and suggests another day.",
+      "frames": [
+        "Do you want to come on Saturday?",
+        "Sorry, I am busy.",
+        "Maybe Sunday?",
+        "Yes, Sunday is good. What time?",
+        "Seven o'clock, at the cinema.",
+        "Perfect. See you there."
+      ]
+    },
+    "future": {
+      "chunks": "Next weekend, I want to… / On Sunday, I will…",
+      "prompts": "What do you want to do next weekend? Who will you invite?",
+      "model": "Next weekend I want to have dinner with two friends."
+    },
+    "takeaway": "One word + one plan you will make this week.",
+    "weaker": "give B the phrase \"Sorry, I am busy\" on a card and let them read it.",
+    "stronger": "B is busy on Saturday and Sunday, so they must suggest a third option."
+  },
+  {
+    "number": 27,
+    "slug": "session-27-navigation-and-independence",
+    "title": "Navigation & Independence",
+    "date": "16 July 2027",
+    "topic": "Everyday Life",
+    "sub_theme": "travel",
+    "lead": "Left, right, straight, near, far: five words that turn a lost beginner into a person who can ask. Card 4 is a small map and a stranger.",
+    "warmup": "Point left. Point right. Say the words. Your partner does the same.",
+    "say": "Go left, then right. / It is near the park.",
+    "words": [
+      [
+        "map",
+        "a city map",
+        "map",
+        "noun",
+        "A drawing of streets.",
+        "I look at the map."
+      ],
+      [
+        "left",
+        "a hand pointing left",
+        "left",
+        "adverb",
+        "This side, not right.",
+        "Go left at the bank."
+      ],
+      [
+        "right",
+        "a hand pointing right",
+        "right",
+        "adverb",
+        "This side, not left.",
+        "Then go right."
+      ],
+      [
+        "straight",
+        "an arrow forward",
+        "strayt",
+        "adverb",
+        "Forward, not left or right.",
+        "Go straight for two streets."
+      ],
+      [
+        "near",
+        "two buildings close",
+        "neer",
+        "adjective",
+        "Not far.",
+        "The stop is near."
+      ],
+      [
+        "far",
+        "two buildings with a road",
+        "far",
+        "adjective",
+        "A long way.",
+        "The hospital is far."
+      ],
+      [
+        "street",
+        "a street with cars",
+        "street",
+        "noun",
+        "A road with houses.",
+        "This street is long."
+      ],
+      [
+        "bus stop",
+        "a bus stop sign",
+        "bus stop",
+        "noun",
+        "The place where a bus stops.",
+        "The bus stop is there."
+      ],
+      [
+        "ask",
+        "a hand up",
+        "ask",
+        "verb",
+        "To say a question.",
+        "I ask a person."
+      ],
+      [
+        "lost",
+        "a person with a map",
+        "lost",
+        "adjective",
+        "Not knowing where you are.",
+        "I am lost."
+      ]
+    ],
+    "question": "Do you use a map on your phone? Why?",
+    "model": "For me, the map is good because I am often lost.",
+    "choices": [
+      "ask a person or use your phone",
+      "walk or take a taxi",
+      "go out in the day or at night"
+    ],
+    "pref_example": "I prefer to ask a person because it is faster.",
+    "roleplay": {
+      "title": "find the pharmacy",
+      "scenario": "Student B is lost. Student A lives in the area and gives directions.",
+      "frames": [
+        "Excuse me, I am lost. Where is the pharmacy?",
+        "Go straight, then left.",
+        "Is it far?",
+        "No, three minutes.",
+        "Near the bank?",
+        "Yes, next to the bank."
+      ]
+    },
+    "future": {
+      "chunks": "Next week, I want to go to… / Tomorrow, I will walk to…",
+      "prompts": "Where do you want to go next week? Will you walk or take the bus?",
+      "model": "Next week I want to go to the new market, and I will walk there."
+    },
+    "takeaway": "One direction word + one place you will go next week.",
+    "weaker": "draw three streets on paper and let A point while speaking.",
+    "stronger": "A gives a longer route with four steps, and B repeats it back."
+  },
+  {
+    "number": 28,
+    "slug": "session-28-learning-styles-and-education-memories",
+    "title": "Learning Styles & Education Memories",
+    "date": "23 July 2027",
+    "topic": "Psychology & Mind",
+    "sub_theme": "hobbies",
+    "lead": "The club itself is the topic: how do you learn, and what helps? Card 4 is a short conversation about an English course.",
+    "warmup": "Say one word you learned in English this month.",
+    "say": "I learn English at the club. / It is difficult but good.",
+    "words": [
+      [
+        "school",
+        "a school building",
+        "skool",
+        "noun",
+        "The place where children learn.",
+        "My school was small."
+      ],
+      [
+        "teacher",
+        "a person at a board",
+        "TEE-cher",
+        "noun",
+        "The person who helps you learn.",
+        "My teacher is patient."
+      ],
+      [
+        "book",
+        "an open book",
+        "buk",
+        "noun",
+        "Pages with words.",
+        "I read one book a month."
+      ],
+      [
+        "learn",
+        "a notebook",
+        "lern",
+        "verb",
+        "To get new knowledge.",
+        "I learn ten words a week."
+      ],
+      [
+        "English",
+        "a flag and a letter A",
+        "ING-glish",
+        "noun",
+        "The language of this club.",
+        "I learn English here."
+      ],
+      [
+        "class",
+        "people at desks",
+        "klas",
+        "noun",
+        "A lesson with a teacher.",
+        "My class is on Monday."
+      ],
+      [
+        "homework",
+        "a notebook and a pen",
+        "HOHM-werk",
+        "noun",
+        "Work you do at home for a class.",
+        "I do homework on the bus."
+      ],
+      [
+        "easy",
+        "a green tick",
+        "EE-zee",
+        "adjective",
+        "Not difficult.",
+        "Listening is easy for me."
+      ],
+      [
+        "difficult",
+        "a red question mark",
+        "DIF-i-kult",
+        "adjective",
+        "Not easy.",
+        "Speaking is difficult."
+      ],
+      [
+        "remember",
+        "a hand on the head",
+        "ri-MEM-ber",
+        "verb",
+        "To keep something in your mind.",
+        "I remember new words with photos."
+      ]
+    ],
+    "question": "How do you learn best?",
+    "model": "For me, I learn best with music because I remember the words.",
+    "choices": [
+      "read a book or listen to audio",
+      "learn alone or learn in a class",
+      "study in the morning or study at night"
+    ],
+    "pref_example": "I prefer a class because I can speak with people.",
+    "roleplay": {
+      "title": "ask about an English course",
+      "scenario": "Student A works at a language school. Student B wants a course.",
+      "frames": [
+        "I want to learn English.",
+        "We have a class on Monday.",
+        "What time is it?",
+        "From six to seven.",
+        "How many people are in the class?",
+        "Six people."
+      ]
+    },
+    "future": {
+      "chunks": "Next year, I want to… / This month, I will…",
+      "prompts": "What do you want to do in English next year? What will you practise this month?",
+      "model": "Next year I want to speak English at work."
+    },
+    "takeaway": "One word + one thing you will practise this week.",
+    "weaker": "put the three course times on the board and let B choose.",
+    "stronger": "the Monday class is full, so A offers a cheaper online class and B must compare."
+  },
+  {
+    "number": 29,
+    "slug": "session-29-tech-dependence-and-digital-habits",
+    "title": "Tech Dependence & Digital Habits",
+    "date": "30 July 2027",
+    "topic": "Technology & AI",
+    "sub_theme": "routines",
+    "lead": "Everyone in the room has a phone, which makes this the easiest session to make concrete. Card 4 is asking for help with it.",
+    "warmup": "Look at your phone. How many hours yesterday? Say the number.",
+    "say": "I use my phone a lot. / My phone is off.",
+    "words": [
+      [
+        "phone",
+        "a phone in a hand",
+        "fone",
+        "noun",
+        "A small telephone you carry.",
+        "My phone is new."
+      ],
+      [
+        "screen",
+        "a bright screen",
+        "skreen",
+        "noun",
+        "The glass front of a phone.",
+        "I look at the screen too much."
+      ],
+      [
+        "app",
+        "a phone with icons",
+        "ap",
+        "noun",
+        "A program on a phone.",
+        "This app is useful."
+      ],
+      [
+        "message",
+        "a speech bubble",
+        "MES-ij",
+        "noun",
+        "A short text you send.",
+        "I send a message."
+      ],
+      [
+        "photo",
+        "a camera",
+        "FO-to",
+        "noun",
+        "A picture from a camera.",
+        "I take photos of food."
+      ],
+      [
+        "charge",
+        "a phone with a cable",
+        "chari",
+        "verb",
+        "To put electricity in a phone.",
+        "I charge my phone at night."
+      ],
+      [
+        "off",
+        "a dark screen",
+        "of",
+        "adverb",
+        "Not on, not working.",
+        "My phone is off."
+      ],
+      [
+        "on",
+        "a bright screen",
+        "on",
+        "adverb",
+        "Working.",
+        "The phone is on."
+      ],
+      [
+        "night",
+        "a dark sky",
+        "night",
+        "noun",
+        "The dark hours.",
+        "I read at night."
+      ],
+      [
+        "quiet",
+        "a finger on the lips",
+        "KWAI-et",
+        "adjective",
+        "With little sound.",
+        "The phone is quiet at night."
+      ]
+    ],
+    "question": "How many hours do you use your phone? Is it too much?",
+    "model": "For me, four hours is too much because I sleep late.",
+    "choices": [
+      "phone at dinner or no phone at dinner",
+      "phone in the morning or a walk in the morning",
+      "send a message or make a call"
+    ],
+    "pref_example": "I prefer a call because messages are slow.",
+    "roleplay": {
+      "title": "ask for help with a phone",
+      "scenario": "Student B has a problem with a phone. Student A helps.",
+      "frames": [
+        "Can you help me?",
+        "Yes, what is the problem?",
+        "My phone is off.",
+        "Where is your charger?",
+        "Here. Thank you.",
+        "Now it is on."
+      ]
+    },
+    "future": {
+      "chunks": "Tonight, I will… / Next week, I want to…",
+      "prompts": "What time will you turn off your phone tonight? What do you want to do without your phone?",
+      "model": "Tonight I will turn off my phone at ten."
+    },
+    "takeaway": "One word + one thing you will do without your phone.",
+    "weaker": "act the problem with the phone in hand, so the words come from the action.",
+    "stronger": "the phone needs a new battery, so A explains two options and B chooses."
+  },
+  {
+    "number": 30,
+    "slug": "session-30-life-reflections-and-future-hopes",
+    "title": "Life Reflections & Future Hopes",
+    "date": "6 August 2027",
+    "topic": "Philosophy & Ethics",
+    "sub_theme": "routines",
+    "lead": "The last session of the course, so the language looks backwards and forwards: what was good this year, and what comes next.",
+    "warmup": "Say one good thing about this year. One word is enough.",
+    "say": "This year was good. / Next year I want to change my job.",
+    "words": [
+      [
+        "year",
+        "a calendar page",
+        "yeer",
+        "noun",
+        "Twelve months.",
+        "This year was busy."
+      ],
+      [
+        "change",
+        "two arrows",
+        "chayn",
+        "noun",
+        "Something different.",
+        "I want a change."
+      ],
+      [
+        "home",
+        "a house with a light",
+        "hohm",
+        "noun",
+        "The place where you live.",
+        "My home is small."
+      ],
+      [
+        "job",
+        "a work badge",
+        "job",
+        "noun",
+        "The work you do for money.",
+        "I want a new job."
+      ],
+      [
+        "family",
+        "four people at a table",
+        "FAM-i-lee",
+        "noun",
+        "Your mother, father and children.",
+        "My family is near."
+      ],
+      [
+        "learn",
+        "a notebook",
+        "lern",
+        "verb",
+        "To get new knowledge.",
+        "I want to learn to drive."
+      ],
+      [
+        "happy",
+        "a smiling face",
+        "HAP-ee",
+        "adjective",
+        "Feeling good.",
+        "I am happy here."
+      ],
+      [
+        "plan",
+        "a list with times",
+        "plan",
+        "noun",
+        "What you will do and when.",
+        "My plan is simple."
+      ],
+      [
+        "next",
+        "an arrow to the right",
+        "nekst",
+        "adjective",
+        "After this one.",
+        "Next year I will move."
+      ],
+      [
+        "hope",
+        "a hand on the heart",
+        "hohp",
+        "noun",
+        "Something good you want.",
+        "My hope is a quiet flat."
+      ]
+    ],
+    "question": "What was good this year?",
+    "model": "For me, this year was good because I met new people.",
+    "choices": [
+      "the same life or a new life",
+      "stay in this city or move",
+      "learn something now or learn later"
+    ],
+    "pref_example": "I prefer to learn now because I have time.",
+    "roleplay": {
+      "title": "tell a friend your plan",
+      "scenario": "Two friends talk about next year. A asks questions, B answers.",
+      "frames": [
+        "What do you want to do next year?",
+        "I want a new job.",
+        "Why?",
+        "The money is not good.",
+        "That is a good plan.",
+        "Thank you. And you?"
+      ]
+    },
+    "future": {
+      "chunks": "Next year, I will… / In five years, I want to…",
+      "prompts": "What will you do next year? Where do you want to be in five years?",
+      "model": "Next year I will start an English course, and in five years I want to work in another country."
+    },
+    "takeaway": "One word from the course + one thing you will do next year.",
+    "weaker": "let B answer with one word plus \"because\" and one noun.",
+    "stronger": "A has to give one piece of advice — \"You can start with a small course.\""
+  }
+]

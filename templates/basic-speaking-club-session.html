@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PAGE_TITLE}}</title>
+  <link rel="canonical" href="{{CANONICAL_URL}}"/>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <script src="../../shared/js/cosy-theme.js"></script>
+  <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css">
+  <link rel="stylesheet" href="../../shared/css/sessions.css">
+  <style>
+    .vocab-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .vocab-pill {
+      background-color: var(--color-background-soft, #f0f4f1);
+      color: var(--color-primary-dark, #1c3b2b);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid var(--color-border, #e0e8e3);
+    }
+    .frame-box {
+      background-color: var(--surface-color, #f8faf9);
+      border-left: 4px solid var(--teal, #2d6a4f);
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .question-card {
+      background: var(--surface-color, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      color: var(--ink, inherit);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+    .card-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--surface-color, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm, 0 1px 2px rgba(0, 0, 0, 0.04));
+    }
+    .card-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .card-head h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--ink, #1c3b2b);
+    }
+    .card-time {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--teal, #0F6E56);
+    }
+    .card p {
+      margin: 0.5rem 0;
+    }
+    .card ul {
+      margin: 0.5rem 0;
+      padding-left: 1.25rem;
+      line-height: 1.8;
+    }
+    .ladder {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0;
+      font-size: 0.9rem;
+    }
+    .ladder th,
+    .ladder td {
+      border: 1px solid var(--border, #e2e8f0);
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ladder th {
+      background: var(--sage-pale, #eef4ef);
+      color: var(--ink, #1c3b2b);
+    }
+    .ladder code {
+      white-space: normal;
+    }
+  </style>
+  <link rel="stylesheet" href="../../shared/css/clubs/basic-speaking-club.css">
+  <link rel="stylesheet" href="../../shared/css/dark-fixes.css">
+</head>
+<body class="theme-basic-speaking">
+  <nav id="cosy-nav"></nav>
+  <header class="session-hero" style="background: linear-gradient(135deg, #0F6E56, #0A4737);">
+  <div class="club-tag">Basic Speaking Club</div>
+  <div class="session-decorator-icon">🌱</div>
+  <h1>{{TITLE}}</h1>
+  <p class="session-date">{{DATE}}</p>
+</header>
+  <main class="content-container">
+  <nav class="cosy-breadcrumbs">
+  <a href="../../index.html">Home</a> <span class="sep">/</span>
+  <a href="../../">Events</a> <span class="sep">/</span>
+  <a href="../../basic-speaking-club.html">Basic Speaking Club</a> <span class="sep">/</span>
+  <span class="current">{{BREADCRUMB}}</span>
+</nav>
+
+
+        {{CONTENT}}
+
+      <div class="session-footer">
+        <a href="../../basic-speaking-club.html" class="btn btn-secondary">← Back to Basic Speaking Club</a>
+      </div>
+</main>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="fb-logo">
+          <img alt="COSYlanguages logo" src="../../shared/images/logo.png"/>
+          <span class="fb-name">COSYlanguages</span>
+        </div>
+        <p data-cms-id="p-11-1bb45f" data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
+      </div>
+      <div class="footer-links-col">
+        <h5 data-cms-id="h5-1-a16536" data-translate-key="footer_h5_courses">Courses</h5>
+        <a data-translate-key="course_general" href="https://cosylanguages.github.io/COSYlanguages/courses/general.html">General Course 📖</a>
+        <a data-translate-key="course_spoken" href="https://cosylanguages.github.io/COSYlanguages/courses/spoken.html">Spoken Course 🗣️</a>
+        <a data-translate-key="course_exam" href="https://cosylanguages.github.io/COSYlanguages/courses/exam-preparation.html">Exam Preparation 📝</a>
+        <a data-translate-key="course_travelling" href="https://cosylanguages.github.io/COSYlanguages/courses/travelling.html">Travelling Course ✈️</a>
+        <a data-translate-key="course_professional" href="https://cosylanguages.github.io/COSYlanguages/courses/professional.html">Professional Course 💼</a>
+        <a data-translate-key="course_relocation" href="https://cosylanguages.github.io/COSYlanguages/courses/relocation.html">Relocation Course 🏡</a>
+      </div>
+      <div class="footer-links-col">
+        <h5 data-cms-id="h5-2-b965ae" data-translate-key="footer_h5_explore">Explore</h5>
+        <a data-translate-key="nav_languages" href="https://cosylanguages.github.io/COSYlanguages/">Languages 🌍</a>
+        <a data-translate-key="nav_practice" href="../../practice/index.html">Free Practice 💡</a>
+        <a data-translate-key="nav_events" href="../../index.html">Events 🎉</a>
+        <a data-translate-key="nav_games" href="../../games/index.html">Games 🎮</a>
+      </div>
+      <div class="footer-links-col">
+        <h5 data-cms-id="h5-3-f6f4da">Project</h5>
+        <a href="../../privacy.html">Privacy &amp; Safety 🛡️</a>
+      </div>
+      <div class="footer-links-col">
+        <h5 data-cms-id="h5-4-b37456" data-translate-key="footer_h5_contact">Contact</h5>
+        <a href="https://wa.me/330766784195">WhatsApp 📱</a>
+        <a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+        <a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+      </div>
+    </div>
+    <div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages : All rights reserved</div>
+  </footer>
+  <script src="../../shared/js/cosyevents-session.js"></script>
+</body>
+</html>
