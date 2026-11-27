@@ -9,10 +9,12 @@
  * the light-teal primary.
  *
  * Deliberately not in CI: it needs a browser. Run it by hand after a palette
- * change. The default list is the set that currently passes; pass page paths
- * to sweep further. A wider sweep still reports a backlog of pre-existing
- * issues in some club pages (amber buttons, inline-styled chips) that predate
- * the palette work.
+ * change. By default it walks every top-level page; pass page paths to check
+ * a subset.
+ *
+ * It measures text against a solid background-color only. Text over a gradient
+ * or an image, and text on a translucent fill, is not measured — those need a
+ * human or a pixel-level check.
  *
  *   node scripts/audit_page_contrast.js [page.html ...]
  *
@@ -20,23 +22,16 @@
  * point CHROMIUM_PATH at a system binary.
  */
 
+const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
 
 const BASE = process.env.AUDIT_BASE || 'http://127.0.0.1:8000';
 
-const DEFAULT_PAGES = [
-  'index.html',
-  'karaoke-club.html',
-  'speaking-clubs/index.html',
-  'today.html',
-  'login.html',
-  'fr/index.html',
-  '404.html',
-  'cinema-nights/index.html',
-  'game-evenings.html',
-  'long-reads.html',
-];
+const DEFAULT_PAGES = fs
+  .readdirSync(path.join(__dirname, '..'))
+  .filter(f => f.endsWith('.html'))
+  .sort();
 
 const auditFn = () => {
   const parse = c => {
@@ -108,6 +103,10 @@ const auditFn = () => {
       await page.evaluate(t => {
         document.documentElement.setAttribute('data-theme', t);
         document.body.classList.toggle('theme-dark', t === 'dark');
+        // Measuring mid-transition reports blended colours that never settle.
+        const s = document.createElement('style');
+        s.textContent = '*,*::before,*::after{transition:none!important;animation:none!important}';
+        document.head.appendChild(s);
       }, theme);
       await page.waitForTimeout(250);
 

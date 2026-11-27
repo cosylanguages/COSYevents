@@ -3498,7 +3498,7 @@ html[data-theme="dark"], body.theme-dark {
 .club-meta { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem; }
 .club-tag { font-size: .72rem; padding: .2rem .55rem; border-radius: 6px; font-weight: 500; letter-spacing: .03em; border: 1px solid; }
 .club-desc { font-size: .88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
-.join-btn { display: inline-block; margin-top: .25rem; background: #25D366; color: white; text-decoration: none; border-radius: 8px; padding: .45rem 1rem; font-size: .83rem; font-weight: 500; transition: background .2s; }
+.join-btn { display: inline-block; margin-top: .25rem; background: #0F6B35; color: white; text-decoration: none; border-radius: 8px; padding: .45rem 1rem; font-size: .83rem; font-weight: 500; transition: background .2s; }
 
 /* Topics List on Club Index */
 .topics-list { list-style: none; margin: .75rem 0; display: flex; flex-direction: column; gap: .4rem; }
@@ -6596,7 +6596,7 @@ body.theme-dark .session-jump-link.active {
 }
 
 .ce-view-btn.active {
-  background: var(--cosy-color-sage, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
 }
 
@@ -6623,7 +6623,7 @@ body.theme-dark .session-jump-link.active {
 }
 
 .ce-slide-nav-btn {
-  background: var(--cosy-color-sage, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
   border: none;
   border-radius: var(--cosy-radius-full, 100px);
@@ -6635,7 +6635,7 @@ body.theme-dark .session-jump-link.active {
 }
 
 .ce-slide-nav-btn:hover:not(:disabled) {
-  background: var(--cosy-color-sage-dark, #0b4749);
+  background: var(--cosy-primary-fill-hover, #0b4749);
   transform: translateY(-1px);
 }
 
@@ -6950,7 +6950,7 @@ body.theme-dark .session-jump-link.active {
 }
 
 .edv-starter-chip:hover {
-  background: var(--cosy-color-sage, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
   transform: translateY(-1px);
 }
@@ -7006,7 +7006,7 @@ body.theme-dark .session-jump-link.active {
 }
 
 .edv-poll-card.selected .edv-poll-tag {
-  background: var(--cosy-color-sage, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
 }
 
@@ -7030,7 +7030,7 @@ body.theme-dark .session-jump-link.active {
 
 .edv-poll-bar-fill {
   height: 100%;
-  background: var(--cosy-color-sage, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   width: 50%;
   transition: width 0.4s ease;
 }

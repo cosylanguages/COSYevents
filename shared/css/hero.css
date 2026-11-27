@@ -209,7 +209,7 @@
 .ev-next-join {
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  background: var(--cosy-color-sage, #087a80);
+  background: var(--cosy-primary-fill, #087a80);
   color: #fff;
   font-size: 0.85rem;
   font-weight: 800;

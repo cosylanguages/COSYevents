@@ -24,17 +24,17 @@
 
   --st-ink: #1c1917;
   --st-ink-secondary: #57524d;
-  --st-ink-muted: #807a72;
+  --st-ink-muted: #6B655D;
 
-  --st-primary: #2f543b;
-  --st-primary-hover: #24422e;
+  --st-primary: #087A80;
+  --st-primary-hover: #0B4749;
   --st-on-primary: #ffffff;
-  --st-primary-soft: #eaf1eb;
-  --st-primary-ink: #203b29;
+  --st-primary-soft: #EFFCFB;
+  --st-primary-ink: #062B2D;
 
-  --st-accent: #0284c7;
-  --st-accent-hover: #0369a1;
-  --st-accent-soft: #e0f2fe;
+  --st-accent: #087A80;
+  --st-accent-hover: #0B4749;
+  --st-accent-soft: #EFFCFB;
 
   --st-danger: #c53030;
   --st-danger-hover: #9b2c2c;
@@ -65,15 +65,15 @@ html[data-theme="dark"] {
   --st-ink-secondary: #c7cbc8;
   --st-ink-muted: #8b948d;
 
-  --st-primary: #528a64;
-  --st-primary-hover: #63a479;
+  --st-primary: #0A5F63;
+  --st-primary-hover: #0B4749;
   --st-on-primary: #ffffff;
-  --st-primary-soft: #1d2e23;
-  --st-primary-ink: #b7e4c7;
+  --st-primary-soft: #0A2A2B;
+  --st-primary-ink: #7FE7E1;
 
-  --st-accent: #38bdf8;
-  --st-accent-hover: #7dd3fc;
-  --st-accent-soft: #142838;
+  --st-accent: #0A5F63;
+  --st-accent-hover: #087A80;
+  --st-accent-soft: #0A2A2B;
 
   --st-danger: #f87171;
   --st-danger-hover: #ef4444;
@@ -259,7 +259,7 @@ body.studio-body {
 }
 
 .btn-save {
-  background-color: #0284c7;
+  background-color: var(--st-primary, #087A80);
   color: #ffffff;
   border-color: #0369a1;
   font-weight: 700;
