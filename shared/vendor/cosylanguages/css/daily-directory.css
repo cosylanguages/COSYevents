@@ -1,0 +1,221 @@
+/**
+ * COSYlanguages Daily Directory Component Styles
+ * File: css/daily-directory.css
+ *
+ * Styling for js/daily-directory.js. Uses the shared COSYlanguages design tokens with warm-white
+ * fallbacks so it renders correctly even in hosts that do not load tokens.css.
+ */
+
+.daily-directory {
+    max-width: 1120px;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background: var(--cosy-color-warm-white, #FFFEFB);
+    border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.12));
+    border-radius: var(--cosy-radius-lg, 22px);
+    box-shadow: var(--cosy-shadow-sm, 0 2px 8px rgba(46, 74, 51, 0.08));
+    box-sizing: border-box;
+}
+
+.daily-directory-header {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px dashed var(--cosy-color-border, rgba(74, 107, 80, 0.15));
+}
+
+.daily-directory-title {
+    margin: 0 0 0.35rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--cosy-color-ink, #1C1917);
+}
+
+.daily-directory-sub {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--cosy-color-ink-muted, #6B7280);
+}
+
+.daily-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.daily-directory-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--cosy-color-cream, #FAF7F2);
+    border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.12));
+    border-radius: var(--cosy-radius-md, 14px);
+    padding: 1.1rem 1.2rem;
+}
+
+.daily-directory-card.is-self {
+    border-color: var(--cosy-color-sage, #416B49);
+    box-shadow: inset 0 0 0 1px var(--cosy-color-sage, #416B49);
+}
+
+.daily-directory-card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.15rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--cosy-color-sage-dark, #234027);
+}
+
+.daily-directory-repo {
+    margin: 0 0 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--cosy-color-ink-faint, #9CA3AF);
+}
+
+.daily-directory-desc {
+    margin: 0 0 0.75rem;
+    font-size: 0.92rem;
+    color: var(--cosy-color-ink, #1C1917);
+}
+
+.daily-directory-slots {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.daily-directory-slot {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: var(--cosy-color-sage-mist, #DCFCE7);
+    color: var(--cosy-color-sage-dark, #166534);
+}
+
+.daily-directory-link {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1rem;
+    border-radius: 9px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--cosy-on-brand);
+    background: var(--cosy-fill-sage, #375742);
+    transition: background-color var(--cosy-transition-fast, 0.15s ease);
+}
+
+.daily-directory-link:hover {
+    background: var(--cosy-fill-sage-hover, #2E4A33);
+}
+
+.daily-directory-badge {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1rem;
+    border-radius: 9px;
+    font-weight: 700;
+    background: var(--cosy-color-sage-mist, #DCFCE7);
+    color: var(--cosy-color-sage-dark, #166534);
+}
+
+/* Dark values follow the visitor's explicit choice, not just the OS setting.
+   cosy-theme.js writes :root[data-theme] before first paint; the media query
+   below is only the fallback for pages that have not loaded it yet. */
+html[data-theme="dark"] .daily-directory,
+body.theme-dark .daily-directory {
+    background: var(--cosy-color-surface, #1F2421);
+    border-color: var(--cosy-color-border, rgba(255, 255, 255, 0.12));
+}
+
+html[data-theme="dark"] .daily-directory-card,
+body.theme-dark .daily-directory-card {
+    background: var(--cosy-color-surface-raised, #262C28);
+}
+
+html[data-theme="dark"] :is(.daily-directory-title, .daily-directory-desc),
+body.theme-dark :is(.daily-directory-title, .daily-directory-desc) {
+    color: var(--cosy-color-ink, #F5F5F4);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .daily-directory {
+        background: var(--cosy-color-surface, #1F2421);
+        border-color: var(--cosy-color-border, rgba(255, 255, 255, 0.12));
+    }
+    :root:not([data-theme="light"]) .daily-directory-card {
+        background: var(--cosy-color-surface-raised, #262C28);
+    }
+    :root:not([data-theme="light"]) :is(.daily-directory-title, .daily-directory-desc) {
+        color: var(--cosy-color-ink, #F5F5F4);
+    }
+}
+
+/* Compact one-line form, embedded under the hub daily strip */
+.daily-directory--compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    align-items: stretch;
+    gap: 0.4rem 0.5rem;
+    max-width: none;
+    margin: 0;
+    padding: 0.6rem 0 0;
+    background: transparent;
+    border: 0;
+    border-top: 1px dashed var(--cosy-color-border, rgba(74, 107, 80, 0.15));
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 0.82rem;
+}
+
+.daily-directory-more {
+    color: var(--cosy-color-ink-muted, #5B6470);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    grid-column: 1 / -1;
+}
+
+.daily-directory-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.2));
+    border-radius: 999px;
+    background: var(--cosy-color-cream, #FAF7F2);
+    color: var(--cosy-color-sage-dark, #2E4A33);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.daily-directory-chip:hover,
+.daily-directory-chip:focus-visible {
+    border-color: var(--cosy-color-sage, #416B49);
+    background: var(--cosy-color-warm-white, #FFFEFB);
+}
+
+html[data-theme="dark"] .daily-directory-chip,
+body.theme-dark .daily-directory-chip {
+    background: rgba(255, 255, 255, 0.06);
+    color: inherit;
+}
+
+@media (max-width: 480px) {
+    .daily-directory--compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .daily-directory-chip { white-space: normal; text-align: center; font-size: 0.78rem; padding: 0.35rem 0.4rem; }
+}

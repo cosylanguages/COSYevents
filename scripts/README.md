@@ -22,6 +22,7 @@ Scripts marked with an npm name are exposed in `package.json`; the rest are run 
 | `publish-events.js` | `publish` | Prepares the event catalog for the static site (never uploads session content) |
 | `enrich_all_clubs_taxonomy.js` | — | Adds theme and taxonomy fields to `data/sessions.json` |
 | `vendor_supabase.js` | — | Vendors the Supabase JS bundle into `shared/vendor/` with a hash check |
+| `vendor_cosylanguages.js` | `vendor:cosylanguages`, `check-vendor` | Vendors the COSYlanguages CSS/JS/fonts into `shared/vendor/cosylanguages/` with a sha256 manifest; `--check` verifies the local copy is untouched |
 
 ## Check and verify
 
@@ -33,6 +34,7 @@ Scripts marked with an npm name are exposed in `package.json`; the rest are run 
 | `check-names.js` | — | Fails if a forbidden personal name appears in content |
 | `check-gated-pages.js` | `check:gated` | Checks gated pages are marked correctly |
 | `check_orphan_classes.js` | `check-orphans` | Finds CSS classes used in HTML but defined nowhere |
+| `check_isolation.js` | `check-isolation`, `audit-isolation` | Fails when a page loads an asset from another COSY repo or from a folder outside its own and `shared/`. `--update` rewrites `reports/isolation-baseline.json` and `reports/isolation-report.md` |
 | `check_ecosystem_links.js` | — | Verifies outbound COSYlanguages links against `allowed-cosylanguages-paths.txt` |
 | `check_hub_links.js` | — | Checks hub pages link to the sessions they should |
 | `check_hero_contrast.js` | — | WCAG 2.1 AA contrast check on session hero titles, light and dark |

@@ -1,0 +1,127 @@
+/**
+ * COSYlanguages ecosystem strip (shared)
+ * File: css/ecosystem-strip.css
+ *
+ * The one-line "🌐 COSYlanguages" bar that sits at the very top of every COSYlanguages site
+ * except the COSYlanguages hub. Sibling repositories load it cross-origin:
+ *
+ *   <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/ecosystem-strip.css">
+ *   <div data-ecosystem-strip data-self="events"></div>
+ *   <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
+ *
+ * `data-self` (languages|events|data|tools|practice|games|platform|manuals|studio) removes the
+ * host's own link. COSYplatform and COSYmanuals links appear only for signed-in visitors.
+ *
+ * Class names match the legacy strip so existing pages keep their look.
+ */
+
+.cosy-ecosystem-strip {
+  --cosy-strip-bg: var(--cosy-color-sage-deep, var(--sage-deep, #233827));
+  --cosy-strip-fg: rgba(255, 255, 255, 0.9);
+  --cosy-strip-accent: var(--cosy-color-lamp, #fcd34d);
+  background: var(--cosy-strip-bg);
+  color: var(--cosy-strip-fg);
+  font-family: var(--cosy-font-sans, var(--font-sans, 'Nunito', 'DM Sans', system-ui, sans-serif));
+  font-size: 0.75rem;
+  line-height: 1.2;
+  padding: 5px 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cosy-strip-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.cosy-strip-brand {
+  font-weight: 700;
+  color: var(--cosy-strip-accent);
+  white-space: nowrap;
+}
+
+.cosy-strip-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+/* Host-owned control moved into the bar (e.g. COSYtools' theme toggle). */
+.cosy-strip-extra {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Shared theme toggle, added by the bar when a page opts in with data-theme-toggle. */
+.cosy-theme-toggle-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--cosy-strip-fg);
+  border-radius: var(--cosy-radius-full, 100px);
+  padding: 2px 8px;
+  font: inherit;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cosy-theme-toggle-btn:hover,
+.cosy-theme-toggle-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--cosy-strip-accent);
+  outline: none;
+}
+
+.cosy-strip-link {
+  color: var(--cosy-strip-fg);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.cosy-strip-link:hover,
+.cosy-strip-link:focus-visible {
+  color: var(--cosy-on-brand);
+  border-bottom-color: var(--cosy-strip-accent);
+  outline: none;
+}
+
+/* The visitor's current site: shown, but marked and not a link away from itself. */
+.cosy-strip-link.is-self,
+.cosy-strip-link.active {
+  color: var(--cosy-on-brand);
+  font-weight: 700;
+  border-bottom-color: var(--cosy-strip-accent);
+}
+
+.cosy-strip-link[aria-disabled="true"] {
+  cursor: default;
+  pointer-events: none;
+}
+
+html[data-theme="dark"] .cosy-ecosystem-strip,
+body.theme-dark .cosy-ecosystem-strip,
+html[data-cosy-theme="dark"] .cosy-ecosystem-strip {
+  --cosy-strip-bg: #141a15;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 640px) {
+  .cosy-ecosystem-strip { padding: 5px 0.9rem; }
+  .cosy-strip-inner { gap: 8px; }
+  .cosy-strip-links { gap: 10px; }
+  .cosy-strip-brand { display: none; }
+}

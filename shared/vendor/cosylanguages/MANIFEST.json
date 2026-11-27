@@ -1,0 +1,70 @@
+{
+  "source": "https://cosylanguages.github.io/COSYlanguages/",
+  "fetchedAt": "2026-11-27T12:18:43.635Z",
+  "files": {
+    "shared/css/tokens.css": {
+      "sha256": "a71d1b10937a5c7d367fe38e11268fd7a8985ed8d74b954d80bbdfd2937d63ae",
+      "bytes": 34601
+    },
+    "css/fonts.css": {
+      "sha256": "773f6ca77eb89d65f7fa83cb7b26080eeea4f539b45b3f2d5943afc3ef0d255d",
+      "bytes": 3506
+    },
+    "css/ecosystem-strip.css": {
+      "sha256": "531c7612c02c499c0c7aed668f662a64de0bccf693aba81687a1b0216479d66e",
+      "bytes": 3562
+    },
+    "css/daily-directory.css": {
+      "sha256": "b6f5767ce32a685675f26006fa6e19033b68d8ff76341b8429db05be42c930d9",
+      "bytes": 6251
+    },
+    "js/ecosystem-strip.js": {
+      "sha256": "f6ff05cd1d6c27cdeb449926e926ef2455d72c380310504b4b39ed3a1d3cc2ab",
+      "bytes": 13640
+    },
+    "js/daily-directory.js": {
+      "sha256": "c4a9cee81c3abfa593ca089683a6092790471e5dbd2ecb05bd66dd517059630f",
+      "bytes": 17919
+    },
+    "fonts/fraunces-latin-soft-normal.woff2": {
+      "sha256": "9fc3a8586b9152f25ffb3627789e5b1b4a9437b2bf67fb1bee275833bf05fcaa",
+      "bytes": 62432
+    },
+    "fonts/fraunces-latin-ext-soft-normal.woff2": {
+      "sha256": "3b9385a63af00a9ad448c95894502090e7db5f13c860cc433580e8e44d1e521f",
+      "bytes": 56000
+    },
+    "fonts/literata-latin-wght-normal.woff2": {
+      "sha256": "9adbeac5b167fe5ad6c49d9e29aa0c76e2f1bb3b46bf4ebf12a9eca7d3525384",
+      "bytes": 52496
+    },
+    "fonts/literata-cyrillic-wght-normal.woff2": {
+      "sha256": "df20f1a8ca3c15497861c6dbf36c0c59507ee351301527ec89543747067ad4d7",
+      "bytes": 28068
+    },
+    "fonts/literata-greek-wght-normal.woff2": {
+      "sha256": "393643556e420af45f8f0854c30f00e17ac52e85f1df4fd4ae2f2a29e0d279f1",
+      "bytes": 19252
+    },
+    "fonts/commissioner-latin-wght-normal.woff2": {
+      "sha256": "e3d539b926881fbb3592788297eee24d6d179c1c06dbad36805fc722775247ce",
+      "bytes": 36700
+    },
+    "fonts/commissioner-latin-ext-wght-normal.woff2": {
+      "sha256": "bd6c9bcd8fddfa16facc4398d075d0dfdf1286fc08334b94e8ea0c94beb1e0ff",
+      "bytes": 30988
+    },
+    "fonts/commissioner-cyrillic-wght-normal.woff2": {
+      "sha256": "1cb81390574ac797658ecabb9d6c50648b01506909c9b0c0c315fbe89f83a689",
+      "bytes": 26188
+    },
+    "fonts/commissioner-cyrillic-ext-wght-normal.woff2": {
+      "sha256": "dc67c8d7ffa7feb421d5895b89a0f0f0e5bf3e86b79d59aa60dc9070efbf65c4",
+      "bytes": 28068
+    },
+    "fonts/commissioner-greek-wght-normal.woff2": {
+      "sha256": "75d4734b1d207892feee610186e34fe02912d604025906fdeca5c7b8c295a622",
+      "bytes": 15380
+    }
+  }
+}

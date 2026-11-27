@@ -6,7 +6,7 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const htmlFiles = getHtmlFiles(ROOT_DIR);
 
 const doNotTouch = [
-  'styles/calendar.css',
+  'shared/css/calendar.css',
   'shared/calendar/calendar.js',
   'shared/calendar-data/events.json',
   'index.html',

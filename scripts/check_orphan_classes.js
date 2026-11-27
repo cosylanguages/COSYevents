@@ -7,9 +7,9 @@ const cssFiles = [
   'shared/css/lang.css',
   'shared/css/tokens.css',
   'shared/css/sessions.css',
-  'styles/calendar.css',
-  'styles/home.css',
-  'styles/hero.css'
+  'shared/css/calendar.css',
+  'shared/css/home.css',
+  'shared/css/hero.css'
 ];
 
 let allCssText = '';

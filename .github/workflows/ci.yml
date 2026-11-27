@@ -34,6 +34,15 @@ jobs:
       - name: Check orphan CSS classes
         run: npm run check-orphans
 
+      - name: Check page isolation (no new cross-repo or cross-folder coupling)
+        run: npm run check-isolation
+
+      - name: Verify vendored COSYlanguages assets are untouched
+        run: npm run check-vendor
+
+      - name: Check brand colour contrast
+        run: npm run check-contrast
+
       - name: Verify sitemap is up to date
         run: npm run check-sitemap
 

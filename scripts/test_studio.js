@@ -134,7 +134,7 @@ console.log('PASS: Markdown and Student Worksheet exports generated accurately.\
 // 5. Verify HTML & CSS files exist and contain required markers
 console.log('Test 5: Studio HTML & CSS Asset Integrity');
 const htmlContent = fs.readFileSync(path.join(__dirname, '../studio.html'), 'utf8');
-assert.ok(htmlContent.includes('styles/studio.css'), 'studio.html links to styles/studio.css');
+assert.ok(htmlContent.includes('shared/css/studio.css'), 'studio.html links to shared/css/studio.css');
 assert.ok(htmlContent.includes('shared/js/studio.js'), 'studio.html loads shared/js/studio.js');
 assert.ok(htmlContent.includes('id="btn-save-session"'), 'studio.html contains save session button');
 assert.ok(htmlContent.includes('id="btn-insert-video"'), 'studio.html contains insert video button');
@@ -157,7 +157,7 @@ assert.ok(htmlContent.includes('id="cards-nav-list"'), 'studio.html contains car
 assert.ok(htmlContent.includes('id="preview-slide-canvas"'), 'studio.html contains live preview canvas');
 assert.ok(htmlContent.includes('id="lock-banner"'), 'studio.html contains lock notice banner');
 
-const cssContent = fs.readFileSync(path.join(__dirname, '../styles/studio.css'), 'utf8');
+const cssContent = fs.readFileSync(path.join(__dirname, '../shared/css/studio.css'), 'utf8');
 assert.ok(cssContent.includes('.shortcuts-grid'), 'styles/studio.css contains shortcuts grid');
 assert.ok(cssContent.includes('.btn-vocab-tts'), 'styles/studio.css contains vocab tts styles');
 assert.ok(cssContent.includes('.studio-workspace'), 'styles/studio.css styles workspace 3-pane layout');

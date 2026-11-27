@@ -1,0 +1,78 @@
+/**
+ * COSYevents product layer.
+ *
+ * Tokens this product adds on top of the canonical COSY design system.
+ * Canonical values live in shared/vendor/cosylanguages/ and must not be
+ * restated here. Every value below matches the CSS fallback that pages were
+ * already computing, so declaring them changes nothing visually — it only
+ * makes the accent editable in one place.
+ *
+ * Dark-mode tuning of the accent is intentionally not defined yet; that is a
+ * design decision, not a migration.
+ */
+
+:root {
+    --cosy-event-accent:       #B84318;
+    --cosy-event-accent-ink:   #B84318;
+    --cosy-event-accent-hover: #993C1D;
+    --cosy-event-accent-deep:  #6E2B15;
+    --cosy-event-accent-light: #FAEEE8;
+    --cosy-event-accent-mist:  #FDF5F2;
+
+    --product-accent:          var(--cosy-event-accent);
+    --product-accent-hover:    var(--cosy-event-accent-hover);
+    --product-accent-deep:     var(--cosy-event-accent-deep);
+    --product-accent-light:    var(--cosy-event-accent-light);
+}
+
+/* ---------------------------------------------------------------------------
+ * Brand signal (teal) ramp
+ *
+ * #0ABBB5 and #0CA2B0 are already canonical, as --cosy-signal and
+ * --cosy-signal-secondary. The steps below fill in the tints, borders and
+ * shades those two cannot express on their own. Steps 500 and 600 are the
+ * brand values themselves; 700 aliases the canonical --cosy-signal-deep
+ * instead of restating it.
+ *
+ * Contrast, measured by `npm run check-contrast`:
+ *
+ *   step  value     measurement              use
+ *   50    #F0FCFB   ink on it 16.7:1         surface tint
+ *   100   #D5F7F4   ink on it 15.4:1         surface tint, stronger
+ *   200   #A6EFEA   ink on it 13.5:1         surface tint, border on tint
+ *   300   #6DE3DE   ink on it 11.4:1         borders, dividers, decoration
+ *   400   #2FCFC9   ink on it  9.1:1         hover on tint, decoration
+ *   500   #0ABBB5   on cream   2.2:1         brand fill — decorative, never text
+ *   600   #0CA2B0   on cream   2.9:1         large type on white only, fails on cream
+ *   700   #087A80   on cream   4.8:1         body text, links, icons that must be read
+ *   800   #0A5F63   on cream   6.9:1         strong text, headings on tint
+ *   900   #0B4749   on cream   9.8:1         deepest text
+ *
+ * White text on #0ABBB5 measures 2.39:1. Never set text on the brand fill;
+ * use 700 or darker for anything that has to be read.
+ * ------------------------------------------------------------------------ */
+
+:root {
+    --cosy-signal-50:   #F0FCFB;
+    --cosy-signal-100:  #D5F7F4;
+    --cosy-signal-200:  #A6EFEA;
+    --cosy-signal-300:  #6DE3DE;
+    --cosy-signal-400:  #2FCFC9;
+    --cosy-signal-500:  var(--cosy-signal);
+    --cosy-signal-600:  var(--cosy-signal-secondary);
+    --cosy-signal-700:  var(--cosy-signal-deep);
+    --cosy-signal-800:  #0A5F63;
+    --cosy-signal-900:  #0B4749;
+}
+
+/* Semantic aliases. These resolve through canonical semantic tokens, so they
+   follow the canonical dark-mode overrides without extra work here. */
+:root {
+    --product-signal:            var(--cosy-signal);
+    --product-signal-secondary:  var(--cosy-signal-secondary);
+    --product-signal-text:       var(--cosy-signal-ink);
+    --product-signal-tint:       var(--cosy-signal-soft);
+    --product-signal-tint-hover: var(--cosy-signal-soft-hover);
+    --product-signal-border:     color-mix(in srgb, var(--cosy-signal) 35%, transparent);
+    --product-signal-gradient:   var(--cosy-signal-gradient);
+}

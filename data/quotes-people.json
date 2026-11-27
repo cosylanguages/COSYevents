@@ -5,7 +5,7 @@
     "job": "Theoretical Physicist & Philosopher of Science",
     "achievements": "Formulated the Special and General Theories of Relativity (E=mc²); awarded the 1921 Nobel Prize in Physics.",
     "first_in": "First to prove light exists as discrete quanta (photons) and to redefine gravity as spacetime curvature.",
-    "image": "images/quotes/albert-einstein.jpg",
+    "image": "shared/images/quotes/albert-einstein.jpg",
     "i18n": {
       "fr": {
         "job": "Physicien théoricien & Philosophe des sciences",
@@ -26,7 +26,7 @@
     "job": "Co-founder & CEO of Apple, Industrial Designer & Tech Visionary",
     "achievements": "Pioneered modern personal computing, digital typography, animated films (Pixar), and mobile communications.",
     "first_in": "First to introduce commercially successful graphical user interface (GUI) computers, multi-touch smartphones (iPhone), and tablets (iPad).",
-    "image": "images/quotes/steve-jobs.jpg",
+    "image": "shared/images/quotes/steve-jobs.jpg",
     "i18n": {
       "fr": {
         "job": "Cofondateur & PDG d'Apple, visionnaire de la technologie",
@@ -47,7 +47,7 @@
     "job": "Theoretical Physicist, Author & Master Educator",
     "achievements": "Formulated quantum electrodynamics (QED) and Feynman diagrams; awarded the 1965 Nobel Prize in Physics.",
     "first_in": "First to conceptualize nanotechnology ('There's Plenty of Room at the Bottom') and quantum computing.",
-    "image": "images/quotes/richard-feynman.jpg",
+    "image": "shared/images/quotes/richard-feynman.jpg",
     "i18n": {
       "fr": {
         "job": "Physicien théoricien, auteur et pédagogue d'exception",
@@ -68,7 +68,7 @@
     "job": "Classical Athenian Philosopher & Teacher",
     "achievements": "Laid the foundational cornerstones of Western philosophy, ethics, moral reasoning, and epistemology.",
     "first_in": "First to establish the Socratic method of cooperative argumentative dialogue and critical self-examination.",
-    "image": "images/quotes/socrates.jpg",
+    "image": "shared/images/quotes/socrates.jpg",
     "i18n": {
       "fr": {
         "name": "Socrate",
@@ -92,7 +92,7 @@
     "job": "Enlightenment Writer, Philosopher & Satirist",
     "achievements": "Championed civil liberties, freedom of religion, freedom of speech, and the separation of church and state (Candide).",
     "first_in": "First widely celebrated public intellectual in Europe to lead international human rights legal advocacy campaigns (Calas Affair).",
-    "image": "images/quotes/voltaire.jpg",
+    "image": "shared/images/quotes/voltaire.jpg",
     "i18n": {
       "fr": {
         "name": "Voltaire (François-Marie Arouet)",
@@ -116,7 +116,7 @@
     "job": "Novelist, Short Story Writer, Essayist & Philosopher",
     "achievements": "Authored literary masterpieces including Crime and Punishment, The Brothers Karamazov, and The Idiot.",
     "first_in": "First to pioneer modern psychological existential realism, plumbing the deepest abysses of human guilt, faith, and freedom.",
-    "image": "images/quotes/fedor-dostoevsky.jpg",
+    "image": "shared/images/quotes/fedor-dostoevsky.jpg",
     "i18n": {
       "fr": {
         "name": "Fiodor Dostoïevski",
@@ -139,7 +139,7 @@
     "job": "Pediatrician & Pioneering Psychoanalyst",
     "achievements": "Revolutionized child psychology; founded 'La Maison Verte' day centres and made child psychoanalysis accessible via radio broadcasts.",
     "first_in": "First to recognize infants and children as full-fledged subjects of speech and dialogue from birth.",
-    "image": "images/quotes/francoise-dolto.jpg",
+    "image": "shared/images/quotes/francoise-dolto.jpg",
     "i18n": {
       "fr": {
         "name": "Françoise Dolto",
@@ -162,7 +162,7 @@
     "job": "Comedian, Actor & Philanthropist",
     "achievements": "Beloved film and stand-up star; won the Academy Award for Best Supporting Actor for Good Will Hunting (1997).",
     "first_in": "First to redefine voice acting in animation through brilliant improvisation (Aladdin) and master both comedic whirlwind and profound drama.",
-    "image": "images/quotes/robin-williams.jpg",
+    "image": "shared/images/quotes/robin-williams.jpg",
     "i18n": {
       "fr": {
         "job": "Acteur comique et dramatique, humoriste & philanthrope",
@@ -184,7 +184,7 @@
     "job": "Singer, Songwriter, Cultural Icon & Producer",
     "achievements": "Best-selling female recording artist of all time (over 400 million records sold); 7 Grammy Awards.",
     "first_in": "First female pop artist to retain complete artistic, visual, and business control over her global multimedia empire.",
-    "image": "images/quotes/madonna.jpg",
+    "image": "shared/images/quotes/madonna.jpg",
     "i18n": {
       "fr": {
         "job": "Chanteuse, auteure-compositrice, icône culturelle & productrice",
@@ -206,7 +206,7 @@
     "job": "Soviet & Russian Theatre and Film Actress",
     "achievements": "People's Artist of the USSR; star of legendary cinema classics Office Romance (1977), Stalker (1979), and D'Artagnan and Three Musketeers.",
     "first_in": "First leading actress of the BDT Tovstonogov Theatre to bridge classical stage depth with timeless, subtle on-screen vulnerability.",
-    "image": "images/quotes/alisa-freindlich.jpg",
+    "image": "shared/images/quotes/alisa-freindlich.jpg",
     "i18n": {
       "fr": {
         "name": "Alisa Freindlich",
@@ -229,7 +229,7 @@
     "job": "Psychotherapist, Clinical Psychologist & Physician",
     "achievements": "Co-developed modern Existential Analysis and Logotherapy; founder of the International Society for Logotherapy and Existential Analysis (GLE).",
     "first_in": "First to formulate the Four Fundamental Motivations of human existence in psychotherapy.",
-    "image": "images/quotes/alfried-langle.jpg",
+    "image": "shared/images/quotes/alfried-langle.jpg",
     "i18n": {
       "fr": {
         "job": "Médecin, psychothérapeute & docteur en psychologie",
@@ -251,7 +251,7 @@
     "job": "Developmental Psychologist & Author",
     "achievements": "Created the comprehensive Attachment-Based Developmental Model; authored the international bestseller Hold On to Your Kids.",
     "first_in": "First to detail peer orientation as a primary disruptor of healthy family bonding in modern psychology.",
-    "image": "images/quotes/gordon-neufeld.jpg",
+    "image": "shared/images/quotes/gordon-neufeld.jpg",
     "i18n": {
       "fr": {
         "job": "Psychologue clinicien du développement et auteur",
@@ -273,7 +273,7 @@
     "job": "Novelist, Literary Scholar & Christian Apologist",
     "achievements": "Authored The Chronicles of Narnia, The Screwtape Letters, and Mere Christianity; Professor of Medieval Literature at Oxford & Cambridge.",
     "first_in": "First to master the fusion of high Christian philosophical apologetics with universal children's fantasy literature.",
-    "image": "images/quotes/cs-lewis.jpg",
+    "image": "shared/images/quotes/cs-lewis.jpg",
     "i18n": {
       "fr": {
         "name": "C.S. Lewis",
@@ -296,7 +296,7 @@
     "job": "Playwright, Poet & Aesthetician",
     "achievements": "Master of Victorian epigrammatic comedy (The Importance of Being Earnest) and philosophical prose (The Picture of Dorian Gray).",
     "first_in": "First prominent British writer to popularize the Aesthetic movement slogan 'art for art's sake' as a lived personal philosophy.",
-    "image": "images/quotes/oscar-wilde.jpg",
+    "image": "shared/images/quotes/oscar-wilde.jpg",
     "i18n": {
       "fr": {
         "job": "Dramaturge, poète et dandy irlandais",
@@ -318,7 +318,7 @@
     "job": "Singer, Actress, Film Director & Producer",
     "achievements": "Rare EGOT winner (Emmy, Grammy, Oscar, Tony); star of Funny Girl (1968), The Way We Were, and Yentl (1983).",
     "first_in": "First woman to write, produce, direct, and star in a major studio motion picture (Yentl, 1983) and win the Golden Globe for Best Director.",
-    "image": "images/quotes/barbra-streisand.jpg",
+    "image": "shared/images/quotes/barbra-streisand.jpg",
     "i18n": {
       "fr": {
         "job": "Chanteuse, actrice, réalisatrice et productrice",
@@ -340,7 +340,7 @@
     "job": "Modernist Writer, Essayist & Critic",
     "achievements": "Central figure of the Bloomsbury Group; author of Mrs Dalloway (1925), To the Lighthouse (1927), and A Room of One's Own (1929).",
     "first_in": "First to elevate the stream-of-consciousness narrative technique and articulate the material independence required for women writers.",
-    "image": "images/quotes/virginia-woolf.jpg",
+    "image": "shared/images/quotes/virginia-woolf.jpg",
     "i18n": {
       "fr": {
         "job": "Écrivaine moderniste, essayiste et théoricienne littéraire",
@@ -362,7 +362,7 @@
     "job": "Author, Mythologist & Diplomat",
     "achievements": "Authored the phenomenal Shiva Trilogy (The Immortals of Meluha) and Ram Chandra Series, selling over 7 million copies.",
     "first_in": "First Indian author whose debut mythological pop-thriller series became the fastest-selling book series in Indian publishing history.",
-    "image": "images/quotes/amish-tripathi.jpg",
+    "image": "shared/images/quotes/amish-tripathi.jpg",
     "i18n": {
       "fr": {
         "job": "Romancier, mythologue contemporain et diplomate",
@@ -384,7 +384,7 @@
     "job": "Brain Coach, Memory Expert & Keynote Speaker",
     "achievements": "Founder of Kwik Learning; author of the Wall Street Journal and New York Times bestseller Limitless.",
     "first_in": "First to develop the widely adopted 'meta-learning' speed-reading and cognitive optimization frameworks for tech leaders and students worldwide.",
-    "image": "images/quotes/jim-kwik.svg",
+    "image": "shared/images/quotes/jim-kwik.svg",
     "i18n": {
       "fr": {
         "job": "Coach cérébral, expert en mémorisation et conférencier",
@@ -406,7 +406,7 @@
     "job": "Poet, Mental Health Advocate & Author",
     "achievements": "Penned the acclaimed poetry collection Good Grief; influential voice in contemporary emotional healing literature.",
     "first_in": "First among new-wave confessional poets to bring authentic discourse on boundary-setting and emotional recovery into daily social verse.",
-    "image": "images/quotes/brianna-pastor.svg",
+    "image": "shared/images/quotes/brianna-pastor.svg",
     "i18n": {
       "fr": {
         "job": "Poétesse contemporaine & défenseuse de la santé mentale",
@@ -428,7 +428,7 @@
     "job": "Poet, Essayist & Social Observer",
     "achievements": "Celebrated for concise epigrams exploring loneliness in crowded urban environments and rediscovering human tenderness.",
     "first_in": "First to popularize poignant micro-reflections on loneliness within the modern digital diaspora.",
-    "image": "images/quotes/sadia-hakim.svg",
+    "image": "shared/images/quotes/sadia-hakim.svg",
     "i18n": {
       "fr": {
         "years": "Auteure contemporaine",
@@ -451,7 +451,7 @@
     "job": "Writer, Neologist, Graphic Designer & Filmmaker",
     "achievements": "Created The Dictionary of Obscure Sorrows, coining dozens of terms for unnamed emotions that entered global dictionaries (sonder).",
     "first_in": "First to invent a comprehensive poetic vocabulary of human existential emotions adopted into mainstream linguistics.",
-    "image": "images/quotes/john-koenig.svg",
+    "image": "shared/images/quotes/john-koenig.svg",
     "i18n": {
       "fr": {
         "job": "Écrivain, néologue et réalisateur",
@@ -473,7 +473,7 @@
     "job": "Writer, Naturalist, Ethnographer & Diarist",
     "achievements": "Master of Russian nature prose (The Sun's Storeroom) and extraordinary lifelong secret philosophical diaries.",
     "first_in": "First Russian naturalist writer to unite precise field zoology/botany with profound introspective existential humanism.",
-    "image": "images/quotes/mikhail-prishvin.jpg",
+    "image": "shared/images/quotes/mikhail-prishvin.jpg",
     "i18n": {
       "fr": {
         "name": "Mikhaïl Prichvine",
@@ -496,7 +496,7 @@
     "job": "Pedagogue, Humanist Thinker & School Principal",
     "achievements": "Author of My Heart I Give to Children; pioneer of holistic humanist moral education at the Pavlysh Secondary School.",
     "first_in": "First Soviet educational theorist to establish emotional empathy, joy, and individual dignity as the true heart of school schooling.",
-    "image": "images/quotes/vasily-sukhomlinsky.jpg",
+    "image": "shared/images/quotes/vasily-sukhomlinsky.jpg",
     "i18n": {
       "fr": {
         "name": "Vassili Soukhomlinski",
@@ -519,7 +519,7 @@
     "job": "Spiritual Leader of Tibetan Buddhism & Peace Laureate",
     "achievements": "Awarded the 1989 Nobel Peace Prize; author of The Art of Happiness and global ambassador of secular ethics and compassion.",
     "first_in": "First spiritual world leader to establish sustained institutional dialogues between Buddhist contemplative practices and modern neuroscience (Mind & Life Institute).",
-    "image": "images/quotes/dalai-lama.jpg",
+    "image": "shared/images/quotes/dalai-lama.jpg",
     "i18n": {
       "fr": {
         "name": "14e Dalaï-lama (Tenzin Gyatso)",
@@ -542,7 +542,7 @@
     "job": "Poet, Writer, Literary Critic & Translator",
     "achievements": "Foremost figure of Portuguese modernism; author of The Book of Disquiet (Livro do Desassossego) and creator of over 70 distinct literary heteronyms.",
     "first_in": "First author in world literature to invent complex literary heteronyms with distinct biographies, philosophies, and poetic styles.",
-    "image": "images/quotes/fernando-pessoa.jpg",
+    "image": "shared/images/quotes/fernando-pessoa.jpg",
     "i18n": {
       "fr": {
         "name": "Fernando Pessoa",
@@ -566,7 +566,7 @@
     "job": "Digital Culture Critic & Essayist",
     "achievements": "Author of resonant cultural commentary on subscription economics, obsolescence, and consumer digital nostalgia.",
     "first_in": "First to crystallize public debate on the loss of physical memory ownership in the cloud-storage era.",
-    "image": "images/quotes/nithya-shri.svg",
+    "image": "shared/images/quotes/nithya-shri.svg",
     "i18n": {
       "fr": {
         "years": "Autrice contemporaine",
@@ -589,7 +589,7 @@
     "job": "Philosophical Observers & Cultural Chroniclers",
     "achievements": "Preserved universal life insights on freedom, authenticity, perception, and human connection across oral traditions.",
     "first_in": "First to capture collective truths that belong to everyone and transcend individual authorship.",
-    "image": "images/quotes/anonymous.svg",
+    "image": "shared/images/quotes/anonymous.svg",
     "i18n": {
       "fr": {
         "name": "Anonyme / Sagesse collective",
@@ -613,7 +613,7 @@
     "job": "Traditional Storytellers & Folk Philosophers",
     "achievements": "Distilled centuries of pragmatic human observation into concise allegories illustrating conflicting perspectives in life.",
     "first_in": "First form of human education to demonstrate how one person's adversity is another person's opportunity through natural metaphor.",
-    "image": "images/quotes/proverb.svg",
+    "image": "shared/images/quotes/proverb.svg",
     "i18n": {
       "fr": {
         "name": "Sagesse populaire & Proverbe traditionnel",

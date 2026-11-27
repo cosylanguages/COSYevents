@@ -69,7 +69,7 @@ for (const filePath of htmlFiles) {
 console.log('Total broken refs count:', allBroken.length);
 
 const doNotTouch = [
-  'styles/calendar.css',
+  'shared/css/calendar.css',
   'shared/calendar/calendar.js',
   'shared/calendar-data/events.json',
   'index.html',

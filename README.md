@@ -30,8 +30,9 @@ COSYevents/
 │                                     #   with per-language subfolders
 ├── data/                             # Hand-maintained and generated datasets
 │                                     #   (sessions.json, club-reviews.json, …)
-├── shared/                           # Shared JS, CSS, i18n, audio and images
-├── styles/  assets/  images/         # Page styles and artwork
+├── shared/                           # Everything shared: css/, js/, images/,
+│                                     #   assets/, i18n/, audio/ — the only
+│                                     #   folder a page may reach outside its own
 ├── schemas/                          # JSON Schemas for validation
 ├── supabase/                         # Migrations and DB tests
 ├── scripts/                          # Build, check, test and ops tooling

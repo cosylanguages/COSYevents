@@ -12,7 +12,7 @@ const path = require('path');
 const { stampHtml } = require('./lib/cms_stamp');
 
 const ROOT = path.join(__dirname, '..');
-const SKIP_DIRS = new Set(['node_modules', '.git', 'tests', 'test-results', 'playwright-report', 'templates', 'admin', 'supabase', 'scripts']);
+const SKIP_DIRS = new Set(['node_modules', '.git', 'tests', 'test-results', 'playwright-report', 'templates', 'admin', 'supabase', 'scripts', 'docs']);
 const SKIP_FILES = new Set(['404.html', 'account.html', 'login.html', 'live-classroom.html', 'studio.html', 'privacy.html', 'fr/privacy.html']);
 
 function isEditablePage(rel, html) {
