@@ -141,6 +141,8 @@ html[data-cosy-theme="dark"] .cosy-ecosystem-strip.cosy-ecosystem-strip {
         --cosy-color-sage-pale:   #0B2E2E;
         --cosy-primary-fill:       #0A5F63;
         --cosy-primary-fill-hover: #087A80;
+        --cosy-event-accent-light: #2E1A12;
+        --cosy-event-accent-mist:  #22130D;
         --cosy-color-sage-mist:   #0A2A2B;
         --cosy-color-sage-light:  #0B2E2E;
 
@@ -159,6 +161,8 @@ html[data-theme="dark"],
 body.theme-dark {
     --cosy-primary-fill:       #0A5F63;
     --cosy-primary-fill-hover: #087A80;
+    --cosy-event-accent-light: #2E1A12;
+    --cosy-event-accent-mist:  #22130D;
     --cosy-color-sage:        #3FD6CE;
     --cosy-color-sage-dark:   #7FE7E1;
     --cosy-color-sage-deep:   #DFFAF8;

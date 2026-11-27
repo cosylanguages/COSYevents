@@ -851,3 +851,9 @@ body.theme-dark .calendar-select {
   color: var(--cosy-color-ink, #d6f7f5);
   border-color: var(--cosy-color-border, rgba(107, 143, 113, 0.3));
 }
+
+/* Dark mode darkens the warning fill but keeps the dark honey ink. */
+html[data-theme="dark"] .conversion-banner,
+body.theme-dark .conversion-banner,
+html[data-theme="dark"] .conversion-banner a,
+body.theme-dark .conversion-banner a { color: #F6CE8B; }

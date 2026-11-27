@@ -104,6 +104,12 @@ site with teal accents; the overrides keep each vendor step's lightness and only
 move the hue onto the signal teal. `--cosy-primary-fill` exists because
 `--cosy-primary` is an ink in dark mode and cannot carry white text.
 
+`npm run audit:contrast` renders real pages in both themes and measures text
+against the element's own background. It needs a browser (set `CHROMIUM_PATH`
+for a system Chromium) and a served copy of the site (`AUDIT_BASE`), so it is
+not in CI. Run it after any palette change; it is what found the dark-mode
+fill/ink mismatches that token checks cannot see.
+
 Semantic greens are allowed and must stay: `#0f6b35`/`#25d366` for WhatsApp,
 greens for success and correct-answer states.
 

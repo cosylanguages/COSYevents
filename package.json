@@ -50,7 +50,8 @@
     "stamp-cms": "node scripts/stamp_cms_ids.js",
     "check-cms": "node scripts/stamp_cms_ids.js --check",
     "test-daily-wheel": "node scripts/test_daily_wheel.js",
-    "verify-catalog": "node scripts/verify_catalog.js"
+    "verify-catalog": "node scripts/verify_catalog.js",
+    "audit:contrast": "node scripts/audit_page_contrast.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

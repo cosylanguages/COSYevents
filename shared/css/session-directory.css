@@ -912,3 +912,18 @@
     right: 1.25rem;
   }
 }
+
+/* Dark mode darkens the pale badge fills but leaves the ink dark, so the
+   language and format badges were near-invisible. Re-ink them for dark. */
+html[data-theme="dark"] .sd-badge-format,
+body.theme-dark .sd-badge-format {
+  background: rgba(245, 158, 11, 0.16);
+  color: #F6CE8B;
+  border-color: rgba(246, 206, 139, 0.28);
+}
+html[data-theme="dark"] .sd-badge-lang,
+body.theme-dark .sd-badge-lang {
+  background: rgba(110, 140, 240, 0.16);
+  color: #C3CFF7;
+  border-color: rgba(195, 207, 247, 0.28);
+}
