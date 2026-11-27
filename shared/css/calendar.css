@@ -43,15 +43,15 @@
 }
 
 .filter-btn:hover {
-  background: var(--cosy-primary-light, #e8f0e9);
-  color: var(--cosy-primary-dark, #233827);
-  border-color: var(--cosy-primary-soft, #6b9474);
+  background: var(--cosy-primary-light, #d6f7f5);
+  color: var(--cosy-primary-dark, #062b2d);
+  border-color: var(--cosy-primary-soft, #0ca2b0);
 }
 
 .filter-btn.active {
-  background: var(--cosy-primary, #416b49);
+  background: var(--cosy-primary, #087a80);
   color: #ffffff;
-  border-color: var(--cosy-primary, #416b49);
+  border-color: var(--cosy-primary, #087a80);
   box-shadow: var(--cosy-shadow-sm, 0 2px 8px rgba(65, 107, 73, 0.25));
 }
 
@@ -99,20 +99,20 @@
 }
 
 .lang-chip:hover {
-  background: var(--cosy-primary-light, #e8f0e9);
-  color: var(--cosy-primary-dark, #233827);
-  border-color: var(--cosy-primary-soft, #6b9474);
+  background: var(--cosy-primary-light, #d6f7f5);
+  color: var(--cosy-primary-dark, #062b2d);
+  border-color: var(--cosy-primary-soft, #0ca2b0);
 }
 
 .lang-chip:focus-visible {
-  outline: 2px solid var(--cosy-primary, #416b49);
+  outline: 2px solid var(--cosy-primary, #087a80);
   outline-offset: 2px;
 }
 
 .lang-chip.active {
-  background: var(--cosy-primary, #416b49);
+  background: var(--cosy-primary, #087a80);
   color: #ffffff;
-  border-color: var(--cosy-primary, #416b49);
+  border-color: var(--cosy-primary, #087a80);
   box-shadow: var(--cosy-shadow-sm, 0 2px 8px rgba(65, 107, 73, 0.25));
 }
 
@@ -147,7 +147,7 @@
   font-family: var(--cosy-font-serif, serif);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--cosy-primary-dark, #233827);
+  color: var(--cosy-primary-dark, #062b2d);
   margin: 0;
 }
 
@@ -160,14 +160,14 @@
   border-radius: 50%;
   border: 1px solid var(--cosy-border, rgba(74, 107, 80, 0.2));
   background: var(--cosy-surface, #ffffff);
-  color: var(--cosy-primary-dark, #233827);
+  color: var(--cosy-primary-dark, #062b2d);
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .nav-btn:hover {
-  background: var(--cosy-primary-light, #e8f0e9);
+  background: var(--cosy-primary-light, #d6f7f5);
   color: var(--cosy-color-sage-ink, #3C6344);
 }
 
@@ -192,7 +192,7 @@
 .calendar-weekdays {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  background: var(--cosy-primary-light, #e8f0e9);
+  background: var(--cosy-primary-light, #d6f7f5);
   border-bottom: 1px solid var(--cosy-border, rgba(74, 107, 80, 0.12));
   text-align: center;
 }
@@ -203,7 +203,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: var(--cosy-primary-dark, #233827);
+  color: var(--cosy-primary-dark, #062b2d);
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -263,7 +263,7 @@
 }
 
 .today .day-number {
-  background: var(--cosy-primary, #416b49);
+  background: var(--cosy-primary, #087a80);
   color: #ffffff;
 }
 
@@ -303,7 +303,7 @@
 }
 
 /* Event Type Color Badges */
-.badge-speaking-club { background-color: var(--cosy-track-general, #416b49); }
+.badge-speaking-club { background-color: var(--cosy-track-general, #087a80); }
 .badge-cinema-night  { background-color: var(--cosy-track-spoken, #B84318); }
 .badge-special-event { background-color: var(--cosy-track-relocation, #d66161); }
 
@@ -316,7 +316,7 @@
   font-family: var(--cosy-font-serif, serif);
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--cosy-primary-dark, #233827);
+  color: var(--cosy-primary-dark, #062b2d);
   margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
@@ -374,14 +374,14 @@
   font-weight: 700;
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
-  background: var(--cosy-primary-light, #e8f0e9);
-  color: var(--cosy-primary-dark, #233827);
+  background: var(--cosy-primary-light, #d6f7f5);
+  color: var(--cosy-primary-dark, #062b2d);
 }
 
 .event-card-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--cosy-primary-dark, #233827);
+  color: var(--cosy-primary-dark, #062b2d);
   margin-bottom: 0.5rem;
   line-height: 1.3;
 }
@@ -421,7 +421,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  background: var(--cosy-primary, #416b49);
+  background: var(--cosy-primary, #087a80);
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
@@ -434,7 +434,7 @@
 }
 
 .btn-primary:hover {
-  background: var(--cosy-primary-dark, #375742);
+  background: var(--cosy-primary-dark, #0b4749);
   transform: translateY(-1px);
 }
 
@@ -444,20 +444,20 @@
   justify-content: center;
   gap: 0.4rem;
   background: transparent;
-  color: var(--cosy-primary-dark, #233827);
+  color: var(--cosy-primary-dark, #062b2d);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.875rem;
   padding: 0.55rem 1.1rem;
   border-radius: var(--cosy-radius-full, 100px);
-  border: 1.5px solid var(--cosy-primary-soft, #6b9474);
+  border: 1.5px solid var(--cosy-primary-soft, #0ca2b0);
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .btn-outline:hover {
-  background: var(--cosy-primary-light, #e8f0e9);
-  border-color: var(--cosy-primary, #416b49);
+  background: var(--cosy-primary-light, #d6f7f5);
+  border-color: var(--cosy-primary, #087a80);
 }
 
 /* ── Modal Dialog ─────────────────────────────────────────────────── */
@@ -511,9 +511,9 @@
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
-  background: var(--cosy-primary-light, #e8f0e9);
+  background: var(--cosy-primary-light, #d6f7f5);
   border: none;
-  color: var(--cosy-primary-dark, #233827);
+  color: var(--cosy-primary-dark, #062b2d);
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -596,9 +596,9 @@
 }
 
 .seat-pill-ok {
-  color: var(--cosy-semantic-success, #416b49);
+  color: var(--cosy-semantic-success, #087a80);
   background: var(--cosy-color-surface, #ffffff);
-  border: 1px solid var(--cosy-semantic-success, #416b49);
+  border: 1px solid var(--cosy-semantic-success, #087a80);
 }
 
 /* ── Responsive Rules ──────────────────────────────────────────────── */
@@ -703,7 +703,7 @@
   font-family: var(--cosy-font-serif, serif);
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--cosy-primary-dark, #233827);
+  color: var(--cosy-primary-dark, #062b2d);
   line-height: 1.25;
   margin: 0;
 }
@@ -834,7 +834,7 @@
 }
 
 .calendar-select:hover {
-  border-color: var(--cosy-color-sage, #416b49);
+  border-color: var(--cosy-color-sage, #087a80);
   background-color: var(--cosy-color-sage-mist, #f0f5f1);
 }
 
@@ -848,6 +848,6 @@ html[data-theme="dark"] .calendar-select,
 body.theme-dark .calendar-select {
   background-color: var(--cosy-color-warm-white, #222b22);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23e8f0e9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  color: var(--cosy-color-ink, #e8f0e9);
+  color: var(--cosy-color-ink, #d6f7f5);
   border-color: var(--cosy-color-border, rgba(107, 143, 113, 0.3));
 }

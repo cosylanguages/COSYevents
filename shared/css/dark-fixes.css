@@ -13,14 +13,14 @@
 :root[data-theme="dark"] body[class*="theme-"] .philosophers-ledger {
   background: #232c24 !important;
   border-color: rgba(255, 255, 255, 0.14) !important;
-  color: #e8f0e9 !important;
+  color: #d6f7f5 !important;
 }
 
 :root[data-theme="dark"] body[class*="theme-"] .vocab-card *,
 :root[data-theme="dark"] body[class*="theme-"] .round-block *,
 :root[data-theme="dark"] body[class*="theme-"] .debate-duel-box *,
 :root[data-theme="dark"] body[class*="theme-"] .ce-slide-item * {
-  color: #e8f0e9 !important;
+  color: #d6f7f5 !important;
   border-color: rgba(255, 255, 255, 0.14) !important;
 }
 
@@ -60,7 +60,7 @@ a[href*="whatsapp"]:not(footer a) { background: #0f6b35 !important; color: #ffff
 :root[data-theme="dark"] .footer-links-col h3,
 :root[data-theme="dark"] .footer-links-col h5,
 :root[data-theme="dark"] .fb-name,
-:root[data-theme="dark"] .footer-brand .fb-name { color: #e8f0e9 !important; }
+:root[data-theme="dark"] .footer-brand .fb-name { color: #d6f7f5 !important; }
 :root[data-theme="dark"] .footer-links-col a,
 :root[data-theme="dark"] .footer-brand p,
 :root[data-theme="dark"] .footer-bottom { color: #a9bcac !important; }
@@ -72,12 +72,12 @@ a[href*="whatsapp"]:not(footer a) { background: #0f6b35 !important; color: #ffff
 :root[data-theme="dark"] .ce-slide-overview-wrapper { background: #232c24 !important; }
 :root[data-theme="dark"] .ce-slide-item > div,
 :root[data-theme="dark"] .ce-slide-item > div > div,
-:root[data-theme="dark"] .parlor-ledger { color: #e8f0e9 !important; border-color: rgba(255,255,255,.14) !important; }
+:root[data-theme="dark"] .parlor-ledger { color: #d6f7f5 !important; border-color: rgba(255,255,255,.14) !important; }
 
 /* ── Wonder voiceover widget is painted from JS with fixed pastels ── */
 :root[data-theme="dark"] .wonder-voiceover-player,
 :root[data-theme="dark"] .wonder-voiceover-player > div,
-:root[data-theme="dark"] .wonder-voiceover-player > div > div { background: #232c24 !important; color: #e8f0e9 !important; }
+:root[data-theme="dark"] .wonder-voiceover-player > div > div { background: #232c24 !important; color: #d6f7f5 !important; }
 :root[data-theme="dark"] .speech-mode-badge { background: #3b3550 !important; color: #e9e5ff !important; }
 :root[data-theme="dark"] .clapper-meta-label { color: #F0B357 !important; }
 
@@ -98,7 +98,7 @@ a[href*="whatsapp"]:not(footer a) { background: #0f6b35 !important; color: #ffff
 :root[data-theme="dark"] body.theme-science-light,
 :root[data-theme="dark"] body.theme-science-light main.content-container,
 :root[data-theme="dark"] body.theme-science-light .content-container {
-  background: #1a1f1a !important; color: #e8f0e9 !important;
+  background: #1a1f1a !important; color: #d6f7f5 !important;
 }
 :root[data-theme="dark"] body.theme-science-light h1,
 :root[data-theme="dark"] body.theme-science-light h2,
@@ -106,7 +106,7 @@ a[href*="whatsapp"]:not(footer a) { background: #0f6b35 !important; color: #ffff
 :root[data-theme="dark"] body.theme-science-light h4,
 :root[data-theme="dark"] body.theme-science-light p,
 :root[data-theme="dark"] body.theme-science-light li,
-:root[data-theme="dark"] body.theme-science-light span:not([class]) { color: #e8f0e9 !important; }
+:root[data-theme="dark"] body.theme-science-light span:not([class]) { color: #d6f7f5 !important; }
 
 /* Quotes themes use a pastel accent as a button *fill* under white labels
    (2.1:1 in both modes). Keep the pastel for borders, darken the fill. */
@@ -142,17 +142,17 @@ body[class*="theme-quotes-"] .ledger-next-btn {
 :root[data-theme="dark"] body[class*="theme-celebrate-"] main.content-container,
 :root[data-theme="dark"] body[class*="theme-celebrate-"] .content-container {
   background: #232c24 !important;
-  color: #e8f0e9 !important;
+  color: #d6f7f5 !important;
   border-color: rgba(255, 255, 255, 0.14) !important;
 }
 :root[data-theme="dark"] .history-session h4,
 :root[data-theme="dark"] .perspective-mirror-grid h4,
-:root[data-theme="dark"] .perspective-mirror-grid strong { color: #e8f0e9 !important; }
+:root[data-theme="dark"] .perspective-mirror-grid strong { color: #d6f7f5 !important; }
 :root[data-theme="dark"] body[class*="theme-celebrate-"] h1,
 :root[data-theme="dark"] body[class*="theme-celebrate-"] h2,
 :root[data-theme="dark"] body[class*="theme-celebrate-"] h3,
 :root[data-theme="dark"] body[class*="theme-celebrate-"] p,
-:root[data-theme="dark"] body[class*="theme-celebrate-"] li { color: #e8f0e9 !important; }
+:root[data-theme="dark"] body[class*="theme-celebrate-"] li { color: #d6f7f5 !important; }
 :root[data-theme="dark"] .ev-card *,
 :root[data-theme="dark"] .event-card * { color: #dfe9e0 !important; }
 

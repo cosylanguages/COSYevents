@@ -97,3 +97,72 @@ body.theme-dark .cosy-ecosystem-strip.cosy-ecosystem-strip,
 html[data-cosy-theme="dark"] .cosy-ecosystem-strip.cosy-ecosystem-strip {
     --cosy-strip-bg: #0B2E2E;
 }
+
+/* ── Brand teal ────────────────────────────────────────────────────────────
+   The sage family is the legacy ground colour and is not part of the COSY
+   palette. Remap it to the signal teal here rather than editing the
+   sha-pinned vendor tokens: --cosy-primary, --teal, --primary-color and every
+   direct --sage* reference then follow from one place.
+
+   Sage values were chosen for their lightness, so each maps to the teal step
+   with comparable contrast. White text on the remapped primary is 5.11:1.
+   ------------------------------------------------------------------------ */
+:root {
+    --cosy-color-sage:        #087A80;
+    --cosy-color-sage-dark:   #0B4749;
+    --cosy-color-sage-deep:   #062B2D;
+    --cosy-color-sage-soft:   #0CA2B0;
+    --cosy-color-sage-mist:   #EFFCFB;
+    --cosy-color-sage-pale:   #D6F7F5;
+    --cosy-color-sage-light:  #D6F7F5;
+
+    --cosy-fill-sage:         #0B4749;
+    --cosy-fill-sage-hover:   #0A5F63;
+    --cosy-ink-sage:          #087A80;
+
+    /* Defined here, not only in hub.css, because components fall back to a
+       hard-coded sage when these are missing, and hub.css loads on 24 pages. */
+    --cosy-primary:           #087A80;
+    --cosy-primary-dark:      #0B4749;
+    --cosy-primary-light:     #D6F7F5;
+    --cosy-primary-soft:      #0CA2B0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --cosy-color-sage:        #3FD6CE;
+        --cosy-color-sage-dark:   #7FE7E1;
+        --cosy-color-sage-deep:   #DFFAF8;
+        --cosy-color-sage-pale:   #0B2E2E;
+        --cosy-color-sage-mist:   #0A2A2B;
+        --cosy-color-sage-light:  #0B2E2E;
+
+        --cosy-fill-sage:         #0A5F63;
+        --cosy-fill-sage-hover:   #087A80;
+        --cosy-ink-sage:          #7FE7E1;
+
+        --cosy-primary:           #3FD6CE;
+        --cosy-primary-dark:      #7FE7E1;
+        --cosy-primary-light:     #0B2E2E;
+        --cosy-primary-soft:      #0A5F63;
+    }
+}
+
+html[data-theme="dark"],
+body.theme-dark {
+    --cosy-color-sage:        #3FD6CE;
+    --cosy-color-sage-dark:   #7FE7E1;
+    --cosy-color-sage-deep:   #DFFAF8;
+    --cosy-color-sage-pale:   #0B2E2E;
+    --cosy-color-sage-mist:   #0A2A2B;
+    --cosy-color-sage-light:  #0B2E2E;
+
+    --cosy-fill-sage:         #0A5F63;
+    --cosy-fill-sage-hover:   #087A80;
+    --cosy-ink-sage:          #7FE7E1;
+
+    --cosy-primary:           #3FD6CE;
+    --cosy-primary-dark:      #7FE7E1;
+    --cosy-primary-light:     #0B2E2E;
+    --cosy-primary-soft:      #0A5F63;
+}

@@ -24,14 +24,14 @@
 }
 
 .hero-btn-primary {
-  background: var(--cosy-color-sage, #416b49);
+  background: var(--cosy-color-sage, #087a80);
   color: #ffffff;
-  border: 1px solid var(--cosy-color-sage, #416b49);
+  border: 1px solid var(--cosy-color-sage, #087a80);
 }
 
 .hero-btn-primary:hover {
-  background: var(--cosy-color-sage-dark, #375742);
-  border-color: var(--cosy-color-sage-dark, #375742);
+  background: var(--cosy-color-sage-dark, #0b4749);
+  border-color: var(--cosy-color-sage-dark, #0b4749);
   color: #ffffff;
 }
 
@@ -115,7 +115,7 @@
 .explore-card-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--cosy-color-sage-deep, #233827);
+  color: var(--cosy-color-sage-deep, #062b2d);
 }
 
 .explore-card-desc {
@@ -137,7 +137,7 @@
 }
 
 .explore-card-cta:hover {
-  color: var(--cosy-color-sage-dark, #375742);
+  color: var(--cosy-color-sage-dark, #0b4749);
   text-decoration: underline;
 }
 
@@ -213,7 +213,7 @@
   display: inline-flex;
   align-items: center;
   background: var(--cosy-color-sage-mist, #f0f5f1);
-  color: var(--cosy-color-sage-deep, #233827);
+  color: var(--cosy-color-sage-deep, #062b2d);
   border: 1px solid var(--cosy-color-border, rgba(74, 107, 80, 0.2));
   font-weight: 700;
   font-size: 0.88rem;
@@ -335,7 +335,7 @@
 
 .spotlight-year-badge {
   background: var(--cosy-color-sage-mist, #f0f5f1);
-  color: var(--cosy-color-sage-deep, #233827);
+  color: var(--cosy-color-sage-deep, #062b2d);
   font-size: 0.72rem;
   font-weight: 800;
   padding: 2px 6px;
@@ -397,7 +397,7 @@
 }
 
 .spotlight-club-link:hover {
-  color: var(--cosy-color-sage-dark, #375742);
+  color: var(--cosy-color-sage-dark, #0b4749);
   text-decoration: underline;
 }
 
@@ -437,7 +437,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--cosy-color-sage-deep, #233827);
+  color: var(--cosy-color-sage-deep, #062b2d);
   display: block;
   margin-bottom: 0.4rem;
 }
@@ -508,7 +508,7 @@
 }
 
 .calc-result-box {
-  background: linear-gradient(135deg, var(--cosy-color-sage-dark, #375742), var(--cosy-color-sage-deep, #233827));
+  background: linear-gradient(135deg, var(--cosy-color-sage-dark, #0b4749), var(--cosy-color-sage-deep, #062b2d));
   color: #ffffff;
   border-radius: var(--cosy-radius-lg, 22px);
   padding: 2rem;
@@ -700,7 +700,7 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--cosy-color-sage-dark, #375742);
+  color: var(--cosy-color-sage-dark, #0b4749);
   background: var(--cosy-color-sage-pale, rgba(74, 107, 80, 0.12));
 }
 
@@ -748,7 +748,7 @@
   font-family: 'Fraunces', serif;
   font-weight: 700;
   font-size: 1.15rem;
-  color: var(--cosy-color-sage-deep, #233827);
+  color: var(--cosy-color-sage-deep, #062b2d);
 }
 
 .footer-brand-desc {

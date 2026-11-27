@@ -175,7 +175,7 @@
 .club-reviews-nav-btn {
   background: none;
   border: none;
-  color: var(--sage-deep, #233827);
+  color: var(--sage-deep, #062b2d);
   font-size: 2.8rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -191,11 +191,11 @@
 
 .club-reviews-nav-btn:hover {
   transform: scale(1.2);
-  color: var(--sage, #416b49);
+  color: var(--sage, #087a80);
 }
 
 .club-reviews-nav-btn:focus-visible {
-  outline: 2px solid var(--sage, #416b49);
+  outline: 2px solid var(--sage, #087a80);
   border-radius: 50%;
 }
 

@@ -49,10 +49,10 @@
     /* Hub Component Fallbacks */
     --cosy-bg:             var(--cream, #fdfcf8);
     --cosy-surface:        var(--warm-white, #ffffff);
-    --cosy-primary:        var(--sage, #416b49);
-    --cosy-primary-dark:   var(--sage-dark, #375742);
-    --cosy-primary-light:  var(--sage-light, #e8f0e9);
-    --cosy-primary-soft:   var(--sage-soft, #6b9474);
+    --cosy-primary:        var(--sage, #087a80);
+    --cosy-primary-dark:   var(--sage-dark, #0b4749);
+    --cosy-primary-light:  var(--sage-light, #d6f7f5);
+    --cosy-primary-soft:   var(--sage-soft, #0ca2b0);
     --cosy-text:           var(--ink, #2a2a2a);
     --cosy-text-muted:     var(--ink-muted, #5c5957);
     --cosy-border:         var(--cream-dark, #e8e2d5);
@@ -66,7 +66,7 @@
 
 html[data-theme="dark"], body.theme-dark {
     --paper-bg:            #1a1f1a;
-    --paper-txt:           #e8f0e9;
+    --paper-txt:           #d6f7f5;
 
     --mistake-bg:          #241a15;
     --mistake-header-bg:   #2e211a;

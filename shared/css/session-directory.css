@@ -484,7 +484,7 @@
 .sd-card {
   background: var(--warm-white);
   border: 1px solid var(--border);
-  border-top: 4px solid var(--cosy-color-sage, #416b49);
+  border-top: 4px solid var(--cosy-color-sage, #087a80);
   border-radius: var(--r-lg, 22px);
   padding: 1.5rem;
   display: flex;

@@ -365,7 +365,7 @@
   font-size: var(--cosy-font-size-base);
   font-weight: var(--cosy-font-weight-bold);
   color: var(--cosy-on-sage, #ffffff);
-  background: var(--cosy-color-sage-strong, #416b49);
+  background: var(--cosy-color-sage-strong, #087a80);
   border: none;
   border-radius: var(--cosy-radius-sm);
   cursor: pointer;
