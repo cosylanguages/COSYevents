@@ -47,9 +47,9 @@
 }
 
 .hero-btn-wa {
-  background: #0F6B35;
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
-  border: 1px solid #0F6B35;
+  border: 1px solid var(--cosy-primary-fill, #087a80);
 }
 
 .hero-btn-wa:hover {
@@ -598,7 +598,7 @@
 }
 
 .calc-btn-wa {
-  background: #0F6B35;
+  background: var(--cosy-primary-fill, #087a80);
   color: #ffffff;
   width: 100%;
   text-align: center;

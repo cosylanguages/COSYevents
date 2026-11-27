@@ -1,7 +1,7 @@
 
 /* ─── Cinema Club Cinematic Aesthetic (Chalk & Gold) ─── */
 body.theme-cinema {
-  background: radial-gradient(circle at 50% 15%, #2c1a12 0%, #0d0906 60%, #040302 100%) !important;
+  background: radial-gradient(circle at 50% 15%, #122B2C 0%, #0d0906 60%, #040302 100%) !important;
   color: #FAF7F2 !important;
 }
 
@@ -11,7 +11,7 @@ body.theme-cinema {
   --ink-soft: #E7E5E4 !important;
   --ink-muted: #D6D3D1 !important;
   --muted: #A8A29E !important;
-  --border: #3D2B1F !important;
+  --border: #1F3C3D !important;
   --cream: #1C140E !important;
   --surface-color: #120B06 !important;
 }

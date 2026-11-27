@@ -125,7 +125,7 @@ html[data-theme="dark"] .quotes-card-view:hover {
 /* Level badge helper classes for Quotes */
 .quotes-card .tag-a1, .quotes-card .tag-a2 {
   background: #EFFCFB;
-  color: #C0392B;
+  color: #087A80;
   border: 1px solid #F5CBA7;
   font-weight: 600;
   font-size: 0.75rem;
@@ -134,8 +134,8 @@ html[data-theme="dark"] .quotes-card-view:hover {
   text-transform: uppercase;
 }
 .quotes-card .tag-b1 {
-  background: #E1F5EE;
-  color: #1A7A4A;
+  background: #EFFCFB;
+  color: #087A80;
   border: 1px solid #A3E4D7;
   font-weight: 600;
   font-size: 0.75rem;
@@ -144,8 +144,8 @@ html[data-theme="dark"] .quotes-card-view:hover {
   text-transform: uppercase;
 }
 .quotes-card .tag-b2 {
-  background: #EBF8FF;
-  color: #2B6CB0;
+  background: #EFFCFB;
+  color: #087A80;
   border: 1px solid #BEE3F8;
   font-weight: 600;
   font-size: 0.75rem;
@@ -164,8 +164,8 @@ html[data-theme="dark"] .quotes-card-view:hover {
   text-transform: uppercase;
 }
 .quotes-card .tag-c2 {
-  background: #FAF5FF;
-  color: #6B46C1;
+  background: #EFFCFB;
+  color: #087A80;
   border: 1px solid #E9D8FD;
   font-weight: 600;
   font-size: 0.75rem;
@@ -272,7 +272,7 @@ body.theme-quotes-critical {
   --quotes-theme-text: #2D3748;
   --quotes-theme-card-bg: #FFFFFF;
   --quotes-theme-accent: #2D3748;
-  --quotes-theme-border: #E2E8F0;
+  --quotes-theme-border: #E2EFF0;
   --quotes-theme-watermark: "🤔";
 }
 body.theme-quotes-art {
@@ -280,7 +280,7 @@ body.theme-quotes-art {
   --quotes-theme-text: #2D080C;
   --quotes-theme-card-bg: #FFFFFF;
   --quotes-theme-accent: #822727;
-  --quotes-theme-border: #FEB2B2;
+  --quotes-theme-border: #C6E8EA;
   --quotes-theme-watermark: "🎨";
 }
 body.theme-quotes-intellect {
@@ -288,7 +288,7 @@ body.theme-quotes-intellect {
   --quotes-theme-text: #0F172A;
   --quotes-theme-card-bg: #FFFFFF;
   --quotes-theme-accent: #2C5282;
-  --quotes-theme-border: #BEE3F8;
+  --quotes-theme-border: #CBEAEB;
   --quotes-theme-watermark: "🏛️";
 }
 body.theme-quotes-nostalgia {
@@ -296,7 +296,7 @@ body.theme-quotes-nostalgia {
   --quotes-theme-text: #3D1A0D;
   --quotes-theme-card-bg: #FFFDF9;
   --quotes-theme-accent: #9C4221;
-  --quotes-theme-border: #FEEBC8;
+  --quotes-theme-border: #D6EEF0;
   --quotes-theme-watermark: "⏳";
 }
 body.theme-quotes-parenting {
@@ -304,7 +304,7 @@ body.theme-quotes-parenting {
   --quotes-theme-text: #0B1F17;
   --quotes-theme-card-bg: #FFFFFF;
   --quotes-theme-accent: #276749;
-  --quotes-theme-border: #C6F6D5;
+  --quotes-theme-border: #CFEBED;
   --quotes-theme-watermark: "🌱";
 }
 body.theme-quotes-relationships {
@@ -312,7 +312,7 @@ body.theme-quotes-relationships {
   --quotes-theme-text: #1F0E3D;
   --quotes-theme-card-bg: #FFFFFF;
   --quotes-theme-accent: #553C9A;
-  --quotes-theme-border: #E9D8FD;
+  --quotes-theme-border: #E1F3F4;
   --quotes-theme-watermark: "💖";
 }
 body.theme-quotes-justice {
@@ -320,7 +320,7 @@ body.theme-quotes-justice {
   --quotes-theme-text: #2D2306;
   --quotes-theme-card-bg: #FFFFFF;
   --quotes-theme-accent: #975A16;
-  --quotes-theme-border: #FEFCBF;
+  --quotes-theme-border: #D0ECED;
   --quotes-theme-watermark: "⚖️";
 }
 body.theme-quotes-empathy {
@@ -336,7 +336,7 @@ body.theme-quotes-existential {
   --quotes-theme-text: #110F2E;
   --quotes-theme-card-bg: #FFFFFF;
   --quotes-theme-accent: #6B46C1;
-  --quotes-theme-border: #DDD6FE;
+  --quotes-theme-border: #E1F3F3;
   --quotes-theme-watermark: "🌌";
 }
 body.theme-quotes-digital {
@@ -344,7 +344,7 @@ body.theme-quotes-digital {
   --quotes-theme-text: #011C15;
   --quotes-theme-card-bg: #FFFFFF;
   --quotes-theme-accent: #046C4E;
-  --quotes-theme-border: #A7F3D0;
+  --quotes-theme-border: #B7E1E3;
   --quotes-theme-watermark: "💾";
 }
 
@@ -354,49 +354,49 @@ html[data-theme="dark"] body.theme-quotes-critical {
   --quotes-theme-text: #E2E8F0;
   --quotes-theme-card-bg: #2D3748;
   --quotes-theme-accent: #90CDF4;
-  --quotes-theme-border: #4A5568;
+  --quotes-theme-border: #4A6668;
 }
 html[data-theme="dark"] body.theme-quotes-art {
   --quotes-theme-bg: #1C0D0F;
   --quotes-theme-text: #FED7D7;
   --quotes-theme-card-bg: #2D1215;
   --quotes-theme-accent: #FC8181;
-  --quotes-theme-border: #742A2A;
+  --quotes-theme-border: #2B6F73;
 }
 html[data-theme="dark"] body.theme-quotes-intellect {
   --quotes-theme-bg: #0B132B;
   --quotes-theme-text: #E2E8F0;
   --quotes-theme-card-bg: #1C2541;
   --quotes-theme-accent: #63B3ED;
-  --quotes-theme-border: #2A4365;
+  --quotes-theme-border: #2A6265;
 }
 html[data-theme="dark"] body.theme-quotes-nostalgia {
   --quotes-theme-bg: #23120A;
   --quotes-theme-text: #FEEBC8;
   --quotes-theme-card-bg: #341B10;
   --quotes-theme-accent: #F6AD55;
-  --quotes-theme-border: #5C2512;
+  --quotes-theme-border: #1E4D50;
 }
 html[data-theme="dark"] body.theme-quotes-parenting {
   --quotes-theme-bg: #0B1F17;
   --quotes-theme-text: #C6F6D5;
   --quotes-theme-card-bg: #143528;
   --quotes-theme-accent: #68D391;
-  --quotes-theme-border: #22543D;
+  --quotes-theme-border: #225254;
 }
 html[data-theme="dark"] body.theme-quotes-relationships {
   --quotes-theme-bg: #120626;
   --quotes-theme-text: #E9D8FD;
   --quotes-theme-card-bg: #1F0E3D;
   --quotes-theme-accent: #B794F4;
-  --quotes-theme-border: #44337A;
+  --quotes-theme-border: #33767A;
 }
 html[data-theme="dark"] body.theme-quotes-justice {
   --quotes-theme-bg: #1C1504;
   --quotes-theme-text: #FEFCBF;
   --quotes-theme-card-bg: #2D2306;
   --quotes-theme-accent: #F6E05E;
-  --quotes-theme-border: #5F370E;
+  --quotes-theme-border: #1E4D4F;
 }
 html[data-theme="dark"] body.theme-quotes-empathy {
   --quotes-theme-bg: #041F1E;
@@ -410,7 +410,7 @@ html[data-theme="dark"] body.theme-quotes-existential {
   --quotes-theme-text: #DDD6FE;
   --quotes-theme-card-bg: #110F2E;
   --quotes-theme-accent: #C4B5FD;
-  --quotes-theme-border: #312E81;
+  --quotes-theme-border: #307B7F;
 }
 html[data-theme="dark"] body.theme-quotes-digital {
   --quotes-theme-bg: #011C15;

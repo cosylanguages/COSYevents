@@ -103,24 +103,24 @@
 
 /* Badge colors for levels */
 .celebrate-card-banner .tag-a1 {
-  background: #FFF5F5;
-  color: #C53030;
-  border-color: #FED7D7;
+  background: #EFFCFB;
+  color: #087A80;
+  border-color: #CFE9E7;
 }
 .celebrate-card-banner .tag-a2 {
   background: #EFFCFB;
-  color: #C0392B;
-  border-color: #F5CBA7;
+  color: #087A80;
+  border-color: #CFE9E7;
 }
 .celebrate-card-banner .tag-b1 {
-  background: #E1F5EE;
-  color: #1A7A4A;
-  border-color: #A3E4D7;
+  background: #EFFCFB;
+  color: #087A80;
+  border-color: #CFE9E7;
 }
 .celebrate-card-banner .tag-b2 {
-  background: #EBF8FF;
-  color: #2B6CB0;
-  border-color: #BEE3F8;
+  background: #EFFCFB;
+  color: #087A80;
+  border-color: #CFE9E7;
 }
 .celebrate-card-banner .tag-c1 {
   background: #EFFCFB;
@@ -128,9 +128,9 @@
   border-color: #CFE9E7;
 }
 .celebrate-card-banner .tag-c2 {
-  background: #EBF8FF;
-  color: #2B6CB0;
-  border-color: #BEE3F8;
+  background: #EFFCFB;
+  color: #087A80;
+  border-color: #CFE9E7;
 }
 
 .celebrate-card-body {
@@ -336,7 +336,7 @@ body.theme-celebrate-lunar {
   --celebrate-theme-text: #4A1515;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #BA2525;
-  --celebrate-theme-border: #F8D7D7;
+  --celebrate-theme-border: #DDF1F2;
   --celebrate-theme-watermark: "🏮";
   --celebrate-theme-hero: linear-gradient(135deg, #BA2525, #4A1515);
 }
@@ -345,7 +345,7 @@ body.theme-celebrate-diwali {
   --celebrate-theme-text: #4A3515;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #C27D13;
-  --celebrate-theme-border: #F8E8D0;
+  --celebrate-theme-border: #D8EFF0;
   --celebrate-theme-watermark: "🪔";
   --celebrate-theme-hero: linear-gradient(135deg, #8C520C, #4A3515);
 }
@@ -354,7 +354,7 @@ body.theme-celebrate-gastronomy {
   --celebrate-theme-text: #4A1F12;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #087A80;
-  --celebrate-theme-border: #F2D8C4;
+  --celebrate-theme-border: #CBEAEB;
   --celebrate-theme-watermark: "🍝";
   --celebrate-theme-hero: linear-gradient(135deg, #8A1E1E, #3A0E0E);
 }
@@ -363,7 +363,7 @@ body.theme-celebrate-simplicity {
   --celebrate-theme-text: #1E2D24;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #4A6B56;
-  --celebrate-theme-border: #E1EADF;
+  --celebrate-theme-border: #DFE9EA;
   --celebrate-theme-watermark: "🍃";
   --celebrate-theme-hero: linear-gradient(135deg, #4A6B56, #1E2D24);
 }
@@ -372,7 +372,7 @@ body.theme-celebrate-workaholics {
   --celebrate-theme-text: #3B2F2F;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #8C6239;
-  --celebrate-theme-border: #E8DFD8;
+  --celebrate-theme-border: #D8E7E8;
   --celebrate-theme-watermark: "⏳";
   --celebrate-theme-hero: linear-gradient(135deg, #8C6239, #3B2F2F);
 }
@@ -390,7 +390,7 @@ body.theme-celebrate-beekeeping {
   --celebrate-theme-text: #423212;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #D4AF37;
-  --celebrate-theme-border: #FAF0CC;
+  --celebrate-theme-border: #D6EEF0;
   --celebrate-theme-watermark: "🐝";
   --celebrate-theme-hero: linear-gradient(135deg, #8C7010, #423212);
 }
@@ -399,7 +399,7 @@ body.theme-celebrate-someone {
   --celebrate-theme-text: #4A1A25;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #C2465D;
-  --celebrate-theme-border: #FAD6DD;
+  --celebrate-theme-border: #DEF1F2;
   --celebrate-theme-watermark: "🌹";
   --celebrate-theme-hero: linear-gradient(135deg, #C2465D, #4A1A25);
 }
@@ -408,7 +408,7 @@ body.theme-celebrate-pandemonium {
   --celebrate-theme-text: #3D1B3D;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #8E44AD;
-  --celebrate-theme-border: #ECDFF0;
+  --celebrate-theme-border: #DFEFF0;
   --celebrate-theme-watermark: "🎈";
   --celebrate-theme-hero: linear-gradient(135deg, #8E44AD, #3D1B3D);
 }
@@ -417,7 +417,7 @@ body.theme-celebrate-peace {
   --celebrate-theme-text: #2E224A;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #5C4A9E;
-  --celebrate-theme-border: #E5E0FA;
+  --celebrate-theme-border: #E5F4F5;
   --celebrate-theme-watermark: "✌️";
   --celebrate-theme-hero: linear-gradient(135deg, #5C4A9E, #2E224A);
 }
@@ -426,7 +426,7 @@ body.theme-celebrate-asteroid {
   --celebrate-theme-text: #1B2A4A;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #3A6073;
-  --celebrate-theme-border: #DCE4F2;
+  --celebrate-theme-border: #DCF1F2;
   --celebrate-theme-watermark: "☄️";
   --celebrate-theme-hero: linear-gradient(135deg, #3A6073, #1B2A4A);
 }
@@ -435,7 +435,7 @@ body.theme-celebrate-womens {
   --celebrate-theme-text: #4D231A;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #C04A36;
-  --celebrate-theme-border: #FADFD9;
+  --celebrate-theme-border: #E0F2F3;
   --celebrate-theme-watermark: "🌹";
   --celebrate-theme-hero: linear-gradient(135deg, #963C2B, #4D231A);
 }
@@ -444,7 +444,7 @@ body.theme-celebrate-family {
   --celebrate-theme-text: #3B281B;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #8E5E3D;
-  --celebrate-theme-border: #EADCD2;
+  --celebrate-theme-border: #D2E9EA;
   --celebrate-theme-watermark: "🍪";
   --celebrate-theme-hero: linear-gradient(135deg, #8E5E3D, #3B281B);
 }
@@ -453,7 +453,7 @@ body.theme-celebrate-nature {
   --celebrate-theme-text: #1D3325;
   --celebrate-theme-card-bg: #FFFFFF;
   --celebrate-theme-accent: #3E7D58;
-  --celebrate-theme-border: #DCECE2;
+  --celebrate-theme-border: #DCEBEC;
   --celebrate-theme-watermark: "🌲";
   --celebrate-theme-hero: linear-gradient(135deg, #3E7D58, #1D3325);
 }
@@ -464,7 +464,7 @@ html[data-theme="dark"] body.theme-celebrate-lunar {
   --celebrate-theme-text: #FCE8E8;
   --celebrate-theme-card-bg: #2D1818;
   --celebrate-theme-accent: #FF6B6B;
-  --celebrate-theme-border: #4A2323;
+  --celebrate-theme-border: #23484A;
   --celebrate-theme-hero: linear-gradient(135deg, #8A1515, #1F1111);
 }
 html[data-theme="dark"] body.theme-celebrate-diwali {
@@ -472,7 +472,7 @@ html[data-theme="dark"] body.theme-celebrate-diwali {
   --celebrate-theme-text: #FCEFD9;
   --celebrate-theme-card-bg: #2A2015;
   --celebrate-theme-accent: #F5B041;
-  --celebrate-theme-border: #443525;
+  --celebrate-theme-border: #254244;
   --celebrate-theme-hero: linear-gradient(135deg, #8C520C, #1C160E);
 }
 html[data-theme="dark"] body.theme-celebrate-simplicity {
@@ -480,7 +480,7 @@ html[data-theme="dark"] body.theme-celebrate-simplicity {
   --celebrate-theme-text: #EAF2EB;
   --celebrate-theme-card-bg: #1B261F;
   --celebrate-theme-accent: #8FBC8F;
-  --celebrate-theme-border: #2D3E33;
+  --celebrate-theme-border: #2D3D3E;
   --celebrate-theme-hero: linear-gradient(135deg, #33503E, #121A15);
 }
 html[data-theme="dark"] body.theme-celebrate-workaholics {
@@ -488,7 +488,7 @@ html[data-theme="dark"] body.theme-celebrate-workaholics {
   --celebrate-theme-text: #EFEAE6;
   --celebrate-theme-card-bg: #261E1A;
   --celebrate-theme-accent: #C69C6D;
-  --celebrate-theme-border: #3D302A;
+  --celebrate-theme-border: #2A3C3D;
   --celebrate-theme-hero: linear-gradient(135deg, #5C3D20, #1A1513);
 }
 html[data-theme="dark"] body.theme-celebrate-remittances {
@@ -504,7 +504,7 @@ html[data-theme="dark"] body.theme-celebrate-beekeeping {
   --celebrate-theme-text: #FFF4D1;
   --celebrate-theme-card-bg: #2E2514;
   --celebrate-theme-accent: #E5C158;
-  --celebrate-theme-border: #47391F;
+  --celebrate-theme-border: #1F4547;
   --celebrate-theme-hero: linear-gradient(135deg, #9C7D1A, #1F1A0F);
 }
 html[data-theme="dark"] body.theme-celebrate-someone {
@@ -512,7 +512,7 @@ html[data-theme="dark"] body.theme-celebrate-someone {
   --celebrate-theme-text: #FCEAEF;
   --celebrate-theme-card-bg: #351A20;
   --celebrate-theme-accent: #E57388;
-  --celebrate-theme-border: #4D252E;
+  --celebrate-theme-border: #254B4D;
   --celebrate-theme-hero: linear-gradient(135deg, #8E2D3E, #241115);
 }
 html[data-theme="dark"] body.theme-celebrate-pandemonium {
@@ -520,7 +520,7 @@ html[data-theme="dark"] body.theme-celebrate-pandemonium {
   --celebrate-theme-text: #F6ECF6;
   --celebrate-theme-card-bg: #2D1C2D;
   --celebrate-theme-accent: #BB8FCE;
-  --celebrate-theme-border: #4A2E4A;
+  --celebrate-theme-border: #2E494A;
   --celebrate-theme-hero: linear-gradient(135deg, #5E2777, #1D121D);
 }
 html[data-theme="dark"] body.theme-celebrate-peace {
@@ -528,7 +528,7 @@ html[data-theme="dark"] body.theme-celebrate-peace {
   --celebrate-theme-text: #EDEAFA;
   --celebrate-theme-card-bg: #221C33;
   --celebrate-theme-accent: #9B8EE3;
-  --celebrate-theme-border: #342A4D;
+  --celebrate-theme-border: #2A4B4D;
   --celebrate-theme-hero: linear-gradient(135deg, #3E2F75, #15121F);
 }
 html[data-theme="dark"] body.theme-celebrate-asteroid {
@@ -536,7 +536,7 @@ html[data-theme="dark"] body.theme-celebrate-asteroid {
   --celebrate-theme-text: #E2EAF5;
   --celebrate-theme-card-bg: #172030;
   --celebrate-theme-accent: #5D9CEC;
-  --celebrate-theme-border: #27354D;
+  --celebrate-theme-border: #274B4D;
   --celebrate-theme-hero: linear-gradient(135deg, #243D50, #0F141F);
 }
 html[data-theme="dark"] body.theme-celebrate-womens {
@@ -544,7 +544,7 @@ html[data-theme="dark"] body.theme-celebrate-womens {
   --celebrate-theme-text: #FCEBE8;
   --celebrate-theme-card-bg: #361D19;
   --celebrate-theme-accent: #E68A7A;
-  --celebrate-theme-border: #4F2B24;
+  --celebrate-theme-border: #244D4F;
   --celebrate-theme-hero: linear-gradient(135deg, #963C2B, #261310);
 }
 html[data-theme="dark"] body.theme-celebrate-family {
@@ -552,7 +552,7 @@ html[data-theme="dark"] body.theme-celebrate-family {
   --celebrate-theme-text: #EFE6E0;
   --celebrate-theme-card-bg: #261910;
   --celebrate-theme-accent: #C6926A;
-  --celebrate-theme-border: #3E291B;
+  --celebrate-theme-border: #1B3C3E;
   --celebrate-theme-hero: linear-gradient(135deg, #5E3A20, #1A110B);
 }
 html[data-theme="dark"] body.theme-celebrate-nature {
@@ -560,7 +560,7 @@ html[data-theme="dark"] body.theme-celebrate-nature {
   --celebrate-theme-text: #EBF5F0;
   --celebrate-theme-card-bg: #18291F;
   --celebrate-theme-accent: #62C288;
-  --celebrate-theme-border: #253D2F;
+  --celebrate-theme-border: #253C3D;
   --celebrate-theme-hero: linear-gradient(135deg, #2A5A3E, #111C15);
 }
 

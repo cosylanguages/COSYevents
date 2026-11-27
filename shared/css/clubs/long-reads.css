@@ -105,23 +105,23 @@ body[class*="theme-longreads-"] .session-hero {
 }
 
 body.theme-longreads-addict .session-hero {
-  background: linear-gradient(135deg, #7A1C1C, #3E0F0F) !important;
-  border-bottom: 2px solid #A34E4E;
+  background: linear-gradient(135deg, #29696D, #153638) !important;
+  border-bottom: 2px solid #4E9FA3;
 }
 
 body.theme-longreads-attention .session-hero {
-  background: linear-gradient(135deg, #4A1525, #240811) !important;
-  border-bottom: 2px solid #881337;
+  background: linear-gradient(135deg, #1A4345, #0C1F20) !important;
+  border-bottom: 2px solid #2B6D70;
 }
 
 body.theme-longreads-brains .session-hero {
-  background: linear-gradient(135deg, #1E293B, #0F172A) !important;
-  border-bottom: 2px solid #334155;
+  background: linear-gradient(135deg, #1E3A3B, #102829) !important;
+  border-bottom: 2px solid #335355;
 }
 
 body.theme-longreads-breakup .session-hero {
-  background: linear-gradient(135deg, #9A3412, #431407) !important;
-  border-bottom: 2px solid #C2410C;
+  background: linear-gradient(135deg, #2F797D, #143436) !important;
+  border-bottom: 2px solid #399195;
 }
 
 /* ─── THEME WATERMARKS ─── */

@@ -6,25 +6,25 @@ body.theme-wonder-weather {
   background: radial-gradient(circle at top right, rgba(157, 129, 217, 0.25), transparent), linear-gradient(to bottom, #ede9fe, #fbfafc) !important;
 }
 body.theme-wonder-weather .section-title {
-  color: #4c1d95 !important;
+  color: #317D81 !important;
 }
 body.theme-wonder-weather .vocab-card {
   background: #f5f3ff !important;
-  border: 1px solid #c084fc !important;
+  border: 1px solid #A4DADC !important;
 }
 body.theme-wonder-weather .round-block {
   background: #f5f3ff !important;
-  border: 1px solid #c084fc !important;
+  border: 1px solid #A4DADC !important;
 }
 body.theme-wonder-weather .round-header {
-  background: #ddd6fe !important;
-  color: #4c1d95 !important;
+  background: #E1F3F3 !important;
+  color: #317D81 !important;
 }
 body.theme-wonder-weather .round-item-personal {
   color: #087A80 !important;
 }
 body.theme-wonder-weather .back-link, body.theme-wonder-weather .cosy-breadcrumbs {
-  color: #4c1d95 !important;
+  color: #317D81 !important;
 }
 body.theme-wonder-weather .cosy-breadcrumbs .current {
   color: #087A80 !important;
@@ -32,12 +32,12 @@ body.theme-wonder-weather .cosy-breadcrumbs .current {
 .theme-wonder-weather .wonder-column-box {
   background: linear-gradient(135deg, rgba(63, 43, 150, 0.04), rgba(31, 16, 77, 0.08));
   border: 1px solid rgba(63, 43, 150, 0.3);
-  border-left: 5px solid #ff9f1c;
+  border-left: 5px solid #5ABBC1;
   box-shadow: inset 0 0 15px rgba(255, 159, 28, 0.05);
 }
 .theme-wonder-weather .carrie-diary {
   background: #f4f0ff !important;
-  border: 2px dashed #ff9f1c !important;
+  border: 2px dashed #5ABBC1 !important;
   box-shadow: 0 8px 24px rgba(255, 159, 28, 0.15) !important;
 }
 
@@ -46,37 +46,37 @@ body.theme-wonder-insects {
   background: radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.2), transparent), linear-gradient(to bottom, #f0fdf4, #fcfdfa) !important;
 }
 body.theme-wonder-insects .section-title {
-  color: #15803d !important;
+  color: #29696C !important;
 }
 body.theme-wonder-insects .vocab-card {
   background: #f0fdf4 !important;
-  border: 1px solid #86efac !important;
+  border: 1px solid #9CD6D9 !important;
 }
 body.theme-wonder-insects .round-block {
   background: #f0fdf4 !important;
-  border: 1px solid #86efac !important;
+  border: 1px solid #9CD6D9 !important;
 }
 body.theme-wonder-insects .round-header {
-  background: #dcfce7 !important;
-  color: #15803d !important;
+  background: #E3F4F5 !important;
+  color: #29696C !important;
 }
 body.theme-wonder-insects .round-item-personal {
-  color: #16a34a !important;
+  color: #338286 !important;
 }
 body.theme-wonder-insects .back-link, body.theme-wonder-insects .cosy-breadcrumbs {
-  color: #15803d !important;
+  color: #29696C !important;
 }
 body.theme-wonder-insects .cosy-breadcrumbs .current {
-  color: #16a34a !important;
+  color: #338286 !important;
 }
 .theme-wonder-insects .wonder-column-box {
   background: rgba(34, 197, 94, 0.03);
   border: 1px solid rgba(34, 197, 94, 0.2);
-  border-left: 5px solid #22c55e;
+  border-left: 5px solid #40A2A7;
 }
 .theme-wonder-insects .carrie-diary {
   background: #f7fee7 !important;
-  border: 2px dashed #84cc16 !important;
+  border: 2px dashed #3E9FA4 !important;
   box-shadow: 0 8px 20px rgba(132, 204, 22, 0.1) !important;
 }
 
@@ -85,37 +85,37 @@ body.theme-wonder-organic {
   background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.2), transparent), linear-gradient(to bottom, #fefce8, #fffdf5) !important;
 }
 body.theme-wonder-organic .section-title {
-  color: #a16207 !important;
+  color: #2E767A !important;
 }
 body.theme-wonder-organic .vocab-card {
   background: #fefce8 !important;
-  border: 1px solid #fde047 !important;
+  border: 1px solid #78C8CC !important;
 }
 body.theme-wonder-organic .round-block {
   background: #fefce8 !important;
-  border: 1px solid #fde047 !important;
+  border: 1px solid #78C8CC !important;
 }
 body.theme-wonder-organic .round-header {
-  background: #fef9c3 !important;
-  color: #a16207 !important;
+  background: #D3EDEE !important;
+  color: #2E767A !important;
 }
 body.theme-wonder-organic .round-item-personal {
-  color: #ca8a04 !important;
+  color: #399195 !important;
 }
 body.theme-wonder-organic .back-link, body.theme-wonder-organic .cosy-breadcrumbs {
-  color: #a16207 !important;
+  color: #2E767A !important;
 }
 body.theme-wonder-organic .cosy-breadcrumbs .current {
-  color: #ca8a04 !important;
+  color: #399195 !important;
 }
 .theme-wonder-organic .wonder-column-box {
   background: rgba(234, 179, 8, 0.03);
   border: 1px solid rgba(234, 179, 8, 0.2);
-  border-left: 5px solid #eab308;
+  border-left: 5px solid #43AAAF;
 }
 .theme-wonder-organic .carrie-diary {
   background: #fefce8 !important;
-  border: 2px dashed #ca8a0ca1 !important;
+  border: 2px dashed #3B969Ba1 !important;
   box-shadow: 0 8px 20px rgba(234, 179, 8, 0.1) !important;
 }
 
@@ -125,47 +125,47 @@ body.theme-wonder-amy {
   color: #f1f0f3 !important;
 }
 body.theme-wonder-amy .section-title {
-  color: #e11d48 !important;
+  color: #46B2B8 !important;
 }
 body.theme-wonder-amy .vocab-card {
-  background: #18141c !important;
-  border-color: #3a3245 !important;
+  background: #141C1C !important;
+  border-color: #324445 !important;
   color: #f1f0f3 !important;
 }
 body.theme-wonder-amy .round-block {
-  background: #18141c !important;
-  border-color: #3a3245 !important;
+  background: #141C1C !important;
+  border-color: #324445 !important;
 }
 body.theme-wonder-amy .round-header {
-  background: #251d2d !important;
+  background: #1D2C2D !important;
   color: #f1f0f3 !important;
 }
 body.theme-wonder-amy .round-questions li {
-  color: #d1cbdc !important;
+  color: #CBDBDC !important;
 }
 body.theme-wonder-amy .round-item-main {
   color: #f1f0f3 !important;
 }
 body.theme-wonder-amy .round-item-personal {
-  color: #ff85a2 !important;
+  color: #A7DBDD !important;
 }
 body.theme-wonder-amy .back-link, body.theme-wonder-amy .cosy-breadcrumbs {
-  color: #d1cbdc !important;
+  color: #CBDBDC !important;
 }
 body.theme-wonder-amy .cosy-breadcrumbs .current {
-  color: #e11d48 !important;
+  color: #46B2B8 !important;
 }
 .theme-wonder-amy .wonder-column-box {
-  background: #18141c;
-  border: 1px solid #3a3245;
-  border-left: 5px solid #e11d48;
+  background: #141C1C;
+  border: 1px solid #324445;
+  border-left: 5px solid #46B2B8;
 }
 .theme-wonder-amy .wonder-column-box p, .theme-wonder-amy .wonder-column-box h5, .theme-wonder-amy .wonder-column-title {
   color: #f1f0f3 !important;
 }
 .theme-wonder-amy .carrie-diary {
   background: #0f0c11 !important;
-  border: 2px dashed #e11d48 !important;
+  border: 2px dashed #46B2B8 !important;
   color: #f1f0f3 !important;
   box-shadow: 0 8px 24px rgba(225, 29, 72, 0.25) !important;
 }
@@ -212,10 +212,10 @@ body.theme-wonder-adhd .cosy-breadcrumbs .current {
 
 /* 6. Euthanasia */
 body.theme-wonder-euthanasia {
-  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.15), transparent), linear-gradient(to bottom, #e0f2fe, #f8fafc) !important;
+  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.15), transparent), linear-gradient(to bottom, #E8F5F6, #f8fafc) !important;
 }
 body.theme-wonder-euthanasia .section-title {
-  color: #0369a1 !important;
+  color: #2D7377 !important;
 }
 body.theme-wonder-euthanasia .vocab-card {
   background: #f0f9ff !important;
@@ -226,17 +226,17 @@ body.theme-wonder-euthanasia .round-block {
   border: 1px solid #7dd3fc !important;
 }
 body.theme-wonder-euthanasia .round-header {
-  background: #e0f2fe !important;
-  color: #0369a1 !important;
+  background: #E8F5F6 !important;
+  color: #2D7377 !important;
 }
 body.theme-wonder-euthanasia .round-item-personal {
-  color: #0284c7 !important;
+  color: #378D92 !important;
 }
 body.theme-wonder-euthanasia .back-link, body.theme-wonder-euthanasia .cosy-breadcrumbs {
-  color: #0369a1 !important;
+  color: #2D7377 !important;
 }
 body.theme-wonder-euthanasia .cosy-breadcrumbs .current {
-  color: #0284c7 !important;
+  color: #378D92 !important;
 }
 .theme-wonder-euthanasia .wonder-column-box {
   background: rgba(14, 165, 233, 0.02);
@@ -245,39 +245,39 @@ body.theme-wonder-euthanasia .cosy-breadcrumbs .current {
 }
 .theme-wonder-euthanasia .carrie-diary {
   background: #f0f9ff !important;
-  border: 2px dashed #0284c7 !important;
+  border: 2px dashed #378D92 !important;
   box-shadow: 0 8px 20px rgba(2, 132, 199, 0.08) !important;
 }
 
 /* 7. Death of the Album */
 body.theme-wonder-album {
   background: #111116 !important;
-  color: #e5e5ec !important;
+  color: #E5ECEC !important;
 }
 body.theme-wonder-album .section-title {
   color: #087A80 !important;
 }
 body.theme-wonder-album .vocab-card {
-  background: #1a1a24 !important;
-  border-color: #33334d !important;
-  color: #e5e5ec !important;
+  background: #1A2424 !important;
+  border-color: #334C4D !important;
+  color: #E5ECEC !important;
 }
 body.theme-wonder-album .round-block {
-  background: #1a1a24 !important;
-  border-color: #33334d !important;
+  background: #1A2424 !important;
+  border-color: #334C4D !important;
 }
 body.theme-wonder-album .round-header {
-  background: #232334 !important;
-  color: #e5e5ec !important;
+  background: #233334 !important;
+  color: #E5ECEC !important;
 }
 body.theme-wonder-album .round-questions li {
   color: #c7c7d3 !important;
 }
 body.theme-wonder-album .round-item-main {
-  color: #e5e5ec !important;
+  color: #E5ECEC !important;
 }
 body.theme-wonder-album .round-item-personal {
-  color: #c084fc !important;
+  color: #A4DADC !important;
 }
 body.theme-wonder-album .back-link, body.theme-wonder-album .cosy-breadcrumbs {
   color: #c7c7d3 !important;
@@ -286,17 +286,17 @@ body.theme-wonder-album .cosy-breadcrumbs .current {
   color: #087A80 !important;
 }
 .theme-wonder-album .wonder-column-box {
-  background: #1a1a24;
-  border: 1px solid #33334d;
+  background: #1A2424;
+  border: 1px solid #334C4D;
   border-left: 5px solid #087A80;
 }
 .theme-wonder-album .wonder-column-box p, .theme-wonder-album .wonder-column-box h5, .theme-wonder-album .wonder-column-title {
-  color: #e5e5ec !important;
+  color: #E5ECEC !important;
 }
 .theme-wonder-album .carrie-diary {
   background: #111116 !important;
   border: 2px dashed #087A80 !important;
-  color: #e5e5ec !important;
+  color: #E5ECEC !important;
   box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2) !important;
 }
 
@@ -305,37 +305,37 @@ body.theme-wonder-series {
   background: radial-gradient(circle at top left, rgba(236, 72, 153, 0.2), transparent), linear-gradient(to bottom, #fce7f3, #fff1f2) !important;
 }
 body.theme-wonder-series .section-title {
-  color: #be185d !important;
+  color: #3B969B !important;
 }
 body.theme-wonder-series .vocab-card {
   background: #fdf2f8 !important;
-  border: 1px solid #f472b6 !important;
+  border: 1px solid #91D2D5 !important;
 }
 body.theme-wonder-series .round-block {
   background: #fdf2f8 !important;
-  border: 1px solid #f472b6 !important;
+  border: 1px solid #91D2D5 !important;
 }
 body.theme-wonder-series .round-header {
   background: #fce7f3 !important;
-  color: #be185d !important;
+  color: #3B969B !important;
 }
 body.theme-wonder-series .round-item-personal {
-  color: #db2777 !important;
+  color: #48B4BA !important;
 }
 body.theme-wonder-series .back-link, body.theme-wonder-series .cosy-breadcrumbs {
-  color: #be185d !important;
+  color: #3B969B !important;
 }
 body.theme-wonder-series .cosy-breadcrumbs .current {
-  color: #db2777 !important;
+  color: #48B4BA !important;
 }
 .theme-wonder-series .wonder-column-box {
   background: rgba(236, 72, 153, 0.03);
   border: 1px solid rgba(236, 72, 153, 0.2);
-  border-left: 5px solid #ec4899;
+  border-left: 5px solid #6DC3C7;
 }
 .theme-wonder-series .carrie-diary {
   background: #fdf2f8 !important;
-  border: 2px dashed #db2777 !important;
+  border: 2px dashed #48B4BA !important;
   box-shadow: 0 8px 20px rgba(219, 39, 119, 0.1) !important;
 }
 
@@ -344,28 +344,28 @@ body.theme-wonder-copying {
   background: radial-gradient(#087A80 10%, transparent 10%) 0 0 / 18px 16px, #faf5ff !important;
 }
 body.theme-wonder-copying .section-title {
-  color: #7e22ce !important;
+  color: #42A9AE !important;
 }
 body.theme-wonder-copying .vocab-card {
   background: #f3e8ff !important;
-  border: 1px solid #c084fc !important;
+  border: 1px solid #A4DADC !important;
 }
 body.theme-wonder-copying .round-block {
   background: #f3e8ff !important;
-  border: 1px solid #c084fc !important;
+  border: 1px solid #A4DADC !important;
 }
 body.theme-wonder-copying .round-header {
-  background: #e9d5ff !important;
-  color: #7e22ce !important;
+  background: #E1F3F3 !important;
+  color: #42A9AE !important;
 }
 body.theme-wonder-copying .round-item-personal {
-  color: #9333ea !important;
+  color: #5CBCC1 !important;
 }
 body.theme-wonder-copying .back-link, body.theme-wonder-copying .cosy-breadcrumbs {
-  color: #7e22ce !important;
+  color: #42A9AE !important;
 }
 body.theme-wonder-copying .cosy-breadcrumbs .current {
-  color: #9333ea !important;
+  color: #5CBCC1 !important;
 }
 .theme-wonder-copying .wonder-column-box {
   background: linear-gradient(90deg, rgba(139, 92, 246, 0.02) 50%, rgba(236, 72, 153, 0.02) 50%);
@@ -388,16 +388,16 @@ body.theme-wonder-watched .section-title {
   color: #10b981 !important;
 }
 body.theme-wonder-watched .vocab-card {
-  background: #0d0c13 !important;
-  border-color: #332d4a !important;
+  background: #0C1313 !important;
+  border-color: #2D494A !important;
   color: #e2e1e7 !important;
 }
 body.theme-wonder-watched .round-block {
-  background: #0d0c13 !important;
-  border-color: #332d4a !important;
+  background: #0C1313 !important;
+  border-color: #2D494A !important;
 }
 body.theme-wonder-watched .round-header {
-  background: #15131f !important;
+  background: #131E1F !important;
   color: #e2e1e7 !important;
 }
 body.theme-wonder-watched .round-questions li {
@@ -407,7 +407,7 @@ body.theme-wonder-watched .round-item-main {
   color: #e2e1e7 !important;
 }
 body.theme-wonder-watched .round-item-personal {
-  color: #34d399 !important;
+  color: #4CB6BB !important;
 }
 body.theme-wonder-watched .back-link, body.theme-wonder-watched .cosy-breadcrumbs {
   color: #c4c2ce !important;
@@ -416,8 +416,8 @@ body.theme-wonder-watched .cosy-breadcrumbs .current {
   color: #10b981 !important;
 }
 .theme-wonder-watched .wonder-column-box {
-  background: #0d0c13;
-  border: 1px solid #332d4a;
+  background: #0C1313;
+  border: 1px solid #2D494A;
   border-left: 5px solid #10b981;
 }
 .theme-wonder-watched .wonder-column-box p, .theme-wonder-watched .wonder-column-box h5, .theme-wonder-watched .wonder-column-title {
@@ -437,76 +437,76 @@ body.theme-wonder-raindrops {
               #dbeafe !important;
 }
 body.theme-wonder-raindrops .section-title {
-  color: #1d4ed8 !important;
+  color: #43ACB2 !important;
 }
 body.theme-wonder-raindrops .vocab-card {
   background: #eff6ff !important;
-  border: 1px solid #60a5fa !important;
+  border: 1px solid #88CED2 !important;
 }
 body.theme-wonder-raindrops .round-block {
   background: #eff6ff !important;
-  border: 1px solid #60a5fa !important;
+  border: 1px solid #88CED2 !important;
 }
 body.theme-wonder-raindrops .round-header {
-  background: #dbeafe !important;
-  color: #1d4ed8 !important;
+  background: #E4F4F5 !important;
+  color: #43ACB2 !important;
 }
 body.theme-wonder-raindrops .round-item-personal {
-  color: #2563eb !important;
+  color: #52B8BE !important;
 }
 body.theme-wonder-raindrops .back-link, body.theme-wonder-raindrops .cosy-breadcrumbs {
-  color: #1d4ed8 !important;
+  color: #43ACB2 !important;
 }
 body.theme-wonder-raindrops .cosy-breadcrumbs .current {
-  color: #2563eb !important;
+  color: #52B8BE !important;
 }
 .theme-wonder-raindrops .wonder-column-box {
   background: rgba(59, 130, 246, 0.03);
   border: 1px solid rgba(59, 130, 246, 0.15);
-  border-left: 5px solid #3b82f6;
+  border-left: 5px solid #6AC2C7;
 }
 .theme-wonder-raindrops .carrie-diary {
   background: #eff6ff !important;
-  border: 2px dashed #3b82f6 !important;
+  border: 2px dashed #6AC2C7 !important;
   box-shadow: 0 8px 20px rgba(59, 130, 246, 0.1) !important;
 }
 
 /* 12. I Have No Time For It */
 body.theme-wonder-time {
-  background: radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.2), transparent), linear-gradient(to bottom, #ffedd5, #fff7ed) !important;
+  background: radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.2), transparent), linear-gradient(to bottom, #E1F3F3, #fff7ed) !important;
 }
 body.theme-wonder-time .section-title {
-  color: #c2410c !important;
+  color: #399195 !important;
 }
 body.theme-wonder-time .vocab-card {
   background: #fff7ed !important;
-  border: 1px solid #fb923c !important;
+  border: 1px solid #6FC4C8 !important;
 }
 body.theme-wonder-time .round-block {
   background: #fff7ed !important;
-  border: 1px solid #fb923c !important;
+  border: 1px solid #6FC4C8 !important;
 }
 body.theme-wonder-time .round-header {
-  background: #ffedd5 !important;
-  color: #c2410c !important;
+  background: #E1F3F3 !important;
+  color: #399195 !important;
 }
 body.theme-wonder-time .round-item-personal {
-  color: #ea580c !important;
+  color: #44ADB2 !important;
 }
 body.theme-wonder-time .back-link, body.theme-wonder-time .cosy-breadcrumbs {
-  color: #c2410c !important;
+  color: #399195 !important;
 }
 body.theme-wonder-time .cosy-breadcrumbs .current {
-  color: #ea580c !important;
+  color: #44ADB2 !important;
 }
 .theme-wonder-time .wonder-column-box {
   background: rgba(249, 115, 22, 0.03);
   border: 1px solid rgba(249, 115, 22, 0.15);
-  border-left: 5px solid #f97316;
+  border-left: 5px solid #52B8BD;
 }
 .theme-wonder-time .carrie-diary {
   background: #fff7ed !important;
-  border: 2px dashed #ea580c !important;
+  border: 2px dashed #44ADB2 !important;
   box-shadow: 0 8px 20px rgba(234, 88, 12, 0.1) !important;
 }
 
@@ -515,37 +515,37 @@ body.theme-wonder-monogamy-b2 {
   background: radial-gradient(circle at top right, rgba(244, 63, 94, 0.18), transparent), linear-gradient(to bottom, #ffe4e6, #fff1f2) !important;
 }
 body.theme-wonder-monogamy-b2 .section-title {
-  color: #be123c !important;
+  color: #399297 !important;
 }
 body.theme-wonder-monogamy-b2 .vocab-card {
   background: #fff1f2 !important;
-  border: 1px solid #fda4af !important;
+  border: 1px solid #BCE3E5 !important;
 }
 body.theme-wonder-monogamy-b2 .round-block {
   background: #fff1f2 !important;
-  border: 1px solid #fda4af !important;
+  border: 1px solid #BCE3E5 !important;
 }
 body.theme-wonder-monogamy-b2 .round-header {
   background: #ffe4e6 !important;
-  color: #be123c !important;
+  color: #399297 !important;
 }
 body.theme-wonder-monogamy-b2 .round-item-personal {
-  color: #e11d48 !important;
+  color: #46B2B8 !important;
 }
 body.theme-wonder-monogamy-b2 .back-link, body.theme-wonder-monogamy-b2 .cosy-breadcrumbs {
-  color: #be123c !important;
+  color: #399297 !important;
 }
 body.theme-wonder-monogamy-b2 .cosy-breadcrumbs .current {
-  color: #e11d48 !important;
+  color: #46B2B8 !important;
 }
 .theme-wonder-monogamy-b2 .wonder-column-box {
   background: rgba(244, 63, 94, 0.03);
   border: 1px solid rgba(244, 63, 94, 0.15);
-  border-left: 5px solid #f43f5e;
+  border-left: 5px solid #6CC3C7;
 }
 .theme-wonder-monogamy-b2 .carrie-diary {
   background: #fff1f2 !important;
-  border: 2px dashed #e11d48 !important;
+  border: 2px dashed #46B2B8 !important;
   box-shadow: 0 8px 20px rgba(225, 29, 72, 0.08) !important;
 }
 
@@ -593,76 +593,76 @@ body.theme-wonder-collective {
   background: linear-gradient(to bottom, #fee2e2, #fef2f2), radial-gradient(circle at top left, rgba(220, 38, 38, 0.15), transparent) !important;
 }
 body.theme-wonder-collective .section-title {
-  color: #b91c1c !important;
+  color: #3B969A !important;
 }
 body.theme-wonder-collective .vocab-card {
   background: #fef2f2 !important;
-  border: 1px solid #fca5a5 !important;
+  border: 1px solid #BCE3E5 !important;
 }
 body.theme-wonder-collective .round-block {
   background: #fef2f2 !important;
-  border: 1px solid #fca5a5 !important;
+  border: 1px solid #BCE3E5 !important;
 }
 body.theme-wonder-collective .round-header {
   background: #fee2e2 !important;
-  color: #b91c1c !important;
+  color: #3B969A !important;
 }
 body.theme-wonder-collective .round-item-personal {
-  color: #dc2626 !important;
+  color: #48B4BA !important;
 }
 body.theme-wonder-collective .back-link, body.theme-wonder-collective .cosy-breadcrumbs {
-  color: #b91c1c !important;
+  color: #3B969A !important;
 }
 body.theme-wonder-collective .cosy-breadcrumbs .current {
-  color: #dc2626 !important;
+  color: #48B4BA !important;
 }
 .theme-wonder-collective .wonder-column-box {
   background: rgba(139, 92, 246, 0.03);
   border: 1px solid rgba(139, 92, 246, 0.2);
-  border-left: 5px solid #dc2626;
+  border-left: 5px solid #48B4BA;
 }
 .theme-wonder-collective .carrie-diary {
   background: #fef2f2 !important;
-  border: 2px dashed #dc2626 !important;
+  border: 2px dashed #48B4BA !important;
   box-shadow: 0 8px 20px rgba(220, 38, 38, 0.1) !important;
 }
 
 /* 16. Parenting Instinct */
 body.theme-wonder-parenting {
-  background: linear-gradient(135deg, #fce7f3 0%, #dcfce7 100%) !important;
+  background: linear-gradient(135deg, #fce7f3 0%, #E3F4F5 100%) !important;
 }
 body.theme-wonder-parenting .section-title {
-  color: #a21caf !important;
+  color: #388F93 !important;
 }
 body.theme-wonder-parenting .vocab-card {
   background: #fdf2f8 !important;
-  border: 1px solid #f472b6 !important;
+  border: 1px solid #91D2D5 !important;
 }
 body.theme-wonder-parenting .round-block {
   background: #f0fdf4 !important;
-  border: 1px solid #86efac !important;
+  border: 1px solid #9CD6D9 !important;
 }
 body.theme-wonder-parenting .round-header {
   background: #fce7f3 !important;
-  color: #a21caf !important;
+  color: #388F93 !important;
 }
 body.theme-wonder-parenting .round-item-personal {
-  color: #db2777 !important;
+  color: #48B4BA !important;
 }
 body.theme-wonder-parenting .back-link, body.theme-wonder-parenting .cosy-breadcrumbs {
-  color: #a21caf !important;
+  color: #388F93 !important;
 }
 body.theme-wonder-parenting .cosy-breadcrumbs .current {
-  color: #db2777 !important;
+  color: #48B4BA !important;
 }
 .theme-wonder-parenting .wonder-column-box {
   background: rgba(168, 85, 247, 0.03);
   border: 1px solid rgba(168, 85, 247, 0.15);
-  border-left: 5px solid #ec4899;
+  border-left: 5px solid #6DC3C7;
 }
 .theme-wonder-parenting .carrie-diary {
   background: #fff5f7 !important;
-  border: 2px dashed #ec4899 !important;
+  border: 2px dashed #6DC3C7 !important;
   box-shadow: 0 8px 20px rgba(236, 72, 153, 0.1) !important;
 }
 
@@ -681,7 +681,7 @@ body.theme-wonder-watched {
 
   /* Redefine basic block layout variables to dark mode colors */
   --warm-white: #18141c !important;
-  --border: #3a3245 !important;
+  --border: #324445 !important;
   --cream: #221a2d !important;
 
   /* Accent tints for tasks and grammar boxes */
@@ -695,26 +695,26 @@ body.theme-wonder-watched {
   --mistake-bg: #241a15 !important;
   --mistake-header-bg: #2e211a !important;
   --mistake-header-text: #fca5a5 !important;
-  --mistake-wrong-color: #f87171 !important;
-  --mistake-right-color: #4ade80 !important;
+  --mistake-wrong-color: #93D3D6 !important;
+  --mistake-right-color: #64BFC4 !important;
 }
 
 /* Specific theme refinements */
 body.theme-wonder-album {
   --warm-white: #1a1a24 !important;
-  --border: #33334d !important;
+  --border: #334C4D !important;
   --cream: #1e1e2d !important;
 }
 
 body.theme-wonder-watched {
   --warm-white: #0d0c13 !important;
-  --border: #332d4a !important;
+  --border: #2D494A !important;
   --cream: #14131d !important;
 }
 
 /* 4. Appreciating Amy Winehouse (Contrast & Background Overrides) */
 body.theme-wonder-amy {
-  background: radial-gradient(circle at 50% 15%, #2a111a 0%, #0d0812 60%, #050307 100%) !important;
+  background: radial-gradient(circle at 50% 15%, #11292A 0%, #0d0812 60%, #050307 100%) !important;
 }
 body.theme-wonder-amy .vocab-card,
 body.theme-wonder-amy .round-block {
@@ -724,24 +724,24 @@ body.theme-wonder-amy .round-block {
   backdrop-filter: blur(12px);
 }
 body.theme-wonder-amy .round-header {
-  background: #251d2d !important;
-  border-bottom: 2px solid #e11d48 !important;
+  background: #1D2C2D !important;
+  border-bottom: 2px solid #46B2B8 !important;
 }
 body.theme-wonder-amy .carrie-diary {
   background: rgba(28, 22, 36, 0.85) !important;
-  border: 2px dashed #e11d48 !important;
+  border: 2px dashed #46B2B8 !important;
   color: #f1f0f3 !important;
   box-shadow: 0 10px 30px rgba(225, 29, 72, 0.15) !important;
 }
 body.theme-wonder-amy .wonder-column-box {
   background: rgba(28, 22, 36, 0.8) !important;
   border: 1px solid rgba(225, 29, 72, 0.3) !important;
-  border-left: 5px solid #e11d48 !important;
+  border-left: 5px solid #46B2B8 !important;
 }
 
 /* 7. Death of the Album (Contrast & Background Overrides) */
 body.theme-wonder-album {
-  background: radial-gradient(circle at 50% 15%, #181432 0%, #090812 60%, #040408 100%) !important;
+  background: radial-gradient(circle at 50% 15%, #143132 0%, #090812 60%, #040408 100%) !important;
 }
 body.theme-wonder-album .vocab-card,
 body.theme-wonder-album .round-block {
@@ -751,13 +751,13 @@ body.theme-wonder-album .round-block {
   backdrop-filter: blur(12px);
 }
 body.theme-wonder-album .round-header {
-  background: #232334 !important;
+  background: #233334 !important;
   border-bottom: 2px solid #087A80 !important;
 }
 body.theme-wonder-album .carrie-diary {
   background: rgba(26, 26, 38, 0.85) !important;
   border: 2px dashed #087A80 !important;
-  color: #e5e5ec !important;
+  color: #E5ECEC !important;
   box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15) !important;
 }
 body.theme-wonder-album .wonder-column-box {
@@ -778,7 +778,7 @@ body.theme-wonder-watched .round-block {
   backdrop-filter: blur(12px);
 }
 body.theme-wonder-watched .round-header {
-  background: #15131f !important;
+  background: #131E1F !important;
   border-bottom: 2px solid #10b981 !important;
 }
 body.theme-wonder-watched .carrie-diary {
@@ -798,7 +798,7 @@ body.theme-wonder-amy .related-club-callout,
 body.theme-wonder-album .related-club-callout,
 body.theme-wonder-watched .related-club-callout {
   background: rgba(243, 156, 18, 0.08) !important;
-  border-left: 4px solid #f39c12 !important;
+  border-left: 4px solid #4AB5BB !important;
   border-top: 1px solid rgba(243, 156, 18, 0.2) !important;
   border-right: 1px solid rgba(243, 156, 18, 0.2) !important;
   border-bottom: 1px solid rgba(243, 156, 18, 0.2) !important;
@@ -812,7 +812,7 @@ body.theme-wonder-watched .related-club-callout strong {
 body.theme-wonder-amy .related-club-callout a,
 body.theme-wonder-album .related-club-callout a,
 body.theme-wonder-watched .related-club-callout a {
-  color: #f39c12 !important;
+  color: #4AB5BB !important;
   text-decoration: underline !important;
 }
 
@@ -862,17 +862,17 @@ body.theme-wonder-watched .grammar-interactive-game li {
 
 /* Tap Chips on dark mode */
 body.theme-wonder-amy .grammar-tap-chip {
-  background: #251d2d !important;
-  border: 1px solid #e11d48 !important;
+  background: #1D2C2D !important;
+  border: 1px solid #46B2B8 !important;
   color: #f1f0f3 !important;
 }
 body.theme-wonder-album .grammar-tap-chip {
-  background: #232334 !important;
+  background: #233334 !important;
   border: 1px solid #087A80 !important;
-  color: #e5e5ec !important;
+  color: #E5ECEC !important;
 }
 body.theme-wonder-watched .grammar-tap-chip {
-  background: #15131f !important;
+  background: #131E1F !important;
   border: 1px solid #10b981 !important;
   color: #e2e1e7 !important;
 }
@@ -882,13 +882,13 @@ body.theme-wonder-amy .grammar-gap,
 body.theme-wonder-album .grammar-gap,
 body.theme-wonder-watched .grammar-gap {
   background: rgba(255, 255, 255, 0.08) !important;
-  border-bottom: 2px solid var(--section-title-color, #e11d48) !important;
+  border-bottom: 2px solid var(--section-title-color, #46B2B8) !important;
   color: #fff !important;
 }
 
 /* Buttons in Grammar practice */
 body.theme-wonder-amy .btn-verify {
-  background: #e11d48 !important;
+  background: #46B2B8 !important;
 }
 body.theme-wonder-album .btn-verify {
   background: #087A80 !important;
@@ -916,7 +916,7 @@ body.theme-wonder-amy .grammar-task-item,
 body.theme-wonder-album .grammar-task-item,
 body.theme-wonder-watched .grammar-task-item {
   background: rgba(255, 255, 255, 0.04) !important;
-  border-left-color: var(--section-title-color, #e11d48) !important;
+  border-left-color: var(--section-title-color, #46B2B8) !important;
 }
 body.theme-wonder-album .grammar-task-item {
   border-left-color: #087A80 !important;
@@ -934,7 +934,7 @@ body.theme-wonder-watched .mistake-arrow {
 body.theme-wonder-amy .mistake-note-text,
 body.theme-wonder-album .mistake-note-text,
 body.theme-wonder-watched .mistake-note-text {
-  color: #d1cbdc !important;
+  color: #CBDBDC !important;
 }
 
 /* Hidden elements to satisfy count checks in static audits without inline style violations */
@@ -1057,20 +1057,20 @@ body[class*="theme-wonder-"] .session-hero {
 }
 
 body.theme-wonder-organic .session-hero {
-  background: linear-gradient(135deg, #422006, #1C1917) !important; /* Sun-dappled rich wood, cider apples */
-  border-bottom: 2px solid #CA8A04;
+  background: linear-gradient(135deg, #143334, #1C1917) !important; /* Sun-dappled rich wood, cider apples */
+  border-bottom: 2px solid #399195;
 }
 body.theme-wonder-euthanasia .session-hero {
-  background: linear-gradient(135deg, #1E293B, #0F172A) !important; /* Twilight ocean cliff fog in Rennes */
-  border-bottom: 2px solid #475569;
+  background: linear-gradient(135deg, #1E3A3B, #102829) !important; /* Twilight ocean cliff fog in Rennes */
+  border-bottom: 2px solid #476769;
 }
 body.theme-wonder-collective .session-hero {
-  background: linear-gradient(135deg, #0D5257, #0F172A) !important; /* Deep sea emerald & wild coastline, Brest */
+  background: linear-gradient(135deg, #0D5257, #102829) !important; /* Deep sea emerald & wild coastline, Brest */
   border-bottom: 2px solid #0D9488;
 }
 body.theme-wonder-copying .session-hero {
-  background: linear-gradient(135deg, #431407, #0C0402) !important; /* Cozy warm espresso, candlelight & brass frames, Rennes */
-  border-bottom: 2px solid #EA580C;
+  background: linear-gradient(135deg, #143436, #0C0402) !important; /* Cozy warm espresso, candlelight & brass frames, Rennes */
+  border-bottom: 2px solid #44ADB2;
 }
 
 /* Custom logo size adjustment to prevent overlap inside heros */
@@ -1119,7 +1119,7 @@ body.theme-wonder-series::after { content: "📺"; }
 body.theme-wonder-amy .private-step,
 body.theme-wonder-album .private-step,
 body.theme-wonder-watched .private-step {
-  background: #18141c;
+  background: #141C1C;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -1249,7 +1249,7 @@ body.theme-wonder-watched .host-utility-bar .btn-copy-link {
 body.theme-wonder-amy .host-utility-bar .btn-copy-link:hover,
 body.theme-wonder-album .host-utility-bar .btn-copy-link:hover,
 body.theme-wonder-watched .host-utility-bar .btn-copy-link:hover {
-  background: #a78bfa;
+  background: #A7DBDE;
 }
 
 body.theme-wonder-amy .host-utility-bar .unobtrusive-back-link:hover,
@@ -1308,8 +1308,8 @@ body[data-active-mode="mini"] #related-references {
 body.theme-wonder-amy .transcript-details,
 body.theme-wonder-album .transcript-details,
 body.theme-wonder-watched .transcript-details {
-  background: #18141c;
-  border-color: var(--section-title-color, #e11d48);
+  background: #141C1C;
+  border-color: var(--section-title-color, #46B2B8);
   color: #f1f0f3;
 }
 body.theme-wonder-amy .transcript-details summary,

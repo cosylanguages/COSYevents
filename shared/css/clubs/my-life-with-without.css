@@ -95,7 +95,7 @@ body.theme-life-airplane {
   --life-theme-text: #1E2D38;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #2B6CB0;
-  --life-theme-border: #D2E2EC;
+  --life-theme-border: #D2EBEC;
   --life-theme-watermark: "✈️";
   --life-theme-hero: linear-gradient(135deg, #2B6CB0, #1E2D38);
   --life-theme-accent-contrast: #B25E14;
@@ -117,7 +117,7 @@ body.theme-life-celebrity {
   --life-theme-text: #4A121A;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #C2185B;
-  --life-theme-border: #F8CCD2;
+  --life-theme-border: #D5EEEF;
   --life-theme-watermark: "🌟";
   --life-theme-hero: linear-gradient(135deg, #C2185B, #4A121A);
   --life-theme-accent-contrast: #8C721E;
@@ -128,7 +128,7 @@ body.theme-life-diversity {
   --life-theme-text: #1E2D24;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #3E7D58;
-  --life-theme-border: #DCECE2;
+  --life-theme-border: #DCEBEC;
   --life-theme-watermark: "🌍";
   --life-theme-hero: linear-gradient(135deg, #3E7D58, #1E2D24);
   --life-theme-accent-contrast: #8C6239;
@@ -150,7 +150,7 @@ body.theme-life-skyscrapers {
   --life-theme-text: #2C3E50;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #5C4A9E;
-  --life-theme-border: #E2E4EC;
+  --life-theme-border: #E2ECEC;
   --life-theme-watermark: "🏙️";
   --life-theme-hero: linear-gradient(135deg, #5C4A9E, #2C3E50);
   --life-theme-accent-contrast: #3B6D11;
@@ -174,7 +174,7 @@ body.theme-life-holidays {
   --life-theme-text: #423212;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #D4AF37;
-  --life-theme-border: #FAF0CC;
+  --life-theme-border: #D6EEF0;
   --life-theme-watermark: "🏖️";
   --life-theme-hero: linear-gradient(135deg, #8C7010, #423212);
   --life-theme-accent-contrast: #2B6CB0;
@@ -185,7 +185,7 @@ body.theme-life-gestures {
   --life-theme-text: #4A3319;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #A0522D;
-  --life-theme-border: #F3DFD8;
+  --life-theme-border: #DAF0F1;
   --life-theme-watermark: "🤌";
   --life-theme-hero: linear-gradient(135deg, #A0522D, #4A3319);
   --life-theme-accent-contrast: #3E7D58;
@@ -196,7 +196,7 @@ body.theme-life-obsolete-jobs {
   --life-theme-text: #3B2F2F;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #8C6239;
-  --life-theme-border: #E8DFD8;
+  --life-theme-border: #D8E7E8;
   --life-theme-watermark: "⏳";
   --life-theme-hero: linear-gradient(135deg, #8C6239, #3B2F2F);
   --life-theme-accent-contrast: #5C4A9E;
@@ -207,7 +207,7 @@ body.theme-life-pets {
   --life-theme-text: #42301B;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #8D6E63;
-  --life-theme-border: #E6D7C3;
+  --life-theme-border: #C3E4E6;
   --life-theme-watermark: "🐾";
   --life-theme-hero: linear-gradient(135deg, #8D6E63, #42301B);
   --life-theme-accent-contrast: #3B6D11;
@@ -218,7 +218,7 @@ body.theme-life-private-cars {
   --life-theme-text: #1C332A;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #3B6D11;
-  --life-theme-border: #D2E6DF;
+  --life-theme-border: #D2E5E6;
   --life-theme-watermark: "🚘";
   --life-theme-hero: linear-gradient(135deg, #3B6D11, #1C332A);
   --life-theme-accent-contrast: #B25E14;
@@ -229,7 +229,7 @@ body.theme-life-series {
   --life-theme-text: #3D1B3D;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #8E44AD;
-  --life-theme-border: #ECDFF0;
+  --life-theme-border: #DFEFF0;
   --life-theme-watermark: "📺";
   --life-theme-hero: linear-gradient(135deg, #8E44AD, #3D1B3D);
   --life-theme-accent-contrast: #8C721E;
@@ -240,7 +240,7 @@ body.theme-life-social-media {
   --life-theme-text: #1B2A4A;
   --life-theme-card-bg: #FFFFFF;
   --life-theme-accent: #3F51B5;
-  --life-theme-border: #DCE4F7;
+  --life-theme-border: #E0F2F3;
   --life-theme-watermark: "📱";
   --life-theme-hero: linear-gradient(135deg, #3F51B5, #1B2A4A);
   --life-theme-accent-contrast: #B25E14;
@@ -277,7 +277,7 @@ html[data-theme="dark"] body.theme-life-airplane {
   --life-theme-bg-dark: #121820;
   --life-theme-text-dark: #E2ECF4;
   --life-theme-card-bg-dark: #1A222D;
-  --life-theme-border-dark: #2C3E50;
+  --life-theme-border-dark: #2C4E50;
   --life-theme-accent: #63B3ED;
   --life-theme-accent-contrast: #F5B041;
 }
@@ -293,7 +293,7 @@ html[data-theme="dark"] body.theme-life-celebrity {
   --life-theme-bg-dark: #210B0E;
   --life-theme-text-dark: #FCE4E7;
   --life-theme-card-bg-dark: #2E1216;
-  --life-theme-border-dark: #5C252B;
+  --life-theme-border-dark: #25595C;
   --life-theme-accent: #F06292;
   --life-theme-accent-contrast: #F5B041;
 }
@@ -301,7 +301,7 @@ html[data-theme="dark"] body.theme-life-diversity {
   --life-theme-bg-dark: #111C15;
   --life-theme-text-dark: #EBF5F0;
   --life-theme-card-bg-dark: #18291F;
-  --life-theme-border-dark: #2D4436;
+  --life-theme-border-dark: #2D4344;
   --life-theme-accent: #62C288;
   --life-theme-accent-contrast: #D7CCC8;
 }
@@ -317,7 +317,7 @@ html[data-theme="dark"] body.theme-life-skyscrapers {
   --life-theme-bg-dark: #15121F;
   --life-theme-text-dark: #EDEAFA;
   --life-theme-card-bg-dark: #221C33;
-  --life-theme-border-dark: #342A4D;
+  --life-theme-border-dark: #2A4B4D;
   --life-theme-accent: #9B8EE3;
   --life-theme-accent-contrast: #81C784;
 }
@@ -325,7 +325,7 @@ html[data-theme="dark"] body.theme-life-holidays {
   --life-theme-bg-dark: #1F1A0F;
   --life-theme-text-dark: #FFF4D1;
   --life-theme-card-bg-dark: #2E2514;
-  --life-theme-border-dark: #47391F;
+  --life-theme-border-dark: #1F4547;
   --life-theme-accent: #E5C158;
   --life-theme-accent-contrast: #63B3ED;
 }
@@ -333,7 +333,7 @@ html[data-theme="dark"] body.theme-life-gestures {
   --life-theme-bg-dark: #21160C;
   --life-theme-text-dark: #FBEFE5;
   --life-theme-card-bg-dark: #332314;
-  --life-theme-border-dark: #5A402B;
+  --life-theme-border-dark: #2B585A;
   --life-theme-accent: #CD853F;
   --life-theme-accent-contrast: #81C784;
 }
@@ -341,7 +341,7 @@ html[data-theme="dark"] body.theme-life-obsolete-jobs {
   --life-theme-bg-dark: #1A1513;
   --life-theme-text-dark: #EFEAE6;
   --life-theme-card-bg-dark: #261E1A;
-  --life-theme-border-dark: #3D302A;
+  --life-theme-border-dark: #2A3C3D;
   --life-theme-accent: #C69C6D;
   --life-theme-accent-contrast: #9B8EE3;
 }
@@ -349,7 +349,7 @@ html[data-theme="dark"] body.theme-life-pets {
   --life-theme-bg-dark: #1C1611;
   --life-theme-text-dark: #EFEBE9;
   --life-theme-card-bg-dark: #2B221B;
-  --life-theme-border-dark: #4E3E32;
+  --life-theme-border-dark: #324D4E;
   --life-theme-accent: #B0958B;
   --life-theme-accent-contrast: #81C784;
 }
@@ -357,7 +357,7 @@ html[data-theme="dark"] body.theme-life-private-cars {
   --life-theme-bg-dark: #0D1C17;
   --life-theme-text-dark: #E0F2F1;
   --life-theme-card-bg-dark: #172F27;
-  --life-theme-border-dark: #265243;
+  --life-theme-border-dark: #265052;
   --life-theme-accent: #4DB6AC;
   --life-theme-accent-contrast: #FF8C33;
 }
@@ -365,7 +365,7 @@ html[data-theme="dark"] body.theme-life-series {
   --life-theme-bg-dark: #1D121D;
   --life-theme-text-dark: #F6ECF6;
   --life-theme-card-bg-dark: #2D1C2D;
-  --life-theme-border-dark: #4A2E4A;
+  --life-theme-border-dark: #2E494A;
   --life-theme-accent: #BB8FCE;
   --life-theme-accent-contrast: #FFE082;
 }
@@ -373,7 +373,7 @@ html[data-theme="dark"] body.theme-life-social-media {
   --life-theme-bg-dark: #0F121C;
   --life-theme-text-dark: #E8EAF6;
   --life-theme-card-bg-dark: #1B2033;
-  --life-theme-border-dark: #353F5F;
+  --life-theme-border-dark: #355D5F;
   --life-theme-accent: #7986CB;
   --life-theme-accent-contrast: #FF8C33;
 }

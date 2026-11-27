@@ -137,7 +137,7 @@ body.theme-debate-work-week {
   --debate-theme-text: #1E351E;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #2E7D32;
-  --debate-theme-border: #C8E6C9;
+  --debate-theme-border: #C8E4E6;
   --debate-theme-watermark: "📆";
   --debate-theme-hero: linear-gradient(135deg, #2E7D32, #1B5E20);
   --debate-theme-round-header-bg: #E8F5E9;
@@ -147,7 +147,7 @@ body.theme-debate-ai-art {
   --debate-theme-text: #3E2723;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #BF360C;
-  --debate-theme-border: #FFCCBC;
+  --debate-theme-border: #CEEBED;
   --debate-theme-watermark: "🎨";
   --debate-theme-hero: linear-gradient(135deg, #9A2C0D, #5D4037);
   --debate-theme-round-header-bg: #FBE9E7;
@@ -167,7 +167,7 @@ body.theme-debate-homework-ban {
   --debate-theme-text: #4E342E;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #B45309;
-  --debate-theme-border: #FFE082;
+  --debate-theme-border: #A4DADD;
   --debate-theme-watermark: "🎒";
   --debate-theme-hero: linear-gradient(135deg, #994000, #4E342E);
   --debate-theme-round-header-bg: #FFF8E1;
@@ -177,7 +177,7 @@ body.theme-debate-human-cloning {
   --debate-theme-text: #1B301F;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #2E7D32;
-  --debate-theme-border: #A5D6A7;
+  --debate-theme-border: #A5D4D6;
   --debate-theme-watermark: "🧬";
   --debate-theme-hero: linear-gradient(135deg, #2E7D32, #0D5325);
   --debate-theme-round-header-bg: #E8F5E9;
@@ -187,7 +187,7 @@ body.theme-debate-meta-subscriptions {
   --debate-theme-text: #1E293B;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #1E3A8A;
-  --debate-theme-border: #CBD5E1;
+  --debate-theme-border: #CBE0E1;
   --debate-theme-watermark: "💳";
   --debate-theme-hero: linear-gradient(135deg, #1E3A8A, #0F172A);
   --debate-theme-round-header-bg: #EFF6FF;
@@ -197,7 +197,7 @@ body.theme-debate-money-time {
   --debate-theme-text: #2B1D0C;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #B25E00;
-  --debate-theme-border: #F5DDA9;
+  --debate-theme-border: #B9E2E5;
   --debate-theme-watermark: "💰";
   --debate-theme-hero: linear-gradient(135deg, #B25E00, #3E2400);
   --debate-theme-round-header-bg: #FFFDF9;
@@ -207,7 +207,7 @@ body.theme-debate-music-songs {
   --debate-theme-text: #3A1F2D;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #9C27B0;
-  --debate-theme-border: #E1BEE7;
+  --debate-theme-border: #BEE5E7;
   --debate-theme-watermark: "🎵";
   --debate-theme-hero: linear-gradient(135deg, #9C27B0, #4A148C);
   --debate-theme-round-header-bg: #F3E5F5;
@@ -217,7 +217,7 @@ body.theme-debate-education {
   --debate-theme-text: #1A2D3D;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #1565C0;
-  --debate-theme-border: #BBDEFB;
+  --debate-theme-border: #CBEAEB;
   --debate-theme-watermark: "🎓";
   --debate-theme-hero: linear-gradient(135deg, #1565C0, #0D47A1);
   --debate-theme-round-header-bg: #E3F2FD;
@@ -237,7 +237,7 @@ body.theme-debate-typing-writing {
   --debate-theme-text: #3E2723;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #8D6E63;
-  --debate-theme-border: #D7CCC8;
+  --debate-theme-border: #C8D6D7;
   --debate-theme-watermark: "✍️";
   --debate-theme-hero: linear-gradient(135deg, #8D6E63, #4E342E);
   --debate-theme-round-header-bg: #EFEBE9;
@@ -247,7 +247,7 @@ body.theme-debate-upbringing {
   --debate-theme-text: #4E2314;
   --debate-theme-card-bg: #FFFFFF;
   --debate-theme-accent: #BF360C;
-  --debate-theme-border: #FFDCC8;
+  --debate-theme-border: #D7EFF0;
   --debate-theme-watermark: "🧒";
   --debate-theme-hero: linear-gradient(135deg, #9A2C0D, #4E2314);
   --debate-theme-round-header-bg: #FDF2EB;
@@ -279,7 +279,7 @@ html[data-theme="dark"] body.theme-debate-work-week {
   --debate-theme-bg-dark: #0E1710;
   --debate-theme-text-dark: #E2EDE4;
   --debate-theme-card-bg-dark: #162319;
-  --debate-theme-border-dark: #233D29;
+  --debate-theme-border-dark: #233C3D;
   --debate-theme-accent: #4CAF50;
   --debate-theme-round-header-bg-dark: #1E3322;
 }
@@ -287,7 +287,7 @@ html[data-theme="dark"] body.theme-debate-ai-art {
   --debate-theme-bg-dark: #1A1512;
   --debate-theme-text-dark: #EDE6E2;
   --debate-theme-card-bg-dark: #2A201A;
-  --debate-theme-border-dark: #423229;
+  --debate-theme-border-dark: #294142;
   --debate-theme-accent: #FF7043;
   --debate-theme-round-header-bg-dark: #352821;
 }
@@ -295,7 +295,7 @@ html[data-theme="dark"] body.theme-debate-assisted-dying {
   --debate-theme-bg-dark: #0F161A;
   --debate-theme-text-dark: #E6ECEF;
   --debate-theme-card-bg-dark: #1B242C;
-  --debate-theme-border-dark: #2A3A47;
+  --debate-theme-border-dark: #2A4647;
   --debate-theme-accent: #26A69A;
   --debate-theme-round-header-bg-dark: #22323D;
 }
@@ -303,7 +303,7 @@ html[data-theme="dark"] body.theme-debate-homework-ban {
   --debate-theme-bg-dark: #1A1710;
   --debate-theme-text-dark: #ECE8DF;
   --debate-theme-card-bg-dark: #2B251B;
-  --debate-theme-border-dark: #4A402E;
+  --debate-theme-border-dark: #2E494A;
   --debate-theme-accent: #FFB300;
   --debate-theme-round-header-bg-dark: #372F21;
 }
@@ -311,7 +311,7 @@ html[data-theme="dark"] body.theme-debate-human-cloning {
   --debate-theme-bg-dark: #0D1610;
   --debate-theme-text-dark: #E3ECE5;
   --debate-theme-card-bg-dark: #16241B;
-  --debate-theme-border-dark: #283F2F;
+  --debate-theme-border-dark: #283E3F;
   --debate-theme-accent: #4CAF50;
   --debate-theme-round-header-bg-dark: #1D3224;
 }
@@ -319,7 +319,7 @@ html[data-theme="dark"] body.theme-debate-meta-subscriptions {
   --debate-theme-bg-dark: #0B0F19;
   --debate-theme-text-dark: #E2E8F0;
   --debate-theme-card-bg-dark: #172033;
-  --debate-theme-border-dark: #2E3F5E;
+  --debate-theme-border-dark: #2E5C5E;
   --debate-theme-accent: #60A5FA;
   --debate-theme-round-header-bg-dark: #1F2D47;
 }
@@ -327,7 +327,7 @@ html[data-theme="dark"] body.theme-debate-money-time {
   --debate-theme-bg-dark: #1A1510;
   --debate-theme-text-dark: #EDE5DC;
   --debate-theme-card-bg-dark: #2B221A;
-  --debate-theme-border-dark: #4E3E2F;
+  --debate-theme-border-dark: #2F4C4E;
   --debate-theme-accent: #FF9800;
   --debate-theme-round-header-bg-dark: #392D21;
 }
@@ -335,7 +335,7 @@ html[data-theme="dark"] body.theme-debate-music-songs {
   --debate-theme-bg-dark: #171116;
   --debate-theme-text-dark: #ECE4EB;
   --debate-theme-card-bg-dark: #291E27;
-  --debate-theme-border-dark: #473244;
+  --debate-theme-border-dark: #324647;
   --debate-theme-accent: #BA68C8;
   --debate-theme-round-header-bg-dark: #372534;
 }
@@ -343,7 +343,7 @@ html[data-theme="dark"] body.theme-debate-education {
   --debate-theme-bg-dark: #0E141B;
   --debate-theme-text-dark: #E2EAF0;
   --debate-theme-card-bg-dark: #1B2533;
-  --debate-theme-border-dark: #2A3A4F;
+  --debate-theme-border-dark: #2A4D4F;
   --debate-theme-accent: #42A5F5;
   --debate-theme-round-header-bg-dark: #233245;
 }
@@ -359,7 +359,7 @@ html[data-theme="dark"] body.theme-debate-typing-writing {
   --debate-theme-bg-dark: #1A1513;
   --debate-theme-text-dark: #ECE5E1;
   --debate-theme-card-bg-dark: #2B211E;
-  --debate-theme-border-dark: #463631;
+  --debate-theme-border-dark: #314546;
   --debate-theme-accent: #A1887F;
   --debate-theme-round-header-bg-dark: #3A2C29;
 }
@@ -367,7 +367,7 @@ html[data-theme="dark"] body.theme-debate-upbringing {
   --debate-theme-bg-dark: #1B1310;
   --debate-theme-text-dark: #EDE2DE;
   --debate-theme-card-bg-dark: #2F201B;
-  --debate-theme-border-dark: #4E342B;
+  --debate-theme-border-dark: #2B4C4E;
   --debate-theme-accent: #FF7043;
   --debate-theme-round-header-bg-dark: #3F2922;
 }

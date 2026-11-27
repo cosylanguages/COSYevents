@@ -42,8 +42,8 @@ body[class*="theme-ifyouwere-"] .session-hero {
 }
 
 body.theme-ifyouwere-blind .session-hero {
-  background: linear-gradient(135deg, #312E81, #1E1B4B) !important;
-  border-bottom: 2px solid #4F46E5;
+  background: linear-gradient(135deg, #307B7F, #1C484A) !important;
+  border-bottom: 2px solid #66C0C5;
 }
 
 body.theme-ifyouwere-deaf .session-hero {
@@ -52,8 +52,8 @@ body.theme-ifyouwere-deaf .session-hero {
 }
 
 body.theme-ifyouwere-child-again .session-hero {
-  background: linear-gradient(135deg, #C2410C, #7C2D12) !important;
-  border-bottom: 2px solid #EA580C;
+  background: linear-gradient(135deg, #399195, #276467) !important;
+  border-bottom: 2px solid #44ADB2;
 }
 
 body.theme-ifyouwere-parent-to-yourself .session-hero {
@@ -62,8 +62,8 @@ body.theme-ifyouwere-parent-to-yourself .session-hero {
 }
 
 body.theme-ifyouwere-teacher .session-hero {
-  background: linear-gradient(135deg, #831843, #500724) !important;
-  border-bottom: 2px solid #BE185D;
+  background: linear-gradient(135deg, #2B6D70, #183D3F) !important;
+  border-bottom: 2px solid #3B969B;
 }
 
 /* ─── THEME WATERMARKS ─── */
