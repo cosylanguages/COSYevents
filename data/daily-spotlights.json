@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-26T13:23:23.272Z",
-  "display_date": "November 26, 2026",
-  "date": "2026-11-26",
-  "day": 26,
+  "updated_at": "2026-11-27T13:21:22.119Z",
+  "display_date": "November 27, 2026",
+  "date": "2026-11-27",
+  "day": 27,
   "month": 11,
   "items": {
     "celebration": {
@@ -42,182 +42,107 @@
     "science": {
       "category": "science",
       "categoryTitle": "Today in Science",
-      "title": "Tidal power",
+      "title": "Sodium atmosphere",
       "year": "",
       "badge": "Research & Discovery",
-      "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor).",
+      "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999).",
       "clubLink": "keeping-up-with-science.html",
       "clubName": "Keeping Up with Science",
       "source": "Today in Science History",
-      "sourceUrl": "https://todayinsci.com/11/11_26.htm",
+      "sourceUrl": "https://todayinsci.com/11/11_27.htm",
       "i18n": {
         "en": {
-          "title": "Tidal power",
-          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+          "title": "Sodium atmosphere",
+          "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
         },
         "fr": {
-          "title": "Tidal power",
-          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+          "title": "Atmosphère de sodium",
+          "description": "(NASA) En 2001, le télescope spatial Hubble a détecté du sodium dans l'atmosphère d'une planète extrasolaire. L'atmosphère planétaire de HD 209458b a été la première à être mesurée en dehors de notre système solaire."
         },
         "it": {
-          "title": "Tidal power",
-          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+          "title": "Atmosfera di sodio",
+          "description": "(NASA) Nel 2001, il telescopio spaziale Hubble ha rilevato la presenza di sodio nell'atmosfera di un pianeta extrasolare. L'atmosfera planetaria di HD 209458b è stata la prima al di fuori del nostro sistema solare ad essere misurata."
         },
         "ru": {
-          "title": "Tidal power",
-          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+          "title": "Атмосфера натрия",
+          "description": "(НАСА) В 2001 году космический телескоп «Хаббл» обнаружил натрий в атмосфере экзопланеты. Атмосфера планеты HD 209458b стала первой за пределами нашей Солнечной системы, которую удалось измерить."
         },
         "el": {
-          "title": "Tidal power",
-          "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+          "title": "Ατμόσφαιρα νατρίου",
+          "description": "(NASA) Το 2001, το διαστημικό τηλεσκόπιο Χαμπλ ανίχνευσε νάτριο στην ατμόσφαιρα ενός εξωηλιακού πλανήτη. Η ατμόσφαιρα του πλανήτη HD 209458b ήταν η πρώτη εκτός του ηλιακού μας συστήματος που μετρήθηκε."
         }
       }
     },
     "music": {
       "category": "music",
       "categoryTitle": "Today in Music",
-      "title": "Jeux d'eau",
-      "year": "1901",
+      "title": "Bohemian Girl",
+      "year": "1843",
       "badge": "Music History",
-      "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
+      "description": "Opera \"Bohemian Girl\" by Michael William Balfe with a libretto by Alfred Bunn first produced in London",
       "clubLink": "karaoke-club.html",
       "clubName": "Karaoke Club",
       "source": "On This Day - Today in Music",
       "sourceUrl": "https://www.onthisday.com/music/",
       "i18n": {
         "en": {
-          "title": "Jeux d'eau",
-          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+          "title": "Bohemian Girl",
+          "description": "Opera \"Bohemian Girl\" by Michael William Balfe with a libretto by Alfred Bunn first produced in London"
         },
         "fr": {
-          "title": "Jeux d'eau",
-          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+          "title": "Fille bohème",
+          "description": "L'opéra « La Fille du Danube » de Michael William Balfe, sur un livret d'Alfred Bunn, est créé pour la première fois à Londres."
         },
         "it": {
-          "title": "Jeux d'eau",
-          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+          "title": "Ragazza bohémien",
+          "description": "Prima rappresentazione a Londra dell'opera \"La fanciulla boema\" di Michael William Balfe, con libretto di Alfred Bunn"
         },
         "ru": {
-          "title": "Jeux d'eau",
-          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+          "title": "Девушка-богема",
+          "description": "В Лондоне впервые поставлена опера «Богемная девушка» Майкла Уильяма Балфа на либретто Альфреда Банна."
         },
         "el": {
-          "title": "Jeux d'eau",
-          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
+          "title": "Μποέμ κορίτσι",
+          "description": "Παρουσιάζεται για πρώτη φορά στο Λονδίνο η όπερα «Η μποέμ κοπέλα» του Μάικλ Γουίλιαμ Μπαλφ με λιμπρέτο του Άλφρεντ Μπαν."
         }
       }
     },
     "film": {
       "category": "film",
       "categoryTitle": "Today in Film & TV",
-      "title": "Gentlemen's Agreement",
-      "year": "1947",
+      "title": "Audience throws vegetables at actors for...",
+      "year": "1911",
       "badge": "Cinema & Screen",
-      "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
+      "description": "Audience throws vegetables at actors for the first recorded time in the US",
       "clubLink": "cinema-nights/index.html",
       "clubName": "Cinema Nights",
       "source": "On This Day - Today in Film & TV",
       "sourceUrl": "https://www.onthisday.com/film-tv/",
       "i18n": {
         "en": {
-          "title": "Gentlemen's Agreement",
-          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+          "title": "Audience throws vegetables at actors for...",
+          "description": "Audience throws vegetables at actors for the first recorded time in the US"
         },
         "fr": {
-          "title": "Gentlemen's Agreement",
-          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+          "title": "Le public jette des légumes sur les acteurs pour...",
+          "description": "Pour la première fois aux États-Unis, le public lance des légumes sur les acteurs"
         },
         "it": {
-          "title": "Gentlemen's Agreement",
-          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+          "title": "Il pubblico lancia verdure agli attori per...",
+          "description": "Per la prima volta documentata negli Stati Uniti, il pubblico lancia verdure agli attori"
         },
         "ru": {
-          "title": "Gentlemen's Agreement",
-          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+          "title": "Зрители бросают овощи в актеров за...",
+          "description": "Зрители впервые в истории США забросали актеров овощами"
         },
         "el": {
-          "title": "Gentlemen's Agreement",
-          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+          "title": "Το κοινό πετάει λαχανικά στους ηθοποιούς επειδή...",
+          "description": "Το κοινό πετάει λαχανικά στους ηθοποιούς για πρώτη φορά καταγεγραμμένη στις ΗΠΑ"
         }
       }
     }
   },
   "days": {
-    "2026-11-25": {
-      "display_date": "November 25, 2026",
-      "day": 25,
-      "month": 11,
-      "items": {
-        "celebration": {
-          "category": "celebration",
-          "categoryTitle": "Holiday of the Day",
-          "title": "World Kindness & Cultural Exchange Day",
-          "badge": "Celebration",
-          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
-          "details": "International Day of Global Friendship & Cultural Understanding",
-          "clubLink": "lets-celebrate.html",
-          "clubName": "Let's Celebrate",
-          "source": "Global Traditions & Festivals",
-          "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
-          "i18n": {
-            "en": {
-              "title": "World Kindness & Cultural Exchange Day",
-              "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
-            },
-            "fr": {
-              "title": "Journée mondiale de la bienveillance et des échanges culturels",
-              "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
-            },
-            "it": {
-              "title": "Giornata mondiale della gentilezza e dello scambio culturale",
-              "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
-            },
-            "ru": {
-              "title": "Всемирный день доброты и культурного обмена",
-              "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
-            },
-            "el": {
-              "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
-              "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
-            }
-          }
-        },
-        "science": {
-          "category": "science",
-          "categoryTitle": "Today in Science",
-          "title": "CAT scan patent",
-          "year": "",
-          "badge": "Research & Discovery",
-          "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis.",
-          "clubLink": "keeping-up-with-science.html",
-          "clubName": "Keeping Up with Science",
-          "source": "Today in Science History",
-          "sourceUrl": "https://todayinsci.com/11/11_25.htm",
-          "i18n": {
-            "en": {
-              "title": "CAT scan patent",
-              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
-            },
-            "fr": {
-              "title": "CAT scan patent",
-              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
-            },
-            "it": {
-              "title": "CAT scan patent",
-              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
-            },
-            "ru": {
-              "title": "CAT scan patent",
-              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
-            },
-            "el": {
-              "title": "CAT scan patent",
-              "description": "Ledley(source) In 1975, the first U.S. patent for a whole-body X-ray scanner was issued to Robert S. Ledley (No. 3,922,552). The ACTA (Automatic Computerized Transverse Axial) diagnostic X-ray scanner revolutionized medical diagnosis."
-            }
-          }
-        }
-      }
-    },
     "2026-11-26": {
       "display_date": "November 26, 2026",
       "day": 26,
@@ -274,88 +199,20 @@
               "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
             },
             "fr": {
-              "title": "Tidal power",
-              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+              "title": "Énergie marémotrice",
+              "description": "(source) En 1966, le président Charles de Gaulle a inauguré la première centrale marémotrice au monde dans l'estuaire de la Rance, en Bretagne. La Rance est la centrale marémotrice la plus puissante au monde."
             },
             "it": {
-              "title": "Tidal power",
-              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+              "title": "energia mareomotrice",
+              "description": "(fonte) Nel 1966, il presidente Charles de Gaulle inaugurò la prima centrale mareomotrice al mondo nell'estuario della Rance, in Bretagna. La Rance è la centrale mareomotrice più potente al mondo."
             },
             "ru": {
-              "title": "Tidal power",
-              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
+              "title": "Приливная электростанция",
+              "description": "(источник) В 1966 году президент Шарль де Голль открыл первую в мире приливную электростанцию в устье реки Ранс в Бретани. Ла-Ранс — самая мощная приливная электростанция в мире. Сооружение шириной 700 метров перекрывает устье реки Ранс, расположенное недалеко от Сен-Мало (департамент Кот-д’Армор)."
             },
             "el": {
-              "title": "Tidal power",
-              "description": "(source) In 1966, President Charles de Gaulle opened the world's first tidal power station at Rance estuary, in Brittany. La Rance is the most powerful tidal power plant in the world. With its width of 700 metres, it blocks La Rance estuary situated near Saint-Malo (Côtes d'Armor)."
-            }
-          }
-        },
-        "music": {
-          "category": "music",
-          "categoryTitle": "Today in Music",
-          "title": "Jeux d'eau",
-          "year": "1901",
-          "badge": "Music History",
-          "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres",
-          "clubLink": "karaoke-club.html",
-          "clubName": "Karaoke Club",
-          "source": "On This Day - Today in Music",
-          "sourceUrl": "https://www.onthisday.com/music/",
-          "i18n": {
-            "en": {
-              "title": "Jeux d'eau",
-              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
-            },
-            "fr": {
-              "title": "Jeux d'eau",
-              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
-            },
-            "it": {
-              "title": "Jeux d'eau",
-              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
-            },
-            "ru": {
-              "title": "Jeux d'eau",
-              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
-            },
-            "el": {
-              "title": "Jeux d'eau",
-              "description": "Maurice Ravel's piano composition \"Jeux d'eau\" premieres"
-            }
-          }
-        },
-        "film": {
-          "category": "film",
-          "categoryTitle": "Today in Film & TV",
-          "title": "Gentlemen's Agreement",
-          "year": "1947",
-          "badge": "Cinema & Screen",
-          "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)",
-          "clubLink": "cinema-nights/index.html",
-          "clubName": "Cinema Nights",
-          "source": "On This Day - Today in Film & TV",
-          "sourceUrl": "https://www.onthisday.com/film-tv/",
-          "i18n": {
-            "en": {
-              "title": "Gentlemen's Agreement",
-              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
-            },
-            "fr": {
-              "title": "Gentlemen's Agreement",
-              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
-            },
-            "it": {
-              "title": "Gentlemen's Agreement",
-              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
-            },
-            "ru": {
-              "title": "Gentlemen's Agreement",
-              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
-            },
-            "el": {
-              "title": "Gentlemen's Agreement",
-              "description": "\"Gentlemen's Agreement\" directed by Elia Kazan, and starring Gregory Peck and Dorothy McGuire, premieres in New York City (Best Picture 1948)"
+              "title": "παλιρροιακή ισχύς",
+              "description": "(πηγή) Το 1966, ο Πρόεδρος Σαρλ ντε Γκωλ εγκαινίασε τον πρώτο σταθμό παραγωγής ενέργειας από παλίρροιες στον κόσμο, στη λιμνοθάλασσα του ποταμού Ρανς, στη Βρετάνη. Ο σταθμός La Rance είναι ο ισχυρότερος σταθμός παραγωγής ενέργειας από παλίρροια στον κόσμο."
             }
           }
         }
@@ -417,20 +274,163 @@
               "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
             },
             "fr": {
-              "title": "Sodium atmosphere",
-              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+              "title": "Atmosphère de sodium",
+              "description": "(NASA) En 2001, le télescope spatial Hubble a détecté du sodium dans l'atmosphère d'une planète extrasolaire. L'atmosphère planétaire de HD 209458b a été la première à être mesurée en dehors de notre système solaire."
             },
             "it": {
-              "title": "Sodium atmosphere",
-              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+              "title": "Atmosfera di sodio",
+              "description": "(NASA) Nel 2001, il telescopio spaziale Hubble ha rilevato la presenza di sodio nell'atmosfera di un pianeta extrasolare. L'atmosfera planetaria di HD 209458b è stata la prima al di fuori del nostro sistema solare ad essere misurata."
             },
             "ru": {
-              "title": "Sodium atmosphere",
-              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+              "title": "Атмосфера натрия",
+              "description": "(НАСА) В 2001 году космический телескоп «Хаббл» обнаружил натрий в атмосфере экзопланеты. Атмосфера планеты HD 209458b стала первой за пределами нашей Солнечной системы, которую удалось измерить."
             },
             "el": {
-              "title": "Sodium atmosphere",
-              "description": "(NASA) In 2001, sodium was detected in the atmosphere of an extrasolar planet by the Hubble Space Telescope. The planetary atmosphere of HD 209458b was the first outside our solar system to be measured. The planet, informally known as Osiris, was the first transiting planet discovered (5 Nov 1999)."
+              "title": "Ατμόσφαιρα νατρίου",
+              "description": "(NASA) Το 2001, το διαστημικό τηλεσκόπιο Χαμπλ ανίχνευσε νάτριο στην ατμόσφαιρα ενός εξωηλιακού πλανήτη. Η ατμόσφαιρα του πλανήτη HD 209458b ήταν η πρώτη εκτός του ηλιακού μας συστήματος που μετρήθηκε."
+            }
+          }
+        },
+        "music": {
+          "category": "music",
+          "categoryTitle": "Today in Music",
+          "title": "Bohemian Girl",
+          "year": "1843",
+          "badge": "Music History",
+          "description": "Opera \"Bohemian Girl\" by Michael William Balfe with a libretto by Alfred Bunn first produced in London",
+          "clubLink": "karaoke-club.html",
+          "clubName": "Karaoke Club",
+          "source": "On This Day - Today in Music",
+          "sourceUrl": "https://www.onthisday.com/music/",
+          "i18n": {
+            "en": {
+              "title": "Bohemian Girl",
+              "description": "Opera \"Bohemian Girl\" by Michael William Balfe with a libretto by Alfred Bunn first produced in London"
+            },
+            "fr": {
+              "title": "Fille bohème",
+              "description": "L'opéra « La Fille du Danube » de Michael William Balfe, sur un livret d'Alfred Bunn, est créé pour la première fois à Londres."
+            },
+            "it": {
+              "title": "Ragazza bohémien",
+              "description": "Prima rappresentazione a Londra dell'opera \"La fanciulla boema\" di Michael William Balfe, con libretto di Alfred Bunn"
+            },
+            "ru": {
+              "title": "Девушка-богема",
+              "description": "В Лондоне впервые поставлена опера «Богемная девушка» Майкла Уильяма Балфа на либретто Альфреда Банна."
+            },
+            "el": {
+              "title": "Μποέμ κορίτσι",
+              "description": "Παρουσιάζεται για πρώτη φορά στο Λονδίνο η όπερα «Η μποέμ κοπέλα» του Μάικλ Γουίλιαμ Μπαλφ με λιμπρέτο του Άλφρεντ Μπαν."
+            }
+          }
+        },
+        "film": {
+          "category": "film",
+          "categoryTitle": "Today in Film & TV",
+          "title": "Audience throws vegetables at actors for...",
+          "year": "1911",
+          "badge": "Cinema & Screen",
+          "description": "Audience throws vegetables at actors for the first recorded time in the US",
+          "clubLink": "cinema-nights/index.html",
+          "clubName": "Cinema Nights",
+          "source": "On This Day - Today in Film & TV",
+          "sourceUrl": "https://www.onthisday.com/film-tv/",
+          "i18n": {
+            "en": {
+              "title": "Audience throws vegetables at actors for...",
+              "description": "Audience throws vegetables at actors for the first recorded time in the US"
+            },
+            "fr": {
+              "title": "Le public jette des légumes sur les acteurs pour...",
+              "description": "Pour la première fois aux États-Unis, le public lance des légumes sur les acteurs"
+            },
+            "it": {
+              "title": "Il pubblico lancia verdure agli attori per...",
+              "description": "Per la prima volta documentata negli Stati Uniti, il pubblico lancia verdure agli attori"
+            },
+            "ru": {
+              "title": "Зрители бросают овощи в актеров за...",
+              "description": "Зрители впервые в истории США забросали актеров овощами"
+            },
+            "el": {
+              "title": "Το κοινό πετάει λαχανικά στους ηθοποιούς επειδή...",
+              "description": "Το κοινό πετάει λαχανικά στους ηθοποιούς για πρώτη φορά καταγεγραμμένη στις ΗΠΑ"
+            }
+          }
+        }
+      }
+    },
+    "2026-11-28": {
+      "display_date": "November 28, 2026",
+      "day": 28,
+      "month": 11,
+      "items": {
+        "celebration": {
+          "category": "celebration",
+          "categoryTitle": "Holiday of the Day",
+          "title": "World Kindness & Cultural Exchange Day",
+          "badge": "Celebration",
+          "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world.",
+          "details": "International Day of Global Friendship & Cultural Understanding",
+          "clubLink": "lets-celebrate.html",
+          "clubName": "Let's Celebrate",
+          "source": "Global Traditions & Festivals",
+          "sourceUrl": "https://cosylanguages.github.io/COSYevents/lets-celebrate.html",
+          "i18n": {
+            "en": {
+              "title": "World Kindness & Cultural Exchange Day",
+              "description": "A global occasion celebrating unity, cross-cultural appreciation, and community traditions around the world."
+            },
+            "fr": {
+              "title": "Journée mondiale de la bienveillance et des échanges culturels",
+              "description": "Une célébration planétaire dédiée à l’amitié, au dialogue interculturel et à la découverte des traditions de chaque pays."
+            },
+            "it": {
+              "title": "Giornata mondiale della gentilezza e dello scambio culturale",
+              "description": "Un momento globale per celebrare l’amicizia tra i popoli, il dialogo interculturale e le tradizioni della comunità."
+            },
+            "ru": {
+              "title": "Всемирный день доброты и культурного обмена",
+              "description": "Праздник взаимопонимания, межкультурного общения и уважения к традициям разных народов мира."
+            },
+            "el": {
+              "title": "Παγκόσμια Ημέρα Καλοσύνης και Πολιτιστικής Ανταλλαγής",
+              "description": "Μια παγκόσμια γιορτή αφιερωμένη στην αλληλοκατανόηση, τον διαπολιτισμικό διάλογο και τις κοινές παραδόσεις."
+            }
+          }
+        },
+        "science": {
+          "category": "science",
+          "categoryTitle": "Today in Science",
+          "title": "Pulsar discovery",
+          "year": "",
+          "badge": "Research & Discovery",
+          "description": "(source) In 1967, the first pulsating radio source (pulsar) was detected by an alert graduate student, Jocelyn Bell, then working under the direction of Prof. Anthony Hewish at the Mullard Radio Astronomy Observatory, Cambridge, England.",
+          "clubLink": "keeping-up-with-science.html",
+          "clubName": "Keeping Up with Science",
+          "source": "Today in Science History",
+          "sourceUrl": "https://todayinsci.com/11/11_28.htm",
+          "i18n": {
+            "en": {
+              "title": "Pulsar discovery",
+              "description": "(source) In 1967, the first pulsating radio source (pulsar) was detected by an alert graduate student, Jocelyn Bell, then working under the direction of Prof. Anthony Hewish at the Mullard Radio Astronomy Observatory, Cambridge, England."
+            },
+            "fr": {
+              "title": "Découverte de pulsars",
+              "description": "(source) En 1967, la première source radio pulsante (pulsar) a été détectée par une étudiante en master attentive, Jocelyn Bell, qui travaillait alors sous la direction du professeur Anthony Hewish à l'observatoire de radioastronomie Mullard, à Cambridge, en Angleterre."
+            },
+            "it": {
+              "title": "Scoperta della pulsar",
+              "description": "(fonte) Nel 1967, la prima sorgente radio pulsante (pulsar) fu rilevata da una studentessa laureata attenta, Jocelyn Bell, che all'epoca lavorava sotto la direzione del prof. Anthony Hewish presso il Mullard Radio Astronomy Observatory di Cambridge, in Inghilterra."
+            },
+            "ru": {
+              "title": "Открытие пульсара",
+              "description": "(источник) В 1967 году первый пульсирующий радиоисточник (пульсар) был обнаружен внимательной аспиранткой Джоселин Белл, которая в то время работала под руководством профессора Энтони Хьюиша в Радиоастрономической обсерватории Малларда в Кембридже, Англия."
+            },
+            "el": {
+              "title": "Ανακάλυψη πάλσαρ",
+              "description": "(πηγή) Το 1967, η πρώτη παλλόμενη ραδιοπηγή (πάλσαρ) εντοπίστηκε από μια προσεκτική μεταπτυχιακή φοιτήτρια, την Τζόσελιν Μπελ, η οποία εργαζόταν τότε υπό την καθοδήγηση του καθηγητή Άντονι Χιούις στο Αστεροσκοπείο Ραδιοαστρονομίας Μάλαρντ του Κέιμπριτζ στην Αγγλία."
             }
           }
         }
