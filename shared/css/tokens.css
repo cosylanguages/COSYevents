@@ -12,5 +12,6 @@
  */
 
 @import url("../vendor/cosylanguages/css/fonts.css");
+@import url("./product-fonts.css");
 @import url("../vendor/cosylanguages/shared/css/tokens.css");
 @import url("./product-tokens.css");

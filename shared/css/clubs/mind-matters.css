@@ -106,7 +106,7 @@
 }
 
 .mind-card-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--ink-deep);
@@ -177,7 +177,7 @@
 }
 
 .mind-profile-box h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: #993556;

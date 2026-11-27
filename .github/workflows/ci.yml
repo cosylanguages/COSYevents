@@ -43,6 +43,9 @@ jobs:
       - name: Check brand colour contrast
         run: npm run check-contrast
 
+      - name: No external font CDN
+        run: npm run check-external-fonts
+
       - name: Verify sitemap is up to date
         run: npm run check-sitemap
 

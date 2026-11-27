@@ -86,12 +86,26 @@ Chrome fetches every subset of a family it uses, so a first visit costs about
 `font-display: swap` keeps text visible, so this is accepted rather than
 worked around.
 
-Known tail, not yet converted: `fr/sessions/i-couldnt-help-but-wonder/*` (3
-pages, self-contained with inline CSS using `DM Sans`) and
-`sessions/lets-celebrate/italian-gastronomy.html` (pulls Playfair Display, DM
-Sans and Nunito from `fonts.googleapis.com` — an external runtime dependency).
-Converting them needs a typeface mapping decision: DM Sans to Commissioner,
-Playfair to Fraunces, Nunito has no self-hosted equivalent.
+### No third-party font CDNs
+
+643 pages used to load Playfair Display, DM Sans and Nunito from
+fonts.googleapis.com. That was an external runtime dependency: it leaked
+visitor IPs, broke rendering when the CDN was blocked, and meant the site
+depended on a service it does not control.
+
+Those pages now use the self-hosted COSY families: Playfair Display maps to
+Fraunces, and DM Sans and Nunito map to Commissioner. `npm run
+check-external-fonts` fails if a font CDN link or `@import` returns.
+
+Italic cuts live in `shared/fonts/` and are declared in
+`shared/css/product-fonts.css`, because the vendored `fonts.css` ships upright
+faces only while 398 pages set italic. Commissioner has no true italic, so body
+italics are synthesised; Fraunces and Literata italics are real.
+
+Removing the CDN also invalidated the privacy pages, which disclosed the Google
+Fonts request. `privacy.html` and `fr/privacy.html` now state that fonts are
+self-hosted. Any future change to hosting or assets must be checked against
+those pages.
 
 ## Verification
 

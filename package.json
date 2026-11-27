@@ -21,6 +21,7 @@
     "vendor:cosylanguages": "node scripts/vendor_cosylanguages.js",
     "check-vendor": "node scripts/vendor_cosylanguages.js --check",
     "check-contrast": "node scripts/check_contrast.js",
+    "check-external-fonts": "node scripts/check_external_fonts.js",
     "check-redirects": "node scripts/check_redirects.js",
     "check:gated": "node scripts/check-gated-pages.js",
     "session:new": "node scripts/session_new.js",

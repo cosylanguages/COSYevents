@@ -54,7 +54,7 @@
 }
 
 .quotes-card-quote {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.45;
@@ -64,7 +64,7 @@
 }
 
 .quotes-card-desc {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-size: 0.85rem;
   line-height: 1.5;
   color: var(--ink-soft, #5D4037);
@@ -182,7 +182,7 @@ html[data-theme="dark"] .quotes-card-view:hover {
   padding: 1.5rem;
   margin-bottom: 2rem;
   box-shadow: var(--shadow-sm);
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   font-style: italic;
   color: #3E2723 !important;
   position: relative;
@@ -204,7 +204,7 @@ html[data-theme="dark"] .quotes-card-view:hover {
 
 .philosophers-ledger h4 {
   margin: 0 0 0.5rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -544,7 +544,7 @@ body[class*="theme-quotes"]::after {
 }
 
 .quote-author-name {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--ink, #3E2723);
@@ -553,7 +553,7 @@ body[class*="theme-quotes"]::after {
 }
 
 .quote-author-years {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--muted, #8D6E63);
@@ -562,7 +562,7 @@ body[class*="theme-quotes"]::after {
 }
 
 .quote-author-job {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--ink-soft, #5D4037);
@@ -570,7 +570,7 @@ body[class*="theme-quotes"]::after {
 }
 
 .quote-author-fact {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-size: 0.9rem;
   line-height: 1.5;
   color: var(--ink, #3E2723);

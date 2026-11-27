@@ -21,7 +21,7 @@
 .pm-col h5 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   font-size: 1.1rem;
   color: #4F46E5;
 }

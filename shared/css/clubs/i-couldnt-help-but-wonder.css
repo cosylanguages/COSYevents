@@ -1184,7 +1184,7 @@ body.theme-wonder-watched .teacher-note-panel {
   background: #3F2B96;
   color: white;
   border: none;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-weight: bold;
   font-size: 0.88rem;
   padding: 0.6rem 1.2rem;

@@ -141,7 +141,7 @@
 }
 
 .celebrate-card-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   font-weight: 700;
   font-size: 1.15rem;
   color: var(--text-color, var(--ink));
@@ -211,7 +211,7 @@
 }
 
 .celebrate-theme-box h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   color: #BA7517;
   margin-top: 0;
   margin-bottom: 1rem;

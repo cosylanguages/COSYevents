@@ -60,7 +60,7 @@ body.theme-cinema {
   border: 1px solid rgba(250, 247, 242, 0.2);
   border-radius: 4px;
   margin-bottom: 1rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-size: 0.72rem;
   text-transform: uppercase;
   background: rgba(0,0,0,0.15);
@@ -87,7 +87,7 @@ body.theme-cinema {
   color: #FAF7F2;
 }
 .clapper-title {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   font-weight: 700;
   font-size: 1.2rem;
   color: #FAF7F2;
@@ -125,7 +125,7 @@ body.theme-cinema {
   z-index: 1;
 }
 .cinema-slate-box h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   color: #BA7517;
   margin-top: 0;
   margin-bottom: 1rem;

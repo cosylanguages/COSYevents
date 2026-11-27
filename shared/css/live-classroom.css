@@ -15,7 +15,7 @@ body {
   margin: 0;
   background: var(--live-bg);
   color: var(--live-ink);
-  font-family: 'DM Sans', 'Nunito', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
 }
 
 .live-header {
@@ -41,7 +41,7 @@ body {
 .live-brand span {
   margin-top: 0.1rem;
   color: var(--live-muted);
-  font-family: 'DM Sans', 'Nunito', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
 }

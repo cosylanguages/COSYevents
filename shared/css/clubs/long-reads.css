@@ -9,7 +9,7 @@
   margin-bottom: 2rem;
   box-shadow: 0 8px 24px rgba(122, 28, 28, 0.15);
   color: #3E0F0F;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--cosy-font-serif, 'Fraunces', Georgia, serif), serif;
   text-align: left;
 }
 .ledger-header {
@@ -20,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #7A1C1C;
@@ -63,7 +63,7 @@
   border-radius: 6px;
   color: #3E0F0F;
   padding: 0.6rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-size: 0.9rem;
 }
 .ledger-input:focus {
@@ -77,7 +77,7 @@
   border: none;
   border-radius: 6px;
   padding: 0.6rem 1.2rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
@@ -89,7 +89,7 @@
 }
 .ledger-hint {
   font-size: 0.72rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
   color: #A34E4E;
   margin-top: 0.5rem;
   text-align: right;
