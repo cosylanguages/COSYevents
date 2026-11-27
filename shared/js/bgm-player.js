@@ -44,7 +44,7 @@
 
       container.innerHTML = `
         <button id="cosy-bgm-toggle" style="
-          background: #3F2B96;
+          background: #087A80;
           color: white;
           border: none;
           border-radius: 50%;
@@ -58,10 +58,10 @@
           box-shadow: 0 2px 8px rgba(63,43,150,0.3);
           transition: transform 0.2s ease, background 0.2s ease;
         " title="Toggle Background Ambient Music">🎵</button>
-        <span id="cosy-bgm-status" style="font-weight: 600; color: #3F2B96; font-size: 0.85rem; min-width: 90px;">Background Music</span>
+        <span id="cosy-bgm-status" style="font-weight: 600; color: #087A80; font-size: 0.85rem; min-width: 90px;">Background Music</span>
         <input type="range" id="cosy-bgm-volume" min="0" max="1" step="0.05" value="0.15" style="
           width: 70px;
-          accent-color: #3F2B96;
+          accent-color: #087A80;
           cursor: pointer;
         " title="Volume">
       `;
@@ -76,12 +76,12 @@
         if (!this.isPlaying) {
           this.startBGM();
           toggleBtn.innerHTML = '⏸️';
-          toggleBtn.style.background = '#2e1f70';
+          toggleBtn.style.background = '#0B4749';
           statusSpan.textContent = 'Ambient BGM Playing';
         } else {
           this.stopBGM();
           toggleBtn.innerHTML = '🎵';
-          toggleBtn.style.background = '#3F2B96';
+          toggleBtn.style.background = '#087A80';
           statusSpan.textContent = 'Background Music';
         }
       });

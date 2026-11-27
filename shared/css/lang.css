@@ -7,19 +7,19 @@
   --ce-lang-muted: var(--muted, #5C5957);
   --ce-lang-active-bg: var(--sage-deep, #062b2d);
   --ce-lang-active-text: #FFFFFF;
-  --ce-lang-accent: var(--teal, #0F6E56);
+  --ce-lang-accent: var(--cosy-primary, #087a80);
   --ce-lang-label-color: #3D3935;
 }
 
 [data-theme="dark"] {
-  --ce-lang-bg: #1A162B;
-  --ce-lang-border: #3F3766;
-  --ce-lang-text: #F3F0FF;
-  --ce-lang-muted: #A39CBD;
-  --ce-lang-active-bg: #5B3AE0;
+  --ce-lang-bg: #101617;
+  --ce-lang-border: #2F3D3E;
+  --ce-lang-text: #E9F2F1;
+  --ce-lang-muted: #9DB3B1;
+  --ce-lang-active-bg: #0A5F63;
   --ce-lang-active-text: #FFFFFF;
-  --ce-lang-accent: #9D84FF;
-  --ce-lang-label-color: #F3F0FF;
+  --ce-lang-accent: #6DE3DE;
+  --ce-lang-label-color: #E9F2F1;
 }
 
 /* --- Language Switcher Control --- */

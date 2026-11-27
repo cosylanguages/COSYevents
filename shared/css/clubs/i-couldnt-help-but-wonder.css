@@ -21,13 +21,13 @@ body.theme-wonder-weather .round-header {
   color: #4c1d95 !important;
 }
 body.theme-wonder-weather .round-item-personal {
-  color: #7c3aed !important;
+  color: #087A80 !important;
 }
 body.theme-wonder-weather .back-link, body.theme-wonder-weather .cosy-breadcrumbs {
   color: #4c1d95 !important;
 }
 body.theme-wonder-weather .cosy-breadcrumbs .current {
-  color: #7c3aed !important;
+  color: #087A80 !important;
 }
 .theme-wonder-weather .wonder-column-box {
   background: linear-gradient(135deg, rgba(63, 43, 150, 0.04), rgba(31, 16, 77, 0.08));
@@ -255,7 +255,7 @@ body.theme-wonder-album {
   color: #e5e5ec !important;
 }
 body.theme-wonder-album .section-title {
-  color: #8b5cf6 !important;
+  color: #087A80 !important;
 }
 body.theme-wonder-album .vocab-card {
   background: #1a1a24 !important;
@@ -283,19 +283,19 @@ body.theme-wonder-album .back-link, body.theme-wonder-album .cosy-breadcrumbs {
   color: #c7c7d3 !important;
 }
 body.theme-wonder-album .cosy-breadcrumbs .current {
-  color: #8b5cf6 !important;
+  color: #087A80 !important;
 }
 .theme-wonder-album .wonder-column-box {
   background: #1a1a24;
   border: 1px solid #33334d;
-  border-left: 5px solid #8b5cf6;
+  border-left: 5px solid #087A80;
 }
 .theme-wonder-album .wonder-column-box p, .theme-wonder-album .wonder-column-box h5, .theme-wonder-album .wonder-column-title {
   color: #e5e5ec !important;
 }
 .theme-wonder-album .carrie-diary {
   background: #111116 !important;
-  border: 2px dashed #8b5cf6 !important;
+  border: 2px dashed #087A80 !important;
   color: #e5e5ec !important;
   box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2) !important;
 }
@@ -341,7 +341,7 @@ body.theme-wonder-series .cosy-breadcrumbs .current {
 
 /* 9. Why is Everyone Copying Me */
 body.theme-wonder-copying {
-  background: radial-gradient(#a855f7 10%, transparent 10%) 0 0 / 18px 16px, #faf5ff !important;
+  background: radial-gradient(#087A80 10%, transparent 10%) 0 0 / 18px 16px, #faf5ff !important;
 }
 body.theme-wonder-copying .section-title {
   color: #7e22ce !important;
@@ -370,12 +370,12 @@ body.theme-wonder-copying .cosy-breadcrumbs .current {
 .theme-wonder-copying .wonder-column-box {
   background: linear-gradient(90deg, rgba(139, 92, 246, 0.02) 50%, rgba(236, 72, 153, 0.02) 50%);
   border: 1px solid rgba(139, 92, 246, 0.2);
-  border-left: 5px solid #a855f7;
+  border-left: 5px solid #087A80;
   box-shadow: 4px 4px 0px rgba(139, 92, 246, 0.08);
 }
 .theme-wonder-copying .carrie-diary {
   background: #fdfafc !important;
-  border: 2px dashed #a855f7 !important;
+  border: 2px dashed #087A80 !important;
   box-shadow: 6px 6px 0px rgba(168, 85, 247, 0.12) !important;
 }
 
@@ -752,18 +752,18 @@ body.theme-wonder-album .round-block {
 }
 body.theme-wonder-album .round-header {
   background: #232334 !important;
-  border-bottom: 2px solid #8b5cf6 !important;
+  border-bottom: 2px solid #087A80 !important;
 }
 body.theme-wonder-album .carrie-diary {
   background: rgba(26, 26, 38, 0.85) !important;
-  border: 2px dashed #8b5cf6 !important;
+  border: 2px dashed #087A80 !important;
   color: #e5e5ec !important;
   box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15) !important;
 }
 body.theme-wonder-album .wonder-column-box {
   background: rgba(26, 26, 38, 0.8) !important;
   border: 1px solid rgba(139, 92, 246, 0.3) !important;
-  border-left: 5px solid #8b5cf6 !important;
+  border-left: 5px solid #087A80 !important;
 }
 
 /* 10. Always Watched in a Crowd (Contrast & Background Overrides) */
@@ -868,7 +868,7 @@ body.theme-wonder-amy .grammar-tap-chip {
 }
 body.theme-wonder-album .grammar-tap-chip {
   background: #232334 !important;
-  border: 1px solid #8b5cf6 !important;
+  border: 1px solid #087A80 !important;
   color: #e5e5ec !important;
 }
 body.theme-wonder-watched .grammar-tap-chip {
@@ -891,7 +891,7 @@ body.theme-wonder-amy .btn-verify {
   background: #e11d48 !important;
 }
 body.theme-wonder-album .btn-verify {
-  background: #8b5cf6 !important;
+  background: #087A80 !important;
 }
 body.theme-wonder-watched .btn-verify {
   background: #10b981 !important;
@@ -919,7 +919,7 @@ body.theme-wonder-watched .grammar-task-item {
   border-left-color: var(--section-title-color, #e11d48) !important;
 }
 body.theme-wonder-album .grammar-task-item {
-  border-left-color: #8b5cf6 !important;
+  border-left-color: #087A80 !important;
 }
 body.theme-wonder-watched .grammar-task-item {
   border-left-color: #10b981 !important;
@@ -1138,7 +1138,7 @@ body.theme-wonder-watched .teacher-note-panel {
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(135deg, rgba(63, 43, 150, 0.08), rgba(31, 16, 77, 0.08));
-  border: 2px dashed #3F2B96;
+  border: 2px dashed #087A80;
   border-radius: 16px;
   padding: 1.25rem 1.5rem;
   margin-bottom: 2.5rem;
@@ -1154,7 +1154,7 @@ body.theme-wonder-watched .teacher-note-panel {
 }
 
 .host-utility-bar .hub-tag {
-  background: #3F2B96;
+  background: #087A80;
   color: white;
   font-family: monospace;
   font-weight: bold;
@@ -1181,7 +1181,7 @@ body.theme-wonder-watched .teacher-note-panel {
 }
 
 .host-utility-bar .btn-copy-link {
-  background: #3F2B96;
+  background: #087A80;
   color: white;
   border: none;
   font-family: var(--cosy-font-sans, system-ui, sans-serif), sans-serif;
@@ -1198,7 +1198,7 @@ body.theme-wonder-watched .teacher-note-panel {
 }
 
 .host-utility-bar .btn-copy-link:hover {
-  background: #8b5cf6;
+  background: #087A80;
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
@@ -1222,7 +1222,7 @@ body.theme-wonder-watched .teacher-note-panel {
 }
 
 .host-utility-bar .unobtrusive-back-link:hover {
-  color: #3F2B96;
+  color: #087A80;
   text-decoration: underline;
 }
 
@@ -1231,7 +1231,7 @@ body.theme-wonder-amy .host-utility-bar,
 body.theme-wonder-album .host-utility-bar,
 body.theme-wonder-watched .host-utility-bar {
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(63, 43, 150, 0.1));
-  border-color: #8b5cf6;
+  border-color: #087A80;
 }
 
 body.theme-wonder-amy .host-utility-bar .hub-info,
@@ -1243,7 +1243,7 @@ body.theme-wonder-watched .host-utility-bar .hub-info {
 body.theme-wonder-amy .host-utility-bar .btn-copy-link,
 body.theme-wonder-album .host-utility-bar .btn-copy-link,
 body.theme-wonder-watched .host-utility-bar .btn-copy-link {
-  background: #8b5cf6;
+  background: #087A80;
 }
 
 body.theme-wonder-amy .host-utility-bar .btn-copy-link:hover,
@@ -1255,7 +1255,7 @@ body.theme-wonder-watched .host-utility-bar .btn-copy-link:hover {
 body.theme-wonder-amy .host-utility-bar .unobtrusive-back-link:hover,
 body.theme-wonder-album .host-utility-bar .unobtrusive-back-link:hover,
 body.theme-wonder-watched .host-utility-bar .unobtrusive-back-link:hover {
-  color: #8b5cf6;
+  color: #087A80;
 }
 
 /* Multi-mode session rendering controls */
@@ -1415,4 +1415,16 @@ body[class*="theme-wonder"]::after {
   opacity: 0.03;
   pointer-events: none;
   z-index: -1;
+}
+/* ---------------------------------------------------------------------
+ * BRAND THEME OVERRIDE
+ *
+ * Session themes each carried their own palette, so one page could be
+ * pink, another indigo, another amber. They are all the brand ramp now:
+ * the theme classes survive as hooks, but they resolve to teal. The
+ * attribute selectors outrank the per-theme class rules above.
+ * ------------------------------------------------------------------ */
+
+body[class*="theme-wonder-"] {
+  --wonder-theme-hero: linear-gradient(135deg, #087A80, #0B4749);
 }

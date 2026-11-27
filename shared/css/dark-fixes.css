@@ -223,9 +223,11 @@ body[class*="theme-wonder-"] .wonder-column-item * { color: #e8e4ef !important; 
 }
 
 /* Inline-styled club chips keep a light mint fill while dark mode re-inks the
-   text light, so the label vanishes. Match the inline fill and darken it. */
+   text light, so the label vanishes. Match the inline fills and darken them. */
 html[data-theme="dark"] .club-tag[style*="E1F5EE" i],
-body.theme-dark .club-tag[style*="E1F5EE" i] {
+body.theme-dark .club-tag[style*="E1F5EE" i],
+html[data-theme="dark"] .club-tag[style*="EFFCFB" i],
+body.theme-dark .club-tag[style*="EFFCFB" i] {
   background: rgba(111, 209, 180, 0.16) !important;
   border-color: rgba(111, 209, 180, 0.28) !important;
 }

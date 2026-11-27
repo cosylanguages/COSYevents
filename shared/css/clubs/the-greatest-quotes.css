@@ -154,9 +154,9 @@ html[data-theme="dark"] .quotes-card-view:hover {
   text-transform: uppercase;
 }
 .quotes-card .tag-c1 {
-  background: #EEEDFE;
-  color: #534AB7;
-  border: 1px solid #D2CFFE;
+  background: #EFFCFB;
+  color: #087A80;
+  border: 1px solid #CFE9E7;
   font-weight: 600;
   font-size: 0.75rem;
   padding: 2px 6px;
@@ -644,4 +644,22 @@ html[data-theme="dark"] .quote-author-fact-first {
   .quote-author-fact-first {
     border-top: 1px dashed var(--border, #E2D9CF);
   }
+}
+
+/* ---------------------------------------------------------------------
+ * BRAND THEME OVERRIDE
+ *
+ * Session themes each carried their own palette, so one page could be
+ * pink, another indigo, another amber. They are all the brand ramp now:
+ * the theme classes survive as hooks, but they resolve to teal. The
+ * attribute selectors outrank the per-theme class rules above.
+ * ------------------------------------------------------------------ */
+
+body[class*="theme-quotes-"] {
+  --quotes-theme-accent: #087A80;
+  --quotes-theme-bg: #F7FEFD;
+  --quotes-theme-border: #CFE9E7;
+  --quotes-theme-card-bg: #FFFFFF;
+  --quotes-theme-hero: linear-gradient(135deg, #087A80, #0B4749);
+  --quotes-theme-text: #1C2B2C;
 }

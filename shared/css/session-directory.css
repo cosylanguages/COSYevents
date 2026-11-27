@@ -509,12 +509,12 @@
 /* 2. Karaoke Club */
 .sd-card[data-club="Karaoke Club"],
 .sd-card[data-format="Karaoke Club"] {
-  border-top-color: #8b5cf6;
+  border-top-color: #087A80;
   background: linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, var(--warm-white) 40%);
 }
 .sd-card[data-club="Karaoke Club"] .sd-card-club,
 .sd-card[data-format="Karaoke Club"] .sd-card-club {
-  color: #7c3aed;
+  color: #087A80;
 }
 
 /* 3. Long Reads */
@@ -577,11 +577,11 @@
 
 /* 9. The Greatest Quotes */
 .sd-card[data-club="The Greatest Quotes"] {
-  border-top-color: #534AB7;
+  border-top-color: #087A80;
   background: linear-gradient(180deg, rgba(83, 74, 183, 0.03) 0%, var(--warm-white) 40%);
 }
 .sd-card[data-club="The Greatest Quotes"] .sd-card-club {
-  color: #534AB7;
+  color: #087A80;
 }
 
 /* 10. Let's Celebrate */

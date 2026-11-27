@@ -269,7 +269,7 @@ body.theme-science-creative {
 .theme-science-creative .science-journal-box {
   background: rgba(168, 85, 247, 0.05);
   border: 1px solid rgba(168, 85, 247, 0.25);
-  border-left: 5px solid #a855f7;
+  border-left: 5px solid #087A80;
 }
 .theme-science-creative .vocab-card {
   border: 1px solid rgba(168, 85, 247, 0.15);
@@ -278,7 +278,7 @@ body.theme-science-creative {
 }
 .theme-science-creative .round-header {
   background: #111438 !important;
-  border-left: 5px solid #a855f7;
+  border-left: 5px solid #087A80;
 }
 
 /* 15. Grandparents (Family Psychometrics) */

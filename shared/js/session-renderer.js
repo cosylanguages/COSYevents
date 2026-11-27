@@ -172,7 +172,7 @@
         grammarItems.forEach(function (gItem) {
           var gBlock = createElement('div', 'round-block open');
           var gHeader = createElement('div', 'round-header');
-          gHeader.style.background = '#EEEDFE';
+          gHeader.style.background = '#EFFCFB';
           gHeader.appendChild(createElement('span', null, '📚 ' + (gItem.title || 'Grammar Focus')));
           gHeader.appendChild(createElement('span', 'round-toggle', '▲'));
 

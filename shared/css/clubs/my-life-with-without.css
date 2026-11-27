@@ -400,3 +400,29 @@ body[class*="theme-life-"]::after {
   pointer-events: none;
   z-index: -1;
 }
+
+/* ---------------------------------------------------------------------
+ * BRAND THEME OVERRIDE
+ *
+ * Session themes each carried their own palette, so one page could be
+ * pink, another indigo, another amber. They are all the brand ramp now:
+ * the theme classes survive as hooks, but they resolve to teal. The
+ * attribute selectors outrank the per-theme class rules above.
+ * ------------------------------------------------------------------ */
+
+body[class*="theme-life-"] {
+  --life-theme-accent: #087A80;
+  --life-theme-bg: #F7FEFD;
+  --life-theme-border: #CFE9E7;
+  --life-theme-card-bg: #FFFFFF;
+  --life-theme-hero: linear-gradient(135deg, #087A80, #0B4749);
+  --life-theme-text: #1C2B2C;
+}
+
+html[data-theme="dark"] body[class*="theme-life-"],
+body.theme-dark[class*="theme-life-"] {
+  --life-theme-bg-dark: #101617;
+  --life-theme-border-dark: #2F3D3E;
+  --life-theme-card-bg-dark: #1F2A2B;
+  --life-theme-text-dark: #E9F2F1;
+}

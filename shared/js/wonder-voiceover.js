@@ -100,7 +100,7 @@
 
         playerCard.innerHTML = `
           <button class="wonder-speech-play-btn" style="
-            background: #3F2B96;
+            background: #087A80;
             color: white;
             border: none;
             border-radius: 50%;
@@ -117,9 +117,9 @@
           " title="Listen to Column Narration">🎙️</button>
 
           <div style="flex-grow: 1;">
-            <div style="font-weight: 700; color: #3F2B96; font-size: 0.95rem; margin-bottom: 0.2rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <div style="font-weight: 700; color: #087A80; font-size: 0.95rem; margin-bottom: 0.2rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
               <span>🎙️ Listen to Column Narration</span>
-              <span class="speech-mode-badge" style="font-size: 0.72rem; padding: 2px 8px; border-radius: 12px; background: #EEEDFE; color: #3F2B96; font-weight: 600;">${badgeLabel}</span>
+              <span class="speech-mode-badge" style="font-size: 0.72rem; padding: 2px 8px; border-radius: 12px; background: #EFFCFB; color: #087A80; font-weight: 600;">${badgeLabel}</span>
             </div>
             <div class="speech-status-text" style="font-size: 0.85rem; color: #666;">
               ${initialStatus}
@@ -173,7 +173,7 @@
                   this.restoreMusic();
                   this.isPlaying = false;
                   playBtn.innerHTML = '🎙️';
-                  playBtn.style.background = '#3F2B96';
+                  playBtn.style.background = '#087A80';
                   statusText.textContent = 'Voiceover complete.';
                 });
                 this.audioObj.addEventListener('error', () => {
@@ -238,7 +238,7 @@
         this.restoreMusic();
         this.isPlaying = false;
         playBtn.innerHTML = '🎙️';
-        playBtn.style.background = '#3F2B96';
+        playBtn.style.background = '#087A80';
         statusText.textContent = 'Voiceover complete.';
       };
 
@@ -268,7 +268,7 @@
       this.restoreMusic();
       this.isPlaying = false;
       playBtn.innerHTML = '🎙️';
-      playBtn.style.background = '#3F2B96';
+      playBtn.style.background = '#087A80';
       statusText.textContent = 'Voiceover paused.';
     }
   }

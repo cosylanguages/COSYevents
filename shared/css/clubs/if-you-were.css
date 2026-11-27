@@ -1,7 +1,7 @@
 
 /* "If You Were" speaking club layout components */
 .perspective-mirror-box {
-  background: #EEEDFE;
+  background: #EFFCFB;
   border: 2px dashed #4F46E5;
   border-radius: 20px;
   padding: 1.5rem;
@@ -82,3 +82,16 @@ body.theme-ifyouwere-deaf::after { content: "🔇"; }
 body.theme-ifyouwere-child-again::after { content: "👶"; }
 body.theme-ifyouwere-parent-to-yourself::after { content: "🧬"; }
 body.theme-ifyouwere-teacher::after { content: "🏫"; }
+
+/* ---------------------------------------------------------------------
+ * BRAND THEME OVERRIDE
+ *
+ * Session themes each carried their own palette, so one page could be
+ * pink, another indigo, another amber. They are all the brand ramp now:
+ * the theme classes survive as hooks, but they resolve to teal. The
+ * attribute selectors outrank the per-theme class rules above.
+ * ------------------------------------------------------------------ */
+
+body[class*="theme-ifyouwere-"] {
+  --ifyouwere-theme-hero: linear-gradient(135deg, #087A80, #0B4749);
+}

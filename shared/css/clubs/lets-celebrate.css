@@ -123,9 +123,9 @@
   border-color: #BEE3F8;
 }
 .celebrate-card-banner .tag-c1 {
-  background: #EEEDFE;
-  color: #534AB7;
-  border-color: #D2CFFE;
+  background: #EFFCFB;
+  color: #087A80;
+  border-color: #CFE9E7;
 }
 .celebrate-card-banner .tag-c2 {
   background: #EBF8FF;
@@ -562,4 +562,22 @@ html[data-theme="dark"] body.theme-celebrate-nature {
   --celebrate-theme-accent: #62C288;
   --celebrate-theme-border: #253D2F;
   --celebrate-theme-hero: linear-gradient(135deg, #2A5A3E, #111C15);
+}
+
+/* ---------------------------------------------------------------------
+ * BRAND THEME OVERRIDE
+ *
+ * Session themes each carried their own palette, so one page could be
+ * pink, another indigo, another amber. They are all the brand ramp now:
+ * the theme classes survive as hooks, but they resolve to teal. The
+ * attribute selectors outrank the per-theme class rules above.
+ * ------------------------------------------------------------------ */
+
+body[class*="theme-celebrate-"] {
+  --celebrate-theme-accent: #087A80;
+  --celebrate-theme-bg: #F7FEFD;
+  --celebrate-theme-border: #CFE9E7;
+  --celebrate-theme-card-bg: #FFFFFF;
+  --celebrate-theme-hero: linear-gradient(135deg, #087A80, #0B4749);
+  --celebrate-theme-text: #1C2B2C;
 }

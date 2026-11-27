@@ -139,3 +139,16 @@ body.theme-longreads-addict::after { content: "📱"; }
 body.theme-longreads-attention::after { content: "⌛"; }
 body.theme-longreads-brains::after { content: "🧠"; }
 body.theme-longreads-breakup::after { content: "💔"; }
+
+/* ---------------------------------------------------------------------
+ * BRAND THEME OVERRIDE
+ *
+ * Session themes each carried their own palette, so one page could be
+ * pink, another indigo, another amber. They are all the brand ramp now:
+ * the theme classes survive as hooks, but they resolve to teal. The
+ * attribute selectors outrank the per-theme class rules above.
+ * ------------------------------------------------------------------ */
+
+body[class*="theme-longreads-"] {
+  --longreads-theme-hero: linear-gradient(135deg, #087A80, #0B4749);
+}

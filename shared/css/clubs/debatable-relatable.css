@@ -371,3 +371,29 @@ html[data-theme="dark"] body.theme-debate-upbringing {
   --debate-theme-accent: #FF7043;
   --debate-theme-round-header-bg-dark: #3F2922;
 }
+
+/* ---------------------------------------------------------------------
+ * BRAND THEME OVERRIDE
+ *
+ * Session themes each carried their own palette, so one page could be
+ * pink, another indigo, another amber. They are all the brand ramp now:
+ * the theme classes survive as hooks, but they resolve to teal. The
+ * attribute selectors outrank the per-theme class rules above.
+ * ------------------------------------------------------------------ */
+
+body[class*="theme-debate-"] {
+  --debate-theme-accent: #087A80;
+  --debate-theme-bg: #F7FEFD;
+  --debate-theme-border: #CFE9E7;
+  --debate-theme-card-bg: #FFFFFF;
+  --debate-theme-hero: linear-gradient(135deg, #087A80, #0B4749);
+  --debate-theme-text: #1C2B2C;
+}
+
+html[data-theme="dark"] body[class*="theme-debate-"],
+body.theme-dark[class*="theme-debate-"] {
+  --debate-theme-bg-dark: #101617;
+  --debate-theme-border-dark: #2F3D3E;
+  --debate-theme-card-bg-dark: #1F2A2B;
+  --debate-theme-text-dark: #E9F2F1;
+}
