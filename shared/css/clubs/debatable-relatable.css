@@ -76,7 +76,7 @@ body[class*="theme-debate-"] .debate-duel-item span {
 }
 
 body[class*="theme-debate-"] .round-header {
-  background-color: var(--debate-theme-round-header-bg, #FAEEE8) !important;
+  background-color: var(--debate-theme-round-header-bg, #EFFCFB) !important;
 }
 
 body[class*="theme-debate-"] .vim-instruction,

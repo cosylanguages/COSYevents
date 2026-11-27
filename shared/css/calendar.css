@@ -304,7 +304,7 @@
 
 /* Event Type Color Badges */
 .badge-speaking-club { background-color: var(--cosy-track-general, #087a80); }
-.badge-cinema-night  { background-color: var(--cosy-track-spoken, #B84318); }
+.badge-cinema-night  { background-color: var(--cosy-track-spoken, #087A80); }
 .badge-special-event { background-color: var(--cosy-track-relocation, #d66161); }
 
 /* ── Section Container ─────────────────────────────────────────────── */
@@ -528,7 +528,7 @@
 
 .modal-close-btn:hover {
   background: rgba(184, 67, 24, 0.15);
-  color: var(--cosy-track-spoken, #B84318);
+  color: var(--cosy-track-spoken, #087A80);
 }
 
 .modal-body {

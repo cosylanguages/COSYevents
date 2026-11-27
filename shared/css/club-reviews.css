@@ -33,7 +33,7 @@
 
 .club-reviews-share {
   display: inline-block;
-  background: var(--cosy-event-accent, #B84318);
+  background: var(--cosy-event-accent, #087A80);
   color: #ffffff;
   font-weight: 800;
   font-size: 0.85rem;
@@ -45,7 +45,7 @@
 }
 
 .club-reviews-share:hover {
-  background: var(--cosy-event-accent-hover, #993C1D);
+  background: var(--cosy-event-accent-hover, #0B4749);
   transform: translateY(-2px);
 }
 

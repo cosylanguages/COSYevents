@@ -559,11 +559,11 @@
 
 /* 7. Debatable & Relatable */
 .sd-card[data-club="Debatable & Relatable"] {
-  border-top-color: #993C1D;
+  border-top-color: #0B4749;
   background: linear-gradient(180deg, rgba(153, 60, 29, 0.03) 0%, var(--warm-white) 40%);
 }
 .sd-card[data-club="Debatable & Relatable"] .sd-card-club {
-  color: #993C1D;
+  color: #0B4749;
 }
 
 /* 8. Mind Matters */

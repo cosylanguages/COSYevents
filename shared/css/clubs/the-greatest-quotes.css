@@ -124,7 +124,7 @@ html[data-theme="dark"] .quotes-card-view:hover {
 
 /* Level badge helper classes for Quotes */
 .quotes-card .tag-a1, .quotes-card .tag-a2 {
-  background: #FAEEE8;
+  background: #EFFCFB;
   color: #C0392B;
   border: 1px solid #F5CBA7;
   font-weight: 600;

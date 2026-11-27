@@ -182,8 +182,8 @@
                   if (voiceSelect) voiceSelect.style.display = 'block';
                   if (modeBadge) {
                     modeBadge.textContent = '🤖 AI Voice Synthesis (TTS Fallback)';
-                    modeBadge.style.background = '#FAEEE8';
-                    modeBadge.style.color = '#B84318';
+                    modeBadge.style.background = '#EFFCFB';
+                    modeBadge.style.color = '#087A80';
                   }
                   this.playTTS(transcriptText, playBtn, statusText, voiceSelect);
                 });
@@ -203,8 +203,8 @@
                   if (voiceSelect) voiceSelect.style.display = 'block';
                   if (modeBadge) {
                     modeBadge.textContent = '🤖 AI Voice Synthesis (TTS Fallback)';
-                    modeBadge.style.background = '#FAEEE8';
-                    modeBadge.style.color = '#B84318';
+                    modeBadge.style.background = '#EFFCFB';
+                    modeBadge.style.color = '#087A80';
                   }
                   this.playTTS(transcriptText, playBtn, statusText, voiceSelect);
                 });

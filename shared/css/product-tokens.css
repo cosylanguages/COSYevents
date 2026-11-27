@@ -7,17 +7,19 @@
  * already computing, so declaring them changes nothing visually — it only
  * makes the accent editable in one place.
  *
- * Dark-mode tuning of the accent is intentionally not defined yet; that is a
- * design decision, not a migration.
+ * The accent is the brand teal, not a second hue. The names exist so
+ * components have a semantic slot to hold, but they resolve to the signal
+ * ramp. Only the dark tints and the dark ink differ, because a tint that works
+ * on cream is invisible on the dark surface and a dark ink disappears on it.
  */
 
 :root {
-    --cosy-event-accent:       #B84318;
-    --cosy-event-accent-ink:   #B84318;
-    --cosy-event-accent-hover: #993C1D;
-    --cosy-event-accent-deep:  #6E2B15;
-    --cosy-event-accent-light: #FAEEE8;
-    --cosy-event-accent-mist:  #FDF5F2;
+    --cosy-event-accent:       #087A80;
+    --cosy-event-accent-ink:   #087A80;
+    --cosy-event-accent-hover: #0B4749;
+    --cosy-event-accent-deep:  #062B2D;
+    --cosy-event-accent-light: #EFFCFB;
+    --cosy-event-accent-mist:  #F7FEFD;
 
     --product-accent:          var(--cosy-event-accent);
     --product-accent-hover:    var(--cosy-event-accent-hover);
@@ -141,8 +143,9 @@ html[data-cosy-theme="dark"] .cosy-ecosystem-strip.cosy-ecosystem-strip {
         --cosy-color-sage-pale:   #0B2E2E;
         --cosy-primary-fill:       #0A5F63;
         --cosy-primary-fill-hover: #087A80;
-        --cosy-event-accent-light: #2E1A12;
-        --cosy-event-accent-mist:  #22130D;
+        --cosy-event-accent-ink:   #6DE3DE;
+        --cosy-event-accent-light: #0A2A2B;
+        --cosy-event-accent-mist:  #0B2E2E;
         --cosy-color-sage-mist:   #0A2A2B;
         --cosy-color-sage-light:  #0B2E2E;
 
@@ -161,8 +164,9 @@ html[data-theme="dark"],
 body.theme-dark {
     --cosy-primary-fill:       #0A5F63;
     --cosy-primary-fill-hover: #087A80;
-    --cosy-event-accent-light: #2E1A12;
-    --cosy-event-accent-mist:  #22130D;
+    --cosy-event-accent-ink:   #6DE3DE;
+    --cosy-event-accent-light: #0A2A2B;
+    --cosy-event-accent-mist:  #0B2E2E;
     --cosy-color-sage:        #3FD6CE;
     --cosy-color-sage-dark:   #7FE7E1;
     --cosy-color-sage-deep:   #DFFAF8;

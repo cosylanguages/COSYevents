@@ -519,7 +519,7 @@ ${descriptionHtml}
 <h2 class="section-title">🎙️ Discussion Structure</h2>
 <div class="rounds-container">
 <div class="round-block warm-up open" id="s-warm">
-<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#FAEEE8;">
+<div class="round-header" onclick="COSY.toggleRound('s-warm')" style="background:#EFFCFB;">
 <span>🟠 Warm-up</span><span class="round-toggle">▲</span>
 </div>
 <div class="round-body" style="display:block;">
