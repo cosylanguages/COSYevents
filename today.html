@@ -12,6 +12,15 @@
 <link rel="stylesheet" href="shared/css/sessions.css">
 <style>
   .today-hero { background: linear-gradient(135deg, #087a80, #0b4749); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
+  .today-hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: 2.5rem; align-items: start; text-align: left; }
+  .today-hero-copy p { margin: 0; }
+  .today-hero-wheel { min-width: 0; }
+  .today-hero-wheel .dw { margin: 0; }
+  @media (max-width: 900px) {
+    .today-hero-inner { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+    .today-hero-copy { text-align: center; }
+    .today-hero-copy p { margin: 0 auto; }
+  }
   .today-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); margin: .4rem 0 .6rem; }
   .today-hero p { max-width: 46rem; margin: 0 auto; opacity: .92; }
   .today-kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; opacity: .8; }
@@ -34,9 +43,14 @@
 <nav id="cosy-nav"></nav>
 
 <header class="today-hero">
-  <span class="today-kicker">Today's speaking wheel</span>
-  <h1 id="today-title">Loading…</h1>
-  <p data-cms-id="p-1-7d33ff">One wheel a day, Monday to Sunday. Eight prompts, a prep timer, a speaking timer. Variations every day.</p>
+  <div class="today-hero-inner">
+    <div class="today-hero-copy">
+      <span class="today-kicker">Today's speaking wheel</span>
+      <h1 id="today-title">Loading…</h1>
+      <p data-cms-id="p-1-7d33ff">One wheel a day, Monday to Sunday. Eight prompts, a prep timer, a speaking timer. Variations every day.</p>
+    </div>
+    <div class="today-hero-wheel" id="today-wheel"></div>
+  </div>
 </header>
 
 <main class="today-body">
@@ -45,8 +59,6 @@
     <a id="today-next" href="#">Tomorrow →</a>
     <a href="speaking-clubs.html">All clubs</a>
   </div>
-
-  <div id="today-wheel"></div>
 
   <ul class="week-list" id="week-list"></ul>
 
@@ -82,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
   host.setAttribute('data-daily-wheel', wheel.id);
   host.setAttribute('data-src', 'data/wheels/' + wheel.id + '.json');
   host.setAttribute('data-date', dateKey(shown));
+  host.setAttribute('data-chrome', 'bare');
   api.initAll();
 
   document.getElementById('today-prev').href = 'today.html?date=' + dateKey(shift(shown, -1));

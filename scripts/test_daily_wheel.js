@@ -110,8 +110,11 @@ for (const w of WHEELS) {
     assert(html.includes(`data-daily-wheel="${w.id}"`), `${w.page}: must mount the ${w.id} wheel`);
     assert(html.includes('data-src="data/wheels/'), `${w.page}: must point at its data file`);
     assert(html.includes('shared/js/daily-wheel.js'), `${w.page}: must load the wheel component`);
+    assert(new RegExp(`<header class="club-hero">[\\s\\S]*?data-daily-wheel="${w.id}"[\\s\\S]*?</header>`).test(html),
+        `${w.page}: the wheel must sit inside the club hero`);
+    assert(html.includes('data-chrome="compact"'), `${w.page}: hero wheel uses the compact card`);
 }
-console.log(`  PASS: ${WHEELS.length} club pages mount their wheel`);
+console.log(`  PASS: ${WHEELS.length} club pages mount their wheel inside the hero`);
 
 // Deep links: band, date and prompt in the query string
 assert.deepStrictEqual(wheel.parseQuery('?band=B2&date=2026-11-26&prompt=3'),
@@ -143,6 +146,9 @@ const todayPage = read('today.html');
 assert(todayPage.includes('shared/js/daily-wheel.js'), 'today.html loads the wheel');
 assert(todayPage.includes('wheelForDate'), 'today.html picks the day\'s wheel');
 assert(todayPage.includes('WEEKLY_ROTATION'), 'today.html lists the week');
+const todayHero = todayPage.slice(todayPage.indexOf('<header class="today-hero">'), todayPage.indexOf('</header>'));
+assert(todayHero.includes('id="today-wheel"'), 'today.html puts the wheel inside the hero');
+assert(todayPage.includes("setAttribute('data-chrome', 'bare')"), 'today.html uses bare chrome inside its hero');
 
 const hub = read('speaking-clubs.html');
 assert(hub.includes('data-daily-wheel-banner'), 'hub shows today\'s banner');

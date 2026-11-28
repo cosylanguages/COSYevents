@@ -175,7 +175,7 @@
     if (document.getElementById('cosy-club-music-toggle')) return;
     addStyles();
     var isSession = /\/sessions\//.test(pathname);
-    var hero = !isSession && (document.querySelector('.club-hero') || document.querySelector('.hero-left') || document.querySelector('.hero'));
+    var hero = !isSession && (document.querySelector('.club-hero .club-hero-copy') || document.querySelector('.club-hero') || document.querySelector('.hero-left') || document.querySelector('.hero'));
     var wrap = document.createElement('div');
     wrap.id = 'cosy-club-music-toggle';
     if (hero) {

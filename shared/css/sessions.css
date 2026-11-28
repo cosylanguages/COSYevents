@@ -3563,6 +3563,16 @@ html[data-theme="dark"], body.theme-dark {
 /* ── Club Specific Hero ── */
 .club-hero { position: relative; overflow: hidden; }
 .club-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.15), transparent); pointer-events: none; }
+.club-hero .club-hero-inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: 2.5rem; align-items: start; text-align: left; }
+.club-hero .club-hero-copy h1 { margin-bottom: .75rem; }
+.club-hero .club-hero-copy p { max-width: 46ch; margin: 0; opacity: .9; }
+.club-hero .club-hero-wheel { min-width: 0; }
+.club-hero .club-hero-wheel .dw { margin: 0; }
+@media (max-width: 900px) {
+  .club-hero .club-hero-inner { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .club-hero .club-hero-copy { text-align: center; }
+  .club-hero .club-hero-copy p { margin: 0 auto; }
+}
 
 /* ── Timeline Visualization ── */
 .rounds-container { position: relative; padding-left: 1rem; }

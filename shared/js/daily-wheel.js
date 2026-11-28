@@ -133,8 +133,11 @@
         style.id = 'dw-styles';
         style.textContent = [
             '.dw{background:#FAF7F2;border:1px solid var(--border,#e5e0d8);border-radius:28px;padding:2rem;margin:0 0 2.5rem;}',
+            '.dw--embed{padding:1.5rem;}',
             '.dw-head h2{margin:0 0 .35rem;font-family:"Playfair Display",serif;font-size:1.5rem;}',
             '.dw-head p{margin:0 0 1.25rem;color:var(--muted,#6b6560);font-size:.95rem;}',
+            '.dw-head--compact{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin:0 0 1rem;padding-bottom:.75rem;border-bottom:1px dashed #e5e0d8;}',
+            '.dw-eyebrow{display:inline-block;font:700 .72rem/1 "Commissioner",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#993556;}',
             '.dw-bands{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}',
             '.dw-band{border:1px solid #d9d2c7;background:#fff;color:#4a443e;border-radius:999px;padding:.35rem .9rem;font:inherit;font-size:.85rem;cursor:pointer;}',
             '.dw-band[aria-pressed="true"]{background:#993556;border-color:#993556;color:#fff;font-weight:600;}',
@@ -220,6 +223,7 @@
         // The attributes are the page's defaults; a shared link may override them.
         var band = query.band || host.getAttribute('data-band') || 'b1-b2';
         var dateKey = query.dateKey || host.getAttribute('data-date') || localDateKey();
+        var chrome = host.getAttribute('data-chrome') || 'full';
 
         injectStyles();
         host.innerHTML = '<p class="dw-loading">Loading the wheel…</p>';
@@ -234,7 +238,7 @@
                     host.innerHTML = '<p class="dw-loading">This wheel is published in ' + esc(data.lang.toUpperCase()) + ' only for now.</p>';
                     return;
                 }
-                render(host, data, { band: band, dateKey: dateKey, prompt: query.prompt });
+                render(host, data, { band: band, dateKey: dateKey, prompt: query.prompt, chrome: chrome });
             })
             .catch(function (err) {
                 host.innerHTML = '<p class="dw-loading">The wheel could not load (' + esc(err.message) + ').</p>';
@@ -263,12 +267,21 @@
         var task = data.task || {};
         var rules = data.rules || {};
 
-        host.innerHTML =
-            '<section class="dw">' +
+        var chrome = state.chrome || 'full';
+        var head = '';
+        if (chrome === 'full') {
+            head =
                 '<div class="dw-head">' +
                     '<h2>🎡 ' + esc(data.title) + ' — daily wheel</h2>' +
                     '<p>' + esc(data.subtitle || '') + '</p>' +
-                '</div>' +
+                '</div>';
+        } else if (chrome === 'compact') {
+            head = '<div class="dw-head dw-head--compact"><span class="dw-eyebrow">🎡 Daily speaking wheel</span></div>';
+        }
+
+        host.innerHTML =
+            '<section class="dw' + (chrome === 'full' ? '' : ' dw--embed') + '">' +
+                head +
                 '<div class="dw-bands" role="group" aria-label="CEFR band"></div>' +
                 '<div class="dw-machine">' +
                     '<div class="dw-window" aria-hidden="true">' +
