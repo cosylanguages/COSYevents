@@ -155,7 +155,10 @@ assert(wheelSource.includes('@keyframes dw-lever-pull'), 'lever pull animation i
 assert(wheelSource.includes("machine.classList.add('is-pulling')"), 'the machine jolts when the lever is pulled');
 assert(wheelSource.includes("windowEl.classList.add('is-rolling')"), 'the window reel runs while the lever is down');
 assert(wheelSource.includes('@keyframes dw-lock'), 'the prompt locks in after the reel');
-console.log('  PASS: lever pull animation hooks are wired');
+assert(wheelSource.includes('html[data-theme="dark"] .dw'), 'dark theme dispenser palette is defined');
+assert(wheelSource.includes("'.dw-card{background:var(--dw-card)"), 'result card follows the theme palette');
+assert(todayPage.includes('html[data-theme="dark"] .week-list a'), 'today list adapts to dark mode');
+console.log('  PASS: lever pull animation and dark theme hooks are wired');
 
 const hub = read('speaking-clubs.html');
 assert(hub.includes('data-daily-wheel-banner'), 'hub shows today\'s banner');
