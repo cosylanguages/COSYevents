@@ -77,6 +77,33 @@ for (const w of WHEELS) {
 assert.deepStrictEqual(wheel.pickWheelPrompts(WHEELS.length ? [{ band: 'a2', id: 'x' }] : [], 'zz', '2026-11-26', 8), [], 'unknown band is empty');
 console.log('  PASS: every wheel and band gives eight deterministic prompts a day');
 
+// Dispenser deck: a full shuffle, and never the same prompt twice in a row across refills
+function seeded(seed) {
+    return function () {
+        seed = (seed * 1664525 + 1013904223) % 4294967296;
+        return seed / 4294967296;
+    };
+}
+for (let run = 0; run < 25; run += 1) {
+    const order = wheel.shuffledIndices(8, seeded(run + 1));
+    assert.deepStrictEqual(order.slice().sort((a, b) => a - b), [0, 1, 2, 3, 4, 5, 6, 7], 'shuffle keeps every slot once');
+}
+const guarded = wheel.refillDeck(8, 0, () => 0);
+assert.notStrictEqual(guarded[guarded.length - 1], 0, 'refill must not serve the prompt just shown');
+assert.deepStrictEqual(guarded.slice().sort((a, b) => a - b), [0, 1, 2, 3, 4, 5, 6, 7], 'guard keeps a full deck');
+assert.deepStrictEqual(wheel.refillDeck(0, 0), [], 'zero-size deck stays empty');
+assert.deepStrictEqual(wheel.refillDeck(1, 0), [0], 'single-slot deck keeps its one prompt');
+let deck = [];
+let lastDraw = -1;
+const rand = seeded(7);
+for (let i = 0; i < 40; i += 1) {
+    if (!deck.length) deck = wheel.refillDeck(8, lastDraw, rand);
+    const next = deck.pop();
+    if (i > 0) assert.notStrictEqual(next, lastDraw, 'no back-to-back repeat across refills');
+    lastDraw = next;
+}
+console.log('  PASS: dispenser deck shuffles fully and never repeats back-to-back');
+
 // Page integration
 for (const w of WHEELS) {
     const html = fs.readFileSync(path.join(__dirname, '..', w.page), 'utf-8');

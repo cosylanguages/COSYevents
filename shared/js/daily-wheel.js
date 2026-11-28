@@ -2,7 +2,8 @@
  * shared/js/daily-wheel.js
  *
  * A daily speaking wheel for the club pages. The set of prompts is deterministic for the
- * date, band and language; the spin is the learner's own. One file serves every wheel page:
+ * date, band and language; the lever dispenses one of them at random, like a prompt
+ * dispenser built for impromptu speaking practice. One file serves every wheel page:
  *
  *   <div data-daily-wheel="mind-matters" data-src="data/wheels/mind-matters.json"
  *        data-band="b1-b2" data-lang="en"></div>
@@ -19,8 +20,7 @@
 
     var LEXICON_SCRIPT = 'https://cosylanguages.github.io/COSYtools/shared/js/vocabulary-relations.js';
     var BANDS = ['a0-a1', 'a2', 'b1-b2', 'c1-c2'];
-    var SEGMENTS = 8;
-    var PALETTE = ['#993556', '#2B6CB0', '#1A7A4A', '#B7791F', '#6B46C1', '#C05621', '#2C7A7B', '#B83280'];
+    var DECK_SIZE = 8;
 
     // One wheel a day, so nobody has to choose. Monday first.
     var WEEKLY_ROTATION = [
@@ -67,7 +67,7 @@
                 if (/^\d{4}-\d{2}-\d{2}$/.test(value)) out.dateKey = value;
             } else if (key === 'prompt') {
                 var index = parseInt(value, 10);
-                if (index >= 0 && index < SEGMENTS) out.prompt = index;
+                if (index >= 0 && index < DECK_SIZE) out.prompt = index;
             }
         });
         return out;
@@ -87,11 +87,39 @@
     function pickWheelPrompts(prompts, band, dateKey, count) {
         var pool = (prompts || []).filter(function (p) { return p.band === band; });
         if (!pool.length) return [];
-        var n = Math.min(count || SEGMENTS, pool.length);
+        var n = Math.min(count || DECK_SIZE, pool.length);
         var start = Math.abs(daysSinceEpoch(dateKey)) % pool.length;
         var out = [];
         for (var i = 0; i < n; i++) out.push(pool[(start + i) % pool.length]);
         return out;
+    }
+
+    /** Fisher-Yates shuffle of 0..count-1; the random source is injectable for tests. */
+    function shuffledIndices(count, random) {
+        var rand = typeof random === 'function' ? random : Math.random;
+        var order = [];
+        for (var i = 0; i < count; i += 1) order.push(i);
+        for (var j = order.length - 1; j > 0; j -= 1) {
+            var k = Math.floor(rand() * (j + 1));
+            var tmp = order[j];
+            order[j] = order[k];
+            order[k] = tmp;
+        }
+        return order;
+    }
+
+    /**
+     * A fresh dispenser deck. The next index to be drawn is the last one, so if it
+     * matches the prompt just shown, swap it away so a pull never repeats itself.
+     */
+    function refillDeck(count, lastIndex, random) {
+        var deck = shuffledIndices(count, random);
+        if (deck.length > 1 && deck[deck.length - 1] === lastIndex) {
+            var first = deck[0];
+            deck[0] = deck[deck.length - 1];
+            deck[deck.length - 1] = first;
+        }
+        return deck;
     }
 
     function truncate(text, max) {
@@ -110,14 +138,24 @@
             '.dw-bands{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}',
             '.dw-band{border:1px solid #d9d2c7;background:#fff;color:#4a443e;border-radius:999px;padding:.35rem .9rem;font:inherit;font-size:.85rem;cursor:pointer;}',
             '.dw-band[aria-pressed="true"]{background:#993556;border-color:#993556;color:#fff;font-weight:600;}',
-            '.dw-stage{position:relative;width:100%;max-width:360px;margin:0 auto;}',
-            '.dw-pointer{position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:1.5rem;color:#993556;z-index:2;}',
-            '.dw-canvas{display:block;width:100%;height:auto;border-radius:50%;box-shadow:0 8px 24px rgba(0,0,0,.12);transition:transform 2.4s cubic-bezier(.17,.67,.2,1);}',
-            '.dw-spin{display:block;margin:1.25rem auto 0;background:#993556;color:#fff;border:0;border-radius:999px;padding:.7rem 2rem;font:inherit;font-weight:700;cursor:pointer;}',
-            '.dw-spin:disabled{opacity:.55;cursor:default;}',
+            '.dw-machine{display:flex;align-items:center;gap:1rem;max-width:430px;margin:0 auto;padding:1rem;border:1px solid #e5e0d8;border-radius:22px;background:linear-gradient(180deg,#fff,#f4efe7);box-shadow:0 14px 30px rgba(0,0,0,.07),inset 0 1px 0 #fff;}',
+            '.dw-window{position:relative;flex:1 1 auto;min-height:132px;display:flex;align-items:center;justify-content:center;padding:1rem;border-radius:14px;background:#26221f;box-shadow:inset 0 10px 24px rgba(0,0,0,.6);overflow:hidden;}',
+            '.dw-window:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.09),transparent 45%);pointer-events:none;}',
+            '.dw-window-text{position:relative;z-index:1;color:#f4efe7;font-family:"Playfair Display",serif;font-size:.98rem;line-height:1.4;text-align:center;transition:opacity .12s ease;}',
+            '.dw-window-text.is-idle{font-family:"Commissioner",system-ui,sans-serif;font-size:2rem;font-weight:700;letter-spacing:.35em;text-indent:.35em;color:#9c9288;}',
+            '.dw-lever{position:relative;flex:0 0 74px;width:74px;height:148px;border:0;background:transparent;padding:0;cursor:pointer;touch-action:manipulation;}',
+            '.dw-lever-pivot{position:absolute;bottom:0;left:50%;width:60px;height:24px;margin-left:-30px;border-radius:12px;background:linear-gradient(180deg,#0abbb5,#087a80);box-shadow:inset 0 2px 0 rgba(255,255,255,.4),0 5px 10px rgba(0,0,0,.18);}',
+            '.dw-lever-arm{position:absolute;bottom:14px;left:50%;width:12px;height:94px;margin-left:-6px;border-radius:6px;background:linear-gradient(90deg,#b9b1a6,#f2ece2 45%,#a89f93);transform-origin:50% 100%;transition:transform .18s cubic-bezier(.34,1.56,.64,1);}',
+            '.dw-lever-knob{position:absolute;top:-18px;left:50%;width:46px;height:46px;margin-left:-23px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d98ba2,#993556 62%,#671f36);color:#fff;font:700 .58rem/46px "Commissioner",system-ui,sans-serif;letter-spacing:.08em;text-align:center;box-shadow:inset 0 2px 3px rgba(255,255,255,.45),0 6px 12px rgba(0,0,0,.28);}',
+            '.dw-lever:hover .dw-lever-knob{filter:brightness(1.07);}',
+            '.dw-lever:focus-visible{outline:3px solid #0abbb5;outline-offset:4px;border-radius:16px;}',
+            '.dw-lever.is-pulling .dw-lever-arm{transform:rotate(34deg);}',
+            '.dw-lever:disabled{cursor:default;}',
+            '.dw-hint{margin:.9rem 0 0;text-align:center;font-size:.85rem;color:#6b6560;}',
             '.dw-result{margin-top:1.5rem;}',
             '.dw-result:empty{display:none;}',
-            '.dw-card{background:#fff;border:1px solid #e5e0d8;border-radius:20px;padding:1.5rem;}',
+            '.dw-card{background:#fff;border:1px solid #e5e0d8;border-radius:20px;padding:1.5rem;animation:dw-drop .28s ease-out;}',
+            '@keyframes dw-drop{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:none;}}',
             '.dw-kicker{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#993556;font-weight:700;margin-bottom:.5rem;}',
             '.dw-prompt{margin:0 0 .75rem;font-size:1.15rem;line-height:1.45;}',
             '.dw-quote{font-family:"Playfair Display",serif;font-size:1.3rem;line-height:1.5;}',
@@ -136,7 +174,7 @@
             '.dw-timer button{background:#2B6CB0;color:#fff;border:0;border-radius:999px;padding:.45rem 1rem;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;}',
             '.dw-clock{font-variant-numeric:tabular-nums;font-weight:700;min-width:3.4rem;}',
             '.dw-rules{margin:0;font-size:.82rem;color:#6b6560;}',
-            '@media (prefers-reduced-motion: reduce){.dw-canvas{transition:none;}}'
+            '@media (prefers-reduced-motion: reduce){.dw-lever-arm{transition:none;}.dw-card{animation:none;}}'
         ].join('');
         document.head.appendChild(style);
     }
@@ -145,37 +183,6 @@
         return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
             return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
         });
-    }
-
-    function drawWheel(canvas, items) {
-        var ctx = canvas.getContext('2d');
-        var size = canvas.width, r = size / 2, seg = (Math.PI * 2) / items.length;
-        ctx.clearRect(0, 0, size, size);
-        items.forEach(function (item, i) {
-            var start = -Math.PI / 2 + i * seg, end = start + seg;
-            ctx.beginPath();
-            ctx.moveTo(r, r);
-            ctx.arc(r, r, r - 4, start, end);
-            ctx.closePath();
-            ctx.fillStyle = PALETTE[i % PALETTE.length];
-            ctx.fill();
-            ctx.strokeStyle = '#FAF7F2';
-            ctx.lineWidth = 2;
-            ctx.stroke();
-
-            ctx.save();
-            ctx.translate(r, r);
-            ctx.rotate(start + seg / 2);
-            ctx.textAlign = 'right';
-            ctx.fillStyle = '#fff';
-            ctx.font = '600 11px system-ui, sans-serif';
-            ctx.fillText(truncate(item.prompt, 26), r - 16, 4);
-            ctx.restore();
-        });
-        ctx.beginPath();
-        ctx.arc(r, r, 26, 0, Math.PI * 2);
-        ctx.fillStyle = '#FAF7F2';
-        ctx.fill();
     }
 
     function formatClock(seconds) {
@@ -263,33 +270,58 @@
                     '<p>' + esc(data.subtitle || '') + '</p>' +
                 '</div>' +
                 '<div class="dw-bands" role="group" aria-label="CEFR band"></div>' +
-                '<div class="dw-stage">' +
-                    '<div class="dw-pointer" aria-hidden="true">▼</div>' +
-                    '<canvas class="dw-canvas" width="360" height="360" role="img" aria-label="Prompt wheel"></canvas>' +
+                '<div class="dw-machine">' +
+                    '<div class="dw-window" aria-hidden="true">' +
+                        '<span class="dw-window-text is-idle">PULL</span>' +
+                    '</div>' +
+                    '<button type="button" class="dw-lever" aria-label="Pull the lever for a random prompt">' +
+                        '<span class="dw-lever-pivot" aria-hidden="true">' +
+                            '<span class="dw-lever-arm" aria-hidden="true">' +
+                                '<span class="dw-lever-knob" aria-hidden="true">SPIN</span>' +
+                            '</span>' +
+                        '</span>' +
+                    '</button>' +
                 '</div>' +
-                '<button type="button" class="dw-spin">Spin 🎯</button>' +
+                '<p class="dw-hint">Pull the lever for a random prompt. Prep, then speak.</p>' +
                 '<div class="dw-result" aria-live="polite"></div>' +
             '</section>';
 
-        var canvas = host.querySelector('.dw-canvas');
-        var spin = host.querySelector('.dw-spin');
+        var lever = host.querySelector('.dw-lever');
+        var windowText = host.querySelector('.dw-window-text');
         var result = host.querySelector('.dw-result');
         var bands = host.querySelector('.dw-bands');
-        var rotation = 0;
         var items = [];
+        var deck = [];
+        var lastIndex = -1;
+        var spinning = false;
+        var flickerTimer = null;
+
+        function setWindow(text, idle) {
+            windowText.textContent = text;
+            windowText.classList.toggle('is-idle', !!idle);
+        }
+
+        function drawIndex() {
+            if (!deck.length) deck = refillDeck(items.length, lastIndex, Math.random);
+            lastIndex = deck.pop();
+            return lastIndex;
+        }
 
         function paint() {
-            items = pickWheelPrompts(data.prompts, state.band, state.dateKey, SEGMENTS);
-            canvas.style.transform = 'rotate(0deg)';
-            rotation = 0;
+            items = pickWheelPrompts(data.prompts, state.band, state.dateKey, DECK_SIZE);
+            if (flickerTimer) { clearInterval(flickerTimer); flickerTimer = null; }
+            deck = [];
+            lastIndex = -1;
+            spinning = false;
             result.innerHTML = '';
+            lever.classList.remove('is-pulling');
+            setWindow('PULL', true);
             if (!items.length) {
                 result.innerHTML = '<div class="dw-card">No prompts for this band yet.</div>';
-                spin.disabled = true;
+                lever.disabled = true;
                 return;
             }
-            spin.disabled = false;
-            drawWheel(canvas, items);
+            lever.disabled = false;
         }
 
         BANDS.forEach(function (b) {
@@ -377,25 +409,44 @@
             });
         }
 
-        spin.addEventListener('click', function () {
-            if (!items.length) return;
+        lever.addEventListener('click', function () {
+            if (!items.length || spinning) return;
             if (timer) { clearInterval(timer); timer = null; }
-            var index = Math.floor(Math.random() * items.length);
-            var seg = 360 / items.length;
-            rotation += 360 * 5 + (360 - (index * seg + seg / 2)) - (rotation % 360);
-            canvas.style.transform = 'rotate(' + rotation + 'deg)';
-            spin.disabled = true;
+            spinning = true;
+            lever.disabled = true;
+            var index = drawIndex();
             var reduced = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
-            setTimeout(function () {
-                spin.disabled = false;
-                showCard(items[index]);
-                syncUrl(host, data, state, index);
-            }, reduced ? 0 : 2450);
+
+            function finish(shown) {
+                if (flickerTimer) { clearInterval(flickerTimer); flickerTimer = null; }
+                setWindow(truncate(items[shown].prompt, 90), false);
+                showCard(items[shown]);
+                syncUrl(host, data, state, shown);
+                lever.classList.remove('is-pulling');
+                lever.disabled = false;
+                spinning = false;
+            }
+
+            lever.classList.add('is-pulling');
+            if (reduced) {
+                finish(index);
+                return;
+            }
+
+            var tick = 0;
+            flickerTimer = setInterval(function () {
+                setWindow(truncate(items[tick % items.length].prompt, 60), false);
+                tick += 1;
+                if (tick >= 8) finish(index);
+            }, 80);
+            setTimeout(function () { lever.classList.remove('is-pulling'); }, 240);
         });
 
         paint();
 
         if (typeof state.prompt === 'number' && state.prompt >= 0 && state.prompt < items.length) {
+            lastIndex = state.prompt;
+            setWindow(truncate(items[state.prompt].prompt, 90), false);
             showCard(items[state.prompt]);
         }
     }
@@ -423,10 +474,13 @@
 
     return {
         BANDS: BANDS,
-        SEGMENTS: SEGMENTS,
+        DECK_SIZE: DECK_SIZE,
+        SEGMENTS: DECK_SIZE,
         localDateKey: localDateKey,
         daysSinceEpoch: daysSinceEpoch,
         pickWheelPrompts: pickWheelPrompts,
+        shuffledIndices: shuffledIndices,
+        refillDeck: refillDeck,
         parseQuery: parseQuery,
         wheelForDate: wheelForDate,
         WEEKLY_ROTATION: WEEKLY_ROTATION,
