@@ -150,6 +150,13 @@ const todayHero = todayPage.slice(todayPage.indexOf('<header class="today-hero">
 assert(todayHero.includes('id="today-wheel"'), 'today.html puts the wheel inside the hero');
 assert(todayPage.includes("setAttribute('data-chrome', 'bare')"), 'today.html uses bare chrome inside its hero');
 
+const wheelSource = read('shared/js/daily-wheel.js');
+assert(wheelSource.includes('@keyframes dw-lever-pull'), 'lever pull animation is defined');
+assert(wheelSource.includes("machine.classList.add('is-pulling')"), 'the machine jolts when the lever is pulled');
+assert(wheelSource.includes("windowEl.classList.add('is-rolling')"), 'the window reel runs while the lever is down');
+assert(wheelSource.includes('@keyframes dw-lock'), 'the prompt locks in after the reel');
+console.log('  PASS: lever pull animation hooks are wired');
+
 const hub = read('speaking-clubs.html');
 assert(hub.includes('data-daily-wheel-banner'), 'hub shows today\'s banner');
 assert.strictEqual((hub.match(/data-wheel-preview=/g) || []).length, 5, 'five hub cards carry a preview');

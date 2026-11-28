@@ -144,21 +144,31 @@
             '.dw-machine{display:flex;align-items:center;gap:1rem;max-width:430px;margin:0 auto;padding:1rem;border:1px solid #e5e0d8;border-radius:22px;background:linear-gradient(180deg,#fff,#f4efe7);box-shadow:0 14px 30px rgba(0,0,0,.07),inset 0 1px 0 #fff;}',
             '.dw-window{position:relative;flex:1 1 auto;min-height:132px;display:flex;align-items:center;justify-content:center;padding:1rem;border-radius:14px;background:#26221f;box-shadow:inset 0 10px 24px rgba(0,0,0,.6);overflow:hidden;}',
             '.dw-window:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.09),transparent 45%);pointer-events:none;}',
+            '.dw-window.is-rolling:after{animation:dw-scan .72s linear;}',
+            '.dw-window.is-locked .dw-window-text{animation:dw-lock .3s ease-out;}',
             '.dw-window-text{position:relative;z-index:1;color:#f4efe7;font-family:"Playfair Display",serif;font-size:.98rem;line-height:1.4;text-align:center;transition:opacity .12s ease;}',
-            '.dw-window-text.is-idle{font-family:"Commissioner",system-ui,sans-serif;font-size:2rem;font-weight:700;letter-spacing:.35em;text-indent:.35em;color:#9c9288;}',
+            '.dw-window-text.is-idle{font-family:"Commissioner",system-ui,sans-serif;font-size:2rem;font-weight:700;letter-spacing:.35em;text-indent:.35em;color:#9c9288;animation:dw-breathe 2.8s ease-in-out infinite;}',
             '.dw-lever{position:relative;flex:0 0 74px;width:74px;height:148px;border:0;background:transparent;padding:0;cursor:pointer;touch-action:manipulation;}',
             '.dw-lever-pivot{position:absolute;bottom:0;left:50%;width:60px;height:24px;margin-left:-30px;border-radius:12px;background:linear-gradient(180deg,#0abbb5,#087a80);box-shadow:inset 0 2px 0 rgba(255,255,255,.4),0 5px 10px rgba(0,0,0,.18);}',
             '.dw-lever-arm{position:absolute;bottom:14px;left:50%;width:12px;height:94px;margin-left:-6px;border-radius:6px;background:linear-gradient(90deg,#b9b1a6,#f2ece2 45%,#a89f93);transform-origin:50% 100%;transition:transform .18s cubic-bezier(.34,1.56,.64,1);}',
             '.dw-lever-knob{position:absolute;top:-18px;left:50%;width:46px;height:46px;margin-left:-23px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d98ba2,#993556 62%,#671f36);color:#fff;font:700 .58rem/46px "Commissioner",system-ui,sans-serif;letter-spacing:.08em;text-align:center;box-shadow:inset 0 2px 3px rgba(255,255,255,.45),0 6px 12px rgba(0,0,0,.28);}',
             '.dw-lever:hover .dw-lever-knob{filter:brightness(1.07);}',
             '.dw-lever:focus-visible{outline:3px solid #0abbb5;outline-offset:4px;border-radius:16px;}',
-            '.dw-lever.is-pulling .dw-lever-arm{transform:rotate(34deg);}',
+            '.dw-lever.is-pulling .dw-lever-arm{animation:dw-lever-pull .72s cubic-bezier(.3,.7,.3,1);}',
+            '.dw-lever.is-pulling .dw-lever-knob{animation:dw-knob-glow .72s ease-out;}',
+            '.dw-machine.is-pulling{animation:dw-thunk .72s cubic-bezier(.3,.7,.3,1);}',
             '.dw-lever:disabled{cursor:default;}',
             '.dw-hint{margin:.9rem 0 0;text-align:center;font-size:.85rem;color:#6b6560;}',
             '.dw-result{margin-top:1.5rem;}',
             '.dw-result:empty{display:none;}',
-            '.dw-card{background:#fff;border:1px solid #e5e0d8;border-radius:20px;padding:1.5rem;animation:dw-drop .28s ease-out;}',
-            '@keyframes dw-drop{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:none;}}',
+            '.dw-card{background:#fff;border:1px solid #e5e0d8;border-radius:20px;padding:1.5rem;animation:dw-drop .38s cubic-bezier(.2,.8,.2,1);}',
+            '@keyframes dw-breathe{0%,100%{opacity:.55;}50%{opacity:1;}}',
+            '@keyframes dw-lever-pull{0%{transform:rotate(0deg);}22%{transform:rotate(44deg);}34%{transform:rotate(38deg);}58%{transform:rotate(-8deg);}74%{transform:rotate(4deg);}88%{transform:rotate(-1deg);}100%{transform:rotate(0deg);}}',
+            '@keyframes dw-thunk{0%,100%{transform:none;}18%{transform:translateY(2px) rotate(-.3deg);}28%{transform:translate(-1px,0) rotate(.25deg);}38%{transform:translate(1px,0) rotate(-.2deg);}50%{transform:translateY(1px) rotate(.1deg);}}',
+            '@keyframes dw-knob-glow{0%,100%{box-shadow:inset 0 2px 3px rgba(255,255,255,.45),0 6px 12px rgba(0,0,0,.28);}30%{box-shadow:inset 0 2px 3px rgba(255,255,255,.55),0 0 0 7px rgba(255,255,255,.16),0 6px 18px rgba(153,53,86,.5);}}',
+            '@keyframes dw-scan{0%{transform:translateY(-115%);}100%{transform:translateY(115%);}}',
+            '@keyframes dw-lock{0%{opacity:.3;transform:translateY(-6px) scale(1.03);filter:blur(1px);}55%{opacity:1;transform:translateY(1px) scale(.997);filter:none;}100%{opacity:1;transform:none;filter:none;}}',
+            '@keyframes dw-drop{0%{opacity:0;transform:translateY(-16px) scale(.97);}60%{opacity:1;transform:translateY(3px) scale(1.004);}100%{opacity:1;transform:none;}}',
             '.dw-kicker{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#993556;font-weight:700;margin-bottom:.5rem;}',
             '.dw-prompt{margin:0 0 .75rem;font-size:1.15rem;line-height:1.45;}',
             '.dw-quote{font-family:"Playfair Display",serif;font-size:1.3rem;line-height:1.5;}',
@@ -177,7 +187,7 @@
             '.dw-timer button{background:#2B6CB0;color:#fff;border:0;border-radius:999px;padding:.45rem 1rem;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;}',
             '.dw-clock{font-variant-numeric:tabular-nums;font-weight:700;min-width:3.4rem;}',
             '.dw-rules{margin:0;font-size:.82rem;color:#6b6560;}',
-            '@media (prefers-reduced-motion: reduce){.dw-lever-arm{transition:none;}.dw-card{animation:none;}}'
+            '@media (prefers-reduced-motion: reduce){.dw-lever-arm{transition:none;}.dw-card,.dw-window-text.is-idle,.dw-window.is-rolling:after,.dw-window.is-locked .dw-window-text,.dw-machine.is-pulling,.dw-lever.is-pulling .dw-lever-arm,.dw-lever.is-pulling .dw-lever-knob{animation:none;}}'
         ].join('');
         document.head.appendChild(style);
     }
@@ -300,6 +310,8 @@
             '</section>';
 
         var lever = host.querySelector('.dw-lever');
+        var machine = host.querySelector('.dw-machine');
+        var windowEl = host.querySelector('.dw-window');
         var windowText = host.querySelector('.dw-window-text');
         var result = host.querySelector('.dw-result');
         var bands = host.querySelector('.dw-bands');
@@ -322,12 +334,14 @@
 
         function paint() {
             items = pickWheelPrompts(data.prompts, state.band, state.dateKey, DECK_SIZE);
-            if (flickerTimer) { clearInterval(flickerTimer); flickerTimer = null; }
+            if (flickerTimer) { clearTimeout(flickerTimer); flickerTimer = null; }
             deck = [];
             lastIndex = -1;
             spinning = false;
             result.innerHTML = '';
             lever.classList.remove('is-pulling');
+            machine.classList.remove('is-pulling');
+            windowEl.classList.remove('is-rolling', 'is-locked');
             setWindow('PULL', true);
             if (!items.length) {
                 result.innerHTML = '<div class="dw-card">No prompts for this band yet.</div>';
@@ -431,28 +445,40 @@
             var reduced = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
             function finish(shown) {
-                if (flickerTimer) { clearInterval(flickerTimer); flickerTimer = null; }
+                if (flickerTimer) { clearTimeout(flickerTimer); flickerTimer = null; }
                 setWindow(truncate(items[shown].prompt, 90), false);
                 showCard(items[shown]);
                 syncUrl(host, data, state, shown);
                 lever.classList.remove('is-pulling');
+                machine.classList.remove('is-pulling');
+                windowEl.classList.remove('is-rolling');
+                windowEl.classList.add('is-locked');
+                setTimeout(function () { windowEl.classList.remove('is-locked'); }, 300);
                 lever.disabled = false;
                 spinning = false;
             }
 
             lever.classList.add('is-pulling');
+            machine.classList.add('is-pulling');
+            windowEl.classList.add('is-rolling');
+            windowEl.classList.remove('is-locked');
             if (reduced) {
                 finish(index);
                 return;
             }
 
-            var tick = 0;
-            flickerTimer = setInterval(function () {
-                setWindow(truncate(items[tick % items.length].prompt, 60), false);
-                tick += 1;
-                if (tick >= 8) finish(index);
-            }, 80);
-            setTimeout(function () { lever.classList.remove('is-pulling'); }, 240);
+            // The reel starts fast and slows down, then the prompt locks in.
+            var frames = [40, 45, 50, 55, 60, 70, 85, 100, 120, 140];
+            var start = Math.floor(Math.random() * items.length);
+            var step = 0;
+            function roll() {
+                if (!spinning) return;
+                setWindow(truncate(items[(start + step) % items.length].prompt, 60), false);
+                step += 1;
+                if (step >= frames.length) { finish(index); return; }
+                flickerTimer = setTimeout(roll, frames[step]);
+            }
+            flickerTimer = setTimeout(roll, frames[0]);
         });
 
         paint();
