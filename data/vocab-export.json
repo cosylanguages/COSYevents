@@ -5855,6 +5855,166 @@
     ]
   },
   {
+    "sessionId": "lets-celebrate-italian-gastronomy",
+    "sessionTitle": "Italian Gastronomy",
+    "eventType": "speaking-club",
+    "language": "🇬🇧 English",
+    "level": "Intermediate (B1)",
+    "exportDate": "18 September 2026",
+    "vocabulary": [
+      {
+        "id": "en:regional-cuisine:expression",
+        "term": "regional cuisine",
+        "pos": "expression",
+        "definition": "the traditional cooking style of a particular area.",
+        "translation": "",
+        "example": "Ligurian regional cuisine is famous for pesto and fresh seafood.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:seasonal-ingredient:expression",
+        "term": "seasonal ingredient",
+        "pos": "expression",
+        "definition": "a food that is at its best and most plentiful at a particular time of year.",
+        "translation": "",
+        "example": "We try to buy seasonal ingredients at the local market.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:al-dente:expression",
+        "term": "al dente",
+        "pos": "expression",
+        "definition": "cooked until firm when bitten, used especially for pasta and rice.",
+        "translation": "",
+        "example": "The pasta should be al dente, not soft.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:antipasto:noun",
+        "term": "antipasto",
+        "pos": "noun",
+        "definition": "a small dish served before the main meal.",
+        "translation": "",
+        "example": "We shared an antipasto of olives, cheese, and cured meat.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:primo:noun",
+        "term": "primo",
+        "pos": "noun",
+        "definition": "the first course of a traditional Italian meal, often pasta, rice, or soup.",
+        "translation": "",
+        "example": "For my primo I ordered a simple tomato pasta.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:secondo:noun",
+        "term": "secondo",
+        "pos": "noun",
+        "definition": "the main course of a traditional Italian meal, usually meat or fish.",
+        "translation": "",
+        "example": "The secondo was grilled fish with lemon.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:contorno:noun",
+        "term": "contorno",
+        "pos": "noun",
+        "definition": "a side dish, usually vegetables or salad, served with the main course.",
+        "translation": "",
+        "example": "We had roasted vegetables as a contorno.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:protected-designation-of-origin:expression",
+        "term": "protected designation of origin",
+        "pos": "expression",
+        "definition": "an official label that protects the name and quality of a regional food product.",
+        "translation": "",
+        "example": "Parmigiano Reggiano has a protected designation of origin.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:food-waste:expression",
+        "term": "food waste",
+        "pos": "expression",
+        "definition": "good food that is thrown away instead of being eaten.",
+        "translation": "",
+        "example": "Smaller portions can help restaurants reduce food waste.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      },
+      {
+        "id": "en:recipe:noun",
+        "term": "recipe",
+        "pos": "noun",
+        "definition": "a set of instructions for preparing a dish.",
+        "translation": "",
+        "example": "My grandmother never wrote her recipe down.",
+        "primary_theme": "culture-society",
+        "sub_theme": "traditions-celebrations",
+        "tags": [
+          "culture-society",
+          "traditions-celebrations"
+        ],
+        "level": "B1"
+      }
+    ]
+  },
+  {
     "sessionId": "lets-celebrate-kiss-and-make-up-day-intermediate",
     "sessionTitle": "Kiss and Make Up Day",
     "eventType": "speaking-club",

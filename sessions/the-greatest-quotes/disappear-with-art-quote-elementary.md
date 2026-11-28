@@ -125,5 +125,5 @@ mistakes:
   - wrong: I like <u>quietly</u> places.
     right: I like <strong>quiet</strong> places.
     note: (Use the adjective 'quiet' to modify nouns like 'places', not the adverb 'quietly'.)
-script_html: '<script>document.addEventListener("DOMContentLoaded", () => { const quotes = ["\"The older you get the more you understand why people disappear with art, music, books and quiet living." : Anonymous"]; let index = 0; const quoteText = document.getElementById("ledger-quote"); if (quoteText) quoteText.innerText = quotes[0]; });</script>'
+script_html: '<script>document.addEventListener("DOMContentLoaded", () => { const quotes = ["\"The older you get the more you understand why people disappear with art, music, books and quiet living.\" : Anonymous"]; let index = 0; const quoteText = document.getElementById("ledger-quote"); if (quoteText) quoteText.innerText = quotes[0]; });</script>'
 ---

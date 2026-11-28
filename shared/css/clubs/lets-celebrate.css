@@ -505,7 +505,7 @@ html[data-theme="dark"] body.theme-celebrate-beekeeping {
   --celebrate-theme-card-bg: #2E2514;
   --celebrate-theme-accent: #E5C158;
   --celebrate-theme-border: #1F4547;
-  --celebrate-theme-hero: linear-gradient(135deg, #9C7D1A, #1F1A0F);
+  --celebrate-theme-hero: linear-gradient(135deg, #846711, #1F1A0F);
 }
 html[data-theme="dark"] body.theme-celebrate-someone {
   --celebrate-theme-bg: #241115;

@@ -709,6 +709,19 @@ body.theme-contrast {
     flex-wrap: wrap;
 }
 
+/* Secondary actions sit on the dark hero, so they need the cream outline
+   regardless of whether the page carries the old inline override. */
+.hero .btn-secondary {
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.12);
+    font-weight: 700;
+}
+.hero .btn-secondary:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
 .hero-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -5976,11 +5989,16 @@ body.theme-dark .session-jump-link.active {
   color: var(--muted);
   font-size: 0.9rem;
 }
+.club-content-grid,
 .club-content-grid-layout {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: 2rem;
 }
+.club-content-grid:not(:has(> .club-sidebar)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.club-main { min-width: 0; }
 .power-play-box {
   background: var(--warm-white);
   border: 1px solid var(--border);

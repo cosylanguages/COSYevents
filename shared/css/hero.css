@@ -233,6 +233,8 @@
 .ev-next-foot:hover { text-decoration: underline; }
 
 @media (max-width: 560px) {
+  .ev-topbar { flex-wrap: wrap; row-gap: 0.5rem; }
+  .ev-topbar-tools { flex-wrap: wrap; justify-content: flex-end; gap: 0.4rem; }
   .ev-topbar-tools .ce-lang-label { display: none; }
   .ev-brand span { font-size: 1.05rem; }
 }

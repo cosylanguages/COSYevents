@@ -7,6 +7,9 @@
  * stay out of the source: a component that hard-codes #416b49 ignores the
  * tokens entirely, which is how half the site stayed green during the rebrand.
  *
+ * .json/.webmanifest are scanned too, so the PWA manifest cannot keep an old
+ * theme colour after the palette moves.
+ *
  * shared/vendor/ is excluded on purpose. It is a sha-pinned copy of the
  * canonical design system and still defines sage; check-vendor guards it, and
  * overriding it happens in the product layer, never in place.
@@ -25,7 +28,7 @@ const SKIP_DIRS = new Set(['node_modules', '.git', 'shared/vendor', 'scripts', '
 // shared/js/cms-editor.lock.json. Recolouring it means changing it upstream and
 // re-copying, so its sage hex is not ours to fix here.
 const SKIP_FILES = new Set(['shared/js/cms-editor.js']);
-const EXTENSIONS = new Set(['.html', '.css', '.js']);
+const EXTENSIONS = new Set(['.html', '.css', '.js', '.json', '.webmanifest']);
 
 // Legacy sage step -> the teal step that replaced it.
 const LEGACY = {

@@ -71,7 +71,7 @@
         <span>📚 Catalog</span>
       </button>
 
-      <select id="session-picker-select" class="form-control" style="width: auto; padding: 5px 8px; font-size: 0.82rem;">
+      <select id="session-picker-select" class="form-control" aria-label="Quick pick session" style="width: auto; padding: 5px 8px; font-size: 0.82rem;">
         <option value="">Quick Pick…</option>
       </select>
 
@@ -101,7 +101,7 @@
             <span>📂 <strong>Import Session JSON…</strong><small>Load local .json file</small></span>
           </button>
         </div>
-        <input type="file" id="input-import-json" accept=".json,application/json" hidden>
+        <input type="file" id="input-import-json" accept=".json,application/json" aria-label="Import session JSON" hidden>
       </div>
 
       <!-- Save / Publish Button -->
@@ -503,14 +503,14 @@
 
       <div class="catalog-filters-bar">
         <input type="search" id="catalog-search-input" class="form-control" placeholder="Search sessions by title, theme, or topic..." style="flex: 1;">
-        <select id="catalog-club-filter" class="form-control" style="width: auto;">
+        <select id="catalog-club-filter" class="form-control" aria-label="Filter by club" style="width: auto;">
           <option value="all">All Clubs</option>
           <option value="keeping-up-with-science">Keeping Up with Science</option>
           <option value="i-couldnt-help-but-wonder">I Couldn't Help But Wonder</option>
           <option value="cinema">Cinema Club</option>
           <option value="games">Language Games</option>
         </select>
-        <select id="catalog-level-filter" class="form-control" style="width: auto;">
+        <select id="catalog-level-filter" class="form-control" aria-label="Filter by level" style="width: auto;">
           <option value="all">All Levels</option>
           <option value="A1">A1</option>
           <option value="A2">A2</option>

@@ -158,7 +158,7 @@
       '.cosy-club-music-btn{font:600 0.9rem/1.2 system-ui,sans-serif;padding:.6rem 1.1rem;border-radius:999px;border:1px solid #087A80;background:#087A80;color:#fff;cursor:pointer}' +
       '.cosy-club-music-btn:hover{background:#2e1f70}' +
       '.cosy-club-music-btn:focus-visible{outline:3px solid #FFC857;outline-offset:2px}' +
-      '.cosy-club-music-float{position:fixed;right:16px;bottom:16px;z-index:9000;box-shadow:0 4px 14px rgba(0,0,0,.25);font-size:.8rem;padding:.5rem .9rem}';
+      '.cosy-club-music-float{position:fixed;right:16px;bottom:74px;z-index:9000;box-shadow:0 4px 14px rgba(0,0,0,.25);font-size:.8rem;padding:.5rem .9rem}';
     document.head.appendChild(st);
   }
 

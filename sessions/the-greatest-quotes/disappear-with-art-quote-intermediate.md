@@ -120,5 +120,5 @@ mistakes:
   - wrong: I prefer read <u>than</u> watch TV.
     right: I prefer <strong>reading to</strong> watching TV.
     note: (Use 'prefer + -ing + to + -ing' when comparing two activities.)
-script_html: '<script>document.addEventListener("DOMContentLoaded", () => { const quotes = ["\"The older you get the more you understand why people disappear with art, music, books and quiet living." : Anonymous"]; let index = 0; const quoteText = document.getElementById("ledger-quote"); if (quoteText) quoteText.innerText = quotes[0]; });</script>'
+script_html: '<script>document.addEventListener("DOMContentLoaded", () => { const quotes = ["\"The older you get the more you understand why people disappear with art, music, books and quiet living.\" : Anonymous"]; let index = 0; const quoteText = document.getElementById("ledger-quote"); if (quoteText) quoteText.innerText = quotes[0]; });</script>'
 ---

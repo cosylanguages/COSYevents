@@ -325,11 +325,12 @@
 
 .upcoming-events-grid, .archive-events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
   gap: 1.5rem;
 }
 
 .event-card-item {
+  min-width: 0;
   background: var(--cosy-surface, #ffffff);
   border: 1px solid var(--cosy-border, rgba(74, 107, 80, 0.12));
   border-radius: var(--cosy-radius, 16px);
@@ -664,8 +665,9 @@
     display: inline-block;
   }
   .upcoming-events-grid, .archive-events-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
+  .section-title { flex-wrap: wrap; gap: 0.5rem; }
 }
 
 /* ── Live Events Section ───────────────────────────────────────────── */
